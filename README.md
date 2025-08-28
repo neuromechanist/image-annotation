@@ -14,6 +14,9 @@ This system provides a comprehensive solution for annotating images using variou
 - Web-based interface for visualization and interaction
 - Database storage for efficient querying of 25k+ annotations
 - Export functionality for research analysis
+- Comprehensive metrics tracking (tokens, speed, timing)
+- Stateless processing (fresh context per prompt)
+- JSON extraction from markdown-wrapped responses
 
 ## Quick Start
 
@@ -62,6 +65,24 @@ cp config/config.example.json config/config.json
 
 ### Usage
 
+### Using the VLM Service Directly
+
+For quick testing or direct VLM annotation without the full stack:
+
+1. Start OLLAMA (if using local models):
+```bash
+ollama serve
+```
+
+2. Run the VLM service test:
+```bash
+python -m hed_annotation.services.vlm_service
+```
+
+This will process a sample image with test prompts and save results to `annotations/test/`.
+
+### Using the Full Application
+
 1. Start the backend server:
 ```bash
 uvicorn src.hed_annotation.api.main:app --reload
@@ -91,6 +112,55 @@ hed-image-annotation/
 ├── docs/                  # Documentation
 ├── config/                # Configuration files
 └── scripts/               # Utility scripts
+```
+
+## VLM Service API
+
+### Programmatic Usage
+
+```python
+from hed_annotation.services.vlm_service import VLMService, VLMPrompt
+from pathlib import Path
+
+# Initialize service
+service = VLMService(
+    model="gemma3:4b",
+    base_url="http://localhost:11434",
+    temperature=0.7
+)
+
+# Define prompts
+prompts = [
+    VLMPrompt(
+        id="describe",
+        text="Describe this image",
+        expected_format="text"
+    ),
+    VLMPrompt(
+        id="objects",
+        text="List objects in JSON format",
+        expected_format="json"
+    )
+]
+
+# Process images
+image_paths = [Path("path/to/image.jpg")]
+results = service.process_batch(
+    image_paths=image_paths,
+    prompts=prompts,
+    models=["gemma3:4b", "llava:latest"]
+)
+
+# Access results with metrics
+for result in results:
+    print(f"Model: {result.model}")
+    print(f"Tokens used: {result.token_metrics.total_tokens}")
+    print(f"Speed: {result.performance_metrics.tokens_per_second} tokens/sec")
+    print(f"Response: {result.response}")
+    
+    # For JSON responses, access parsed data directly
+    if result.response_format == "json" and result.response_data:
+        print(f"Parsed data: {result.response_data}")
 ```
 
 ## Development
