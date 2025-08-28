@@ -5,6 +5,10 @@ const nextConfig = {
     domains: ['localhost'],
     unoptimized: true,
   },
+  // GitHub Pages deployment configuration
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
+  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '',
+  output: 'export',
   // Allow serving static files from public directory
   async rewrites() {
     return [

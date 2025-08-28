@@ -1,4 +1,6 @@
-# HED Image Annotation System
+# The Annotation Garden Project
+
+🌐 **[View Live Dashboard](https://neuromechanist.github.io/hed-image-annotation)**
 
 A VLM-based image annotation system for Natural Scene Dataset (NSD) to Hierarchical Event Descriptors using multiple language models.
 
@@ -51,6 +53,36 @@ pip install -e .
 cd frontend
 npm install
 ```
+
+## Frontend Dashboard
+
+The project includes a modern web dashboard for browsing and analyzing annotations.
+
+### Quick Start Frontend
+
+```bash
+cd frontend
+
+# Install dependencies
+npm install
+
+# Copy assets and run development server
+npm run copy-assets
+npm run dev
+```
+
+Visit http://localhost:3000 to see the dashboard.
+
+### Deploy to GitHub Pages
+
+```bash
+cd frontend
+npm run deploy
+```
+
+The dashboard will be available at: https://neuromechanist.github.io/hed-image-annotation
+
+See [frontend/README.md](frontend/README.md) for detailed frontend documentation.
 
 ### Configuration
 
