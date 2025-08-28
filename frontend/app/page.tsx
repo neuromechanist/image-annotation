@@ -18,23 +18,29 @@ export default function Dashboard() {
 
   // Load image list
   useEffect(() => {
-    // Create static list of images
-    const imageList: ImageData[] = []
-    for (let i = 1; i <= 1000; i++) {
-      const paddedNum = String(i).padStart(4, '0')
-      // For simplicity, we'll use a pattern for NSD numbers
-      // This would ideally come from a static JSON file
-      const imageName = `shared${paddedNum}_nsd${String(2950 + i).padStart(5, '0')}`
-      
-      imageList.push({
-        id: imageName,
-        thumbnailPath: `/thumbnails/${imageName}.jpg`,
-        imagePath: `/downsampled/${imageName}.jpg`,
-        annotationPath: `/annotations/nsd/${imageName}_annotations.json`
-      })
+    async function loadImageList() {
+      try {
+        const response = await fetch('/image-list.json')
+        if (response.ok) {
+          const data = await response.json()
+          const imageList: ImageData[] = data.images.map((imageName: string) => ({
+            id: imageName,
+            thumbnailPath: `/thumbnails/${imageName}.jpg`,
+            imagePath: `/downsampled/${imageName}.jpg`,
+            annotationPath: `/annotations/nsd/${imageName}_annotations.json`
+          }))
+          setImages(imageList)
+        } else {
+          console.error('Failed to load image list')
+        }
+      } catch (error) {
+        console.error('Error loading image list:', error)
+      } finally {
+        setLoading(false)
+      }
     }
-    setImages(imageList)
-    setLoading(false)
+    
+    loadImageList()
   }, [])
 
   // Load annotations for selected image
