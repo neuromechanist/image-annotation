@@ -59,7 +59,7 @@ export default function ThumbnailRibbon({ images, selectedIndex, onSelect }: Thu
   }
 
   return (
-    <div className="bg-black/40 backdrop-blur-md rounded-xl border border-purple-500/20 p-4">
+    <div className="bg-black/40 backdrop-blur-md rounded-xl border border-purple-500/20 p-2 md:p-4">
       <div className="relative flex items-center">
         {/* Left scroll button */}
         <button
@@ -104,7 +104,7 @@ export default function ThumbnailRibbon({ images, selectedIndex, onSelect }: Thu
                   <img
                     src={image.thumbnailPath}
                     alt={`Thumbnail ${imageNumber}`}
-                    className="w-28 h-28 object-cover"
+                    className="w-20 h-20 md:w-28 md:h-28 object-cover"
                     loading="lazy"
                   />
                   {/* Gradient overlay */}

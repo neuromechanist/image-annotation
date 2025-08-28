@@ -154,27 +154,27 @@ export default function Dashboard() {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 flex flex-col">
       {/* Header */}
       <header className="bg-black/30 backdrop-blur-xl border-b border-purple-500/20">
-        <div className="px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="p-2 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg">
-              <Brain className="w-6 h-6 text-white" />
+        <div className="px-3 md:px-6 py-3 md:py-4 flex flex-col md:flex-row items-center justify-between gap-2">
+          <div className="flex items-center gap-2 md:gap-3">
+            <div className="p-1.5 md:p-2 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg">
+              <Brain className="w-5 h-5 md:w-6 md:h-6 text-white" />
             </div>
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <h1 className="text-lg md:text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               The Annotation Garden Project
             </h1>
           </div>
-          <div className="flex items-center gap-2 text-sm text-gray-400">
-            <Sparkles className="w-4 h-4 text-purple-400" />
+          <div className="flex items-center gap-2 text-xs md:text-sm text-gray-400">
+            <Sparkles className="w-3 h-3 md:w-4 md:h-4 text-purple-400" />
             <span>AI-Powered Vision Analysis</span>
           </div>
         </div>
       </header>
       
       <main className="flex-1 flex flex-col">
-        <div className="flex-1 p-6 flex gap-6 min-h-0">
-          {/* Left Panel - Image Viewer (constrained width) */}
-          <div className="flex flex-col gap-4" style={{ maxWidth: '600px', minWidth: '400px' }}>
-            <div className="relative bg-black/40 backdrop-blur-md rounded-2xl border border-purple-500/20 p-2 h-full max-h-[600px] flex items-center justify-center">
+        <div className="flex-1 p-3 md:p-6 flex flex-col lg:flex-row gap-4 md:gap-6 min-h-0">
+          {/* Image Viewer - Full width on mobile, constrained on desktop */}
+          <div className="flex flex-col gap-4 lg:max-w-[600px] lg:min-w-[400px] w-full">
+            <div className="relative bg-black/40 backdrop-blur-md rounded-2xl border border-purple-500/20 p-2 h-[50vh] md:h-full md:max-h-[600px] flex items-center justify-center">
               {imageLoading && (
                 <div className="absolute inset-0 bg-black/60 backdrop-blur-sm z-10 flex items-center justify-center rounded-2xl">
                   <Loader2 className="w-8 h-8 text-purple-400 animate-spin" />
@@ -207,8 +207,8 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* Right Panel - Controls and Annotations (takes remaining space) */}
-          <div className="flex-1 flex flex-col gap-4 min-w-0">
+          {/* Controls and Annotations - Full width on mobile, side panel on desktop */}
+          <div className="flex-1 flex flex-col gap-4 min-w-0 w-full lg:w-auto">
             {/* Model Selection */}
             <div className="bg-black/40 backdrop-blur-md rounded-xl border border-purple-500/20 p-4">
               <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -256,8 +256,8 @@ export default function Dashboard() {
               </div>
             </div>
 
-            {/* Annotation Display - Takes remaining space */}
-            <div className="flex-1 bg-black/40 backdrop-blur-md rounded-xl border border-purple-500/20 p-4 overflow-hidden flex flex-col min-h-0">
+            {/* Annotation Display - Fixed height on mobile, flexible on desktop */}
+            <div className="h-[40vh] lg:h-auto lg:flex-1 bg-black/40 backdrop-blur-md rounded-xl border border-purple-500/20 p-4 overflow-hidden flex flex-col">
               <h3 className="font-semibold text-gray-200 mb-3 flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-purple-400" />
                 AI Analysis
@@ -278,7 +278,7 @@ export default function Dashboard() {
         </div>
 
         {/* Bottom Thumbnail Ribbon */}
-        <div className="px-6 pb-3">
+        <div className="px-3 md:px-6 pb-3">
           <ThumbnailRibbon
             images={images}
             selectedIndex={selectedImageIndex}
