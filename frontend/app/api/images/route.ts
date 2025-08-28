@@ -18,8 +18,8 @@ export async function GET() {
       const baseName = filename.replace('.jpg', '')
       return {
         id: baseName,
-        thumbnailPath: `/data/thumbnails/${filename}`,
-        imagePath: `/images/downsampled/${filename}`,
+        thumbnailPath: `/thumbnails/${filename}`,
+        imagePath: `/downsampled/${filename}`,
         annotationPath: `/annotations/nsd/${baseName}_annotations.json`
       }
     })
@@ -44,8 +44,8 @@ export async function GET() {
       
       fallbackImages.push({
         id: imageName,
-        thumbnailPath: `/data/thumbnails/${imageName}.jpg`,
-        imagePath: `/images/downsampled/${imageName}.jpg`,
+        thumbnailPath: `/thumbnails/${imageName}.jpg`,
+        imagePath: `/downsampled/${imageName}.jpg`,
         annotationPath: `/annotations/nsd/${imageName}_annotations.json`
       })
     }

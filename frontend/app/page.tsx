@@ -27,8 +27,8 @@ export default function Dashboard() {
           // We'll need to check which files exist
           imageFiles.push({
             id: imageName,
-            thumbnailPath: `/data/thumbnails/${imageName}`,
-            imagePath: `/images/downsampled/${imageName}`,
+            thumbnailPath: `/thumbnails/${imageName}`,
+            imagePath: `/downsampled/${imageName}`,
             annotationPath: `/annotations/nsd/${imageName}_annotations.json`
           })
         }
