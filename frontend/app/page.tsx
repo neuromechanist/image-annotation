@@ -18,43 +18,23 @@ export default function Dashboard() {
 
   // Load image list
   useEffect(() => {
-    async function loadImages() {
-      try {
-        const response = await fetch('/api/images')
-        if (response.ok) {
-          const data = await response.json()
-          setImages(data)
-        } else {
-          // Create fallback list
-          const imageList: ImageData[] = []
-          for (let i = 1; i <= 100; i++) {
-            const paddedNum = String(i).padStart(4, '0')
-            // Known NSD numbers mapping
-            const nsdNumbers: Record<string, string> = {
-              '0001': '02951', '0002': '02991', '0003': '03050', '0004': '03078',
-              '0005': '03147', '0006': '03158', '0007': '03165', '0008': '03172',
-              '0009': '03182', '0010': '03387',
-            }
-            const nsdNum = nsdNumbers[paddedNum] || String(2950 + i).padStart(5, '0')
-            const imageName = `shared${paddedNum}_nsd${nsdNum}`
-            
-            imageList.push({
-              id: imageName,
-              thumbnailPath: `/thumbnails/${imageName}.jpg`,
-              imagePath: `/downsampled/${imageName}.jpg`,
-              annotationPath: `/annotations/nsd/${imageName}_annotations.json`
-            })
-          }
-          setImages(imageList)
-        }
-      } catch (error) {
-        console.error('Error loading images:', error)
-      } finally {
-        setLoading(false)
-      }
+    // Create static list of images
+    const imageList: ImageData[] = []
+    for (let i = 1; i <= 1000; i++) {
+      const paddedNum = String(i).padStart(4, '0')
+      // For simplicity, we'll use a pattern for NSD numbers
+      // This would ideally come from a static JSON file
+      const imageName = `shared${paddedNum}_nsd${String(2950 + i).padStart(5, '0')}`
+      
+      imageList.push({
+        id: imageName,
+        thumbnailPath: `/thumbnails/${imageName}.jpg`,
+        imagePath: `/downsampled/${imageName}.jpg`,
+        annotationPath: `/annotations/nsd/${imageName}_annotations.json`
+      })
     }
-
-    loadImages()
+    setImages(imageList)
+    setLoading(false)
   }, [])
 
   // Load annotations for selected image
@@ -93,7 +73,7 @@ export default function Dashboard() {
   async function loadAnnotationsForImage(imageId: string) {
     setImageLoading(true)
     try {
-      const response = await fetch(`/api/annotations/${imageId}`)
+      const response = await fetch(`/annotations/nsd/${imageId}_annotations.json`)
       if (response.ok) {
         const data = await response.json()
         setAnnotations(prev => ({ ...prev, [imageId]: data.annotations || [] }))
