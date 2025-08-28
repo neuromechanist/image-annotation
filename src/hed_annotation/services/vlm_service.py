@@ -1,4 +1,4 @@
-"""VLM Service using LangChain ChatOllama for image annotation."""
+"""VLM Service with comprehensive metrics using LangChain ChatOllama for image annotation."""
 
 import base64
 import json
@@ -6,8 +6,7 @@ import re
 from datetime import UTC, datetime
 from pathlib import Path
 
-from langchain_core.messages import HumanMessage
-from langchain_core.output_parsers import StrOutputParser
+from langchain_core.messages import AIMessage, HumanMessage
 from langchain_ollama import ChatOllama
 from pydantic import BaseModel, Field
 
@@ -22,22 +21,53 @@ class VLMPrompt(BaseModel):
     )
 
 
-class VLMResult(BaseModel):
-    """Result from a VLM annotation."""
+class TokenMetrics(BaseModel):
+    """Token usage metrics from the model."""
 
+    input_tokens: int | None = Field(None, description="Number of prompt/input tokens")
+    output_tokens: int | None = Field(None, description="Number of generated/output tokens")
+    total_tokens: int | None = Field(None, description="Total tokens (input + output)")
+
+
+class PerformanceMetrics(BaseModel):
+    """Performance metrics for the inference."""
+
+    total_duration_ms: float | None = Field(None, description="Total request time in milliseconds")
+    prompt_eval_duration_ms: float | None = Field(
+        None, description="Prompt evaluation time in milliseconds"
+    )
+    generation_duration_ms: float | None = Field(
+        None, description="Response generation time in milliseconds"
+    )
+    load_duration_ms: float | None = Field(None, description="Model load time in milliseconds")
+    tokens_per_second: float | None = Field(None, description="Generation speed in tokens/second")
+
+
+class VLMResult(BaseModel):
+    """Result from a VLM annotation with comprehensive metrics."""
+
+    # Basic fields
     image_path: str
     model: str
     prompt_id: str
     prompt_text: str
     response: str
     response_format: str
-    processing_time_ms: int | None = None
+
+    # Metrics
+    token_metrics: TokenMetrics | None = None
+    performance_metrics: PerformanceMetrics | None = None
+
+    # Status
     error: str | None = None
     timestamp: datetime = Field(default_factory=lambda: datetime.now(UTC))
 
+    # Additional metadata
+    temperature: float | None = None
+
 
 class VLMService:
-    """Service for VLM inference using LangChain ChatOllama."""
+    """VLM service with comprehensive metrics collection using LangChain ChatOllama."""
 
     def __init__(
         self,
@@ -121,10 +151,81 @@ class VLMService:
             ]
         )
 
+    def _extract_json_from_markdown(self, response: str) -> str:
+        """Extract JSON from markdown code blocks if present.
+
+        Args:
+            response: Raw response that might contain markdown-wrapped JSON.
+
+        Returns:
+            Extracted JSON string or original response.
+        """
+        if "```json" in response:
+            # Extract content between ```json and ```
+            match = re.search(r"```json\s*(.*?)\s*```", response, re.DOTALL)
+            if match:
+                return match.group(1).strip()
+        elif "```" in response:
+            # Extract content between ``` and ```
+            match = re.search(r"```\s*(.*?)\s*```", response, re.DOTALL)
+            if match:
+                return match.group(1).strip()
+        return response
+
+    def _parse_metrics(self, ai_message: AIMessage) -> tuple[TokenMetrics, PerformanceMetrics]:
+        """Parse metrics from AIMessage response.
+
+        Args:
+            ai_message: The AI response message.
+
+        Returns:
+            Tuple of (TokenMetrics, PerformanceMetrics).
+        """
+        # Extract token metrics from usage_metadata
+        token_metrics = TokenMetrics()
+        if hasattr(ai_message, "usage_metadata") and ai_message.usage_metadata:
+            usage = ai_message.usage_metadata
+            token_metrics.input_tokens = usage.get("input_tokens")
+            token_metrics.output_tokens = usage.get("output_tokens")
+            token_metrics.total_tokens = usage.get("total_tokens")
+
+        # Extract performance metrics from response_metadata
+        performance_metrics = PerformanceMetrics()
+        if hasattr(ai_message, "response_metadata") and ai_message.response_metadata:
+            metadata = ai_message.response_metadata
+
+            # Convert nanoseconds to milliseconds for OLLAMA metrics
+            if "total_duration" in metadata:
+                performance_metrics.total_duration_ms = metadata["total_duration"] / 1_000_000
+
+            if "prompt_eval_duration" in metadata:
+                performance_metrics.prompt_eval_duration_ms = (
+                    metadata["prompt_eval_duration"] / 1_000_000
+                )
+
+            if "eval_duration" in metadata:
+                performance_metrics.generation_duration_ms = metadata["eval_duration"] / 1_000_000
+
+            if "load_duration" in metadata:
+                performance_metrics.load_duration_ms = metadata["load_duration"] / 1_000_000
+
+            # Calculate tokens per second
+            if (
+                "eval_count" in metadata
+                and "eval_duration" in metadata
+                and metadata["eval_duration"] > 0
+            ):
+                eval_duration_seconds = metadata["eval_duration"] / 1_000_000_000
+                performance_metrics.tokens_per_second = (
+                    metadata["eval_count"] / eval_duration_seconds
+                )
+
+        return token_metrics, performance_metrics
+
     def annotate_image(
         self, image_path: str | Path, prompt: VLMPrompt, model: str | None = None
     ) -> VLMResult:
-        """Annotate a single image with a single prompt.
+        """Annotate a single image with a single prompt, collecting comprehensive metrics.
 
         Args:
             image_path: Path to the image file.
@@ -132,7 +233,7 @@ class VLMService:
             model: Optional model override.
 
         Returns:
-            VLMResult with the response or error.
+            VLMResult with response and comprehensive metrics.
         """
         image_path = Path(image_path)
         start_time = datetime.now(UTC)
@@ -147,36 +248,24 @@ class VLMService:
             # Create message
             message = self._create_message(prompt.text, image_b64)
 
-            # Create chain with output parser
-            chain = llm | StrOutputParser()
+            # Run inference (returns AIMessage with metadata)
+            ai_message = llm.invoke([message])
 
-            # Run inference (fresh context per prompt)
-            response = chain.invoke([message])
-
-            # Calculate processing time
-            processing_time_ms = int(
-                (datetime.now(UTC) - start_time).total_seconds() * 1000
+            # Extract response content
+            response = (
+                ai_message.content
+                if isinstance(ai_message.content, str)
+                else str(ai_message.content)
             )
 
-            # Validate JSON if expected
+            # Parse metrics
+            token_metrics, performance_metrics = self._parse_metrics(ai_message)
+
+            # Handle JSON extraction if needed
             if prompt.expected_format == "json":
                 try:
-                    # Extract JSON from markdown code blocks if present
-                    json_str = response
-                    if "```json" in response:
-                        # Extract content between ```json and ```
-                        match = re.search(r"```json\s*(.*?)\s*```", response, re.DOTALL)
-                        if match:
-                            json_str = match.group(1)
-                    elif "```" in response:
-                        # Extract content between ``` and ```
-                        match = re.search(r"```\s*(.*?)\s*```", response, re.DOTALL)
-                        if match:
-                            json_str = match.group(1)
-
-                    # Try to parse the extracted JSON
+                    json_str = self._extract_json_from_markdown(response)
                     parsed = json.loads(json_str)
-                    # Update response with clean JSON
                     response = json.dumps(parsed, indent=2)
                 except json.JSONDecodeError as e:
                     return VLMResult(
@@ -186,7 +275,9 @@ class VLMService:
                         prompt_text=prompt.text,
                         response=response,
                         response_format=prompt.expected_format,
-                        processing_time_ms=processing_time_ms,
+                        token_metrics=token_metrics,
+                        performance_metrics=performance_metrics,
+                        temperature=self.temperature,
                         error=f"JSON parsing failed: {e}",
                     )
 
@@ -197,13 +288,15 @@ class VLMService:
                 prompt_text=prompt.text,
                 response=response,
                 response_format=prompt.expected_format,
-                processing_time_ms=processing_time_ms,
+                token_metrics=token_metrics,
+                performance_metrics=performance_metrics,
+                temperature=self.temperature,
             )
 
         except Exception as e:
-            processing_time_ms = int(
-                (datetime.now(UTC) - start_time).total_seconds() * 1000
-            )
+            # Still try to calculate basic timing
+            total_time_ms = (datetime.now(UTC) - start_time).total_seconds() * 1000
+
             return VLMResult(
                 image_path=str(image_path),
                 model=model or self.model,
@@ -211,7 +304,8 @@ class VLMService:
                 prompt_text=prompt.text,
                 response="",
                 response_format=prompt.expected_format,
-                processing_time_ms=processing_time_ms,
+                performance_metrics=PerformanceMetrics(total_duration_ms=total_time_ms),
+                temperature=self.temperature,
                 error=str(e),
             )
 
@@ -223,15 +317,13 @@ class VLMService:
     ) -> list[VLMResult]:
         """Annotate multiple images with multiple prompts and models.
 
-        This ensures fresh context for each prompt (stateless processing).
-
         Args:
             image_paths: List of image paths.
             prompts: List of prompt configurations.
             models: Optional list of models to use.
 
         Returns:
-            List of VLMResults for all combinations.
+            List of VLMResults with comprehensive metrics.
         """
         results = []
         models = models or [self.model]
@@ -250,43 +342,15 @@ class VLMService:
                     result = self.annotate_image(image_path, prompt, model)
                     results.append(result)
 
+                    # Print quick metrics summary
+                    if result.token_metrics and result.performance_metrics:
+                        print(
+                            f"  → Tokens: {result.token_metrics.total_tokens} | "
+                            f"Speed: {result.performance_metrics.tokens_per_second:.1f} tok/s | "
+                            f"Time: {result.performance_metrics.total_duration_ms:.0f}ms"
+                        )
+
         return results
-
-    def process_directory(
-        self,
-        directory: str | Path,
-        prompts: list[VLMPrompt],
-        models: list[str] | None = None,
-        pattern: str = "*.jpg",
-        limit: int | None = None,
-    ) -> list[VLMResult]:
-        """Process images in a directory.
-
-        Args:
-            directory: Directory containing images.
-            prompts: List of prompt configurations.
-            models: Optional list of models to use.
-            pattern: Glob pattern for image files.
-            limit: Optional limit on number of images to process.
-
-        Returns:
-            List of VLMResults.
-        """
-        directory = Path(directory)
-        if not directory.exists():
-            raise FileNotFoundError(f"Directory not found: {directory}")
-
-        # Find matching images
-        image_paths = sorted(directory.glob(pattern))
-        if not image_paths:
-            raise ValueError(f"No images found matching pattern {pattern} in {directory}")
-
-        # Apply limit if specified
-        if limit:
-            image_paths = image_paths[:limit]
-
-        print(f"Found {len(image_paths)} images to process")
-        return self.annotate_batch(image_paths, prompts, models)
 
 
 def create_test_prompts() -> list[VLMPrompt]:
@@ -313,7 +377,7 @@ def save_results(results: list[VLMResult], output_dir: str | Path) -> Path:
     """Save annotation results to JSON file.
 
     Args:
-        results: List of annotation results.
+        results: List of annotation results with metrics.
         output_dir: Directory to save results.
 
     Returns:
@@ -322,6 +386,24 @@ def save_results(results: list[VLMResult], output_dir: str | Path) -> Path:
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
+    # Calculate aggregate metrics
+    total_tokens = sum(
+        r.token_metrics.total_tokens
+        for r in results
+        if r.token_metrics and r.token_metrics.total_tokens
+    )
+    avg_speed = sum(
+        r.performance_metrics.tokens_per_second
+        for r in results
+        if r.performance_metrics and r.performance_metrics.tokens_per_second
+    )
+    num_with_speed = sum(
+        1 for r in results if r.performance_metrics and r.performance_metrics.tokens_per_second
+    )
+
+    if num_with_speed > 0:
+        avg_speed = avg_speed / num_with_speed
+
     # Convert results to dict format
     results_dict = {
         "metadata": {
@@ -329,6 +411,8 @@ def save_results(results: list[VLMResult], output_dir: str | Path) -> Path:
             "total_annotations": len(results),
             "successful": sum(1 for r in results if r.error is None),
             "failed": sum(1 for r in results if r.error is not None),
+            "total_tokens_used": total_tokens,
+            "average_tokens_per_second": round(avg_speed, 2) if num_with_speed > 0 else None,
         },
         "annotations": [r.model_dump(mode="json") for r in results],
     }
@@ -343,11 +427,55 @@ def save_results(results: list[VLMResult], output_dir: str | Path) -> Path:
     return output_file
 
 
+def print_detailed_metrics(result: VLMResult):
+    """Print detailed metrics for a single result."""
+    print(f"\n{'=' * 60}")
+    print(f"Prompt: {result.prompt_id}")
+    print(f"Model: {result.model} (temp={result.temperature})")
+
+    if result.error:
+        print(f"❌ Error: {result.error}")
+    else:
+        print("✅ Success")
+
+        # Token metrics
+        if result.token_metrics:
+            print("\nToken Metrics:")
+            print(f"  • Input tokens: {result.token_metrics.input_tokens}")
+            print(f"  • Output tokens: {result.token_metrics.output_tokens}")
+            print(f"  • Total tokens: {result.token_metrics.total_tokens}")
+
+        # Performance metrics
+        if result.performance_metrics:
+            print("\nPerformance Metrics:")
+            if result.performance_metrics.total_duration_ms:
+                print(f"  • Total time: {result.performance_metrics.total_duration_ms:.1f}ms")
+            if result.performance_metrics.prompt_eval_duration_ms:
+                print(
+                    f"  • Prompt eval: {result.performance_metrics.prompt_eval_duration_ms:.1f}ms"
+                )
+            if result.performance_metrics.generation_duration_ms:
+                print(f"  • Generation: {result.performance_metrics.generation_duration_ms:.1f}ms")
+            if result.performance_metrics.tokens_per_second:
+                print(
+                    f"  • Speed: {result.performance_metrics.tokens_per_second:.1f} tokens/second"
+                )
+
+        # Response preview
+        print(f"\nResponse ({result.response_format}):")
+        response_preview = (
+            result.response[:300] + "..." if len(result.response) > 300 else result.response
+        )
+        print(f"{response_preview}")
+
+    print("-" * 60)
+
+
 def main():
-    """Test the VLM service with specified prompts and first image."""
-    print("=" * 50)
-    print("VLM Service Test")
-    print("=" * 50)
+    """Test the VLM service with comprehensive metrics."""
+    print("=" * 60)
+    print("VLM Service Test with Metrics")
+    print("=" * 60)
 
     # Configuration
     image_dir = Path("/Users/yahya/Documents/git/hed-image-annotation/images/downsampled")
@@ -373,41 +501,47 @@ def main():
     for prompt in prompts:
         print(f"  - {prompt.id}: {prompt.text[:50]}...")
 
-    # Run annotation on first image only
-    print(f"\n{'=' * 50}")
+    # Run annotation
+    print(f"\n{'=' * 60}")
     print(f"Running {len(prompts)} prompts on {first_image.name}...")
-    print(f"{'=' * 50}\n")
+    print(f"{'=' * 60}\n")
 
     results = service.annotate_batch([first_image], prompts)
 
-    # Print results
+    # Print detailed metrics for each result
     for result in results:
-        print(f"\nPrompt: {result.prompt_id}")
-        print(f"Processing time: {result.processing_time_ms}ms")
-
-        if result.error:
-            print(f"❌ Error: {result.error}")
-        else:
-            print("✅ Success")
-            print(f"Response ({result.response_format}):")
-            # Truncate long responses for display
-            response_preview = (
-                result.response[:500] + "..." if len(result.response) > 500 else result.response
-            )
-            print(f"{response_preview}")
-        print("-" * 50)
+        print_detailed_metrics(result)
 
     # Save results
     output_file = save_results(results, output_dir)
     print(f"\n✅ Results saved to: {output_file}")
 
-    # Summary
+    # Summary with metrics
     successful = sum(1 for r in results if r.error is None)
     failed = sum(1 for r in results if r.error is not None)
-    print("\nSummary:")
-    print(f"  Total annotations: {len(results)}")
-    print(f"  Successful: {successful}")
-    print(f"  Failed: {failed}")
+    total_tokens = sum(
+        r.token_metrics.total_tokens
+        for r in results
+        if r.token_metrics and r.token_metrics.total_tokens
+    )
+
+    print(f"\n{'=' * 60}")
+    print("Summary:")
+    print(f"  • Total annotations: {len(results)}")
+    print(f"  • Successful: {successful}")
+    print(f"  • Failed: {failed}")
+    print(f"  • Total tokens used: {total_tokens}")
+
+    # Average performance
+    speeds = [
+        r.performance_metrics.tokens_per_second
+        for r in results
+        if r.performance_metrics and r.performance_metrics.tokens_per_second
+    ]
+    if speeds:
+        print(f"  • Average speed: {sum(speeds) / len(speeds):.1f} tokens/second")
+
+    print("=" * 60)
 
 
 if __name__ == "__main__":
