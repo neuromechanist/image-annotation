@@ -5,7 +5,6 @@ import json
 import re
 from datetime import UTC, datetime
 from pathlib import Path
-from typing import Any
 
 from langchain_core.messages import AIMessage, HumanMessage
 from langchain_ollama import ChatOllama
@@ -64,8 +63,7 @@ class VLMResult(BaseModel):
     timestamp: datetime = Field(default_factory=lambda: datetime.now(UTC))
 
     # Additional metadata
-    model_temperature: float | None = None
-    response_metadata: dict[str, Any] | None = None
+    temperature: float | None = None
 
 
 class VLMServiceEnhanced:
@@ -279,10 +277,7 @@ class VLMServiceEnhanced:
                         response_format=prompt.expected_format,
                         token_metrics=token_metrics,
                         performance_metrics=performance_metrics,
-                        model_temperature=self.temperature,
-                        response_metadata=ai_message.response_metadata
-                        if hasattr(ai_message, "response_metadata")
-                        else None,
+                        temperature=self.temperature,
                         error=f"JSON parsing failed: {e}",
                     )
 
@@ -295,10 +290,7 @@ class VLMServiceEnhanced:
                 response_format=prompt.expected_format,
                 token_metrics=token_metrics,
                 performance_metrics=performance_metrics,
-                model_temperature=self.temperature,
-                response_metadata=ai_message.response_metadata
-                if hasattr(ai_message, "response_metadata")
-                else None,
+                temperature=self.temperature,
             )
 
         except Exception as e:
@@ -313,7 +305,7 @@ class VLMServiceEnhanced:
                 response="",
                 response_format=prompt.expected_format,
                 performance_metrics=PerformanceMetrics(total_duration_ms=total_time_ms),
-                model_temperature=self.temperature,
+                temperature=self.temperature,
                 error=str(e),
             )
 
@@ -439,7 +431,7 @@ def print_detailed_metrics(result: VLMResult):
     """Print detailed metrics for a single result."""
     print(f"\n{'=' * 60}")
     print(f"Prompt: {result.prompt_id}")
-    print(f"Model: {result.model} (temp={result.model_temperature})")
+    print(f"Model: {result.model} (temp={result.temperature})")
 
     if result.error:
         print(f"❌ Error: {result.error}")
