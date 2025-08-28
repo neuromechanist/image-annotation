@@ -32,7 +32,7 @@ if [ "$1" == "--all" ]; then
 fi
 
 echo "📝 Committing changes..."
-git add frontend/public/annotations/
+git add annotations/nsd/*.json
 git add frontend/public/image-list.json 2>/dev/null
 
 git commit -m "Update annotations
