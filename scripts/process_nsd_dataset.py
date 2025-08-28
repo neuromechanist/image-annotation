@@ -350,7 +350,15 @@ def main():
     parser.add_argument(
         "--models",
         nargs="+",
-        default=["gemma3:4b", "gemma3:12b", "llama3.2-vision:11b", "mistral-small3.2:24b"],
+        default=[
+            "gemma3:4b",
+            "gemma3:12b",
+            "gemma3:27b",
+            "qwen2.5vl:7b",
+            "qwen2.5vl:32b",
+            "llama3.2-vision:11b",
+            "mistral-small3.2:24b",
+        ],
         help="Models to use for annotation",
     )
     parser.add_argument(
