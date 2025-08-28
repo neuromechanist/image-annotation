@@ -20,14 +20,15 @@ export default function Dashboard() {
   useEffect(() => {
     async function loadImageList() {
       try {
-        const response = await fetch('/image-list.json')
+        const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+        const response = await fetch(`${basePath}/image-list.json`)
         if (response.ok) {
           const data = await response.json()
           const imageList: ImageData[] = data.images.map((imageName: string) => ({
             id: imageName,
-            thumbnailPath: `/thumbnails/${imageName}.jpg`,
-            imagePath: `/downsampled/${imageName}.jpg`,
-            annotationPath: `/annotations/nsd/${imageName}_annotations.json`
+            thumbnailPath: `${basePath}/thumbnails/${imageName}.jpg`,
+            imagePath: `${basePath}/downsampled/${imageName}.jpg`,
+            annotationPath: `${basePath}/annotations/nsd/${imageName}_annotations.json`
           }))
           setImages(imageList)
         } else {
@@ -79,7 +80,8 @@ export default function Dashboard() {
   async function loadAnnotationsForImage(imageId: string) {
     setImageLoading(true)
     try {
-      const response = await fetch(`/annotations/nsd/${imageId}_annotations.json`)
+      const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+      const response = await fetch(`${basePath}/annotations/nsd/${imageId}_annotations.json`)
       if (response.ok) {
         const data = await response.json()
         setAnnotations(prev => ({ ...prev, [imageId]: data.annotations || [] }))
