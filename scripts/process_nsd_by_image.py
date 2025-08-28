@@ -1,15 +1,16 @@
 #!/usr/bin/env python
-"""Process NSD dataset with multiple VLM models.
+"""Process NSD dataset with multiple VLM models - image-by-image approach.
 
-This is the DEFAULT and RECOMMENDED script for processing the NSD dataset.
+This script processes each image with ALL models before moving to the next image.
 
-Processing order: Model -> Images -> Prompts
-Benefits:
-- Minimizes expensive model loading/unloading operations
-- Much faster for multiple models (loads each model only once)
-- Better for large-scale processing
+Processing order: Image -> Models -> Prompts
+Use cases:
+- When you want complete annotations for specific images immediately
+- When testing or debugging with a few images
+- When you may interrupt processing frequently
 
-For image-by-image processing (all models per image), use process_nsd_by_image.py
+Note: This approach causes more model switching overhead.
+For faster processing of the full dataset, use process_nsd_dataset.py
 """
 
 import argparse
@@ -94,54 +95,26 @@ def load_progress(progress_file: Path) -> dict[str, Any]:
     if progress_file.exists():
         with open(progress_file) as f:
             return json.load(f)
-    return {"completed": {}, "last_checkpoint": None}
+    return {"completed_images": [], "last_checkpoint": None}
 
 
-def save_progress(progress_file: Path, completed: dict[str, list[str]]) -> None:
-    """Save progress checkpoint.
-
-    Args:
-        progress_file: Path to progress file
-        completed: Dictionary of model -> list of completed image names
-    """
+def save_progress(progress_file: Path, completed_images: list[str]) -> None:
+    """Save progress checkpoint."""
     progress = {
-        "completed": completed,
+        "completed_images": completed_images,
         "last_checkpoint": datetime.now(UTC).isoformat(),
-        "total_processed": sum(len(images) for images in completed.values()),
+        "total_processed": len(completed_images),
     }
     with open(progress_file, "w") as f:
         json.dump(progress, f, indent=2)
 
 
-def load_or_create_image_results(output_file: Path) -> dict[str, Any]:
-    """Load existing results file or create new structure.
-
-    Args:
-        output_file: Path to the JSON results file
-
-    Returns:
-        Dictionary with image results structure
-    """
-    if output_file.exists():
-        with open(output_file) as f:
-            return json.load(f)
-    else:
-        return {
-            "image": {},
-            "timestamp": datetime.now(UTC).isoformat(),
-            "annotations": [],
-        }
-
-
-def save_image_results(  # noqa: C901
-    image_path: Path, model: str, prompt_results: list[VLMResult], output_dir: Path
-) -> Path:
-    """Save or append results for a single image-model combination.
+def save_image_results(image_path: Path, results: list[VLMResult], output_dir: Path) -> Path:
+    """Save results for a single image to a JSON file.
 
     Args:
         image_path: Path to the image file
-        model: Model name
-        prompt_results: List of VLM results for all prompts
+        results: List of VLM results for this image
         output_dir: Directory to save results
 
     Returns:
@@ -151,32 +124,34 @@ def save_image_results(  # noqa: C901
     image_name = image_path.stem  # e.g., "shared0001_nsd02951"
     output_file = output_dir / f"{image_name}_annotations.json"
 
-    # Load or create results structure
-    output_data = load_or_create_image_results(output_file)
-
-    # Update image metadata if not set
-    if not output_data["image"]:
-        output_data["image"] = {
+    # Structure the results
+    output_data = {
+        "image": {
             "path": str(image_path),
             "name": image_path.name,
             "id": image_name,
-        }
-
-    # Create model results
-    model_data = {
-        "model": model,
-        "temperature": prompt_results[0].temperature if prompt_results else 0.7,
-        "prompts": {},
-        "metrics": {
-            "total_tokens": 0,
-            "total_time_ms": 0,
-            "average_speed": 0,
         },
+        "timestamp": datetime.now(UTC).isoformat(),
+        "annotations": [],
     }
 
-    # Add prompt results
-    for result in prompt_results:
-        model_data["prompts"][result.prompt_id] = {
+    # Group results by model
+    model_results = {}
+    for result in results:
+        if result.model not in model_results:
+            model_results[result.model] = {
+                "model": result.model,
+                "temperature": result.temperature,
+                "prompts": {},
+                "metrics": {
+                    "total_tokens": 0,
+                    "total_time_ms": 0,
+                    "average_speed": 0,
+                },
+            }
+
+        # Add prompt result
+        model_results[result.model]["prompts"][result.prompt_id] = {
             "prompt_text": result.prompt_text,
             "response": result.response,
             "response_format": result.response_format,
@@ -190,35 +165,27 @@ def save_image_results(  # noqa: C901
 
         # Update aggregate metrics
         if result.token_metrics and result.token_metrics.total_tokens:
-            model_data["metrics"]["total_tokens"] += result.token_metrics.total_tokens
+            model_results[result.model]["metrics"]["total_tokens"] += (
+                result.token_metrics.total_tokens
+            )
         if result.performance_metrics and result.performance_metrics.total_duration_ms:
-            model_data["metrics"]["total_time_ms"] += result.performance_metrics.total_duration_ms
+            model_results[result.model]["metrics"]["total_time_ms"] += (
+                result.performance_metrics.total_duration_ms
+            )
 
-    # Calculate average speed
-    speeds = []
-    for prompt_data in model_data["prompts"].values():
-        if (
-            prompt_data["performance_metrics"]
-            and prompt_data["performance_metrics"]["tokens_per_second"]
-        ):
-            speeds.append(prompt_data["performance_metrics"]["tokens_per_second"])
-    if speeds:
-        model_data["metrics"]["average_speed"] = sum(speeds) / len(speeds)
+    # Calculate average speeds
+    for model_data in model_results.values():
+        speeds = []
+        for prompt_data in model_data["prompts"].values():
+            if (
+                prompt_data["performance_metrics"]
+                and prompt_data["performance_metrics"]["tokens_per_second"]
+            ):
+                speeds.append(prompt_data["performance_metrics"]["tokens_per_second"])
+        if speeds:
+            model_data["metrics"]["average_speed"] = sum(speeds) / len(speeds)
 
-    # Check if this model already exists and update or append
-    existing_model_idx = None
-    for idx, existing in enumerate(output_data["annotations"]):
-        if existing["model"] == model:
-            existing_model_idx = idx
-            break
-
-    if existing_model_idx is not None:
-        output_data["annotations"][existing_model_idx] = model_data
-    else:
-        output_data["annotations"].append(model_data)
-
-    # Update timestamp
-    output_data["timestamp"] = datetime.now(UTC).isoformat()
+    output_data["annotations"] = list(model_results.values())
 
     # Save to file
     with open(output_file, "w") as f:
@@ -227,69 +194,52 @@ def save_image_results(  # noqa: C901
     return output_file
 
 
-def process_model_batch(
-    model: str,
-    image_files: list[Path],
+def process_single_image(
+    image_path: Path,
+    models: list[str],
     prompts: list[VLMPrompt],
     output_dir: Path,
     temperature: float = 0.7,
-    completed_images: set[str] = None,
-) -> list[str]:
-    """Process all images for a single model.
+) -> Path:
+    """Process a single image with all models and prompts.
 
-    This approach minimizes model loading/unloading overhead.
+    IMPORTANT: Ensures stateless processing - each prompt gets a fresh context.
 
     Args:
-        model: Model name to use
-        image_files: List of image paths to process
+        image_path: Path to the image file
+        models: List of model names to use
         prompts: List of prompts to run
         output_dir: Directory to save results
         temperature: Generation temperature
-        completed_images: Set of already completed image names for this model
 
     Returns:
-        List of successfully processed image names
+        Path to the saved results file
     """
-    if completed_images is None:
-        completed_images = set()
-
     print(f"\n{'=' * 80}")
-    print(f"Processing with model: {model}")
+    print(f"Processing: {image_path.name}")
     print(f"{'=' * 80}")
 
-    # Filter out already completed images
-    images_to_process = [img for img in image_files if img.name not in completed_images]
+    all_results = []
 
-    if not images_to_process:
-        print(f"All images already processed for {model}")
-        return list(completed_images)
-
-    print(
-        f"Images to process: {len(images_to_process)} (skipping {len(completed_images)} already completed)"
-    )
-
-    # Create service once for this model
-    service = VLMService(
-        model=model,
-        temperature=temperature,
-        timeout=120,  # Increase timeout for larger models
-    )
-
-    processed = list(completed_images)
-
-    # Process each image
-    for img_idx, image_path in enumerate(images_to_process, 1):
-        print(f"\n[{img_idx}/{len(images_to_process)}] Image: {image_path.name}")
+    # Process each model
+    for model_idx, model in enumerate(models, 1):
+        print(f"\nModel {model_idx}/{len(models)}: {model}")
         print("-" * 40)
 
-        prompt_results = []
+        # Create a NEW service instance for each model to ensure clean state
+        service = VLMService(
+            model=model,
+            temperature=temperature,
+            timeout=120,  # Increase timeout for larger models
+        )
 
-        # Process each prompt for this image
+        # Process each prompt
         for prompt_idx, prompt in enumerate(prompts, 1):
             print(f"  Prompt {prompt_idx}/{len(prompts)}: {prompt.id}...", end=" ")
 
             try:
                 # CRITICAL: Each annotate_image call is stateless
+                # The service creates a fresh LangChain conversation for each call
                 result = service.annotate_image(image_path, prompt, model)
 
                 if result.error:
@@ -303,12 +253,12 @@ def process_model_batch(
                     else:
                         print("✅ Complete")
 
-                prompt_results.append(result)
+                all_results.append(result)
 
             except Exception as e:
                 print(f"❌ Failed: {e}")
                 # Create error result
-                prompt_results.append(
+                all_results.append(
                     VLMResult(
                         image_path=str(image_path),
                         model=model,
@@ -321,20 +271,16 @@ def process_model_batch(
                     )
                 )
 
-        # Save results for this image-model combination
-        try:
-            output_file = save_image_results(image_path, model, prompt_results, output_dir)
-            print(f"  💾 Saved to: {output_file.name}")
-            processed.append(image_path.name)
-        except Exception as e:
-            print(f"  ❌ Failed to save results: {e}")
+    # Save results for this image
+    output_file = save_image_results(image_path, all_results, output_dir)
+    print(f"\n✅ Results saved to: {output_file}")
 
-    return processed
+    return output_file
 
 
 def main():
     """Main processing function."""
-    parser = argparse.ArgumentParser(description="Process NSD dataset with VLM models (optimized)")
+    parser = argparse.ArgumentParser(description="Process NSD dataset with VLM models")
     parser.add_argument(
         "--input-dir",
         type=Path,
@@ -383,8 +329,8 @@ def main():
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
     # Progress tracking
-    progress_file = args.output_dir / "progress_optimized.json"
-    progress = load_progress(progress_file) if args.resume else {"completed": {}}
+    progress_file = args.output_dir / "progress.json"
+    progress = load_progress(progress_file) if args.resume else {"completed_images": []}
 
     # Get list of images
     image_files = sorted(args.input_dir.glob("*.png"))
@@ -400,6 +346,12 @@ def main():
     if args.max_images:
         image_files = image_files[: args.max_images]
 
+    # Filter out already completed images if resuming
+    if args.resume and progress["completed_images"]:
+        completed_set = set(progress["completed_images"])
+        image_files = [img for img in image_files if img.name not in completed_set]
+        print(f"Resuming: {len(completed_set)} already processed, {len(image_files)} remaining")
+
     # Create prompts
     prompts = create_comprehensive_prompts()
 
@@ -409,57 +361,45 @@ def main():
     print(f"  Temperature: {args.temperature}")
     print(f"  Images to process: {len(image_files)}")
     print(f"  Output directory: {args.output_dir}")
-    print("\n⚡ Using optimized processing: Model -> Images -> Prompts")
-    print("  This minimizes expensive model switching operations")
 
-    # Process each model
+    # Process images
     print(f"\n{'=' * 80}")
     print(f"Starting processing at {datetime.now(UTC).isoformat()}")
     print(f"{'=' * 80}")
 
-    completed_all = dict(progress.get("completed", {}))
+    completed = list(progress["completed_images"])
 
-    for model_idx, model in enumerate(args.models, 1):
-        print(f"\n[Model {model_idx}/{len(args.models)}]")
-
+    for idx, image_path in enumerate(image_files, 1):
         try:
-            # Get already completed images for this model
-            completed_for_model = set(completed_all.get(model, []))
+            print(f"\n[{idx}/{len(image_files)}] Processing {image_path.name}")
 
-            # Process all images with this model
-            processed = process_model_batch(
-                model=model,
-                image_files=image_files,
+            # Process the image with all models and prompts
+            # IMPORTANT: Each image gets a completely fresh start
+            process_single_image(
+                image_path=image_path,
+                models=args.models,
                 prompts=prompts,
                 output_dir=args.output_dir,
                 temperature=args.temperature,
-                completed_images=completed_for_model,
             )
 
             # Update progress
-            completed_all[model] = processed
-            save_progress(progress_file, completed_all)
-
-            print(f"\n✅ Completed {len(processed)} images with {model}")
+            completed.append(image_path.name)
+            save_progress(progress_file, completed)
 
         except KeyboardInterrupt:
             print("\n\n⚠️ Processing interrupted by user")
-            save_progress(progress_file, completed_all)
-            total_processed = sum(len(images) for images in completed_all.values())
-            print(f"Progress saved. Total annotations: {total_processed}")
+            save_progress(progress_file, completed)
+            print(f"Progress saved. Processed {len(completed)} images.")
             break
         except Exception as e:
-            print(f"\n❌ Error with model {model}: {e}")
+            print(f"\n❌ Error processing {image_path.name}: {e}")
             continue
 
     # Final summary
     print(f"\n{'=' * 80}")
     print(f"Processing complete at {datetime.now(UTC).isoformat()}")
-    print("\nSummary by model:")
-    for model, images in completed_all.items():
-        print(f"  {model}: {len(images)} images")
-    total_annotations = sum(len(images) for images in completed_all.values())
-    print(f"\nTotal annotations: {total_annotations}")
+    print(f"Total images processed: {len(completed)}")
     print(f"Results saved to: {args.output_dir}")
     print(f"{'=' * 80}")
 
