@@ -5,7 +5,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'HED Image Annotation Dashboard',
+  title: 'Image Annotation Dashboard',
   description: 'Browse and annotate NSD images with VLM models',
 }
 

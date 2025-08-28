@@ -6,7 +6,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from src.hed_annotation.services.vlm_service import VLMPrompt, VLMService
+from src.image_annotation.services.vlm_service import VLMPrompt, VLMService
 
 
 def test_stateless_processing(image_path=None):
