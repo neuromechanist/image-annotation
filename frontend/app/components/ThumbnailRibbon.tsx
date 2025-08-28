@@ -88,7 +88,9 @@ export default function ThumbnailRibbon({ images, selectedIndex, onSelect }: Thu
             return (
               <button
                 key={image.id}
-                ref={el => thumbnailRefs.current[index] = el}
+                ref={el => {
+                  thumbnailRefs.current[index] = el
+                }}
                 onClick={() => onSelect(index)}
                 className={`
                   relative flex-shrink-0 rounded-lg overflow-hidden
