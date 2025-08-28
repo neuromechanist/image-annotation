@@ -473,9 +473,9 @@ def main():
     print("VLM Service Test with Metrics")
     print("=" * 60)
 
-    # Configuration
-    image_dir = Path("/Users/yahya/Documents/git/hed-image-annotation/images/downsampled")
-    output_dir = Path("/Users/yahya/Documents/git/hed-image-annotation/annotations/test")
+    # Configuration - use relative paths from project root
+    image_dir = Path("images/downsampled")
+    output_dir = Path("annotations/test")
 
     # Get first image
     images = sorted(image_dir.glob("*.jpg"))
