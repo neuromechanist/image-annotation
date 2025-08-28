@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
+
+// Determine if we're building for production GitHub Pages
+const isProd = process.env.NODE_ENV === 'production'
+const basePath = isProd ? '/hed-image-annotation' : ''
+
 const nextConfig = {
   reactStrictMode: true,
   images: {
@@ -6,9 +11,13 @@ const nextConfig = {
     unoptimized: true,
   },
   // GitHub Pages deployment configuration
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
-  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '',
+  basePath: basePath,
+  assetPrefix: basePath,
   output: 'export',
+  // Pass the base path to the client
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath
+  },
   // Allow serving static files from public directory
   async rewrites() {
     return [
