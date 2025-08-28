@@ -91,16 +91,17 @@ class ModelConfiguration(BaseModel):
     """Main configuration schema for models and prompts"""
 
     model_config = ConfigDict(
+        protected_namespaces=(),  # Allow model_ prefix in field names
         json_schema_extra={
             "example": {
                 "version": "1.0.0",
-                "model_list": [...],
-                "prompts": [...],
+                "model_list": [],  # Empty list instead of ellipsis
+                "prompts": [],  # Empty list instead of ellipsis
                 "default_server": "OLLAMA",
                 "connection_mode": "BATCH",
                 "batch_settings": {"max_concurrent": 5, "timeout": 300},
             }
-        }
+        },
     )
 
     version: str = Field(default="1.0.0", description="Configuration version")
@@ -216,10 +217,10 @@ class AnnotationResponse(BaseModel):
         json_schema_extra={
             "example": {
                 "id": "annotation_001",
-                "image": {...},
-                "model": {...},
-                "prompt": {...},
-                "stats": {...},
+                "image": {},  # Empty dict instead of ellipsis
+                "model": {},  # Empty dict instead of ellipsis
+                "prompt": {},  # Empty dict instead of ellipsis
+                "stats": {},  # Empty dict instead of ellipsis
                 "answer": "The image shows a serene landscape with...",
                 "answer_type": "TEXT",
                 "structured_answer": None,
@@ -262,7 +263,7 @@ class BatchAnnotationResponse(BaseModel):
                 "total_images": 10,
                 "total_prompts": 5,
                 "total_annotations": 50,
-                "annotations": [...],
+                "annotations": [],  # Empty list instead of ellipsis
                 "batch_stats": {
                     "start_time": "2024-08-27T12:00:00Z",
                     "end_time": "2024-08-27T12:30:00Z",
