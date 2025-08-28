@@ -157,6 +157,10 @@ for result in results:
     print(f"Tokens used: {result.token_metrics.total_tokens}")
     print(f"Speed: {result.performance_metrics.tokens_per_second} tokens/sec")
     print(f"Response: {result.response}")
+    
+    # For JSON responses, access parsed data directly
+    if result.response_format == "json" and result.response_data:
+        print(f"Parsed data: {result.response_data}")
 ```
 
 ## Development

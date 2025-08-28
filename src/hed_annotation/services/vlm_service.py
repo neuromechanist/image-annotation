@@ -51,8 +51,9 @@ class VLMResult(BaseModel):
     model: str
     prompt_id: str
     prompt_text: str
-    response: str
+    response: str  # Always stores raw string response
     response_format: str
+    response_data: dict | None = None  # Parsed JSON when response_format is "json"
 
     # Metrics
     token_metrics: TokenMetrics | None = None
@@ -262,35 +263,30 @@ class VLMService:
             token_metrics, performance_metrics = self._parse_metrics(ai_message)
 
             # Handle JSON extraction if needed
+            response_data = None
+            error = None
+
             if prompt.expected_format == "json":
                 try:
                     json_str = self._extract_json_from_markdown(response)
-                    parsed = json.loads(json_str)
-                    response = json.dumps(parsed, indent=2)
+                    response_data = json.loads(json_str)
+                    # Keep the raw response for preservation, but also store parsed data
                 except json.JSONDecodeError as e:
-                    return VLMResult(
-                        image_path=str(image_path),
-                        model=model or self.model,
-                        prompt_id=prompt.id,
-                        prompt_text=prompt.text,
-                        response=response,
-                        response_format=prompt.expected_format,
-                        token_metrics=token_metrics,
-                        performance_metrics=performance_metrics,
-                        temperature=self.temperature,
-                        error=f"JSON parsing failed: {e}",
-                    )
+                    error = f"JSON parsing failed: {e}"
+                    # Still return the result with the raw response and error
 
             return VLMResult(
                 image_path=str(image_path),
                 model=model or self.model,
                 prompt_id=prompt.id,
                 prompt_text=prompt.text,
-                response=response,
+                response=response,  # Always store raw response
                 response_format=prompt.expected_format,
+                response_data=response_data,  # Parsed JSON when applicable
                 token_metrics=token_metrics,
                 performance_metrics=performance_metrics,
                 temperature=self.temperature,
+                error=error,
             )
 
         except Exception as e:
