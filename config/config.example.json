@@ -1,0 +1,166 @@
+{
+  "version": "1.0.0",
+  "model_list": [
+    {
+      "name": "llava",
+      "provider": "OLLAMA",
+      "version": "latest",
+      "endpoint": "http://localhost:11434",
+      "api_key": null,
+      "parameters": {
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "top_p": 0.9
+      }
+    },
+    {
+      "name": "bakllava", 
+      "provider": "OLLAMA",
+      "version": "latest",
+      "endpoint": "http://localhost:11434",
+      "api_key": null,
+      "parameters": {
+        "temperature": 0.5,
+        "max_tokens": 3000
+      }
+    },
+    {
+      "name": "gpt-4o",
+      "provider": "OPENAI", 
+      "version": "2024-08-06",
+      "endpoint": "https://api.openai.com/v1",
+      "api_key": "YOUR_OPENAI_API_KEY",
+      "parameters": {
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      }
+    },
+    {
+      "name": "claude-3-5-sonnet",
+      "provider": "ANTHROPIC",
+      "version": "20241022",
+      "endpoint": "https://api.anthropic.com/v1",
+      "api_key": "YOUR_ANTHROPIC_API_KEY",
+      "parameters": {
+        "temperature": 0.7,
+        "max_tokens": 2000
+      }
+    }
+  ],
+  "prompts": [
+    {
+      "id": "describe_detailed",
+      "display_name": "Detailed Description",
+      "template": "Provide a detailed description of this image in approximately 200 words. Focus on the main subjects, setting, colors, mood, and any notable details.",
+      "variables": null,
+      "expected_response_type": "TEXT",
+      "max_length": 300,
+      "validation_schema": null
+    },
+    {
+      "id": "extract_keywords",
+      "display_name": "Extract Keywords",
+      "template": "Analyze this image and provide exactly 10 keywords that best describe its content. Return as a JSON array of strings.",
+      "variables": null,
+      "expected_response_type": "JSON",
+      "max_length": 500,
+      "validation_schema": {
+        "type": "array",
+        "items": {"type": "string"},
+        "minItems": 10,
+        "maxItems": 10
+      }
+    },
+    {
+      "id": "hierarchical_description",
+      "display_name": "Hierarchical Event Description",
+      "template": "Analyze this image and provide a hierarchical event description with the following structure as JSON:\n{\n  \"scene\": \"overall scene description\",\n  \"primary_objects\": [\"list of main objects\"],\n  \"actions\": [\"list of actions or events\"],\n  \"attributes\": {\n    \"mood\": \"emotional tone\",\n    \"setting\": \"location/environment\",\n    \"time_of_day\": \"estimated time\"\n  },\n  \"relationships\": [\"spatial or semantic relationships between objects\"]\n}",
+      "variables": null,
+      "expected_response_type": "JSON",
+      "max_length": 1000,
+      "validation_schema": {
+        "type": "object",
+        "required": ["scene", "primary_objects", "actions", "attributes", "relationships"],
+        "properties": {
+          "scene": {"type": "string"},
+          "primary_objects": {"type": "array", "items": {"type": "string"}},
+          "actions": {"type": "array", "items": {"type": "string"}},
+          "attributes": {
+            "type": "object",
+            "properties": {
+              "mood": {"type": "string"},
+              "setting": {"type": "string"},
+              "time_of_day": {"type": "string"}
+            }
+          },
+          "relationships": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    {
+      "id": "object_detection",
+      "display_name": "Object Detection",
+      "template": "List all objects visible in this image. For each object, provide its approximate location (top-left, center, bottom-right, etc.). Return as JSON with structure: {\"objects\": [{\"name\": \"object_name\", \"location\": \"position\"}]}",
+      "variables": null,
+      "expected_response_type": "JSON",
+      "max_length": 800,
+      "validation_schema": {
+        "type": "object",
+        "required": ["objects"],
+        "properties": {
+          "objects": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name", "location"],
+              "properties": {
+                "name": {"type": "string"},
+                "location": {"type": "string"}
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "emotional_analysis",
+      "display_name": "Emotional Analysis",
+      "template": "Analyze the emotional content and mood of this image. Consider colors, composition, subjects, and overall atmosphere. Provide your analysis as a structured response.",
+      "variables": null,
+      "expected_response_type": "TEXT",
+      "max_length": 250,
+      "validation_schema": null
+    }
+  ],
+  "default_server": "OLLAMA",
+  "connection_mode": "BATCH",
+  "batch_settings": {
+    "max_concurrent": 5,
+    "timeout": 300,
+    "retry_attempts": 3,
+    "retry_delay": 2
+  },
+  "stream_settings": {
+    "buffer_size": 1024,
+    "flush_interval": 0.1,
+    "timeout": 60
+  },
+  "image_settings": {
+    "source_directory": "/Volumes/S1/Datasets/NSD_stimuli/shared1000",
+    "processed_directory": "./data/processed_images",
+    "thumbnail_directory": "./data/thumbnails",
+    "max_dimension": 1024,
+    "thumbnail_size": 256,
+    "output_format": "JPEG",
+    "jpeg_quality": 85,
+    "target_total_size_mb": 80
+  },
+  "database": {
+    "type": "sqlite",
+    "connection_string": "sqlite:///./data/annotations.db",
+    "pool_size": 10,
+    "echo": false
+  }
+}
