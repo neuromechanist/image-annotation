@@ -4,50 +4,51 @@ import { useState, useEffect, useMemo } from 'react'
 import Image from 'next/image'
 import ThumbnailRibbon from './components/ThumbnailRibbon'
 import AnnotationViewer from './components/AnnotationViewer'
-import { ImageData, Annotation } from './types'
+import { ImageData, Annotation, PromptAnnotation } from './types'
+import { Brain, Sparkles, ChevronDown, Loader2 } from 'lucide-react'
 
 export default function Dashboard() {
   const [images, setImages] = useState<ImageData[]>([])
   const [selectedImageIndex, setSelectedImageIndex] = useState(0)
   const [annotations, setAnnotations] = useState<Record<string, Annotation[]>>({})
   const [selectedModel, setSelectedModel] = useState<string>('')
-  const [selectedPrompt, setSelectedPrompt] = useState<string>('')
+  const [selectedPromptKey, setSelectedPromptKey] = useState<string>('')
   const [loading, setLoading] = useState(true)
+  const [imageLoading, setImageLoading] = useState(false)
 
   // Load image list
   useEffect(() => {
     async function loadImages() {
       try {
-        // Get list of images from thumbnails directory
-        const imageFiles: ImageData[] = []
-        // For now, we'll hardcode the pattern, but in production this would come from an API
-        for (let i = 1; i <= 100; i++) {
-          const paddedNum = String(i).padStart(4, '0')
-          const imageName = `shared${paddedNum}_nsd`
-          // We'll need to check which files exist
-          imageFiles.push({
-            id: imageName,
-            thumbnailPath: `/thumbnails/${imageName}`,
-            imagePath: `/downsampled/${imageName}`,
-            annotationPath: `/annotations/nsd/${imageName}_annotations.json`
-          })
-        }
-        
-        // Actually load the real file list
         const response = await fetch('/api/images')
         if (response.ok) {
           const data = await response.json()
           setImages(data)
         } else {
-          // Fallback: create list from known pattern
-          const tempImages = await loadImageList()
-          setImages(tempImages)
+          // Create fallback list
+          const imageList: ImageData[] = []
+          for (let i = 1; i <= 100; i++) {
+            const paddedNum = String(i).padStart(4, '0')
+            // Known NSD numbers mapping
+            const nsdNumbers: Record<string, string> = {
+              '0001': '02951', '0002': '02991', '0003': '03050', '0004': '03078',
+              '0005': '03147', '0006': '03158', '0007': '03165', '0008': '03172',
+              '0009': '03182', '0010': '03387',
+            }
+            const nsdNum = nsdNumbers[paddedNum] || String(2950 + i).padStart(5, '0')
+            const imageName = `shared${paddedNum}_nsd${nsdNum}`
+            
+            imageList.push({
+              id: imageName,
+              thumbnailPath: `/thumbnails/${imageName}.jpg`,
+              imagePath: `/downsampled/${imageName}.jpg`,
+              annotationPath: `/annotations/nsd/${imageName}_annotations.json`
+            })
+          }
+          setImages(imageList)
         }
       } catch (error) {
         console.error('Error loading images:', error)
-        // Use fallback method
-        const tempImages = await loadImageList()
-        setImages(tempImages)
       } finally {
         setLoading(false)
       }
@@ -63,71 +64,67 @@ export default function Dashboard() {
     }
   }, [selectedImageIndex, images])
 
-  // Get available models and prompts for current image
+  // Get available models from current image annotations
   const availableModels = useMemo(() => {
     if (!images[selectedImageIndex]) return []
     const imageAnnotations = annotations[images[selectedImageIndex].id] || []
     return [...new Set(imageAnnotations.map(a => a.model))]
   }, [annotations, selectedImageIndex, images])
 
-  const availablePrompts = useMemo(() => {
-    if (!images[selectedImageIndex]) return []
+  // Get available prompt keys for selected model
+  const availablePromptKeys = useMemo(() => {
+    if (!images[selectedImageIndex] || !selectedModel) return []
     const imageAnnotations = annotations[images[selectedImageIndex].id] || []
-    if (selectedModel) {
-      return [...new Set(imageAnnotations.filter(a => a.model === selectedModel).map(a => a.prompt))]
+    const modelAnnotation = imageAnnotations.find(a => a.model === selectedModel)
+    if (modelAnnotation && modelAnnotation.prompts) {
+      return Object.keys(modelAnnotation.prompts)
     }
-    return [...new Set(imageAnnotations.map(a => a.prompt))]
+    return []
   }, [annotations, selectedImageIndex, images, selectedModel])
 
-  // Get current annotation
-  const currentAnnotation = useMemo(() => {
-    if (!images[selectedImageIndex]) return null
+  // Get current prompt annotation
+  const currentPromptAnnotation = useMemo(() => {
+    if (!images[selectedImageIndex] || !selectedModel || !selectedPromptKey) return null
     const imageAnnotations = annotations[images[selectedImageIndex].id] || []
-    return imageAnnotations.find(a => 
-      a.model === selectedModel && a.prompt === selectedPrompt
-    ) || null
-  }, [annotations, selectedImageIndex, images, selectedModel, selectedPrompt])
-
-  async function loadImageList(): Promise<ImageData[]> {
-    // Fallback method to create image list
-    const imageList: ImageData[] = []
-    for (let i = 1; i <= 100; i++) {
-      const paddedNum = String(i).padStart(4, '0')
-      // Parse the actual filenames from annotations
-      try {
-        const response = await fetch(`/annotations/nsd/shared${paddedNum}_nsd`, { method: 'HEAD' })
-        if (response.ok) {
-          // Extract actual NSD number from response or use pattern matching
-        }
-      } catch {}
-    }
-    return imageList
-  }
+    const modelAnnotation = imageAnnotations.find(a => a.model === selectedModel)
+    return modelAnnotation?.prompts[selectedPromptKey] || null
+  }, [annotations, selectedImageIndex, images, selectedModel, selectedPromptKey])
 
   async function loadAnnotationsForImage(imageId: string) {
+    setImageLoading(true)
     try {
-      // Try to load annotations from JSON file
       const response = await fetch(`/api/annotations/${imageId}`)
       if (response.ok) {
         const data = await response.json()
         setAnnotations(prev => ({ ...prev, [imageId]: data.annotations || [] }))
         
-        // Set default model and prompt if sticky selections don't exist
+        // Auto-select first model and prompt if nothing selected
         if (data.annotations && data.annotations.length > 0) {
-          // Try to keep sticky selection
-          const hasModel = data.annotations.some((a: Annotation) => a.model === selectedModel)
-          const hasPrompt = data.annotations.some((a: Annotation) => a.prompt === selectedPrompt)
+          const firstAnnotation = data.annotations[0]
           
+          // Keep sticky selection or set new defaults
+          const hasModel = data.annotations.some((a: Annotation) => a.model === selectedModel)
           if (!hasModel || !selectedModel) {
-            setSelectedModel(data.annotations[0].model)
-          }
-          if (!hasPrompt || !selectedPrompt) {
-            setSelectedPrompt(data.annotations[0].prompt)
+            setSelectedModel(firstAnnotation.model)
+            const firstPromptKey = Object.keys(firstAnnotation.prompts)[0]
+            setSelectedPromptKey(firstPromptKey)
+          } else {
+            // Check if current prompt key exists in new model
+            const modelAnnotation = data.annotations.find((a: Annotation) => a.model === selectedModel)
+            if (modelAnnotation && modelAnnotation.prompts) {
+              const hasPromptKey = Object.keys(modelAnnotation.prompts).includes(selectedPromptKey)
+              if (!hasPromptKey) {
+                const firstPromptKey = Object.keys(modelAnnotation.prompts)[0]
+                setSelectedPromptKey(firstPromptKey)
+              }
+            }
           }
         }
       }
     } catch (error) {
       console.error('Error loading annotations:', error)
+    } finally {
+      setImageLoading(false)
     }
   }
 
@@ -135,92 +132,159 @@ export default function Dashboard() {
     setSelectedImageIndex(index)
   }
 
+  // Format prompt key for display
+  const formatPromptKey = (key: string) => {
+    return key.split('_').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join(' ')
+  }
+
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-screen">
-        <div className="text-xl">Loading images...</div>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 flex items-center justify-center">
+        <div className="text-center">
+          <Loader2 className="w-12 h-12 text-purple-400 animate-spin mx-auto mb-4" />
+          <div className="text-xl text-gray-200">Loading neural interface...</div>
+        </div>
       </div>
     )
   }
 
   return (
-    <div className="flex flex-col h-screen bg-gray-50">
-      <header className="bg-white shadow-sm border-b px-6 py-4">
-        <h1 className="text-2xl font-semibold">HED Image Annotation Dashboard</h1>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900">
+      {/* Header */}
+      <header className="bg-black/30 backdrop-blur-xl border-b border-purple-500/20">
+        <div className="px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="p-2 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg">
+              <Brain className="w-6 h-6 text-white" />
+            </div>
+            <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              HED Neural Vision Lab
+            </h1>
+          </div>
+          <div className="flex items-center gap-2 text-sm text-gray-400">
+            <Sparkles className="w-4 h-4 text-purple-400" />
+            <span>AI-Powered Annotation System</span>
+          </div>
+        </div>
       </header>
       
-      <main className="flex-1 flex flex-col p-6 overflow-hidden">
-        <div className="flex gap-6 flex-1 min-h-0">
-          {/* Left side: Image viewer */}
-          <div className="flex-1 bg-white rounded-lg shadow-md p-4">
-            {images[selectedImageIndex] && (
-              <div className="h-full flex items-center justify-center">
-                <img
-                  src={images[selectedImageIndex].imagePath}
-                  alt={`NSD Image ${selectedImageIndex + 1}`}
-                  className="max-w-full max-h-full object-contain"
-                />
+      <main className="flex flex-col h-[calc(100vh-4rem)]">
+        <div className="flex-1 p-6 flex gap-6 min-h-0">
+          {/* Left Panel - Image Viewer */}
+          <div className="flex-1 flex flex-col gap-4">
+            <div className="flex-1 relative bg-black/40 backdrop-blur-md rounded-2xl border border-purple-500/20 p-2 overflow-hidden">
+              {imageLoading && (
+                <div className="absolute inset-0 bg-black/60 backdrop-blur-sm z-10 flex items-center justify-center rounded-2xl">
+                  <Loader2 className="w-8 h-8 text-purple-400 animate-spin" />
+                </div>
+              )}
+              {images[selectedImageIndex] && (
+                <div className="h-full flex items-center justify-center rounded-xl overflow-hidden">
+                  <img
+                    src={images[selectedImageIndex].imagePath}
+                    alt={`NSD Image ${selectedImageIndex + 1}`}
+                    className="max-w-full max-h-full object-contain rounded-lg"
+                  />
+                </div>
+              )}
+            </div>
+
+            {/* Image Info Bar */}
+            <div className="bg-black/40 backdrop-blur-md rounded-xl border border-purple-500/20 px-4 py-3">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  <span className="text-sm text-gray-400">Image ID:</span>
+                  <span className="text-sm font-mono text-purple-300">
+                    {images[selectedImageIndex]?.id || 'Loading...'}
+                  </span>
+                </div>
+                <div className="text-sm text-gray-400">
+                  {selectedImageIndex + 1} / {images.length}
+                </div>
               </div>
-            )}
+            </div>
           </div>
 
-          {/* Right side: Controls and annotation viewer */}
-          <div className="w-96 flex flex-col gap-4">
-            {/* Dropdowns */}
-            <div className="bg-white rounded-lg shadow-md p-4 space-y-3">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Model
-                </label>
+          {/* Right Panel - Controls and Annotations */}
+          <div className="w-[420px] flex flex-col gap-4">
+            {/* Model Selection */}
+            <div className="bg-black/40 backdrop-blur-md rounded-xl border border-purple-500/20 p-4">
+              <label className="block text-sm font-medium text-gray-300 mb-2">
+                Vision Model
+              </label>
+              <div className="relative">
                 <select
                   value={selectedModel}
-                  onChange={(e) => setSelectedModel(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  onChange={(e) => {
+                    setSelectedModel(e.target.value)
+                    // Reset prompt selection when model changes
+                    setSelectedPromptKey('')
+                  }}
+                  className="w-full px-4 py-3 bg-gray-800/50 border border-purple-500/30 rounded-lg text-gray-200 appearance-none focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all"
                 >
                   <option value="">Select a model</option>
                   {availableModels.map(model => (
                     <option key={model} value={model}>{model}</option>
                   ))}
                 </select>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Prompt
-                </label>
-                <select
-                  value={selectedPrompt}
-                  onChange={(e) => setSelectedPrompt(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                  <option value="">Select a prompt</option>
-                  {availablePrompts.map(prompt => (
-                    <option key={prompt} value={prompt}>
-                      {prompt.length > 50 ? prompt.substring(0, 50) + '...' : prompt}
-                    </option>
-                  ))}
-                </select>
+                <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
               </div>
             </div>
 
-            {/* Annotation viewer */}
-            <div className="flex-1 bg-white rounded-lg shadow-md p-4 overflow-auto">
-              <h3 className="font-semibold mb-2">Response</h3>
-              {currentAnnotation ? (
-                <AnnotationViewer annotation={currentAnnotation} />
-              ) : (
-                <p className="text-gray-500">Select a model and prompt to view annotation</p>
-              )}
+            {/* Prompt Selection */}
+            <div className="bg-black/40 backdrop-blur-md rounded-xl border border-purple-500/20 p-4">
+              <label className="block text-sm font-medium text-gray-300 mb-2">
+                Analysis Type
+              </label>
+              <div className="relative">
+                <select
+                  value={selectedPromptKey}
+                  onChange={(e) => setSelectedPromptKey(e.target.value)}
+                  className="w-full px-4 py-3 bg-gray-800/50 border border-purple-500/30 rounded-lg text-gray-200 appearance-none focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all"
+                  disabled={!selectedModel}
+                >
+                  <option value="">Select analysis type</option>
+                  {availablePromptKeys.map(key => (
+                    <option key={key} value={key}>
+                      {formatPromptKey(key)}
+                    </option>
+                  ))}
+                </select>
+                <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
+              </div>
+            </div>
+
+            {/* Annotation Display */}
+            <div className="flex-1 bg-black/40 backdrop-blur-md rounded-xl border border-purple-500/20 p-4 overflow-hidden flex flex-col">
+              <h3 className="font-semibold text-gray-200 mb-3 flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-purple-400" />
+                AI Analysis
+              </h3>
+              <div className="flex-1 overflow-auto">
+                {currentPromptAnnotation ? (
+                  <AnnotationViewer annotation={currentPromptAnnotation} />
+                ) : (
+                  <div className="text-gray-500 text-center py-8">
+                    {!selectedModel ? 'Select a vision model to begin' : 
+                     !selectedPromptKey ? 'Choose an analysis type' :
+                     'No analysis available'}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Thumbnail ribbon at bottom */}
-        <ThumbnailRibbon
-          images={images}
-          selectedIndex={selectedImageIndex}
-          onSelect={handleImageSelect}
-        />
+        {/* Bottom Thumbnail Ribbon */}
+        <div className="p-4">
+          <ThumbnailRibbon
+            images={images}
+            selectedIndex={selectedImageIndex}
+            onSelect={handleImageSelect}
+          />
+        </div>
       </main>
     </div>
   )

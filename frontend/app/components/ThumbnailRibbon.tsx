@@ -35,7 +35,7 @@ export default function ThumbnailRibbon({ images, selectedIndex, onSelect }: Thu
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
       scrollContainerRef.current.scrollBy({
-        left: -200,
+        left: -300,
         behavior: 'smooth'
       })
     }
@@ -44,7 +44,7 @@ export default function ThumbnailRibbon({ images, selectedIndex, onSelect }: Thu
   const scrollRight = () => {
     if (scrollContainerRef.current) {
       scrollContainerRef.current.scrollBy({
-        left: 200,
+        left: 300,
         behavior: 'smooth'
       })
     }
@@ -59,23 +59,27 @@ export default function ThumbnailRibbon({ images, selectedIndex, onSelect }: Thu
   }
 
   return (
-    <div className="mt-4 bg-white rounded-lg shadow-md p-4">
+    <div className="bg-black/40 backdrop-blur-md rounded-xl border border-purple-500/20 p-4">
       <div className="relative flex items-center">
         {/* Left scroll button */}
         <button
           onClick={scrollLeft}
-          className="absolute left-0 z-10 bg-white/90 hover:bg-white rounded-full p-2 shadow-md"
+          className="absolute left-2 z-10 bg-gray-800/80 hover:bg-gray-700/80 backdrop-blur-sm rounded-full p-2 shadow-lg border border-purple-500/20 transition-all hover:scale-110"
           aria-label="Scroll left"
         >
-          <ChevronLeft className="w-5 h-5" />
+          <ChevronLeft className="w-5 h-5 text-purple-300" />
         </button>
 
         {/* Thumbnail container */}
         <div
           ref={scrollContainerRef}
-          className="flex gap-2 overflow-x-auto scrollbar-thin px-10 py-2"
+          className="flex gap-3 overflow-x-auto scrollbar-thin px-14 py-2"
           onKeyDown={handleKeyNavigation}
           tabIndex={0}
+          style={{
+            scrollbarWidth: 'thin',
+            scrollbarColor: 'rgb(147 51 234 / 0.3) transparent'
+          }}
         >
           {images.map((image, index) => {
             // Extract the image number for display
@@ -87,23 +91,38 @@ export default function ThumbnailRibbon({ images, selectedIndex, onSelect }: Thu
                 ref={el => thumbnailRefs.current[index] = el}
                 onClick={() => onSelect(index)}
                 className={`
-                  relative flex-shrink-0 border-2 rounded-md overflow-hidden
-                  transition-all duration-200 hover:scale-105
+                  relative flex-shrink-0 rounded-lg overflow-hidden
+                  transition-all duration-300 transform
                   ${selectedIndex === index 
-                    ? 'border-blue-500 shadow-lg' 
-                    : 'border-gray-300 hover:border-gray-400'
+                    ? 'ring-2 ring-purple-400 ring-offset-2 ring-offset-transparent scale-110 shadow-xl shadow-purple-500/30' 
+                    : 'hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20'
                   }
                 `}
                 aria-label={`Select image ${imageNumber}`}
               >
-                <img
-                  src={image.thumbnailPath}
-                  alt={`Thumbnail ${imageNumber}`}
-                  className="w-24 h-24 object-cover"
-                  loading="lazy"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white text-xs py-1 text-center">
-                  {imageNumber}
+                <div className={`relative ${selectedIndex === index ? 'brightness-100' : 'brightness-75'}`}>
+                  <img
+                    src={image.thumbnailPath}
+                    alt={`Thumbnail ${imageNumber}`}
+                    className="w-28 h-28 object-cover"
+                    loading="lazy"
+                  />
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  
+                  {/* Image number badge */}
+                  <div className={`absolute bottom-1 left-1 right-1 flex items-center justify-center`}>
+                    <span className={`
+                      px-2 py-0.5 rounded-full text-xs font-medium
+                      ${selectedIndex === index 
+                        ? 'bg-purple-500/80 text-white' 
+                        : 'bg-black/60 text-gray-300'
+                      }
+                      backdrop-blur-sm
+                    `}>
+                      {imageNumber}
+                    </span>
+                  </div>
                 </div>
               </button>
             )
@@ -113,16 +132,30 @@ export default function ThumbnailRibbon({ images, selectedIndex, onSelect }: Thu
         {/* Right scroll button */}
         <button
           onClick={scrollRight}
-          className="absolute right-0 z-10 bg-white/90 hover:bg-white rounded-full p-2 shadow-md"
+          className="absolute right-2 z-10 bg-gray-800/80 hover:bg-gray-700/80 backdrop-blur-sm rounded-full p-2 shadow-lg border border-purple-500/20 transition-all hover:scale-110"
           aria-label="Scroll right"
         >
-          <ChevronRight className="w-5 h-5" />
+          <ChevronRight className="w-5 h-5 text-purple-300" />
         </button>
       </div>
       
-      {/* Image counter */}
-      <div className="text-center mt-2 text-sm text-gray-600">
-        Image {selectedIndex + 1} of {images.length}
+      {/* Progress indicator */}
+      <div className="mt-3 flex items-center justify-center gap-2">
+        <div className="flex gap-1">
+          {Array.from({ length: Math.min(10, Math.ceil(images.length / 10)) }).map((_, i) => (
+            <div
+              key={i}
+              className={`h-1 rounded-full transition-all ${
+                Math.floor(selectedIndex / 10) === i
+                  ? 'w-8 bg-gradient-to-r from-purple-400 to-pink-400'
+                  : 'w-2 bg-gray-600'
+              }`}
+            />
+          ))}
+        </div>
+        <span className="text-xs text-gray-400 ml-2">
+          {selectedIndex + 1} / {images.length}
+        </span>
       </div>
     </div>
   )
