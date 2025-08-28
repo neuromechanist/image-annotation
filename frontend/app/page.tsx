@@ -5,7 +5,7 @@ import Image from 'next/image'
 import ThumbnailRibbon from './components/ThumbnailRibbon'
 import AnnotationViewer from './components/AnnotationViewer'
 import { ImageData, Annotation, PromptAnnotation } from './types'
-import { Brain, Sparkles, ChevronDown, Loader2 } from 'lucide-react'
+import { Brain, Sparkles, ChevronDown, Loader2, ExternalLink } from 'lucide-react'
 
 export default function Dashboard() {
   const [images, setImages] = useState<ImageData[]>([])
@@ -151,7 +151,7 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 flex flex-col">
       {/* Header */}
       <header className="bg-black/30 backdrop-blur-xl border-b border-purple-500/20">
         <div className="px-6 py-4 flex items-center justify-between">
@@ -160,32 +160,32 @@ export default function Dashboard() {
               <Brain className="w-6 h-6 text-white" />
             </div>
             <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              HED Neural Vision Lab
+              The Annotation Garden Project
             </h1>
           </div>
           <div className="flex items-center gap-2 text-sm text-gray-400">
             <Sparkles className="w-4 h-4 text-purple-400" />
-            <span>AI-Powered Annotation System</span>
+            <span>AI-Powered Vision Analysis</span>
           </div>
         </div>
       </header>
       
-      <main className="flex flex-col h-[calc(100vh-4rem)]">
+      <main className="flex-1 flex flex-col">
         <div className="flex-1 p-6 flex gap-6 min-h-0">
-          {/* Left Panel - Image Viewer */}
-          <div className="flex-1 flex flex-col gap-4">
-            <div className="flex-1 relative bg-black/40 backdrop-blur-md rounded-2xl border border-purple-500/20 p-2 overflow-hidden">
+          {/* Left Panel - Image Viewer (constrained width) */}
+          <div className="flex flex-col gap-4" style={{ maxWidth: '600px', minWidth: '400px' }}>
+            <div className="relative bg-black/40 backdrop-blur-md rounded-2xl border border-purple-500/20 p-2 h-full max-h-[600px] flex items-center justify-center">
               {imageLoading && (
                 <div className="absolute inset-0 bg-black/60 backdrop-blur-sm z-10 flex items-center justify-center rounded-2xl">
                   <Loader2 className="w-8 h-8 text-purple-400 animate-spin" />
                 </div>
               )}
               {images[selectedImageIndex] && (
-                <div className="h-full flex items-center justify-center rounded-xl overflow-hidden">
+                <div className="flex items-center justify-center">
                   <img
                     src={images[selectedImageIndex].imagePath}
                     alt={`NSD Image ${selectedImageIndex + 1}`}
-                    className="max-w-full max-h-full object-contain rounded-lg"
+                    className="max-w-full max-h-[580px] object-contain rounded-lg"
                   />
                 </div>
               )}
@@ -207,8 +207,8 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* Right Panel - Controls and Annotations */}
-          <div className="w-[420px] flex flex-col gap-4">
+          {/* Right Panel - Controls and Annotations (takes remaining space) */}
+          <div className="flex-1 flex flex-col gap-4 min-w-0">
             {/* Model Selection */}
             <div className="bg-black/40 backdrop-blur-md rounded-xl border border-purple-500/20 p-4">
               <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -256,8 +256,8 @@ export default function Dashboard() {
               </div>
             </div>
 
-            {/* Annotation Display */}
-            <div className="flex-1 bg-black/40 backdrop-blur-md rounded-xl border border-purple-500/20 p-4 overflow-hidden flex flex-col">
+            {/* Annotation Display - Takes remaining space */}
+            <div className="flex-1 bg-black/40 backdrop-blur-md rounded-xl border border-purple-500/20 p-4 overflow-hidden flex flex-col min-h-0">
               <h3 className="font-semibold text-gray-200 mb-3 flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-purple-400" />
                 AI Analysis
@@ -278,13 +278,30 @@ export default function Dashboard() {
         </div>
 
         {/* Bottom Thumbnail Ribbon */}
-        <div className="p-4">
+        <div className="px-6 pb-3">
           <ThumbnailRibbon
             images={images}
             selectedIndex={selectedImageIndex}
             onSelect={handleImageSelect}
           />
         </div>
+
+        {/* Footer */}
+        <footer className="bg-black/30 backdrop-blur-xl border-t border-purple-500/20 px-6 py-3">
+          <div className="text-center text-sm text-gray-400">
+            © 2025{' '}
+            <a 
+              href="https://neuromechanist.github.io" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-purple-400 hover:text-purple-300 transition-colors inline-flex items-center gap-1"
+            >
+              Seyed Yahya Shirazi
+              <ExternalLink className="w-3 h-3" />
+            </a>
+            , Swartz Center for Computational Neuroscience, UC San Diego
+          </div>
+        </footer>
       </main>
     </div>
   )
