@@ -68,7 +68,7 @@ export default function Dashboard() {
   const availableModels = useMemo(() => {
     if (!images[selectedImageIndex]) return []
     const imageAnnotations = annotations[images[selectedImageIndex].id] || []
-    return [...new Set(imageAnnotations.map(a => a.model))]
+    return Array.from(new Set(imageAnnotations.map(a => a.model)))
   }, [annotations, selectedImageIndex, images])
 
   // Get available prompt keys for selected model
