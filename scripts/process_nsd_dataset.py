@@ -165,7 +165,7 @@ def save_image_results(  # noqa: C901
     # Create model results
     model_data = {
         "model": model,
-        "temperature": prompt_results[0].temperature if prompt_results else 0.7,
+        "temperature": prompt_results[0].temperature if prompt_results else 0.3,
         "prompts": {},
         "metrics": {
             "total_tokens": 0,
@@ -232,7 +232,7 @@ def process_model_batch(
     image_files: list[Path],
     prompts: list[VLMPrompt],
     output_dir: Path,
-    temperature: float = 0.7,
+    temperature: float = 0.3,
     completed_images: set[str] = None,
 ) -> list[str]:
     """Process all images for a single model.
@@ -356,8 +356,8 @@ def main():
     parser.add_argument(
         "--temperature",
         type=float,
-        default=0.7,
-        help="Generation temperature",
+        default=0.3,
+        help="Generation temperature (lower = more consistent/reproducible)",
     )
     parser.add_argument(
         "--start-index",

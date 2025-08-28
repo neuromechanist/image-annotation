@@ -199,7 +199,7 @@ def process_single_image(
     models: list[str],
     prompts: list[VLMPrompt],
     output_dir: Path,
-    temperature: float = 0.7,
+    temperature: float = 0.3,
 ) -> Path:
     """Process a single image with all models and prompts.
 
@@ -302,8 +302,8 @@ def main():
     parser.add_argument(
         "--temperature",
         type=float,
-        default=0.7,
-        help="Generation temperature",
+        default=0.3,
+        help="Generation temperature (lower = more consistent/reproducible)",
     )
     parser.add_argument(
         "--start-index",

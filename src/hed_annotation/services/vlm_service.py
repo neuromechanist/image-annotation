@@ -74,7 +74,7 @@ class VLMService:
         self,
         model: str = "gemma3:4b",
         base_url: str = "http://localhost:11434",
-        temperature: float = 0.7,
+        temperature: float = 0.3,
         timeout: int = 60,
     ):
         """Initialize the VLM service.
