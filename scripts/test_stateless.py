@@ -9,16 +9,21 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.hed_annotation.services.vlm_service import VLMPrompt, VLMService
 
 
-def test_stateless_processing():
-    """Test that each prompt gets a fresh context with no memory of previous prompts."""
+def test_stateless_processing(image_path=None):
+    """Test that each prompt gets a fresh context with no memory of previous prompts.
+
+    Args:
+        image_path: Optional path to test image. Defaults to first downsampled image.
+    """
 
     print("Testing Stateless Processing")
     print("=" * 60)
 
-    # Use a test image
-    image_path = Path(
-        "/Users/yahya/Documents/git/hed-image-annotation/images/downsampled/shared0001_nsd02951.jpg"
-    )
+    # Use a test image - default to first downsampled image
+    if image_path is None:
+        image_path = Path("images/downsampled/shared0001_nsd02951.jpg")
+    else:
+        image_path = Path(image_path)
 
     # Create prompts that would reveal context leakage
     prompts = [
@@ -82,4 +87,15 @@ def test_stateless_processing():
 
 
 if __name__ == "__main__":
-    test_stateless_processing()
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Test stateless VLM processing")
+    parser.add_argument(
+        "--image",
+        type=str,
+        default=None,
+        help="Path to test image (defaults to images/downsampled/shared0001_nsd02951.jpg)",
+    )
+
+    args = parser.parse_args()
+    test_stateless_processing(args.image)

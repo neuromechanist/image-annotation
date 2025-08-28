@@ -276,14 +276,14 @@ def main():
     parser.add_argument(
         "--input-dir",
         type=Path,
-        default=Path("/Users/yahya/Documents/git/hed-image-annotation/images/original"),
-        help="Directory containing NSD images",
+        default=Path("images/original"),
+        help="Directory containing NSD images (relative to project root)",
     )
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("/Users/yahya/Documents/git/hed-image-annotation/annotations/nsd"),
-        help="Directory to save annotations",
+        default=Path("annotations/nsd"),
+        help="Directory to save annotations (relative to project root)",
     )
     parser.add_argument(
         "--models",
