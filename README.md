@@ -1,8 +1,8 @@
 # The Annotation Garden Project
 
-🌐 **[View Live Dashboard](https://neuromechanist.github.io/hed-image-annotation)**
+🌐 **[View Live Dashboard](https://neuromechanist.github.io/image-annotation)**
 
-A VLM-based image annotation system for Natural Scene Dataset (NSD) to Hierarchical Event Descriptors using multiple language models.
+A VLM-based image annotation system for Natural Scene Dataset (NSD) using multiple language models.
 
 ## Overview
 
@@ -33,14 +33,14 @@ This system provides a comprehensive solution for annotating images using variou
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/hed-image-annotation.git
-cd hed-image-annotation
+git clone https://github.com/yourusername/image-annotation.git
+cd image-annotation
 ```
 
 2. Create and activate a conda environment:
 ```bash
-conda create -n hed-annotation python=3.11
-conda activate hed-annotation
+conda create -n image-annotation python=3.11
+conda activate image-annotation
 ```
 
 3. Install Python dependencies:
@@ -80,7 +80,7 @@ cd frontend
 npm run deploy
 ```
 
-The dashboard will be available at: https://neuromechanist.github.io/hed-image-annotation
+The dashboard will be available at: https://neuromechanist.github.io/image-annotation
 
 See [frontend/README.md](frontend/README.md) for detailed frontend documentation.
 
@@ -108,7 +108,7 @@ ollama serve
 
 2. Run the VLM service test:
 ```bash
-python -m hed_annotation.services.vlm_service
+python -m image_annotation.services.vlm_service
 ```
 
 This will process a sample image with test prompts and save results to `annotations/test/`.
@@ -117,7 +117,7 @@ This will process a sample image with test prompts and save results to `annotati
 
 1. Start the backend server:
 ```bash
-uvicorn src.hed_annotation.api.main:app --reload
+uvicorn src.image_annotation.api.main:app --reload
 ```
 
 2. Start the frontend development server:
@@ -131,9 +131,9 @@ npm run dev
 ## Project Structure
 
 ```
-hed-image-annotation/
+image-annotation/
 ├── src/
-│   └── hed_annotation/
+│   └── image_annotation/
 │       ├── api/           # FastAPI endpoints
 │       ├── core/          # Core business logic
 │       ├── models/        # Data models and schemas
@@ -151,7 +151,7 @@ hed-image-annotation/
 ### Programmatic Usage
 
 ```python
-from hed_annotation.services.vlm_service import VLMService, VLMPrompt
+from image_annotation.services.vlm_service import VLMService, VLMPrompt
 from pathlib import Path
 
 # Initialize service

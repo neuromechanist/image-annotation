@@ -2,7 +2,7 @@
 
 // Determine if we're building for production GitHub Pages
 const isProd = process.env.NODE_ENV === 'production'
-const basePath = isProd ? '/hed-image-annotation' : ''
+const basePath = isProd ? '/image-annotation' : ''
 
 const nextConfig = {
   reactStrictMode: true,

@@ -38,7 +38,7 @@ npm run build:static
 npm run deploy
 ```
 
-The site will be available at: https://neuromechanist.github.io/hed-image-annotation
+The site will be available at: https://neuromechanist.github.io/image-annotation
 
 ## 🛠️ Available Scripts
 
@@ -83,7 +83,7 @@ frontend/
 The dashboard expects the following structure in the parent directory:
 
 ```
-hed-image-annotation/
+image-annotation/
 ├── images/
 │   └── downsampled/      # Downsampled NSD images
 ├── data/

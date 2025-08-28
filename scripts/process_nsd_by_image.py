@@ -23,7 +23,7 @@ from typing import Any
 # Add parent directory to path to import the package
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from src.hed_annotation.services.vlm_service import VLMPrompt, VLMResult, VLMService
+from src.image_annotation.services.vlm_service import VLMPrompt, VLMResult, VLMService
 
 
 def create_comprehensive_prompts() -> list[VLMPrompt]:
