@@ -93,21 +93,46 @@ def load_progress(progress_file: Path) -> dict[str, Any]:
     """Load existing progress from checkpoint file."""
     if progress_file.exists():
         with open(progress_file) as f:
-            return json.load(f)
-    return {"completed": {}, "last_checkpoint": None}
+            data = json.load(f)
+            # Handle old format (list of images) and new format (dict with per-image status)
+            if "completed" in data:
+                completed = data["completed"]
+                # Convert old format to new format if needed
+                for model, images in completed.items():
+                    if isinstance(images, list):
+                        # Old format: convert list to dict
+                        completed[model] = {img: "completed" for img in images}
+                data["completed"] = completed
+            return data
+    return {"completed": {}, "last_checkpoint": None, "current_model": None, "current_image": None}
 
 
-def save_progress(progress_file: Path, completed: dict[str, list[str]]) -> None:
-    """Save progress checkpoint.
+def save_progress(
+    progress_file: Path,
+    completed: dict[str, dict[str, str]],
+    current_model: str = None,
+    current_image: str = None,
+) -> None:
+    """Save progress checkpoint with per-image status tracking.
 
     Args:
         progress_file: Path to progress file
-        completed: Dictionary of model -> list of completed image names
+        completed: Dictionary of model -> dict of image_name -> status
+        current_model: Currently processing model
+        current_image: Currently processing image
     """
+    # Count completed images
+    total_completed = sum(
+        len([img for img, status in images.items() if status == "completed"])
+        for images in completed.values()
+    )
+
     progress = {
         "completed": completed,
         "last_checkpoint": datetime.now(UTC).isoformat(),
-        "total_processed": sum(len(images) for images in completed.values()),
+        "total_processed": total_completed,
+        "current_model": current_model,
+        "current_image": current_image,
     }
     with open(progress_file, "w") as f:
         json.dump(progress, f, indent=2)
@@ -227,14 +252,16 @@ def save_image_results(  # noqa: C901
     return output_file
 
 
-def process_model_batch(
+def process_model_batch(  # noqa: C901
     model: str,
     image_files: list[Path],
     prompts: list[VLMPrompt],
     output_dir: Path,
     temperature: float = 0.3,
-    completed_images: set[str] = None,
-) -> list[str]:
+    completed_images: dict[str, str] = None,
+    progress_file: Path = None,
+    all_progress: dict = None,
+) -> dict[str, str]:
     """Process all images for a single model.
 
     This approach minimizes model loading/unloading overhead.
@@ -245,27 +272,33 @@ def process_model_batch(
         prompts: List of prompts to run
         output_dir: Directory to save results
         temperature: Generation temperature
-        completed_images: Set of already completed image names for this model
+        completed_images: Dict of image_name -> status for this model
+        progress_file: Path to progress file for saving checkpoints
+        all_progress: Full progress dict for all models
 
     Returns:
-        List of successfully processed image names
+        Dict of image_name -> status for all processed images
     """
     if completed_images is None:
-        completed_images = set()
+        completed_images = {}
+
+    if all_progress is None:
+        all_progress = {"completed": {}}
 
     print(f"\n{'=' * 80}")
     print(f"Processing with model: {model}")
     print(f"{'=' * 80}")
 
     # Filter out already completed images
-    images_to_process = [img for img in image_files if img.name not in completed_images]
+    completed_set = {img for img, status in completed_images.items() if status == "completed"}
+    images_to_process = [img for img in image_files if img.name not in completed_set]
 
     if not images_to_process:
         print(f"All images already processed for {model}")
-        return list(completed_images)
+        return completed_images
 
     print(
-        f"Images to process: {len(images_to_process)} (skipping {len(completed_images)} already completed)"
+        f"Images to process: {len(images_to_process)} (skipping {len(completed_set)} already completed)"
     )
 
     # Create service once for this model
@@ -275,12 +308,17 @@ def process_model_batch(
         timeout=120,  # Increase timeout for larger models
     )
 
-    processed = list(completed_images)
+    processed = dict(completed_images)
 
     # Process each image
     for img_idx, image_path in enumerate(images_to_process, 1):
         print(f"\n[{img_idx}/{len(images_to_process)}] Image: {image_path.name}")
         print("-" * 40)
+
+        # Update progress to mark current image as in-progress
+        if progress_file and all_progress:
+            all_progress["completed"][model] = processed
+            save_progress(progress_file, all_progress["completed"], model, image_path.name)
 
         prompt_results = []
 
@@ -325,9 +363,15 @@ def process_model_batch(
         try:
             output_file = save_image_results(image_path, model, prompt_results, output_dir)
             print(f"  💾 Saved to: {output_file.name}")
-            processed.append(image_path.name)
+            processed[image_path.name] = "completed"
+
+            # Save progress checkpoint after each successful image
+            if progress_file and all_progress:
+                all_progress["completed"][model] = processed
+                save_progress(progress_file, all_progress["completed"], model, None)
         except Exception as e:
             print(f"  ❌ Failed to save results: {e}")
+            processed[image_path.name] = "failed"
 
     return processed
 
@@ -431,8 +475,8 @@ def main():
         print(f"\n[Model {model_idx}/{len(args.models)}]")
 
         try:
-            # Get already completed images for this model
-            completed_for_model = set(completed_all.get(model, []))
+            # Get already completed images for this model (now a dict)
+            completed_for_model = completed_all.get(model, {})
 
             # Process all images with this model
             processed = process_model_batch(
@@ -442,18 +486,27 @@ def main():
                 output_dir=args.output_dir,
                 temperature=args.temperature,
                 completed_images=completed_for_model,
+                progress_file=progress_file,
+                all_progress={"completed": completed_all},
             )
 
             # Update progress
             completed_all[model] = processed
             save_progress(progress_file, completed_all)
 
-            print(f"\n✅ Completed {len(processed)} images with {model}")
+            # Count completed images
+            completed_count = len(
+                [img for img, status in processed.items() if status == "completed"]
+            )
+            print(f"\n✅ Completed {completed_count} images with {model}")
 
         except KeyboardInterrupt:
             print("\n\n⚠️ Processing interrupted by user")
             save_progress(progress_file, completed_all)
-            total_processed = sum(len(images) for images in completed_all.values())
+            total_processed = sum(
+                len([img for img, status in images.items() if status == "completed"])
+                for images in completed_all.values()
+            )
             print(f"Progress saved. Total annotations: {total_processed}")
             break
         except Exception as e:
@@ -465,8 +518,12 @@ def main():
     print(f"Processing complete at {datetime.now(UTC).isoformat()}")
     print("\nSummary by model:")
     for model, images in completed_all.items():
-        print(f"  {model}: {len(images)} images")
-    total_annotations = sum(len(images) for images in completed_all.values())
+        completed_count = len([img for img, status in images.items() if status == "completed"])
+        print(f"  {model}: {completed_count} images completed")
+    total_annotations = sum(
+        len([img for img, status in images.items() if status == "completed"])
+        for images in completed_all.values()
+    )
     print(f"\nTotal annotations: {total_annotations}")
     print(f"Results saved to: {args.output_dir}")
     print(f"{'=' * 80}")

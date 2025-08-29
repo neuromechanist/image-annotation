@@ -94,16 +94,38 @@ def load_progress(progress_file: Path) -> dict[str, Any]:
     """Load existing progress from checkpoint file."""
     if progress_file.exists():
         with open(progress_file) as f:
-            return json.load(f)
-    return {"completed_images": [], "last_checkpoint": None}
+            data = json.load(f)
+            # Handle old format (list) and new format (dict with per-image status)
+            if "completed_images" in data:
+                if isinstance(data["completed_images"], list):
+                    # Old format: convert list to dict
+                    data["completed_images"] = {
+                        img: "completed" for img in data["completed_images"]
+                    }
+            return data
+    return {"completed_images": {}, "last_checkpoint": None, "current_image": None}
 
 
-def save_progress(progress_file: Path, completed_images: list[str]) -> None:
-    """Save progress checkpoint."""
+def save_progress(
+    progress_file: Path, completed_images: dict[str, str], current_image: str = None
+) -> None:
+    """Save progress checkpoint with per-image status tracking.
+
+    Args:
+        progress_file: Path to progress file
+        completed_images: Dict of image_name -> status
+        current_image: Currently processing image
+    """
+    # Count completed images
+    total_completed = len(
+        [img for img, status in completed_images.items() if status == "completed"]
+    )
+
     progress = {
         "completed_images": completed_images,
         "last_checkpoint": datetime.now(UTC).isoformat(),
-        "total_processed": len(completed_images),
+        "total_processed": total_completed,
+        "current_image": current_image,
     }
     with open(progress_file, "w") as f:
         json.dump(progress, f, indent=2)
@@ -194,13 +216,14 @@ def save_image_results(image_path: Path, results: list[VLMResult], output_dir: P
     return output_file
 
 
-def process_single_image(
+def process_single_image(  # noqa: C901
     image_path: Path,
     models: list[str],
     prompts: list[VLMPrompt],
     output_dir: Path,
     temperature: float = 0.3,
-) -> Path:
+    check_existing: bool = True,
+) -> tuple[Path, bool]:
     """Process a single image with all models and prompts.
 
     IMPORTANT: Ensures stateless processing - each prompt gets a fresh context.
@@ -211,9 +234,10 @@ def process_single_image(
         prompts: List of prompts to run
         output_dir: Directory to save results
         temperature: Generation temperature
+        check_existing: Whether to check and load existing partial results
 
     Returns:
-        Path to the saved results file
+        Tuple of (Path to saved results file, success status)
     """
     print(f"\n{'=' * 80}")
     print(f"Processing: {image_path.name}")
@@ -221,8 +245,44 @@ def process_single_image(
 
     all_results = []
 
+    # Check for existing partial results
+    image_name = image_path.stem
+    output_file = output_dir / f"{image_name}_annotations.json"
+    existing_models = set()
+
+    if check_existing and output_file.exists():
+        try:
+            with open(output_file) as f:
+                existing_data = json.load(f)
+                existing_models = {ann["model"] for ann in existing_data.get("annotations", [])}
+                if existing_models:
+                    print(f"Found existing annotations for models: {', '.join(existing_models)}")
+                    # Load existing results
+                    for ann in existing_data["annotations"]:
+                        for prompt_id, prompt_data in ann["prompts"].items():
+                            all_results.append(
+                                VLMResult(
+                                    image_path=str(image_path),
+                                    model=ann["model"],
+                                    prompt_id=prompt_id,
+                                    prompt_text=prompt_data["prompt_text"],
+                                    response=prompt_data.get("response", ""),
+                                    response_format=prompt_data.get("response_format"),
+                                    temperature=ann["temperature"],
+                                    error=prompt_data.get("error"),
+                                )
+                            )
+        except Exception as e:
+            print(f"Warning: Could not load existing results: {e}")
+
     # Process each model
+    success = True
     for model_idx, model in enumerate(models, 1):
+        # Skip models that have already been processed
+        if model in existing_models:
+            print(f"\nModel {model_idx}/{len(models)}: {model} - Already processed, skipping")
+            continue
+
         print(f"\nModel {model_idx}/{len(models)}: {model}")
         print("-" * 40)
 
@@ -257,6 +317,7 @@ def process_single_image(
 
             except Exception as e:
                 print(f"❌ Failed: {e}")
+                success = False
                 # Create error result
                 all_results.append(
                     VLMResult(
@@ -272,10 +333,14 @@ def process_single_image(
                 )
 
     # Save results for this image
-    output_file = save_image_results(image_path, all_results, output_dir)
-    print(f"\n✅ Results saved to: {output_file}")
+    try:
+        output_file = save_image_results(image_path, all_results, output_dir)
+        print(f"\n✅ Results saved to: {output_file}")
+    except Exception as e:
+        print(f"\n❌ Failed to save results: {e}")
+        success = False
 
-    return output_file
+    return output_file, success
 
 
 def main():
@@ -348,7 +413,9 @@ def main():
 
     # Filter out already completed images if resuming
     if args.resume and progress["completed_images"]:
-        completed_set = set(progress["completed_images"])
+        completed_set = {
+            img for img, status in progress["completed_images"].items() if status == "completed"
+        }
         image_files = [img for img in image_files if img.name not in completed_set]
         print(f"Resuming: {len(completed_set)} already processed, {len(image_files)} remaining")
 
@@ -367,39 +434,57 @@ def main():
     print(f"Starting processing at {datetime.now(UTC).isoformat()}")
     print(f"{'=' * 80}")
 
-    completed = list(progress["completed_images"])
+    completed = dict(progress.get("completed_images", {}))
 
     for idx, image_path in enumerate(image_files, 1):
         try:
             print(f"\n[{idx}/{len(image_files)}] Processing {image_path.name}")
 
+            # Update progress to mark current image as in-progress
+            save_progress(progress_file, completed, image_path.name)
+
             # Process the image with all models and prompts
             # IMPORTANT: Each image gets a completely fresh start
-            process_single_image(
+            output_file, success = process_single_image(
                 image_path=image_path,
                 models=args.models,
                 prompts=prompts,
                 output_dir=args.output_dir,
                 temperature=args.temperature,
+                check_existing=args.resume,  # Check for partial results if resuming
             )
 
-            # Update progress
-            completed.append(image_path.name)
+            # Update progress based on success
+            if success:
+                completed[image_path.name] = "completed"
+            else:
+                completed[image_path.name] = "partial"
             save_progress(progress_file, completed)
 
         except KeyboardInterrupt:
             print("\n\n⚠️ Processing interrupted by user")
             save_progress(progress_file, completed)
-            print(f"Progress saved. Processed {len(completed)} images.")
+            completed_count = len(
+                [img for img, status in completed.items() if status == "completed"]
+            )
+            partial_count = len([img for img, status in completed.items() if status == "partial"])
+            print(f"Progress saved. Completed: {completed_count}, Partial: {partial_count}")
             break
         except Exception as e:
             print(f"\n❌ Error processing {image_path.name}: {e}")
+            completed[image_path.name] = "failed"
+            save_progress(progress_file, completed)
             continue
 
     # Final summary
     print(f"\n{'=' * 80}")
     print(f"Processing complete at {datetime.now(UTC).isoformat()}")
-    print(f"Total images processed: {len(completed)}")
+    completed_count = len([img for img, status in completed.items() if status == "completed"])
+    partial_count = len([img for img, status in completed.items() if status == "partial"])
+    failed_count = len([img for img, status in completed.items() if status == "failed"])
+    print(
+        f"Total images - Completed: {completed_count}, Partial: {partial_count}, Failed: {failed_count}"
+    )
     print(f"Results saved to: {args.output_dir}")
     print(f"{'=' * 80}")
 
