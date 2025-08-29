@@ -4,7 +4,7 @@
     "name": "shared0347_nsd26352.png",
     "id": "shared0347_nsd26352"
   },
-  "timestamp": "2025-08-29T09:56:08.255793+00:00",
+  "timestamp": "2025-08-29T17:15:02.541316+00:00",
   "annotations": [
     {
       "model": "gemma3:4b",
@@ -488,6 +488,146 @@
         "total_tokens": 2853,
         "total_time_ms": 26606.188732000002,
         "average_speed": 41.77674454085713
+      }
+    },
+    {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a close-up of a Kirtland's Warbler perched on a pine branch, set against a backdrop of lush green pine needles. The bird, with its distinctive yellow underbelly and grayish-blue upper parts, is the focal point of the photograph. Its small, pointed beak is slightly open, suggesting it might be singing or calling. The lighting is natural and soft, highlighting the bird's vibrant colors and the texture of its feathers. The background, though slightly blurred, provides a rich tapestry of green hues, which contrast beautifully with the bird's yellow and gray tones. The composition is balanced, with the bird positioned slightly off-center, drawing the viewer's eye directly to it. The rough, textured bark of the pine branch adds an interesting element to the foreground, grounding the bird and providing a natural frame. The overall effect is a serene and detailed portrayal of this small, yet striking, bird in its natural habitat.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 193,
+            "total_tokens": 490
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1504.383102,
+            "prompt_eval_duration_ms": 79.336763,
+            "generation_duration_ms": 1382.357515,
+            "load_duration_ms": 40.022853,
+            "tokens_per_second": 139.61655932401828
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "",
+          "response_format": "text",
+          "response_data": null,
+          "error": "unsupported format string passed to NoneType.__format__",
+          "token_metrics": null,
+          "performance_metrics": null
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a small bird, likely a warbler, is perched on a pine tree branch, its vibrant yellow chest contrasting with its gray and black striped wings and head. The bird appears to be in mid-song, its beak slightly open as if it is calling out to its mate or signaling to other birds in the vicinity. The tree branch, with its rough, textured bark, serves as a natural perch, providing a stable platform for the bird. The background is a soft blur of green, suggesting a dense forest or a lush garden, which provides a natural habitat for the bird. The bird's interaction with its environment is evident in its choice of a tree branch as a resting and singing spot, showcasing its adaptation to the forest ecosystem. There are no other animals or people visible in the image, focusing the viewer's attention solely on the bird and its immediate surroundings. The relationship between the bird and its environment is one of coexistence and adaptation, with the bird using the tree for sustenance and shelter, and the tree providing a habitat for the bird.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 217,
+            "total_tokens": 523
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1668.999418,
+            "prompt_eval_duration_ms": 31.421842,
+            "generation_duration_ms": 1594.677365,
+            "load_duration_ms": 39.804303,
+            "tokens_per_second": 136.0776823969029
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of tranquility and natural beauty, contributing to a positive emotional atmosphere. The vibrant yellow chest of the bird contrasts with the muted tones of the tree bark and the soft green of the pine needles, creating a visually appealing and harmonious scene. The bird's open beak, as if it is singing or calling, adds a dynamic element to the image, suggesting life, vitality, and a connection to nature. The blurred background of the pine needles further emphasizes the bird as the focal point, drawing the viewer's attention to its delicate features and the subtle interplay of light and shadow on its feathers. The overall tone is uplifting and serene, inviting the viewer to appreciate the simplicity and majesty of the natural world.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 150,
+            "total_tokens": 458
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1152.836888,
+            "prompt_eval_duration_ms": 30.271552,
+            "generation_duration_ms": 1078.256089,
+            "load_duration_ms": 40.117155,
+            "tokens_per_second": 139.11351999793808
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"bird\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\", \"yellow\", \"black\"],\n      \"size\": \"small\",\n      \"description\": \"perched on a branch, open beak\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"brown\", \"gray\"],\n      \"size\": \"small\",\n      \"description\": \"partially visible, textured bark\"\n    },\n    \"branch\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"thick, textured branch\"\n    },\n    \"pine needles\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"long, thin, green needles\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "bird": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "gray",
+                  "yellow",
+                  "black"
+                ],
+                "size": "small",
+                "description": "perched on a branch, open beak"
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "brown",
+                  "gray"
+                ],
+                "size": "small",
+                "description": "partially visible, textured bark"
+              },
+              "branch": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "brown"
+                ],
+                "size": "small",
+                "description": "thick, textured branch"
+              },
+              "pine needles": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "green"
+                ],
+                "size": "small",
+                "description": "long, thin, green needles"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 221,
+            "total_tokens": 707
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1668.920547,
+            "prompt_eval_duration_ms": 44.434217,
+            "generation_duration_ms": 1583.995952,
+            "load_duration_ms": 37.34898,
+            "tokens_per_second": 139.52055857274058
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2178,
+        "total_time_ms": 5995.139955,
+        "average_speed": 138.58208007289997
       }
     }
   ]
