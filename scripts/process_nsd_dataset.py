@@ -400,8 +400,8 @@ def main():
             "gemma3:27b",
             "qwen2.5vl:7b",
             "qwen2.5vl:32b",
-            "llama3.2-vision:11b",
             "mistral-small3.2:24b",
+            "llama3.2-vision:11b"
         ],
         help="Models to use for annotation",
     )
