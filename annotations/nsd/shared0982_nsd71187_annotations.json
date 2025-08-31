@@ -7,6 +7,310 @@
   "timestamp": "2025-08-31T00:44:27.962275+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a close-up view of a chili dog being held in someone's hand, with the focus primarily on the food. The dog is nestled in a soft, lightly toasted bun, generously topped with a hearty serving of chili, which appears rich and dark, suggesting a savory, possibly spicy flavor. The chili is garnished with finely chopped white onions and a dollop of yellow mustard, adding a pop of color and a hint of tanginess. The background is slightly out of focus, featuring a patch of green grass and a hint of a paved surface, possibly indicating an outdoor setting, such as a park or a casual outdoor gathering. The lighting is natural and bright, suggesting the photo was taken during the day under sunlight, which casts a soft shadow on the hand holding the hot dog, enhancing the three-dimensional appearance of the food. The overall composition is simple yet appetizing, with the chili dog as the central element, inviting the viewer to imagine the taste and texture of the meal.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 201,
+            "total_tokens": 498
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1572.215704,
+            "prompt_eval_duration_ms": 79.797108,
+            "generation_duration_ms": 1450.844347,
+            "load_duration_ms": 37.080031,
+            "tokens_per_second": 138.540016656935
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, a hand holds a partially eaten chili dog, showcasing its contents: a generous portion of chili, melted cheese, diced onions, and a slice of tomato, all nestled within a soft, toasted bun. The vibrant colors of the toppings contrast sharply with the plain white paper tray beneath, which holds another identical chili dog, suggesting a shared meal. The background, though blurred, reveals a grassy area with a hint of a road or path, indicating an outdoor setting, possibly a park or a casual dining area. The blurred background helps to emphasize the chili dogs in the foreground, creating a depth of field that draws the viewer's attention to the food while still providing context for the setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 142,
+            "total_tokens": 445
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1114.875456,
+            "prompt_eval_duration_ms": 30.071483,
+            "generation_duration_ms": 1044.353436,
+            "load_duration_ms": 38.099958,
+            "tokens_per_second": 135.96929459424885
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a hand is holding a chili dog, which is a hot dog topped with chili, diced onions, and mustard, all served in a white paper tray. The hand is positioned in the foreground, suggesting the person is about to eat the hot dog. The background shows a grassy area, indicating that the setting might be outdoors, possibly at a park or a casual dining area. The hot dog appears to be the main focus of the image, with the hand and the tray serving as supporting elements. The chili dog is being held up, likely to be eaten, and the mustard and onions add a vibrant contrast to the brown chili and the white bun. The grass in the background provides a natural and relaxed setting, suggesting a leisurely meal. There are no animals or other people visible in the image, and the interaction is solely between the hand, the hot dog, and the tray. The hand is holding the hot dog, and the tray is holding the hot dog, with no other elements interacting directly.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 207,
+            "total_tokens": 513
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1558.57375,
+            "prompt_eval_duration_ms": 30.58778,
+            "generation_duration_ms": 1488.886855,
+            "load_duration_ms": 36.568918,
+            "tokens_per_second": 139.03004066752942
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of casual, everyday joy and comfort, primarily through the visual elements of the chili cheese dog. The bright sunlight and the casual outdoor setting suggest a relaxed, leisurely atmosphere, perhaps a picnic or a casual outing. The vibrant colors of the toppings\u2014chili, melted cheese, sliced onions, and mustard\u2014against the golden bun create a visually appealing and appetizing scene that conveys a feeling of satisfaction and indulgence. The hand holding the dog adds a personal touch, making the image feel intimate and relatable, as if the viewer is sharing in the simple pleasure of enjoying a delicious meal. The overall tone is decidedly positive, as the image captures a moment of simple pleasure and contentment, with no negative elements present. The sunlight and the outdoor setting further enhance the positive mood, suggesting a break from the routine and a moment of enjoyment in the midst of a pleasant day.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 184,
+            "total_tokens": 492
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1401.10821,
+            "prompt_eval_duration_ms": 33.529142,
+            "generation_duration_ms": 1325.048134,
+            "load_duration_ms": 40.010859,
+            "tokens_per_second": 138.86287998047925
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"skin\"],\n      \"size\": \"small\",\n      \"description\": \"hand holding hot dog\"\n    }\n  },\n  \"man-made\": {\n    \"hot dog\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"brown\", \"white\", \"red\", \"yellow\"],\n      \"size\": \"medium\",\n      \"description\": \"hot dog with chili, onions, and mustard\"\n    },\n    \"paper tray\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"hot dog in a paper tray\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"grass in the background\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "skin"
+                ],
+                "size": "small",
+                "description": "hand holding hot dog"
+              }
+            },
+            "man-made": {
+              "hot dog": {
+                "count": 2,
+                "location": "center",
+                "color": [
+                  "brown",
+                  "white",
+                  "red",
+                  "yellow"
+                ],
+                "size": "medium",
+                "description": "hot dog with chili, onions, and mustard"
+              },
+              "paper tray": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "hot dog in a paper tray"
+              }
+            },
+            "natural": {
+              "grass": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "grass in the background"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 227,
+            "total_tokens": 713
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1705.518231,
+            "prompt_eval_duration_ms": 44.76313,
+            "generation_duration_ms": 1622.007463,
+            "load_duration_ms": 36.191339,
+            "tokens_per_second": 139.9500342496266
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2661,
+        "total_time_ms": 7352.291351,
+        "average_speed": 138.47045322976382
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a close-up view of a chili cheese dog being held by a hand, set against an outdoor backdrop. The setting appears to be a grassy area, likely a park or open field, as indicated by the blurred green grass in the background. The lighting suggests it is a sunny day, with natural sunlight casting soft shadows and highlighting the vibrant colors of the food.\n\nThe main elements in the image are two chili cheese dogs, presented in a white paper tray. The hot dogs are nestled in soft, golden-brown buns, generously topped with a rich, dark chili sauce, melted yellow cheese, diced white onions, and diced tomatoes. The toppings are spread evenly, creating a colorful and appetizing contrast against the buns. The hand holding the tray is visible on the left side, with a light skin tone, adding a human element to the composition.\n\nThe overall composition is casual and inviting, focusing on the food as the central subject. The shallow depth of field blurs the background, drawing attention to the chili cheese dogs in the foreground. The colors are warm and inviting, with the golden buns, red chili, yellow cheese, and white onions creating a visually appealing palette. The image conveys a sense of enjoyment and casual outdoor dining, likely at a picnic or outdoor event.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 263,
+            "total_tokens": 560
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13542.431851,
+            "prompt_eval_duration_ms": 3645.880822,
+            "generation_duration_ms": 9855.182747,
+            "load_duration_ms": 37.454826,
+            "tokens_per_second": 26.68646607086605
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image prominently features a close-up of two chili dogs in a white paper tray. The chili dogs are topped with a generous amount of chili, diced onions, and melted cheese, with a visible hot dog sausage nestled inside a soft bun. The hand of a person is holding one of the chili dogs, indicating an interactive moment of eating or presenting the food. The focus is sharp on these elements, making them the central point of attention.\n\nIn the background, the setting appears to be an outdoor area, likely a park or open space, as suggested by the grassy ground and a faint blue line that could be a curb or pathway. The background is blurred, creating a shallow depth of field that emphasizes the chili dogs in the foreground. The lighting suggests it is daytime, with natural sunlight casting soft shadows, which adds to the casual, relaxed atmosphere.\n\nThe relationship between the foreground and background is one of contrast and context. The sharp focus on the chili dogs draws the viewer's immediate attention to the food, while the blurred background provides a sense of place and setting, suggesting a casual outdoor dining experience. The natural lighting and the outdoor environment complement the casual, appetizing presentation of the chili dogs, creating a cohesive visual narrative of enjoying a snack in a relaxed setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 258,
+            "total_tokens": 561
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9807.592188,
+            "prompt_eval_duration_ms": 74.441675,
+            "generation_duration_ms": 9691.826632,
+            "load_duration_ms": 38.898127,
+            "tokens_per_second": 26.620368873309
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image shows a close-up of a person's hand holding a chili dog, with another chili dog placed in a paper tray below it. The chili dogs are topped with a generous amount of chili, diced onions, and slices of tomato, along with a drizzle of mustard. The hand appears to be in the process of lifting the top chili dog, suggesting that the person is about to eat or serve it. The background is an outdoor setting, likely a park or grassy area, with sunlight casting shadows, indicating a bright, sunny day.\n\nThere are no animals visible in the image, only the human hand interacting with the food. The hand is the primary focus, demonstrating a direct connection between the person and the chili dog. The action of lifting the chili dog suggests a casual, enjoyable moment, possibly during a picnic or outdoor event. The paper tray holding the chili dog below indicates a practical approach to eating outdoors, ensuring cleanliness and convenience. The overall scene conveys a simple, relatable moment of enjoying a classic comfort food in a relaxed, sunny environment. The interaction between the hand and the food emphasizes the human experience of eating and the pleasure derived from simple pleasures like a well-prepared chili dog.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 244,
+            "total_tokens": 550
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9296.595179,
+            "prompt_eval_duration_ms": 77.634209,
+            "generation_duration_ms": 9174.01025,
+            "load_duration_ms": 39.998796,
+            "tokens_per_second": 26.59687457837754
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of casual enjoyment and indulgence, evoking feelings of comfort, satisfaction, and anticipation. The overall tone is positive, as the vibrant colors and appetizing appearance of the chili cheese dogs create a sense of warmth and pleasure. The bright, sunny outdoor setting, suggested by the green grass and natural light, adds to the cheerful and relaxed atmosphere. The close-up view of the food, with its rich chili, melted cheese, diced onions, and ketchup, emphasizes the sensory appeal, making the scene inviting and mouthwatering. The hand holding the top dog suggests a personal, intimate experience, as if the viewer is about to enjoy the meal themselves. The use of a simple paper tray further enhances the casual, unpretentious vibe, aligning with the idea of a fun, informal outing. The combination of these elements\u2014the food's textures, the sunny environment, and the personal interaction\u2014creates an emotional atmosphere that is lighthearted, satisfying, and enjoyable, encouraging a sense of contentment and eagerness to partake in the meal.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 219,
+            "total_tokens": 527
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8327.277856,
+            "prompt_eval_duration_ms": 76.923735,
+            "generation_duration_ms": 8209.293257,
+            "load_duration_ms": 37.824079,
+            "tokens_per_second": 26.677083293773237
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"hand\": {\n      \"count\": 1,\n      \"location\": \"left, top\",\n      \"color\": [\"pink\"],\n      \"size\": \"small\",\n      \"description\": \"Part of a hand holding a hot dog\"\n    }\n  },\n  \"man-made\": {\n    \"hot_dog\": {\n      \"count\": 2,\n      \"location\": \"center, middle\",\n      \"color\": [\"brown\", \"red\", \"yellow\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Hot dogs with chili, onions, and cheese\"\n    },\n    \"container\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"White paper container holding the hot dogs\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Grass in the background\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "hand": {
+                "count": 1,
+                "location": "left, top",
+                "color": [
+                  "pink"
+                ],
+                "size": "small",
+                "description": "Part of a hand holding a hot dog"
+              }
+            },
+            "man-made": {
+              "hot_dog": {
+                "count": 2,
+                "location": "center, middle",
+                "color": [
+                  "brown",
+                  "red",
+                  "yellow",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "Hot dogs with chili, onions, and cheese"
+              },
+              "container": {
+                "count": 1,
+                "location": "center, bottom",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "White paper container holding the hot dogs"
+              }
+            },
+            "natural": {
+              "grass": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "Grass in the background"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 239,
+            "total_tokens": 725
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9081.20389,
+            "prompt_eval_duration_ms": 139.076612,
+            "generation_duration_ms": 8900.217343,
+            "load_duration_ms": 37.532957,
+            "tokens_per_second": 26.853276812163802
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2923,
+        "total_time_ms": 50055.100964,
+        "average_speed": 26.686813925697926
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -503,310 +807,6 @@
         "total_tokens": 2760,
         "total_time_ms": 24246.494044,
         "average_speed": 41.98625189624005
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a close-up view of a chili dog being held in someone's hand, with the focus primarily on the food. The dog is nestled in a soft, lightly toasted bun, generously topped with a hearty serving of chili, which appears rich and dark, suggesting a savory, possibly spicy flavor. The chili is garnished with finely chopped white onions and a dollop of yellow mustard, adding a pop of color and a hint of tanginess. The background is slightly out of focus, featuring a patch of green grass and a hint of a paved surface, possibly indicating an outdoor setting, such as a park or a casual outdoor gathering. The lighting is natural and bright, suggesting the photo was taken during the day under sunlight, which casts a soft shadow on the hand holding the hot dog, enhancing the three-dimensional appearance of the food. The overall composition is simple yet appetizing, with the chili dog as the central element, inviting the viewer to imagine the taste and texture of the meal.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 201,
-            "total_tokens": 498
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1572.215704,
-            "prompt_eval_duration_ms": 79.797108,
-            "generation_duration_ms": 1450.844347,
-            "load_duration_ms": 37.080031,
-            "tokens_per_second": 138.540016656935
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, a hand holds a partially eaten chili dog, showcasing its contents: a generous portion of chili, melted cheese, diced onions, and a slice of tomato, all nestled within a soft, toasted bun. The vibrant colors of the toppings contrast sharply with the plain white paper tray beneath, which holds another identical chili dog, suggesting a shared meal. The background, though blurred, reveals a grassy area with a hint of a road or path, indicating an outdoor setting, possibly a park or a casual dining area. The blurred background helps to emphasize the chili dogs in the foreground, creating a depth of field that draws the viewer's attention to the food while still providing context for the setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 142,
-            "total_tokens": 445
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1114.875456,
-            "prompt_eval_duration_ms": 30.071483,
-            "generation_duration_ms": 1044.353436,
-            "load_duration_ms": 38.099958,
-            "tokens_per_second": 135.96929459424885
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a hand is holding a chili dog, which is a hot dog topped with chili, diced onions, and mustard, all served in a white paper tray. The hand is positioned in the foreground, suggesting the person is about to eat the hot dog. The background shows a grassy area, indicating that the setting might be outdoors, possibly at a park or a casual dining area. The hot dog appears to be the main focus of the image, with the hand and the tray serving as supporting elements. The chili dog is being held up, likely to be eaten, and the mustard and onions add a vibrant contrast to the brown chili and the white bun. The grass in the background provides a natural and relaxed setting, suggesting a leisurely meal. There are no animals or other people visible in the image, and the interaction is solely between the hand, the hot dog, and the tray. The hand is holding the hot dog, and the tray is holding the hot dog, with no other elements interacting directly.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 207,
-            "total_tokens": 513
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1558.57375,
-            "prompt_eval_duration_ms": 30.58778,
-            "generation_duration_ms": 1488.886855,
-            "load_duration_ms": 36.568918,
-            "tokens_per_second": 139.03004066752942
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of casual, everyday joy and comfort, primarily through the visual elements of the chili cheese dog. The bright sunlight and the casual outdoor setting suggest a relaxed, leisurely atmosphere, perhaps a picnic or a casual outing. The vibrant colors of the toppings\u2014chili, melted cheese, sliced onions, and mustard\u2014against the golden bun create a visually appealing and appetizing scene that conveys a feeling of satisfaction and indulgence. The hand holding the dog adds a personal touch, making the image feel intimate and relatable, as if the viewer is sharing in the simple pleasure of enjoying a delicious meal. The overall tone is decidedly positive, as the image captures a moment of simple pleasure and contentment, with no negative elements present. The sunlight and the outdoor setting further enhance the positive mood, suggesting a break from the routine and a moment of enjoyment in the midst of a pleasant day.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 184,
-            "total_tokens": 492
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1401.10821,
-            "prompt_eval_duration_ms": 33.529142,
-            "generation_duration_ms": 1325.048134,
-            "load_duration_ms": 40.010859,
-            "tokens_per_second": 138.86287998047925
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"skin\"],\n      \"size\": \"small\",\n      \"description\": \"hand holding hot dog\"\n    }\n  },\n  \"man-made\": {\n    \"hot dog\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"brown\", \"white\", \"red\", \"yellow\"],\n      \"size\": \"medium\",\n      \"description\": \"hot dog with chili, onions, and mustard\"\n    },\n    \"paper tray\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"hot dog in a paper tray\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"grass in the background\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "skin"
-                ],
-                "size": "small",
-                "description": "hand holding hot dog"
-              }
-            },
-            "man-made": {
-              "hot dog": {
-                "count": 2,
-                "location": "center",
-                "color": [
-                  "brown",
-                  "white",
-                  "red",
-                  "yellow"
-                ],
-                "size": "medium",
-                "description": "hot dog with chili, onions, and mustard"
-              },
-              "paper tray": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "hot dog in a paper tray"
-              }
-            },
-            "natural": {
-              "grass": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "grass in the background"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 227,
-            "total_tokens": 713
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1705.518231,
-            "prompt_eval_duration_ms": 44.76313,
-            "generation_duration_ms": 1622.007463,
-            "load_duration_ms": 36.191339,
-            "tokens_per_second": 139.9500342496266
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2661,
-        "total_time_ms": 7352.291351,
-        "average_speed": 138.47045322976382
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a close-up view of a chili cheese dog being held by a hand, set against an outdoor backdrop. The setting appears to be a grassy area, likely a park or open field, as indicated by the blurred green grass in the background. The lighting suggests it is a sunny day, with natural sunlight casting soft shadows and highlighting the vibrant colors of the food.\n\nThe main elements in the image are two chili cheese dogs, presented in a white paper tray. The hot dogs are nestled in soft, golden-brown buns, generously topped with a rich, dark chili sauce, melted yellow cheese, diced white onions, and diced tomatoes. The toppings are spread evenly, creating a colorful and appetizing contrast against the buns. The hand holding the tray is visible on the left side, with a light skin tone, adding a human element to the composition.\n\nThe overall composition is casual and inviting, focusing on the food as the central subject. The shallow depth of field blurs the background, drawing attention to the chili cheese dogs in the foreground. The colors are warm and inviting, with the golden buns, red chili, yellow cheese, and white onions creating a visually appealing palette. The image conveys a sense of enjoyment and casual outdoor dining, likely at a picnic or outdoor event.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 263,
-            "total_tokens": 560
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13542.431851,
-            "prompt_eval_duration_ms": 3645.880822,
-            "generation_duration_ms": 9855.182747,
-            "load_duration_ms": 37.454826,
-            "tokens_per_second": 26.68646607086605
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image prominently features a close-up of two chili dogs in a white paper tray. The chili dogs are topped with a generous amount of chili, diced onions, and melted cheese, with a visible hot dog sausage nestled inside a soft bun. The hand of a person is holding one of the chili dogs, indicating an interactive moment of eating or presenting the food. The focus is sharp on these elements, making them the central point of attention.\n\nIn the background, the setting appears to be an outdoor area, likely a park or open space, as suggested by the grassy ground and a faint blue line that could be a curb or pathway. The background is blurred, creating a shallow depth of field that emphasizes the chili dogs in the foreground. The lighting suggests it is daytime, with natural sunlight casting soft shadows, which adds to the casual, relaxed atmosphere.\n\nThe relationship between the foreground and background is one of contrast and context. The sharp focus on the chili dogs draws the viewer's immediate attention to the food, while the blurred background provides a sense of place and setting, suggesting a casual outdoor dining experience. The natural lighting and the outdoor environment complement the casual, appetizing presentation of the chili dogs, creating a cohesive visual narrative of enjoying a snack in a relaxed setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 258,
-            "total_tokens": 561
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9807.592188,
-            "prompt_eval_duration_ms": 74.441675,
-            "generation_duration_ms": 9691.826632,
-            "load_duration_ms": 38.898127,
-            "tokens_per_second": 26.620368873309
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image shows a close-up of a person's hand holding a chili dog, with another chili dog placed in a paper tray below it. The chili dogs are topped with a generous amount of chili, diced onions, and slices of tomato, along with a drizzle of mustard. The hand appears to be in the process of lifting the top chili dog, suggesting that the person is about to eat or serve it. The background is an outdoor setting, likely a park or grassy area, with sunlight casting shadows, indicating a bright, sunny day.\n\nThere are no animals visible in the image, only the human hand interacting with the food. The hand is the primary focus, demonstrating a direct connection between the person and the chili dog. The action of lifting the chili dog suggests a casual, enjoyable moment, possibly during a picnic or outdoor event. The paper tray holding the chili dog below indicates a practical approach to eating outdoors, ensuring cleanliness and convenience. The overall scene conveys a simple, relatable moment of enjoying a classic comfort food in a relaxed, sunny environment. The interaction between the hand and the food emphasizes the human experience of eating and the pleasure derived from simple pleasures like a well-prepared chili dog.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 244,
-            "total_tokens": 550
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9296.595179,
-            "prompt_eval_duration_ms": 77.634209,
-            "generation_duration_ms": 9174.01025,
-            "load_duration_ms": 39.998796,
-            "tokens_per_second": 26.59687457837754
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of casual enjoyment and indulgence, evoking feelings of comfort, satisfaction, and anticipation. The overall tone is positive, as the vibrant colors and appetizing appearance of the chili cheese dogs create a sense of warmth and pleasure. The bright, sunny outdoor setting, suggested by the green grass and natural light, adds to the cheerful and relaxed atmosphere. The close-up view of the food, with its rich chili, melted cheese, diced onions, and ketchup, emphasizes the sensory appeal, making the scene inviting and mouthwatering. The hand holding the top dog suggests a personal, intimate experience, as if the viewer is about to enjoy the meal themselves. The use of a simple paper tray further enhances the casual, unpretentious vibe, aligning with the idea of a fun, informal outing. The combination of these elements\u2014the food's textures, the sunny environment, and the personal interaction\u2014creates an emotional atmosphere that is lighthearted, satisfying, and enjoyable, encouraging a sense of contentment and eagerness to partake in the meal.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 219,
-            "total_tokens": 527
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8327.277856,
-            "prompt_eval_duration_ms": 76.923735,
-            "generation_duration_ms": 8209.293257,
-            "load_duration_ms": 37.824079,
-            "tokens_per_second": 26.677083293773237
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"hand\": {\n      \"count\": 1,\n      \"location\": \"left, top\",\n      \"color\": [\"pink\"],\n      \"size\": \"small\",\n      \"description\": \"Part of a hand holding a hot dog\"\n    }\n  },\n  \"man-made\": {\n    \"hot_dog\": {\n      \"count\": 2,\n      \"location\": \"center, middle\",\n      \"color\": [\"brown\", \"red\", \"yellow\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Hot dogs with chili, onions, and cheese\"\n    },\n    \"container\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"White paper container holding the hot dogs\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Grass in the background\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "hand": {
-                "count": 1,
-                "location": "left, top",
-                "color": [
-                  "pink"
-                ],
-                "size": "small",
-                "description": "Part of a hand holding a hot dog"
-              }
-            },
-            "man-made": {
-              "hot_dog": {
-                "count": 2,
-                "location": "center, middle",
-                "color": [
-                  "brown",
-                  "red",
-                  "yellow",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "Hot dogs with chili, onions, and cheese"
-              },
-              "container": {
-                "count": 1,
-                "location": "center, bottom",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "White paper container holding the hot dogs"
-              }
-            },
-            "natural": {
-              "grass": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "Grass in the background"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 239,
-            "total_tokens": 725
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9081.20389,
-            "prompt_eval_duration_ms": 139.076612,
-            "generation_duration_ms": 8900.217343,
-            "load_duration_ms": 37.532957,
-            "tokens_per_second": 26.853276812163802
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2923,
-        "total_time_ms": 50055.100964,
-        "average_speed": 26.686813925697926
       }
     },
     {

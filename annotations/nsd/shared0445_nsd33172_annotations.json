@@ -7,6 +7,307 @@
   "timestamp": "2025-08-30T19:48:45.634783+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a giraffe standing in a grassy enclosure, likely within a zoo or wildlife park. The giraffe, with its distinctive brown and white patterned coat, is the central focus of the photograph. Its long neck stretches upwards, and its legs are spread apart, giving a sense of balance and stability. The background is softly blurred, suggesting a shallow depth of field, which helps to emphasize the giraffe. The setting appears to be outdoors, with natural light illuminating the scene, casting subtle shadows that enhance the texture of the giraffe's coat and the grass. The lighting is bright and even, suggesting a sunny day. The grass is a vibrant green, contrasting with the giraffe's patterned coat. In the background, there are hints of trees and possibly some man-made structures, indicating a controlled environment. The overall composition is simple yet striking, with the giraffe positioned slightly off-center, creating a dynamic and engaging visual. The image evokes a sense of calm and natural beauty, highlighting the giraffe in its habitat.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 212,
+            "total_tokens": 509
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1641.107531,
+            "prompt_eval_duration_ms": 79.484288,
+            "generation_duration_ms": 1517.830647,
+            "load_duration_ms": 40.815257,
+            "tokens_per_second": 139.67302638078831
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, a giraffe stands prominently, its long neck reaching skyward and its patterned coat of brown and white spots contrasting sharply against the green grass beneath its hooves. The giraffe's legs are slender and elongated, supporting its massive body as it stands near a cluster of rocks and a tree trunk, which partially obscures its lower body. The grassy area where the giraffe stands is lush and vibrant, suggesting a well-maintained environment, possibly a zoo or a wildlife sanctuary. In the background, the setting appears to be a naturalistic enclosure with a mix of vegetation and man-made structures, including a large, dark, possibly concrete or stone, structure that could be a shelter or part of the enclosure's design. The background is slightly out of focus, drawing attention to the giraffe in the foreground, while the natural light and shadows indicate a sunny day, enhancing the vividness of the scene. The relationship between the foreground and background elements creates a sense of depth and context, suggesting the giraffe is in a controlled but naturalistic environment designed to mimic its natural habitat.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 224,
+            "total_tokens": 527
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1700.643074,
+            "prompt_eval_duration_ms": 30.053561,
+            "generation_duration_ms": 1626.700821,
+            "load_duration_ms": 41.383421,
+            "tokens_per_second": 137.7020267699244
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a giraffe stands gracefully in a grassy enclosure, its long neck reaching upwards, possibly towards a tree or the sky. The giraffe's patterned coat of brown and white spots contrasts with the green grass beneath its feet and the darker tones of the surrounding environment. The giraffe appears to be in a calm, stationary pose, suggesting it is either resting or observing its surroundings. There are no people visible in the image, and the giraffe is the sole animal present. The background includes a mix of natural elements like trees and rocks, which provide a naturalistic setting for the giraffe. The giraffe's interaction with its environment is primarily passive; it is not engaging with any objects or other animals. The scene captures a serene moment in a zoo or wildlife sanctuary, where the giraffe is in a controlled environment, likely for conservation or educational purposes.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 178,
+            "total_tokens": 484
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1367.483029,
+            "prompt_eval_duration_ms": 30.294137,
+            "generation_duration_ms": 1292.732814,
+            "load_duration_ms": 41.773675,
+            "tokens_per_second": 137.69279937222976
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image of the giraffe in its naturalistic enclosure conveys a sense of calm and tranquility, evoking feelings of peace and wonder. The giraffe, with its long neck gracefully arched and its patterned coat blending with the surrounding environment, exudes a sense of majesty and grace. The soft lighting and the gentle shadows cast by the tree and the giraffe itself contribute to a serene atmosphere, suggesting a moment of quiet reflection. The lush green grass and the natural elements in the background further enhance the feeling of being in a safe and nurturing environment, which can evoke a sense of contentment and appreciation for nature. The overall tone of the image is decidedly positive, as it captures a moment of harmony between the animal and its surroundings, inviting viewers to feel a connection to the natural world and the beauty it holds.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 168,
+            "total_tokens": 476
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1292.736733,
+            "prompt_eval_duration_ms": 30.66587,
+            "generation_duration_ms": 1218.391795,
+            "load_duration_ms": 38.320452,
+            "tokens_per_second": 137.88668036786967
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"giraffe\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"standing on grass\"\n    }\n  },\n  \"man-made\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"trunk of a tree\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"giraffe standing on grass\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "giraffe": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "brown",
+                  "white"
+                ],
+                "size": "large",
+                "description": "standing on grass"
+              }
+            },
+            "man-made": {
+              "tree": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "gray"
+                ],
+                "size": "medium",
+                "description": "trunk of a tree"
+              }
+            },
+            "natural": {
+              "grass": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "giraffe standing on grass"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 171,
+            "total_tokens": 657
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1309.196162,
+            "prompt_eval_duration_ms": 43.740368,
+            "generation_duration_ms": 1224.669657,
+            "load_duration_ms": 37.887034,
+            "tokens_per_second": 139.62949030589073
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2653,
+        "total_time_ms": 7311.166529,
+        "average_speed": 138.5168046393406
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a giraffe standing in an open, grassy area, likely within a zoo or wildlife park setting. The giraffe is the central focus, positioned slightly off-center to the left, with its long neck extended upward and its head turned away from the camera, possibly grazing or observing something in the distance. The giraffe's coat features a distinctive pattern of irregular, polygonal brown patches separated by lighter, cream-colored lines, characteristic of its species.\n\nThe setting appears to be a sunny day, as indicated by the bright lighting and clear shadows cast on the ground. The grass is a vibrant green, suggesting a well-maintained environment. In the background, there are various elements typical of a zoo enclosure, including a mix of natural and man-made structures. A tall tree trunk is visible to the right of the giraffe, providing a vertical element that contrasts with the giraffe's elongated neck. Behind the giraffe, there are blurred trees and foliage, adding depth to the scene. Additionally, there are some rock formations and what appear to be artificial structures or enclosures in the background, hinting at the controlled environment of the zoo.\n\nThe overall composition is balanced, with the giraffe's height and posture drawing the viewer's eye upward, while the horizontal lines of the grass and the tree trunk provide a sense of stability. The lighting is natural and bright, enhancing the vivid colors of the giraffe's coat and the lush greenery, creating a serene and picturesque scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 302,
+            "total_tokens": 599
+          },
+          "performance_metrics": {
+            "total_duration_ms": 14857.686888,
+            "prompt_eval_duration_ms": 3579.801547,
+            "generation_duration_ms": 11233.135299,
+            "load_duration_ms": 40.329368,
+            "tokens_per_second": 26.884746952783942
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a giraffe, which is the central focus. The giraffe is positioned slightly to the left, with its long neck extended upward and its body facing away from the viewer. Its distinctive pattern of brown patches separated by white lines is clearly visible. The giraffe stands on a patch of rocks, which are scattered near the base of a tree trunk that is also prominent in the foreground. The tree trunk is vertical and partially obscures the giraffe's body, adding depth to the scene. The grassy ground in the foreground is well-maintained, suggesting a controlled environment, likely a zoo or wildlife park.\n\nIn the background, the setting transitions into a more natural and open area. There are trees and shrubs, indicating a lush, green environment. The background also features a mix of man-made structures, such as fences and what appears to be a stone wall or barrier, which further reinforces the idea of a managed habitat. The distant background includes more trees and possibly additional enclosures, creating a layered effect that leads the viewer's eye from the giraffe in the foreground to the broader setting.\n\nThe relationship between the foreground and background is one of contrast and context. The giraffe in the foreground provides a focal point, while the background elements establish the environment in which the giraffe resides. The tree trunk in the foreground acts as a visual anchor, connecting the giraffe to the broader setting. The grassy area and the distant trees create a sense of depth, emphasizing the giraffe's size and the spaciousness of its habitat. The man-made structures in the background subtly indicate human intervention, highlighting the controlled nature of the environment. Overall, the composition effectively balances the natural and artificial elements, creating a cohesive and engaging scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 357,
+            "total_tokens": 660
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13392.21227,
+            "prompt_eval_duration_ms": 77.491301,
+            "generation_duration_ms": 13272.986873,
+            "load_duration_ms": 39.109673,
+            "tokens_per_second": 26.896734202774795
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image shows a giraffe standing in an open, grassy area, likely within a zoo or wildlife park. The giraffe is the central focus of the image, and there are no visible people in the scene. The giraffe is positioned near a tree trunk, which it appears to be using for support or as a point of interest. Its long neck is extended upward, suggesting it might be reaching for leaves or simply standing alert. The giraffe's distinctive pattern of brown patches separated by white lines is clearly visible, highlighting its unique and recognizable appearance.\n\nIn the background, there are various elements that suggest a managed environment, such as rocks, fencing, and artificial structures, which are typical of a zoo enclosure. The grassy area provides a naturalistic setting, allowing the giraffe to stand comfortably. The giraffe does not appear to be interacting with any other animals in the image, as no other animals are visible. The overall scene conveys a sense of calm, with the giraffe standing still and observing its surroundings. The tree trunk serves as a point of interaction, possibly offering shade or a place for the giraffe to rest its neck. The environment appears well-maintained, indicating a controlled and safe habitat for the giraffe.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 252,
+            "total_tokens": 558
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9540.963248,
+            "prompt_eval_duration_ms": 77.96118,
+            "generation_duration_ms": 9416.817329,
+            "load_duration_ms": 43.059725,
+            "tokens_per_second": 26.760633789076657
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image of the giraffe standing calmly in an open grassy area conveys a mood of serenity and tranquility. The giraffe's posture, with its long neck extended upward and its body relaxed, suggests a sense of peacefulness and contentment. The bright, natural lighting and the lush green grass in the foreground contribute to a positive and uplifting atmosphere, evoking feelings of calmness and appreciation for nature. The giraffe's distinctive patterned coat adds visual interest, enhancing the aesthetic appeal of the scene. The background, featuring trees and a clear sky, further emphasizes the openness and freedom of the environment, reinforcing a sense of harmony with nature. The overall tone is decidedly positive, as the image captures a moment of quiet beauty and natural grace. The absence of any apparent stress or disturbance in the giraffe's demeanor, along with the expansive, well-lit setting, creates a mood that is both soothing and uplifting, inviting viewers to feel a connection to the natural world.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 199,
+            "total_tokens": 507
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7553.142078,
+            "prompt_eval_duration_ms": 74.494111,
+            "generation_duration_ms": 7437.612509,
+            "load_duration_ms": 37.726832,
+            "tokens_per_second": 26.7558977775727
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"giraffe\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"A giraffe standing on grass, with its long neck extended upwards.\"\n    }\n  },\n  \"man-made\": {\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"A black fence in the background, partially obscured by trees.\"\n    },\n    \"rocks\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"gray\", \"brown\"],\n      \"size\": \"small\",\n      \"description\": \"A cluster of rocks at the base of the giraffe.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"A tree trunk near the giraffe, with green foliage in the background.\"\n    },\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"A grassy area covering the ground.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "giraffe": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "brown",
+                  "white"
+                ],
+                "size": "large",
+                "description": "A giraffe standing on grass, with its long neck extended upwards."
+              }
+            },
+            "man-made": {
+              "fence": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "black"
+                ],
+                "size": "medium",
+                "description": "A black fence in the background, partially obscured by trees."
+              },
+              "rocks": {
+                "count": 1,
+                "location": "foreground",
+                "color": [
+                  "gray",
+                  "brown"
+                ],
+                "size": "small",
+                "description": "A cluster of rocks at the base of the giraffe."
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "green"
+                ],
+                "size": "medium",
+                "description": "A tree trunk near the giraffe, with green foliage in the background."
+              },
+              "grass": {
+                "count": 1,
+                "location": "foreground",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "A grassy area covering the ground."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 300,
+            "total_tokens": 786
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11314.253201,
+            "prompt_eval_duration_ms": 136.961662,
+            "generation_duration_ms": 11136.2551,
+            "load_duration_ms": 38.251839,
+            "tokens_per_second": 26.939038061367686
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3110,
+        "total_time_ms": 56658.257685,
+        "average_speed": 26.847410156715153
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -503,307 +804,6 @@
         "total_tokens": 2890,
         "total_time_ms": 27235.510063,
         "average_speed": 42.129317176941036
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a giraffe standing in a grassy enclosure, likely within a zoo or wildlife park. The giraffe, with its distinctive brown and white patterned coat, is the central focus of the photograph. Its long neck stretches upwards, and its legs are spread apart, giving a sense of balance and stability. The background is softly blurred, suggesting a shallow depth of field, which helps to emphasize the giraffe. The setting appears to be outdoors, with natural light illuminating the scene, casting subtle shadows that enhance the texture of the giraffe's coat and the grass. The lighting is bright and even, suggesting a sunny day. The grass is a vibrant green, contrasting with the giraffe's patterned coat. In the background, there are hints of trees and possibly some man-made structures, indicating a controlled environment. The overall composition is simple yet striking, with the giraffe positioned slightly off-center, creating a dynamic and engaging visual. The image evokes a sense of calm and natural beauty, highlighting the giraffe in its habitat.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 212,
-            "total_tokens": 509
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1641.107531,
-            "prompt_eval_duration_ms": 79.484288,
-            "generation_duration_ms": 1517.830647,
-            "load_duration_ms": 40.815257,
-            "tokens_per_second": 139.67302638078831
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, a giraffe stands prominently, its long neck reaching skyward and its patterned coat of brown and white spots contrasting sharply against the green grass beneath its hooves. The giraffe's legs are slender and elongated, supporting its massive body as it stands near a cluster of rocks and a tree trunk, which partially obscures its lower body. The grassy area where the giraffe stands is lush and vibrant, suggesting a well-maintained environment, possibly a zoo or a wildlife sanctuary. In the background, the setting appears to be a naturalistic enclosure with a mix of vegetation and man-made structures, including a large, dark, possibly concrete or stone, structure that could be a shelter or part of the enclosure's design. The background is slightly out of focus, drawing attention to the giraffe in the foreground, while the natural light and shadows indicate a sunny day, enhancing the vividness of the scene. The relationship between the foreground and background elements creates a sense of depth and context, suggesting the giraffe is in a controlled but naturalistic environment designed to mimic its natural habitat.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 224,
-            "total_tokens": 527
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1700.643074,
-            "prompt_eval_duration_ms": 30.053561,
-            "generation_duration_ms": 1626.700821,
-            "load_duration_ms": 41.383421,
-            "tokens_per_second": 137.7020267699244
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a giraffe stands gracefully in a grassy enclosure, its long neck reaching upwards, possibly towards a tree or the sky. The giraffe's patterned coat of brown and white spots contrasts with the green grass beneath its feet and the darker tones of the surrounding environment. The giraffe appears to be in a calm, stationary pose, suggesting it is either resting or observing its surroundings. There are no people visible in the image, and the giraffe is the sole animal present. The background includes a mix of natural elements like trees and rocks, which provide a naturalistic setting for the giraffe. The giraffe's interaction with its environment is primarily passive; it is not engaging with any objects or other animals. The scene captures a serene moment in a zoo or wildlife sanctuary, where the giraffe is in a controlled environment, likely for conservation or educational purposes.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 178,
-            "total_tokens": 484
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1367.483029,
-            "prompt_eval_duration_ms": 30.294137,
-            "generation_duration_ms": 1292.732814,
-            "load_duration_ms": 41.773675,
-            "tokens_per_second": 137.69279937222976
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image of the giraffe in its naturalistic enclosure conveys a sense of calm and tranquility, evoking feelings of peace and wonder. The giraffe, with its long neck gracefully arched and its patterned coat blending with the surrounding environment, exudes a sense of majesty and grace. The soft lighting and the gentle shadows cast by the tree and the giraffe itself contribute to a serene atmosphere, suggesting a moment of quiet reflection. The lush green grass and the natural elements in the background further enhance the feeling of being in a safe and nurturing environment, which can evoke a sense of contentment and appreciation for nature. The overall tone of the image is decidedly positive, as it captures a moment of harmony between the animal and its surroundings, inviting viewers to feel a connection to the natural world and the beauty it holds.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 168,
-            "total_tokens": 476
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1292.736733,
-            "prompt_eval_duration_ms": 30.66587,
-            "generation_duration_ms": 1218.391795,
-            "load_duration_ms": 38.320452,
-            "tokens_per_second": 137.88668036786967
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"giraffe\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"standing on grass\"\n    }\n  },\n  \"man-made\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"trunk of a tree\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"giraffe standing on grass\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "giraffe": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "brown",
-                  "white"
-                ],
-                "size": "large",
-                "description": "standing on grass"
-              }
-            },
-            "man-made": {
-              "tree": {
-                "count": 1,
-                "location": "right",
-                "color": [
-                  "gray"
-                ],
-                "size": "medium",
-                "description": "trunk of a tree"
-              }
-            },
-            "natural": {
-              "grass": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "giraffe standing on grass"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 171,
-            "total_tokens": 657
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1309.196162,
-            "prompt_eval_duration_ms": 43.740368,
-            "generation_duration_ms": 1224.669657,
-            "load_duration_ms": 37.887034,
-            "tokens_per_second": 139.62949030589073
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2653,
-        "total_time_ms": 7311.166529,
-        "average_speed": 138.5168046393406
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a giraffe standing in an open, grassy area, likely within a zoo or wildlife park setting. The giraffe is the central focus, positioned slightly off-center to the left, with its long neck extended upward and its head turned away from the camera, possibly grazing or observing something in the distance. The giraffe's coat features a distinctive pattern of irregular, polygonal brown patches separated by lighter, cream-colored lines, characteristic of its species.\n\nThe setting appears to be a sunny day, as indicated by the bright lighting and clear shadows cast on the ground. The grass is a vibrant green, suggesting a well-maintained environment. In the background, there are various elements typical of a zoo enclosure, including a mix of natural and man-made structures. A tall tree trunk is visible to the right of the giraffe, providing a vertical element that contrasts with the giraffe's elongated neck. Behind the giraffe, there are blurred trees and foliage, adding depth to the scene. Additionally, there are some rock formations and what appear to be artificial structures or enclosures in the background, hinting at the controlled environment of the zoo.\n\nThe overall composition is balanced, with the giraffe's height and posture drawing the viewer's eye upward, while the horizontal lines of the grass and the tree trunk provide a sense of stability. The lighting is natural and bright, enhancing the vivid colors of the giraffe's coat and the lush greenery, creating a serene and picturesque scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 302,
-            "total_tokens": 599
-          },
-          "performance_metrics": {
-            "total_duration_ms": 14857.686888,
-            "prompt_eval_duration_ms": 3579.801547,
-            "generation_duration_ms": 11233.135299,
-            "load_duration_ms": 40.329368,
-            "tokens_per_second": 26.884746952783942
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a giraffe, which is the central focus. The giraffe is positioned slightly to the left, with its long neck extended upward and its body facing away from the viewer. Its distinctive pattern of brown patches separated by white lines is clearly visible. The giraffe stands on a patch of rocks, which are scattered near the base of a tree trunk that is also prominent in the foreground. The tree trunk is vertical and partially obscures the giraffe's body, adding depth to the scene. The grassy ground in the foreground is well-maintained, suggesting a controlled environment, likely a zoo or wildlife park.\n\nIn the background, the setting transitions into a more natural and open area. There are trees and shrubs, indicating a lush, green environment. The background also features a mix of man-made structures, such as fences and what appears to be a stone wall or barrier, which further reinforces the idea of a managed habitat. The distant background includes more trees and possibly additional enclosures, creating a layered effect that leads the viewer's eye from the giraffe in the foreground to the broader setting.\n\nThe relationship between the foreground and background is one of contrast and context. The giraffe in the foreground provides a focal point, while the background elements establish the environment in which the giraffe resides. The tree trunk in the foreground acts as a visual anchor, connecting the giraffe to the broader setting. The grassy area and the distant trees create a sense of depth, emphasizing the giraffe's size and the spaciousness of its habitat. The man-made structures in the background subtly indicate human intervention, highlighting the controlled nature of the environment. Overall, the composition effectively balances the natural and artificial elements, creating a cohesive and engaging scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 357,
-            "total_tokens": 660
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13392.21227,
-            "prompt_eval_duration_ms": 77.491301,
-            "generation_duration_ms": 13272.986873,
-            "load_duration_ms": 39.109673,
-            "tokens_per_second": 26.896734202774795
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image shows a giraffe standing in an open, grassy area, likely within a zoo or wildlife park. The giraffe is the central focus of the image, and there are no visible people in the scene. The giraffe is positioned near a tree trunk, which it appears to be using for support or as a point of interest. Its long neck is extended upward, suggesting it might be reaching for leaves or simply standing alert. The giraffe's distinctive pattern of brown patches separated by white lines is clearly visible, highlighting its unique and recognizable appearance.\n\nIn the background, there are various elements that suggest a managed environment, such as rocks, fencing, and artificial structures, which are typical of a zoo enclosure. The grassy area provides a naturalistic setting, allowing the giraffe to stand comfortably. The giraffe does not appear to be interacting with any other animals in the image, as no other animals are visible. The overall scene conveys a sense of calm, with the giraffe standing still and observing its surroundings. The tree trunk serves as a point of interaction, possibly offering shade or a place for the giraffe to rest its neck. The environment appears well-maintained, indicating a controlled and safe habitat for the giraffe.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 252,
-            "total_tokens": 558
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9540.963248,
-            "prompt_eval_duration_ms": 77.96118,
-            "generation_duration_ms": 9416.817329,
-            "load_duration_ms": 43.059725,
-            "tokens_per_second": 26.760633789076657
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image of the giraffe standing calmly in an open grassy area conveys a mood of serenity and tranquility. The giraffe's posture, with its long neck extended upward and its body relaxed, suggests a sense of peacefulness and contentment. The bright, natural lighting and the lush green grass in the foreground contribute to a positive and uplifting atmosphere, evoking feelings of calmness and appreciation for nature. The giraffe's distinctive patterned coat adds visual interest, enhancing the aesthetic appeal of the scene. The background, featuring trees and a clear sky, further emphasizes the openness and freedom of the environment, reinforcing a sense of harmony with nature. The overall tone is decidedly positive, as the image captures a moment of quiet beauty and natural grace. The absence of any apparent stress or disturbance in the giraffe's demeanor, along with the expansive, well-lit setting, creates a mood that is both soothing and uplifting, inviting viewers to feel a connection to the natural world.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 199,
-            "total_tokens": 507
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7553.142078,
-            "prompt_eval_duration_ms": 74.494111,
-            "generation_duration_ms": 7437.612509,
-            "load_duration_ms": 37.726832,
-            "tokens_per_second": 26.7558977775727
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"giraffe\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"A giraffe standing on grass, with its long neck extended upwards.\"\n    }\n  },\n  \"man-made\": {\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"A black fence in the background, partially obscured by trees.\"\n    },\n    \"rocks\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"gray\", \"brown\"],\n      \"size\": \"small\",\n      \"description\": \"A cluster of rocks at the base of the giraffe.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"A tree trunk near the giraffe, with green foliage in the background.\"\n    },\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"A grassy area covering the ground.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "giraffe": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "brown",
-                  "white"
-                ],
-                "size": "large",
-                "description": "A giraffe standing on grass, with its long neck extended upwards."
-              }
-            },
-            "man-made": {
-              "fence": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "black"
-                ],
-                "size": "medium",
-                "description": "A black fence in the background, partially obscured by trees."
-              },
-              "rocks": {
-                "count": 1,
-                "location": "foreground",
-                "color": [
-                  "gray",
-                  "brown"
-                ],
-                "size": "small",
-                "description": "A cluster of rocks at the base of the giraffe."
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "green"
-                ],
-                "size": "medium",
-                "description": "A tree trunk near the giraffe, with green foliage in the background."
-              },
-              "grass": {
-                "count": 1,
-                "location": "foreground",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "A grassy area covering the ground."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 300,
-            "total_tokens": 786
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11314.253201,
-            "prompt_eval_duration_ms": 136.961662,
-            "generation_duration_ms": 11136.2551,
-            "load_duration_ms": 38.251839,
-            "tokens_per_second": 26.939038061367686
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3110,
-        "total_time_ms": 56658.257685,
-        "average_speed": 26.847410156715153
       }
     },
     {

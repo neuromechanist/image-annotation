@@ -7,6 +7,305 @@
   "timestamp": "2025-08-30T22:44:14.833324+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a close-up of a child's hands holding a pink teddy bear against their chest, partially obscuring their face. The child is wearing a white bucket hat, and a glimpse of a striped garment suggests they are dressed for a casual outing. The teddy bear, with its soft pink fabric and simple black features, is the focal point, held gently by the child's hands, which are adorned with red nail polish. The background is blurred, with hints of red and green, possibly indicating a festive or outdoor setting, which contrasts with the soft, muted tones of the teddy bear and the child's clothing. The lighting is natural and soft, suggesting an overcast day or a shaded area, which enhances the gentle and serene mood of the image. The overall composition is intimate and heartwarming, emphasizing the bond between the child and the teddy bear, with a sense of comfort and security conveyed through the gentle hold and the soft colors.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 195,
+            "total_tokens": 492
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1568.099666,
+            "prompt_eval_duration_ms": 80.287735,
+            "generation_duration_ms": 1446.699571,
+            "load_duration_ms": 36.342382,
+            "tokens_per_second": 134.78956094886408
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, the viewer's attention is drawn to a pair of hands holding a pink teddy bear with a cheerful smile and black eyes and nose, suggesting a comforting or playful theme. The texture of the fabric is soft and plush, indicating the teddy bear is likely a toy or a comforting object. The hands, with visible red nail polish, suggest the presence of a person, possibly a child or an adult, interacting with the teddy bear. The background, though blurred, hints at an indoor setting with a hint of a white object, possibly a piece of furniture or a wall, and a small glimpse of what might be a flower or a decorative item, adding a touch of color and life to the scene. The blurred background helps to emphasize the teddy bear and the hands in the foreground, creating a sense of depth and focusing the viewer's attention on the interaction between the person and the teddy bear.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 187,
+            "total_tokens": 490
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1474.630158,
+            "prompt_eval_duration_ms": 30.345464,
+            "generation_duration_ms": 1403.101781,
+            "load_duration_ms": 38.945025,
+            "tokens_per_second": 133.27614755554217
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a person is partially obscured by a plush pink teddy bear, which they are holding close to their face. The teddy bear, with its soft, velvety texture and cheerful black eyes and nose, is being held by the person's hands, which are visible in the foreground. The person's face is mostly hidden, with only the lower part of their face and chin visible, suggesting a sense of mystery or perhaps a playful interaction with the teddy bear. The background is slightly blurred, drawing focus to the interaction between the person and the teddy bear. The teddy bear appears to be a comforting object, possibly a toy or a comfort item, and the person's hands are gently holding it, indicating a sense of care or affection. The overall scene suggests a moment of quiet companionship or a playful game, with the teddy bear serving as a central element in the interaction.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 185,
+            "total_tokens": 491
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1448.672583,
+            "prompt_eval_duration_ms": 31.699813,
+            "generation_duration_ms": 1378.658003,
+            "load_duration_ms": 36.00417,
+            "tokens_per_second": 134.18846414225618
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of warmth and comfort, with a subtle hint of nostalgia. The soft pink color of the teddy bear, coupled with its gentle smile and the gentle touch of the child's hands, creates an atmosphere of tenderness and affection. The child's white hat adds a touch of innocence and purity to the scene, while the blurred background ensures that the focus remains on the interaction between the child and the teddy bear, enhancing the feeling of intimacy and security. The overall tone is decidedly positive, as the image suggests a moment of comfort and companionship, often associated with childhood memories and the security of having a favorite toy. The visual elements, such as the soft texture of the teddy bear and the gentle hold of the child, further contribute to this positive and comforting mood.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 162,
+            "total_tokens": 470
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1278.636893,
+            "prompt_eval_duration_ms": 30.773888,
+            "generation_duration_ms": 1203.704236,
+            "load_duration_ms": 39.421183,
+            "tokens_per_second": 134.58455586925425
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"pink\"],\n      \"size\": \"medium\",\n      \"description\": \"holding a teddy bear\"\n    }\n  },\n  \"man-made\": {\n    \"teddy_bear\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"pink\"],\n      \"size\": \"small\",\n      \"description\": \"pink teddy bear with a smiling face\"\n    },\n    \"hat\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"white bucket hat\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "pink"
+                ],
+                "size": "medium",
+                "description": "holding a teddy bear"
+              }
+            },
+            "man-made": {
+              "teddy_bear": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "pink"
+                ],
+                "size": "small",
+                "description": "pink teddy bear with a smiling face"
+              },
+              "hat": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "white bucket hat"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 164,
+            "total_tokens": 650
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1282.035072,
+            "prompt_eval_duration_ms": 44.471126,
+            "generation_duration_ms": 1198.763318,
+            "load_duration_ms": 36.221387,
+            "tokens_per_second": 136.80765630501216
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2593,
+        "total_time_ms": 7052.074371999999,
+        "average_speed": 134.72927696418577
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a close-up, intimate scene featuring a person holding a plush, pink teddy bear mask over their face. The setting appears to be indoors, with soft, warm lighting that creates a cozy and gentle atmosphere. The background is slightly blurred, drawing attention to the central elements. The person is wearing a white bucket hat, which adds a playful and casual touch to the composition. Their hands are gently holding the bear mask, which has a soft, velvety texture and a cheerful expression with black button eyes, a black nose, and a stitched smile. The bear's ears are perked up, adding to its endearing appearance. The person's nails are painted a vibrant red, which contrasts nicely with the soft pink of the bear and the white of the hat. A hint of a white flower or decorative element is visible in the background, contributing to the overall soft and whimsical feel of the image. The overall composition is centered and balanced, with the bear mask as the focal point, creating a sense of warmth, comfort, and playfulness. The lighting enhances the textures and colors, making the scene feel inviting and lighthearted.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 235,
+            "total_tokens": 532
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12299.380549,
+            "prompt_eval_duration_ms": 3467.329247,
+            "generation_duration_ms": 8790.936366,
+            "load_duration_ms": 38.85902,
+            "tokens_per_second": 26.732078383468984
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the most prominent element is a pink, plush teddy bear being held by a pair of hands. The bear has a soft, velvety texture and features a cheerful, smiling face with black eyes and a black nose. The hands holding the bear are partially visible, with painted red nails, suggesting they belong to a person. The bear is the central focus, drawing immediate attention due to its bright color and playful design.\n\nIn the background, the setting is less distinct but provides context for the scene. A person wearing a white bucket hat is partially visible, with only a portion of their face and hair showing. The background appears to be indoors, with a warm, cozy ambiance. There are hints of other objects, such as a white flower or decorative element to the right, and a blurred, reddish-orange object in the top left corner, possibly a piece of furniture or decor. The background is softly out of focus, emphasizing the bear in the foreground.\n\nThe relationship between the foreground and background is one of contrast and focus. The sharp, detailed appearance of the teddy bear in the foreground contrasts with the blurred, indistinct background, creating depth and directing the viewer's attention to the bear. The person in the background, partially obscured and out of focus, adds a human element to the scene, suggesting interaction or playfulness. The overall composition suggests a warm, intimate moment, possibly involving a child or someone engaging with the plush toy in a relaxed, homey environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 306,
+            "total_tokens": 609
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11513.537911,
+            "prompt_eval_duration_ms": 74.176679,
+            "generation_duration_ms": 11397.378384,
+            "load_duration_ms": 39.828418,
+            "tokens_per_second": 26.848279463071304
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a person holding a plush, pink teddy bear with a cheerful, smiling face. The teddy bear is the central focus of the image, and it appears to be made of soft, velvety material, giving it a cozy and inviting appearance. The person holding the teddy bear is partially visible, wearing a white bucket hat and a gray top. Their hands are gently cradling the bear, suggesting a sense of care and affection. The person's face is mostly obscured by the teddy bear, with only a portion of their hair and a glimpse of their eyes visible, adding an element of mystery or playfulness to the scene.\n\nIn the background, there are subtle elements that contribute to the overall ambiance. A white flower is visible, adding a delicate and serene touch to the composition. The background also includes a hint of a red object, possibly a piece of furniture or decor, which contrasts with the soft, pastel tones of the teddy bear and the person's attire. The interaction between the person and the teddy bear is gentle and nurturing, emphasizing a sense of comfort and warmth. The overall mood of the image is calm and endearing, highlighting the connection between the person and the plush toy. The teddy bear serves as a focal point, symbolizing innocence, comfort, and affection. The person's actions of holding and presenting the bear suggest a desire to share or showcase this comforting object, creating a sense of warmth and tenderness in the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 302,
+            "total_tokens": 608
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11328.513732,
+            "prompt_eval_duration_ms": 75.887678,
+            "generation_duration_ms": 11209.1937,
+            "load_duration_ms": 41.185362,
+            "tokens_per_second": 26.94216980120524
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of warmth, comfort, and gentle playfulness. The central focus is a plush, pink teddy bear with a cheerful, smiling face, which immediately evokes feelings of happiness and innocence. The soft texture of the teddy bear, combined with its bright and inviting color, adds to the overall sense of coziness and affection. The person holding the teddy bear is partially obscured by a white hat, which adds a touch of mystery and curiosity, as if they are playfully interacting with the toy. The hands gently cradling the bear suggest care and tenderness, reinforcing the positive emotional tone. The blurred background, featuring soft, warm tones and a hint of a flower, further enhances the serene and comforting atmosphere. The overall tone is decidedly positive, as the image focuses on elements that are universally associated with joy, comfort, and childhood nostalgia. The visual elements\u2014such as the soft colors, the smiling bear, and the gentle touch\u2014work together to create a mood that is both uplifting and heartwarming.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 212,
+            "total_tokens": 520
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7989.987361,
+            "prompt_eval_duration_ms": 74.752431,
+            "generation_duration_ms": 7875.995345,
+            "load_duration_ms": 36.739232,
+            "tokens_per_second": 26.917232770406113
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"blonde\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Person wearing a white hat, holding a pink teddy bear, with visible hands and part of the face covered by the hat.\"\n    }\n  },\n  \"animal\": {\n    \"teddy_bear\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"pink\"],\n      \"size\": \"small\",\n      \"description\": \"Plush teddy bear with a smiling face, held by the person.\"\n    }\n  },\n  \"man-made\": {\n    \"hat\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"White bucket hat worn by the person.\"\n    },\n    \"clothing\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"Partially visible gray clothing worn by the person.\"\n    }\n  },\n  \"natural\": {\n    \"flower\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"White flower with green stem, partially visible.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "blonde",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "Person wearing a white hat, holding a pink teddy bear, with visible hands and part of the face covered by the hat."
+              }
+            },
+            "animal": {
+              "teddy_bear": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "pink"
+                ],
+                "size": "small",
+                "description": "Plush teddy bear with a smiling face, held by the person."
+              }
+            },
+            "man-made": {
+              "hat": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "White bucket hat worn by the person."
+              },
+              "clothing": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "gray"
+                ],
+                "size": "small",
+                "description": "Partially visible gray clothing worn by the person."
+              }
+            },
+            "natural": {
+              "flower": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "White flower with green stem, partially visible."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 312,
+            "total_tokens": 798
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11712.283921,
+            "prompt_eval_duration_ms": 138.341474,
+            "generation_duration_ms": 11532.965252,
+            "load_duration_ms": 38.690318,
+            "tokens_per_second": 27.05288650253188
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3067,
+        "total_time_ms": 54843.703474,
+        "average_speed": 26.8985293841367
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -476,305 +775,6 @@
         "total_tokens": 2787,
         "total_time_ms": 25025.215780000002,
         "average_speed": 41.73414496712199
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a close-up of a child's hands holding a pink teddy bear against their chest, partially obscuring their face. The child is wearing a white bucket hat, and a glimpse of a striped garment suggests they are dressed for a casual outing. The teddy bear, with its soft pink fabric and simple black features, is the focal point, held gently by the child's hands, which are adorned with red nail polish. The background is blurred, with hints of red and green, possibly indicating a festive or outdoor setting, which contrasts with the soft, muted tones of the teddy bear and the child's clothing. The lighting is natural and soft, suggesting an overcast day or a shaded area, which enhances the gentle and serene mood of the image. The overall composition is intimate and heartwarming, emphasizing the bond between the child and the teddy bear, with a sense of comfort and security conveyed through the gentle hold and the soft colors.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 195,
-            "total_tokens": 492
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1568.099666,
-            "prompt_eval_duration_ms": 80.287735,
-            "generation_duration_ms": 1446.699571,
-            "load_duration_ms": 36.342382,
-            "tokens_per_second": 134.78956094886408
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, the viewer's attention is drawn to a pair of hands holding a pink teddy bear with a cheerful smile and black eyes and nose, suggesting a comforting or playful theme. The texture of the fabric is soft and plush, indicating the teddy bear is likely a toy or a comforting object. The hands, with visible red nail polish, suggest the presence of a person, possibly a child or an adult, interacting with the teddy bear. The background, though blurred, hints at an indoor setting with a hint of a white object, possibly a piece of furniture or a wall, and a small glimpse of what might be a flower or a decorative item, adding a touch of color and life to the scene. The blurred background helps to emphasize the teddy bear and the hands in the foreground, creating a sense of depth and focusing the viewer's attention on the interaction between the person and the teddy bear.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 187,
-            "total_tokens": 490
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1474.630158,
-            "prompt_eval_duration_ms": 30.345464,
-            "generation_duration_ms": 1403.101781,
-            "load_duration_ms": 38.945025,
-            "tokens_per_second": 133.27614755554217
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a person is partially obscured by a plush pink teddy bear, which they are holding close to their face. The teddy bear, with its soft, velvety texture and cheerful black eyes and nose, is being held by the person's hands, which are visible in the foreground. The person's face is mostly hidden, with only the lower part of their face and chin visible, suggesting a sense of mystery or perhaps a playful interaction with the teddy bear. The background is slightly blurred, drawing focus to the interaction between the person and the teddy bear. The teddy bear appears to be a comforting object, possibly a toy or a comfort item, and the person's hands are gently holding it, indicating a sense of care or affection. The overall scene suggests a moment of quiet companionship or a playful game, with the teddy bear serving as a central element in the interaction.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 185,
-            "total_tokens": 491
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1448.672583,
-            "prompt_eval_duration_ms": 31.699813,
-            "generation_duration_ms": 1378.658003,
-            "load_duration_ms": 36.00417,
-            "tokens_per_second": 134.18846414225618
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of warmth and comfort, with a subtle hint of nostalgia. The soft pink color of the teddy bear, coupled with its gentle smile and the gentle touch of the child's hands, creates an atmosphere of tenderness and affection. The child's white hat adds a touch of innocence and purity to the scene, while the blurred background ensures that the focus remains on the interaction between the child and the teddy bear, enhancing the feeling of intimacy and security. The overall tone is decidedly positive, as the image suggests a moment of comfort and companionship, often associated with childhood memories and the security of having a favorite toy. The visual elements, such as the soft texture of the teddy bear and the gentle hold of the child, further contribute to this positive and comforting mood.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 162,
-            "total_tokens": 470
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1278.636893,
-            "prompt_eval_duration_ms": 30.773888,
-            "generation_duration_ms": 1203.704236,
-            "load_duration_ms": 39.421183,
-            "tokens_per_second": 134.58455586925425
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"pink\"],\n      \"size\": \"medium\",\n      \"description\": \"holding a teddy bear\"\n    }\n  },\n  \"man-made\": {\n    \"teddy_bear\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"pink\"],\n      \"size\": \"small\",\n      \"description\": \"pink teddy bear with a smiling face\"\n    },\n    \"hat\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"white bucket hat\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "pink"
-                ],
-                "size": "medium",
-                "description": "holding a teddy bear"
-              }
-            },
-            "man-made": {
-              "teddy_bear": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "pink"
-                ],
-                "size": "small",
-                "description": "pink teddy bear with a smiling face"
-              },
-              "hat": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "white bucket hat"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 164,
-            "total_tokens": 650
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1282.035072,
-            "prompt_eval_duration_ms": 44.471126,
-            "generation_duration_ms": 1198.763318,
-            "load_duration_ms": 36.221387,
-            "tokens_per_second": 136.80765630501216
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2593,
-        "total_time_ms": 7052.074371999999,
-        "average_speed": 134.72927696418577
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a close-up, intimate scene featuring a person holding a plush, pink teddy bear mask over their face. The setting appears to be indoors, with soft, warm lighting that creates a cozy and gentle atmosphere. The background is slightly blurred, drawing attention to the central elements. The person is wearing a white bucket hat, which adds a playful and casual touch to the composition. Their hands are gently holding the bear mask, which has a soft, velvety texture and a cheerful expression with black button eyes, a black nose, and a stitched smile. The bear's ears are perked up, adding to its endearing appearance. The person's nails are painted a vibrant red, which contrasts nicely with the soft pink of the bear and the white of the hat. A hint of a white flower or decorative element is visible in the background, contributing to the overall soft and whimsical feel of the image. The overall composition is centered and balanced, with the bear mask as the focal point, creating a sense of warmth, comfort, and playfulness. The lighting enhances the textures and colors, making the scene feel inviting and lighthearted.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 235,
-            "total_tokens": 532
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12299.380549,
-            "prompt_eval_duration_ms": 3467.329247,
-            "generation_duration_ms": 8790.936366,
-            "load_duration_ms": 38.85902,
-            "tokens_per_second": 26.732078383468984
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the most prominent element is a pink, plush teddy bear being held by a pair of hands. The bear has a soft, velvety texture and features a cheerful, smiling face with black eyes and a black nose. The hands holding the bear are partially visible, with painted red nails, suggesting they belong to a person. The bear is the central focus, drawing immediate attention due to its bright color and playful design.\n\nIn the background, the setting is less distinct but provides context for the scene. A person wearing a white bucket hat is partially visible, with only a portion of their face and hair showing. The background appears to be indoors, with a warm, cozy ambiance. There are hints of other objects, such as a white flower or decorative element to the right, and a blurred, reddish-orange object in the top left corner, possibly a piece of furniture or decor. The background is softly out of focus, emphasizing the bear in the foreground.\n\nThe relationship between the foreground and background is one of contrast and focus. The sharp, detailed appearance of the teddy bear in the foreground contrasts with the blurred, indistinct background, creating depth and directing the viewer's attention to the bear. The person in the background, partially obscured and out of focus, adds a human element to the scene, suggesting interaction or playfulness. The overall composition suggests a warm, intimate moment, possibly involving a child or someone engaging with the plush toy in a relaxed, homey environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 306,
-            "total_tokens": 609
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11513.537911,
-            "prompt_eval_duration_ms": 74.176679,
-            "generation_duration_ms": 11397.378384,
-            "load_duration_ms": 39.828418,
-            "tokens_per_second": 26.848279463071304
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a person holding a plush, pink teddy bear with a cheerful, smiling face. The teddy bear is the central focus of the image, and it appears to be made of soft, velvety material, giving it a cozy and inviting appearance. The person holding the teddy bear is partially visible, wearing a white bucket hat and a gray top. Their hands are gently cradling the bear, suggesting a sense of care and affection. The person's face is mostly obscured by the teddy bear, with only a portion of their hair and a glimpse of their eyes visible, adding an element of mystery or playfulness to the scene.\n\nIn the background, there are subtle elements that contribute to the overall ambiance. A white flower is visible, adding a delicate and serene touch to the composition. The background also includes a hint of a red object, possibly a piece of furniture or decor, which contrasts with the soft, pastel tones of the teddy bear and the person's attire. The interaction between the person and the teddy bear is gentle and nurturing, emphasizing a sense of comfort and warmth. The overall mood of the image is calm and endearing, highlighting the connection between the person and the plush toy. The teddy bear serves as a focal point, symbolizing innocence, comfort, and affection. The person's actions of holding and presenting the bear suggest a desire to share or showcase this comforting object, creating a sense of warmth and tenderness in the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 302,
-            "total_tokens": 608
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11328.513732,
-            "prompt_eval_duration_ms": 75.887678,
-            "generation_duration_ms": 11209.1937,
-            "load_duration_ms": 41.185362,
-            "tokens_per_second": 26.94216980120524
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of warmth, comfort, and gentle playfulness. The central focus is a plush, pink teddy bear with a cheerful, smiling face, which immediately evokes feelings of happiness and innocence. The soft texture of the teddy bear, combined with its bright and inviting color, adds to the overall sense of coziness and affection. The person holding the teddy bear is partially obscured by a white hat, which adds a touch of mystery and curiosity, as if they are playfully interacting with the toy. The hands gently cradling the bear suggest care and tenderness, reinforcing the positive emotional tone. The blurred background, featuring soft, warm tones and a hint of a flower, further enhances the serene and comforting atmosphere. The overall tone is decidedly positive, as the image focuses on elements that are universally associated with joy, comfort, and childhood nostalgia. The visual elements\u2014such as the soft colors, the smiling bear, and the gentle touch\u2014work together to create a mood that is both uplifting and heartwarming.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 212,
-            "total_tokens": 520
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7989.987361,
-            "prompt_eval_duration_ms": 74.752431,
-            "generation_duration_ms": 7875.995345,
-            "load_duration_ms": 36.739232,
-            "tokens_per_second": 26.917232770406113
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"blonde\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Person wearing a white hat, holding a pink teddy bear, with visible hands and part of the face covered by the hat.\"\n    }\n  },\n  \"animal\": {\n    \"teddy_bear\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"pink\"],\n      \"size\": \"small\",\n      \"description\": \"Plush teddy bear with a smiling face, held by the person.\"\n    }\n  },\n  \"man-made\": {\n    \"hat\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"White bucket hat worn by the person.\"\n    },\n    \"clothing\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"Partially visible gray clothing worn by the person.\"\n    }\n  },\n  \"natural\": {\n    \"flower\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"White flower with green stem, partially visible.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "blonde",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "Person wearing a white hat, holding a pink teddy bear, with visible hands and part of the face covered by the hat."
-              }
-            },
-            "animal": {
-              "teddy_bear": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "pink"
-                ],
-                "size": "small",
-                "description": "Plush teddy bear with a smiling face, held by the person."
-              }
-            },
-            "man-made": {
-              "hat": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "White bucket hat worn by the person."
-              },
-              "clothing": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "gray"
-                ],
-                "size": "small",
-                "description": "Partially visible gray clothing worn by the person."
-              }
-            },
-            "natural": {
-              "flower": {
-                "count": 1,
-                "location": "right",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "White flower with green stem, partially visible."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 312,
-            "total_tokens": 798
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11712.283921,
-            "prompt_eval_duration_ms": 138.341474,
-            "generation_duration_ms": 11532.965252,
-            "load_duration_ms": 38.690318,
-            "tokens_per_second": 27.05288650253188
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3067,
-        "total_time_ms": 54843.703474,
-        "average_speed": 26.8985293841367
       }
     },
     {

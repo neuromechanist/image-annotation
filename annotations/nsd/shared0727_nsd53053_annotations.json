@@ -7,6 +7,257 @@
   "timestamp": "2025-08-30T22:23:15.644604+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image presents a striking juxtaposition of a clock against a vibrant geometric patterned background. The clock, with its simple white face and black hands, stands out as the focal point, its time reading approximately 10:10. The background is a rich tapestry of interlocking hexagons and star shapes in deep blue, orange, and teal hues, creating a visually dynamic and almost hypnotic effect. The lighting is even and bright, casting no significant shadows and highlighting the intricate details of the pattern. The overall composition is balanced, with the clock centrally placed, drawing the viewer's eye immediately to its time display while the background's complexity adds depth and interest. The contrast between the clock's minimalism and the ornate backdrop creates a compelling visual narrative, suggesting a blend of functionality and artistry.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 165,
+            "total_tokens": 462
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1286.757417,
+            "prompt_eval_duration_ms": 78.982334,
+            "generation_duration_ms": 1162.457367,
+            "load_duration_ms": 41.948571,
+            "tokens_per_second": 141.94068933970632
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, a white analog clock with black hands and numbers stands out against the intricate geometric pattern of the background. The clock, positioned centrally, is the primary focus, with its clean, simple design contrasting sharply with the complex, vibrant backdrop. The background, composed of a repeating pattern of interlocking hexagons and stars in shades of orange, blue, and teal, creates a rich, textured environment that draws the eye and adds depth to the image. The clock's white face and black numbers provide a stark contrast to the colorful, detailed pattern behind it, making the clock appear as if it is floating or mounted on this elaborate wall. The relationship between the clock and the background is one of juxtaposition, where the simplicity of the clock is emphasized against the complexity and vibrancy of the pattern, creating a visually striking and harmonious composition.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 172,
+            "total_tokens": 475
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1315.052358,
+            "prompt_eval_duration_ms": 32.243041,
+            "generation_duration_ms": 1238.773658,
+            "load_duration_ms": 40.452865,
+            "tokens_per_second": 138.84699508197002
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a clock mounted on a wall, surrounded by a vibrant geometric pattern. The clock, with its white face and black hands, stands out against the intricate design of the wall, which features a repeating pattern of orange and blue hexagons and stars. There are no people or animals present in the image, and the clock does not interact with any other objects. The clock simply displays the time, while the colorful wall serves as a static backdrop, enhancing the visual appeal of the scene. The interaction between the clock and the wall is purely aesthetic, with the clock being the focal point and the wall providing a rich, textured environment that complements the clock's simplicity.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 137,
+            "total_tokens": 443
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1058.079919,
+            "prompt_eval_duration_ms": 30.765641,
+            "generation_duration_ms": 982.297777,
+            "load_duration_ms": 40.145099,
+            "tokens_per_second": 139.4689097418165
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of calm and order, with a subtle hint of nostalgia. The clock, a symbol of time and the passage of moments, is set against a backdrop of intricate geometric patterns that suggest a traditional or cultural aesthetic. The use of warm orange and cool blue tones creates a balanced and harmonious color palette, which can be associated with feelings of comfort and stability. The symmetry and repetition of the patterns contribute to a feeling of order and structure, which can be reassuring. The clock's position in the center of the image draws the viewer's attention, symbolizing the importance of time within this context. The overall tone is positive, as the image does not evoke any negative emotions but instead invites a sense of reflection and appreciation for the beauty in simplicity and tradition. The interplay of light and shadow, along with the detailed craftsmanship of the pattern, adds depth and a touch of elegance, further enhancing the positive emotional atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 189,
+            "total_tokens": 497
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1446.689602,
+            "prompt_eval_duration_ms": 32.346896,
+            "generation_duration_ms": 1371.076571,
+            "load_duration_ms": 40.356988,
+            "tokens_per_second": 137.8478809992006
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"clock\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Analog clock with black hands and numbers\"\n    }\n  },\n  \"man-made\": {\n    \"tile_pattern\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"orange\", \"blue\", \"black\"],\n      \"size\": \"large\",\n      \"description\": \"Geometric pattern with hexagons and stars\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "tile_pattern": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "orange",
+                  "blue",
+                  "black"
+                ],
+                "size": "large",
+                "description": "Geometric pattern with hexagons and stars"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 132,
+            "total_tokens": 618
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1030.472248,
+            "prompt_eval_duration_ms": 44.502033,
+            "generation_duration_ms": 939.12448,
+            "load_duration_ms": 43.269014,
+            "tokens_per_second": 140.55644678754408
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2495,
+        "total_time_ms": 6137.051544,
+        "average_speed": 139.7321843900475
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image features a classic analog wall clock mounted on a vibrant, patterned background. The clock has a simple, minimalist design with a white face, black hour and minute hands, and black numerals from 1 to 12. The brand name \"Kurtz\" is visible at the bottom of the clock face, indicating its manufacturer. The clock is circular with a metallic or light-colored frame, contrasting subtly with the colorful backdrop.\n\nThe background is a striking, geometric pattern composed of intricate, repeating shapes in a rich tapestry of colors. The dominant colors are dark blue, orange, and teal, with accents of white and black. The pattern includes star-like motifs and hexagonal designs, creating a sense of depth and complexity. The overall aesthetic is reminiscent of traditional Islamic or Middle Eastern art, with its symmetrical and ornate geometric patterns.\n\nThe lighting in the image is even and bright, highlighting the clock and the intricate details of the background without casting harsh shadows. The composition is centered, with the clock positioned directly in the middle of the frame, drawing the viewer's attention immediately to it. The contrast between the clean, modern clock and the ornate, traditional background creates a visually interesting and harmonious blend of simplicity and complexity. The overall effect is both aesthetically pleasing and dynamic, combining functionality with artistic design.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 270,
+            "total_tokens": 567
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13727.858469,
+            "prompt_eval_duration_ms": 3608.73066,
+            "generation_duration_ms": 10077.457642,
+            "load_duration_ms": 38.564307,
+            "tokens_per_second": 26.79247183086299
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a white, analog clock with black hands and numerals. The clock is circular, with a simple and clean design, and it is mounted on a surface that features a vibrant, geometric pattern. This pattern serves as the background, consisting of a repeating tessellation of orange, blue, and teal shapes, including stars, hexagons, and other intricate geometric forms. The background pattern is intricate and eye-catching, creating a striking contrast with the minimalist design of the clock.\n\nThe clock, as the primary focal point, stands out sharply against the busy, colorful backdrop. The relationship between the foreground and background is one of contrast and balance. The clock's simplicity and symmetry provide a sense of order and focus, while the background's complex, repeating patterns add visual interest and depth. The geometric shapes in the background complement the circular shape of the clock, creating a harmonious composition. The colors in the background\u2014orange, blue, and teal\u2014add vibrancy and warmth, which subtly enhances the overall aesthetic appeal of the image. The interplay between the foreground and background elements creates a visually engaging and dynamic scene, where the clock acts as a central anchor amidst the lively, ornate pattern.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 248,
+            "total_tokens": 551
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9376.863604,
+            "prompt_eval_duration_ms": 79.892741,
+            "generation_duration_ms": 9252.172609,
+            "load_duration_ms": 41.713496,
+            "tokens_per_second": 26.80451505614577
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a clock mounted on a vibrant, patterned wall. The clock is a simple, round analog design with a white face, black hour and minute hands, and black numerals indicating the hours. The clock is centrally positioned and appears to be the focal point of the image. The wall behind the clock features an intricate, geometric pattern with a repeating design of orange, blue, and black shapes, including stars and hexagons. The pattern is symmetrical and creates a visually striking backdrop for the clock.\n\nThere are no people or animals present in the image. The primary interaction is between the clock and the patterned wall. The clock is affixed to the wall, and its clean, minimalist design contrasts sharply with the ornate, colorful background. The clock's white face and black elements stand out against the vivid, complex pattern, drawing the viewer's attention to the time displayed. The relationship between the clock and the wall is one of juxtaposition, where the simplicity of the clock complements the complexity of the pattern, creating a balanced and aesthetically pleasing composition. The overall effect is one of harmony and visual interest, with the clock serving as a functional element within an artistic and decorative setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 245,
+            "total_tokens": 551
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9243.550245,
+            "prompt_eval_duration_ms": 75.375324,
+            "generation_duration_ms": 9124.703983,
+            "load_duration_ms": 39.623826,
+            "tokens_per_second": 26.850186094415026
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood that is both vibrant and harmonious, evoking a sense of warmth, creativity, and cultural richness. The intricate geometric patterns in the background, featuring a mix of orange, blue, and black hues, create a visually stimulating and dynamic atmosphere. The symmetry and repetition of the patterns suggest order and balance, which can be comforting and engaging. The bold colors, particularly the bright orange and deep blue, add a lively and energetic feel, while the black accents provide contrast and depth, enhancing the overall visual impact.\n\nThe clock in the foreground, with its clean white face and simple black hands, introduces a sense of time and structure, grounding the image in a practical, everyday context. This juxtaposition of the ornate, timeless patterns with the modern, functional clock creates a balance between tradition and modernity, evoking a feeling of nostalgia intertwined with practicality.\n\nThe overall tone is positive and uplifting. The vibrant colors and intricate designs inspire a sense of joy and appreciation for artistic expression, while the clock adds a touch of realism that grounds the image in the present moment. The combination of these elements results in an atmosphere that is both aesthetically pleasing and emotionally engaging, encouraging the viewer to appreciate the beauty of both cultural heritage and the passage of time.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 258,
+            "total_tokens": 566
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9757.145911,
+            "prompt_eval_duration_ms": 79.193014,
+            "generation_duration_ms": 9635.272507,
+            "load_duration_ms": 39.15805,
+            "tokens_per_second": 26.776616832846575
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"clock\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Analog clock with black hands and numbers, mounted on a colorful geometric patterned background.\"\n    },\n    \"background_pattern\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"orange\", \"blue\", \"black\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Geometric pattern with hexagonal and star shapes in orange, blue, and black colors.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "clock": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "white",
+                  "black"
+                ],
+                "size": "medium",
+                "description": "Analog clock with black hands and numbers, mounted on a colorful geometric patterned background."
+              },
+              "background_pattern": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "orange",
+                  "blue",
+                  "black",
+                  "white"
+                ],
+                "size": "large",
+                "description": "Geometric pattern with hexagonal and star shapes in orange, blue, and black colors."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 144,
+            "total_tokens": 630
+          },
+          "performance_metrics": {
+            "total_duration_ms": 5509.350601,
+            "prompt_eval_duration_ms": 133.149415,
+            "generation_duration_ms": 5330.691302,
+            "load_duration_ms": 41.018102,
+            "tokens_per_second": 27.013381912768658
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2865,
+        "total_time_ms": 47614.76883,
+        "average_speed": 26.847434345407805
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -372,257 +623,6 @@
         "total_tokens": 2720,
         "total_time_ms": 23147.504461999997,
         "average_speed": 42.2965266152212
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image presents a striking juxtaposition of a clock against a vibrant geometric patterned background. The clock, with its simple white face and black hands, stands out as the focal point, its time reading approximately 10:10. The background is a rich tapestry of interlocking hexagons and star shapes in deep blue, orange, and teal hues, creating a visually dynamic and almost hypnotic effect. The lighting is even and bright, casting no significant shadows and highlighting the intricate details of the pattern. The overall composition is balanced, with the clock centrally placed, drawing the viewer's eye immediately to its time display while the background's complexity adds depth and interest. The contrast between the clock's minimalism and the ornate backdrop creates a compelling visual narrative, suggesting a blend of functionality and artistry.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 165,
-            "total_tokens": 462
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1286.757417,
-            "prompt_eval_duration_ms": 78.982334,
-            "generation_duration_ms": 1162.457367,
-            "load_duration_ms": 41.948571,
-            "tokens_per_second": 141.94068933970632
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, a white analog clock with black hands and numbers stands out against the intricate geometric pattern of the background. The clock, positioned centrally, is the primary focus, with its clean, simple design contrasting sharply with the complex, vibrant backdrop. The background, composed of a repeating pattern of interlocking hexagons and stars in shades of orange, blue, and teal, creates a rich, textured environment that draws the eye and adds depth to the image. The clock's white face and black numbers provide a stark contrast to the colorful, detailed pattern behind it, making the clock appear as if it is floating or mounted on this elaborate wall. The relationship between the clock and the background is one of juxtaposition, where the simplicity of the clock is emphasized against the complexity and vibrancy of the pattern, creating a visually striking and harmonious composition.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 172,
-            "total_tokens": 475
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1315.052358,
-            "prompt_eval_duration_ms": 32.243041,
-            "generation_duration_ms": 1238.773658,
-            "load_duration_ms": 40.452865,
-            "tokens_per_second": 138.84699508197002
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a clock mounted on a wall, surrounded by a vibrant geometric pattern. The clock, with its white face and black hands, stands out against the intricate design of the wall, which features a repeating pattern of orange and blue hexagons and stars. There are no people or animals present in the image, and the clock does not interact with any other objects. The clock simply displays the time, while the colorful wall serves as a static backdrop, enhancing the visual appeal of the scene. The interaction between the clock and the wall is purely aesthetic, with the clock being the focal point and the wall providing a rich, textured environment that complements the clock's simplicity.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 137,
-            "total_tokens": 443
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1058.079919,
-            "prompt_eval_duration_ms": 30.765641,
-            "generation_duration_ms": 982.297777,
-            "load_duration_ms": 40.145099,
-            "tokens_per_second": 139.4689097418165
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of calm and order, with a subtle hint of nostalgia. The clock, a symbol of time and the passage of moments, is set against a backdrop of intricate geometric patterns that suggest a traditional or cultural aesthetic. The use of warm orange and cool blue tones creates a balanced and harmonious color palette, which can be associated with feelings of comfort and stability. The symmetry and repetition of the patterns contribute to a feeling of order and structure, which can be reassuring. The clock's position in the center of the image draws the viewer's attention, symbolizing the importance of time within this context. The overall tone is positive, as the image does not evoke any negative emotions but instead invites a sense of reflection and appreciation for the beauty in simplicity and tradition. The interplay of light and shadow, along with the detailed craftsmanship of the pattern, adds depth and a touch of elegance, further enhancing the positive emotional atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 189,
-            "total_tokens": 497
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1446.689602,
-            "prompt_eval_duration_ms": 32.346896,
-            "generation_duration_ms": 1371.076571,
-            "load_duration_ms": 40.356988,
-            "tokens_per_second": 137.8478809992006
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"clock\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Analog clock with black hands and numbers\"\n    }\n  },\n  \"man-made\": {\n    \"tile_pattern\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"orange\", \"blue\", \"black\"],\n      \"size\": \"large\",\n      \"description\": \"Geometric pattern with hexagons and stars\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "tile_pattern": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "orange",
-                  "blue",
-                  "black"
-                ],
-                "size": "large",
-                "description": "Geometric pattern with hexagons and stars"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 132,
-            "total_tokens": 618
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1030.472248,
-            "prompt_eval_duration_ms": 44.502033,
-            "generation_duration_ms": 939.12448,
-            "load_duration_ms": 43.269014,
-            "tokens_per_second": 140.55644678754408
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2495,
-        "total_time_ms": 6137.051544,
-        "average_speed": 139.7321843900475
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image features a classic analog wall clock mounted on a vibrant, patterned background. The clock has a simple, minimalist design with a white face, black hour and minute hands, and black numerals from 1 to 12. The brand name \"Kurtz\" is visible at the bottom of the clock face, indicating its manufacturer. The clock is circular with a metallic or light-colored frame, contrasting subtly with the colorful backdrop.\n\nThe background is a striking, geometric pattern composed of intricate, repeating shapes in a rich tapestry of colors. The dominant colors are dark blue, orange, and teal, with accents of white and black. The pattern includes star-like motifs and hexagonal designs, creating a sense of depth and complexity. The overall aesthetic is reminiscent of traditional Islamic or Middle Eastern art, with its symmetrical and ornate geometric patterns.\n\nThe lighting in the image is even and bright, highlighting the clock and the intricate details of the background without casting harsh shadows. The composition is centered, with the clock positioned directly in the middle of the frame, drawing the viewer's attention immediately to it. The contrast between the clean, modern clock and the ornate, traditional background creates a visually interesting and harmonious blend of simplicity and complexity. The overall effect is both aesthetically pleasing and dynamic, combining functionality with artistic design.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 270,
-            "total_tokens": 567
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13727.858469,
-            "prompt_eval_duration_ms": 3608.73066,
-            "generation_duration_ms": 10077.457642,
-            "load_duration_ms": 38.564307,
-            "tokens_per_second": 26.79247183086299
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a white, analog clock with black hands and numerals. The clock is circular, with a simple and clean design, and it is mounted on a surface that features a vibrant, geometric pattern. This pattern serves as the background, consisting of a repeating tessellation of orange, blue, and teal shapes, including stars, hexagons, and other intricate geometric forms. The background pattern is intricate and eye-catching, creating a striking contrast with the minimalist design of the clock.\n\nThe clock, as the primary focal point, stands out sharply against the busy, colorful backdrop. The relationship between the foreground and background is one of contrast and balance. The clock's simplicity and symmetry provide a sense of order and focus, while the background's complex, repeating patterns add visual interest and depth. The geometric shapes in the background complement the circular shape of the clock, creating a harmonious composition. The colors in the background\u2014orange, blue, and teal\u2014add vibrancy and warmth, which subtly enhances the overall aesthetic appeal of the image. The interplay between the foreground and background elements creates a visually engaging and dynamic scene, where the clock acts as a central anchor amidst the lively, ornate pattern.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 248,
-            "total_tokens": 551
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9376.863604,
-            "prompt_eval_duration_ms": 79.892741,
-            "generation_duration_ms": 9252.172609,
-            "load_duration_ms": 41.713496,
-            "tokens_per_second": 26.80451505614577
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a clock mounted on a vibrant, patterned wall. The clock is a simple, round analog design with a white face, black hour and minute hands, and black numerals indicating the hours. The clock is centrally positioned and appears to be the focal point of the image. The wall behind the clock features an intricate, geometric pattern with a repeating design of orange, blue, and black shapes, including stars and hexagons. The pattern is symmetrical and creates a visually striking backdrop for the clock.\n\nThere are no people or animals present in the image. The primary interaction is between the clock and the patterned wall. The clock is affixed to the wall, and its clean, minimalist design contrasts sharply with the ornate, colorful background. The clock's white face and black elements stand out against the vivid, complex pattern, drawing the viewer's attention to the time displayed. The relationship between the clock and the wall is one of juxtaposition, where the simplicity of the clock complements the complexity of the pattern, creating a balanced and aesthetically pleasing composition. The overall effect is one of harmony and visual interest, with the clock serving as a functional element within an artistic and decorative setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 245,
-            "total_tokens": 551
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9243.550245,
-            "prompt_eval_duration_ms": 75.375324,
-            "generation_duration_ms": 9124.703983,
-            "load_duration_ms": 39.623826,
-            "tokens_per_second": 26.850186094415026
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood that is both vibrant and harmonious, evoking a sense of warmth, creativity, and cultural richness. The intricate geometric patterns in the background, featuring a mix of orange, blue, and black hues, create a visually stimulating and dynamic atmosphere. The symmetry and repetition of the patterns suggest order and balance, which can be comforting and engaging. The bold colors, particularly the bright orange and deep blue, add a lively and energetic feel, while the black accents provide contrast and depth, enhancing the overall visual impact.\n\nThe clock in the foreground, with its clean white face and simple black hands, introduces a sense of time and structure, grounding the image in a practical, everyday context. This juxtaposition of the ornate, timeless patterns with the modern, functional clock creates a balance between tradition and modernity, evoking a feeling of nostalgia intertwined with practicality.\n\nThe overall tone is positive and uplifting. The vibrant colors and intricate designs inspire a sense of joy and appreciation for artistic expression, while the clock adds a touch of realism that grounds the image in the present moment. The combination of these elements results in an atmosphere that is both aesthetically pleasing and emotionally engaging, encouraging the viewer to appreciate the beauty of both cultural heritage and the passage of time.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 258,
-            "total_tokens": 566
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9757.145911,
-            "prompt_eval_duration_ms": 79.193014,
-            "generation_duration_ms": 9635.272507,
-            "load_duration_ms": 39.15805,
-            "tokens_per_second": 26.776616832846575
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"clock\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Analog clock with black hands and numbers, mounted on a colorful geometric patterned background.\"\n    },\n    \"background_pattern\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"orange\", \"blue\", \"black\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Geometric pattern with hexagonal and star shapes in orange, blue, and black colors.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "clock": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "white",
-                  "black"
-                ],
-                "size": "medium",
-                "description": "Analog clock with black hands and numbers, mounted on a colorful geometric patterned background."
-              },
-              "background_pattern": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "orange",
-                  "blue",
-                  "black",
-                  "white"
-                ],
-                "size": "large",
-                "description": "Geometric pattern with hexagonal and star shapes in orange, blue, and black colors."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 144,
-            "total_tokens": 630
-          },
-          "performance_metrics": {
-            "total_duration_ms": 5509.350601,
-            "prompt_eval_duration_ms": 133.149415,
-            "generation_duration_ms": 5330.691302,
-            "load_duration_ms": 41.018102,
-            "tokens_per_second": 27.013381912768658
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2865,
-        "total_time_ms": 47614.76883,
-        "average_speed": 26.847434345407805
       }
     },
     {

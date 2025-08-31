@@ -7,6 +7,334 @@
   "timestamp": "2025-08-30T21:38:26.452467+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image presents a cozy kitchen setting with two pizzas resting on a wooden cutting board, which is placed on a light wooden table. The pizzas are the focal point, with one on the left featuring a simple topping of pepperoni slices and a generous layer of melted cheese, while the one on the right is a more complex creation with a base of fresh spinach, diced tomatoes, and chunks of white cheese, possibly mozzarella, adding a contrasting texture and color. The lighting is warm and natural, suggesting a daytime scene, and the shadows cast by the pizzas and the cutting board indicate a light source from above. In the background, slightly out of focus, there is a black object that appears to be a kitchen appliance, possibly a blender or a food processor, and a green cord is visible, hinting at the kitchen's active use. The overall composition is simple and inviting, with the pizzas taking center stage against the warm tones of the wooden table and cutting board, creating a sense of homely comfort and culinary delight.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 206,
+            "total_tokens": 503
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1594.351881,
+            "prompt_eval_duration_ms": 79.983235,
+            "generation_duration_ms": 1471.166712,
+            "load_duration_ms": 40.973628,
+            "tokens_per_second": 140.02491921527383
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, two pizzas rest on a wooden cutting board, their toppings vividly contrasting against the light brown surface. The pizza on the left is topped with slices of pepperoni and a generous layer of melted cheese, while the one on the right features a colorful array of spinach, diced tomatoes, and chunks of white cheese, possibly mozzarella. The background, slightly out of focus, reveals a glimpse of a dark, possibly metallic, object that could be a coffee maker or a similar appliance, and a section of a green cable running across the top left corner. The cutting board and the pizzas are the central elements, with the background providing a subtle context of a kitchen setting, suggesting that the pizzas are freshly prepared and ready to be served. The relationship between the foreground and background is one of depth and focus, with the pizzas sharply in focus and the background softly blurred, drawing the viewer's attention to the main subject while still giving a sense of the environment in which the scene takes place.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 201,
+            "total_tokens": 504
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1525.107508,
+            "prompt_eval_duration_ms": 30.24597,
+            "generation_duration_ms": 1455.440001,
+            "load_duration_ms": 36.774177,
+            "tokens_per_second": 138.1025668264562
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a simple, domestic scene featuring two pizzas on a wooden cutting board. The pizza on the left is topped with pepperoni slices and cheese, while the one on the right is adorned with a variety of toppings including spinach, diced tomatoes, and cheese. There are no people or animals present in the image, so their actions and interactions are not depicted. The pizzas are stationary, resting on the cutting board, which is placed on a wooden surface. In the background, a black object, possibly a kitchen appliance or a decorative item, is partially visible, adding a touch of context to the setting. The scene suggests a preparation or serving moment, with the pizzas ready to be enjoyed. The relationship between the pizzas and the background object is static, with no interaction taking place.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 158,
+            "total_tokens": 464
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1207.722048,
+            "prompt_eval_duration_ms": 30.251063,
+            "generation_duration_ms": 1135.758327,
+            "load_duration_ms": 39.045701,
+            "tokens_per_second": 139.11410222044535
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of anticipation and warmth, primarily due to the inviting appearance of the two pizzas. The wooden surface on which they rest adds a rustic charm, suggesting a home-cooked meal, which often carries connotations of comfort and care. The vibrant colors of the toppings\u2014rich reds of the pepperoni, the bright green of the spinach, and the creamy white of the cheese\u2014create a visually appealing contrast that is both appetizing and cheerful. The presence of these pizzas, seemingly ready to be enjoyed, conveys a mood of readiness and satisfaction, as if the viewer is being invited to partake in a delightful culinary experience. The overall tone is decidedly positive, as the image radiates a sense of joy and anticipation, likely evoking feelings of hunger, happiness, and the simple pleasure of looking forward to a delicious meal. The simplicity of the setting and the focus on the pizzas themselves contribute to a feeling of authenticity and focus on the core elements of the image, making it feel personal and relatable.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 208,
+            "total_tokens": 516
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1567.883556,
+            "prompt_eval_duration_ms": 30.149621,
+            "generation_duration_ms": 1495.633198,
+            "load_duration_ms": 39.807373,
+            "tokens_per_second": 139.0715318957503
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"pizza\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"green\", \"red\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"two pizzas with different toppings\"\n    },\n    \"cutting_board\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"wooden cutting board\"\n    },\n    \"black_appliance\": {\n      \"count\": 1,\n      \"location\": \"top right\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"black appliance with buttons\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "pizza": {
+                "count": 2,
+                "location": "center",
+                "color": [
+                  "white",
+                  "green",
+                  "red",
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "two pizzas with different toppings"
+              },
+              "cutting_board": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "wooden cutting board"
+              },
+              "black_appliance": {
+                "count": 1,
+                "location": "top right",
+                "color": [
+                  "black"
+                ],
+                "size": "medium",
+                "description": "black appliance with buttons"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 165,
+            "total_tokens": 651
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1253.490916,
+            "prompt_eval_duration_ms": 44.049432,
+            "generation_duration_ms": 1168.276292,
+            "load_duration_ms": 38.70362,
+            "tokens_per_second": 141.2337142590924
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2638,
+        "total_time_ms": 7148.555909,
+        "average_speed": 139.50936688340363
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a cozy kitchen setting with two homemade pizzas placed side by side on a wooden countertop. The pizzas are in the process of being prepared, with no visible crust or toppings yet baked. The pizza on the left is topped with a generous layer of shredded cheese and several slices of pepperoni, arranged in a somewhat scattered pattern. The pizza on the right features a more colorful and diverse topping arrangement, including what appears to be spinach or kale, crumbled white cheese (possibly feta or ricotta), and additional pepperoni slices. Both pizzas are on thin, flat bases, suggesting they might be thin-crust or flatbread-style pizzas.\n\nThe background includes a dark, cylindrical object, possibly a coffee maker or a similar kitchen appliance, positioned behind the pizzas. To the left, a green object, likely a cutting board or a bowl, is partially visible. The lighting in the image is warm and natural, suggesting an indoor setting with ambient light, possibly from a nearby window or overhead light. The overall composition is casual and inviting, emphasizing the homemade and rustic nature of the pizzas. The warm tones of the wooden countertop and the vibrant colors of the toppings create a visually appealing and appetizing scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 245,
+            "total_tokens": 542
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12795.116519,
+            "prompt_eval_duration_ms": 3621.122305,
+            "generation_duration_ms": 9133.130346,
+            "load_duration_ms": 38.40355,
+            "tokens_per_second": 26.825413710130796
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image prominently features two uncooked pizzas placed side by side on a wooden surface, likely a countertop or table. The pizza on the left is topped with slices of pepperoni and shredded cheese, creating a classic pepperoni pizza appearance. The pizza on the right is more colorful, featuring a mix of toppings including what appears to be spinach or kale, cheese, and pepperoni slices, giving it a more gourmet or vegetarian-inspired look. Both pizzas are round and have a thin crust, suggesting they are ready to be baked.\n\nIn the background, the setting includes a few kitchen elements. A black appliance, possibly a coffee maker or a small appliance with buttons, is visible behind the pizzas. To the left, part of a green object, possibly a bowl or container, is partially in view. On the right side, a white cylindrical object, which could be a roll of paper towels or a container, is also visible. The background elements are slightly out of focus, drawing attention to the pizzas in the foreground.\n\nThe relationship between the foreground and background is one of contrast and context. The pizzas in the foreground are the main focus, showcasing the preparation stage of a meal. The background elements provide a domestic kitchen setting, indicating that the pizzas are being prepared in a home environment. The blurred background ensures that the pizzas remain the central point of interest, while the kitchen items subtly suggest the context in which the pizzas are being made. The overall composition emphasizes the homemade, casual nature of the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 304,
+            "total_tokens": 607
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11424.748116,
+            "prompt_eval_duration_ms": 73.632429,
+            "generation_duration_ms": 11308.328187,
+            "load_duration_ms": 38.588406,
+            "tokens_per_second": 26.882842005724324
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image shows two pizzas placed side by side on a wooden surface, likely a table or countertop. There are no people or animals visible in the image, so the focus is entirely on the objects and their arrangement.\n\nThe pizza on the left is a simpler design, featuring a base of tomato sauce, topped with circular slices of pepperoni and a generous sprinkling of shredded cheese. This pizza appears to be a classic pepperoni pizza, with the ingredients neatly arranged and the toppings evenly distributed.\n\nThe pizza on the right is more elaborate, with a vibrant mix of toppings. It includes a layer of green leafy vegetables, possibly spinach or kale, spread across the base. There are also slices of pepperoni and chunks of white cheese, possibly mozzarella or feta, scattered across the surface. The combination of green, red, and white toppings gives this pizza a more colorful and diverse appearance compared to the one on the left.\n\nBoth pizzas are uncooked, as indicated by the raw appearance of the cheese and the lack of browning on the crusts. The pizzas are placed on a wooden surface, and in the background, there is a black object that resembles a coffee maker or a similar kitchen appliance, along with a green object that could be a cutting board or a bowl. The overall setting suggests a kitchen or dining area where the pizzas are prepared and ready for cooking.\n\nThe two pizzas interact visually through their placement and contrast in design. The simpler, classic pepperoni pizza on the left complements the more colorful and diverse pizza on the right, creating a visual balance in the image. The wooden surface and kitchen elements in the background provide a homely, casual setting, emphasizing the homemade nature of the pizzas.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 346,
+            "total_tokens": 652
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12963.639187,
+            "prompt_eval_duration_ms": 74.725078,
+            "generation_duration_ms": 12848.479343,
+            "load_duration_ms": 38.102772,
+            "tokens_per_second": 26.92925682201488
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts two pizzas in the process of being prepared, one with a classic pepperoni and cheese topping and the other with a more adventurous combination of spinach, cheese, and pepperoni. The mood conveyed by this image is predominantly positive and inviting, evoking feelings of comfort, anticipation, and creativity. The warm, natural wood surface on which the pizzas are placed adds a cozy, homely touch, suggesting a casual and relaxed atmosphere. The vibrant colors of the ingredients\u2014rich reds of the pepperoni, bright greens of the spinach, and creamy whites of the cheese\u2014create a visually appealing contrast that stimulates appetite and excitement. The presence of a kitchen appliance in the background further reinforces the idea of a home-cooked meal, enhancing the sense of warmth and familiarity.\n\nThe image also hints at a sense of experimentation and personalization, as the second pizza features a unique combination of toppings, which can evoke feelings of curiosity and creativity. The overall tone is neutral to slightly positive, as there are no elements that suggest negativity or discomfort. The visual elements, such as the fresh ingredients and the inviting presentation, contribute to an atmosphere of anticipation and enjoyment, making the viewer feel eager to partake in the meal. The image effectively captures the essence of homemade cooking and the joy of preparing something delicious, which is universally relatable and uplifting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 269,
+            "total_tokens": 577
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10117.100445,
+            "prompt_eval_duration_ms": 73.533336,
+            "generation_duration_ms": 10001.616012,
+            "load_duration_ms": 39.053066,
+            "tokens_per_second": 26.895653630098593
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"pizza\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"red\", \"green\", \"pink\"],\n      \"size\": \"medium\",\n      \"description\": \"Two pizzas on a wooden surface, one with pepperoni and cheese, the other with spinach, cheese, and pepperoni.\"\n    },\n    \"pizza base\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Circular pizza bases forming the foundation of the pizzas.\"\n    },\n    \"pizza toppings\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"red\", \"green\", \"white\", \"pink\"],\n      \"size\": \"small\",\n      \"description\": \"Toppings including pepperoni, cheese, and spinach on the pizzas.\"\n    },\n    \"pizza cutter\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"A black pizza cutter placed between the pizzas.\"\n    },\n    \"wooden surface\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"A wooden table or cutting board serving as the base for the pizzas.\"\n    },\n    \"green object\": {\n      \"count\": 1,\n      \"location\": \"top left\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"A partially visible green object in the top left corner.\"\n    },\n    \"black object\": {\n      \"count\": 1,\n      \"location\": \"top center\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"A black object, possibly a kitchen appliance, in the top center.\"\n    }\n  },\n  \"natural\": {\n    \"wood grain\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"The natural wood grain pattern on the wooden surface.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "pizza": {
+                "count": 2,
+                "location": "center",
+                "color": [
+                  "white",
+                  "red",
+                  "green",
+                  "pink"
+                ],
+                "size": "medium",
+                "description": "Two pizzas on a wooden surface, one with pepperoni and cheese, the other with spinach, cheese, and pepperoni."
+              },
+              "pizza base": {
+                "count": 2,
+                "location": "center",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "Circular pizza bases forming the foundation of the pizzas."
+              },
+              "pizza toppings": {
+                "count": 2,
+                "location": "center",
+                "color": [
+                  "red",
+                  "green",
+                  "white",
+                  "pink"
+                ],
+                "size": "small",
+                "description": "Toppings including pepperoni, cheese, and spinach on the pizzas."
+              },
+              "pizza cutter": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "A black pizza cutter placed between the pizzas."
+              },
+              "wooden surface": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "A wooden table or cutting board serving as the base for the pizzas."
+              },
+              "green object": {
+                "count": 1,
+                "location": "top left",
+                "color": [
+                  "green"
+                ],
+                "size": "small",
+                "description": "A partially visible green object in the top left corner."
+              },
+              "black object": {
+                "count": 1,
+                "location": "top center",
+                "color": [
+                  "black"
+                ],
+                "size": "medium",
+                "description": "A black object, possibly a kitchen appliance, in the top center."
+              }
+            },
+            "natural": {
+              "wood grain": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "The natural wood grain pattern on the wooden surface."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 478,
+            "total_tokens": 964
+          },
+          "performance_metrics": {
+            "total_duration_ms": 17897.190382,
+            "prompt_eval_duration_ms": 134.767194,
+            "generation_duration_ms": 17721.112906,
+            "load_duration_ms": 38.44553,
+            "tokens_per_second": 26.973475228982892
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3342,
+        "total_time_ms": 65197.794649,
+        "average_speed": 26.9013282793903
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -487,334 +815,6 @@
         "total_tokens": 2742,
         "total_time_ms": 23708.4094,
         "average_speed": 42.208653671850556
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image presents a cozy kitchen setting with two pizzas resting on a wooden cutting board, which is placed on a light wooden table. The pizzas are the focal point, with one on the left featuring a simple topping of pepperoni slices and a generous layer of melted cheese, while the one on the right is a more complex creation with a base of fresh spinach, diced tomatoes, and chunks of white cheese, possibly mozzarella, adding a contrasting texture and color. The lighting is warm and natural, suggesting a daytime scene, and the shadows cast by the pizzas and the cutting board indicate a light source from above. In the background, slightly out of focus, there is a black object that appears to be a kitchen appliance, possibly a blender or a food processor, and a green cord is visible, hinting at the kitchen's active use. The overall composition is simple and inviting, with the pizzas taking center stage against the warm tones of the wooden table and cutting board, creating a sense of homely comfort and culinary delight.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 206,
-            "total_tokens": 503
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1594.351881,
-            "prompt_eval_duration_ms": 79.983235,
-            "generation_duration_ms": 1471.166712,
-            "load_duration_ms": 40.973628,
-            "tokens_per_second": 140.02491921527383
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, two pizzas rest on a wooden cutting board, their toppings vividly contrasting against the light brown surface. The pizza on the left is topped with slices of pepperoni and a generous layer of melted cheese, while the one on the right features a colorful array of spinach, diced tomatoes, and chunks of white cheese, possibly mozzarella. The background, slightly out of focus, reveals a glimpse of a dark, possibly metallic, object that could be a coffee maker or a similar appliance, and a section of a green cable running across the top left corner. The cutting board and the pizzas are the central elements, with the background providing a subtle context of a kitchen setting, suggesting that the pizzas are freshly prepared and ready to be served. The relationship between the foreground and background is one of depth and focus, with the pizzas sharply in focus and the background softly blurred, drawing the viewer's attention to the main subject while still giving a sense of the environment in which the scene takes place.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 201,
-            "total_tokens": 504
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1525.107508,
-            "prompt_eval_duration_ms": 30.24597,
-            "generation_duration_ms": 1455.440001,
-            "load_duration_ms": 36.774177,
-            "tokens_per_second": 138.1025668264562
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a simple, domestic scene featuring two pizzas on a wooden cutting board. The pizza on the left is topped with pepperoni slices and cheese, while the one on the right is adorned with a variety of toppings including spinach, diced tomatoes, and cheese. There are no people or animals present in the image, so their actions and interactions are not depicted. The pizzas are stationary, resting on the cutting board, which is placed on a wooden surface. In the background, a black object, possibly a kitchen appliance or a decorative item, is partially visible, adding a touch of context to the setting. The scene suggests a preparation or serving moment, with the pizzas ready to be enjoyed. The relationship between the pizzas and the background object is static, with no interaction taking place.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 158,
-            "total_tokens": 464
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1207.722048,
-            "prompt_eval_duration_ms": 30.251063,
-            "generation_duration_ms": 1135.758327,
-            "load_duration_ms": 39.045701,
-            "tokens_per_second": 139.11410222044535
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of anticipation and warmth, primarily due to the inviting appearance of the two pizzas. The wooden surface on which they rest adds a rustic charm, suggesting a home-cooked meal, which often carries connotations of comfort and care. The vibrant colors of the toppings\u2014rich reds of the pepperoni, the bright green of the spinach, and the creamy white of the cheese\u2014create a visually appealing contrast that is both appetizing and cheerful. The presence of these pizzas, seemingly ready to be enjoyed, conveys a mood of readiness and satisfaction, as if the viewer is being invited to partake in a delightful culinary experience. The overall tone is decidedly positive, as the image radiates a sense of joy and anticipation, likely evoking feelings of hunger, happiness, and the simple pleasure of looking forward to a delicious meal. The simplicity of the setting and the focus on the pizzas themselves contribute to a feeling of authenticity and focus on the core elements of the image, making it feel personal and relatable.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 208,
-            "total_tokens": 516
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1567.883556,
-            "prompt_eval_duration_ms": 30.149621,
-            "generation_duration_ms": 1495.633198,
-            "load_duration_ms": 39.807373,
-            "tokens_per_second": 139.0715318957503
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"pizza\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"green\", \"red\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"two pizzas with different toppings\"\n    },\n    \"cutting_board\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"wooden cutting board\"\n    },\n    \"black_appliance\": {\n      \"count\": 1,\n      \"location\": \"top right\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"black appliance with buttons\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "pizza": {
-                "count": 2,
-                "location": "center",
-                "color": [
-                  "white",
-                  "green",
-                  "red",
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "two pizzas with different toppings"
-              },
-              "cutting_board": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "wooden cutting board"
-              },
-              "black_appliance": {
-                "count": 1,
-                "location": "top right",
-                "color": [
-                  "black"
-                ],
-                "size": "medium",
-                "description": "black appliance with buttons"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 165,
-            "total_tokens": 651
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1253.490916,
-            "prompt_eval_duration_ms": 44.049432,
-            "generation_duration_ms": 1168.276292,
-            "load_duration_ms": 38.70362,
-            "tokens_per_second": 141.2337142590924
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2638,
-        "total_time_ms": 7148.555909,
-        "average_speed": 139.50936688340363
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a cozy kitchen setting with two homemade pizzas placed side by side on a wooden countertop. The pizzas are in the process of being prepared, with no visible crust or toppings yet baked. The pizza on the left is topped with a generous layer of shredded cheese and several slices of pepperoni, arranged in a somewhat scattered pattern. The pizza on the right features a more colorful and diverse topping arrangement, including what appears to be spinach or kale, crumbled white cheese (possibly feta or ricotta), and additional pepperoni slices. Both pizzas are on thin, flat bases, suggesting they might be thin-crust or flatbread-style pizzas.\n\nThe background includes a dark, cylindrical object, possibly a coffee maker or a similar kitchen appliance, positioned behind the pizzas. To the left, a green object, likely a cutting board or a bowl, is partially visible. The lighting in the image is warm and natural, suggesting an indoor setting with ambient light, possibly from a nearby window or overhead light. The overall composition is casual and inviting, emphasizing the homemade and rustic nature of the pizzas. The warm tones of the wooden countertop and the vibrant colors of the toppings create a visually appealing and appetizing scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 245,
-            "total_tokens": 542
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12795.116519,
-            "prompt_eval_duration_ms": 3621.122305,
-            "generation_duration_ms": 9133.130346,
-            "load_duration_ms": 38.40355,
-            "tokens_per_second": 26.825413710130796
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image prominently features two uncooked pizzas placed side by side on a wooden surface, likely a countertop or table. The pizza on the left is topped with slices of pepperoni and shredded cheese, creating a classic pepperoni pizza appearance. The pizza on the right is more colorful, featuring a mix of toppings including what appears to be spinach or kale, cheese, and pepperoni slices, giving it a more gourmet or vegetarian-inspired look. Both pizzas are round and have a thin crust, suggesting they are ready to be baked.\n\nIn the background, the setting includes a few kitchen elements. A black appliance, possibly a coffee maker or a small appliance with buttons, is visible behind the pizzas. To the left, part of a green object, possibly a bowl or container, is partially in view. On the right side, a white cylindrical object, which could be a roll of paper towels or a container, is also visible. The background elements are slightly out of focus, drawing attention to the pizzas in the foreground.\n\nThe relationship between the foreground and background is one of contrast and context. The pizzas in the foreground are the main focus, showcasing the preparation stage of a meal. The background elements provide a domestic kitchen setting, indicating that the pizzas are being prepared in a home environment. The blurred background ensures that the pizzas remain the central point of interest, while the kitchen items subtly suggest the context in which the pizzas are being made. The overall composition emphasizes the homemade, casual nature of the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 304,
-            "total_tokens": 607
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11424.748116,
-            "prompt_eval_duration_ms": 73.632429,
-            "generation_duration_ms": 11308.328187,
-            "load_duration_ms": 38.588406,
-            "tokens_per_second": 26.882842005724324
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image shows two pizzas placed side by side on a wooden surface, likely a table or countertop. There are no people or animals visible in the image, so the focus is entirely on the objects and their arrangement.\n\nThe pizza on the left is a simpler design, featuring a base of tomato sauce, topped with circular slices of pepperoni and a generous sprinkling of shredded cheese. This pizza appears to be a classic pepperoni pizza, with the ingredients neatly arranged and the toppings evenly distributed.\n\nThe pizza on the right is more elaborate, with a vibrant mix of toppings. It includes a layer of green leafy vegetables, possibly spinach or kale, spread across the base. There are also slices of pepperoni and chunks of white cheese, possibly mozzarella or feta, scattered across the surface. The combination of green, red, and white toppings gives this pizza a more colorful and diverse appearance compared to the one on the left.\n\nBoth pizzas are uncooked, as indicated by the raw appearance of the cheese and the lack of browning on the crusts. The pizzas are placed on a wooden surface, and in the background, there is a black object that resembles a coffee maker or a similar kitchen appliance, along with a green object that could be a cutting board or a bowl. The overall setting suggests a kitchen or dining area where the pizzas are prepared and ready for cooking.\n\nThe two pizzas interact visually through their placement and contrast in design. The simpler, classic pepperoni pizza on the left complements the more colorful and diverse pizza on the right, creating a visual balance in the image. The wooden surface and kitchen elements in the background provide a homely, casual setting, emphasizing the homemade nature of the pizzas.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 346,
-            "total_tokens": 652
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12963.639187,
-            "prompt_eval_duration_ms": 74.725078,
-            "generation_duration_ms": 12848.479343,
-            "load_duration_ms": 38.102772,
-            "tokens_per_second": 26.92925682201488
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts two pizzas in the process of being prepared, one with a classic pepperoni and cheese topping and the other with a more adventurous combination of spinach, cheese, and pepperoni. The mood conveyed by this image is predominantly positive and inviting, evoking feelings of comfort, anticipation, and creativity. The warm, natural wood surface on which the pizzas are placed adds a cozy, homely touch, suggesting a casual and relaxed atmosphere. The vibrant colors of the ingredients\u2014rich reds of the pepperoni, bright greens of the spinach, and creamy whites of the cheese\u2014create a visually appealing contrast that stimulates appetite and excitement. The presence of a kitchen appliance in the background further reinforces the idea of a home-cooked meal, enhancing the sense of warmth and familiarity.\n\nThe image also hints at a sense of experimentation and personalization, as the second pizza features a unique combination of toppings, which can evoke feelings of curiosity and creativity. The overall tone is neutral to slightly positive, as there are no elements that suggest negativity or discomfort. The visual elements, such as the fresh ingredients and the inviting presentation, contribute to an atmosphere of anticipation and enjoyment, making the viewer feel eager to partake in the meal. The image effectively captures the essence of homemade cooking and the joy of preparing something delicious, which is universally relatable and uplifting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 269,
-            "total_tokens": 577
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10117.100445,
-            "prompt_eval_duration_ms": 73.533336,
-            "generation_duration_ms": 10001.616012,
-            "load_duration_ms": 39.053066,
-            "tokens_per_second": 26.895653630098593
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"pizza\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"red\", \"green\", \"pink\"],\n      \"size\": \"medium\",\n      \"description\": \"Two pizzas on a wooden surface, one with pepperoni and cheese, the other with spinach, cheese, and pepperoni.\"\n    },\n    \"pizza base\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Circular pizza bases forming the foundation of the pizzas.\"\n    },\n    \"pizza toppings\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"red\", \"green\", \"white\", \"pink\"],\n      \"size\": \"small\",\n      \"description\": \"Toppings including pepperoni, cheese, and spinach on the pizzas.\"\n    },\n    \"pizza cutter\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"A black pizza cutter placed between the pizzas.\"\n    },\n    \"wooden surface\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"A wooden table or cutting board serving as the base for the pizzas.\"\n    },\n    \"green object\": {\n      \"count\": 1,\n      \"location\": \"top left\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"A partially visible green object in the top left corner.\"\n    },\n    \"black object\": {\n      \"count\": 1,\n      \"location\": \"top center\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"A black object, possibly a kitchen appliance, in the top center.\"\n    }\n  },\n  \"natural\": {\n    \"wood grain\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"The natural wood grain pattern on the wooden surface.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "pizza": {
-                "count": 2,
-                "location": "center",
-                "color": [
-                  "white",
-                  "red",
-                  "green",
-                  "pink"
-                ],
-                "size": "medium",
-                "description": "Two pizzas on a wooden surface, one with pepperoni and cheese, the other with spinach, cheese, and pepperoni."
-              },
-              "pizza base": {
-                "count": 2,
-                "location": "center",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "Circular pizza bases forming the foundation of the pizzas."
-              },
-              "pizza toppings": {
-                "count": 2,
-                "location": "center",
-                "color": [
-                  "red",
-                  "green",
-                  "white",
-                  "pink"
-                ],
-                "size": "small",
-                "description": "Toppings including pepperoni, cheese, and spinach on the pizzas."
-              },
-              "pizza cutter": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "A black pizza cutter placed between the pizzas."
-              },
-              "wooden surface": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "A wooden table or cutting board serving as the base for the pizzas."
-              },
-              "green object": {
-                "count": 1,
-                "location": "top left",
-                "color": [
-                  "green"
-                ],
-                "size": "small",
-                "description": "A partially visible green object in the top left corner."
-              },
-              "black object": {
-                "count": 1,
-                "location": "top center",
-                "color": [
-                  "black"
-                ],
-                "size": "medium",
-                "description": "A black object, possibly a kitchen appliance, in the top center."
-              }
-            },
-            "natural": {
-              "wood grain": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "The natural wood grain pattern on the wooden surface."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 478,
-            "total_tokens": 964
-          },
-          "performance_metrics": {
-            "total_duration_ms": 17897.190382,
-            "prompt_eval_duration_ms": 134.767194,
-            "generation_duration_ms": 17721.112906,
-            "load_duration_ms": 38.44553,
-            "tokens_per_second": 26.973475228982892
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3342,
-        "total_time_ms": 65197.794649,
-        "average_speed": 26.9013282793903
       }
     },
     {

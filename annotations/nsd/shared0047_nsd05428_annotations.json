@@ -7,6 +7,279 @@
   "timestamp": "2025-08-31T05:12:01.755320+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a close-up of a hand holding a donut, with the focus sharply on the donut itself. The donut is generously covered with a thick layer of white glaze, which appears slightly cracked and uneven, suggesting a soft texture. Scattered across the glaze are small, colorful sprinkles in shades of orange and yellow, adding a playful contrast to the white. The donut's surface is slightly uneven, with some areas where the glaze has chipped or peeled, revealing the donut's light brown, textured base underneath. The hand holding the donut is in the foreground, with the thumb and fingers supporting the donut from underneath, and the palm is slightly cupped to support it. The background is blurred, showing a gray, concrete surface, which suggests an outdoor setting, possibly a sidewalk or a street. The lighting is natural, likely from an overcast sky, as it is diffused and soft, casting no harsh shadows and giving the image a calm, everyday feel. The overall composition is simple yet engaging, drawing the viewer's attention to the donut's texture and the vibrant colors of the sprinkles against the white glaze.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 239,
+            "total_tokens": 536
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1828.934395,
+            "prompt_eval_duration_ms": 80.18731,
+            "generation_duration_ms": 1707.832042,
+            "load_duration_ms": 38.090298,
+            "tokens_per_second": 139.94350388233318
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, a hand is prominently displayed, holding a donut with a light gray icing and sprinkled with orange and yellow bits, possibly crushed nuts or candy pieces. The donut appears freshly made, with a slightly rough texture on the icing, suggesting it might be a glaze or a light frosting. The hand, which is the closest element to the viewer, provides a sense of scale and adds a human element to the image, making the donut appear more relatable and tangible. The background, though blurred, reveals a concrete surface, likely a sidewalk or pavement, indicating an outdoor setting. This background is out of focus, which helps to emphasize the donut and the hand holding it, creating a depth of field effect that draws the viewer's attention to the main subject. The relationship between the foreground and background is one of contrast and focus, with the detailed texture and color of the donut standing out sharply against the more muted and less detailed background.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 196,
+            "total_tokens": 499
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1478.756894,
+            "prompt_eval_duration_ms": 30.489826,
+            "generation_duration_ms": 1407.367948,
+            "load_duration_ms": 38.44756,
+            "tokens_per_second": 139.2670625180388
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a person's hand is prominently featured, holding a donut with a bite taken out of it. The donut is generously covered in a white glaze and sprinkled with what appears to be chopped nuts and possibly some dried fruit, adding a colorful contrast to the white glaze. The hand is positioned in the foreground, with the donut being the central focus, suggesting the person is about to enjoy the treat. The background is blurred, indicating the setting is likely an outdoor area, possibly a street or sidewalk, as suggested by the gray, textured surface that resembles pavement. There are no animals or other people visible in the image, and the interaction is solely between the hand and the donut, highlighting the simple pleasure of enjoying a sweet snack.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 156,
+            "total_tokens": 462
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1189.34961,
+            "prompt_eval_duration_ms": 30.665024,
+            "generation_duration_ms": 1119.775204,
+            "load_duration_ms": 36.431935,
+            "tokens_per_second": 139.31367603314067
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of indulgence and nostalgia, with a touch of whimsy. The close-up view of the hand holding the donut creates an intimate and personal mood, inviting the viewer to share in the simple pleasure of enjoying a sweet treat. The donut itself, with its glossy glaze and colorful sprinkles, suggests a moment of joy and satisfaction, hinting at the comfort and happiness that come from indulging in something sweet. The slightly worn texture of the donut and the casual way it is held in the hand add a layer of authenticity and relatability, making the image feel less like a staged advertisement and more like a candid moment captured in time. The muted background further emphasizes the donut as the focal point, drawing the viewer's attention to the subject and enhancing the overall positive and lighthearted tone of the image.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 176,
+            "total_tokens": 484
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1330.462746,
+            "prompt_eval_duration_ms": 31.289643,
+            "generation_duration_ms": 1255.840013,
+            "load_duration_ms": 39.761757,
+            "tokens_per_second": 140.14523998129687
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"hand holding a donut\"\n    }\n  },\n  \"man-made\": {\n    \"donut\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"orange\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"glazed donut with sprinkles\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "hand holding a donut"
+              }
+            },
+            "man-made": {
+              "donut": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "white",
+                  "orange",
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "glazed donut with sprinkles"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 123,
+            "total_tokens": 609
+          },
+          "performance_metrics": {
+            "total_duration_ms": 961.192726,
+            "prompt_eval_duration_ms": 43.62256,
+            "generation_duration_ms": 876.853964,
+            "load_duration_ms": 38.18338,
+            "tokens_per_second": 140.27421332385057
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2590,
+        "total_time_ms": 6788.696371000001,
+        "average_speed": 139.78873914773203
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image shows a close-up of a hand holding a donut against an outdoor setting. The donut is the central focus, with its surface covered in a thick, white glaze that appears slightly uneven, giving it a rustic, homemade look. The glaze is sprinkled with small, colorful bits, primarily orange and yellow, which could be crushed candy or sprinkles, adding a playful and festive touch. The donut itself has a slightly rough texture, suggesting it might be a cake donut rather than a glazed one, with a visible hole in the center. The hand holding the donut is light-skinned and positioned in a way that emphasizes the donut's details, with fingers gently cradling it from below.\n\nThe background is blurred but reveals a paved surface, likely a sidewalk or street, indicating the photo was taken outdoors, possibly on a casual outing. The lighting is natural, likely from daylight, casting soft shadows and highlighting the texture of the donut and the hand. The overall composition is simple and centered, drawing attention to the donut's unique appearance and the casual, everyday context in which it is being held. The colors are warm and inviting, with the white glaze contrasting against the orange and yellow sprinkles and the neutral tones of the pavement and hand. The image conveys a sense of spontaneity and enjoyment, as if someone is about to savor a delicious treat.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 287,
+            "total_tokens": 584
+          },
+          "performance_metrics": {
+            "total_duration_ms": 14249.969117,
+            "prompt_eval_duration_ms": 3479.216895,
+            "generation_duration_ms": 10729.295927,
+            "load_duration_ms": 38.232539,
+            "tokens_per_second": 26.749192300472558
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a hand holding a donut. The hand is positioned centrally, with the fingers gently gripping the donut from below. The donut itself is the focal point, featuring a white glaze with colorful sprinkles scattered across its surface. The sprinkles are primarily orange and yellow, adding a vibrant contrast to the white glaze. The donut's texture appears slightly rough, suggesting a crumbly or cake-like dough. The hand and donut are in sharp focus, drawing immediate attention to their details.\n\nIn the background, the setting is less defined but appears to be an outdoor environment. The background is blurred, indicating a shallow depth of field that emphasizes the foreground elements. The surface beneath the hand seems to be a paved or concrete area, likely a sidewalk or street, as suggested by the gray, textured appearance. The background's blurriness creates a sense of depth, separating it from the sharply defined foreground. The contrast between the detailed foreground and the out-of-focus background helps to highlight the donut and hand as the primary subjects of the image. The overall composition suggests a casual, everyday moment, with the donut being the central point of interest. The background's simplicity ensures that the viewer's attention remains on the donut and hand, making the relationship between the layers clear and intentional.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 271,
+            "total_tokens": 574
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10219.917635,
+            "prompt_eval_duration_ms": 76.718463,
+            "generation_duration_ms": 10099.917057,
+            "load_duration_ms": 40.62225,
+            "tokens_per_second": 26.83190351669043
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image shows a close-up of a hand holding a donut. The donut appears to be a glazed variety, coated with a white frosting and sprinkled with colorful, small, crumbly toppings, likely crushed candy or cereal, in shades of orange and yellow. The hand is positioned in the foreground, with the fingers gently cradling the donut, suggesting that the person is either about to eat it or is showcasing it. The background is blurred, indicating an outdoor setting with a paved surface, possibly a sidewalk or street, visible beneath the hand.\n\nThere are no animals present in the image. The primary interaction is between the hand and the donut, with the hand holding the donut securely, highlighting its texture and appearance. The donut itself is the focal point, drawing attention with its vibrant toppings and glossy glaze. The blurred background emphasizes the donut and the hand, creating a sense of intimacy and focus on the subject. The overall composition suggests a casual, everyday moment, perhaps someone enjoying a sweet treat outdoors. The relationship between the hand and the donut is one of possession and appreciation, as the hand carefully presents the donut to the viewer.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 239,
+            "total_tokens": 545
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9051.779561,
+            "prompt_eval_duration_ms": 74.913391,
+            "generation_duration_ms": 8936.682584,
+            "load_duration_ms": 37.776601,
+            "tokens_per_second": 26.74370469730001
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of warmth, indulgence, and casual enjoyment. The donut, with its white glaze and colorful sprinkles, exudes a sense of sweetness and comfort, evoking feelings of happiness and contentment. The hand holding the donut suggests a personal, intimate moment, as if someone is about to savor a treat. The casual setting, indicated by the asphalt background, adds to the laid-back and approachable atmosphere, reinforcing the idea of a simple pleasure in everyday life. The soft lighting and the slightly textured appearance of the donut enhance its appeal, making it look fresh and inviting. The overall tone is positive, as the image focuses on a universally enjoyable food item, which is often associated with joy and satisfaction. The visual elements, such as the vibrant sprinkles and the glossy glaze, contribute to a sense of visual delight, further amplifying the positive emotions. The image does not contain any elements that suggest negativity or neutrality, making it a clear representation of a pleasant, indulgent moment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 210,
+            "total_tokens": 518
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7912.15631,
+            "prompt_eval_duration_ms": 77.149834,
+            "generation_duration_ms": 7794.284901,
+            "load_duration_ms": 38.307249,
+            "tokens_per_second": 26.942818060584003
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"hand\": {\n      \"count\": 1,\n      \"location\": \"left, foreground\",\n      \"color\": [\"pink\"],\n      \"size\": \"medium\",\n      \"description\": \"Holding a donut\"\n    }\n  },\n  \"man-made\": {\n    \"donut\": {\n      \"count\": 1,\n      \"location\": \"center, foreground\",\n      \"color\": [\"white\", \"orange\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"Glazed donut with sprinkles\"\n    }\n  },\n  \"natural\": {\n    \"ground\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Paved surface\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "hand": {
+                "count": 1,
+                "location": "left, foreground",
+                "color": [
+                  "pink"
+                ],
+                "size": "medium",
+                "description": "Holding a donut"
+              }
+            },
+            "man-made": {
+              "donut": {
+                "count": 1,
+                "location": "center, foreground",
+                "color": [
+                  "white",
+                  "orange",
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "Glazed donut with sprinkles"
+              }
+            },
+            "natural": {
+              "ground": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "Paved surface"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 178,
+            "total_tokens": 664
+          },
+          "performance_metrics": {
+            "total_duration_ms": 6723.927989,
+            "prompt_eval_duration_ms": 135.705979,
+            "generation_duration_ms": 6548.024049,
+            "load_duration_ms": 37.519679,
+            "tokens_per_second": 27.18377309979241
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2885,
+        "total_time_ms": 48157.75061199999,
+        "average_speed": 26.89027833496788
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -292,267 +565,6 @@
       }
     },
     {
-      "model": "mistral-small3.2:24b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a hand holding a donut against an outdoor setting. The donut is the central focus, featuring a white glaze generously topped with colorful sprinkles, predominantly orange and a few brown ones. The glaze appears smooth and shiny, suggesting a fresh, sugary coating. The hand holding the donut is positioned from below, with the fingers visible on either side of the donut, indicating it is being presented or offered. The background is blurred, emphasizing the donut and the hand, but it appears to be an urban environment, possibly a sidewalk or street, with a muted, grayish tone. The lighting seems natural, likely from daylight, as it illuminates the donut evenly, highlighting the textures of the glaze and sprinkles. The overall composition is simple yet effective, drawing attention to the donut's appealing appearance while providing a subtle context of an everyday outdoor setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 792,
-            "output_tokens": 184,
-            "total_tokens": 976
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7247.407433,
-            "prompt_eval_duration_ms": 2076.232606,
-            "generation_duration_ms": 5121.767773,
-            "load_duration_ms": 44.581562,
-            "tokens_per_second": 35.925096207988496
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, a hand is prominently displayed, holding a doughnut that is covered in white icing and topped with colorful sprinkles. The doughnut appears freshly made, with the icing still slightly glossy and the sprinkles evenly distributed across its surface. The hand gripping the doughnut is positioned in such a way that the doughnut is the central focus, drawing immediate attention to its texture and appearance. In the background, the setting appears to be an outdoor environment, possibly a sidewalk or street, indicated by the visible pavement and the blurred, indistinct elements that suggest an urban or public space. The background elements are out of focus, creating a depth of field that further emphasizes the doughnut in the foreground. The contrast between the sharp, detailed doughnut and the blurred background helps to highlight the main subject, making it stand out prominently. The overall composition suggests a casual, everyday moment, perhaps someone enjoying a treat while out and about.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 798,
-            "output_tokens": 192,
-            "total_tokens": 990
-          },
-          "performance_metrics": {
-            "total_duration_ms": 5443.630139,
-            "prompt_eval_duration_ms": 55.036644,
-            "generation_duration_ms": 5337.545091,
-            "load_duration_ms": 45.442715,
-            "tokens_per_second": 35.97159306883315
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a hand is prominently displayed holding a doughnut. The doughnut is covered in white icing and sprinkled with small, colorful pieces that appear to be orange and brown. The hand is positioned in such a way that the doughnut is the central focus, with the fingers gently supporting it from below. The background is blurred, suggesting an outdoor setting, but the details are indistinct, keeping the viewer's attention solely on the doughnut and the hand. There are no other people, animals, or objects in the image, emphasizing the simplicity and focus on the doughnut itself. The interaction is minimal, with the hand merely holding the doughnut, ready to be enjoyed. The overall composition highlights the doughnut's texture and the appealing contrast of the white icing against the colorful sprinkles.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 800,
-            "output_tokens": 165,
-            "total_tokens": 965
-          },
-          "performance_metrics": {
-            "total_duration_ms": 4678.087068,
-            "prompt_eval_duration_ms": 55.298054,
-            "generation_duration_ms": 4574.135647,
-            "load_duration_ms": 45.791419,
-            "tokens_per_second": 36.07238891313098
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image of a hand holding a glazed donut topped with colorful sprinkles conveys a mood of indulgence and comfort, evoking feelings of happiness and satisfaction. The overall tone is positive, primarily due to the visual elements of the donut itself. The glaze gives the donut a fresh and appetizing appearance, while the sprinkles add a playful and festive touch, suggesting a treat or a small pleasure in life. The hand holding the donut implies a moment of enjoyment or a break, reinforcing the idea of taking time to savor something sweet. The casual setting, with the hand resting against a neutral background, further enhances the relaxed and content atmosphere. The combination of these elements creates a sense of warmth and delight, making the image feel inviting and joyful.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 803,
-            "output_tokens": 159,
-            "total_tokens": 962
-          },
-          "performance_metrics": {
-            "total_duration_ms": 4532.433742,
-            "prompt_eval_duration_ms": 60.112057,
-            "generation_duration_ms": 4421.786344,
-            "load_duration_ms": 47.411324,
-            "tokens_per_second": 35.95831811633095
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"hand\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"skin-tone\"],\n      \"size\": \"medium\",\n      \"description\": \"Holding a doughnut\"\n    }\n  },\n  \"man-made\": {\n    \"doughnut\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"orange\"],\n      \"size\": \"medium\",\n      \"description\": \"White iced doughnut with orange and brown sprinkles\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "hand": {
-                "count": 1,
-                "location": "foreground",
-                "color": [
-                  "skin-tone"
-                ],
-                "size": "medium",
-                "description": "Holding a doughnut"
-              }
-            },
-            "man-made": {
-              "doughnut": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "white",
-                  "orange"
-                ],
-                "size": "medium",
-                "description": "White iced doughnut with orange and brown sprinkles"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 982,
-            "output_tokens": 127,
-            "total_tokens": 1109
-          },
-          "performance_metrics": {
-            "total_duration_ms": 3666.063151,
-            "prompt_eval_duration_ms": 101.549192,
-            "generation_duration_ms": 3516.687655,
-            "load_duration_ms": 44.679221,
-            "tokens_per_second": 36.113528541391034
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 5002,
-        "total_time_ms": 25567.621533,
-        "average_speed": 36.00818496953492
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a close-up of a hand holding a donut, with the focus sharply on the donut itself. The donut is generously covered with a thick layer of white glaze, which appears slightly cracked and uneven, suggesting a soft texture. Scattered across the glaze are small, colorful sprinkles in shades of orange and yellow, adding a playful contrast to the white. The donut's surface is slightly uneven, with some areas where the glaze has chipped or peeled, revealing the donut's light brown, textured base underneath. The hand holding the donut is in the foreground, with the thumb and fingers supporting the donut from underneath, and the palm is slightly cupped to support it. The background is blurred, showing a gray, concrete surface, which suggests an outdoor setting, possibly a sidewalk or a street. The lighting is natural, likely from an overcast sky, as it is diffused and soft, casting no harsh shadows and giving the image a calm, everyday feel. The overall composition is simple yet engaging, drawing the viewer's attention to the donut's texture and the vibrant colors of the sprinkles against the white glaze.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 239,
-            "total_tokens": 536
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1828.934395,
-            "prompt_eval_duration_ms": 80.18731,
-            "generation_duration_ms": 1707.832042,
-            "load_duration_ms": 38.090298,
-            "tokens_per_second": 139.94350388233318
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, a hand is prominently displayed, holding a donut with a light gray icing and sprinkled with orange and yellow bits, possibly crushed nuts or candy pieces. The donut appears freshly made, with a slightly rough texture on the icing, suggesting it might be a glaze or a light frosting. The hand, which is the closest element to the viewer, provides a sense of scale and adds a human element to the image, making the donut appear more relatable and tangible. The background, though blurred, reveals a concrete surface, likely a sidewalk or pavement, indicating an outdoor setting. This background is out of focus, which helps to emphasize the donut and the hand holding it, creating a depth of field effect that draws the viewer's attention to the main subject. The relationship between the foreground and background is one of contrast and focus, with the detailed texture and color of the donut standing out sharply against the more muted and less detailed background.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 196,
-            "total_tokens": 499
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1478.756894,
-            "prompt_eval_duration_ms": 30.489826,
-            "generation_duration_ms": 1407.367948,
-            "load_duration_ms": 38.44756,
-            "tokens_per_second": 139.2670625180388
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a person's hand is prominently featured, holding a donut with a bite taken out of it. The donut is generously covered in a white glaze and sprinkled with what appears to be chopped nuts and possibly some dried fruit, adding a colorful contrast to the white glaze. The hand is positioned in the foreground, with the donut being the central focus, suggesting the person is about to enjoy the treat. The background is blurred, indicating the setting is likely an outdoor area, possibly a street or sidewalk, as suggested by the gray, textured surface that resembles pavement. There are no animals or other people visible in the image, and the interaction is solely between the hand and the donut, highlighting the simple pleasure of enjoying a sweet snack.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 156,
-            "total_tokens": 462
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1189.34961,
-            "prompt_eval_duration_ms": 30.665024,
-            "generation_duration_ms": 1119.775204,
-            "load_duration_ms": 36.431935,
-            "tokens_per_second": 139.31367603314067
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of indulgence and nostalgia, with a touch of whimsy. The close-up view of the hand holding the donut creates an intimate and personal mood, inviting the viewer to share in the simple pleasure of enjoying a sweet treat. The donut itself, with its glossy glaze and colorful sprinkles, suggests a moment of joy and satisfaction, hinting at the comfort and happiness that come from indulging in something sweet. The slightly worn texture of the donut and the casual way it is held in the hand add a layer of authenticity and relatability, making the image feel less like a staged advertisement and more like a candid moment captured in time. The muted background further emphasizes the donut as the focal point, drawing the viewer's attention to the subject and enhancing the overall positive and lighthearted tone of the image.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 176,
-            "total_tokens": 484
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1330.462746,
-            "prompt_eval_duration_ms": 31.289643,
-            "generation_duration_ms": 1255.840013,
-            "load_duration_ms": 39.761757,
-            "tokens_per_second": 140.14523998129687
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"hand holding a donut\"\n    }\n  },\n  \"man-made\": {\n    \"donut\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"orange\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"glazed donut with sprinkles\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "hand holding a donut"
-              }
-            },
-            "man-made": {
-              "donut": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "white",
-                  "orange",
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "glazed donut with sprinkles"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 123,
-            "total_tokens": 609
-          },
-          "performance_metrics": {
-            "total_duration_ms": 961.192726,
-            "prompt_eval_duration_ms": 43.62256,
-            "generation_duration_ms": 876.853964,
-            "load_duration_ms": 38.18338,
-            "tokens_per_second": 140.27421332385057
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2590,
-        "total_time_ms": 6788.696371000001,
-        "average_speed": 139.78873914773203
-      }
-    },
-    {
       "model": "gemma3:27b",
       "temperature": 0.3,
       "prompts": {
@@ -683,241 +695,133 @@
       }
     },
     {
-      "model": "qwen2.5vl:32b",
+      "model": "mistral-small3.2:24b",
       "temperature": 0.3,
       "prompts": {
         "general_description": {
           "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image shows a close-up of a hand holding a donut against an outdoor setting. The donut is the central focus, with its surface covered in a thick, white glaze that appears slightly uneven, giving it a rustic, homemade look. The glaze is sprinkled with small, colorful bits, primarily orange and yellow, which could be crushed candy or sprinkles, adding a playful and festive touch. The donut itself has a slightly rough texture, suggesting it might be a cake donut rather than a glazed one, with a visible hole in the center. The hand holding the donut is light-skinned and positioned in a way that emphasizes the donut's details, with fingers gently cradling it from below.\n\nThe background is blurred but reveals a paved surface, likely a sidewalk or street, indicating the photo was taken outdoors, possibly on a casual outing. The lighting is natural, likely from daylight, casting soft shadows and highlighting the texture of the donut and the hand. The overall composition is simple and centered, drawing attention to the donut's unique appearance and the casual, everyday context in which it is being held. The colors are warm and inviting, with the white glaze contrasting against the orange and yellow sprinkles and the neutral tones of the pavement and hand. The image conveys a sense of spontaneity and enjoyment, as if someone is about to savor a delicious treat.",
+          "response": "The image depicts a hand holding a donut against an outdoor setting. The donut is the central focus, featuring a white glaze generously topped with colorful sprinkles, predominantly orange and a few brown ones. The glaze appears smooth and shiny, suggesting a fresh, sugary coating. The hand holding the donut is positioned from below, with the fingers visible on either side of the donut, indicating it is being presented or offered. The background is blurred, emphasizing the donut and the hand, but it appears to be an urban environment, possibly a sidewalk or street, with a muted, grayish tone. The lighting seems natural, likely from daylight, as it illuminates the donut evenly, highlighting the textures of the glaze and sprinkles. The overall composition is simple yet effective, drawing attention to the donut's appealing appearance while providing a subtle context of an everyday outdoor setting.",
           "response_format": "text",
           "response_data": null,
           "error": null,
           "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 287,
-            "total_tokens": 584
+            "input_tokens": 792,
+            "output_tokens": 184,
+            "total_tokens": 976
           },
           "performance_metrics": {
-            "total_duration_ms": 14249.969117,
-            "prompt_eval_duration_ms": 3479.216895,
-            "generation_duration_ms": 10729.295927,
-            "load_duration_ms": 38.232539,
-            "tokens_per_second": 26.749192300472558
+            "total_duration_ms": 7247.407433,
+            "prompt_eval_duration_ms": 2076.232606,
+            "generation_duration_ms": 5121.767773,
+            "load_duration_ms": 44.581562,
+            "tokens_per_second": 35.925096207988496
           }
         },
         "foreground_background": {
           "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a hand holding a donut. The hand is positioned centrally, with the fingers gently gripping the donut from below. The donut itself is the focal point, featuring a white glaze with colorful sprinkles scattered across its surface. The sprinkles are primarily orange and yellow, adding a vibrant contrast to the white glaze. The donut's texture appears slightly rough, suggesting a crumbly or cake-like dough. The hand and donut are in sharp focus, drawing immediate attention to their details.\n\nIn the background, the setting is less defined but appears to be an outdoor environment. The background is blurred, indicating a shallow depth of field that emphasizes the foreground elements. The surface beneath the hand seems to be a paved or concrete area, likely a sidewalk or street, as suggested by the gray, textured appearance. The background's blurriness creates a sense of depth, separating it from the sharply defined foreground. The contrast between the detailed foreground and the out-of-focus background helps to highlight the donut and hand as the primary subjects of the image. The overall composition suggests a casual, everyday moment, with the donut being the central point of interest. The background's simplicity ensures that the viewer's attention remains on the donut and hand, making the relationship between the layers clear and intentional.",
+          "response": "In the foreground, a hand is prominently displayed, holding a doughnut that is covered in white icing and topped with colorful sprinkles. The doughnut appears freshly made, with the icing still slightly glossy and the sprinkles evenly distributed across its surface. The hand gripping the doughnut is positioned in such a way that the doughnut is the central focus, drawing immediate attention to its texture and appearance. In the background, the setting appears to be an outdoor environment, possibly a sidewalk or street, indicated by the visible pavement and the blurred, indistinct elements that suggest an urban or public space. The background elements are out of focus, creating a depth of field that further emphasizes the doughnut in the foreground. The contrast between the sharp, detailed doughnut and the blurred background helps to highlight the main subject, making it stand out prominently. The overall composition suggests a casual, everyday moment, perhaps someone enjoying a treat while out and about.",
           "response_format": "text",
           "response_data": null,
           "error": null,
           "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 271,
-            "total_tokens": 574
+            "input_tokens": 798,
+            "output_tokens": 192,
+            "total_tokens": 990
           },
           "performance_metrics": {
-            "total_duration_ms": 10219.917635,
-            "prompt_eval_duration_ms": 76.718463,
-            "generation_duration_ms": 10099.917057,
-            "load_duration_ms": 40.62225,
-            "tokens_per_second": 26.83190351669043
+            "total_duration_ms": 5443.630139,
+            "prompt_eval_duration_ms": 55.036644,
+            "generation_duration_ms": 5337.545091,
+            "load_duration_ms": 45.442715,
+            "tokens_per_second": 35.97159306883315
           }
         },
         "entities_interactions": {
           "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image shows a close-up of a hand holding a donut. The donut appears to be a glazed variety, coated with a white frosting and sprinkled with colorful, small, crumbly toppings, likely crushed candy or cereal, in shades of orange and yellow. The hand is positioned in the foreground, with the fingers gently cradling the donut, suggesting that the person is either about to eat it or is showcasing it. The background is blurred, indicating an outdoor setting with a paved surface, possibly a sidewalk or street, visible beneath the hand.\n\nThere are no animals present in the image. The primary interaction is between the hand and the donut, with the hand holding the donut securely, highlighting its texture and appearance. The donut itself is the focal point, drawing attention with its vibrant toppings and glossy glaze. The blurred background emphasizes the donut and the hand, creating a sense of intimacy and focus on the subject. The overall composition suggests a casual, everyday moment, perhaps someone enjoying a sweet treat outdoors. The relationship between the hand and the donut is one of possession and appreciation, as the hand carefully presents the donut to the viewer.",
+          "response": "In the image, a hand is prominently displayed holding a doughnut. The doughnut is covered in white icing and sprinkled with small, colorful pieces that appear to be orange and brown. The hand is positioned in such a way that the doughnut is the central focus, with the fingers gently supporting it from below. The background is blurred, suggesting an outdoor setting, but the details are indistinct, keeping the viewer's attention solely on the doughnut and the hand. There are no other people, animals, or objects in the image, emphasizing the simplicity and focus on the doughnut itself. The interaction is minimal, with the hand merely holding the doughnut, ready to be enjoyed. The overall composition highlights the doughnut's texture and the appealing contrast of the white icing against the colorful sprinkles.",
           "response_format": "text",
           "response_data": null,
           "error": null,
           "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 239,
-            "total_tokens": 545
+            "input_tokens": 800,
+            "output_tokens": 165,
+            "total_tokens": 965
           },
           "performance_metrics": {
-            "total_duration_ms": 9051.779561,
-            "prompt_eval_duration_ms": 74.913391,
-            "generation_duration_ms": 8936.682584,
-            "load_duration_ms": 37.776601,
-            "tokens_per_second": 26.74370469730001
+            "total_duration_ms": 4678.087068,
+            "prompt_eval_duration_ms": 55.298054,
+            "generation_duration_ms": 4574.135647,
+            "load_duration_ms": 45.791419,
+            "tokens_per_second": 36.07238891313098
           }
         },
         "mood_emotions": {
           "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of warmth, indulgence, and casual enjoyment. The donut, with its white glaze and colorful sprinkles, exudes a sense of sweetness and comfort, evoking feelings of happiness and contentment. The hand holding the donut suggests a personal, intimate moment, as if someone is about to savor a treat. The casual setting, indicated by the asphalt background, adds to the laid-back and approachable atmosphere, reinforcing the idea of a simple pleasure in everyday life. The soft lighting and the slightly textured appearance of the donut enhance its appeal, making it look fresh and inviting. The overall tone is positive, as the image focuses on a universally enjoyable food item, which is often associated with joy and satisfaction. The visual elements, such as the vibrant sprinkles and the glossy glaze, contribute to a sense of visual delight, further amplifying the positive emotions. The image does not contain any elements that suggest negativity or neutrality, making it a clear representation of a pleasant, indulgent moment.",
+          "response": "The image of a hand holding a glazed donut topped with colorful sprinkles conveys a mood of indulgence and comfort, evoking feelings of happiness and satisfaction. The overall tone is positive, primarily due to the visual elements of the donut itself. The glaze gives the donut a fresh and appetizing appearance, while the sprinkles add a playful and festive touch, suggesting a treat or a small pleasure in life. The hand holding the donut implies a moment of enjoyment or a break, reinforcing the idea of taking time to savor something sweet. The casual setting, with the hand resting against a neutral background, further enhances the relaxed and content atmosphere. The combination of these elements creates a sense of warmth and delight, making the image feel inviting and joyful.",
           "response_format": "text",
           "response_data": null,
           "error": null,
           "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 210,
-            "total_tokens": 518
+            "input_tokens": 803,
+            "output_tokens": 159,
+            "total_tokens": 962
           },
           "performance_metrics": {
-            "total_duration_ms": 7912.15631,
-            "prompt_eval_duration_ms": 77.149834,
-            "generation_duration_ms": 7794.284901,
-            "load_duration_ms": 38.307249,
-            "tokens_per_second": 26.942818060584003
+            "total_duration_ms": 4532.433742,
+            "prompt_eval_duration_ms": 60.112057,
+            "generation_duration_ms": 4421.786344,
+            "load_duration_ms": 47.411324,
+            "tokens_per_second": 35.95831811633095
           }
         },
         "structured_inventory": {
           "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"hand\": {\n      \"count\": 1,\n      \"location\": \"left, foreground\",\n      \"color\": [\"pink\"],\n      \"size\": \"medium\",\n      \"description\": \"Holding a donut\"\n    }\n  },\n  \"man-made\": {\n    \"donut\": {\n      \"count\": 1,\n      \"location\": \"center, foreground\",\n      \"color\": [\"white\", \"orange\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"Glazed donut with sprinkles\"\n    }\n  },\n  \"natural\": {\n    \"ground\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Paved surface\"\n    }\n  }\n}\n```",
+          "response": "```json\n{\n  \"human\": {\n    \"hand\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"skin-tone\"],\n      \"size\": \"medium\",\n      \"description\": \"Holding a doughnut\"\n    }\n  },\n  \"man-made\": {\n    \"doughnut\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"orange\"],\n      \"size\": \"medium\",\n      \"description\": \"White iced doughnut with orange and brown sprinkles\"\n    }\n  }\n}\n```",
           "response_format": "json",
           "response_data": {
             "human": {
               "hand": {
                 "count": 1,
-                "location": "left, foreground",
+                "location": "foreground",
                 "color": [
-                  "pink"
+                  "skin-tone"
                 ],
                 "size": "medium",
-                "description": "Holding a donut"
+                "description": "Holding a doughnut"
               }
             },
             "man-made": {
-              "donut": {
+              "doughnut": {
                 "count": 1,
-                "location": "center, foreground",
+                "location": "center",
                 "color": [
                   "white",
-                  "orange",
-                  "brown"
+                  "orange"
                 ],
                 "size": "medium",
-                "description": "Glazed donut with sprinkles"
-              }
-            },
-            "natural": {
-              "ground": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "Paved surface"
+                "description": "White iced doughnut with orange and brown sprinkles"
               }
             }
           },
           "error": null,
           "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 178,
-            "total_tokens": 664
+            "input_tokens": 982,
+            "output_tokens": 127,
+            "total_tokens": 1109
           },
           "performance_metrics": {
-            "total_duration_ms": 6723.927989,
-            "prompt_eval_duration_ms": 135.705979,
-            "generation_duration_ms": 6548.024049,
-            "load_duration_ms": 37.519679,
-            "tokens_per_second": 27.18377309979241
+            "total_duration_ms": 3666.063151,
+            "prompt_eval_duration_ms": 101.549192,
+            "generation_duration_ms": 3516.687655,
+            "load_duration_ms": 44.679221,
+            "tokens_per_second": 36.113528541391034
           }
         }
       },
       "metrics": {
-        "total_tokens": 2885,
-        "total_time_ms": 48157.75061199999,
-        "average_speed": 26.89027833496788
-      }
-    },
-    {
-      "model": "llama3.2-vision:11b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "",
-          "response_format": "text",
-          "response_data": null,
-          "error": "unsupported format string passed to NoneType.__format__",
-          "token_metrics": null,
-          "performance_metrics": null
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground elements of the image are the hand and the donut, with the hand holding the donut and the donut's surface being the focal point. The donut is a white, glazed, and sprinkled with orange and yellow, and has a hole in the center. The hand is holding the donut with the fingers and the thumb, with the hand's fingers and the donut\u2019s surface are in close proximity to each other. The background elements of the image are the ground and the surrounding environment, which is a grey and concrete-like surface. The background is a flat and flat-looked, with no other objects or features to be seen. The hand and the donut are in the foreground, and the background is in the background, with the two being in close proximity to each other.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 58,
-            "output_tokens": 165,
-            "total_tokens": 223
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1888.667483,
-            "prompt_eval_duration_ms": 39.08672,
-            "generation_duration_ms": 1800.852123,
-            "load_duration_ms": 46.807823,
-            "tokens_per_second": 91.62329204750588
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image shows a person holding a large, white, and sweet-looking donut in their hand. The donut is covered in a white, sweet, and possibly\u00a0chocolatey\u00a0or\u00a0frosted\u00a0coating, and it is sprinkled with\u00a0chocolate\u00a0or\u00a0frosted\u00a0pieces. The person is holding the donut in their hand, and it is not clear if they are eating it or just holding it. The background is not visible, so it is not possible to determine where the person is or what they are doing. The person is not doing anything with the donut, so it is not possible to determine what they are doing with it. The person is holding the donut in their hand, and it is not clear if they are eating it or just holding it.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 61,
-            "output_tokens": 166,
-            "total_tokens": 227
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1909.865886,
-            "prompt_eval_duration_ms": 46.48764,
-            "generation_duration_ms": 1812.082118,
-            "load_duration_ms": 49.326707,
-            "tokens_per_second": 91.60732747763917
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image of a person holding a donut evokes a sense of comfort and indulgence. The warm, golden light of the sun on the person's hand and the soft, fluffy texture of the donut's surface create a sense of relaxation and pleasure. The image's warm color palette and gentle lighting create a cozy atmosphere, making the viewer feel like they are experiencing a moment of comfort and relaxation. The image's focus on the person\u2019s hand and the donut\u2019s surface creates a sense of intimacy and connection, making the viewer feel like they are part of the moment. The overall tone of the image is positive and inviting, making the viewer feel like they are part of the moment and can experience the pleasure of the moment. The image\u2019s visual elements, such as the warm light and the soft, fluffy texture of the donut, contribute to this emotional atmosphere, making it a pleasant and enjoyable experience.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 63,
-            "output_tokens": 184,
-            "total_tokens": 247
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2106.834497,
-            "prompt_eval_duration_ms": 44.97151,
-            "generation_duration_ms": 2012.575481,
-            "load_duration_ms": 47.29755,
-            "tokens_per_second": 91.42514242922947
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"categories\": {\n    \"human\": {\n      \"person\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"white\"],\n        \"size\": \"medium\",\n        \"description\": \"A person holding a donut\"\n      }\n    },\n    \"man-made\": {\n      \"donut\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"white\", \"brown\"],\n        \"size\": \"medium\",\n        \"description\": \"A sweet, fried, and often\n          [\u2026]\n        \"\n      }\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": null,
-          "error": "JSON parsing failed: Invalid control character at: line 18 column 50 (char 419)",
-          "token_metrics": {
-            "input_tokens": 243,
-            "output_tokens": 134,
-            "total_tokens": 377
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1603.74989,
-            "prompt_eval_duration_ms": 70.163164,
-            "generation_duration_ms": 1482.978508,
-            "load_duration_ms": 48.644489,
-            "tokens_per_second": 90.35869318208623
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 1074,
-        "total_time_ms": 7509.117756,
-        "average_speed": 91.25361378411519
+        "total_tokens": 5002,
+        "total_time_ms": 25567.621533,
+        "average_speed": 36.00818496953492
       }
     }
   ]

@@ -7,6 +7,305 @@
   "timestamp": "2025-08-30T20:35:55.987506+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a serene winter scene, likely taken during the early evening as the light is soft and diffused, casting a gentle glow over the snow-covered landscape. Two individuals are seated on the snow, one wearing a yellow jacket and the other in a black and white jacket, both equipped with snowboarding gear. The person in the yellow jacket is seated with their legs crossed, while the one in black is sitting with their legs extended, both appearing relaxed and possibly engaged in a conversation or simply enjoying the moment. The snowboard is positioned between them, suggesting they might have been snowboarding before taking a break. The background is a vast expanse of untouched snow, with faint tracks indicating previous activity. The overall color palette is dominated by cool tones of blue and white, with the yellow jacket providing a vibrant contrast. The composition is simple yet evocative, focusing on the two figures and their immediate surroundings, creating a sense of tranquility and leisure in a snowy environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 197,
+            "total_tokens": 494
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1569.440836,
+            "prompt_eval_duration_ms": 80.245762,
+            "generation_duration_ms": 1448.72788,
+            "load_duration_ms": 38.15727,
+            "tokens_per_second": 135.98136870258892
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, two individuals are seated on a snowboard, dressed in winter attire including jackets, pants, and gloves, with one person wearing a pink scarf. They are positioned on a snowy slope, with the snowboard resting on the snow beneath them. The snowboard is a prominent feature, with its bindings and edges clearly visible, suggesting they are either preparing to snowboard or have just finished a ride. The individuals appear relaxed, possibly taking a break or enjoying the moment. The background, which is the distant setting, is a vast expanse of snow, indicating a wide, open snowy landscape, likely a ski resort or a mountainous area. The uniformity of the snow in the background contrasts with the foreground, where the individuals and snowboard add a sense of scale and human presence. The relationship between the foreground and background is one of depth and perspective, with the foreground elements providing a focal point and the background setting the context of the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 197,
+            "total_tokens": 500
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1540.814364,
+            "prompt_eval_duration_ms": 30.991372,
+            "generation_duration_ms": 1464.511413,
+            "load_duration_ms": 39.798694,
+            "tokens_per_second": 134.51585166991114
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, two individuals are sitting on a snowboard, which is positioned horizontally on a snowy slope. Both are dressed in winter attire, including jackets, pants, and hats, indicating they are prepared for cold weather. The person on the left, wearing a yellow jacket and a pink scarf, is leaning slightly towards the person on the right, who is dressed in a black and white jacket and a white hat. They appear to be engaged in a relaxed conversation or perhaps sharing a light moment, as they are close to each other and looking in the same direction. The snowboard they are sitting on is partially buried in the snow, suggesting they might have been snowboarding and have paused for a break. The surrounding environment is a vast expanse of snow, with no other people or animals visible, emphasizing the solitude and tranquility of the scene. The interaction between the two individuals is friendly and casual, with no indication of any physical activity other than the act of sitting and possibly talking.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 200,
+            "total_tokens": 506
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1566.558525,
+            "prompt_eval_duration_ms": 31.817675,
+            "generation_duration_ms": 1493.292347,
+            "load_duration_ms": 39.058038,
+            "tokens_per_second": 133.93224736053645
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of warmth and camaraderie, despite the cold and snowy backdrop. The two individuals are seated close together on a snowboard, their body language suggesting a comfortable and relaxed interaction. The person in the yellow jacket leans slightly towards the other, their hand gently resting on the snowboard, which conveys a feeling of shared enjoyment and mutual support. The bright colors of their jackets and the pink scarf add a touch of vibrancy to the otherwise monochromatic snowy scene, enhancing the overall positive mood. The soft lighting and the gentle slope of the snow contribute to a serene and peaceful atmosphere, further emphasizing the positive emotions of friendship and leisure. The visual elements, such as the close proximity of the two individuals and their shared activity, combined with the bright colors and soft lighting, create an emotional atmosphere that is decidedly positive and uplifting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 173,
+            "total_tokens": 481
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1365.842494,
+            "prompt_eval_duration_ms": 31.356724,
+            "generation_duration_ms": 1293.511926,
+            "load_duration_ms": 36.855638,
+            "tokens_per_second": 133.74441821729286
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"white\", \"yellow\", \"pink\"],\n      \"size\": \"medium\",\n      \"description\": \"two people sitting on a snowboard, one wearing a yellow jacket and the other wearing a black jacket\"\n    }\n  },\n  \"man-made\": {\n    \"snowboard\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\", \"black\"],\n      \"size\": \"large\",\n      \"description\": \"a snowboard with bindings and boots attached\"\n    }\n  },\n  \"natural\": {\n    \"snow\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"snow covering the ground\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 2,
+                "location": "center",
+                "color": [
+                  "black",
+                  "white",
+                  "yellow",
+                  "pink"
+                ],
+                "size": "medium",
+                "description": "two people sitting on a snowboard, one wearing a yellow jacket and the other wearing a black jacket"
+              }
+            },
+            "man-made": {
+              "snowboard": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "gray",
+                  "black"
+                ],
+                "size": "large",
+                "description": "a snowboard with bindings and boots attached"
+              }
+            },
+            "natural": {
+              "snow": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "snow covering the ground"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 197,
+            "total_tokens": 683
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1538.279106,
+            "prompt_eval_duration_ms": 44.828876,
+            "generation_duration_ms": 1452.634368,
+            "load_duration_ms": 38.407923,
+            "tokens_per_second": 135.61568164687674
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2664,
+        "total_time_ms": 7580.935325,
+        "average_speed": 134.75791351944122
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts two individuals sitting on a snowy slope, likely at a ski or snowboarding resort. The setting is a bright, open area covered in pristine white snow, suggesting a cold, clear day. The lighting is natural, with the sunlight casting soft shadows and highlighting the snow's texture, giving the scene a crisp, wintry feel. Both individuals are dressed warmly in winter clothing, with the person in the foreground wearing a yellow jacket, black pants, a gray beanie, and orange snow boots. They are also wearing a red scarf, adding a pop of color to the otherwise muted palette. The person in the background is dressed in a black jacket with white stripes, black pants, and a white beanie, and they are holding onto the shoulders of the person in front. Both are seated on snowboards, which are gray with bindings visible, indicating they are engaged in snowboarding activities. The overall composition is casual and relaxed, capturing a moment of leisure and enjoyment in a snowy landscape. The image conveys a sense of camaraderie and the thrill of winter sports.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 219,
+            "total_tokens": 516
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11757.419175,
+            "prompt_eval_duration_ms": 3520.025598,
+            "generation_duration_ms": 8194.861667,
+            "load_duration_ms": 38.868445,
+            "tokens_per_second": 26.72406306526126
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by two individuals sitting on a snowboard in a snowy environment. The person in the front is wearing a yellow jacket, black pants, and a patterned beanie, with their legs extended forward and snowboard boots attached to the board. The individual in the back is dressed in a dark jacket, black pants, and a white beanie, with their arms wrapped around the person in front, suggesting a supportive or playful interaction. Both are seated on a single snowboard, which is prominently visible, indicating they are engaged in a snowboarding activity. The snowboard is positioned horizontally, and the individuals are facing slightly away from the camera, giving a sense of depth and perspective.\n\nIn the background, the setting is a vast, open snowy landscape, likely a ski slope or snow-covered terrain. The snow appears smooth and undisturbed, except for the tracks left by the snowboarders, which create a subtle pattern in the otherwise pristine white surface. The background is relatively flat and lacks distinct features, emphasizing the expansive nature of the snowy environment. The lighting suggests it is either early morning or late afternoon, as the light is soft and diffused, casting gentle shadows.\n\nThe relationship between the foreground and background is one of contrast and context. The foreground elements\u2014the individuals and the snowboard\u2014provide a focal point and a sense of activity, while the background offers a serene and expansive setting that enhances the sense of adventure and enjoyment associated with snowboarding. The smooth, unbroken snow in the background contrasts with the dynamic pose of the individuals in the foreground, creating a balanced composition that highlights both the action and the serene environment. The tracks in the snow connect the two layers, visually linking the activity of the individuals to the broader setting and emphasizing their interaction with the snowy landscape.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 364,
+            "total_tokens": 667
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13683.466788,
+            "prompt_eval_duration_ms": 78.295458,
+            "generation_duration_ms": 13563.79511,
+            "load_duration_ms": 38.665899,
+            "tokens_per_second": 26.836147040560835
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image shows two individuals engaged in a snowboarding activity on a snowy slope. Both are dressed warmly in winter clothing, including hats, scarves, and jackets, indicating cold weather conditions. The person in the foreground is wearing a yellow jacket, black pants, and snowboarding boots, and is seated on the snow with a snowboard attached to their feet. They appear to be resting or taking a break, as they are not actively snowboarding at the moment. The person in the background is wearing a white hat, a dark jacket, and black pants, and is also seated on the snow with a snowboard attached to their feet. This individual seems to be leaning slightly forward, possibly adjusting their position or interacting with the person in the foreground.\n\nThe two individuals are closely positioned, suggesting a sense of companionship or teamwork. Their proximity indicates they might be friends, family, or fellow snowboarders enjoying the activity together. The snowboarder in the foreground is looking towards the camera, while the one in the background appears to be focused on something in front of them, possibly the slope or the other person. The snow-covered ground and the clear blue sky in the background suggest a bright, sunny day, ideal for outdoor winter sports. The overall scene conveys a sense of relaxation and enjoyment in a shared winter adventure.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 267,
+            "total_tokens": 573
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10113.208723,
+            "prompt_eval_duration_ms": 79.054026,
+            "generation_duration_ms": 9988.479067,
+            "load_duration_ms": 40.39602,
+            "tokens_per_second": 26.73079637140316
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a positive and lighthearted mood, evoking feelings of joy, companionship, and the simple pleasures of outdoor winter activities. The two individuals appear to be enjoying a playful moment on a snowboard, with one person sitting on the board while the other leans over them in a supportive or playful manner. Their body language, with relaxed postures and what seems to be a shared sense of humor, suggests a strong bond and mutual enjoyment. The bright, snowy background enhances the cheerful atmosphere, as the pristine white snow reflects light, creating a sense of openness and freshness. The vibrant colors of their clothing\u2014yellow, black, and red\u2014add to the lively and energetic tone of the image. The overall composition, with the individuals centered and the snowboard prominently displayed, emphasizes the fun and spontaneity of the moment. The absence of any harsh shadows or dramatic elements further contributes to the image's light and cheerful tone, making it feel warm and inviting. This scene captures the essence of shared happiness and the joy of spending time outdoors in a winter setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 219,
+            "total_tokens": 527
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8281.177951,
+            "prompt_eval_duration_ms": 76.447501,
+            "generation_duration_ms": 8164.138395,
+            "load_duration_ms": 38.102269,
+            "tokens_per_second": 26.824631014844524
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 2,\n      \"location\": \"center, foreground\",\n      \"color\": [\"yellow\", \"black\", \"white\", \"red\"],\n      \"size\": \"medium\",\n      \"description\": \"Two people sitting on a snowboard, wearing winter clothing and hats.\"\n    }\n  },\n  \"man-made\": {\n    \"snowboard\": {\n      \"count\": 2,\n      \"location\": \"center, foreground\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Snowboards attached to the feet of the people.\"\n    },\n    \"clothing\": {\n      \"count\": 4,\n      \"location\": \"center, foreground\",\n      \"color\": [\"yellow\", \"black\", \"white\", \"red\"],\n      \"size\": \"small\",\n      \"description\": \"Winter clothing including jackets, pants, hats, and gloves.\"\n    }\n  },\n  \"natural\": {\n    \"snow\": {\n      \"count\": 1,\n      \"location\": \"entire image\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"Snow-covered ground.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 2,
+                "location": "center, foreground",
+                "color": [
+                  "yellow",
+                  "black",
+                  "white",
+                  "red"
+                ],
+                "size": "medium",
+                "description": "Two people sitting on a snowboard, wearing winter clothing and hats."
+              }
+            },
+            "man-made": {
+              "snowboard": {
+                "count": 2,
+                "location": "center, foreground",
+                "color": [
+                  "black"
+                ],
+                "size": "medium",
+                "description": "Snowboards attached to the feet of the people."
+              },
+              "clothing": {
+                "count": 4,
+                "location": "center, foreground",
+                "color": [
+                  "yellow",
+                  "black",
+                  "white",
+                  "red"
+                ],
+                "size": "small",
+                "description": "Winter clothing including jackets, pants, hats, and gloves."
+              }
+            },
+            "natural": {
+              "snow": {
+                "count": 1,
+                "location": "entire image",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "Snow-covered ground."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 257,
+            "total_tokens": 743
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9690.391667,
+            "prompt_eval_duration_ms": 137.357033,
+            "generation_duration_ms": 9512.169578,
+            "load_duration_ms": 38.006853,
+            "tokens_per_second": 27.018021271865933
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3026,
+        "total_time_ms": 53525.66430399999,
+        "average_speed": 26.82673175278714
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -431,305 +730,6 @@
         "total_tokens": 3017,
         "total_time_ms": 30178.698660000002,
         "average_speed": 42.27005736339167
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a serene winter scene, likely taken during the early evening as the light is soft and diffused, casting a gentle glow over the snow-covered landscape. Two individuals are seated on the snow, one wearing a yellow jacket and the other in a black and white jacket, both equipped with snowboarding gear. The person in the yellow jacket is seated with their legs crossed, while the one in black is sitting with their legs extended, both appearing relaxed and possibly engaged in a conversation or simply enjoying the moment. The snowboard is positioned between them, suggesting they might have been snowboarding before taking a break. The background is a vast expanse of untouched snow, with faint tracks indicating previous activity. The overall color palette is dominated by cool tones of blue and white, with the yellow jacket providing a vibrant contrast. The composition is simple yet evocative, focusing on the two figures and their immediate surroundings, creating a sense of tranquility and leisure in a snowy environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 197,
-            "total_tokens": 494
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1569.440836,
-            "prompt_eval_duration_ms": 80.245762,
-            "generation_duration_ms": 1448.72788,
-            "load_duration_ms": 38.15727,
-            "tokens_per_second": 135.98136870258892
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, two individuals are seated on a snowboard, dressed in winter attire including jackets, pants, and gloves, with one person wearing a pink scarf. They are positioned on a snowy slope, with the snowboard resting on the snow beneath them. The snowboard is a prominent feature, with its bindings and edges clearly visible, suggesting they are either preparing to snowboard or have just finished a ride. The individuals appear relaxed, possibly taking a break or enjoying the moment. The background, which is the distant setting, is a vast expanse of snow, indicating a wide, open snowy landscape, likely a ski resort or a mountainous area. The uniformity of the snow in the background contrasts with the foreground, where the individuals and snowboard add a sense of scale and human presence. The relationship between the foreground and background is one of depth and perspective, with the foreground elements providing a focal point and the background setting the context of the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 197,
-            "total_tokens": 500
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1540.814364,
-            "prompt_eval_duration_ms": 30.991372,
-            "generation_duration_ms": 1464.511413,
-            "load_duration_ms": 39.798694,
-            "tokens_per_second": 134.51585166991114
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, two individuals are sitting on a snowboard, which is positioned horizontally on a snowy slope. Both are dressed in winter attire, including jackets, pants, and hats, indicating they are prepared for cold weather. The person on the left, wearing a yellow jacket and a pink scarf, is leaning slightly towards the person on the right, who is dressed in a black and white jacket and a white hat. They appear to be engaged in a relaxed conversation or perhaps sharing a light moment, as they are close to each other and looking in the same direction. The snowboard they are sitting on is partially buried in the snow, suggesting they might have been snowboarding and have paused for a break. The surrounding environment is a vast expanse of snow, with no other people or animals visible, emphasizing the solitude and tranquility of the scene. The interaction between the two individuals is friendly and casual, with no indication of any physical activity other than the act of sitting and possibly talking.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 200,
-            "total_tokens": 506
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1566.558525,
-            "prompt_eval_duration_ms": 31.817675,
-            "generation_duration_ms": 1493.292347,
-            "load_duration_ms": 39.058038,
-            "tokens_per_second": 133.93224736053645
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of warmth and camaraderie, despite the cold and snowy backdrop. The two individuals are seated close together on a snowboard, their body language suggesting a comfortable and relaxed interaction. The person in the yellow jacket leans slightly towards the other, their hand gently resting on the snowboard, which conveys a feeling of shared enjoyment and mutual support. The bright colors of their jackets and the pink scarf add a touch of vibrancy to the otherwise monochromatic snowy scene, enhancing the overall positive mood. The soft lighting and the gentle slope of the snow contribute to a serene and peaceful atmosphere, further emphasizing the positive emotions of friendship and leisure. The visual elements, such as the close proximity of the two individuals and their shared activity, combined with the bright colors and soft lighting, create an emotional atmosphere that is decidedly positive and uplifting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 173,
-            "total_tokens": 481
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1365.842494,
-            "prompt_eval_duration_ms": 31.356724,
-            "generation_duration_ms": 1293.511926,
-            "load_duration_ms": 36.855638,
-            "tokens_per_second": 133.74441821729286
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"white\", \"yellow\", \"pink\"],\n      \"size\": \"medium\",\n      \"description\": \"two people sitting on a snowboard, one wearing a yellow jacket and the other wearing a black jacket\"\n    }\n  },\n  \"man-made\": {\n    \"snowboard\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\", \"black\"],\n      \"size\": \"large\",\n      \"description\": \"a snowboard with bindings and boots attached\"\n    }\n  },\n  \"natural\": {\n    \"snow\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"snow covering the ground\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 2,
-                "location": "center",
-                "color": [
-                  "black",
-                  "white",
-                  "yellow",
-                  "pink"
-                ],
-                "size": "medium",
-                "description": "two people sitting on a snowboard, one wearing a yellow jacket and the other wearing a black jacket"
-              }
-            },
-            "man-made": {
-              "snowboard": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "gray",
-                  "black"
-                ],
-                "size": "large",
-                "description": "a snowboard with bindings and boots attached"
-              }
-            },
-            "natural": {
-              "snow": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "snow covering the ground"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 197,
-            "total_tokens": 683
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1538.279106,
-            "prompt_eval_duration_ms": 44.828876,
-            "generation_duration_ms": 1452.634368,
-            "load_duration_ms": 38.407923,
-            "tokens_per_second": 135.61568164687674
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2664,
-        "total_time_ms": 7580.935325,
-        "average_speed": 134.75791351944122
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts two individuals sitting on a snowy slope, likely at a ski or snowboarding resort. The setting is a bright, open area covered in pristine white snow, suggesting a cold, clear day. The lighting is natural, with the sunlight casting soft shadows and highlighting the snow's texture, giving the scene a crisp, wintry feel. Both individuals are dressed warmly in winter clothing, with the person in the foreground wearing a yellow jacket, black pants, a gray beanie, and orange snow boots. They are also wearing a red scarf, adding a pop of color to the otherwise muted palette. The person in the background is dressed in a black jacket with white stripes, black pants, and a white beanie, and they are holding onto the shoulders of the person in front. Both are seated on snowboards, which are gray with bindings visible, indicating they are engaged in snowboarding activities. The overall composition is casual and relaxed, capturing a moment of leisure and enjoyment in a snowy landscape. The image conveys a sense of camaraderie and the thrill of winter sports.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 219,
-            "total_tokens": 516
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11757.419175,
-            "prompt_eval_duration_ms": 3520.025598,
-            "generation_duration_ms": 8194.861667,
-            "load_duration_ms": 38.868445,
-            "tokens_per_second": 26.72406306526126
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by two individuals sitting on a snowboard in a snowy environment. The person in the front is wearing a yellow jacket, black pants, and a patterned beanie, with their legs extended forward and snowboard boots attached to the board. The individual in the back is dressed in a dark jacket, black pants, and a white beanie, with their arms wrapped around the person in front, suggesting a supportive or playful interaction. Both are seated on a single snowboard, which is prominently visible, indicating they are engaged in a snowboarding activity. The snowboard is positioned horizontally, and the individuals are facing slightly away from the camera, giving a sense of depth and perspective.\n\nIn the background, the setting is a vast, open snowy landscape, likely a ski slope or snow-covered terrain. The snow appears smooth and undisturbed, except for the tracks left by the snowboarders, which create a subtle pattern in the otherwise pristine white surface. The background is relatively flat and lacks distinct features, emphasizing the expansive nature of the snowy environment. The lighting suggests it is either early morning or late afternoon, as the light is soft and diffused, casting gentle shadows.\n\nThe relationship between the foreground and background is one of contrast and context. The foreground elements\u2014the individuals and the snowboard\u2014provide a focal point and a sense of activity, while the background offers a serene and expansive setting that enhances the sense of adventure and enjoyment associated with snowboarding. The smooth, unbroken snow in the background contrasts with the dynamic pose of the individuals in the foreground, creating a balanced composition that highlights both the action and the serene environment. The tracks in the snow connect the two layers, visually linking the activity of the individuals to the broader setting and emphasizing their interaction with the snowy landscape.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 364,
-            "total_tokens": 667
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13683.466788,
-            "prompt_eval_duration_ms": 78.295458,
-            "generation_duration_ms": 13563.79511,
-            "load_duration_ms": 38.665899,
-            "tokens_per_second": 26.836147040560835
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image shows two individuals engaged in a snowboarding activity on a snowy slope. Both are dressed warmly in winter clothing, including hats, scarves, and jackets, indicating cold weather conditions. The person in the foreground is wearing a yellow jacket, black pants, and snowboarding boots, and is seated on the snow with a snowboard attached to their feet. They appear to be resting or taking a break, as they are not actively snowboarding at the moment. The person in the background is wearing a white hat, a dark jacket, and black pants, and is also seated on the snow with a snowboard attached to their feet. This individual seems to be leaning slightly forward, possibly adjusting their position or interacting with the person in the foreground.\n\nThe two individuals are closely positioned, suggesting a sense of companionship or teamwork. Their proximity indicates they might be friends, family, or fellow snowboarders enjoying the activity together. The snowboarder in the foreground is looking towards the camera, while the one in the background appears to be focused on something in front of them, possibly the slope or the other person. The snow-covered ground and the clear blue sky in the background suggest a bright, sunny day, ideal for outdoor winter sports. The overall scene conveys a sense of relaxation and enjoyment in a shared winter adventure.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 267,
-            "total_tokens": 573
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10113.208723,
-            "prompt_eval_duration_ms": 79.054026,
-            "generation_duration_ms": 9988.479067,
-            "load_duration_ms": 40.39602,
-            "tokens_per_second": 26.73079637140316
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a positive and lighthearted mood, evoking feelings of joy, companionship, and the simple pleasures of outdoor winter activities. The two individuals appear to be enjoying a playful moment on a snowboard, with one person sitting on the board while the other leans over them in a supportive or playful manner. Their body language, with relaxed postures and what seems to be a shared sense of humor, suggests a strong bond and mutual enjoyment. The bright, snowy background enhances the cheerful atmosphere, as the pristine white snow reflects light, creating a sense of openness and freshness. The vibrant colors of their clothing\u2014yellow, black, and red\u2014add to the lively and energetic tone of the image. The overall composition, with the individuals centered and the snowboard prominently displayed, emphasizes the fun and spontaneity of the moment. The absence of any harsh shadows or dramatic elements further contributes to the image's light and cheerful tone, making it feel warm and inviting. This scene captures the essence of shared happiness and the joy of spending time outdoors in a winter setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 219,
-            "total_tokens": 527
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8281.177951,
-            "prompt_eval_duration_ms": 76.447501,
-            "generation_duration_ms": 8164.138395,
-            "load_duration_ms": 38.102269,
-            "tokens_per_second": 26.824631014844524
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 2,\n      \"location\": \"center, foreground\",\n      \"color\": [\"yellow\", \"black\", \"white\", \"red\"],\n      \"size\": \"medium\",\n      \"description\": \"Two people sitting on a snowboard, wearing winter clothing and hats.\"\n    }\n  },\n  \"man-made\": {\n    \"snowboard\": {\n      \"count\": 2,\n      \"location\": \"center, foreground\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Snowboards attached to the feet of the people.\"\n    },\n    \"clothing\": {\n      \"count\": 4,\n      \"location\": \"center, foreground\",\n      \"color\": [\"yellow\", \"black\", \"white\", \"red\"],\n      \"size\": \"small\",\n      \"description\": \"Winter clothing including jackets, pants, hats, and gloves.\"\n    }\n  },\n  \"natural\": {\n    \"snow\": {\n      \"count\": 1,\n      \"location\": \"entire image\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"Snow-covered ground.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 2,
-                "location": "center, foreground",
-                "color": [
-                  "yellow",
-                  "black",
-                  "white",
-                  "red"
-                ],
-                "size": "medium",
-                "description": "Two people sitting on a snowboard, wearing winter clothing and hats."
-              }
-            },
-            "man-made": {
-              "snowboard": {
-                "count": 2,
-                "location": "center, foreground",
-                "color": [
-                  "black"
-                ],
-                "size": "medium",
-                "description": "Snowboards attached to the feet of the people."
-              },
-              "clothing": {
-                "count": 4,
-                "location": "center, foreground",
-                "color": [
-                  "yellow",
-                  "black",
-                  "white",
-                  "red"
-                ],
-                "size": "small",
-                "description": "Winter clothing including jackets, pants, hats, and gloves."
-              }
-            },
-            "natural": {
-              "snow": {
-                "count": 1,
-                "location": "entire image",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "Snow-covered ground."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 257,
-            "total_tokens": 743
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9690.391667,
-            "prompt_eval_duration_ms": 137.357033,
-            "generation_duration_ms": 9512.169578,
-            "load_duration_ms": 38.006853,
-            "tokens_per_second": 27.018021271865933
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3026,
-        "total_time_ms": 53525.66430399999,
-        "average_speed": 26.82673175278714
       }
     },
     {

@@ -7,6 +7,403 @@
   "timestamp": "2025-08-30T23:40:41.337366+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a workspace setup, likely in a home or small office environment. The focal point is a black CRT monitor displaying a webpage with text and a dark background, suggesting it might be a work or research-related site. The monitor sits atop a black keyboard, which is positioned on a simple, light brown wooden desk. The desk appears to be a basic, functional piece of furniture, possibly a small table or a desk extension, given its size and simplicity. A spiral-bound notebook with a green cover lies open on the desk, accompanied by a silver pen, hinting at note-taking or planning activities. To the right of the notebook, a black computer mouse rests, indicating the use of a desktop computer. The background reveals a hint of a green wall and a red curtain, adding a splash of color to the otherwise neutral setting. The lighting is soft and even, likely from an overhead source, casting minimal shadows and creating a calm, focused atmosphere suitable for work or study. The overall composition is straightforward and practical, emphasizing functionality over aesthetics.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 211,
+            "total_tokens": 508
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1613.13903,
+            "prompt_eval_duration_ms": 78.484593,
+            "generation_duration_ms": 1494.791629,
+            "load_duration_ms": 36.055077,
+            "tokens_per_second": 141.15679798204167
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, a wooden desk takes center stage, hosting a black keyboard and a spiral-bound notebook with a pen resting on it, suggesting a workspace in use. The notebook's open pages hint at ongoing work or study. Adjacent to the desk, a black computer mouse sits idle, indicating a recent or paused activity. The background, slightly out of focus, reveals a computer monitor displaying a webpage with text and a dark interface, possibly a coding or development environment, given the structured layout and code-like elements. The monitor is flanked by a green wall, which adds a pop of color to the otherwise neutral tones of the room. To the right, a red curtain partially obscures the view, adding a touch of warmth and suggesting a home or personal office setting. The overall arrangement of the elements\u2014desk, computer, and monitor\u2014creates a cohesive scene of a workspace, with the foreground elements serving as the immediate focus and the background providing context and depth to the setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 198,
+            "total_tokens": 501
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1486.780478,
+            "prompt_eval_duration_ms": 29.230233,
+            "generation_duration_ms": 1418.404971,
+            "load_duration_ms": 37.159396,
+            "tokens_per_second": 139.59341940292734
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a workspace setup with a computer monitor, keyboard, and mouse on a wooden desk. The monitor displays a webpage, possibly a coding or development environment, with text and code visible, suggesting someone is engaged in programming or web development. A spiral-bound notebook with a pen rests on the desk, indicating note-taking or brainstorming activities. The keyboard and mouse are positioned for efficient use, implying the person is actively working on the computer. The environment suggests a focused and productive setting, with the desk serving as the central hub for the individual's tasks. There are no visible people or animals in the image, and the objects are arranged to facilitate the work being done, with the monitor, keyboard, and mouse forming a cohesive workstation. The presence of the notebook and pen suggests a blend of digital and analog work methods, possibly for documentation or planning.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 172,
+            "total_tokens": 478
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1323.004414,
+            "prompt_eval_duration_ms": 31.261032,
+            "generation_duration_ms": 1250.269248,
+            "load_duration_ms": 35.850343,
+            "tokens_per_second": 137.57036756293954
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of focused productivity and a slight undertone of solitude. The mood is predominantly neutral, leaning slightly towards the positive due to the organized workspace and the presence of tools for work or study. The visual elements contributing to this atmosphere include the clean, uncluttered desk, the well-arranged computer setup with a dual-monitor configuration, and the open notebook with a pen, suggesting readiness for note-taking or brainstorming. The warm tones of the wooden desk and the soft lighting create a calm and inviting environment, which can be associated with a comfortable and efficient work or study space. The presence of a mouse and keyboard, along with the open notebook, implies a readiness to engage in tasks that require focus and concentration, which can be seen as a positive indicator of productivity. However, the lack of personal items or distractions might also subtly suggest a sense of detachment or isolation, which is a neutral to slightly negative aspect. Overall, the image conveys a balanced mix of productivity and calmness, with a slight edge towards the positive due to the organized and functional setup.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 220,
+            "total_tokens": 528
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1666.998621,
+            "prompt_eval_duration_ms": 32.991088,
+            "generation_duration_ms": 1592.523212,
+            "load_duration_ms": 39.158757,
+            "tokens_per_second": 138.14555313370215
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"computer_monitor\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"black\"],\n      \"size\": \"large\",\n      \"description\": \"displaying a webpage with text and images\"\n    },\n    \"keyboard\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"black keyboard with white keys\"\n    },\n    \"mouse\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"black\", \"silver\"],\n      \"size\": \"small\",\n      \"description\": \"wireless mouse with scroll wheel\"\n    },\n    \"notebook\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"white\", \"green\"],\n      \"size\": \"small\",\n      \"description\": \"spiral-bound notebook with pen on top\"\n    },\n    \"desk\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"wooden desk supporting computer and notebook\"\n    },\n    \"curtain\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"red\"],\n      \"size\": \"medium\",\n      \"description\": \"red curtain partially visible\"\n    },\n    \"plate\": {\n      \"count\": 1,\n      \"location\": \"bottom left\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"ceramic plate with blue rim\"\n    },\n    \"jars\": {\n      \"count\": 1,\n      \"location\": \"bottom right\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"glass jars with metallic lids\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "computer_monitor": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "black"
+                ],
+                "size": "large",
+                "description": "displaying a webpage with text and images"
+              },
+              "keyboard": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black"
+                ],
+                "size": "medium",
+                "description": "black keyboard with white keys"
+              },
+              "mouse": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "black",
+                  "silver"
+                ],
+                "size": "small",
+                "description": "wireless mouse with scroll wheel"
+              },
+              "notebook": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "white",
+                  "green"
+                ],
+                "size": "small",
+                "description": "spiral-bound notebook with pen on top"
+              },
+              "desk": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "wooden desk supporting computer and notebook"
+              },
+              "curtain": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "red"
+                ],
+                "size": "medium",
+                "description": "red curtain partially visible"
+              },
+              "plate": {
+                "count": 1,
+                "location": "bottom left",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "ceramic plate with blue rim"
+              },
+              "jars": {
+                "count": 1,
+                "location": "bottom right",
+                "color": [
+                  "brown"
+                ],
+                "size": "small",
+                "description": "glass jars with metallic lids"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 404,
+            "total_tokens": 890
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2960.117458,
+            "prompt_eval_duration_ms": 44.399752,
+            "generation_duration_ms": 2874.47382,
+            "load_duration_ms": 36.119865,
+            "tokens_per_second": 140.5474620047157
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2905,
+        "total_time_ms": 9050.040001,
+        "average_speed": 139.40272001726527
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a simple, organized workspace setup in what appears to be a home office or study area. The main elements include two computer monitors placed side by side on a light wooden desk. The left monitor displays a webpage with a dark background and some text, while the right monitor shows a spreadsheet or database interface with multiple columns and rows, highlighted in orange and white. Both screens are black and appear to be part of a dual-monitor setup, suggesting multitasking or productivity-focused work.\n\nIn the foreground, a black keyboard and a silver mouse are positioned on the desk, indicating a standard computer workstation. A spiral-bound notebook with handwritten notes lies open on the desk, accompanied by a pen, suggesting active note-taking or planning. The desk surface is clean and uncluttered, with only a few small items, such as a box and some papers, visible in the background.\n\nThe room's lighting is soft and ambient, likely from an overhead source, creating a calm and focused atmosphere. The walls are painted green and white, adding a touch of color to the otherwise neutral tones of the desk and computer equipment. Red curtains are partially visible in the background, adding a warm contrast to the cooler tones of the workspace. The overall composition is balanced and functional, emphasizing productivity and organization. The image conveys a sense of quiet concentration and efficiency.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 270,
+            "total_tokens": 567
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13627.034118,
+            "prompt_eval_duration_ms": 3513.594943,
+            "generation_duration_ms": 10073.822103,
+            "load_duration_ms": 37.377682,
+            "tokens_per_second": 26.802140958950783
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground elements in the image are the most prominent and closest to the viewer. These include a wooden desk, a black keyboard, a black computer monitor, a silver computer mouse, and a spiral-bound notebook with a pen resting on top. The notebook is open, suggesting active use, and the pen indicates recent or ongoing writing. The keyboard and mouse are positioned in front of the monitor, which displays a webpage or application interface, indicating a work or study environment. The desk also holds some scattered papers and a small box, adding to the impression of an active workspace.\n\nIn the background, the setting is a room with a green wall and a red curtain partially visible on the right side. The green wall provides a neutral backdrop, while the red curtain adds a pop of color, contrasting with the otherwise muted tones of the desk and computer equipment. The background elements are less detailed but contribute to the overall context, suggesting a personal or home office setup. The lighting in the room appears soft and natural, likely from a window out of frame, which illuminates the workspace evenly.\n\nThe relationship between the foreground and background is one of focus and context. The foreground elements are the primary subjects, drawing attention to the activities taking place, such as typing, reading, or note-taking. The background provides the setting, grounding the scene in a specific environment and enhancing the sense of a dedicated workspace. The contrast between the detailed, active foreground and the simpler, more static background helps to emphasize the primary focus on the desk and its contents.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 306,
+            "total_tokens": 609
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11503.598603,
+            "prompt_eval_duration_ms": 79.363196,
+            "generation_duration_ms": 11384.083139,
+            "load_duration_ms": 37.839921,
+            "tokens_per_second": 26.87963503636883
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a workspace setup featuring a desk, two computer monitors, a keyboard, a mouse, a notebook, and a pen. There are no people or animals visible in the image, so the focus is entirely on the objects and their arrangement.\n\nThe desk is made of light-colored wood and serves as the central element of the workspace. On the desk, two computer monitors are positioned side by side. The monitor on the left displays a webpage or application interface with a dark background and some text and icons, while the monitor on the right shows a spreadsheet or database application with multiple columns and rows of data. Both screens suggest that the user is engaged in tasks that require multitasking or data analysis.\n\nA black keyboard is placed in front of the monitors, indicating that the user interacts with the computer through typing. To the right of the keyboard, a silver computer mouse is visible, suggesting that the user also uses mouse movements and clicks to navigate and interact with the applications on the screens.\n\nA spiral-bound notebook with a pen resting on top is placed in the foreground, near the keyboard and mouse. This suggests that the user might be taking notes, planning, or organizing tasks related to the work being done on the computer. The notebook and pen imply a connection between digital and analog work processes, indicating that the user may be combining traditional note-taking with digital tools.\n\nThe overall setup is organized and functional, with each object serving a specific purpose in the workflow. The relationship between the monitors, keyboard, mouse, and notebook highlights a seamless integration of digital and physical tools to facilitate productivity and efficiency. The absence of people or animals emphasizes the focus on the workspace itself and the tasks being performed.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 338,
+            "total_tokens": 644
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12705.314918,
+            "prompt_eval_duration_ms": 73.554711,
+            "generation_duration_ms": 12590.829842,
+            "load_duration_ms": 38.745085,
+            "tokens_per_second": 26.844934308659525
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a neutral and somewhat focused mood, evoking a sense of productivity and routine. The setup appears organized, with a clean desk, neatly placed computer monitors, and a notebook with a pen resting on it, suggesting a workspace dedicated to work or study. The dual monitors indicate a professional or technical environment, possibly for programming, data analysis, or multitasking, which can imply a sense of efficiency and dedication. The muted colors of the room\u2014greens, browns, and grays\u2014add to the calm and subdued atmosphere, avoiding any strong emotional extremes. The presence of the notebook and pen suggests active engagement, perhaps brainstorming or note-taking, which can evoke feelings of creativity or problem-solving. However, the overall tone remains neutral, as there are no overtly positive or negative elements, such as bright colors or chaotic arrangements. The lighting is soft and even, further contributing to the calm and focused ambiance. The image does not evoke strong emotions but rather a sense of quiet concentration and methodical work, making it relatable for those who associate with structured and productive environments.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 220,
+            "total_tokens": 528
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8318.870417,
+            "prompt_eval_duration_ms": 74.894215,
+            "generation_duration_ms": 8204.015993,
+            "load_duration_ms": 37.809698,
+            "tokens_per_second": 26.81613494996998
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"computer_monitors\": {\n      \"count\": 2,\n      \"location\": \"center, top\",\n      \"color\": [\"black\"],\n      \"size\": \"large\",\n      \"description\": \"Two computer monitors displaying content, one larger than the other.\"\n    },\n    \"keyboard\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Black keyboard placed in front of the monitors.\"\n    },\n    \"mouse\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"silver\", \"black\"],\n      \"size\": \"small\",\n      \"description\": \"Silver and black computer mouse.\"\n    },\n    \"notebook\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\", \"green\"],\n      \"size\": \"medium\",\n      \"description\": \"Open notebook with a pen resting on top.\"\n    },\n    \"pen\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Silver pen placed on the notebook.\"\n    },\n    \"desk\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Wooden desk holding the computer setup.\"\n    },\n    \"curtain\": {\n      \"count\": 1,\n      \"location\": \"right, top\",\n      \"color\": [\"red\"],\n      \"size\": \"large\",\n      \"description\": \"Red curtain in the background.\"\n    },\n    \"box\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"Brown box near the mouse.\"\n    },\n    \"cable\": {\n      \"count\": 1,\n      \"location\": \"right, bottom\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Black cable visible near the bottom right.\"\n    },\n    \"plate\": {\n      \"count\": 1,\n      \"location\": \"left, bottom\",\n      \"color\": [\"white\", \"blue\"],\n      \"size\": \"small\",\n      \"description\": \"White plate with a blue design on the left side.\"\n    }\n  },\n  \"natural\": {\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Green and white walls in the background.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "computer_monitors": {
+                "count": 2,
+                "location": "center, top",
+                "color": [
+                  "black"
+                ],
+                "size": "large",
+                "description": "Two computer monitors displaying content, one larger than the other."
+              },
+              "keyboard": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "black"
+                ],
+                "size": "medium",
+                "description": "Black keyboard placed in front of the monitors."
+              },
+              "mouse": {
+                "count": 1,
+                "location": "right, middle",
+                "color": [
+                  "silver",
+                  "black"
+                ],
+                "size": "small",
+                "description": "Silver and black computer mouse."
+              },
+              "notebook": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "white",
+                  "green"
+                ],
+                "size": "medium",
+                "description": "Open notebook with a pen resting on top."
+              },
+              "pen": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "silver"
+                ],
+                "size": "small",
+                "description": "Silver pen placed on the notebook."
+              },
+              "desk": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "Wooden desk holding the computer setup."
+              },
+              "curtain": {
+                "count": 1,
+                "location": "right, top",
+                "color": [
+                  "red"
+                ],
+                "size": "large",
+                "description": "Red curtain in the background."
+              },
+              "box": {
+                "count": 1,
+                "location": "right, middle",
+                "color": [
+                  "brown"
+                ],
+                "size": "small",
+                "description": "Brown box near the mouse."
+              },
+              "cable": {
+                "count": 1,
+                "location": "right, bottom",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "Black cable visible near the bottom right."
+              },
+              "plate": {
+                "count": 1,
+                "location": "left, bottom",
+                "color": [
+                  "white",
+                  "blue"
+                ],
+                "size": "small",
+                "description": "White plate with a blue design on the left side."
+              }
+            },
+            "natural": {
+              "wall": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "green",
+                  "white"
+                ],
+                "size": "large",
+                "description": "Green and white walls in the background."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 589,
+            "total_tokens": 1075
+          },
+          "performance_metrics": {
+            "total_duration_ms": 22056.946424,
+            "prompt_eval_duration_ms": 136.285479,
+            "generation_duration_ms": 21879.873204,
+            "load_duration_ms": 38.480074,
+            "tokens_per_second": 26.919717244628327
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3423,
+        "total_time_ms": 68211.76448000001,
+        "average_speed": 26.852512499715488
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -547,403 +944,6 @@
         "total_tokens": 2993,
         "total_time_ms": 29896.889404999998,
         "average_speed": 41.82442318846876
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a workspace setup, likely in a home or small office environment. The focal point is a black CRT monitor displaying a webpage with text and a dark background, suggesting it might be a work or research-related site. The monitor sits atop a black keyboard, which is positioned on a simple, light brown wooden desk. The desk appears to be a basic, functional piece of furniture, possibly a small table or a desk extension, given its size and simplicity. A spiral-bound notebook with a green cover lies open on the desk, accompanied by a silver pen, hinting at note-taking or planning activities. To the right of the notebook, a black computer mouse rests, indicating the use of a desktop computer. The background reveals a hint of a green wall and a red curtain, adding a splash of color to the otherwise neutral setting. The lighting is soft and even, likely from an overhead source, casting minimal shadows and creating a calm, focused atmosphere suitable for work or study. The overall composition is straightforward and practical, emphasizing functionality over aesthetics.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 211,
-            "total_tokens": 508
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1613.13903,
-            "prompt_eval_duration_ms": 78.484593,
-            "generation_duration_ms": 1494.791629,
-            "load_duration_ms": 36.055077,
-            "tokens_per_second": 141.15679798204167
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, a wooden desk takes center stage, hosting a black keyboard and a spiral-bound notebook with a pen resting on it, suggesting a workspace in use. The notebook's open pages hint at ongoing work or study. Adjacent to the desk, a black computer mouse sits idle, indicating a recent or paused activity. The background, slightly out of focus, reveals a computer monitor displaying a webpage with text and a dark interface, possibly a coding or development environment, given the structured layout and code-like elements. The monitor is flanked by a green wall, which adds a pop of color to the otherwise neutral tones of the room. To the right, a red curtain partially obscures the view, adding a touch of warmth and suggesting a home or personal office setting. The overall arrangement of the elements\u2014desk, computer, and monitor\u2014creates a cohesive scene of a workspace, with the foreground elements serving as the immediate focus and the background providing context and depth to the setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 198,
-            "total_tokens": 501
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1486.780478,
-            "prompt_eval_duration_ms": 29.230233,
-            "generation_duration_ms": 1418.404971,
-            "load_duration_ms": 37.159396,
-            "tokens_per_second": 139.59341940292734
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a workspace setup with a computer monitor, keyboard, and mouse on a wooden desk. The monitor displays a webpage, possibly a coding or development environment, with text and code visible, suggesting someone is engaged in programming or web development. A spiral-bound notebook with a pen rests on the desk, indicating note-taking or brainstorming activities. The keyboard and mouse are positioned for efficient use, implying the person is actively working on the computer. The environment suggests a focused and productive setting, with the desk serving as the central hub for the individual's tasks. There are no visible people or animals in the image, and the objects are arranged to facilitate the work being done, with the monitor, keyboard, and mouse forming a cohesive workstation. The presence of the notebook and pen suggests a blend of digital and analog work methods, possibly for documentation or planning.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 172,
-            "total_tokens": 478
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1323.004414,
-            "prompt_eval_duration_ms": 31.261032,
-            "generation_duration_ms": 1250.269248,
-            "load_duration_ms": 35.850343,
-            "tokens_per_second": 137.57036756293954
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of focused productivity and a slight undertone of solitude. The mood is predominantly neutral, leaning slightly towards the positive due to the organized workspace and the presence of tools for work or study. The visual elements contributing to this atmosphere include the clean, uncluttered desk, the well-arranged computer setup with a dual-monitor configuration, and the open notebook with a pen, suggesting readiness for note-taking or brainstorming. The warm tones of the wooden desk and the soft lighting create a calm and inviting environment, which can be associated with a comfortable and efficient work or study space. The presence of a mouse and keyboard, along with the open notebook, implies a readiness to engage in tasks that require focus and concentration, which can be seen as a positive indicator of productivity. However, the lack of personal items or distractions might also subtly suggest a sense of detachment or isolation, which is a neutral to slightly negative aspect. Overall, the image conveys a balanced mix of productivity and calmness, with a slight edge towards the positive due to the organized and functional setup.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 220,
-            "total_tokens": 528
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1666.998621,
-            "prompt_eval_duration_ms": 32.991088,
-            "generation_duration_ms": 1592.523212,
-            "load_duration_ms": 39.158757,
-            "tokens_per_second": 138.14555313370215
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"computer_monitor\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"black\"],\n      \"size\": \"large\",\n      \"description\": \"displaying a webpage with text and images\"\n    },\n    \"keyboard\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"black keyboard with white keys\"\n    },\n    \"mouse\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"black\", \"silver\"],\n      \"size\": \"small\",\n      \"description\": \"wireless mouse with scroll wheel\"\n    },\n    \"notebook\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"white\", \"green\"],\n      \"size\": \"small\",\n      \"description\": \"spiral-bound notebook with pen on top\"\n    },\n    \"desk\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"wooden desk supporting computer and notebook\"\n    },\n    \"curtain\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"red\"],\n      \"size\": \"medium\",\n      \"description\": \"red curtain partially visible\"\n    },\n    \"plate\": {\n      \"count\": 1,\n      \"location\": \"bottom left\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"ceramic plate with blue rim\"\n    },\n    \"jars\": {\n      \"count\": 1,\n      \"location\": \"bottom right\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"glass jars with metallic lids\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "computer_monitor": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "black"
-                ],
-                "size": "large",
-                "description": "displaying a webpage with text and images"
-              },
-              "keyboard": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black"
-                ],
-                "size": "medium",
-                "description": "black keyboard with white keys"
-              },
-              "mouse": {
-                "count": 1,
-                "location": "right",
-                "color": [
-                  "black",
-                  "silver"
-                ],
-                "size": "small",
-                "description": "wireless mouse with scroll wheel"
-              },
-              "notebook": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "white",
-                  "green"
-                ],
-                "size": "small",
-                "description": "spiral-bound notebook with pen on top"
-              },
-              "desk": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "wooden desk supporting computer and notebook"
-              },
-              "curtain": {
-                "count": 1,
-                "location": "right",
-                "color": [
-                  "red"
-                ],
-                "size": "medium",
-                "description": "red curtain partially visible"
-              },
-              "plate": {
-                "count": 1,
-                "location": "bottom left",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "ceramic plate with blue rim"
-              },
-              "jars": {
-                "count": 1,
-                "location": "bottom right",
-                "color": [
-                  "brown"
-                ],
-                "size": "small",
-                "description": "glass jars with metallic lids"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 404,
-            "total_tokens": 890
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2960.117458,
-            "prompt_eval_duration_ms": 44.399752,
-            "generation_duration_ms": 2874.47382,
-            "load_duration_ms": 36.119865,
-            "tokens_per_second": 140.5474620047157
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2905,
-        "total_time_ms": 9050.040001,
-        "average_speed": 139.40272001726527
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a simple, organized workspace setup in what appears to be a home office or study area. The main elements include two computer monitors placed side by side on a light wooden desk. The left monitor displays a webpage with a dark background and some text, while the right monitor shows a spreadsheet or database interface with multiple columns and rows, highlighted in orange and white. Both screens are black and appear to be part of a dual-monitor setup, suggesting multitasking or productivity-focused work.\n\nIn the foreground, a black keyboard and a silver mouse are positioned on the desk, indicating a standard computer workstation. A spiral-bound notebook with handwritten notes lies open on the desk, accompanied by a pen, suggesting active note-taking or planning. The desk surface is clean and uncluttered, with only a few small items, such as a box and some papers, visible in the background.\n\nThe room's lighting is soft and ambient, likely from an overhead source, creating a calm and focused atmosphere. The walls are painted green and white, adding a touch of color to the otherwise neutral tones of the desk and computer equipment. Red curtains are partially visible in the background, adding a warm contrast to the cooler tones of the workspace. The overall composition is balanced and functional, emphasizing productivity and organization. The image conveys a sense of quiet concentration and efficiency.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 270,
-            "total_tokens": 567
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13627.034118,
-            "prompt_eval_duration_ms": 3513.594943,
-            "generation_duration_ms": 10073.822103,
-            "load_duration_ms": 37.377682,
-            "tokens_per_second": 26.802140958950783
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground elements in the image are the most prominent and closest to the viewer. These include a wooden desk, a black keyboard, a black computer monitor, a silver computer mouse, and a spiral-bound notebook with a pen resting on top. The notebook is open, suggesting active use, and the pen indicates recent or ongoing writing. The keyboard and mouse are positioned in front of the monitor, which displays a webpage or application interface, indicating a work or study environment. The desk also holds some scattered papers and a small box, adding to the impression of an active workspace.\n\nIn the background, the setting is a room with a green wall and a red curtain partially visible on the right side. The green wall provides a neutral backdrop, while the red curtain adds a pop of color, contrasting with the otherwise muted tones of the desk and computer equipment. The background elements are less detailed but contribute to the overall context, suggesting a personal or home office setup. The lighting in the room appears soft and natural, likely from a window out of frame, which illuminates the workspace evenly.\n\nThe relationship between the foreground and background is one of focus and context. The foreground elements are the primary subjects, drawing attention to the activities taking place, such as typing, reading, or note-taking. The background provides the setting, grounding the scene in a specific environment and enhancing the sense of a dedicated workspace. The contrast between the detailed, active foreground and the simpler, more static background helps to emphasize the primary focus on the desk and its contents.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 306,
-            "total_tokens": 609
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11503.598603,
-            "prompt_eval_duration_ms": 79.363196,
-            "generation_duration_ms": 11384.083139,
-            "load_duration_ms": 37.839921,
-            "tokens_per_second": 26.87963503636883
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a workspace setup featuring a desk, two computer monitors, a keyboard, a mouse, a notebook, and a pen. There are no people or animals visible in the image, so the focus is entirely on the objects and their arrangement.\n\nThe desk is made of light-colored wood and serves as the central element of the workspace. On the desk, two computer monitors are positioned side by side. The monitor on the left displays a webpage or application interface with a dark background and some text and icons, while the monitor on the right shows a spreadsheet or database application with multiple columns and rows of data. Both screens suggest that the user is engaged in tasks that require multitasking or data analysis.\n\nA black keyboard is placed in front of the monitors, indicating that the user interacts with the computer through typing. To the right of the keyboard, a silver computer mouse is visible, suggesting that the user also uses mouse movements and clicks to navigate and interact with the applications on the screens.\n\nA spiral-bound notebook with a pen resting on top is placed in the foreground, near the keyboard and mouse. This suggests that the user might be taking notes, planning, or organizing tasks related to the work being done on the computer. The notebook and pen imply a connection between digital and analog work processes, indicating that the user may be combining traditional note-taking with digital tools.\n\nThe overall setup is organized and functional, with each object serving a specific purpose in the workflow. The relationship between the monitors, keyboard, mouse, and notebook highlights a seamless integration of digital and physical tools to facilitate productivity and efficiency. The absence of people or animals emphasizes the focus on the workspace itself and the tasks being performed.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 338,
-            "total_tokens": 644
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12705.314918,
-            "prompt_eval_duration_ms": 73.554711,
-            "generation_duration_ms": 12590.829842,
-            "load_duration_ms": 38.745085,
-            "tokens_per_second": 26.844934308659525
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a neutral and somewhat focused mood, evoking a sense of productivity and routine. The setup appears organized, with a clean desk, neatly placed computer monitors, and a notebook with a pen resting on it, suggesting a workspace dedicated to work or study. The dual monitors indicate a professional or technical environment, possibly for programming, data analysis, or multitasking, which can imply a sense of efficiency and dedication. The muted colors of the room\u2014greens, browns, and grays\u2014add to the calm and subdued atmosphere, avoiding any strong emotional extremes. The presence of the notebook and pen suggests active engagement, perhaps brainstorming or note-taking, which can evoke feelings of creativity or problem-solving. However, the overall tone remains neutral, as there are no overtly positive or negative elements, such as bright colors or chaotic arrangements. The lighting is soft and even, further contributing to the calm and focused ambiance. The image does not evoke strong emotions but rather a sense of quiet concentration and methodical work, making it relatable for those who associate with structured and productive environments.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 220,
-            "total_tokens": 528
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8318.870417,
-            "prompt_eval_duration_ms": 74.894215,
-            "generation_duration_ms": 8204.015993,
-            "load_duration_ms": 37.809698,
-            "tokens_per_second": 26.81613494996998
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"computer_monitors\": {\n      \"count\": 2,\n      \"location\": \"center, top\",\n      \"color\": [\"black\"],\n      \"size\": \"large\",\n      \"description\": \"Two computer monitors displaying content, one larger than the other.\"\n    },\n    \"keyboard\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Black keyboard placed in front of the monitors.\"\n    },\n    \"mouse\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"silver\", \"black\"],\n      \"size\": \"small\",\n      \"description\": \"Silver and black computer mouse.\"\n    },\n    \"notebook\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\", \"green\"],\n      \"size\": \"medium\",\n      \"description\": \"Open notebook with a pen resting on top.\"\n    },\n    \"pen\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Silver pen placed on the notebook.\"\n    },\n    \"desk\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Wooden desk holding the computer setup.\"\n    },\n    \"curtain\": {\n      \"count\": 1,\n      \"location\": \"right, top\",\n      \"color\": [\"red\"],\n      \"size\": \"large\",\n      \"description\": \"Red curtain in the background.\"\n    },\n    \"box\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"Brown box near the mouse.\"\n    },\n    \"cable\": {\n      \"count\": 1,\n      \"location\": \"right, bottom\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Black cable visible near the bottom right.\"\n    },\n    \"plate\": {\n      \"count\": 1,\n      \"location\": \"left, bottom\",\n      \"color\": [\"white\", \"blue\"],\n      \"size\": \"small\",\n      \"description\": \"White plate with a blue design on the left side.\"\n    }\n  },\n  \"natural\": {\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Green and white walls in the background.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "computer_monitors": {
-                "count": 2,
-                "location": "center, top",
-                "color": [
-                  "black"
-                ],
-                "size": "large",
-                "description": "Two computer monitors displaying content, one larger than the other."
-              },
-              "keyboard": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "black"
-                ],
-                "size": "medium",
-                "description": "Black keyboard placed in front of the monitors."
-              },
-              "mouse": {
-                "count": 1,
-                "location": "right, middle",
-                "color": [
-                  "silver",
-                  "black"
-                ],
-                "size": "small",
-                "description": "Silver and black computer mouse."
-              },
-              "notebook": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "white",
-                  "green"
-                ],
-                "size": "medium",
-                "description": "Open notebook with a pen resting on top."
-              },
-              "pen": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "silver"
-                ],
-                "size": "small",
-                "description": "Silver pen placed on the notebook."
-              },
-              "desk": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "Wooden desk holding the computer setup."
-              },
-              "curtain": {
-                "count": 1,
-                "location": "right, top",
-                "color": [
-                  "red"
-                ],
-                "size": "large",
-                "description": "Red curtain in the background."
-              },
-              "box": {
-                "count": 1,
-                "location": "right, middle",
-                "color": [
-                  "brown"
-                ],
-                "size": "small",
-                "description": "Brown box near the mouse."
-              },
-              "cable": {
-                "count": 1,
-                "location": "right, bottom",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "Black cable visible near the bottom right."
-              },
-              "plate": {
-                "count": 1,
-                "location": "left, bottom",
-                "color": [
-                  "white",
-                  "blue"
-                ],
-                "size": "small",
-                "description": "White plate with a blue design on the left side."
-              }
-            },
-            "natural": {
-              "wall": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "green",
-                  "white"
-                ],
-                "size": "large",
-                "description": "Green and white walls in the background."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 589,
-            "total_tokens": 1075
-          },
-          "performance_metrics": {
-            "total_duration_ms": 22056.946424,
-            "prompt_eval_duration_ms": 136.285479,
-            "generation_duration_ms": 21879.873204,
-            "load_duration_ms": 38.480074,
-            "tokens_per_second": 26.919717244628327
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3423,
-        "total_time_ms": 68211.76448000001,
-        "average_speed": 26.852512499715488
       }
     },
     {

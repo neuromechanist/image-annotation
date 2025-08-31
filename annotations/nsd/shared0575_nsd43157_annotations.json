@@ -7,6 +7,310 @@
   "timestamp": "2025-08-30T21:00:00.939262+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a tennis player in action, set against a muted green backdrop that suggests an outdoor court environment, possibly a clay court given the texture and color. The player, dressed in a blue and white athletic outfit with \"UCSD\" emblazoned across the chest, is mid-swing, holding a red and white tennis racket with a black grip. Her attire includes a white visor with a Nike logo, a wristwatch on her left wrist, and a bracelet on her right wrist. The lighting is natural, likely from the sun, casting soft shadows and highlighting the player's form and the details of her outfit. The overall composition is dynamic, with the player positioned slightly off-center, drawing the viewer's eye to her focused expression and the motion of her swing. The simplicity of the background ensures that the focus remains on the athlete and her action, creating a sense of movement and energy.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 183,
+            "total_tokens": 480
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1414.116877,
+            "prompt_eval_duration_ms": 79.505173,
+            "generation_duration_ms": 1295.479801,
+            "load_duration_ms": 37.018002,
+            "tokens_per_second": 141.2604039512925
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, a female tennis player is captured mid-action, her body angled slightly to the left as she prepares to swing her racket. She is dressed in a blue and white sports outfit with \"UCSD\" emblazoned across the front, suggesting she is a member of the University of California, San Diego tennis team. Her white visor, adorned with a small Nike swoosh, complements her outfit, and she wears a wristwatch on her left wrist, adding a personal touch to her athletic attire. Her stance and the position of her racket indicate she is likely about to hit a forehand shot, her focus directed towards the unseen ball. The background, though blurred, reveals a green wall, likely part of the tennis court's backdrop, which helps to emphasize the sharpness and detail of the player in the foreground. The contrast between the vibrant colors of the player's outfit and the muted tones of the background wall creates a dynamic composition that draws the viewer's attention directly to the action.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 207,
+            "total_tokens": 510
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1556.967087,
+            "prompt_eval_duration_ms": 30.072951,
+            "generation_duration_ms": 1487.415316,
+            "load_duration_ms": 37.322953,
+            "tokens_per_second": 139.1675867347328
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a tennis player in action, poised mid-swing with a red and white tennis racket. The player, dressed in a blue and white athletic outfit with a matching cap, is focused on the ball, which is visible in the air just beyond the racket. The player's body is angled forward, demonstrating a strong, dynamic stance typical of a forehand shot. The background is a plain, muted green, likely a wall or backdrop, which emphasizes the player and the tennis equipment. The player's attire and the racket suggest a competitive or practice setting, and the image conveys a sense of motion and concentration as the player engages with the ball. There are no other people or animals in the image, and the focus is entirely on the tennis player and the immediate action of the shot.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 161,
+            "total_tokens": 467
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1229.848063,
+            "prompt_eval_duration_ms": 30.701221,
+            "generation_duration_ms": 1157.101862,
+            "load_duration_ms": 40.040909,
+            "tokens_per_second": 139.14073193324444
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of intense focus and determination, evoking a sense of competitive spirit and athletic dedication. The tennis player's posture, with her body leaning forward and her eyes fixed on the ball, suggests a high level of concentration and readiness to react. The vibrant blue and white uniform, along with the Nike cap, adds a professional and competitive edge, hinting at a serious and possibly high-stakes match. The blurred background emphasizes the player's action, drawing the viewer's attention to her and her determination. The overall tone is decidedly positive, reflecting the player's commitment and the excitement of the sport. The visual elements, such as the player's focused expression, the dynamic pose, and the sharp contrast of her outfit against the muted background, all contribute to an atmosphere of energy and anticipation.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 163,
+            "total_tokens": 471
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1237.212901,
+            "prompt_eval_duration_ms": 32.122382,
+            "generation_duration_ms": 1165.894965,
+            "load_duration_ms": 37.324491,
+            "tokens_per_second": 139.8067620954174
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"playing tennis, wearing a cap and a sports outfit, holding a tennis racket\"\n    }\n  },\n  \"man-made\": {\n    \"tennis_racket\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"red\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"tennis racket held by the person\"\n    }\n  },\n  \"natural\": {\n    \"background\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"green wall or court background\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "blue",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "playing tennis, wearing a cap and a sports outfit, holding a tennis racket"
+              }
+            },
+            "man-made": {
+              "tennis_racket": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "white",
+                  "red",
+                  "black"
+                ],
+                "size": "medium",
+                "description": "tennis racket held by the person"
+              }
+            },
+            "natural": {
+              "background": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "green wall or court background"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 191,
+            "total_tokens": 677
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1440.228056,
+            "prompt_eval_duration_ms": 42.829306,
+            "generation_duration_ms": 1357.044612,
+            "load_duration_ms": 37.887024,
+            "tokens_per_second": 140.74703094580357
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2605,
+        "total_time_ms": 6878.372984,
+        "average_speed": 140.02450313209815
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a tennis player in action on a clay court. The setting is an outdoor tennis court, characterized by the distinctive greenish-brown clay surface visible in the background. The player, a woman, is captured mid-swing, preparing to hit the ball with a forehand stroke. She is wearing a white cap, a blue and white sleeveless athletic top with the letters \"UCSB\" prominently displayed, and matching blue and white shorts. Her outfit is coordinated and sporty, suitable for tennis. She holds a red and white tennis racket, which is the focal point of her action. The lighting is natural, likely from sunlight, casting soft shadows and highlighting the player's form and the texture of the clay court. The overall composition is dynamic, with the player positioned slightly off-center, creating a sense of movement and intensity. The background is blurred, drawing attention to the player and her action, while the muted tones of the clay court contrast with the bright colors of her attire and racket. The image conveys a sense of athleticism, focus, and the competitive nature of tennis.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 221,
+            "total_tokens": 518
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11898.45804,
+            "prompt_eval_duration_ms": 3622.686886,
+            "generation_duration_ms": 8236.592203,
+            "load_duration_ms": 36.716743,
+            "tokens_per_second": 26.83148498228497
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the closest elements to the viewer are a female tennis player in action. She is wearing a blue and white athletic outfit with the letters \"UCSD\" prominently displayed on her shirt, indicating her affiliation with the University of California, San Diego. She is also wearing a white cap and a wristband, and she is holding a red and white tennis racket, actively engaged in a swing. Her focused expression and dynamic pose suggest she is in the middle of a match or practice session. The tennis player is the primary subject, drawing immediate attention due to her central position and active engagement.\n\nThe background elements are more distant and less detailed, consisting of a green tennis court surface. The court's texture and color provide a neutral backdrop that contrasts with the bright colors of the player's attire and racket, making her stand out. The background is relatively plain, with no significant distractions, which helps to emphasize the player as the focal point. The green court surface is consistent with typical tennis court designs, reinforcing the setting as a tennis environment.\n\nThe relationship between the foreground and background is one of contrast and emphasis. The vibrant colors and dynamic movement of the player in the foreground create a strong visual focus, while the muted green of the background ensures that the viewer's attention remains on the athlete. The background serves as a simple, unobtrusive setting that enhances the prominence of the player's actions and attire, effectively highlighting the sport and the individual's involvement in it. The overall composition effectively uses depth and color to create a clear visual hierarchy, with the player as the central subject against the backdrop of the tennis court.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 329,
+            "total_tokens": 632
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12360.31543,
+            "prompt_eval_duration_ms": 74.195416,
+            "generation_duration_ms": 12246.284713,
+            "load_duration_ms": 37.652188,
+            "tokens_per_second": 26.86529079719592
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a female tennis player in action on a tennis court. She is wearing a blue and white athletic outfit, a white cap, and a wristband, indicating her participation in a competitive match or practice session. The player is holding a red and white tennis racket, which she is using to prepare for a shot. Her body posture suggests she is in the middle of a backhand swing, with her arm extended and her gaze focused on the ball, demonstrating concentration and readiness. The background is a green tennis court surface, which provides context for the setting.\n\nThere are no animals visible in the image, and the primary interaction is between the player and her racket. The player's stance and grip on the racket indicate a dynamic and skillful engagement with the sport. The racket is the central object in her hands, serving as the tool for her to strike the ball effectively. The overall composition of the image emphasizes the athleticism and intensity of the sport, with the player's focused expression and body language conveying determination and precision. The image captures a moment of action, highlighting the player's connection with her equipment and the game itself.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 227,
+            "total_tokens": 533
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8597.628822,
+            "prompt_eval_duration_ms": 73.084127,
+            "generation_duration_ms": 8483.417682,
+            "load_duration_ms": 37.978771,
+            "tokens_per_second": 26.758083653200938
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of focus, determination, and intensity, which are emotions typically associated with competitive sports. The tennis player appears to be in the midst of a match, as evidenced by her poised stance and the way she is gripping the racket, suggesting she is ready to hit the ball with precision. Her facial expression is serious and concentrated, indicating a high level of engagement and effort. The bright, athletic attire, including the blue and white uniform and the white cap, adds a sense of professionalism and readiness, further emphasizing the competitive atmosphere. The green background of the tennis court provides a neutral, calm backdrop that contrasts with the player's dynamic posture, making her the focal point of the image. The overall tone is positive and energetic, as it reflects the spirit of sportsmanship and the drive to succeed. The visual elements, such as the sharpness of her stance, the clarity of her focus, and the vibrant colors of her outfit, all contribute to an atmosphere of determination and enthusiasm. This image evokes feelings of inspiration, motivation, and the thrill of competition.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 217,
+            "total_tokens": 525
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8229.113838,
+            "prompt_eval_duration_ms": 71.588672,
+            "generation_duration_ms": 8118.012365,
+            "load_duration_ms": 37.560098,
+            "tokens_per_second": 26.7306811376112
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A female tennis player wearing a blue and white sports outfit, a white cap, and holding a tennis racket. She appears to be in motion, possibly preparing to hit a tennis ball.\"\n    }\n  },\n  \"man-made\": {\n    \"tennis_racket\": {\n      \"count\": 1,\n      \"location\": \"center-right\",\n      \"color\": [\"red\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"A red and white tennis racket being held by the player.\"\n    },\n    \"outfit\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A blue and white tennis outfit consisting of a sleeveless top and a skirt.\"\n    },\n    \"cap\": {\n      \"count\": 1,\n      \"location\": \"center-top\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"A white cap worn by the player.\"\n    }\n  },\n  \"natural\": {\n    \"background\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"A green tennis court surface.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "blue",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "A female tennis player wearing a blue and white sports outfit, a white cap, and holding a tennis racket. She appears to be in motion, possibly preparing to hit a tennis ball."
+              }
+            },
+            "man-made": {
+              "tennis_racket": {
+                "count": 1,
+                "location": "center-right",
+                "color": [
+                  "red",
+                  "white"
+                ],
+                "size": "small",
+                "description": "A red and white tennis racket being held by the player."
+              },
+              "outfit": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "blue",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "A blue and white tennis outfit consisting of a sleeveless top and a skirt."
+              },
+              "cap": {
+                "count": 1,
+                "location": "center-top",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "A white cap worn by the player."
+              }
+            },
+            "natural": {
+              "background": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "A green tennis court surface."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 323,
+            "total_tokens": 809
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12141.454273,
+            "prompt_eval_duration_ms": 133.891341,
+            "generation_duration_ms": 11966.031685,
+            "load_duration_ms": 39.242124,
+            "tokens_per_second": 26.99307577506218
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3017,
+        "total_time_ms": 53226.970403,
+        "average_speed": 26.835723269071043
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -497,310 +801,6 @@
         "total_tokens": 2861,
         "total_time_ms": 26767.570449,
         "average_speed": 41.77361366753344
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a tennis player in action, set against a muted green backdrop that suggests an outdoor court environment, possibly a clay court given the texture and color. The player, dressed in a blue and white athletic outfit with \"UCSD\" emblazoned across the chest, is mid-swing, holding a red and white tennis racket with a black grip. Her attire includes a white visor with a Nike logo, a wristwatch on her left wrist, and a bracelet on her right wrist. The lighting is natural, likely from the sun, casting soft shadows and highlighting the player's form and the details of her outfit. The overall composition is dynamic, with the player positioned slightly off-center, drawing the viewer's eye to her focused expression and the motion of her swing. The simplicity of the background ensures that the focus remains on the athlete and her action, creating a sense of movement and energy.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 183,
-            "total_tokens": 480
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1414.116877,
-            "prompt_eval_duration_ms": 79.505173,
-            "generation_duration_ms": 1295.479801,
-            "load_duration_ms": 37.018002,
-            "tokens_per_second": 141.2604039512925
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, a female tennis player is captured mid-action, her body angled slightly to the left as she prepares to swing her racket. She is dressed in a blue and white sports outfit with \"UCSD\" emblazoned across the front, suggesting she is a member of the University of California, San Diego tennis team. Her white visor, adorned with a small Nike swoosh, complements her outfit, and she wears a wristwatch on her left wrist, adding a personal touch to her athletic attire. Her stance and the position of her racket indicate she is likely about to hit a forehand shot, her focus directed towards the unseen ball. The background, though blurred, reveals a green wall, likely part of the tennis court's backdrop, which helps to emphasize the sharpness and detail of the player in the foreground. The contrast between the vibrant colors of the player's outfit and the muted tones of the background wall creates a dynamic composition that draws the viewer's attention directly to the action.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 207,
-            "total_tokens": 510
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1556.967087,
-            "prompt_eval_duration_ms": 30.072951,
-            "generation_duration_ms": 1487.415316,
-            "load_duration_ms": 37.322953,
-            "tokens_per_second": 139.1675867347328
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a tennis player in action, poised mid-swing with a red and white tennis racket. The player, dressed in a blue and white athletic outfit with a matching cap, is focused on the ball, which is visible in the air just beyond the racket. The player's body is angled forward, demonstrating a strong, dynamic stance typical of a forehand shot. The background is a plain, muted green, likely a wall or backdrop, which emphasizes the player and the tennis equipment. The player's attire and the racket suggest a competitive or practice setting, and the image conveys a sense of motion and concentration as the player engages with the ball. There are no other people or animals in the image, and the focus is entirely on the tennis player and the immediate action of the shot.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 161,
-            "total_tokens": 467
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1229.848063,
-            "prompt_eval_duration_ms": 30.701221,
-            "generation_duration_ms": 1157.101862,
-            "load_duration_ms": 40.040909,
-            "tokens_per_second": 139.14073193324444
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of intense focus and determination, evoking a sense of competitive spirit and athletic dedication. The tennis player's posture, with her body leaning forward and her eyes fixed on the ball, suggests a high level of concentration and readiness to react. The vibrant blue and white uniform, along with the Nike cap, adds a professional and competitive edge, hinting at a serious and possibly high-stakes match. The blurred background emphasizes the player's action, drawing the viewer's attention to her and her determination. The overall tone is decidedly positive, reflecting the player's commitment and the excitement of the sport. The visual elements, such as the player's focused expression, the dynamic pose, and the sharp contrast of her outfit against the muted background, all contribute to an atmosphere of energy and anticipation.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 163,
-            "total_tokens": 471
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1237.212901,
-            "prompt_eval_duration_ms": 32.122382,
-            "generation_duration_ms": 1165.894965,
-            "load_duration_ms": 37.324491,
-            "tokens_per_second": 139.8067620954174
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"playing tennis, wearing a cap and a sports outfit, holding a tennis racket\"\n    }\n  },\n  \"man-made\": {\n    \"tennis_racket\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"red\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"tennis racket held by the person\"\n    }\n  },\n  \"natural\": {\n    \"background\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"green wall or court background\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "blue",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "playing tennis, wearing a cap and a sports outfit, holding a tennis racket"
-              }
-            },
-            "man-made": {
-              "tennis_racket": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "white",
-                  "red",
-                  "black"
-                ],
-                "size": "medium",
-                "description": "tennis racket held by the person"
-              }
-            },
-            "natural": {
-              "background": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "green wall or court background"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 191,
-            "total_tokens": 677
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1440.228056,
-            "prompt_eval_duration_ms": 42.829306,
-            "generation_duration_ms": 1357.044612,
-            "load_duration_ms": 37.887024,
-            "tokens_per_second": 140.74703094580357
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2605,
-        "total_time_ms": 6878.372984,
-        "average_speed": 140.02450313209815
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a tennis player in action on a clay court. The setting is an outdoor tennis court, characterized by the distinctive greenish-brown clay surface visible in the background. The player, a woman, is captured mid-swing, preparing to hit the ball with a forehand stroke. She is wearing a white cap, a blue and white sleeveless athletic top with the letters \"UCSB\" prominently displayed, and matching blue and white shorts. Her outfit is coordinated and sporty, suitable for tennis. She holds a red and white tennis racket, which is the focal point of her action. The lighting is natural, likely from sunlight, casting soft shadows and highlighting the player's form and the texture of the clay court. The overall composition is dynamic, with the player positioned slightly off-center, creating a sense of movement and intensity. The background is blurred, drawing attention to the player and her action, while the muted tones of the clay court contrast with the bright colors of her attire and racket. The image conveys a sense of athleticism, focus, and the competitive nature of tennis.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 221,
-            "total_tokens": 518
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11898.45804,
-            "prompt_eval_duration_ms": 3622.686886,
-            "generation_duration_ms": 8236.592203,
-            "load_duration_ms": 36.716743,
-            "tokens_per_second": 26.83148498228497
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the closest elements to the viewer are a female tennis player in action. She is wearing a blue and white athletic outfit with the letters \"UCSD\" prominently displayed on her shirt, indicating her affiliation with the University of California, San Diego. She is also wearing a white cap and a wristband, and she is holding a red and white tennis racket, actively engaged in a swing. Her focused expression and dynamic pose suggest she is in the middle of a match or practice session. The tennis player is the primary subject, drawing immediate attention due to her central position and active engagement.\n\nThe background elements are more distant and less detailed, consisting of a green tennis court surface. The court's texture and color provide a neutral backdrop that contrasts with the bright colors of the player's attire and racket, making her stand out. The background is relatively plain, with no significant distractions, which helps to emphasize the player as the focal point. The green court surface is consistent with typical tennis court designs, reinforcing the setting as a tennis environment.\n\nThe relationship between the foreground and background is one of contrast and emphasis. The vibrant colors and dynamic movement of the player in the foreground create a strong visual focus, while the muted green of the background ensures that the viewer's attention remains on the athlete. The background serves as a simple, unobtrusive setting that enhances the prominence of the player's actions and attire, effectively highlighting the sport and the individual's involvement in it. The overall composition effectively uses depth and color to create a clear visual hierarchy, with the player as the central subject against the backdrop of the tennis court.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 329,
-            "total_tokens": 632
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12360.31543,
-            "prompt_eval_duration_ms": 74.195416,
-            "generation_duration_ms": 12246.284713,
-            "load_duration_ms": 37.652188,
-            "tokens_per_second": 26.86529079719592
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a female tennis player in action on a tennis court. She is wearing a blue and white athletic outfit, a white cap, and a wristband, indicating her participation in a competitive match or practice session. The player is holding a red and white tennis racket, which she is using to prepare for a shot. Her body posture suggests she is in the middle of a backhand swing, with her arm extended and her gaze focused on the ball, demonstrating concentration and readiness. The background is a green tennis court surface, which provides context for the setting.\n\nThere are no animals visible in the image, and the primary interaction is between the player and her racket. The player's stance and grip on the racket indicate a dynamic and skillful engagement with the sport. The racket is the central object in her hands, serving as the tool for her to strike the ball effectively. The overall composition of the image emphasizes the athleticism and intensity of the sport, with the player's focused expression and body language conveying determination and precision. The image captures a moment of action, highlighting the player's connection with her equipment and the game itself.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 227,
-            "total_tokens": 533
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8597.628822,
-            "prompt_eval_duration_ms": 73.084127,
-            "generation_duration_ms": 8483.417682,
-            "load_duration_ms": 37.978771,
-            "tokens_per_second": 26.758083653200938
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of focus, determination, and intensity, which are emotions typically associated with competitive sports. The tennis player appears to be in the midst of a match, as evidenced by her poised stance and the way she is gripping the racket, suggesting she is ready to hit the ball with precision. Her facial expression is serious and concentrated, indicating a high level of engagement and effort. The bright, athletic attire, including the blue and white uniform and the white cap, adds a sense of professionalism and readiness, further emphasizing the competitive atmosphere. The green background of the tennis court provides a neutral, calm backdrop that contrasts with the player's dynamic posture, making her the focal point of the image. The overall tone is positive and energetic, as it reflects the spirit of sportsmanship and the drive to succeed. The visual elements, such as the sharpness of her stance, the clarity of her focus, and the vibrant colors of her outfit, all contribute to an atmosphere of determination and enthusiasm. This image evokes feelings of inspiration, motivation, and the thrill of competition.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 217,
-            "total_tokens": 525
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8229.113838,
-            "prompt_eval_duration_ms": 71.588672,
-            "generation_duration_ms": 8118.012365,
-            "load_duration_ms": 37.560098,
-            "tokens_per_second": 26.7306811376112
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A female tennis player wearing a blue and white sports outfit, a white cap, and holding a tennis racket. She appears to be in motion, possibly preparing to hit a tennis ball.\"\n    }\n  },\n  \"man-made\": {\n    \"tennis_racket\": {\n      \"count\": 1,\n      \"location\": \"center-right\",\n      \"color\": [\"red\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"A red and white tennis racket being held by the player.\"\n    },\n    \"outfit\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A blue and white tennis outfit consisting of a sleeveless top and a skirt.\"\n    },\n    \"cap\": {\n      \"count\": 1,\n      \"location\": \"center-top\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"A white cap worn by the player.\"\n    }\n  },\n  \"natural\": {\n    \"background\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"A green tennis court surface.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "blue",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "A female tennis player wearing a blue and white sports outfit, a white cap, and holding a tennis racket. She appears to be in motion, possibly preparing to hit a tennis ball."
-              }
-            },
-            "man-made": {
-              "tennis_racket": {
-                "count": 1,
-                "location": "center-right",
-                "color": [
-                  "red",
-                  "white"
-                ],
-                "size": "small",
-                "description": "A red and white tennis racket being held by the player."
-              },
-              "outfit": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "blue",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "A blue and white tennis outfit consisting of a sleeveless top and a skirt."
-              },
-              "cap": {
-                "count": 1,
-                "location": "center-top",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "A white cap worn by the player."
-              }
-            },
-            "natural": {
-              "background": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "A green tennis court surface."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 323,
-            "total_tokens": 809
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12141.454273,
-            "prompt_eval_duration_ms": 133.891341,
-            "generation_duration_ms": 11966.031685,
-            "load_duration_ms": 39.242124,
-            "tokens_per_second": 26.99307577506218
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3017,
-        "total_time_ms": 53226.970403,
-        "average_speed": 26.835723269071043
       }
     },
     {

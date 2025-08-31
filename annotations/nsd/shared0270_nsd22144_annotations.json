@@ -7,6 +7,331 @@
   "timestamp": "2025-08-30T18:10:29.847064+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image presents a vibrant and colorful still life composition set against a warm-toned wooden backdrop, which adds a rustic charm to the scene. The main elements include two large, glossy green ceramic bottles with intricate yellow and gold accents, one of which is adorned with a textured pattern resembling leaves or vines. These bottles are positioned on a textured, yellow and green woven mat that adds a natural, earthy feel to the composition. Between the bottles, there is a small glass vase filled with pink roses and green foliage, introducing a pop of soft pink and a touch of freshness to the arrangement. The lighting is warm and appears to be natural, casting soft shadows that enhance the three-dimensional quality of the objects. The overall color palette is rich and harmonious, dominated by greens, yellows, pinks, and the warm tones of the wood, creating a visually appealing and balanced scene. The composition is carefully arranged to draw the viewer's eye from the textured bottle on the left to the delicate flowers in the center and the smooth, glossy bottle on the right, creating a sense of movement and visual interest.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 222,
+            "total_tokens": 519
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1752.20274,
+            "prompt_eval_duration_ms": 81.083784,
+            "generation_duration_ms": 1629.092607,
+            "load_duration_ms": 39.211711,
+            "tokens_per_second": 136.272179399805
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, the viewer's attention is drawn to a vibrant green ceramic bottle with a textured design resembling leaves or vines, placed on a woven mat with a yellow and green pattern. Adjacent to it, a clear glass vase holds a bouquet of pink roses, their petals adding a soft contrast to the bold green of the bottle. The roses are partially wrapped in a bright pink tissue paper, which introduces a pop of color that complements the overall warm tones of the scene. In the background, a wooden wall with a natural grain pattern serves as a neutral backdrop, enhancing the vivid colors of the foreground elements. The interplay of the green bottle, pink roses, and the warm wooden tones creates a harmonious composition, with the foreground elements drawing the eye and the background providing a stable, unobtrusive setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 166,
+            "total_tokens": 469
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1304.950336,
+            "prompt_eval_duration_ms": 29.611481,
+            "generation_duration_ms": 1230.210932,
+            "load_duration_ms": 40.087452,
+            "tokens_per_second": 134.93620945972864
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image showcases a still life arrangement featuring two green ceramic bottles, a small glass vase with pink flowers, and a wooden wall backdrop. The green bottles, one larger and one smaller, are positioned on a woven mat with a grid pattern, suggesting a casual and artistic setting. The larger bottle, adorned with a yellow band around its neck, stands to the left, while the smaller bottle, decorated with a leaf-like pattern, is to the right. The glass vase, filled with vibrant pink roses and green leaves, is placed between the two ceramic bottles, creating a balanced composition. The roses add a touch of nature and color contrast to the scene, while the wooden wall in the background provides a warm, textured backdrop that enhances the overall aesthetic. The objects are stationary, with no visible interaction among them, but their arrangement suggests a deliberate and thoughtful composition, possibly intended for decorative or artistic purposes. The lighting highlights the glossy finish of the ceramic bottles and the delicate petals of the roses, emphasizing the textures and colors in the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 207,
+            "total_tokens": 513
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1601.317324,
+            "prompt_eval_duration_ms": 33.04007,
+            "generation_duration_ms": 1524.354023,
+            "load_duration_ms": 41.336116,
+            "tokens_per_second": 135.79522661842972
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of warmth and tranquility, with a distinctly positive and uplifting mood. The vibrant green of the ceramic bottles, adorned with a subtle leaf pattern, contrasts beautifully with the rich, earthy tones of the wooden wall and the bright yellow and green tablecloth, creating a harmonious and inviting atmosphere. The soft pink roses, nestled in a small glass vase, add a touch of delicate beauty and romance, enhancing the overall feeling of serenity and happiness. The natural light streaming in from the left casts a gentle shadow, adding depth and a sense of calmness to the scene. The combination of these elements\u2014color, texture, and light\u2014contributes to a mood that is both peaceful and joyful, making the viewer feel a sense of contentment and relaxation.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 159,
+            "total_tokens": 467
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1249.289922,
+            "prompt_eval_duration_ms": 32.992468,
+            "generation_duration_ms": 1171.799235,
+            "load_duration_ms": 41.8641,
+            "tokens_per_second": 135.68877265908097
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"bottle\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"two green bottles with yellow caps and leaf-like patterns\"\n    },\n    \"vase\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"transparent\", \"pink\"],\n      \"size\": \"small\",\n      \"description\": \"vase holding pink roses\"\n    }\n  },\n  \"natural\": {\n    \"flowers\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"pink\"],\n      \"size\": \"medium\",\n      \"description\": \"pink roses in a vase\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "bottle": {
+                "count": 2,
+                "location": "center",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "two green bottles with yellow caps and leaf-like patterns"
+              },
+              "vase": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "transparent",
+                  "pink"
+                ],
+                "size": "small",
+                "description": "vase holding pink roses"
+              }
+            },
+            "natural": {
+              "flowers": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "pink"
+                ],
+                "size": "medium",
+                "description": "pink roses in a vase"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 170,
+            "total_tokens": 656
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1307.982194,
+            "prompt_eval_duration_ms": 45.156954,
+            "generation_duration_ms": 1222.39867,
+            "load_duration_ms": 37.180204,
+            "tokens_per_second": 139.07083194061394
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2624,
+        "total_time_ms": 7215.742516,
+        "average_speed": 136.35264401553167
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a vibrant and colorful still life arrangement set against a warm, rustic wooden backdrop. The main elements include two green glass bottles with yellow accents, a clear glass vase filled with pink roses, and a yellow woven placemat. The bottles are tall and cylindrical, featuring a leaf-like design embossed on their surfaces, and they are positioned on either side of the vase. The vase, partially wrapped in bright pink tissue paper, holds a bouquet of pink roses with green leaves, adding a touch of natural elegance to the composition. The wooden wall behind the objects has a textured, earthy appearance, with visible grain patterns and a warm brown tone that contrasts beautifully with the bright colors in the foreground. The lighting is bright and natural, casting soft shadows of the bottles and vase onto the wall, enhancing the depth and dimension of the scene. The overall composition is balanced, with the central vase acting as a focal point, flanked symmetrically by the two bottles. The use of contrasting colors\u2014green, pink, yellow, and brown\u2014creates a lively and inviting atmosphere, while the textures of the wood, glass, and woven placemat add visual interest and a tactile quality to the image.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 241,
+            "total_tokens": 538
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12580.337037,
+            "prompt_eval_duration_ms": 3559.497128,
+            "generation_duration_ms": 8976.852357,
+            "load_duration_ms": 40.621529,
+            "tokens_per_second": 26.846826751257883
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by vibrant, eye-catching elements placed on a yellow and green woven mat. The most prominent objects are two green glass bottles with yellow accents, featuring embossed leaf designs that add a natural, organic touch. Between the bottles, a clear glass vase holds a bouquet of pink roses, wrapped in pink tissue paper, which adds a pop of color and a sense of freshness. The roses are the focal point, drawing attention with their bright hue and delicate petals. The bottles and vase are arranged in a balanced composition, creating a harmonious and aesthetically pleasing display.\n\nIn the background, the setting transitions to a warm, rustic wooden wall with a textured surface, providing a contrasting backdrop to the bright foreground elements. The wall features subtle details, such as a small framed picture or artwork with purple and yellow tones, which subtly echoes the colors in the foreground. The lighting in the scene casts soft shadows of the bottles and vase onto the wall, adding depth and dimension. The interplay between the bright, modern elements in the foreground and the warm, natural tones of the background creates a layered visual effect, where the foreground objects stand out sharply against the softer, more muted background. This contrast enhances the overall composition, making the vibrant flowers and bottles the central focus while the background provides a comforting, earthy foundation.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 270,
+            "total_tokens": 573
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10163.63873,
+            "prompt_eval_duration_ms": 73.849756,
+            "generation_duration_ms": 10047.585809,
+            "load_duration_ms": 39.344761,
+            "tokens_per_second": 26.872126810616624
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a vibrant and artistic still-life arrangement featuring two green bottles with yellow accents, a bouquet of pink roses, and a wooden wall backdrop. There are no people or animals present in the scene, so the focus is entirely on the objects and their arrangement.\n\nThe two green bottles, which appear to be handcrafted with a leaf-like design embossed on their surfaces, are the central elements of the composition. They are positioned symmetrically on a colorful, woven mat with a grid pattern, adding texture and visual interest to the scene. The bottles are adorned with yellow bands around their necks, which complement the overall color scheme.\n\nBetween the bottles sits a clear glass vase filled with pink roses. The roses are arranged in a bouquet, with their stems wrapped in pink tissue paper, creating a harmonious color contrast with the green bottles. The flowers add a touch of softness and natural beauty to the otherwise structured and geometric arrangement.\n\nThe background consists of a wooden wall with a warm, earthy tone, which provides a rustic and inviting atmosphere. The wall features a few decorative elements, including a small, framed piece of art or a calendar with a floral design, adding a personal and artistic touch to the setting. The interplay of shadows cast by the bottles and vase on the wall enhances the depth and dimension of the scene, creating a dynamic visual effect.\n\nOverall, the objects in the image interact through their placement and color coordination, creating a balanced and aesthetically pleasing composition. The combination of natural elements (flowers) and crafted objects (bottles) suggests a theme of harmony between nature and human artistry. The vibrant colors and textures work together to evoke a sense of warmth, creativity, and tranquility.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 347,
+            "total_tokens": 653
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13010.661053,
+            "prompt_eval_duration_ms": 76.834787,
+            "generation_duration_ms": 12892.042486,
+            "load_duration_ms": 38.906215,
+            "tokens_per_second": 26.915828145681463
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a warm, inviting, and slightly nostalgic mood, leaning toward a positive emotional atmosphere. The vibrant green bottles with their intricate leaf designs and the bright pink roses create a sense of freshness and natural beauty, which contributes to a feeling of renewal and vitality. The warm, golden light filtering through the scene enhances the cozy and serene ambiance, suggesting a peaceful, sunlit moment. The wooden wall in the background, with its rustic texture and subtle shadows, adds a touch of earthiness and timelessness, reinforcing the sense of comfort and simplicity. The pink tissue paper beneath the flowers introduces a playful and cheerful element, further enhancing the overall positivity. The yellow and green grid-patterned tablecloth adds a lively, almost whimsical touch, contributing to the image's cheerful and uplifting tone. The combination of natural elements, warm lighting, and vibrant colors creates a harmonious and uplifting atmosphere, evoking feelings of joy, tranquility, and appreciation for simple, everyday beauty. The overall tone is decidedly positive, with visual elements working together to create a scene that feels both refreshing and heartwarming.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 222,
+            "total_tokens": 530
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8384.222355,
+            "prompt_eval_duration_ms": 74.144542,
+            "generation_duration_ms": 8265.710463,
+            "load_duration_ms": 40.058307,
+            "tokens_per_second": 26.857945362802628
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"bottles\": {\n      \"count\": 2,\n      \"location\": \"left and right, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"Green bottles with yellow accents and leaf-like designs.\"\n    },\n    \"vase\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"transparent\"],\n      \"size\": \"small\",\n      \"description\": \"Clear glass vase holding flowers.\"\n    },\n    \"flowers\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"pink\", \"green\"],\n      \"size\": \"small\",\n      \"description\": \"Pink roses with green stems and leaves.\"\n    },\n    \"candlesticks\": {\n      \"count\": 3,\n      \"location\": \"left, middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"Wooden candlesticks in a holder.\"\n    },\n    \"frame\": {\n      \"count\": 1,\n      \"location\": \"background, middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"Wooden frame with a design on it.\"\n    },\n    \"mat\": {\n      \"count\": 1,\n      \"location\": \"foreground, bottom\",\n      \"color\": [\"yellow\", \"black\"],\n      \"size\": \"large\",\n      \"description\": \"Yellow and black grid-patterned mat.\"\n    },\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"background, middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Wooden wall with a textured pattern.\"\n    }\n  },\n  \"natural\": {\n    \"flowers\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"pink\", \"green\"],\n      \"size\": \"small\",\n      \"description\": \"Pink roses with green stems and leaves.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "bottles": {
+                "count": 2,
+                "location": "left and right, middle",
+                "color": [
+                  "green"
+                ],
+                "size": "medium",
+                "description": "Green bottles with yellow accents and leaf-like designs."
+              },
+              "vase": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "transparent"
+                ],
+                "size": "small",
+                "description": "Clear glass vase holding flowers."
+              },
+              "flowers": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "pink",
+                  "green"
+                ],
+                "size": "small",
+                "description": "Pink roses with green stems and leaves."
+              },
+              "candlesticks": {
+                "count": 3,
+                "location": "left, middle",
+                "color": [
+                  "brown"
+                ],
+                "size": "small",
+                "description": "Wooden candlesticks in a holder."
+              },
+              "frame": {
+                "count": 1,
+                "location": "background, middle",
+                "color": [
+                  "brown"
+                ],
+                "size": "small",
+                "description": "Wooden frame with a design on it."
+              },
+              "mat": {
+                "count": 1,
+                "location": "foreground, bottom",
+                "color": [
+                  "yellow",
+                  "black"
+                ],
+                "size": "large",
+                "description": "Yellow and black grid-patterned mat."
+              },
+              "wall": {
+                "count": 1,
+                "location": "background, middle",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "Wooden wall with a textured pattern."
+              }
+            },
+            "natural": {
+              "flowers": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "pink",
+                  "green"
+                ],
+                "size": "small",
+                "description": "Pink roses with green stems and leaves."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 439,
+            "total_tokens": 925
+          },
+          "performance_metrics": {
+            "total_duration_ms": 16455.270029,
+            "prompt_eval_duration_ms": 136.446775,
+            "generation_duration_ms": 16276.969754,
+            "load_duration_ms": 39.173367,
+            "tokens_per_second": 26.970622089662452
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3219,
+        "total_time_ms": 60594.129204,
+        "average_speed": 26.89266983200421
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -472,331 +797,6 @@
         "total_tokens": 2998,
         "total_time_ms": 29710.886521,
         "average_speed": 42.29290325246277
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image presents a vibrant and colorful still life composition set against a warm-toned wooden backdrop, which adds a rustic charm to the scene. The main elements include two large, glossy green ceramic bottles with intricate yellow and gold accents, one of which is adorned with a textured pattern resembling leaves or vines. These bottles are positioned on a textured, yellow and green woven mat that adds a natural, earthy feel to the composition. Between the bottles, there is a small glass vase filled with pink roses and green foliage, introducing a pop of soft pink and a touch of freshness to the arrangement. The lighting is warm and appears to be natural, casting soft shadows that enhance the three-dimensional quality of the objects. The overall color palette is rich and harmonious, dominated by greens, yellows, pinks, and the warm tones of the wood, creating a visually appealing and balanced scene. The composition is carefully arranged to draw the viewer's eye from the textured bottle on the left to the delicate flowers in the center and the smooth, glossy bottle on the right, creating a sense of movement and visual interest.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 222,
-            "total_tokens": 519
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1752.20274,
-            "prompt_eval_duration_ms": 81.083784,
-            "generation_duration_ms": 1629.092607,
-            "load_duration_ms": 39.211711,
-            "tokens_per_second": 136.272179399805
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, the viewer's attention is drawn to a vibrant green ceramic bottle with a textured design resembling leaves or vines, placed on a woven mat with a yellow and green pattern. Adjacent to it, a clear glass vase holds a bouquet of pink roses, their petals adding a soft contrast to the bold green of the bottle. The roses are partially wrapped in a bright pink tissue paper, which introduces a pop of color that complements the overall warm tones of the scene. In the background, a wooden wall with a natural grain pattern serves as a neutral backdrop, enhancing the vivid colors of the foreground elements. The interplay of the green bottle, pink roses, and the warm wooden tones creates a harmonious composition, with the foreground elements drawing the eye and the background providing a stable, unobtrusive setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 166,
-            "total_tokens": 469
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1304.950336,
-            "prompt_eval_duration_ms": 29.611481,
-            "generation_duration_ms": 1230.210932,
-            "load_duration_ms": 40.087452,
-            "tokens_per_second": 134.93620945972864
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image showcases a still life arrangement featuring two green ceramic bottles, a small glass vase with pink flowers, and a wooden wall backdrop. The green bottles, one larger and one smaller, are positioned on a woven mat with a grid pattern, suggesting a casual and artistic setting. The larger bottle, adorned with a yellow band around its neck, stands to the left, while the smaller bottle, decorated with a leaf-like pattern, is to the right. The glass vase, filled with vibrant pink roses and green leaves, is placed between the two ceramic bottles, creating a balanced composition. The roses add a touch of nature and color contrast to the scene, while the wooden wall in the background provides a warm, textured backdrop that enhances the overall aesthetic. The objects are stationary, with no visible interaction among them, but their arrangement suggests a deliberate and thoughtful composition, possibly intended for decorative or artistic purposes. The lighting highlights the glossy finish of the ceramic bottles and the delicate petals of the roses, emphasizing the textures and colors in the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 207,
-            "total_tokens": 513
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1601.317324,
-            "prompt_eval_duration_ms": 33.04007,
-            "generation_duration_ms": 1524.354023,
-            "load_duration_ms": 41.336116,
-            "tokens_per_second": 135.79522661842972
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of warmth and tranquility, with a distinctly positive and uplifting mood. The vibrant green of the ceramic bottles, adorned with a subtle leaf pattern, contrasts beautifully with the rich, earthy tones of the wooden wall and the bright yellow and green tablecloth, creating a harmonious and inviting atmosphere. The soft pink roses, nestled in a small glass vase, add a touch of delicate beauty and romance, enhancing the overall feeling of serenity and happiness. The natural light streaming in from the left casts a gentle shadow, adding depth and a sense of calmness to the scene. The combination of these elements\u2014color, texture, and light\u2014contributes to a mood that is both peaceful and joyful, making the viewer feel a sense of contentment and relaxation.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 159,
-            "total_tokens": 467
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1249.289922,
-            "prompt_eval_duration_ms": 32.992468,
-            "generation_duration_ms": 1171.799235,
-            "load_duration_ms": 41.8641,
-            "tokens_per_second": 135.68877265908097
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"bottle\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"two green bottles with yellow caps and leaf-like patterns\"\n    },\n    \"vase\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"transparent\", \"pink\"],\n      \"size\": \"small\",\n      \"description\": \"vase holding pink roses\"\n    }\n  },\n  \"natural\": {\n    \"flowers\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"pink\"],\n      \"size\": \"medium\",\n      \"description\": \"pink roses in a vase\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "bottle": {
-                "count": 2,
-                "location": "center",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "two green bottles with yellow caps and leaf-like patterns"
-              },
-              "vase": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "transparent",
-                  "pink"
-                ],
-                "size": "small",
-                "description": "vase holding pink roses"
-              }
-            },
-            "natural": {
-              "flowers": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "pink"
-                ],
-                "size": "medium",
-                "description": "pink roses in a vase"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 170,
-            "total_tokens": 656
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1307.982194,
-            "prompt_eval_duration_ms": 45.156954,
-            "generation_duration_ms": 1222.39867,
-            "load_duration_ms": 37.180204,
-            "tokens_per_second": 139.07083194061394
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2624,
-        "total_time_ms": 7215.742516,
-        "average_speed": 136.35264401553167
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a vibrant and colorful still life arrangement set against a warm, rustic wooden backdrop. The main elements include two green glass bottles with yellow accents, a clear glass vase filled with pink roses, and a yellow woven placemat. The bottles are tall and cylindrical, featuring a leaf-like design embossed on their surfaces, and they are positioned on either side of the vase. The vase, partially wrapped in bright pink tissue paper, holds a bouquet of pink roses with green leaves, adding a touch of natural elegance to the composition. The wooden wall behind the objects has a textured, earthy appearance, with visible grain patterns and a warm brown tone that contrasts beautifully with the bright colors in the foreground. The lighting is bright and natural, casting soft shadows of the bottles and vase onto the wall, enhancing the depth and dimension of the scene. The overall composition is balanced, with the central vase acting as a focal point, flanked symmetrically by the two bottles. The use of contrasting colors\u2014green, pink, yellow, and brown\u2014creates a lively and inviting atmosphere, while the textures of the wood, glass, and woven placemat add visual interest and a tactile quality to the image.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 241,
-            "total_tokens": 538
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12580.337037,
-            "prompt_eval_duration_ms": 3559.497128,
-            "generation_duration_ms": 8976.852357,
-            "load_duration_ms": 40.621529,
-            "tokens_per_second": 26.846826751257883
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by vibrant, eye-catching elements placed on a yellow and green woven mat. The most prominent objects are two green glass bottles with yellow accents, featuring embossed leaf designs that add a natural, organic touch. Between the bottles, a clear glass vase holds a bouquet of pink roses, wrapped in pink tissue paper, which adds a pop of color and a sense of freshness. The roses are the focal point, drawing attention with their bright hue and delicate petals. The bottles and vase are arranged in a balanced composition, creating a harmonious and aesthetically pleasing display.\n\nIn the background, the setting transitions to a warm, rustic wooden wall with a textured surface, providing a contrasting backdrop to the bright foreground elements. The wall features subtle details, such as a small framed picture or artwork with purple and yellow tones, which subtly echoes the colors in the foreground. The lighting in the scene casts soft shadows of the bottles and vase onto the wall, adding depth and dimension. The interplay between the bright, modern elements in the foreground and the warm, natural tones of the background creates a layered visual effect, where the foreground objects stand out sharply against the softer, more muted background. This contrast enhances the overall composition, making the vibrant flowers and bottles the central focus while the background provides a comforting, earthy foundation.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 270,
-            "total_tokens": 573
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10163.63873,
-            "prompt_eval_duration_ms": 73.849756,
-            "generation_duration_ms": 10047.585809,
-            "load_duration_ms": 39.344761,
-            "tokens_per_second": 26.872126810616624
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a vibrant and artistic still-life arrangement featuring two green bottles with yellow accents, a bouquet of pink roses, and a wooden wall backdrop. There are no people or animals present in the scene, so the focus is entirely on the objects and their arrangement.\n\nThe two green bottles, which appear to be handcrafted with a leaf-like design embossed on their surfaces, are the central elements of the composition. They are positioned symmetrically on a colorful, woven mat with a grid pattern, adding texture and visual interest to the scene. The bottles are adorned with yellow bands around their necks, which complement the overall color scheme.\n\nBetween the bottles sits a clear glass vase filled with pink roses. The roses are arranged in a bouquet, with their stems wrapped in pink tissue paper, creating a harmonious color contrast with the green bottles. The flowers add a touch of softness and natural beauty to the otherwise structured and geometric arrangement.\n\nThe background consists of a wooden wall with a warm, earthy tone, which provides a rustic and inviting atmosphere. The wall features a few decorative elements, including a small, framed piece of art or a calendar with a floral design, adding a personal and artistic touch to the setting. The interplay of shadows cast by the bottles and vase on the wall enhances the depth and dimension of the scene, creating a dynamic visual effect.\n\nOverall, the objects in the image interact through their placement and color coordination, creating a balanced and aesthetically pleasing composition. The combination of natural elements (flowers) and crafted objects (bottles) suggests a theme of harmony between nature and human artistry. The vibrant colors and textures work together to evoke a sense of warmth, creativity, and tranquility.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 347,
-            "total_tokens": 653
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13010.661053,
-            "prompt_eval_duration_ms": 76.834787,
-            "generation_duration_ms": 12892.042486,
-            "load_duration_ms": 38.906215,
-            "tokens_per_second": 26.915828145681463
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a warm, inviting, and slightly nostalgic mood, leaning toward a positive emotional atmosphere. The vibrant green bottles with their intricate leaf designs and the bright pink roses create a sense of freshness and natural beauty, which contributes to a feeling of renewal and vitality. The warm, golden light filtering through the scene enhances the cozy and serene ambiance, suggesting a peaceful, sunlit moment. The wooden wall in the background, with its rustic texture and subtle shadows, adds a touch of earthiness and timelessness, reinforcing the sense of comfort and simplicity. The pink tissue paper beneath the flowers introduces a playful and cheerful element, further enhancing the overall positivity. The yellow and green grid-patterned tablecloth adds a lively, almost whimsical touch, contributing to the image's cheerful and uplifting tone. The combination of natural elements, warm lighting, and vibrant colors creates a harmonious and uplifting atmosphere, evoking feelings of joy, tranquility, and appreciation for simple, everyday beauty. The overall tone is decidedly positive, with visual elements working together to create a scene that feels both refreshing and heartwarming.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 222,
-            "total_tokens": 530
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8384.222355,
-            "prompt_eval_duration_ms": 74.144542,
-            "generation_duration_ms": 8265.710463,
-            "load_duration_ms": 40.058307,
-            "tokens_per_second": 26.857945362802628
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"bottles\": {\n      \"count\": 2,\n      \"location\": \"left and right, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"Green bottles with yellow accents and leaf-like designs.\"\n    },\n    \"vase\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"transparent\"],\n      \"size\": \"small\",\n      \"description\": \"Clear glass vase holding flowers.\"\n    },\n    \"flowers\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"pink\", \"green\"],\n      \"size\": \"small\",\n      \"description\": \"Pink roses with green stems and leaves.\"\n    },\n    \"candlesticks\": {\n      \"count\": 3,\n      \"location\": \"left, middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"Wooden candlesticks in a holder.\"\n    },\n    \"frame\": {\n      \"count\": 1,\n      \"location\": \"background, middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"Wooden frame with a design on it.\"\n    },\n    \"mat\": {\n      \"count\": 1,\n      \"location\": \"foreground, bottom\",\n      \"color\": [\"yellow\", \"black\"],\n      \"size\": \"large\",\n      \"description\": \"Yellow and black grid-patterned mat.\"\n    },\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"background, middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Wooden wall with a textured pattern.\"\n    }\n  },\n  \"natural\": {\n    \"flowers\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"pink\", \"green\"],\n      \"size\": \"small\",\n      \"description\": \"Pink roses with green stems and leaves.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "bottles": {
-                "count": 2,
-                "location": "left and right, middle",
-                "color": [
-                  "green"
-                ],
-                "size": "medium",
-                "description": "Green bottles with yellow accents and leaf-like designs."
-              },
-              "vase": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "transparent"
-                ],
-                "size": "small",
-                "description": "Clear glass vase holding flowers."
-              },
-              "flowers": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "pink",
-                  "green"
-                ],
-                "size": "small",
-                "description": "Pink roses with green stems and leaves."
-              },
-              "candlesticks": {
-                "count": 3,
-                "location": "left, middle",
-                "color": [
-                  "brown"
-                ],
-                "size": "small",
-                "description": "Wooden candlesticks in a holder."
-              },
-              "frame": {
-                "count": 1,
-                "location": "background, middle",
-                "color": [
-                  "brown"
-                ],
-                "size": "small",
-                "description": "Wooden frame with a design on it."
-              },
-              "mat": {
-                "count": 1,
-                "location": "foreground, bottom",
-                "color": [
-                  "yellow",
-                  "black"
-                ],
-                "size": "large",
-                "description": "Yellow and black grid-patterned mat."
-              },
-              "wall": {
-                "count": 1,
-                "location": "background, middle",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "Wooden wall with a textured pattern."
-              }
-            },
-            "natural": {
-              "flowers": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "pink",
-                  "green"
-                ],
-                "size": "small",
-                "description": "Pink roses with green stems and leaves."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 439,
-            "total_tokens": 925
-          },
-          "performance_metrics": {
-            "total_duration_ms": 16455.270029,
-            "prompt_eval_duration_ms": 136.446775,
-            "generation_duration_ms": 16276.969754,
-            "load_duration_ms": 39.173367,
-            "tokens_per_second": 26.970622089662452
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3219,
-        "total_time_ms": 60594.129204,
-        "average_speed": 26.89266983200421
       }
     },
     {

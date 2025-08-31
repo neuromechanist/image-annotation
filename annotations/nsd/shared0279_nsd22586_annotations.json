@@ -7,6 +7,338 @@
   "timestamp": "2025-08-30T18:15:28.491232+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a cozy domestic scene, likely set in a home environment. The main subject is a ginger cat, curled up in a relaxed, almost fetal position, nestled inside an open suitcase. The suitcase, a dark gray or black color with visible wheels, sits on a wooden floor with a warm, natural tone. The cat's fur is a rich, warm orange, contrasting with the cool gray of the suitcase. The lighting is soft and natural, suggesting daytime, with a slight shadow cast by the suitcase, adding depth to the composition. In the background, there's a glimpse of a patterned rug with earthy tones and a dark wooden piece of furniture, possibly a dresser or cabinet, adding to the homey atmosphere. The overall composition is casual and intimate, focusing on the cat's peaceful slumber and the everyday setting of a lived-in home.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 174,
+            "total_tokens": 471
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1387.86067,
+            "prompt_eval_duration_ms": 81.133267,
+            "generation_duration_ms": 1267.322877,
+            "load_duration_ms": 36.999601,
+            "tokens_per_second": 137.29729270877826
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, a ginger cat is curled up comfortably inside an open, black suitcase, its body stretched out as it rests on a crumpled white sheet that lies at the bottom of the suitcase. The suitcase, with its sturdy wheels and metallic latches, is placed on a light brown wooden floor, which provides a warm and natural contrast to the dark suitcase and the vibrant orange fur of the cat. The background, slightly out of focus, reveals a glimpse of a room with a patterned rug in shades of red, beige, and green, partially covered by a red blanket and a pile of colorful clothes, suggesting a lived-in and cozy environment. The cat's relaxed posture and the casual arrangement of the clothes and blanket in the background create a sense of domestic tranquility, with the foreground cat serving as a focal point amidst the soft, homey backdrop.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 175,
+            "total_tokens": 478
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1353.312781,
+            "prompt_eval_duration_ms": 30.311484,
+            "generation_duration_ms": 1280.91879,
+            "load_duration_ms": 39.699047,
+            "tokens_per_second": 136.62068303330923
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a ginger cat is curled up comfortably inside an open suitcase, appearing to be asleep or resting. The suitcase is placed on a wooden floor, and the cat's relaxed posture suggests it feels secure and cozy within the confined space. The cat's interaction with the suitcase is passive; it is not actively engaging with the object but rather using it as a makeshift bed. The surrounding area includes a patterned rug and some scattered clothes, indicating a domestic setting. There are no people visible in the image, so the cat's actions are not influenced by human interaction. The relationship between the cat and the suitcase is one of mutual benefit; the cat finds comfort in the suitcase, and the suitcase provides a sheltered spot for the cat. The scene captures a quiet, peaceful moment in a home environment where the cat has found a unique and comfortable resting place.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 174,
+            "total_tokens": 480
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1360.876305,
+            "prompt_eval_duration_ms": 31.742007,
+            "generation_duration_ms": 1289.438436,
+            "load_duration_ms": 37.00411,
+            "tokens_per_second": 134.94246420928002
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of warmth and tranquility, with a touch of humor and comfort. The orange tabby cat curled up in the open suitcase suggests a feeling of safety and contentment, as cats are known for their love of cozy spaces. The soft lighting and the casual setting of the room, with clothes scattered around, add to the relaxed and homely atmosphere. The cat's peaceful posture and the gentle way it fits into the suitcase convey a sense of ease and comfort, which can be very soothing to the viewer. The overall tone is decidedly positive, as the image radiates a sense of domestic peace and the simple joys of a pet's contentment. The visual elements, such as the cat's relaxed pose, the soft colors of the room, and the casual disarray of clothes, all contribute to a mood of comfort and domestic bliss.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 174,
+            "total_tokens": 482
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1354.942856,
+            "prompt_eval_duration_ms": 30.364948,
+            "generation_duration_ms": 1282.348745,
+            "load_duration_ms": 39.679898,
+            "tokens_per_second": 135.68851740093527
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"cat\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"orange\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"sleeping curled up in an open suitcase\"\n    }\n  },\n  \"man-made\": {\n    \"suitcase\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"black\", \"gray\"],\n      \"size\": \"large\",\n      \"description\": \"open suitcase with cat inside\"\n    },\n    \"clothing\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"red\", \"pink\", \"blue\"],\n      \"size\": \"small\",\n      \"description\": \"pile of clothes on the floor\"\n    },\n    \"floor\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"wooden floor\"\n    },\n    \"dresser\": {\n      \"count\": 1,\n      \"location\": \"top right\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"dark wooden dresser\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "cat": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "orange",
+                  "white"
+                ],
+                "size": "large",
+                "description": "sleeping curled up in an open suitcase"
+              }
+            },
+            "man-made": {
+              "suitcase": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "black",
+                  "gray"
+                ],
+                "size": "large",
+                "description": "open suitcase with cat inside"
+              },
+              "clothing": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "red",
+                  "pink",
+                  "blue"
+                ],
+                "size": "small",
+                "description": "pile of clothes on the floor"
+              },
+              "floor": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "wooden floor"
+              },
+              "dresser": {
+                "count": 1,
+                "location": "top right",
+                "color": [
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "dark wooden dresser"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 268,
+            "total_tokens": 754
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2053.128269,
+            "prompt_eval_duration_ms": 44.99893,
+            "generation_duration_ms": 1966.682139,
+            "load_duration_ms": 38.318081,
+            "tokens_per_second": 136.270114364424
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2665,
+        "total_time_ms": 7510.120881,
+        "average_speed": 136.16381434334534
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a cozy indoor setting, likely a bedroom or living area, with warm and inviting lighting that creates a relaxed atmosphere. The main focus is an orange tabby cat curled up inside an open, black rolling suitcase. The cat is nestled comfortably on a white piece of clothing, possibly a shirt or towel, which is placed inside the suitcase. The suitcase is positioned on a light wooden floor, which adds a natural and warm tone to the scene.\n\nIn the background, there is a patterned rug with earthy tones, including reds, browns, and hints of green, contributing to the homey feel. Various clothing items, including a pink and blue garment, are scattered on the rug, suggesting a casual, lived-in environment. A portion of a wooden dresser or cabinet is visible on the right side of the image, adding to the domestic setting. The lighting is soft and diffused, likely from an indoor source, casting gentle shadows and enhancing the warmth of the scene. The overall composition is centered around the cat, which appears relaxed and content, creating a sense of calm and comfort. The juxtaposition of the cat in the suitcase adds a playful and whimsical element to the image.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 243,
+            "total_tokens": 540
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12681.262816,
+            "prompt_eval_duration_ms": 3558.116264,
+            "generation_duration_ms": 9081.171851,
+            "load_duration_ms": 39.045707,
+            "tokens_per_second": 26.75866110531113
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a black suitcase with a gray interior, positioned open on a light wooden floor. A ginger tabby cat is nestled inside the suitcase, appearing comfortable and relaxed. The cat's body is curled up, with its head resting on the edge of the suitcase, suggesting a sense of security or curiosity about the space. The suitcase's wheels are visible, indicating it is designed for travel, and the overall setting implies a domestic environment.\n\nIn the background, the setting transitions to a carpeted area with a patterned rug featuring warm tones and intricate designs. On the rug, there are various items, including what appears to be clothing or fabric in soft colors like pink, blue, and red. A piece of furniture, possibly a dresser or cabinet, is partially visible on the right side of the image, adding to the domestic atmosphere. The background elements, including the rug and scattered items, suggest a lived-in space, likely a bedroom or a similar area.\n\nThe relationship between the foreground and background is one of contrast and connection. The foreground focuses on the cat and the suitcase, symbolizing a moment of rest or play, while the background provides context, indicating the cat's home environment. The open suitcase in the foreground hints at the possibility of travel or movement, contrasting with the stationary, cozy background. The cat's presence in the suitcase bridges these elements, creating a narrative of curiosity or companionship amidst the domestic setting. The overall composition suggests a quiet, everyday moment captured in a home setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 307,
+            "total_tokens": 610
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11539.074046,
+            "prompt_eval_duration_ms": 76.821217,
+            "generation_duration_ms": 11420.856305,
+            "load_duration_ms": 38.70076,
+            "tokens_per_second": 26.880646407012126
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a cozy indoor scene featuring a cat and a suitcase, with some additional objects in the background. The main focus is on a ginger tabby cat comfortably nestled inside an open gray suitcase. The cat appears relaxed and is lying on its side, with its head resting on the edge of the suitcase, suggesting a sense of security and contentment. The suitcase is positioned on a wooden floor, and the cat's presence indicates a playful or curious interaction with the object, as cats are often drawn to enclosed spaces.\n\nIn the background, there are several objects, including a colorful patterned rug with a mix of red, yellow, and other vibrant hues, and a pile of clothing items, such as a pink shirt and a blue garment, scattered on the floor. These items suggest a lived-in, casual environment, possibly a bedroom or a living space. The cat's interaction with the suitcase could imply a playful or territorial behavior, as cats are known to claim spaces they find comfortable or interesting.\n\nThe overall scene conveys a sense of warmth and domesticity, with the cat's relaxed posture and the casual arrangement of objects in the background. The interaction between the cat and the suitcase highlights the cat's natural curiosity and tendency to explore or claim spaces, creating a charming and relatable moment. There are no visible people in the image, but the presence of personal items suggests that the space is inhabited by humans, who likely share a bond with the cat. The cat's behavior and the surrounding environment create a harmonious and endearing snapshot of everyday life.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 313,
+            "total_tokens": 619
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11736.206379,
+            "prompt_eval_duration_ms": 72.0493,
+            "generation_duration_ms": 11622.659731,
+            "load_duration_ms": 38.682362,
+            "tokens_per_second": 26.93015258505463
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a warm, cozy, and slightly humorous mood, evoking feelings of comfort, curiosity, and a touch of playfulness. The central subject, a ginger tabby cat, is nestled comfortably inside an open suitcase, seemingly at ease and unbothered by the human activity of packing or unpacking. The cat's relaxed posture, with its head resting on the edge of the suitcase, suggests a sense of trust and contentment, as if it is claiming the suitcase as its own personal resting spot. This behavior is often seen as endearing and amusing, as cats are known for their tendency to seek out small, enclosed spaces for comfort.\n\nThe visual elements contributing to this emotional atmosphere include the soft lighting, which creates a warm and inviting ambiance, and the rich textures of the wooden floor and patterned rug, adding to the homely feel. The suitcase itself, partially filled with clothes, hints at a sense of travel or transition, yet the cat's presence transforms this potentially stressful scenario into a lighthearted moment. The overall tone is positive, as the image captures a candid, relatable moment of domestic life that many pet owners can appreciate. The scene feels neutral in terms of tension, as the cat's calm demeanor and the orderly surroundings suggest a peaceful household environment. The image ultimately evokes a sense of warmth, humor, and the simple joys of pet ownership.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 283,
+            "total_tokens": 591
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10623.087111,
+            "prompt_eval_duration_ms": 74.110466,
+            "generation_duration_ms": 10508.009163,
+            "load_duration_ms": 38.31272,
+            "tokens_per_second": 26.931837954279484
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"cat\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"orange\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A tabby cat with white paws, sitting inside an open suitcase.\"\n    }\n  },\n  \"man-made\": {\n    \"suitcase\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"An open suitcase with wheels, containing a cat and some clothing.\"\n    },\n    \"clothing\": {\n      \"count\": 3,\n      \"location\": \"top\",\n      \"color\": [\"pink\", \"blue\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"Clothing items (shirts or blankets) on a surface in the background.\"\n    },\n    \"furniture\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"A wooden cabinet or dresser in the background.\"\n    },\n    \"rug\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"red\", \"black\"],\n      \"size\": \"large\",\n      \"description\": \"A patterned rug on the floor in the background.\"\n    }\n  },\n  \"natural\": {\n    \"wooden_floor\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"A wooden floor covering the bottom part of the image.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "cat": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "orange",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "A tabby cat with white paws, sitting inside an open suitcase."
+              }
+            },
+            "man-made": {
+              "suitcase": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black",
+                  "gray"
+                ],
+                "size": "medium",
+                "description": "An open suitcase with wheels, containing a cat and some clothing."
+              },
+              "clothing": {
+                "count": 3,
+                "location": "top",
+                "color": [
+                  "pink",
+                  "blue",
+                  "white"
+                ],
+                "size": "small",
+                "description": "Clothing items (shirts or blankets) on a surface in the background."
+              },
+              "furniture": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "A wooden cabinet or dresser in the background."
+              },
+              "rug": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "red",
+                  "black"
+                ],
+                "size": "large",
+                "description": "A patterned rug on the floor in the background."
+              }
+            },
+            "natural": {
+              "wooden_floor": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "A wooden floor covering the bottom part of the image."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 364,
+            "total_tokens": 850
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13732.807928,
+            "prompt_eval_duration_ms": 138.89972,
+            "generation_duration_ms": 13549.503921,
+            "load_duration_ms": 41.315708,
+            "tokens_per_second": 26.864452169045578
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3210,
+        "total_time_ms": 60312.43828,
+        "average_speed": 26.87315004414059
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -431,338 +763,6 @@
         "total_tokens": 2812,
         "total_time_ms": 25281.76617,
         "average_speed": 42.3382677845259
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a cozy domestic scene, likely set in a home environment. The main subject is a ginger cat, curled up in a relaxed, almost fetal position, nestled inside an open suitcase. The suitcase, a dark gray or black color with visible wheels, sits on a wooden floor with a warm, natural tone. The cat's fur is a rich, warm orange, contrasting with the cool gray of the suitcase. The lighting is soft and natural, suggesting daytime, with a slight shadow cast by the suitcase, adding depth to the composition. In the background, there's a glimpse of a patterned rug with earthy tones and a dark wooden piece of furniture, possibly a dresser or cabinet, adding to the homey atmosphere. The overall composition is casual and intimate, focusing on the cat's peaceful slumber and the everyday setting of a lived-in home.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 174,
-            "total_tokens": 471
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1387.86067,
-            "prompt_eval_duration_ms": 81.133267,
-            "generation_duration_ms": 1267.322877,
-            "load_duration_ms": 36.999601,
-            "tokens_per_second": 137.29729270877826
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, a ginger cat is curled up comfortably inside an open, black suitcase, its body stretched out as it rests on a crumpled white sheet that lies at the bottom of the suitcase. The suitcase, with its sturdy wheels and metallic latches, is placed on a light brown wooden floor, which provides a warm and natural contrast to the dark suitcase and the vibrant orange fur of the cat. The background, slightly out of focus, reveals a glimpse of a room with a patterned rug in shades of red, beige, and green, partially covered by a red blanket and a pile of colorful clothes, suggesting a lived-in and cozy environment. The cat's relaxed posture and the casual arrangement of the clothes and blanket in the background create a sense of domestic tranquility, with the foreground cat serving as a focal point amidst the soft, homey backdrop.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 175,
-            "total_tokens": 478
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1353.312781,
-            "prompt_eval_duration_ms": 30.311484,
-            "generation_duration_ms": 1280.91879,
-            "load_duration_ms": 39.699047,
-            "tokens_per_second": 136.62068303330923
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a ginger cat is curled up comfortably inside an open suitcase, appearing to be asleep or resting. The suitcase is placed on a wooden floor, and the cat's relaxed posture suggests it feels secure and cozy within the confined space. The cat's interaction with the suitcase is passive; it is not actively engaging with the object but rather using it as a makeshift bed. The surrounding area includes a patterned rug and some scattered clothes, indicating a domestic setting. There are no people visible in the image, so the cat's actions are not influenced by human interaction. The relationship between the cat and the suitcase is one of mutual benefit; the cat finds comfort in the suitcase, and the suitcase provides a sheltered spot for the cat. The scene captures a quiet, peaceful moment in a home environment where the cat has found a unique and comfortable resting place.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 174,
-            "total_tokens": 480
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1360.876305,
-            "prompt_eval_duration_ms": 31.742007,
-            "generation_duration_ms": 1289.438436,
-            "load_duration_ms": 37.00411,
-            "tokens_per_second": 134.94246420928002
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of warmth and tranquility, with a touch of humor and comfort. The orange tabby cat curled up in the open suitcase suggests a feeling of safety and contentment, as cats are known for their love of cozy spaces. The soft lighting and the casual setting of the room, with clothes scattered around, add to the relaxed and homely atmosphere. The cat's peaceful posture and the gentle way it fits into the suitcase convey a sense of ease and comfort, which can be very soothing to the viewer. The overall tone is decidedly positive, as the image radiates a sense of domestic peace and the simple joys of a pet's contentment. The visual elements, such as the cat's relaxed pose, the soft colors of the room, and the casual disarray of clothes, all contribute to a mood of comfort and domestic bliss.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 174,
-            "total_tokens": 482
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1354.942856,
-            "prompt_eval_duration_ms": 30.364948,
-            "generation_duration_ms": 1282.348745,
-            "load_duration_ms": 39.679898,
-            "tokens_per_second": 135.68851740093527
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"cat\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"orange\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"sleeping curled up in an open suitcase\"\n    }\n  },\n  \"man-made\": {\n    \"suitcase\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"black\", \"gray\"],\n      \"size\": \"large\",\n      \"description\": \"open suitcase with cat inside\"\n    },\n    \"clothing\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"red\", \"pink\", \"blue\"],\n      \"size\": \"small\",\n      \"description\": \"pile of clothes on the floor\"\n    },\n    \"floor\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"wooden floor\"\n    },\n    \"dresser\": {\n      \"count\": 1,\n      \"location\": \"top right\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"dark wooden dresser\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "cat": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "orange",
-                  "white"
-                ],
-                "size": "large",
-                "description": "sleeping curled up in an open suitcase"
-              }
-            },
-            "man-made": {
-              "suitcase": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "black",
-                  "gray"
-                ],
-                "size": "large",
-                "description": "open suitcase with cat inside"
-              },
-              "clothing": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "red",
-                  "pink",
-                  "blue"
-                ],
-                "size": "small",
-                "description": "pile of clothes on the floor"
-              },
-              "floor": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "wooden floor"
-              },
-              "dresser": {
-                "count": 1,
-                "location": "top right",
-                "color": [
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "dark wooden dresser"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 268,
-            "total_tokens": 754
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2053.128269,
-            "prompt_eval_duration_ms": 44.99893,
-            "generation_duration_ms": 1966.682139,
-            "load_duration_ms": 38.318081,
-            "tokens_per_second": 136.270114364424
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2665,
-        "total_time_ms": 7510.120881,
-        "average_speed": 136.16381434334534
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a cozy indoor setting, likely a bedroom or living area, with warm and inviting lighting that creates a relaxed atmosphere. The main focus is an orange tabby cat curled up inside an open, black rolling suitcase. The cat is nestled comfortably on a white piece of clothing, possibly a shirt or towel, which is placed inside the suitcase. The suitcase is positioned on a light wooden floor, which adds a natural and warm tone to the scene.\n\nIn the background, there is a patterned rug with earthy tones, including reds, browns, and hints of green, contributing to the homey feel. Various clothing items, including a pink and blue garment, are scattered on the rug, suggesting a casual, lived-in environment. A portion of a wooden dresser or cabinet is visible on the right side of the image, adding to the domestic setting. The lighting is soft and diffused, likely from an indoor source, casting gentle shadows and enhancing the warmth of the scene. The overall composition is centered around the cat, which appears relaxed and content, creating a sense of calm and comfort. The juxtaposition of the cat in the suitcase adds a playful and whimsical element to the image.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 243,
-            "total_tokens": 540
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12681.262816,
-            "prompt_eval_duration_ms": 3558.116264,
-            "generation_duration_ms": 9081.171851,
-            "load_duration_ms": 39.045707,
-            "tokens_per_second": 26.75866110531113
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a black suitcase with a gray interior, positioned open on a light wooden floor. A ginger tabby cat is nestled inside the suitcase, appearing comfortable and relaxed. The cat's body is curled up, with its head resting on the edge of the suitcase, suggesting a sense of security or curiosity about the space. The suitcase's wheels are visible, indicating it is designed for travel, and the overall setting implies a domestic environment.\n\nIn the background, the setting transitions to a carpeted area with a patterned rug featuring warm tones and intricate designs. On the rug, there are various items, including what appears to be clothing or fabric in soft colors like pink, blue, and red. A piece of furniture, possibly a dresser or cabinet, is partially visible on the right side of the image, adding to the domestic atmosphere. The background elements, including the rug and scattered items, suggest a lived-in space, likely a bedroom or a similar area.\n\nThe relationship between the foreground and background is one of contrast and connection. The foreground focuses on the cat and the suitcase, symbolizing a moment of rest or play, while the background provides context, indicating the cat's home environment. The open suitcase in the foreground hints at the possibility of travel or movement, contrasting with the stationary, cozy background. The cat's presence in the suitcase bridges these elements, creating a narrative of curiosity or companionship amidst the domestic setting. The overall composition suggests a quiet, everyday moment captured in a home setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 307,
-            "total_tokens": 610
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11539.074046,
-            "prompt_eval_duration_ms": 76.821217,
-            "generation_duration_ms": 11420.856305,
-            "load_duration_ms": 38.70076,
-            "tokens_per_second": 26.880646407012126
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a cozy indoor scene featuring a cat and a suitcase, with some additional objects in the background. The main focus is on a ginger tabby cat comfortably nestled inside an open gray suitcase. The cat appears relaxed and is lying on its side, with its head resting on the edge of the suitcase, suggesting a sense of security and contentment. The suitcase is positioned on a wooden floor, and the cat's presence indicates a playful or curious interaction with the object, as cats are often drawn to enclosed spaces.\n\nIn the background, there are several objects, including a colorful patterned rug with a mix of red, yellow, and other vibrant hues, and a pile of clothing items, such as a pink shirt and a blue garment, scattered on the floor. These items suggest a lived-in, casual environment, possibly a bedroom or a living space. The cat's interaction with the suitcase could imply a playful or territorial behavior, as cats are known to claim spaces they find comfortable or interesting.\n\nThe overall scene conveys a sense of warmth and domesticity, with the cat's relaxed posture and the casual arrangement of objects in the background. The interaction between the cat and the suitcase highlights the cat's natural curiosity and tendency to explore or claim spaces, creating a charming and relatable moment. There are no visible people in the image, but the presence of personal items suggests that the space is inhabited by humans, who likely share a bond with the cat. The cat's behavior and the surrounding environment create a harmonious and endearing snapshot of everyday life.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 313,
-            "total_tokens": 619
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11736.206379,
-            "prompt_eval_duration_ms": 72.0493,
-            "generation_duration_ms": 11622.659731,
-            "load_duration_ms": 38.682362,
-            "tokens_per_second": 26.93015258505463
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a warm, cozy, and slightly humorous mood, evoking feelings of comfort, curiosity, and a touch of playfulness. The central subject, a ginger tabby cat, is nestled comfortably inside an open suitcase, seemingly at ease and unbothered by the human activity of packing or unpacking. The cat's relaxed posture, with its head resting on the edge of the suitcase, suggests a sense of trust and contentment, as if it is claiming the suitcase as its own personal resting spot. This behavior is often seen as endearing and amusing, as cats are known for their tendency to seek out small, enclosed spaces for comfort.\n\nThe visual elements contributing to this emotional atmosphere include the soft lighting, which creates a warm and inviting ambiance, and the rich textures of the wooden floor and patterned rug, adding to the homely feel. The suitcase itself, partially filled with clothes, hints at a sense of travel or transition, yet the cat's presence transforms this potentially stressful scenario into a lighthearted moment. The overall tone is positive, as the image captures a candid, relatable moment of domestic life that many pet owners can appreciate. The scene feels neutral in terms of tension, as the cat's calm demeanor and the orderly surroundings suggest a peaceful household environment. The image ultimately evokes a sense of warmth, humor, and the simple joys of pet ownership.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 283,
-            "total_tokens": 591
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10623.087111,
-            "prompt_eval_duration_ms": 74.110466,
-            "generation_duration_ms": 10508.009163,
-            "load_duration_ms": 38.31272,
-            "tokens_per_second": 26.931837954279484
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"cat\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"orange\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A tabby cat with white paws, sitting inside an open suitcase.\"\n    }\n  },\n  \"man-made\": {\n    \"suitcase\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"An open suitcase with wheels, containing a cat and some clothing.\"\n    },\n    \"clothing\": {\n      \"count\": 3,\n      \"location\": \"top\",\n      \"color\": [\"pink\", \"blue\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"Clothing items (shirts or blankets) on a surface in the background.\"\n    },\n    \"furniture\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"A wooden cabinet or dresser in the background.\"\n    },\n    \"rug\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"red\", \"black\"],\n      \"size\": \"large\",\n      \"description\": \"A patterned rug on the floor in the background.\"\n    }\n  },\n  \"natural\": {\n    \"wooden_floor\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"A wooden floor covering the bottom part of the image.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "cat": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "orange",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "A tabby cat with white paws, sitting inside an open suitcase."
-              }
-            },
-            "man-made": {
-              "suitcase": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black",
-                  "gray"
-                ],
-                "size": "medium",
-                "description": "An open suitcase with wheels, containing a cat and some clothing."
-              },
-              "clothing": {
-                "count": 3,
-                "location": "top",
-                "color": [
-                  "pink",
-                  "blue",
-                  "white"
-                ],
-                "size": "small",
-                "description": "Clothing items (shirts or blankets) on a surface in the background."
-              },
-              "furniture": {
-                "count": 1,
-                "location": "right",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "A wooden cabinet or dresser in the background."
-              },
-              "rug": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "red",
-                  "black"
-                ],
-                "size": "large",
-                "description": "A patterned rug on the floor in the background."
-              }
-            },
-            "natural": {
-              "wooden_floor": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "A wooden floor covering the bottom part of the image."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 364,
-            "total_tokens": 850
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13732.807928,
-            "prompt_eval_duration_ms": 138.89972,
-            "generation_duration_ms": 13549.503921,
-            "load_duration_ms": 41.315708,
-            "tokens_per_second": 26.864452169045578
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3210,
-        "total_time_ms": 60312.43828,
-        "average_speed": 26.87315004414059
       }
     },
     {

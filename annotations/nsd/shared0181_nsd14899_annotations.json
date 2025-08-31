@@ -7,6 +7,296 @@
   "timestamp": "2025-08-30T17:21:20.869975+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a close-up of an oystercatcher, a bird with a distinctive black head, white underbelly, and a bright orange bill, standing on the edge of a shallow, rippling body of water. The bird's posture is dynamic, with one leg extended forward, suggesting movement or balance as it steps along the wet sand. The background is a soft blur of water, reflecting the light and creating a sense of depth. The lighting is natural and appears to be from a low angle, possibly early morning or late afternoon, casting a warm glow on the bird and highlighting its features. The colors are rich and earthy, with the dark brown of the bird's back contrasting against the white of its underbelly and the muted tones of the water and sand. The composition is centered on the bird, with the shallow depth of field blurring the background, drawing the viewer's attention to the subject. The overall impression is one of tranquility and natural beauty, capturing a moment of the bird's life in its natural habitat.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 212,
+            "total_tokens": 509
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1664.008267,
+            "prompt_eval_duration_ms": 79.449438,
+            "generation_duration_ms": 1544.106204,
+            "load_duration_ms": 38.118729,
+            "tokens_per_second": 137.2962555624833
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the primary subject is a black and white oystercatcher, a bird with a distinctive orange beak and legs, standing on the edge of a shallow, rippling body of water. The bird's posture suggests it is either searching for food or observing its surroundings. The water's surface is textured with ripples and small waves, indicating a gentle breeze or current. The bird's reflection is faintly visible on the wet sand, adding depth to the scene. The sand itself appears dark and textured, with small pebbles and debris scattered around, suggesting a natural, untamed environment. \n\nIn the background, the water extends into the distance, its surface a mix of light and dark tones, reflecting the sky and possibly the surrounding landscape. The horizon is not clearly defined, but the water's texture and color suggest a vast, open setting. The background elements provide a sense of space and context, contrasting with the detailed foreground and emphasizing the bird's solitary presence in its natural habitat. The interplay between the bird, the water, and the distant background creates a harmonious composition that draws the viewer's eye from the immediate foreground to the broader setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 241,
+            "total_tokens": 544
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1845.146738,
+            "prompt_eval_duration_ms": 29.673737,
+            "generation_duration_ms": 1773.743737,
+            "load_duration_ms": 39.018932,
+            "tokens_per_second": 135.8708109704801
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a solitary oystercatcher, a bird with a distinctive black head, white underbelly, and a bright orange bill, standing on the edge of a shallow, rippling body of water. The bird appears to be foraging, its head lowered as it searches the wet sand and small rocks for food, possibly mussels or other small invertebrates. The water ripples gently around the bird, suggesting a light breeze or the movement of the tide. There are no other animals or people visible in the image, and the bird's interaction with its environment is the primary focus. The bird's actions are natural and undisturbed, highlighting its role as a predator in its habitat. The scene is tranquil, with the bird's presence adding a dynamic element to the otherwise serene landscape.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 163,
+            "total_tokens": 469
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1284.398607,
+            "prompt_eval_duration_ms": 29.944101,
+            "generation_duration_ms": 1212.73925,
+            "load_duration_ms": 39.150871,
+            "tokens_per_second": 134.40646866175067
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of tranquility and harmony with nature, contributing to a positive emotional atmosphere. The oystercatcher, a bird known for its distinctive black and white plumage and vibrant orange bill, stands gracefully on the edge of the water, its posture suggesting a calm and deliberate movement. The soft, gentle waves in the background and the subtle reflections on the wet sand add to the serene mood, creating a peaceful and contemplative scene. The bird's solitary presence on the beach, coupled with the natural lighting that highlights its features, evokes feelings of solitude and introspection, yet the overall tone is uplifting and serene, as if inviting the viewer to pause and appreciate the beauty of the natural world. The contrast between the bird's bold colors and the muted tones of the environment further enhances the sense of balance and harmony, reinforcing the positive emotional impact of the image.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 178,
+            "total_tokens": 486
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1384.706664,
+            "prompt_eval_duration_ms": 31.233372,
+            "generation_duration_ms": 1313.881283,
+            "load_duration_ms": 36.707893,
+            "tokens_per_second": 135.47647135483246
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"bird\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"white\", \"orange\"],\n      \"size\": \"medium\",\n      \"description\": \"standing on the beach with a long orange beak and webbed feet\"\n    }\n  },\n  \"natural\": {\n    \"water\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\", \"gray\"],\n      \"size\": \"large\",\n      \"description\": \"waves gently lapping at the shore\"\n    },\n    \"sand\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"visible in the foreground\"\n    },\n    \"seaweed\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"scattered on the sand\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "bird": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black",
+                  "white",
+                  "orange"
+                ],
+                "size": "medium",
+                "description": "standing on the beach with a long orange beak and webbed feet"
+              }
+            },
+            "natural": {
+              "water": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "blue",
+                  "gray"
+                ],
+                "size": "large",
+                "description": "waves gently lapping at the shore"
+              },
+              "sand": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "brown"
+                ],
+                "size": "small",
+                "description": "visible in the foreground"
+              },
+              "seaweed": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "brown"
+                ],
+                "size": "small",
+                "description": "scattered on the sand"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 226,
+            "total_tokens": 712
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1748.70121,
+            "prompt_eval_duration_ms": 44.700618,
+            "generation_duration_ms": 1663.19697,
+            "load_duration_ms": 37.858032,
+            "tokens_per_second": 135.88288343262192
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2720,
+        "total_time_ms": 7926.961486,
+        "average_speed": 135.7865779964337
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a bird standing on a sandy shoreline, with the calm, shallow water of a coastal area in the background. The setting appears serene, with gentle ripples visible on the water's surface, suggesting a tranquil, possibly early morning or late afternoon scene. The lighting is soft and warm, casting a gentle glow on the bird and the surrounding environment, which enhances the natural beauty of the scene.\n\nThe main subject is a bird, likely an oystercatcher, characterized by its striking features. It has a long, bright orange beak that stands out vividly against its dark head and neck. The bird's body is predominantly white, with a sharp contrast to its black head and upper body. Its legs are slender and pale, blending subtly with the sandy shore. The bird is positioned in profile, facing left, giving a clear view of its distinctive coloration and form.\n\nThe composition is balanced, with the bird centrally placed, drawing the viewer's attention immediately. The background consists of the water, which occupies the upper portion of the image, and the sandy shore in the foreground. The water's surface is textured with subtle waves, adding depth and movement to the scene. The sandy shore is dotted with small rocks and debris, adding a touch of natural ruggedness to the otherwise smooth landscape. The overall mood of the image is peaceful and natural, capturing a moment of quiet solitude in a coastal habitat.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 285,
+            "total_tokens": 582
+          },
+          "performance_metrics": {
+            "total_duration_ms": 14168.07184,
+            "prompt_eval_duration_ms": 3494.429906,
+            "generation_duration_ms": 10632.600932,
+            "load_duration_ms": 38.580104,
+            "tokens_per_second": 26.804354063760698
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a bird, likely an oystercatcher, standing on a wet, sandy shore. The bird is the primary subject, with its striking features clearly visible: a black head and neck, white underbelly, and a bright orange beak. Its legs are partially submerged in shallow water, emphasizing its proximity to the viewer. The sandy shore and wet surface reflect the light, adding texture and depth to the foreground. In the immediate foreground, there are scattered dark objects, possibly rocks or driftwood, which add contrast and detail to the scene.\n\nThe background consists of a calm body of water, likely a coastal area, extending into the distance. The water appears smooth, with gentle ripples, suggesting a tranquil environment. The horizon is visible, separating the water from the sky, which is not directly visible but implied by the lighting. The background provides a serene and expansive setting, contrasting with the detailed and dynamic foreground. The bird's position on the shore connects the two layers, as it bridges the land and water, symbolizing the interaction between terrestrial and aquatic ecosystems. The overall composition creates a harmonious balance, with the bird as the focal point against the vast, peaceful backdrop of the water.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 250,
+            "total_tokens": 553
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9446.686525,
+            "prompt_eval_duration_ms": 73.752971,
+            "generation_duration_ms": 9331.443302,
+            "load_duration_ms": 39.159096,
+            "tokens_per_second": 26.791139581421206
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a single bird, specifically an oystercatcher, standing on a sandy shoreline near the water's edge. The bird is the central focus of the image, showcasing its distinctive features: a long, bright orange beak, a black head and chest, and a white underbelly. The oystercatcher appears to be foraging or searching for food in the shallow water, as its legs are partially submerged in the wet sand. The bird's posture suggests it is alert and engaged in its natural behavior of hunting for shellfish or other small marine creatures.\n\nThere are no people visible in the image, and the primary interaction is between the oystercatcher and its environment. The bird's proximity to the water indicates its dependence on the coastal habitat for sustenance. The sandy shore and the gentle waves in the background suggest a calm, natural setting, emphasizing the bird's connection to its ecosystem. The oystercatcher's bright orange beak stands out against the muted tones of the sand and water, drawing attention to its role as a predator in this coastal environment. The overall scene captures the bird's solitary presence and its harmonious relationship with the natural world.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 239,
+            "total_tokens": 545
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9038.181072,
+            "prompt_eval_duration_ms": 72.6534,
+            "generation_duration_ms": 8921.266067,
+            "load_duration_ms": 40.649033,
+            "tokens_per_second": 26.78991952544352
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image of the oystercatcher standing on a sandy shore conveys a serene and contemplative mood. The bird's poised stance, with its bright orange beak and striking black-and-white plumage, creates a sense of calm and natural beauty. The soft, muted tones of the water and the gentle ripples in the background contribute to a tranquil atmosphere, evoking feelings of peace and solitude. The lighting, which appears to be warm and soft, enhances the overall sense of calm, suggesting either early morning or late afternoon, times often associated with quiet reflection. The contrast between the bird's vibrant colors and the subdued background draws attention to the subject, emphasizing its elegance and resilience in a natural setting. The overall tone is neutral to slightly positive, as the image does not evoke strong emotions but rather invites the viewer to appreciate the simple beauty of nature. The visual elements, such as the bird's striking appearance, the calm water, and the soft lighting, all work together to create a mood of quiet contemplation and appreciation for the natural world.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 212,
+            "total_tokens": 520
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8031.296101,
+            "prompt_eval_duration_ms": 74.003945,
+            "generation_duration_ms": 7913.482618,
+            "load_duration_ms": 39.427264,
+            "tokens_per_second": 26.789722077329774
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"bird\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\", \"white\", \"orange\"],\n      \"size\": \"medium\",\n      \"description\": \"A bird with a black head and back, white underparts, and a bright orange beak standing in shallow water.\"\n    }\n  },\n  \"natural\": {\n    \"water\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"A body of water with gentle ripples.\"\n    },\n    \"shoreline\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"A sandy or muddy shoreline with some debris.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "bird": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "black",
+                  "white",
+                  "orange"
+                ],
+                "size": "medium",
+                "description": "A bird with a black head and back, white underparts, and a bright orange beak standing in shallow water."
+              }
+            },
+            "natural": {
+              "water": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "A body of water with gentle ripples."
+              },
+              "shoreline": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "A sandy or muddy shoreline with some debris."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 192,
+            "total_tokens": 678
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7277.79722,
+            "prompt_eval_duration_ms": 133.823057,
+            "generation_duration_ms": 7102.304829,
+            "load_duration_ms": 38.635708,
+            "tokens_per_second": 27.033477810756466
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2878,
+        "total_time_ms": 47962.032758,
+        "average_speed": 26.84172261174233
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -455,296 +745,6 @@
         "total_tokens": 2749,
         "total_time_ms": 23857.701734000002,
         "average_speed": 42.22512708130561
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a close-up of an oystercatcher, a bird with a distinctive black head, white underbelly, and a bright orange bill, standing on the edge of a shallow, rippling body of water. The bird's posture is dynamic, with one leg extended forward, suggesting movement or balance as it steps along the wet sand. The background is a soft blur of water, reflecting the light and creating a sense of depth. The lighting is natural and appears to be from a low angle, possibly early morning or late afternoon, casting a warm glow on the bird and highlighting its features. The colors are rich and earthy, with the dark brown of the bird's back contrasting against the white of its underbelly and the muted tones of the water and sand. The composition is centered on the bird, with the shallow depth of field blurring the background, drawing the viewer's attention to the subject. The overall impression is one of tranquility and natural beauty, capturing a moment of the bird's life in its natural habitat.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 212,
-            "total_tokens": 509
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1664.008267,
-            "prompt_eval_duration_ms": 79.449438,
-            "generation_duration_ms": 1544.106204,
-            "load_duration_ms": 38.118729,
-            "tokens_per_second": 137.2962555624833
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the primary subject is a black and white oystercatcher, a bird with a distinctive orange beak and legs, standing on the edge of a shallow, rippling body of water. The bird's posture suggests it is either searching for food or observing its surroundings. The water's surface is textured with ripples and small waves, indicating a gentle breeze or current. The bird's reflection is faintly visible on the wet sand, adding depth to the scene. The sand itself appears dark and textured, with small pebbles and debris scattered around, suggesting a natural, untamed environment. \n\nIn the background, the water extends into the distance, its surface a mix of light and dark tones, reflecting the sky and possibly the surrounding landscape. The horizon is not clearly defined, but the water's texture and color suggest a vast, open setting. The background elements provide a sense of space and context, contrasting with the detailed foreground and emphasizing the bird's solitary presence in its natural habitat. The interplay between the bird, the water, and the distant background creates a harmonious composition that draws the viewer's eye from the immediate foreground to the broader setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 241,
-            "total_tokens": 544
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1845.146738,
-            "prompt_eval_duration_ms": 29.673737,
-            "generation_duration_ms": 1773.743737,
-            "load_duration_ms": 39.018932,
-            "tokens_per_second": 135.8708109704801
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a solitary oystercatcher, a bird with a distinctive black head, white underbelly, and a bright orange bill, standing on the edge of a shallow, rippling body of water. The bird appears to be foraging, its head lowered as it searches the wet sand and small rocks for food, possibly mussels or other small invertebrates. The water ripples gently around the bird, suggesting a light breeze or the movement of the tide. There are no other animals or people visible in the image, and the bird's interaction with its environment is the primary focus. The bird's actions are natural and undisturbed, highlighting its role as a predator in its habitat. The scene is tranquil, with the bird's presence adding a dynamic element to the otherwise serene landscape.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 163,
-            "total_tokens": 469
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1284.398607,
-            "prompt_eval_duration_ms": 29.944101,
-            "generation_duration_ms": 1212.73925,
-            "load_duration_ms": 39.150871,
-            "tokens_per_second": 134.40646866175067
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of tranquility and harmony with nature, contributing to a positive emotional atmosphere. The oystercatcher, a bird known for its distinctive black and white plumage and vibrant orange bill, stands gracefully on the edge of the water, its posture suggesting a calm and deliberate movement. The soft, gentle waves in the background and the subtle reflections on the wet sand add to the serene mood, creating a peaceful and contemplative scene. The bird's solitary presence on the beach, coupled with the natural lighting that highlights its features, evokes feelings of solitude and introspection, yet the overall tone is uplifting and serene, as if inviting the viewer to pause and appreciate the beauty of the natural world. The contrast between the bird's bold colors and the muted tones of the environment further enhances the sense of balance and harmony, reinforcing the positive emotional impact of the image.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 178,
-            "total_tokens": 486
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1384.706664,
-            "prompt_eval_duration_ms": 31.233372,
-            "generation_duration_ms": 1313.881283,
-            "load_duration_ms": 36.707893,
-            "tokens_per_second": 135.47647135483246
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"bird\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"white\", \"orange\"],\n      \"size\": \"medium\",\n      \"description\": \"standing on the beach with a long orange beak and webbed feet\"\n    }\n  },\n  \"natural\": {\n    \"water\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\", \"gray\"],\n      \"size\": \"large\",\n      \"description\": \"waves gently lapping at the shore\"\n    },\n    \"sand\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"visible in the foreground\"\n    },\n    \"seaweed\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"scattered on the sand\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "bird": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black",
-                  "white",
-                  "orange"
-                ],
-                "size": "medium",
-                "description": "standing on the beach with a long orange beak and webbed feet"
-              }
-            },
-            "natural": {
-              "water": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "blue",
-                  "gray"
-                ],
-                "size": "large",
-                "description": "waves gently lapping at the shore"
-              },
-              "sand": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "brown"
-                ],
-                "size": "small",
-                "description": "visible in the foreground"
-              },
-              "seaweed": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "brown"
-                ],
-                "size": "small",
-                "description": "scattered on the sand"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 226,
-            "total_tokens": 712
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1748.70121,
-            "prompt_eval_duration_ms": 44.700618,
-            "generation_duration_ms": 1663.19697,
-            "load_duration_ms": 37.858032,
-            "tokens_per_second": 135.88288343262192
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2720,
-        "total_time_ms": 7926.961486,
-        "average_speed": 135.7865779964337
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a bird standing on a sandy shoreline, with the calm, shallow water of a coastal area in the background. The setting appears serene, with gentle ripples visible on the water's surface, suggesting a tranquil, possibly early morning or late afternoon scene. The lighting is soft and warm, casting a gentle glow on the bird and the surrounding environment, which enhances the natural beauty of the scene.\n\nThe main subject is a bird, likely an oystercatcher, characterized by its striking features. It has a long, bright orange beak that stands out vividly against its dark head and neck. The bird's body is predominantly white, with a sharp contrast to its black head and upper body. Its legs are slender and pale, blending subtly with the sandy shore. The bird is positioned in profile, facing left, giving a clear view of its distinctive coloration and form.\n\nThe composition is balanced, with the bird centrally placed, drawing the viewer's attention immediately. The background consists of the water, which occupies the upper portion of the image, and the sandy shore in the foreground. The water's surface is textured with subtle waves, adding depth and movement to the scene. The sandy shore is dotted with small rocks and debris, adding a touch of natural ruggedness to the otherwise smooth landscape. The overall mood of the image is peaceful and natural, capturing a moment of quiet solitude in a coastal habitat.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 285,
-            "total_tokens": 582
-          },
-          "performance_metrics": {
-            "total_duration_ms": 14168.07184,
-            "prompt_eval_duration_ms": 3494.429906,
-            "generation_duration_ms": 10632.600932,
-            "load_duration_ms": 38.580104,
-            "tokens_per_second": 26.804354063760698
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a bird, likely an oystercatcher, standing on a wet, sandy shore. The bird is the primary subject, with its striking features clearly visible: a black head and neck, white underbelly, and a bright orange beak. Its legs are partially submerged in shallow water, emphasizing its proximity to the viewer. The sandy shore and wet surface reflect the light, adding texture and depth to the foreground. In the immediate foreground, there are scattered dark objects, possibly rocks or driftwood, which add contrast and detail to the scene.\n\nThe background consists of a calm body of water, likely a coastal area, extending into the distance. The water appears smooth, with gentle ripples, suggesting a tranquil environment. The horizon is visible, separating the water from the sky, which is not directly visible but implied by the lighting. The background provides a serene and expansive setting, contrasting with the detailed and dynamic foreground. The bird's position on the shore connects the two layers, as it bridges the land and water, symbolizing the interaction between terrestrial and aquatic ecosystems. The overall composition creates a harmonious balance, with the bird as the focal point against the vast, peaceful backdrop of the water.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 250,
-            "total_tokens": 553
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9446.686525,
-            "prompt_eval_duration_ms": 73.752971,
-            "generation_duration_ms": 9331.443302,
-            "load_duration_ms": 39.159096,
-            "tokens_per_second": 26.791139581421206
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a single bird, specifically an oystercatcher, standing on a sandy shoreline near the water's edge. The bird is the central focus of the image, showcasing its distinctive features: a long, bright orange beak, a black head and chest, and a white underbelly. The oystercatcher appears to be foraging or searching for food in the shallow water, as its legs are partially submerged in the wet sand. The bird's posture suggests it is alert and engaged in its natural behavior of hunting for shellfish or other small marine creatures.\n\nThere are no people visible in the image, and the primary interaction is between the oystercatcher and its environment. The bird's proximity to the water indicates its dependence on the coastal habitat for sustenance. The sandy shore and the gentle waves in the background suggest a calm, natural setting, emphasizing the bird's connection to its ecosystem. The oystercatcher's bright orange beak stands out against the muted tones of the sand and water, drawing attention to its role as a predator in this coastal environment. The overall scene captures the bird's solitary presence and its harmonious relationship with the natural world.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 239,
-            "total_tokens": 545
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9038.181072,
-            "prompt_eval_duration_ms": 72.6534,
-            "generation_duration_ms": 8921.266067,
-            "load_duration_ms": 40.649033,
-            "tokens_per_second": 26.78991952544352
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image of the oystercatcher standing on a sandy shore conveys a serene and contemplative mood. The bird's poised stance, with its bright orange beak and striking black-and-white plumage, creates a sense of calm and natural beauty. The soft, muted tones of the water and the gentle ripples in the background contribute to a tranquil atmosphere, evoking feelings of peace and solitude. The lighting, which appears to be warm and soft, enhances the overall sense of calm, suggesting either early morning or late afternoon, times often associated with quiet reflection. The contrast between the bird's vibrant colors and the subdued background draws attention to the subject, emphasizing its elegance and resilience in a natural setting. The overall tone is neutral to slightly positive, as the image does not evoke strong emotions but rather invites the viewer to appreciate the simple beauty of nature. The visual elements, such as the bird's striking appearance, the calm water, and the soft lighting, all work together to create a mood of quiet contemplation and appreciation for the natural world.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 212,
-            "total_tokens": 520
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8031.296101,
-            "prompt_eval_duration_ms": 74.003945,
-            "generation_duration_ms": 7913.482618,
-            "load_duration_ms": 39.427264,
-            "tokens_per_second": 26.789722077329774
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"bird\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\", \"white\", \"orange\"],\n      \"size\": \"medium\",\n      \"description\": \"A bird with a black head and back, white underparts, and a bright orange beak standing in shallow water.\"\n    }\n  },\n  \"natural\": {\n    \"water\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"A body of water with gentle ripples.\"\n    },\n    \"shoreline\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"A sandy or muddy shoreline with some debris.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "bird": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "black",
-                  "white",
-                  "orange"
-                ],
-                "size": "medium",
-                "description": "A bird with a black head and back, white underparts, and a bright orange beak standing in shallow water."
-              }
-            },
-            "natural": {
-              "water": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "A body of water with gentle ripples."
-              },
-              "shoreline": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "A sandy or muddy shoreline with some debris."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 192,
-            "total_tokens": 678
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7277.79722,
-            "prompt_eval_duration_ms": 133.823057,
-            "generation_duration_ms": 7102.304829,
-            "load_duration_ms": 38.635708,
-            "tokens_per_second": 27.033477810756466
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2878,
-        "total_time_ms": 47962.032758,
-        "average_speed": 26.84172261174233
       }
     },
     {

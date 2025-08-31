@@ -7,6 +7,377 @@
   "timestamp": "2025-08-30T18:23:56.477565+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a casual outdoor scene, likely in a park or a similar open space, under a clear sky with a few scattered clouds. The setting is relaxed and informal, with a group of individuals enjoying a meal together. The main elements include three men seated on a paved area, possibly a bench or a low wall, with one man in the foreground holding a plate of food, which appears to be a slice of pizza. The man in the foreground is wearing a light blue t-shirt with a graphic design that includes the word \"CURE\" and a stylized sunburst. The man in the middle is dressed in a white shirt and is turned slightly away, seemingly engaged in conversation or looking at something off-camera. The third man, seated further back, is wearing a blue t-shirt and is also focused on his plate of food. The background features a large tree with green foliage, suggesting it might be spring or summer. The lighting is natural and bright, indicative of daytime, with shadows suggesting the sun is at a midday position. The overall composition is candid and informal, capturing a moment of shared enjoyment in a peaceful outdoor setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 231,
+            "total_tokens": 528
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1803.58677,
+            "prompt_eval_duration_ms": 82.167545,
+            "generation_duration_ms": 1679.441468,
+            "load_duration_ms": 39.553944,
+            "tokens_per_second": 137.5457283873617
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, the viewer's attention is drawn to a group of individuals enjoying food outdoors. The closest person, wearing a blue t-shirt with a graphic design, is holding a plate with a slice of pizza, while another person in a white shirt sits beside him, also holding a plate with a similar slice of pizza. Both appear to be in a relaxed, casual setting, possibly a park or a public square, as suggested by the paved ground and the presence of other people in the distance. The background elements include a large tree, which provides a natural backdrop, and a building structure that hints at a public or urban environment. The sky is visible, indicating an overcast day, which adds a soft, diffused light to the scene. The relationship between the foreground and background elements is one of depth and perspective, with the foreground subjects in sharp focus and the background elements gradually becoming less distinct, creating a sense of space and environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 190,
+            "total_tokens": 493
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1468.601119,
+            "prompt_eval_duration_ms": 30.914694,
+            "generation_duration_ms": 1398.025001,
+            "load_duration_ms": 36.694273,
+            "tokens_per_second": 135.9060101672674
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a group of three young men are enjoying a casual outdoor meal in what appears to be a park or a similar open space. The man in the foreground, wearing a blue T-shirt with a graphic design, is holding a white paper plate with a slice of pizza and a fork, seemingly in the middle of a conversation or reacting to something, as his mouth is slightly open and his gaze directed towards someone or something off-camera. Behind him, another man in a white shirt is seated, also holding a plate with a slice of pizza and a fork, appearing to be engaged in his own meal or perhaps listening to the man in front. Further back, a third man in a blue shirt is seated on the ground, leaning back slightly, and seems to be in the process of eating or pausing in his meal. The setting is relaxed and informal, with the men sitting on the ground and enjoying their food in a communal setting. The background shows a tree and a building, suggesting an urban park environment. The interaction among the men is casual and friendly, indicative of a shared meal or a social gathering in a public space.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 230,
+            "total_tokens": 536
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1734.710868,
+            "prompt_eval_duration_ms": 32.321886,
+            "generation_duration_ms": 1659.32187,
+            "load_duration_ms": 38.883824,
+            "tokens_per_second": 138.61084106605549
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of casual, relaxed, and friendly camaraderie, suggesting a positive mood. The individuals are engaged in a shared activity, enjoying food outdoors, which often symbolizes leisure and enjoyment. The bright daylight and the greenery in the background contribute to a feeling of openness and tranquility, reinforcing the positive atmosphere. The casual attire of the individuals, with their t-shirts and jeans, adds to the laid-back, informal vibe, indicating a comfortable and informal gathering. The presence of other people in the background, though blurred, suggests a public space where such social interactions are common and accepted, further enhancing the sense of community and shared experience. The overall tone is decidedly positive, as the image captures a moment of simple pleasure and social connection, free from the stress and tension that might be associated with more formal or competitive settings.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 171,
+            "total_tokens": 479
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1322.739205,
+            "prompt_eval_duration_ms": 32.622702,
+            "generation_duration_ms": 1247.837245,
+            "load_duration_ms": 39.890963,
+            "tokens_per_second": 137.037102142275
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 3,\n      \"location\": [\"left\", \"center\", \"background\"],\n      \"color\": [\"blue\", \"white\", \"blue\"],\n      \"size\": [\"large\", \"medium\", \"small\"],\n      \"description\": [\"sitting, eating pizza\", \"standing, eating pizza\", \"sitting, eating pizza\"]\n    }\n  },\n  \"man-made\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"tall, leafy\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear\"\n    },\n    \"ground\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"paved\"\n    },\n    \"plate\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"holding pizza slice\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"tall, leafy\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 3,
+                "location": [
+                  "left",
+                  "center",
+                  "background"
+                ],
+                "color": [
+                  "blue",
+                  "white",
+                  "blue"
+                ],
+                "size": [
+                  "large",
+                  "medium",
+                  "small"
+                ],
+                "description": [
+                  "sitting, eating pizza",
+                  "standing, eating pizza",
+                  "sitting, eating pizza"
+                ]
+              }
+            },
+            "man-made": {
+              "tree": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "tall, leafy"
+              },
+              "sky": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "clear"
+              },
+              "ground": {
+                "count": 1,
+                "location": "foreground",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "paved"
+              },
+              "plate": {
+                "count": 1,
+                "location": "foreground",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "holding pizza slice"
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "tall, leafy"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 327,
+            "total_tokens": 813
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2449.592871,
+            "prompt_eval_duration_ms": 43.576511,
+            "generation_duration_ms": 2360.87125,
+            "load_duration_ms": 42.021755,
+            "tokens_per_second": 138.50818844949717
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2849,
+        "total_time_ms": 8779.230833,
+        "average_speed": 137.52157404249135
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a casual outdoor setting where a group of young men is enjoying food together on a sunny day. The scene is set in a public space, likely a park or plaza, with a paved area in the foreground and a grassy lawn and trees in the background. The lighting is bright and natural, suggesting it is daytime, with clear skies visible above.\n\nIn the foreground, a man with long, light brown hair is prominently featured. He is wearing a blue T-shirt with a graphic design and is holding a plate with food, possibly pizza, in his hand. His expression appears relaxed and slightly amused, as he looks directly at the camera. Behind him, two other men are seated on the ground, also eating from plates. One is wearing a white shirt, and the other is in a blue shirt. They seem engaged in conversation or focused on their food.\n\nThe background includes a large tree with lush green foliage, providing shade and adding to the natural ambiance. Beyond the tree, there are buildings, possibly part of a campus or public institution, with a mix of architectural styles. The overall color palette is vibrant, with the green of the grass and trees contrasting against the blue sky and the varied colors of the men's clothing. The composition is casual and candid, capturing a moment of camaraderie and enjoyment in a relaxed outdoor environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 272,
+            "total_tokens": 569
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13645.994136,
+            "prompt_eval_duration_ms": 3475.759244,
+            "generation_duration_ms": 10128.262289,
+            "load_duration_ms": 39.503435,
+            "tokens_per_second": 26.85554463724848
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image prominently features three individuals sitting on a concrete surface, likely a plaza or outdoor seating area. The person closest to the viewer, on the left, has long blonde hair and is wearing a blue t-shirt with a graphic design. They are holding a plate with food, suggesting they are eating. The other two individuals, seated slightly behind and to the right, are also engaged in eating, with plates of food in front of them. The focus on these individuals creates a sense of immediacy and casual interaction, emphasizing the social aspect of the scene.\n\nIn the background, the setting transitions to a more open and natural environment. There are trees with lush green foliage, indicating a park-like or landscaped area. Beyond the trees, a building with a light-colored facade is visible, possibly a public or institutional structure. The sky is overcast, contributing to a calm and slightly subdued atmosphere. In the far distance, a few people can be seen walking, adding depth and activity to the scene. The background elements provide context, suggesting that the individuals are in a public outdoor space, such as a park or plaza, where people gather for leisure or social activities. The foreground and background layers are connected through the shared theme of outdoor dining and social interaction, with the background setting providing a relaxed and open environment that complements the casual dining scene in the foreground.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 276,
+            "total_tokens": 579
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10391.02815,
+            "prompt_eval_duration_ms": 74.702061,
+            "generation_duration_ms": 10272.172786,
+            "load_duration_ms": 40.950819,
+            "tokens_per_second": 26.868706918185982
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a casual outdoor gathering where three young men are seated on a concrete surface, likely a plaza or park area, enjoying food together. The setting is bright and sunny, with trees and a building visible in the background, suggesting a relaxed, daytime environment. \n\nThe man in the foreground, wearing a blue t-shirt with a graphic design, is holding a plate with food, possibly pizza or a similar dish, and appears to be engaged in conversation or reacting to something, as his facial expression suggests he is speaking or reacting to a comment. The man in the middle, dressed in a white shirt, is turned away from the camera, focusing on his food, and seems to be eating or about to take a bite. The third man, seated further back and wearing a blue shirt, is also eating, holding a plate with food and appearing to be engaged in the group activity.\n\nThe individuals are interacting through shared food and conversation, creating a sense of camaraderie and casual socializing. Their body language indicates a relaxed and informal atmosphere, with each person absorbed in their meal while still being part of the group dynamic. The presence of food and the outdoor setting suggest a break or a social event, such as a picnic or a casual meet-up. There are no animals visible in the image, and the focus remains on the human interactions and the shared experience of eating together. The background shows other people walking or standing, further emphasizing the public and social nature of the setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 298,
+            "total_tokens": 604
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11185.812863,
+            "prompt_eval_duration_ms": 72.338224,
+            "generation_duration_ms": 11072.165195,
+            "load_duration_ms": 38.78433,
+            "tokens_per_second": 26.914338320617876
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a casual, relaxed, and slightly playful mood, evoking feelings of camaraderie and enjoyment. The overall tone is positive, as the individuals appear to be engaged in a shared activity\u2014eating pizza outdoors in a park-like setting. The bright daylight and open space contribute to a sense of freedom and leisure, while the casual attire of the individuals suggests a laid-back, informal atmosphere. The slightly out-of-focus foreground, featuring the person in the blue shirt, adds a candid, spontaneous feel, as if capturing a candid moment among friends. The presence of trees and greenery in the background enhances the sense of being in a pleasant, natural environment, further contributing to the positive mood. The body language of the individuals, with their focus on their food and each other, indicates a sense of enjoyment and shared experience. The overall composition, with its warm tones and relaxed setting, creates an inviting and cheerful emotional atmosphere, emphasizing the simple pleasure of spending time with friends in a pleasant outdoor setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 203,
+            "total_tokens": 511
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7710.755648,
+            "prompt_eval_duration_ms": 72.772859,
+            "generation_duration_ms": 7596.480455,
+            "load_duration_ms": 38.894598,
+            "tokens_per_second": 26.722901638795832
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 4,\n      \"location\": \"left/center, foreground\",\n      \"color\": [\"blue\", \"white\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"People sitting and eating food outdoors\"\n    }\n  },\n  \"man-made\": {\n    \"plate\": {\n      \"count\": 3,\n      \"location\": \"center, foreground\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Plates holding food\"\n    },\n    \"food\": {\n      \"count\": 3,\n      \"location\": \"center, foreground\",\n      \"color\": [\"brown\", \"red\"],\n      \"size\": \"small\",\n      \"description\": \"Food items being eaten\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"center, background\",\n      \"color\": [\"gray\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Structure in the background\"\n    },\n    \"car\": {\n      \"count\": 1,\n      \"location\": \"right, background\",\n      \"color\": [\"red\"],\n      \"size\": \"small\",\n      \"description\": \"Vehicle parked in the distance\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"right, background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Large tree with green leaves\"\n    },\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"center, background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Green grassy area\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top, background\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Clear sky with some clouds\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 4,
+                "location": "left/center, foreground",
+                "color": [
+                  "blue",
+                  "white",
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "People sitting and eating food outdoors"
+              }
+            },
+            "man-made": {
+              "plate": {
+                "count": 3,
+                "location": "center, foreground",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "Plates holding food"
+              },
+              "food": {
+                "count": 3,
+                "location": "center, foreground",
+                "color": [
+                  "brown",
+                  "red"
+                ],
+                "size": "small",
+                "description": "Food items being eaten"
+              },
+              "building": {
+                "count": 1,
+                "location": "center, background",
+                "color": [
+                  "gray",
+                  "white"
+                ],
+                "size": "large",
+                "description": "Structure in the background"
+              },
+              "car": {
+                "count": 1,
+                "location": "right, background",
+                "color": [
+                  "red"
+                ],
+                "size": "small",
+                "description": "Vehicle parked in the distance"
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 1,
+                "location": "right, background",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "Large tree with green leaves"
+              },
+              "grass": {
+                "count": 1,
+                "location": "center, background",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "Green grassy area"
+              },
+              "sky": {
+                "count": 1,
+                "location": "top, background",
+                "color": [
+                  "blue",
+                  "white"
+                ],
+                "size": "large",
+                "description": "Clear sky with some clouds"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 427,
+            "total_tokens": 913
+          },
+          "performance_metrics": {
+            "total_duration_ms": 16062.235717,
+            "prompt_eval_duration_ms": 138.128547,
+            "generation_duration_ms": 15879.885163,
+            "load_duration_ms": 40.856251,
+            "tokens_per_second": 26.88936321749394
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3176,
+        "total_time_ms": 58995.826514,
+        "average_speed": 26.85017094646842
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -398,377 +769,6 @@
         "total_tokens": 3088,
         "total_time_ms": 32009.077989,
         "average_speed": 42.026286854386925
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a casual outdoor scene, likely in a park or a similar open space, under a clear sky with a few scattered clouds. The setting is relaxed and informal, with a group of individuals enjoying a meal together. The main elements include three men seated on a paved area, possibly a bench or a low wall, with one man in the foreground holding a plate of food, which appears to be a slice of pizza. The man in the foreground is wearing a light blue t-shirt with a graphic design that includes the word \"CURE\" and a stylized sunburst. The man in the middle is dressed in a white shirt and is turned slightly away, seemingly engaged in conversation or looking at something off-camera. The third man, seated further back, is wearing a blue t-shirt and is also focused on his plate of food. The background features a large tree with green foliage, suggesting it might be spring or summer. The lighting is natural and bright, indicative of daytime, with shadows suggesting the sun is at a midday position. The overall composition is candid and informal, capturing a moment of shared enjoyment in a peaceful outdoor setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 231,
-            "total_tokens": 528
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1803.58677,
-            "prompt_eval_duration_ms": 82.167545,
-            "generation_duration_ms": 1679.441468,
-            "load_duration_ms": 39.553944,
-            "tokens_per_second": 137.5457283873617
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, the viewer's attention is drawn to a group of individuals enjoying food outdoors. The closest person, wearing a blue t-shirt with a graphic design, is holding a plate with a slice of pizza, while another person in a white shirt sits beside him, also holding a plate with a similar slice of pizza. Both appear to be in a relaxed, casual setting, possibly a park or a public square, as suggested by the paved ground and the presence of other people in the distance. The background elements include a large tree, which provides a natural backdrop, and a building structure that hints at a public or urban environment. The sky is visible, indicating an overcast day, which adds a soft, diffused light to the scene. The relationship between the foreground and background elements is one of depth and perspective, with the foreground subjects in sharp focus and the background elements gradually becoming less distinct, creating a sense of space and environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 190,
-            "total_tokens": 493
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1468.601119,
-            "prompt_eval_duration_ms": 30.914694,
-            "generation_duration_ms": 1398.025001,
-            "load_duration_ms": 36.694273,
-            "tokens_per_second": 135.9060101672674
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a group of three young men are enjoying a casual outdoor meal in what appears to be a park or a similar open space. The man in the foreground, wearing a blue T-shirt with a graphic design, is holding a white paper plate with a slice of pizza and a fork, seemingly in the middle of a conversation or reacting to something, as his mouth is slightly open and his gaze directed towards someone or something off-camera. Behind him, another man in a white shirt is seated, also holding a plate with a slice of pizza and a fork, appearing to be engaged in his own meal or perhaps listening to the man in front. Further back, a third man in a blue shirt is seated on the ground, leaning back slightly, and seems to be in the process of eating or pausing in his meal. The setting is relaxed and informal, with the men sitting on the ground and enjoying their food in a communal setting. The background shows a tree and a building, suggesting an urban park environment. The interaction among the men is casual and friendly, indicative of a shared meal or a social gathering in a public space.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 230,
-            "total_tokens": 536
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1734.710868,
-            "prompt_eval_duration_ms": 32.321886,
-            "generation_duration_ms": 1659.32187,
-            "load_duration_ms": 38.883824,
-            "tokens_per_second": 138.61084106605549
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of casual, relaxed, and friendly camaraderie, suggesting a positive mood. The individuals are engaged in a shared activity, enjoying food outdoors, which often symbolizes leisure and enjoyment. The bright daylight and the greenery in the background contribute to a feeling of openness and tranquility, reinforcing the positive atmosphere. The casual attire of the individuals, with their t-shirts and jeans, adds to the laid-back, informal vibe, indicating a comfortable and informal gathering. The presence of other people in the background, though blurred, suggests a public space where such social interactions are common and accepted, further enhancing the sense of community and shared experience. The overall tone is decidedly positive, as the image captures a moment of simple pleasure and social connection, free from the stress and tension that might be associated with more formal or competitive settings.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 171,
-            "total_tokens": 479
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1322.739205,
-            "prompt_eval_duration_ms": 32.622702,
-            "generation_duration_ms": 1247.837245,
-            "load_duration_ms": 39.890963,
-            "tokens_per_second": 137.037102142275
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 3,\n      \"location\": [\"left\", \"center\", \"background\"],\n      \"color\": [\"blue\", \"white\", \"blue\"],\n      \"size\": [\"large\", \"medium\", \"small\"],\n      \"description\": [\"sitting, eating pizza\", \"standing, eating pizza\", \"sitting, eating pizza\"]\n    }\n  },\n  \"man-made\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"tall, leafy\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear\"\n    },\n    \"ground\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"paved\"\n    },\n    \"plate\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"holding pizza slice\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"tall, leafy\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 3,
-                "location": [
-                  "left",
-                  "center",
-                  "background"
-                ],
-                "color": [
-                  "blue",
-                  "white",
-                  "blue"
-                ],
-                "size": [
-                  "large",
-                  "medium",
-                  "small"
-                ],
-                "description": [
-                  "sitting, eating pizza",
-                  "standing, eating pizza",
-                  "sitting, eating pizza"
-                ]
-              }
-            },
-            "man-made": {
-              "tree": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "tall, leafy"
-              },
-              "sky": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "clear"
-              },
-              "ground": {
-                "count": 1,
-                "location": "foreground",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "paved"
-              },
-              "plate": {
-                "count": 1,
-                "location": "foreground",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "holding pizza slice"
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "tall, leafy"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 327,
-            "total_tokens": 813
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2449.592871,
-            "prompt_eval_duration_ms": 43.576511,
-            "generation_duration_ms": 2360.87125,
-            "load_duration_ms": 42.021755,
-            "tokens_per_second": 138.50818844949717
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2849,
-        "total_time_ms": 8779.230833,
-        "average_speed": 137.52157404249135
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a casual outdoor setting where a group of young men is enjoying food together on a sunny day. The scene is set in a public space, likely a park or plaza, with a paved area in the foreground and a grassy lawn and trees in the background. The lighting is bright and natural, suggesting it is daytime, with clear skies visible above.\n\nIn the foreground, a man with long, light brown hair is prominently featured. He is wearing a blue T-shirt with a graphic design and is holding a plate with food, possibly pizza, in his hand. His expression appears relaxed and slightly amused, as he looks directly at the camera. Behind him, two other men are seated on the ground, also eating from plates. One is wearing a white shirt, and the other is in a blue shirt. They seem engaged in conversation or focused on their food.\n\nThe background includes a large tree with lush green foliage, providing shade and adding to the natural ambiance. Beyond the tree, there are buildings, possibly part of a campus or public institution, with a mix of architectural styles. The overall color palette is vibrant, with the green of the grass and trees contrasting against the blue sky and the varied colors of the men's clothing. The composition is casual and candid, capturing a moment of camaraderie and enjoyment in a relaxed outdoor environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 272,
-            "total_tokens": 569
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13645.994136,
-            "prompt_eval_duration_ms": 3475.759244,
-            "generation_duration_ms": 10128.262289,
-            "load_duration_ms": 39.503435,
-            "tokens_per_second": 26.85554463724848
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image prominently features three individuals sitting on a concrete surface, likely a plaza or outdoor seating area. The person closest to the viewer, on the left, has long blonde hair and is wearing a blue t-shirt with a graphic design. They are holding a plate with food, suggesting they are eating. The other two individuals, seated slightly behind and to the right, are also engaged in eating, with plates of food in front of them. The focus on these individuals creates a sense of immediacy and casual interaction, emphasizing the social aspect of the scene.\n\nIn the background, the setting transitions to a more open and natural environment. There are trees with lush green foliage, indicating a park-like or landscaped area. Beyond the trees, a building with a light-colored facade is visible, possibly a public or institutional structure. The sky is overcast, contributing to a calm and slightly subdued atmosphere. In the far distance, a few people can be seen walking, adding depth and activity to the scene. The background elements provide context, suggesting that the individuals are in a public outdoor space, such as a park or plaza, where people gather for leisure or social activities. The foreground and background layers are connected through the shared theme of outdoor dining and social interaction, with the background setting providing a relaxed and open environment that complements the casual dining scene in the foreground.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 276,
-            "total_tokens": 579
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10391.02815,
-            "prompt_eval_duration_ms": 74.702061,
-            "generation_duration_ms": 10272.172786,
-            "load_duration_ms": 40.950819,
-            "tokens_per_second": 26.868706918185982
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a casual outdoor gathering where three young men are seated on a concrete surface, likely a plaza or park area, enjoying food together. The setting is bright and sunny, with trees and a building visible in the background, suggesting a relaxed, daytime environment. \n\nThe man in the foreground, wearing a blue t-shirt with a graphic design, is holding a plate with food, possibly pizza or a similar dish, and appears to be engaged in conversation or reacting to something, as his facial expression suggests he is speaking or reacting to a comment. The man in the middle, dressed in a white shirt, is turned away from the camera, focusing on his food, and seems to be eating or about to take a bite. The third man, seated further back and wearing a blue shirt, is also eating, holding a plate with food and appearing to be engaged in the group activity.\n\nThe individuals are interacting through shared food and conversation, creating a sense of camaraderie and casual socializing. Their body language indicates a relaxed and informal atmosphere, with each person absorbed in their meal while still being part of the group dynamic. The presence of food and the outdoor setting suggest a break or a social event, such as a picnic or a casual meet-up. There are no animals visible in the image, and the focus remains on the human interactions and the shared experience of eating together. The background shows other people walking or standing, further emphasizing the public and social nature of the setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 298,
-            "total_tokens": 604
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11185.812863,
-            "prompt_eval_duration_ms": 72.338224,
-            "generation_duration_ms": 11072.165195,
-            "load_duration_ms": 38.78433,
-            "tokens_per_second": 26.914338320617876
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a casual, relaxed, and slightly playful mood, evoking feelings of camaraderie and enjoyment. The overall tone is positive, as the individuals appear to be engaged in a shared activity\u2014eating pizza outdoors in a park-like setting. The bright daylight and open space contribute to a sense of freedom and leisure, while the casual attire of the individuals suggests a laid-back, informal atmosphere. The slightly out-of-focus foreground, featuring the person in the blue shirt, adds a candid, spontaneous feel, as if capturing a candid moment among friends. The presence of trees and greenery in the background enhances the sense of being in a pleasant, natural environment, further contributing to the positive mood. The body language of the individuals, with their focus on their food and each other, indicates a sense of enjoyment and shared experience. The overall composition, with its warm tones and relaxed setting, creates an inviting and cheerful emotional atmosphere, emphasizing the simple pleasure of spending time with friends in a pleasant outdoor setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 203,
-            "total_tokens": 511
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7710.755648,
-            "prompt_eval_duration_ms": 72.772859,
-            "generation_duration_ms": 7596.480455,
-            "load_duration_ms": 38.894598,
-            "tokens_per_second": 26.722901638795832
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 4,\n      \"location\": \"left/center, foreground\",\n      \"color\": [\"blue\", \"white\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"People sitting and eating food outdoors\"\n    }\n  },\n  \"man-made\": {\n    \"plate\": {\n      \"count\": 3,\n      \"location\": \"center, foreground\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Plates holding food\"\n    },\n    \"food\": {\n      \"count\": 3,\n      \"location\": \"center, foreground\",\n      \"color\": [\"brown\", \"red\"],\n      \"size\": \"small\",\n      \"description\": \"Food items being eaten\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"center, background\",\n      \"color\": [\"gray\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Structure in the background\"\n    },\n    \"car\": {\n      \"count\": 1,\n      \"location\": \"right, background\",\n      \"color\": [\"red\"],\n      \"size\": \"small\",\n      \"description\": \"Vehicle parked in the distance\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"right, background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Large tree with green leaves\"\n    },\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"center, background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Green grassy area\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top, background\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Clear sky with some clouds\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 4,
-                "location": "left/center, foreground",
-                "color": [
-                  "blue",
-                  "white",
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "People sitting and eating food outdoors"
-              }
-            },
-            "man-made": {
-              "plate": {
-                "count": 3,
-                "location": "center, foreground",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "Plates holding food"
-              },
-              "food": {
-                "count": 3,
-                "location": "center, foreground",
-                "color": [
-                  "brown",
-                  "red"
-                ],
-                "size": "small",
-                "description": "Food items being eaten"
-              },
-              "building": {
-                "count": 1,
-                "location": "center, background",
-                "color": [
-                  "gray",
-                  "white"
-                ],
-                "size": "large",
-                "description": "Structure in the background"
-              },
-              "car": {
-                "count": 1,
-                "location": "right, background",
-                "color": [
-                  "red"
-                ],
-                "size": "small",
-                "description": "Vehicle parked in the distance"
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 1,
-                "location": "right, background",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "Large tree with green leaves"
-              },
-              "grass": {
-                "count": 1,
-                "location": "center, background",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "Green grassy area"
-              },
-              "sky": {
-                "count": 1,
-                "location": "top, background",
-                "color": [
-                  "blue",
-                  "white"
-                ],
-                "size": "large",
-                "description": "Clear sky with some clouds"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 427,
-            "total_tokens": 913
-          },
-          "performance_metrics": {
-            "total_duration_ms": 16062.235717,
-            "prompt_eval_duration_ms": 138.128547,
-            "generation_duration_ms": 15879.885163,
-            "load_duration_ms": 40.856251,
-            "tokens_per_second": 26.88936321749394
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3176,
-        "total_time_ms": 58995.826514,
-        "average_speed": 26.85017094646842
       }
     },
     {

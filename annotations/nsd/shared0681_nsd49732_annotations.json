@@ -7,6 +7,299 @@
   "timestamp": "2025-08-30T21:58:05.003060+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a serene pastoral scene, likely taken on a sunny day, judging by the bright, even lighting and the clear blue sky. The setting is a vast, open field of golden-brown grass, indicative of a late summer or early autumn season. The field stretches out towards a line of lush, dark green trees that form a natural border on the horizon, adding depth and contrast to the composition. In the foreground, two reddish-brown cows are grazing peacefully, their coats blending harmoniously with the warm tones of the grass. The cows' relaxed posture and the gentle curve of their bodies create a sense of calm and tranquility. The overall color palette is dominated by earthy tones, from the golden grass to the rich brown of the cows and the deep green of the trees, which together evoke a sense of rural simplicity and natural beauty. The composition is balanced, with the cows in the foreground and the expansive field leading the eye towards the line of trees in the background, creating a pleasing visual journey across the landscape.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 209,
+            "total_tokens": 506
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1612.672216,
+            "prompt_eval_duration_ms": 78.225207,
+            "generation_duration_ms": 1489.25103,
+            "load_duration_ms": 40.878208,
+            "tokens_per_second": 140.3389997991138
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, two brown cows are prominently featured, grazing on the golden grass of the field. Their bodies are positioned close to the viewer, with one cow slightly ahead of the other, creating a sense of depth and perspective. The cows' heads are lowered as they feed, and their dark manes and ears contrast with the lighter color of their bodies and the surrounding grass. The grass appears dry and slightly tall, suggesting a late summer or early autumn setting.\n\nThe background elements consist of a dense line of trees that form a natural border, separating the field from the distant landscape. These trees are lush and green, indicating a healthy forest or woodland area. Beyond the trees, the horizon stretches out, meeting a clear blue sky that dominates the upper portion of the image. The sky's brightness and the lack of clouds suggest a calm, sunny day. The trees and the sky together create a serene and expansive backdrop, framing the cows in the foreground and enhancing the overall peaceful rural atmosphere of the scene. The relationship between the foreground and background is one of contrast and depth, with the cows in the field drawing the viewer's eye towards the tranquil expanse of the sky and forest beyond.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 242,
+            "total_tokens": 545
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1815.732895,
+            "prompt_eval_duration_ms": 31.095375,
+            "generation_duration_ms": 1744.430788,
+            "load_duration_ms": 36.884803,
+            "tokens_per_second": 138.7272006804319
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, two brown cows are grazing in a vast, golden field under a clear blue sky. The cows are the primary focus, with one cow slightly ahead of the other, both engaged in feeding on the grass. Their heads are lowered, and their bodies are relaxed, indicating a calm and peaceful interaction with their environment. The field stretches out to the horizon, bordered by a dense line of trees that form a natural backdrop. The trees are lush and green, suggesting a healthy ecosystem. The cows are not interacting directly with each other but are simply sharing the space in the field, each focused on their own grazing. The scene is tranquil, with no other animals or people visible, emphasizing the serene and undisturbed nature of the setting. The cows' actions are simple and natural, reflecting their role as part of the rural landscape, feeding and coexisting harmoniously with their surroundings.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 180,
+            "total_tokens": 486
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1361.730981,
+            "prompt_eval_duration_ms": 29.926132,
+            "generation_duration_ms": 1288.795864,
+            "load_duration_ms": 40.304628,
+            "tokens_per_second": 139.66525268116473
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of tranquility and serenity, primarily due to the peaceful rural setting and the calm demeanor of the cows. The golden hues of the grass and the soft, natural light suggest a calm, sunny day, which contributes to a positive and soothing mood. The cows, with their relaxed postures and the gentle rustling of the grass, add to the feeling of contentment and harmony. The lush green trees in the background provide a sense of seclusion and escape from the hustle and bustle of urban life, enhancing the overall positive atmosphere. The absence of any human presence or artificial structures further emphasizes the natural and undisturbed environment, reinforcing the peaceful and idyllic mood of the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 146,
+            "total_tokens": 454
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1124.478274,
+            "prompt_eval_duration_ms": 29.357616,
+            "generation_duration_ms": 1052.973496,
+            "load_duration_ms": 39.503152,
+            "tokens_per_second": 138.6549619288803
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"cow\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"grazing on grass\"\n    }\n  },\n  \"natural\": {\n    \"field\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\", \"green\"],\n      \"size\": \"large\",\n      \"description\": \"dry grass with some green patches\"\n    },\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"dense green foliage\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear blue sky\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "cow": {
+                "count": 2,
+                "location": "center",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "grazing on grass"
+              }
+            },
+            "natural": {
+              "field": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "brown",
+                  "green"
+                ],
+                "size": "large",
+                "description": "dry grass with some green patches"
+              },
+              "trees": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "dense green foliage"
+              },
+              "sky": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "clear blue sky"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 204,
+            "total_tokens": 690
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1541.697167,
+            "prompt_eval_duration_ms": 44.28694,
+            "generation_duration_ms": 1457.023569,
+            "load_duration_ms": 37.23516,
+            "tokens_per_second": 140.01146195597335
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2681,
+        "total_time_ms": 7456.311533,
+        "average_speed": 139.4795754091128
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a serene rural scene featuring three reddish-brown cows grazing in a golden, dry grassy field. The setting appears to be a pastoral landscape, likely during late summer or early autumn, as suggested by the warm, golden hues of the grass and the clear, bright sky. The cows are the main elements in the foreground, with one prominently grazing in the foreground and two others slightly further back, partially obscured by the grass. Their reddish-brown coats contrast beautifully with the golden field and the lush green trees in the background.\n\nThe background is dominated by a dense line of tall, dark green trees, creating a natural border that frames the field. The trees are vibrant and lush, indicating a healthy, thriving environment. Beyond the trees, the horizon is marked by a clear blue sky, which adds depth and a sense of openness to the composition. The lighting is bright and natural, suggesting a sunny day with ample sunlight illuminating the scene, casting soft shadows and enhancing the warm tones of the grass and the cows' coats.\n\nThe overall composition is balanced and tranquil, with the cows positioned in a way that draws the viewer's eye across the field. The combination of the golden field, the dark green trees, and the bright blue sky creates a harmonious and picturesque rural landscape. The image evokes a sense of calm and simplicity, capturing the essence of a peaceful countryside setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 282,
+            "total_tokens": 579
+          },
+          "performance_metrics": {
+            "total_duration_ms": 14037.917974,
+            "prompt_eval_duration_ms": 3499.61668,
+            "generation_duration_ms": 10493.590389,
+            "load_duration_ms": 40.008198,
+            "tokens_per_second": 26.873547522457997
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image prominently features two brown cows grazing in a grassy field. These cows are the most immediate elements, with their detailed textures and earthy tones drawing the viewer's attention. The grass beneath them is a mix of green and golden hues, indicating a natural, rural setting. The cows' positioning and the act of grazing suggest a peaceful, pastoral environment.\n\nIn the background, the setting transitions to a more distant and expansive landscape. A line of trees forms a natural border, separating the field from the horizon. The trees are lush and green, providing a contrast to the golden tones of the field. Beyond the trees, the horizon stretches out, meeting a clear blue sky. The background elements, including the trees and the open sky, create depth and context, framing the cows and emphasizing the vastness of the rural scene.\n\nThe relationship between the foreground and background is harmonious and layered. The cows in the foreground serve as the focal point, grounding the scene in a tangible, relatable moment. The background elements, such as the trees and sky, provide a sense of scale and setting, situating the cows within a larger, serene landscape. Together, these layers create a cohesive image that captures the tranquility and beauty of a rural environment. The foreground and background work in tandem to evoke a sense of calm and connection to nature.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 273,
+            "total_tokens": 576
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10302.034816,
+            "prompt_eval_duration_ms": 80.777523,
+            "generation_duration_ms": 10176.615135,
+            "load_duration_ms": 41.797133,
+            "tokens_per_second": 26.826208555444204
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a serene rural scene featuring three cows grazing in a golden, sunlit field. There are no people visible in the image. The cows, which appear to be of a reddish-brown breed, are the primary focus. One cow is prominently in the foreground, intently grazing on the dry grass, its head lowered to the ground. Another cow is positioned slightly behind and to the left, also grazing, while a third cow is partially visible in the background, further emphasizing the depth of the field. The cows are spaced apart, suggesting a calm and relaxed atmosphere typical of a peaceful pasture.\n\nThe field itself is expansive, with dry, golden grass indicating a late summer or early autumn season. In the background, a dense line of green trees forms a natural boundary, contrasting with the open field and adding depth to the scene. The clear blue sky above suggests a bright, sunny day, enhancing the overall tranquility of the setting.\n\nThe cows interact with their environment by grazing, a natural behavior that highlights their role as livestock in this pastoral landscape. There is no direct interaction between the cows themselves, as they are engaged in their individual activities of feeding. The image conveys a sense of harmony between the animals and their surroundings, showcasing the simplicity and beauty of rural life. The absence of people and other objects further emphasizes the focus on the natural elements and the cows' peaceful coexistence within this idyllic setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 288,
+            "total_tokens": 594
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10880.603773,
+            "prompt_eval_duration_ms": 79.468279,
+            "generation_duration_ms": 10753.740093,
+            "load_duration_ms": 43.428701,
+            "tokens_per_second": 26.7813800137749
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a serene and peaceful mood, evoking feelings of calmness and tranquility. The overall tone is positive, as the scene is bathed in warm, golden sunlight, suggesting a pleasant, late afternoon or early evening setting. The cows grazing leisurely in the field contribute to a sense of contentment and natural harmony, as their relaxed posture and focus on feeding indicate a lack of stress or urgency. The expansive, open field with its golden hues of dried grass enhances the feeling of spaciousness and freedom, while the lush green trees in the background provide a sense of stability and natural beauty. The clear blue sky adds to the overall positivity, symbolizing openness and clarity. The absence of any human presence or artificial structures further emphasizes the untouched and pristine nature of the scene, reinforcing a sense of simplicity and connection to the natural world. The visual elements\u2014soft lighting, gentle colors, and the tranquil activity of the cows\u2014work together to create a soothing and uplifting atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 199,
+            "total_tokens": 507
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7543.447345,
+            "prompt_eval_duration_ms": 75.691468,
+            "generation_duration_ms": 7426.096099,
+            "load_duration_ms": 38.802147,
+            "tokens_per_second": 26.797390896516596
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"cows\": {\n      \"count\": 3,\n      \"location\": \"foreground\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Cows grazing in a field.\"\n    }\n  },\n  \"natural\": {\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Dense cluster of trees in the background.\"\n    },\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"yellow\", \"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Dry grass covering the field.\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"size\": \"large\",\n      \"description\": \"Clear blue sky.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "cows": {
+                "count": 3,
+                "location": "foreground",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "Cows grazing in a field."
+              }
+            },
+            "natural": {
+              "trees": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "Dense cluster of trees in the background."
+              },
+              "grass": {
+                "count": 1,
+                "location": "foreground",
+                "color": [
+                  "yellow",
+                  "brown"
+                ],
+                "size": "large",
+                "description": "Dry grass covering the field."
+              },
+              "sky": {
+                "count": 1,
+                "location": "background",
+                "size": "large",
+                "description": "Clear blue sky."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 204,
+            "total_tokens": 690
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7712.135559,
+            "prompt_eval_duration_ms": 133.153432,
+            "generation_duration_ms": 7535.641652,
+            "load_duration_ms": 38.513692,
+            "tokens_per_second": 27.071350977239916
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2946,
+        "total_time_ms": 50476.139467,
+        "average_speed": 26.869975593086725
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -478,299 +771,6 @@
         "total_tokens": 2711,
         "total_time_ms": 23112.70725,
         "average_speed": 41.9152751289237
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a serene pastoral scene, likely taken on a sunny day, judging by the bright, even lighting and the clear blue sky. The setting is a vast, open field of golden-brown grass, indicative of a late summer or early autumn season. The field stretches out towards a line of lush, dark green trees that form a natural border on the horizon, adding depth and contrast to the composition. In the foreground, two reddish-brown cows are grazing peacefully, their coats blending harmoniously with the warm tones of the grass. The cows' relaxed posture and the gentle curve of their bodies create a sense of calm and tranquility. The overall color palette is dominated by earthy tones, from the golden grass to the rich brown of the cows and the deep green of the trees, which together evoke a sense of rural simplicity and natural beauty. The composition is balanced, with the cows in the foreground and the expansive field leading the eye towards the line of trees in the background, creating a pleasing visual journey across the landscape.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 209,
-            "total_tokens": 506
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1612.672216,
-            "prompt_eval_duration_ms": 78.225207,
-            "generation_duration_ms": 1489.25103,
-            "load_duration_ms": 40.878208,
-            "tokens_per_second": 140.3389997991138
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, two brown cows are prominently featured, grazing on the golden grass of the field. Their bodies are positioned close to the viewer, with one cow slightly ahead of the other, creating a sense of depth and perspective. The cows' heads are lowered as they feed, and their dark manes and ears contrast with the lighter color of their bodies and the surrounding grass. The grass appears dry and slightly tall, suggesting a late summer or early autumn setting.\n\nThe background elements consist of a dense line of trees that form a natural border, separating the field from the distant landscape. These trees are lush and green, indicating a healthy forest or woodland area. Beyond the trees, the horizon stretches out, meeting a clear blue sky that dominates the upper portion of the image. The sky's brightness and the lack of clouds suggest a calm, sunny day. The trees and the sky together create a serene and expansive backdrop, framing the cows in the foreground and enhancing the overall peaceful rural atmosphere of the scene. The relationship between the foreground and background is one of contrast and depth, with the cows in the field drawing the viewer's eye towards the tranquil expanse of the sky and forest beyond.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 242,
-            "total_tokens": 545
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1815.732895,
-            "prompt_eval_duration_ms": 31.095375,
-            "generation_duration_ms": 1744.430788,
-            "load_duration_ms": 36.884803,
-            "tokens_per_second": 138.7272006804319
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, two brown cows are grazing in a vast, golden field under a clear blue sky. The cows are the primary focus, with one cow slightly ahead of the other, both engaged in feeding on the grass. Their heads are lowered, and their bodies are relaxed, indicating a calm and peaceful interaction with their environment. The field stretches out to the horizon, bordered by a dense line of trees that form a natural backdrop. The trees are lush and green, suggesting a healthy ecosystem. The cows are not interacting directly with each other but are simply sharing the space in the field, each focused on their own grazing. The scene is tranquil, with no other animals or people visible, emphasizing the serene and undisturbed nature of the setting. The cows' actions are simple and natural, reflecting their role as part of the rural landscape, feeding and coexisting harmoniously with their surroundings.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 180,
-            "total_tokens": 486
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1361.730981,
-            "prompt_eval_duration_ms": 29.926132,
-            "generation_duration_ms": 1288.795864,
-            "load_duration_ms": 40.304628,
-            "tokens_per_second": 139.66525268116473
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of tranquility and serenity, primarily due to the peaceful rural setting and the calm demeanor of the cows. The golden hues of the grass and the soft, natural light suggest a calm, sunny day, which contributes to a positive and soothing mood. The cows, with their relaxed postures and the gentle rustling of the grass, add to the feeling of contentment and harmony. The lush green trees in the background provide a sense of seclusion and escape from the hustle and bustle of urban life, enhancing the overall positive atmosphere. The absence of any human presence or artificial structures further emphasizes the natural and undisturbed environment, reinforcing the peaceful and idyllic mood of the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 146,
-            "total_tokens": 454
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1124.478274,
-            "prompt_eval_duration_ms": 29.357616,
-            "generation_duration_ms": 1052.973496,
-            "load_duration_ms": 39.503152,
-            "tokens_per_second": 138.6549619288803
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"cow\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"grazing on grass\"\n    }\n  },\n  \"natural\": {\n    \"field\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\", \"green\"],\n      \"size\": \"large\",\n      \"description\": \"dry grass with some green patches\"\n    },\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"dense green foliage\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear blue sky\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "cow": {
-                "count": 2,
-                "location": "center",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "grazing on grass"
-              }
-            },
-            "natural": {
-              "field": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "brown",
-                  "green"
-                ],
-                "size": "large",
-                "description": "dry grass with some green patches"
-              },
-              "trees": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "dense green foliage"
-              },
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "clear blue sky"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 204,
-            "total_tokens": 690
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1541.697167,
-            "prompt_eval_duration_ms": 44.28694,
-            "generation_duration_ms": 1457.023569,
-            "load_duration_ms": 37.23516,
-            "tokens_per_second": 140.01146195597335
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2681,
-        "total_time_ms": 7456.311533,
-        "average_speed": 139.4795754091128
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a serene rural scene featuring three reddish-brown cows grazing in a golden, dry grassy field. The setting appears to be a pastoral landscape, likely during late summer or early autumn, as suggested by the warm, golden hues of the grass and the clear, bright sky. The cows are the main elements in the foreground, with one prominently grazing in the foreground and two others slightly further back, partially obscured by the grass. Their reddish-brown coats contrast beautifully with the golden field and the lush green trees in the background.\n\nThe background is dominated by a dense line of tall, dark green trees, creating a natural border that frames the field. The trees are vibrant and lush, indicating a healthy, thriving environment. Beyond the trees, the horizon is marked by a clear blue sky, which adds depth and a sense of openness to the composition. The lighting is bright and natural, suggesting a sunny day with ample sunlight illuminating the scene, casting soft shadows and enhancing the warm tones of the grass and the cows' coats.\n\nThe overall composition is balanced and tranquil, with the cows positioned in a way that draws the viewer's eye across the field. The combination of the golden field, the dark green trees, and the bright blue sky creates a harmonious and picturesque rural landscape. The image evokes a sense of calm and simplicity, capturing the essence of a peaceful countryside setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 282,
-            "total_tokens": 579
-          },
-          "performance_metrics": {
-            "total_duration_ms": 14037.917974,
-            "prompt_eval_duration_ms": 3499.61668,
-            "generation_duration_ms": 10493.590389,
-            "load_duration_ms": 40.008198,
-            "tokens_per_second": 26.873547522457997
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image prominently features two brown cows grazing in a grassy field. These cows are the most immediate elements, with their detailed textures and earthy tones drawing the viewer's attention. The grass beneath them is a mix of green and golden hues, indicating a natural, rural setting. The cows' positioning and the act of grazing suggest a peaceful, pastoral environment.\n\nIn the background, the setting transitions to a more distant and expansive landscape. A line of trees forms a natural border, separating the field from the horizon. The trees are lush and green, providing a contrast to the golden tones of the field. Beyond the trees, the horizon stretches out, meeting a clear blue sky. The background elements, including the trees and the open sky, create depth and context, framing the cows and emphasizing the vastness of the rural scene.\n\nThe relationship between the foreground and background is harmonious and layered. The cows in the foreground serve as the focal point, grounding the scene in a tangible, relatable moment. The background elements, such as the trees and sky, provide a sense of scale and setting, situating the cows within a larger, serene landscape. Together, these layers create a cohesive image that captures the tranquility and beauty of a rural environment. The foreground and background work in tandem to evoke a sense of calm and connection to nature.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 273,
-            "total_tokens": 576
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10302.034816,
-            "prompt_eval_duration_ms": 80.777523,
-            "generation_duration_ms": 10176.615135,
-            "load_duration_ms": 41.797133,
-            "tokens_per_second": 26.826208555444204
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a serene rural scene featuring three cows grazing in a golden, sunlit field. There are no people visible in the image. The cows, which appear to be of a reddish-brown breed, are the primary focus. One cow is prominently in the foreground, intently grazing on the dry grass, its head lowered to the ground. Another cow is positioned slightly behind and to the left, also grazing, while a third cow is partially visible in the background, further emphasizing the depth of the field. The cows are spaced apart, suggesting a calm and relaxed atmosphere typical of a peaceful pasture.\n\nThe field itself is expansive, with dry, golden grass indicating a late summer or early autumn season. In the background, a dense line of green trees forms a natural boundary, contrasting with the open field and adding depth to the scene. The clear blue sky above suggests a bright, sunny day, enhancing the overall tranquility of the setting.\n\nThe cows interact with their environment by grazing, a natural behavior that highlights their role as livestock in this pastoral landscape. There is no direct interaction between the cows themselves, as they are engaged in their individual activities of feeding. The image conveys a sense of harmony between the animals and their surroundings, showcasing the simplicity and beauty of rural life. The absence of people and other objects further emphasizes the focus on the natural elements and the cows' peaceful coexistence within this idyllic setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 288,
-            "total_tokens": 594
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10880.603773,
-            "prompt_eval_duration_ms": 79.468279,
-            "generation_duration_ms": 10753.740093,
-            "load_duration_ms": 43.428701,
-            "tokens_per_second": 26.7813800137749
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a serene and peaceful mood, evoking feelings of calmness and tranquility. The overall tone is positive, as the scene is bathed in warm, golden sunlight, suggesting a pleasant, late afternoon or early evening setting. The cows grazing leisurely in the field contribute to a sense of contentment and natural harmony, as their relaxed posture and focus on feeding indicate a lack of stress or urgency. The expansive, open field with its golden hues of dried grass enhances the feeling of spaciousness and freedom, while the lush green trees in the background provide a sense of stability and natural beauty. The clear blue sky adds to the overall positivity, symbolizing openness and clarity. The absence of any human presence or artificial structures further emphasizes the untouched and pristine nature of the scene, reinforcing a sense of simplicity and connection to the natural world. The visual elements\u2014soft lighting, gentle colors, and the tranquil activity of the cows\u2014work together to create a soothing and uplifting atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 199,
-            "total_tokens": 507
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7543.447345,
-            "prompt_eval_duration_ms": 75.691468,
-            "generation_duration_ms": 7426.096099,
-            "load_duration_ms": 38.802147,
-            "tokens_per_second": 26.797390896516596
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"cows\": {\n      \"count\": 3,\n      \"location\": \"foreground\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Cows grazing in a field.\"\n    }\n  },\n  \"natural\": {\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Dense cluster of trees in the background.\"\n    },\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"yellow\", \"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Dry grass covering the field.\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"size\": \"large\",\n      \"description\": \"Clear blue sky.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "cows": {
-                "count": 3,
-                "location": "foreground",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "Cows grazing in a field."
-              }
-            },
-            "natural": {
-              "trees": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "Dense cluster of trees in the background."
-              },
-              "grass": {
-                "count": 1,
-                "location": "foreground",
-                "color": [
-                  "yellow",
-                  "brown"
-                ],
-                "size": "large",
-                "description": "Dry grass covering the field."
-              },
-              "sky": {
-                "count": 1,
-                "location": "background",
-                "size": "large",
-                "description": "Clear blue sky."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 204,
-            "total_tokens": 690
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7712.135559,
-            "prompt_eval_duration_ms": 133.153432,
-            "generation_duration_ms": 7535.641652,
-            "load_duration_ms": 38.513692,
-            "tokens_per_second": 27.071350977239916
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2946,
-        "total_time_ms": 50476.139467,
-        "average_speed": 26.869975593086725
       }
     },
     {

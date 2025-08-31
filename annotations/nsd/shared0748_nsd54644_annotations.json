@@ -7,6 +7,306 @@
   "timestamp": "2025-08-30T22:34:33.325622+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a white and black public bus parked on a paved road, with a backdrop of dense green trees suggesting a suburban or rural setting. The bus, marked with the number 106 and the name \"NJAT OY\" prominently displayed on its side, is the focal point of the photograph. The bus's design is modern, with large windows and a clean, sleek appearance. The lighting in the image is natural, indicating daytime, with soft shadows suggesting an overcast sky. The bus's door is open, inviting a sense of accessibility and public transportation. The road appears to be a standard asphalt surface, and the bus is positioned slightly off-center, creating a balanced composition. The greenery in the background contrasts with the white and black of the bus, adding depth and a sense of tranquility to the scene. The overall atmosphere is calm and everyday, capturing a moment of stillness in a public transportation setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 189,
+            "total_tokens": 486
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1461.45737,
+            "prompt_eval_duration_ms": 78.996241,
+            "generation_duration_ms": 1342.986306,
+            "load_duration_ms": 36.847528,
+            "tokens_per_second": 140.7311445810081
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, the dominant element is a white and black bus, specifically model 106, as indicated by the number on its side. The bus's design includes large windows, a front windshield, and a digital display at the top showing the destination \"Keskusta\" and \"Rakasranta.\" The bus's wheels and part of its side panel are clearly visible, suggesting it is either stationary or moving very slowly. The bus's branding, \"NJAT OY,\" along with the website \"www.shgounjat.fi,\" is prominently displayed on its side, indicating its affiliation with a transportation service. The bus's open door suggests it might be in the process of boarding or alighting passengers. \n\nIn the background, a dense line of trees stretches across the horizon, creating a natural backdrop that contrasts with the urban or suburban setting suggested by the bus. The trees appear to be coniferous, possibly pine or fir, and their green foliage is slightly blurred, indicating they are some distance from the viewer. The sky is not visible, but the lighting suggests it is daytime, with the light source likely coming from the upper left, casting subtle shadows on the bus. This layering of the bus in the foreground and the trees in the background creates a sense of depth, placing the viewer in a location where urban and natural elements intersect.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 277,
+            "total_tokens": 580
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2048.56302,
+            "prompt_eval_duration_ms": 29.759039,
+            "generation_duration_ms": 1977.330841,
+            "load_duration_ms": 39.072137,
+            "tokens_per_second": 140.08783672231206
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a white and black bus, marked with the number 106 and the text \"NJAT OY\" along with a website address, is the central object. The bus is stationary, with its doors open, suggesting it might be at a stop or preparing for passengers to board or disembark. The bus's design includes large windows and a digital display at the front indicating the route number and destination. The surrounding environment features a road and a backdrop of dense green trees, indicating a suburban or rural setting. There are no visible people or animals in the image, and the bus appears to be the sole focus, with no direct interaction between the bus and any other elements in the scene. The bus's position and the open doors imply a pause in its journey, possibly for passenger activity.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 164,
+            "total_tokens": 470
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1247.177947,
+            "prompt_eval_duration_ms": 29.315122,
+            "generation_duration_ms": 1177.67292,
+            "load_duration_ms": 37.677949,
+            "tokens_per_second": 139.25768115649632
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image of the bus evokes a sense of everyday routine and functionality, which can be both neutral and slightly melancholic. The bus, with its clean and simple design, suggests a utilitarian purpose, perhaps symbolizing the mundane aspects of urban life. The muted colors and the slightly overcast sky contribute to a subdued atmosphere, hinting at a calm, perhaps even slightly somber mood. The trees in the background add a touch of nature, which might provide a subtle contrast to the urban setting, offering a hint of tranquility. However, the lack of vibrant colors or dynamic elements in the image keeps the overall tone subdued and neutral, reflecting a sense of calmness and the ordinary nature of public transportation. The bus number and route display add a layer of practicality, reinforcing the idea of a structured, everyday life.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 167,
+            "total_tokens": 475
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1277.847021,
+            "prompt_eval_duration_ms": 32.841951,
+            "generation_duration_ms": 1203.111263,
+            "load_duration_ms": 39.544476,
+            "tokens_per_second": 138.80677966855671
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"bus\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"large\",\n      \"description\": \"public transportation vehicle with visible route number and destination sign\"\n    }\n  },\n  \"natural\": {\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"dense forested area behind the bus\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "bus": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "white",
+                  "black"
+                ],
+                "size": "large",
+                "description": "public transportation vehicle with visible route number and destination sign"
+              }
+            },
+            "natural": {
+              "trees": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "dense forested area behind the bus"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 124,
+            "total_tokens": 610
+          },
+          "performance_metrics": {
+            "total_duration_ms": 973.30347,
+            "prompt_eval_duration_ms": 44.296409,
+            "generation_duration_ms": 885.415186,
+            "load_duration_ms": 41.03064,
+            "tokens_per_second": 140.0472930221461
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2621,
+        "total_time_ms": 7008.348827999999,
+        "average_speed": 139.78614703010385
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a close-up view of a public transportation bus, likely captured in an urban or suburban setting. The bus is predominantly white with dark-tinted windows, and the side features a logo that reads \"NJAT OY\" in bold, red letters, along with a website address, \"www.saijounjat.fi,\" indicating it is part of a Finnish transportation service. The bus's number, \"106,\" is clearly visible on the lower side, and the window next to it is marked with the number \"5,\" suggesting it is part of a numbered seating or stop arrangement. The front of the bus displays a digital destination sign that reads \"HESKOTA\" and \"HAKKAKUUSI,\" likely indicating its route or destination.\n\nThe bus is positioned on a paved road, with a clear view of its front wheel and side profile. The background shows a line of trees, suggesting a natural or semi-rural environment surrounding the road. The lighting appears to be natural, possibly during the daytime, as the scene is well-lit without harsh shadows, indicating overcast or diffused sunlight. The overall composition focuses on the bus, with the background elements providing context but not detracting from the main subject. The image conveys a sense of routine public transportation in a calm, everyday setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 272,
+            "total_tokens": 569
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13634.875833,
+            "prompt_eval_duration_ms": 3467.265645,
+            "generation_duration_ms": 10126.638716,
+            "load_duration_ms": 37.317256,
+            "tokens_per_second": 26.859850304547983
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image prominently features a white public transportation bus, which is the central focus. The bus is marked with the text \"NJAT OY\" and a website address, indicating it is part of a transportation company. The bus's side door is visible, along with its large front windshield, which reflects the surrounding environment. The bus's destination display shows \"HESKOTA\" and \"MAKAKUUSI,\" suggesting it is on a route serving these locations. The bus's license plate number, \"106,\" is clearly visible, adding to the detail of the foreground elements.\n\nIn the background, the setting transitions to a natural and urban environment. A dense line of tall trees forms the backdrop, indicating the bus is either passing through or near a wooded area. Beyond the trees, a faint outline of a building or structure is visible, suggesting the presence of a distant urban or suburban area. The road on which the bus is traveling is partially visible, with a white-striped curb indicating a boundary or parking area. The sky appears overcast, contributing to a subdued lighting condition that enhances the contrast between the bus and the background.\n\nThe relationship between the foreground and background elements is one of depth and context. The bus, as the primary subject, is sharply in focus, drawing the viewer's attention. The background, while less detailed, provides a sense of location and environment, situating the bus within a natural and urban setting. The reflections on the bus's windshield subtly connect the two layers, as they mirror the trees and sky, creating a visual link between the vehicle and its surroundings. This composition effectively uses depth to convey both the subject and its context.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 340,
+            "total_tokens": 643
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12697.482301,
+            "prompt_eval_duration_ms": 72.120969,
+            "generation_duration_ms": 12583.818239,
+            "load_duration_ms": 39.099337,
+            "tokens_per_second": 27.018826364343518
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image shows a public transportation bus, specifically a NJAT OY bus, which is a bus company in Finland. The bus is white with black and red accents, and its destination display reads \"Helsinki\" and \"Malminkartano,\" indicating its route. The bus is parked or moving slowly, as suggested by the visible road markings and the slight blur of the background. \n\nThe bus features a large front windshield, through which the driver is partially visible. The driver appears to be seated and engaged in operating the vehicle, though no specific actions can be discerned due to the angle and distance. The bus's side door is closed, and there are no visible passengers inside the bus from this perspective.\n\nThe background includes a line of trees, suggesting the bus is in a suburban or semi-urban area. There are no animals or other people visible in the image. The focus is entirely on the bus and its immediate surroundings. The bus's design, including the destination display and the company logo, indicates its role in public transportation, connecting different parts of the city or region. The interaction between the bus and its environment is minimal in this still image, but the bus's presence suggests its function as a means of transportation for the community. The overall scene conveys a sense of routine and functionality in urban or suburban transit systems.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 270,
+            "total_tokens": 576
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10140.065636,
+            "prompt_eval_duration_ms": 80.466141,
+            "generation_duration_ms": 10019.649345,
+            "load_duration_ms": 37.245247,
+            "tokens_per_second": 26.947050810189808
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a public bus, captured from the side, with a serene and neutral mood. The overall tone is calm and unassuming, evoking a sense of routine and practicality rather than strong emotions. The visual elements contributing to this atmosphere include the clean, white exterior of the bus, which conveys a sense of order and simplicity. The forested background adds a touch of natural tranquility, contrasting with the man-made structure of the bus. The clear sky and the reflections in the windows suggest a bright, daytime setting, further enhancing the sense of calmness. The bus's signage, including the destination display (\"Helsinki\" and \"Malminkartano\"), indicates a functional purpose, reinforcing the idea of a regular commute or travel. The absence of any dramatic elements, such as people or intense colors, keeps the mood grounded and neutral. The image does not evoke strong positive or negative emotions but rather a sense of everyday normalcy, routine, and the quiet efficiency of public transportation. It is a scene that feels familiar and unremarkable, reflecting the mundane yet essential aspects of daily life.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 224,
+            "total_tokens": 532
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8446.024879,
+            "prompt_eval_duration_ms": 74.226354,
+            "generation_duration_ms": 8329.462273,
+            "load_duration_ms": 39.877711,
+            "tokens_per_second": 26.892492295222617
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"driver\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"small\",\n      \"description\": \"Person visible through the bus window, wearing dark clothing\"\n    }\n  },\n  \"man-made\": {\n    \"bus\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"large\",\n      \"description\": \"Public transit bus with visible route number and destination display\"\n    },\n    \"road\": {\n      \"count\": 1,\n      \"location\": \"bottom, foreground\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Paved road surface\"\n    },\n    \"traffic light\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"red\"],\n      \"size\": \"small\",\n      \"description\": \"Red traffic light visible in the background\"\n    },\n    \"sign\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"small\",\n      \"description\": \"Traffic sign visible in the background\"\n    }\n  },\n  \"natural\": {\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"top, background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Line of trees in the background\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "driver": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "white",
+                  "black"
+                ],
+                "size": "small",
+                "description": "Person visible through the bus window, wearing dark clothing"
+              }
+            },
+            "man-made": {
+              "bus": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "white",
+                  "black"
+                ],
+                "size": "large",
+                "description": "Public transit bus with visible route number and destination display"
+              },
+              "road": {
+                "count": 1,
+                "location": "bottom, foreground",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "Paved road surface"
+              },
+              "traffic light": {
+                "count": 1,
+                "location": "right, middle",
+                "color": [
+                  "red"
+                ],
+                "size": "small",
+                "description": "Red traffic light visible in the background"
+              },
+              "sign": {
+                "count": 1,
+                "location": "right, middle",
+                "color": [
+                  "white",
+                  "black"
+                ],
+                "size": "small",
+                "description": "Traffic sign visible in the background"
+              }
+            },
+            "natural": {
+              "trees": {
+                "count": 1,
+                "location": "top, background",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "Line of trees in the background"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 340,
+            "total_tokens": 826
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12782.601243,
+            "prompt_eval_duration_ms": 133.386651,
+            "generation_duration_ms": 12608.306017,
+            "load_duration_ms": 38.215592,
+            "tokens_per_second": 26.966350558240894
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3146,
+        "total_time_ms": 57701.049891999995,
+        "average_speed": 26.93691406650896
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -474,306 +774,6 @@
         "total_tokens": 2846,
         "total_time_ms": 26060.264757999998,
         "average_speed": 42.359819405427686
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a white and black public bus parked on a paved road, with a backdrop of dense green trees suggesting a suburban or rural setting. The bus, marked with the number 106 and the name \"NJAT OY\" prominently displayed on its side, is the focal point of the photograph. The bus's design is modern, with large windows and a clean, sleek appearance. The lighting in the image is natural, indicating daytime, with soft shadows suggesting an overcast sky. The bus's door is open, inviting a sense of accessibility and public transportation. The road appears to be a standard asphalt surface, and the bus is positioned slightly off-center, creating a balanced composition. The greenery in the background contrasts with the white and black of the bus, adding depth and a sense of tranquility to the scene. The overall atmosphere is calm and everyday, capturing a moment of stillness in a public transportation setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 189,
-            "total_tokens": 486
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1461.45737,
-            "prompt_eval_duration_ms": 78.996241,
-            "generation_duration_ms": 1342.986306,
-            "load_duration_ms": 36.847528,
-            "tokens_per_second": 140.7311445810081
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, the dominant element is a white and black bus, specifically model 106, as indicated by the number on its side. The bus's design includes large windows, a front windshield, and a digital display at the top showing the destination \"Keskusta\" and \"Rakasranta.\" The bus's wheels and part of its side panel are clearly visible, suggesting it is either stationary or moving very slowly. The bus's branding, \"NJAT OY,\" along with the website \"www.shgounjat.fi,\" is prominently displayed on its side, indicating its affiliation with a transportation service. The bus's open door suggests it might be in the process of boarding or alighting passengers. \n\nIn the background, a dense line of trees stretches across the horizon, creating a natural backdrop that contrasts with the urban or suburban setting suggested by the bus. The trees appear to be coniferous, possibly pine or fir, and their green foliage is slightly blurred, indicating they are some distance from the viewer. The sky is not visible, but the lighting suggests it is daytime, with the light source likely coming from the upper left, casting subtle shadows on the bus. This layering of the bus in the foreground and the trees in the background creates a sense of depth, placing the viewer in a location where urban and natural elements intersect.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 277,
-            "total_tokens": 580
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2048.56302,
-            "prompt_eval_duration_ms": 29.759039,
-            "generation_duration_ms": 1977.330841,
-            "load_duration_ms": 39.072137,
-            "tokens_per_second": 140.08783672231206
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a white and black bus, marked with the number 106 and the text \"NJAT OY\" along with a website address, is the central object. The bus is stationary, with its doors open, suggesting it might be at a stop or preparing for passengers to board or disembark. The bus's design includes large windows and a digital display at the front indicating the route number and destination. The surrounding environment features a road and a backdrop of dense green trees, indicating a suburban or rural setting. There are no visible people or animals in the image, and the bus appears to be the sole focus, with no direct interaction between the bus and any other elements in the scene. The bus's position and the open doors imply a pause in its journey, possibly for passenger activity.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 164,
-            "total_tokens": 470
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1247.177947,
-            "prompt_eval_duration_ms": 29.315122,
-            "generation_duration_ms": 1177.67292,
-            "load_duration_ms": 37.677949,
-            "tokens_per_second": 139.25768115649632
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image of the bus evokes a sense of everyday routine and functionality, which can be both neutral and slightly melancholic. The bus, with its clean and simple design, suggests a utilitarian purpose, perhaps symbolizing the mundane aspects of urban life. The muted colors and the slightly overcast sky contribute to a subdued atmosphere, hinting at a calm, perhaps even slightly somber mood. The trees in the background add a touch of nature, which might provide a subtle contrast to the urban setting, offering a hint of tranquility. However, the lack of vibrant colors or dynamic elements in the image keeps the overall tone subdued and neutral, reflecting a sense of calmness and the ordinary nature of public transportation. The bus number and route display add a layer of practicality, reinforcing the idea of a structured, everyday life.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 167,
-            "total_tokens": 475
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1277.847021,
-            "prompt_eval_duration_ms": 32.841951,
-            "generation_duration_ms": 1203.111263,
-            "load_duration_ms": 39.544476,
-            "tokens_per_second": 138.80677966855671
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"bus\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"large\",\n      \"description\": \"public transportation vehicle with visible route number and destination sign\"\n    }\n  },\n  \"natural\": {\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"dense forested area behind the bus\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "bus": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "white",
-                  "black"
-                ],
-                "size": "large",
-                "description": "public transportation vehicle with visible route number and destination sign"
-              }
-            },
-            "natural": {
-              "trees": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "dense forested area behind the bus"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 124,
-            "total_tokens": 610
-          },
-          "performance_metrics": {
-            "total_duration_ms": 973.30347,
-            "prompt_eval_duration_ms": 44.296409,
-            "generation_duration_ms": 885.415186,
-            "load_duration_ms": 41.03064,
-            "tokens_per_second": 140.0472930221461
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2621,
-        "total_time_ms": 7008.348827999999,
-        "average_speed": 139.78614703010385
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a close-up view of a public transportation bus, likely captured in an urban or suburban setting. The bus is predominantly white with dark-tinted windows, and the side features a logo that reads \"NJAT OY\" in bold, red letters, along with a website address, \"www.saijounjat.fi,\" indicating it is part of a Finnish transportation service. The bus's number, \"106,\" is clearly visible on the lower side, and the window next to it is marked with the number \"5,\" suggesting it is part of a numbered seating or stop arrangement. The front of the bus displays a digital destination sign that reads \"HESKOTA\" and \"HAKKAKUUSI,\" likely indicating its route or destination.\n\nThe bus is positioned on a paved road, with a clear view of its front wheel and side profile. The background shows a line of trees, suggesting a natural or semi-rural environment surrounding the road. The lighting appears to be natural, possibly during the daytime, as the scene is well-lit without harsh shadows, indicating overcast or diffused sunlight. The overall composition focuses on the bus, with the background elements providing context but not detracting from the main subject. The image conveys a sense of routine public transportation in a calm, everyday setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 272,
-            "total_tokens": 569
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13634.875833,
-            "prompt_eval_duration_ms": 3467.265645,
-            "generation_duration_ms": 10126.638716,
-            "load_duration_ms": 37.317256,
-            "tokens_per_second": 26.859850304547983
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image prominently features a white public transportation bus, which is the central focus. The bus is marked with the text \"NJAT OY\" and a website address, indicating it is part of a transportation company. The bus's side door is visible, along with its large front windshield, which reflects the surrounding environment. The bus's destination display shows \"HESKOTA\" and \"MAKAKUUSI,\" suggesting it is on a route serving these locations. The bus's license plate number, \"106,\" is clearly visible, adding to the detail of the foreground elements.\n\nIn the background, the setting transitions to a natural and urban environment. A dense line of tall trees forms the backdrop, indicating the bus is either passing through or near a wooded area. Beyond the trees, a faint outline of a building or structure is visible, suggesting the presence of a distant urban or suburban area. The road on which the bus is traveling is partially visible, with a white-striped curb indicating a boundary or parking area. The sky appears overcast, contributing to a subdued lighting condition that enhances the contrast between the bus and the background.\n\nThe relationship between the foreground and background elements is one of depth and context. The bus, as the primary subject, is sharply in focus, drawing the viewer's attention. The background, while less detailed, provides a sense of location and environment, situating the bus within a natural and urban setting. The reflections on the bus's windshield subtly connect the two layers, as they mirror the trees and sky, creating a visual link between the vehicle and its surroundings. This composition effectively uses depth to convey both the subject and its context.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 340,
-            "total_tokens": 643
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12697.482301,
-            "prompt_eval_duration_ms": 72.120969,
-            "generation_duration_ms": 12583.818239,
-            "load_duration_ms": 39.099337,
-            "tokens_per_second": 27.018826364343518
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image shows a public transportation bus, specifically a NJAT OY bus, which is a bus company in Finland. The bus is white with black and red accents, and its destination display reads \"Helsinki\" and \"Malminkartano,\" indicating its route. The bus is parked or moving slowly, as suggested by the visible road markings and the slight blur of the background. \n\nThe bus features a large front windshield, through which the driver is partially visible. The driver appears to be seated and engaged in operating the vehicle, though no specific actions can be discerned due to the angle and distance. The bus's side door is closed, and there are no visible passengers inside the bus from this perspective.\n\nThe background includes a line of trees, suggesting the bus is in a suburban or semi-urban area. There are no animals or other people visible in the image. The focus is entirely on the bus and its immediate surroundings. The bus's design, including the destination display and the company logo, indicates its role in public transportation, connecting different parts of the city or region. The interaction between the bus and its environment is minimal in this still image, but the bus's presence suggests its function as a means of transportation for the community. The overall scene conveys a sense of routine and functionality in urban or suburban transit systems.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 270,
-            "total_tokens": 576
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10140.065636,
-            "prompt_eval_duration_ms": 80.466141,
-            "generation_duration_ms": 10019.649345,
-            "load_duration_ms": 37.245247,
-            "tokens_per_second": 26.947050810189808
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a public bus, captured from the side, with a serene and neutral mood. The overall tone is calm and unassuming, evoking a sense of routine and practicality rather than strong emotions. The visual elements contributing to this atmosphere include the clean, white exterior of the bus, which conveys a sense of order and simplicity. The forested background adds a touch of natural tranquility, contrasting with the man-made structure of the bus. The clear sky and the reflections in the windows suggest a bright, daytime setting, further enhancing the sense of calmness. The bus's signage, including the destination display (\"Helsinki\" and \"Malminkartano\"), indicates a functional purpose, reinforcing the idea of a regular commute or travel. The absence of any dramatic elements, such as people or intense colors, keeps the mood grounded and neutral. The image does not evoke strong positive or negative emotions but rather a sense of everyday normalcy, routine, and the quiet efficiency of public transportation. It is a scene that feels familiar and unremarkable, reflecting the mundane yet essential aspects of daily life.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 224,
-            "total_tokens": 532
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8446.024879,
-            "prompt_eval_duration_ms": 74.226354,
-            "generation_duration_ms": 8329.462273,
-            "load_duration_ms": 39.877711,
-            "tokens_per_second": 26.892492295222617
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"driver\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"small\",\n      \"description\": \"Person visible through the bus window, wearing dark clothing\"\n    }\n  },\n  \"man-made\": {\n    \"bus\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"large\",\n      \"description\": \"Public transit bus with visible route number and destination display\"\n    },\n    \"road\": {\n      \"count\": 1,\n      \"location\": \"bottom, foreground\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Paved road surface\"\n    },\n    \"traffic light\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"red\"],\n      \"size\": \"small\",\n      \"description\": \"Red traffic light visible in the background\"\n    },\n    \"sign\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"small\",\n      \"description\": \"Traffic sign visible in the background\"\n    }\n  },\n  \"natural\": {\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"top, background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Line of trees in the background\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "driver": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "white",
-                  "black"
-                ],
-                "size": "small",
-                "description": "Person visible through the bus window, wearing dark clothing"
-              }
-            },
-            "man-made": {
-              "bus": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "white",
-                  "black"
-                ],
-                "size": "large",
-                "description": "Public transit bus with visible route number and destination display"
-              },
-              "road": {
-                "count": 1,
-                "location": "bottom, foreground",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "Paved road surface"
-              },
-              "traffic light": {
-                "count": 1,
-                "location": "right, middle",
-                "color": [
-                  "red"
-                ],
-                "size": "small",
-                "description": "Red traffic light visible in the background"
-              },
-              "sign": {
-                "count": 1,
-                "location": "right, middle",
-                "color": [
-                  "white",
-                  "black"
-                ],
-                "size": "small",
-                "description": "Traffic sign visible in the background"
-              }
-            },
-            "natural": {
-              "trees": {
-                "count": 1,
-                "location": "top, background",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "Line of trees in the background"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 340,
-            "total_tokens": 826
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12782.601243,
-            "prompt_eval_duration_ms": 133.386651,
-            "generation_duration_ms": 12608.306017,
-            "load_duration_ms": 38.215592,
-            "tokens_per_second": 26.966350558240894
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3146,
-        "total_time_ms": 57701.049891999995,
-        "average_speed": 26.93691406650896
       }
     },
     {

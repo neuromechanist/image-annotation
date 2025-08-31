@@ -7,6 +7,308 @@
   "timestamp": "2025-08-30T21:41:53.212191+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a lively scene of six individuals, likely surfers, gathered on the water, each holding a surfboard. They are dressed in black wetsuits, suggesting a cool climate or a preference for comfort in the water. The surfboards, varying in color from bright yellow to vibrant blue, stand out against the muted tones of the surrounding water and sky. The setting appears to be an open sea or a large body of water, with the horizon barely visible under a gray, overcast sky, hinting at a cloudy or possibly early morning or late afternoon time. The lighting is soft and diffused, with no harsh shadows, which enhances the calm and serene atmosphere of the scene. The composition is centered around the group, with the surfers positioned closely together, creating a sense of unity and camaraderie. The overall mood is one of anticipation and enjoyment, as if they are preparing for a surfing session or have just completed one, sharing a moment of connection and shared experience.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 201,
+            "total_tokens": 498
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1556.882251,
+            "prompt_eval_duration_ms": 79.213175,
+            "generation_duration_ms": 1436.335226,
+            "load_duration_ms": 38.969534,
+            "tokens_per_second": 139.93947677504082
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, a group of six individuals wearing black wetsuits are seated on surfboards, smiling and posing for the camera. Their surfboards, one yellow and one blue, are partially submerged in the dark, choppy water, suggesting they are either preparing to surf or have just finished a session. The individuals are positioned closely together, creating a sense of camaraderie and shared experience. The background, which is the distant setting, features an overcast sky with a muted gray tone, indicating cloudy weather, which contrasts with the darker, more vibrant colors of the water and the surfers' attire. The water appears calm and expansive, stretching out to the horizon where it meets the sky, emphasizing the vastness of the ocean and the relative smallness of the group within it. The overall composition of the image highlights the interaction between the human subjects and their natural environment, with the foreground elements providing a personal and intimate perspective while the background elements establish the broader context of the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 203,
+            "total_tokens": 506
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1548.897437,
+            "prompt_eval_duration_ms": 30.410317,
+            "generation_duration_ms": 1476.526086,
+            "load_duration_ms": 38.36932,
+            "tokens_per_second": 137.48487204173918
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a group of six individuals, all clad in black wetsuits, are gathered in the ocean, each holding a surfboard. They appear to be surfers, possibly preparing for or taking a break from surfing. The individuals are positioned close to each other, suggesting a sense of camaraderie and shared purpose. The surfboards, one yellow and one blue, are held in a way that indicates they are either preparing to ride the waves or have just finished a session. The ocean around them is calm, with gentle waves, and the sky above is overcast, giving the scene a serene and slightly moody atmosphere. The interaction among the group is friendly and relaxed, as they are all smiling and looking towards the camera, creating a sense of unity and enjoyment of their shared activity. There are no animals or other objects in the image, and the focus is entirely on the group and their immediate environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 187,
+            "total_tokens": 493
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1425.520562,
+            "prompt_eval_duration_ms": 29.323165,
+            "generation_duration_ms": 1353.857254,
+            "load_duration_ms": 39.928442,
+            "tokens_per_second": 138.12386752554934
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of camaraderie and shared joy, evoking feelings of excitement and anticipation. The overall tone is decidedly positive, as evidenced by the group of six individuals, all clad in wetsuits, sitting on their surfboards in the calm, overcast sea. Their expressions are bright and cheerful, with smiles and laughter visible, suggesting a sense of shared enjoyment and the thrill of the upcoming surfing experience. The visual elements that contribute to this positive emotional atmosphere include the bright colors of the surfboards, which stand out against the muted tones of the water and sky, and the relaxed, friendly postures of the group, indicating a sense of ease and mutual support. The overcast sky, while not directly affecting the mood, adds a touch of drama and anticipation, enhancing the sense of adventure and the excitement of the moment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 171,
+            "total_tokens": 479
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1309.216321,
+            "prompt_eval_duration_ms": 31.417626,
+            "generation_duration_ms": 1235.069969,
+            "load_duration_ms": 40.300542,
+            "tokens_per_second": 138.45369435907642
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 6,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"people wearing wetsuits, smiling, and holding surfboards\"\n    }\n  },\n  \"man-made\": {\n    \"surfboard\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"yellow\", \"blue\"],\n      \"size\": \"medium\",\n      \"description\": \"surfboards being held by the people\"\n    }\n  },\n  \"natural\": {\n    \"water\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"ocean or sea where the people are standing\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 6,
+                "location": "center",
+                "color": [
+                  "black"
+                ],
+                "size": "medium",
+                "description": "people wearing wetsuits, smiling, and holding surfboards"
+              }
+            },
+            "man-made": {
+              "surfboard": {
+                "count": 2,
+                "location": "center",
+                "color": [
+                  "yellow",
+                  "blue"
+                ],
+                "size": "medium",
+                "description": "surfboards being held by the people"
+              }
+            },
+            "natural": {
+              "water": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "ocean or sea where the people are standing"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 184,
+            "total_tokens": 670
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1398.248305,
+            "prompt_eval_duration_ms": 45.99652,
+            "generation_duration_ms": 1307.870614,
+            "load_duration_ms": 41.769838,
+            "tokens_per_second": 140.68669945664823
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2646,
+        "total_time_ms": 7238.764876,
+        "average_speed": 138.9377220316108
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a group of seven individuals in a serene ocean setting, likely participating in a surfing activity. The scene is captured from a low angle, emphasizing the vastness of the water and the horizon. The main elements include the surfers, their surfboards, and the open sea. The surfers are wearing black wetsuits, which contrast sharply with the bright colors of their surfboards\u2014yellow, blue, and white. The individuals are positioned in a semi-circle, with some standing on their boards and others kneeling or sitting, suggesting a moment of rest or preparation before surfing. Their expressions range from smiles to relaxed poses, indicating a casual and enjoyable atmosphere.\n\nThe lighting is soft and diffused, likely due to an overcast sky, which is visible in the background. The sky is a muted gray, blending seamlessly with the calm, dark greenish-blue water. The overall composition is balanced, with the group centrally positioned in the frame, drawing the viewer's attention to their camaraderie and the tranquil environment. The image conveys a sense of unity and leisure, capturing a moment of shared experience in a natural, open setting. The lack of harsh shadows and the gentle waves further enhance the peaceful and relaxed mood of the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 251,
+            "total_tokens": 548
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13035.287147,
+            "prompt_eval_duration_ms": 3643.72917,
+            "generation_duration_ms": 9351.122699,
+            "load_duration_ms": 38.005047,
+            "tokens_per_second": 26.841696775815134
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image prominently features a group of individuals in wetsuits, positioned on surfboards in the water. The closest person to the viewer is lying on a blue surfboard, smiling directly at the camera, while others are standing or sitting on their boards, also smiling and appearing to enjoy the moment. The surfboards are brightly colored, with yellow and blue hues standing out against the darker water. The individuals are wearing wetsuits, indicating that the water is likely cold, and they are engaged in a surfing activity.\n\nIn the background, the setting is a vast expanse of open water, extending towards the horizon. The water appears calm, with gentle ripples, and the sky is overcast, giving the scene a muted, grayish tone. The horizon line is visible, separating the water from the sky, and there are no distinct landmasses or structures in the distance, emphasizing the openness of the ocean. The background provides context for the activity in the foreground, suggesting that the group is in a coastal or open-water environment suitable for surfing.\n\nThe foreground and background elements are interconnected through the shared theme of the ocean. The individuals in the foreground are actively participating in a water sport, while the expansive background reinforces the setting and atmosphere of the activity. The calmness of the water in the background contrasts with the dynamic, playful energy of the people in the foreground, creating a balanced composition that highlights both the activity and its serene environment. The overcast sky adds a sense of tranquility, tying the layers together and enhancing the overall mood of the image.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 318,
+            "total_tokens": 621
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11972.248192,
+            "prompt_eval_duration_ms": 73.632141,
+            "generation_duration_ms": 11858.63439,
+            "load_duration_ms": 37.697152,
+            "tokens_per_second": 26.81590388419083
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a group of seven individuals in a body of water, likely the ocean, engaging in a surfing activity. They are all wearing wetsuits, which suggests they are prepared for cooler water temperatures. The group is positioned on surfboards, with some individuals lying down on their boards while others are sitting or kneeling. The surfboards are of varying colors, including yellow and blue, and appear to be standard surfboards used for recreational surfing.\n\nThe individuals are smiling and appear to be enjoying themselves, indicating a fun and relaxed atmosphere. They are holding hands in a chain-like formation, creating a sense of unity and camaraderie among the group. This hand-holding suggests they might be participating in a group activity or simply enjoying a moment of connection and teamwork. The water around them is calm, with gentle ripples, and the horizon is visible in the background, adding to the serene and open setting.\n\nThere are no animals visible in the image, and the focus is entirely on the human interaction and the surfing activity. The group's actions, such as lying on the boards and holding hands, highlight a shared experience and mutual support, emphasizing the social and recreational aspects of the activity. The overall scene conveys a sense of enjoyment, teamwork, and connection in a natural, aquatic environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 261,
+            "total_tokens": 567
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9873.994476,
+            "prompt_eval_duration_ms": 75.508842,
+            "generation_duration_ms": 9756.62893,
+            "load_duration_ms": 38.416224,
+            "tokens_per_second": 26.75104299574915
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a positive and joyful mood, evoking feelings of camaraderie, adventure, and relaxation. The group of individuals, dressed in wetsuits, are gathered on surfboards in the water, smiling and appearing to enjoy their time together. The overall tone is uplifting and lighthearted, suggesting a shared sense of fun and accomplishment. The visual elements contributing to this emotional atmosphere include the bright, open smiles of the individuals, which radiate happiness and contentment. The presence of surfboards and the ocean setting imply a sense of adventure and connection with nature, enhancing the feeling of excitement and freedom. The casual, relaxed postures of the group members, along with their close physical proximity, suggest strong bonds and a sense of teamwork or friendship. The overcast sky, while not bright, does not detract from the mood but instead adds a calm, serene backdrop that complements the overall peacefulness of the scene. The image effectively captures a moment of shared joy and the simple pleasure of being outdoors with friends, making it a heartwarming and positive visual experience.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 221,
+            "total_tokens": 529
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8345.063679,
+            "prompt_eval_duration_ms": 74.461312,
+            "generation_duration_ms": 8229.989959,
+            "load_duration_ms": 38.128595,
+            "tokens_per_second": 26.85300967570719
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 7,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\", \"skin tone\"],\n      \"size\": \"medium\",\n      \"description\": \"Group of people wearing wetsuits, some holding surfboards, smiling and posing in the water.\"\n    }\n  },\n  \"man-made\": {\n    \"surfboard\": {\n      \"count\": 3,\n      \"location\": \"center, middle\",\n      \"color\": [\"yellow\", \"blue\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Surfboards being held or lying on the water.\"\n    },\n    \"wetsuit\": {\n      \"count\": 7,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Wetsuits worn by the people in the water.\"\n    }\n  },\n  \"natural\": {\n    \"water\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"dark green\"],\n      \"size\": \"large\",\n      \"description\": \"Body of water with gentle waves.\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Overcast sky.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 7,
+                "location": "center, middle",
+                "color": [
+                  "black",
+                  "skin tone"
+                ],
+                "size": "medium",
+                "description": "Group of people wearing wetsuits, some holding surfboards, smiling and posing in the water."
+              }
+            },
+            "man-made": {
+              "surfboard": {
+                "count": 3,
+                "location": "center, middle",
+                "color": [
+                  "yellow",
+                  "blue",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "Surfboards being held or lying on the water."
+              },
+              "wetsuit": {
+                "count": 7,
+                "location": "center, middle",
+                "color": [
+                  "black"
+                ],
+                "size": "medium",
+                "description": "Wetsuits worn by the people in the water."
+              }
+            },
+            "natural": {
+              "water": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "dark green"
+                ],
+                "size": "large",
+                "description": "Body of water with gentle waves."
+              },
+              "sky": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "Overcast sky."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 304,
+            "total_tokens": 790
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11415.645685,
+            "prompt_eval_duration_ms": 135.323398,
+            "generation_duration_ms": 11236.782842,
+            "load_duration_ms": 40.287351,
+            "tokens_per_second": 27.054006851830554
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3055,
+        "total_time_ms": 54642.239179,
+        "average_speed": 26.863132036658573
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -433,308 +735,6 @@
         "total_tokens": 2886,
         "total_time_ms": 27394.951607,
         "average_speed": 41.7216134382156
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a lively scene of six individuals, likely surfers, gathered on the water, each holding a surfboard. They are dressed in black wetsuits, suggesting a cool climate or a preference for comfort in the water. The surfboards, varying in color from bright yellow to vibrant blue, stand out against the muted tones of the surrounding water and sky. The setting appears to be an open sea or a large body of water, with the horizon barely visible under a gray, overcast sky, hinting at a cloudy or possibly early morning or late afternoon time. The lighting is soft and diffused, with no harsh shadows, which enhances the calm and serene atmosphere of the scene. The composition is centered around the group, with the surfers positioned closely together, creating a sense of unity and camaraderie. The overall mood is one of anticipation and enjoyment, as if they are preparing for a surfing session or have just completed one, sharing a moment of connection and shared experience.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 201,
-            "total_tokens": 498
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1556.882251,
-            "prompt_eval_duration_ms": 79.213175,
-            "generation_duration_ms": 1436.335226,
-            "load_duration_ms": 38.969534,
-            "tokens_per_second": 139.93947677504082
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, a group of six individuals wearing black wetsuits are seated on surfboards, smiling and posing for the camera. Their surfboards, one yellow and one blue, are partially submerged in the dark, choppy water, suggesting they are either preparing to surf or have just finished a session. The individuals are positioned closely together, creating a sense of camaraderie and shared experience. The background, which is the distant setting, features an overcast sky with a muted gray tone, indicating cloudy weather, which contrasts with the darker, more vibrant colors of the water and the surfers' attire. The water appears calm and expansive, stretching out to the horizon where it meets the sky, emphasizing the vastness of the ocean and the relative smallness of the group within it. The overall composition of the image highlights the interaction between the human subjects and their natural environment, with the foreground elements providing a personal and intimate perspective while the background elements establish the broader context of the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 203,
-            "total_tokens": 506
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1548.897437,
-            "prompt_eval_duration_ms": 30.410317,
-            "generation_duration_ms": 1476.526086,
-            "load_duration_ms": 38.36932,
-            "tokens_per_second": 137.48487204173918
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a group of six individuals, all clad in black wetsuits, are gathered in the ocean, each holding a surfboard. They appear to be surfers, possibly preparing for or taking a break from surfing. The individuals are positioned close to each other, suggesting a sense of camaraderie and shared purpose. The surfboards, one yellow and one blue, are held in a way that indicates they are either preparing to ride the waves or have just finished a session. The ocean around them is calm, with gentle waves, and the sky above is overcast, giving the scene a serene and slightly moody atmosphere. The interaction among the group is friendly and relaxed, as they are all smiling and looking towards the camera, creating a sense of unity and enjoyment of their shared activity. There are no animals or other objects in the image, and the focus is entirely on the group and their immediate environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 187,
-            "total_tokens": 493
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1425.520562,
-            "prompt_eval_duration_ms": 29.323165,
-            "generation_duration_ms": 1353.857254,
-            "load_duration_ms": 39.928442,
-            "tokens_per_second": 138.12386752554934
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of camaraderie and shared joy, evoking feelings of excitement and anticipation. The overall tone is decidedly positive, as evidenced by the group of six individuals, all clad in wetsuits, sitting on their surfboards in the calm, overcast sea. Their expressions are bright and cheerful, with smiles and laughter visible, suggesting a sense of shared enjoyment and the thrill of the upcoming surfing experience. The visual elements that contribute to this positive emotional atmosphere include the bright colors of the surfboards, which stand out against the muted tones of the water and sky, and the relaxed, friendly postures of the group, indicating a sense of ease and mutual support. The overcast sky, while not directly affecting the mood, adds a touch of drama and anticipation, enhancing the sense of adventure and the excitement of the moment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 171,
-            "total_tokens": 479
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1309.216321,
-            "prompt_eval_duration_ms": 31.417626,
-            "generation_duration_ms": 1235.069969,
-            "load_duration_ms": 40.300542,
-            "tokens_per_second": 138.45369435907642
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 6,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"people wearing wetsuits, smiling, and holding surfboards\"\n    }\n  },\n  \"man-made\": {\n    \"surfboard\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"yellow\", \"blue\"],\n      \"size\": \"medium\",\n      \"description\": \"surfboards being held by the people\"\n    }\n  },\n  \"natural\": {\n    \"water\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"ocean or sea where the people are standing\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 6,
-                "location": "center",
-                "color": [
-                  "black"
-                ],
-                "size": "medium",
-                "description": "people wearing wetsuits, smiling, and holding surfboards"
-              }
-            },
-            "man-made": {
-              "surfboard": {
-                "count": 2,
-                "location": "center",
-                "color": [
-                  "yellow",
-                  "blue"
-                ],
-                "size": "medium",
-                "description": "surfboards being held by the people"
-              }
-            },
-            "natural": {
-              "water": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "ocean or sea where the people are standing"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 184,
-            "total_tokens": 670
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1398.248305,
-            "prompt_eval_duration_ms": 45.99652,
-            "generation_duration_ms": 1307.870614,
-            "load_duration_ms": 41.769838,
-            "tokens_per_second": 140.68669945664823
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2646,
-        "total_time_ms": 7238.764876,
-        "average_speed": 138.9377220316108
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a group of seven individuals in a serene ocean setting, likely participating in a surfing activity. The scene is captured from a low angle, emphasizing the vastness of the water and the horizon. The main elements include the surfers, their surfboards, and the open sea. The surfers are wearing black wetsuits, which contrast sharply with the bright colors of their surfboards\u2014yellow, blue, and white. The individuals are positioned in a semi-circle, with some standing on their boards and others kneeling or sitting, suggesting a moment of rest or preparation before surfing. Their expressions range from smiles to relaxed poses, indicating a casual and enjoyable atmosphere.\n\nThe lighting is soft and diffused, likely due to an overcast sky, which is visible in the background. The sky is a muted gray, blending seamlessly with the calm, dark greenish-blue water. The overall composition is balanced, with the group centrally positioned in the frame, drawing the viewer's attention to their camaraderie and the tranquil environment. The image conveys a sense of unity and leisure, capturing a moment of shared experience in a natural, open setting. The lack of harsh shadows and the gentle waves further enhance the peaceful and relaxed mood of the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 251,
-            "total_tokens": 548
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13035.287147,
-            "prompt_eval_duration_ms": 3643.72917,
-            "generation_duration_ms": 9351.122699,
-            "load_duration_ms": 38.005047,
-            "tokens_per_second": 26.841696775815134
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image prominently features a group of individuals in wetsuits, positioned on surfboards in the water. The closest person to the viewer is lying on a blue surfboard, smiling directly at the camera, while others are standing or sitting on their boards, also smiling and appearing to enjoy the moment. The surfboards are brightly colored, with yellow and blue hues standing out against the darker water. The individuals are wearing wetsuits, indicating that the water is likely cold, and they are engaged in a surfing activity.\n\nIn the background, the setting is a vast expanse of open water, extending towards the horizon. The water appears calm, with gentle ripples, and the sky is overcast, giving the scene a muted, grayish tone. The horizon line is visible, separating the water from the sky, and there are no distinct landmasses or structures in the distance, emphasizing the openness of the ocean. The background provides context for the activity in the foreground, suggesting that the group is in a coastal or open-water environment suitable for surfing.\n\nThe foreground and background elements are interconnected through the shared theme of the ocean. The individuals in the foreground are actively participating in a water sport, while the expansive background reinforces the setting and atmosphere of the activity. The calmness of the water in the background contrasts with the dynamic, playful energy of the people in the foreground, creating a balanced composition that highlights both the activity and its serene environment. The overcast sky adds a sense of tranquility, tying the layers together and enhancing the overall mood of the image.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 318,
-            "total_tokens": 621
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11972.248192,
-            "prompt_eval_duration_ms": 73.632141,
-            "generation_duration_ms": 11858.63439,
-            "load_duration_ms": 37.697152,
-            "tokens_per_second": 26.81590388419083
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a group of seven individuals in a body of water, likely the ocean, engaging in a surfing activity. They are all wearing wetsuits, which suggests they are prepared for cooler water temperatures. The group is positioned on surfboards, with some individuals lying down on their boards while others are sitting or kneeling. The surfboards are of varying colors, including yellow and blue, and appear to be standard surfboards used for recreational surfing.\n\nThe individuals are smiling and appear to be enjoying themselves, indicating a fun and relaxed atmosphere. They are holding hands in a chain-like formation, creating a sense of unity and camaraderie among the group. This hand-holding suggests they might be participating in a group activity or simply enjoying a moment of connection and teamwork. The water around them is calm, with gentle ripples, and the horizon is visible in the background, adding to the serene and open setting.\n\nThere are no animals visible in the image, and the focus is entirely on the human interaction and the surfing activity. The group's actions, such as lying on the boards and holding hands, highlight a shared experience and mutual support, emphasizing the social and recreational aspects of the activity. The overall scene conveys a sense of enjoyment, teamwork, and connection in a natural, aquatic environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 261,
-            "total_tokens": 567
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9873.994476,
-            "prompt_eval_duration_ms": 75.508842,
-            "generation_duration_ms": 9756.62893,
-            "load_duration_ms": 38.416224,
-            "tokens_per_second": 26.75104299574915
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a positive and joyful mood, evoking feelings of camaraderie, adventure, and relaxation. The group of individuals, dressed in wetsuits, are gathered on surfboards in the water, smiling and appearing to enjoy their time together. The overall tone is uplifting and lighthearted, suggesting a shared sense of fun and accomplishment. The visual elements contributing to this emotional atmosphere include the bright, open smiles of the individuals, which radiate happiness and contentment. The presence of surfboards and the ocean setting imply a sense of adventure and connection with nature, enhancing the feeling of excitement and freedom. The casual, relaxed postures of the group members, along with their close physical proximity, suggest strong bonds and a sense of teamwork or friendship. The overcast sky, while not bright, does not detract from the mood but instead adds a calm, serene backdrop that complements the overall peacefulness of the scene. The image effectively captures a moment of shared joy and the simple pleasure of being outdoors with friends, making it a heartwarming and positive visual experience.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 221,
-            "total_tokens": 529
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8345.063679,
-            "prompt_eval_duration_ms": 74.461312,
-            "generation_duration_ms": 8229.989959,
-            "load_duration_ms": 38.128595,
-            "tokens_per_second": 26.85300967570719
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 7,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\", \"skin tone\"],\n      \"size\": \"medium\",\n      \"description\": \"Group of people wearing wetsuits, some holding surfboards, smiling and posing in the water.\"\n    }\n  },\n  \"man-made\": {\n    \"surfboard\": {\n      \"count\": 3,\n      \"location\": \"center, middle\",\n      \"color\": [\"yellow\", \"blue\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Surfboards being held or lying on the water.\"\n    },\n    \"wetsuit\": {\n      \"count\": 7,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Wetsuits worn by the people in the water.\"\n    }\n  },\n  \"natural\": {\n    \"water\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"dark green\"],\n      \"size\": \"large\",\n      \"description\": \"Body of water with gentle waves.\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Overcast sky.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 7,
-                "location": "center, middle",
-                "color": [
-                  "black",
-                  "skin tone"
-                ],
-                "size": "medium",
-                "description": "Group of people wearing wetsuits, some holding surfboards, smiling and posing in the water."
-              }
-            },
-            "man-made": {
-              "surfboard": {
-                "count": 3,
-                "location": "center, middle",
-                "color": [
-                  "yellow",
-                  "blue",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "Surfboards being held or lying on the water."
-              },
-              "wetsuit": {
-                "count": 7,
-                "location": "center, middle",
-                "color": [
-                  "black"
-                ],
-                "size": "medium",
-                "description": "Wetsuits worn by the people in the water."
-              }
-            },
-            "natural": {
-              "water": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "dark green"
-                ],
-                "size": "large",
-                "description": "Body of water with gentle waves."
-              },
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "Overcast sky."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 304,
-            "total_tokens": 790
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11415.645685,
-            "prompt_eval_duration_ms": 135.323398,
-            "generation_duration_ms": 11236.782842,
-            "load_duration_ms": 40.287351,
-            "tokens_per_second": 27.054006851830554
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3055,
-        "total_time_ms": 54642.239179,
-        "average_speed": 26.863132036658573
       }
     },
     {

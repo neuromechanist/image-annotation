@@ -7,6 +7,283 @@
   "timestamp": "2025-08-31T00:20:21.741128+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image presents a cozy indoor setting, likely a corner of a room, where a terracotta pot, adorned with an intricate embossed design resembling a classical amphora, sits prominently on a light wooden surface. The pot is filled with a lush green plant, possibly a type of herb or leafy green, which spills slightly over the edges, adding a vibrant touch of nature to the scene. In the foreground, a small red-framed analog clock with white numbers and black hands is positioned, its time showing approximately 10:10, adding a pop of color and a functional element to the composition. The background features a cream-colored curtain with a subtle vertical stripe pattern, which complements the warm tones of the terracotta pot and the wooden surface. The lighting appears soft and diffused, possibly from an indirect source, casting gentle shadows and enhancing the earthy tones of the pot and the natural greenery. The overall composition is simple yet inviting, with a harmonious blend of natural and man-made elements, creating a serene and homey atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 216,
+            "total_tokens": 513
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1659.320226,
+            "prompt_eval_duration_ms": 78.274395,
+            "generation_duration_ms": 1538.079126,
+            "load_duration_ms": 40.666892,
+            "tokens_per_second": 140.4349076381653
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, the viewer's attention is drawn to a vibrant red clock with black numbers and hands, resting on a light wooden surface. The clock's bright color contrasts sharply with the muted tones of the surrounding environment, making it a focal point. Just behind the clock, a terracotta pot, intricately designed with raised patterns, holds a lush green plant with broad leaves. The pot's earthy hue complements the wooden surface and adds a natural element to the scene. In the background, partially obscured by the pot and the wooden surface, a beige curtain with a subtle vertical stripe pattern hangs, providing a neutral backdrop that allows the other elements to stand out. The relationship between the foreground and background elements is one of layered depth, with the clock and plant in the immediate foreground, the pot slightly receding, and the curtain in the distant background, creating a sense of space and dimension.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 182,
+            "total_tokens": 485
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1391.276169,
+            "prompt_eval_duration_ms": 29.278038,
+            "generation_duration_ms": 1322.993402,
+            "load_duration_ms": 36.487677,
+            "tokens_per_second": 137.56682363257923
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, there are no people or animals present. The scene is dominated by a terracotta pot filled with lush green plants, which are thriving and appear to be well-maintained, suggesting they are cared for regularly. The pot is placed on a wooden surface, possibly a shelf or a table, and next to it is a small red clock with black numbers and hands, indicating the time as approximately 10:10. The clock and the pot are stationary, and there is no interaction between them. The background includes a curtain with a subtle pattern, which adds a touch of homeliness to the setting. The overall arrangement suggests a peaceful indoor environment, where the clock serves as a silent observer of the time, while the plants symbolize growth and life. The clock and the plants coexist in harmony, each contributing to the serene atmosphere of the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 178,
+            "total_tokens": 484
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1392.897321,
+            "prompt_eval_duration_ms": 30.414544,
+            "generation_duration_ms": 1321.429648,
+            "load_duration_ms": 38.75224,
+            "tokens_per_second": 134.70259296013614
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of tranquility and simplicity, contributing to a positive emotional atmosphere. The vibrant green of the plant contrasts beautifully with the warm, earthy tones of the terracotta pot, creating a visually soothing palette. The subtle texture of the pot and the delicate leaves of the plant add a natural, organic feel, enhancing the peaceful ambiance. The presence of the clock, though small, adds a touch of everyday life and the passage of time, which can be seen as a reminder of the calm and steady pace of nature. The soft lighting and the blurred background further emphasize the focus on the plant and the clock, making the scene feel intimate and personal. Overall, the image conveys a mood of serenity and contentment, suggesting a moment of quiet reflection or a simple pleasure in the beauty of everyday objects.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 168,
+            "total_tokens": 476
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1333.236405,
+            "prompt_eval_duration_ms": 31.875358,
+            "generation_duration_ms": 1260.700116,
+            "load_duration_ms": 38.016195,
+            "tokens_per_second": 133.2592881271695
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"clock\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"red\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"red-framed analog clock\"\n    }\n  },\n  \"natural\": {\n    \"plant\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"green leafy plant in terracotta pot\"\n    }\n  },\n  \"man-made\": {\n    \"pot\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"terracotta\"],\n      \"size\": \"large\",\n      \"description\": \"terracotta pot with embossed design\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "pot": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "terracotta"
+                ],
+                "size": "large",
+                "description": "terracotta pot with embossed design"
+              }
+            },
+            "natural": {
+              "plant": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "green"
+                ],
+                "size": "medium",
+                "description": "green leafy plant in terracotta pot"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 180,
+            "total_tokens": 666
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1416.840295,
+            "prompt_eval_duration_ms": 44.191071,
+            "generation_duration_ms": 1330.682605,
+            "load_duration_ms": 39.529973,
+            "tokens_per_second": 135.2689208708789
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2624,
+        "total_time_ms": 7193.5704160000005,
+        "average_speed": 136.24650664578581
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a cozy indoor setting, likely a corner of a room, with soft, warm lighting that creates a serene and inviting atmosphere. The main elements in the composition are a large, textured orange terracotta pot and a red analog clock. The terracotta pot, which is the focal point, is filled with lush green plants, including trailing vines and leafy herbs, giving the scene a vibrant and natural feel. The pot's rustic texture contrasts nicely with the smooth, glossy surface of the red clock, which is positioned in the foreground on a light-colored wooden surface, possibly a table or shelf. The clock's bold red color stands out against the neutral tones of the background and the warm orange of the pot. The background features a beige curtain, adding to the soft, muted color palette and contributing to the overall calm ambiance. The lighting is warm and diffused, casting gentle shadows and highlighting the textures of the pot and the greenery. The overall composition is balanced, with the pot and clock creating a harmonious blend of natural and man-made elements, evoking a sense of tranquility and domestic charm.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 227,
+            "total_tokens": 524
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12154.825393,
+            "prompt_eval_duration_ms": 3658.179912,
+            "generation_duration_ms": 8457.612163,
+            "load_duration_ms": 36.672053,
+            "tokens_per_second": 26.839726819476294
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a bright red analog clock with bold black numbers and hands, positioned prominently in the lower left corner. Its vibrant color contrasts sharply with the warm tones of the orange terracotta pot and the greenery, drawing immediate attention. The clock's placement suggests a sense of time and domesticity, adding a functional element to the scene.\n\nIn the background, the orange terracotta pot is the central focus, filled with lush green plants that spill over its edges, creating a natural and organic feel. The pot's textured surface and earthy color complement the greenery, enhancing the overall warmth and earthiness of the setting. Behind the pot, a beige curtain or fabric hangs, providing a soft, neutral backdrop that allows the vibrant colors of the pot and plants to stand out. The curtain's subtle folds add depth and a sense of indoor ambiance, suggesting a cozy, lived-in space.\n\nThe relationship between the foreground and background elements is harmonious and layered. The clock in the foreground serves as a grounding element, anchoring the scene in a specific moment, while the pot and plants in the background introduce a sense of life and growth. The contrast between the man-made clock and the natural elements of the pot and plants creates a balance between structure and organic beauty. The beige curtain in the background further softens the overall composition, tying the elements together and creating a cohesive, inviting atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 286,
+            "total_tokens": 589
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10773.398336,
+            "prompt_eval_duration_ms": 72.960966,
+            "generation_duration_ms": 10660.194004,
+            "load_duration_ms": 37.981611,
+            "tokens_per_second": 26.82878002902057
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a cozy indoor scene featuring a terracotta pot, a red clock, and some greenery, but no people or animals are present. The terracotta pot, which is the central object, is filled with soil and houses several small plants with vibrant green leaves. The plants appear to be thriving, with their leaves cascading over the edges of the pot, adding a natural and lively touch to the setting. The pot is placed on a light-colored surface, likely a wooden shelf or table, which complements the warm tones of the terracotta.\n\nIn the foreground, a red analog clock with white numbers and black hands is positioned in front of the pot. The clock displays the time as approximately 10:10, and its bright color contrasts with the earthy tones of the pot and the green of the plants. The clock and the pot are arranged in a way that suggests a deliberate aesthetic choice, creating a harmonious and inviting atmosphere.\n\nThe background includes a beige curtain, which adds to the warm and soft ambiance of the scene. The curtain's neutral color helps to highlight the vibrant elements in the foreground, such as the red clock and the green plants. The overall composition suggests a focus on simplicity, nature, and comfort, with the plants and clock working together to create a sense of life and time within the space. There are no interactions between people or animals since they are not present, but the elements in the image work together to create a peaceful and visually appealing setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 305,
+            "total_tokens": 611
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11485.926962,
+            "prompt_eval_duration_ms": 76.004208,
+            "generation_duration_ms": 11370.380622,
+            "load_duration_ms": 37.15233,
+            "tokens_per_second": 26.824080049692462
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a warm, cozy, and serene mood, evoking feelings of tranquility and comfort. The overall tone is positive, with a touch of nostalgia. The central orange terracotta pot, filled with lush green plants, creates a sense of life and vitality, symbolizing growth and renewal. The earthy tones of the pot and the vibrant greenery contribute to a natural and calming atmosphere. The clock in the foreground, with its simple red design and clear black numbers, adds a touch of order and timelessness, suggesting a peaceful, unhurried moment. The soft lighting enhances the warmth of the scene, making it feel inviting and intimate. The curtain in the background adds a layer of privacy and domesticity, reinforcing the sense of a quiet, personal space. The combination of the organic textures of the plants and the structured elements of the clock and pot creates a harmonious balance, evoking feelings of balance and contentment. Overall, the image feels like a snapshot of a peaceful indoor corner, where nature and human-made objects coexist in harmony, fostering a sense of calm and well-being.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 225,
+            "total_tokens": 533
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8492.263664,
+            "prompt_eval_duration_ms": 74.945214,
+            "generation_duration_ms": 8376.445851,
+            "load_duration_ms": 38.700396,
+            "tokens_per_second": 26.86103438168098
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"clock\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"red\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"Red analog clock with white face and black hands.\"\n    },\n    \"pot\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"orange\"],\n      \"size\": \"medium\",\n      \"description\": \"Orange terracotta pot with textured surface.\"\n    },\n    \"shelf\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"White wooden shelf holding the pot and clock.\"\n    }\n  },\n  \"natural\": {\n    \"plant\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"Green leafy plant growing out of the pot.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "clock": {
+                "count": 1,
+                "location": "center, bottom",
+                "color": [
+                  "red",
+                  "white"
+                ],
+                "size": "small",
+                "description": "Red analog clock with white face and black hands."
+              },
+              "pot": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "orange"
+                ],
+                "size": "medium",
+                "description": "Orange terracotta pot with textured surface."
+              },
+              "shelf": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "White wooden shelf holding the pot and clock."
+              }
+            },
+            "natural": {
+              "plant": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "green"
+                ],
+                "size": "medium",
+                "description": "Green leafy plant growing out of the pot."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 229,
+            "total_tokens": 715
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8638.650554,
+            "prompt_eval_duration_ms": 134.362212,
+            "generation_duration_ms": 8461.439797,
+            "load_duration_ms": 39.802966,
+            "tokens_per_second": 27.06395193891137
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2972,
+        "total_time_ms": 51545.06490899999,
+        "average_speed": 26.883514643756335
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -393,283 +670,6 @@
         "total_tokens": 2783,
         "total_time_ms": 24703.575499,
         "average_speed": 42.173299608972634
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image presents a cozy indoor setting, likely a corner of a room, where a terracotta pot, adorned with an intricate embossed design resembling a classical amphora, sits prominently on a light wooden surface. The pot is filled with a lush green plant, possibly a type of herb or leafy green, which spills slightly over the edges, adding a vibrant touch of nature to the scene. In the foreground, a small red-framed analog clock with white numbers and black hands is positioned, its time showing approximately 10:10, adding a pop of color and a functional element to the composition. The background features a cream-colored curtain with a subtle vertical stripe pattern, which complements the warm tones of the terracotta pot and the wooden surface. The lighting appears soft and diffused, possibly from an indirect source, casting gentle shadows and enhancing the earthy tones of the pot and the natural greenery. The overall composition is simple yet inviting, with a harmonious blend of natural and man-made elements, creating a serene and homey atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 216,
-            "total_tokens": 513
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1659.320226,
-            "prompt_eval_duration_ms": 78.274395,
-            "generation_duration_ms": 1538.079126,
-            "load_duration_ms": 40.666892,
-            "tokens_per_second": 140.4349076381653
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, the viewer's attention is drawn to a vibrant red clock with black numbers and hands, resting on a light wooden surface. The clock's bright color contrasts sharply with the muted tones of the surrounding environment, making it a focal point. Just behind the clock, a terracotta pot, intricately designed with raised patterns, holds a lush green plant with broad leaves. The pot's earthy hue complements the wooden surface and adds a natural element to the scene. In the background, partially obscured by the pot and the wooden surface, a beige curtain with a subtle vertical stripe pattern hangs, providing a neutral backdrop that allows the other elements to stand out. The relationship between the foreground and background elements is one of layered depth, with the clock and plant in the immediate foreground, the pot slightly receding, and the curtain in the distant background, creating a sense of space and dimension.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 182,
-            "total_tokens": 485
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1391.276169,
-            "prompt_eval_duration_ms": 29.278038,
-            "generation_duration_ms": 1322.993402,
-            "load_duration_ms": 36.487677,
-            "tokens_per_second": 137.56682363257923
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, there are no people or animals present. The scene is dominated by a terracotta pot filled with lush green plants, which are thriving and appear to be well-maintained, suggesting they are cared for regularly. The pot is placed on a wooden surface, possibly a shelf or a table, and next to it is a small red clock with black numbers and hands, indicating the time as approximately 10:10. The clock and the pot are stationary, and there is no interaction between them. The background includes a curtain with a subtle pattern, which adds a touch of homeliness to the setting. The overall arrangement suggests a peaceful indoor environment, where the clock serves as a silent observer of the time, while the plants symbolize growth and life. The clock and the plants coexist in harmony, each contributing to the serene atmosphere of the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 178,
-            "total_tokens": 484
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1392.897321,
-            "prompt_eval_duration_ms": 30.414544,
-            "generation_duration_ms": 1321.429648,
-            "load_duration_ms": 38.75224,
-            "tokens_per_second": 134.70259296013614
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of tranquility and simplicity, contributing to a positive emotional atmosphere. The vibrant green of the plant contrasts beautifully with the warm, earthy tones of the terracotta pot, creating a visually soothing palette. The subtle texture of the pot and the delicate leaves of the plant add a natural, organic feel, enhancing the peaceful ambiance. The presence of the clock, though small, adds a touch of everyday life and the passage of time, which can be seen as a reminder of the calm and steady pace of nature. The soft lighting and the blurred background further emphasize the focus on the plant and the clock, making the scene feel intimate and personal. Overall, the image conveys a mood of serenity and contentment, suggesting a moment of quiet reflection or a simple pleasure in the beauty of everyday objects.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 168,
-            "total_tokens": 476
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1333.236405,
-            "prompt_eval_duration_ms": 31.875358,
-            "generation_duration_ms": 1260.700116,
-            "load_duration_ms": 38.016195,
-            "tokens_per_second": 133.2592881271695
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"clock\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"red\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"red-framed analog clock\"\n    }\n  },\n  \"natural\": {\n    \"plant\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"green leafy plant in terracotta pot\"\n    }\n  },\n  \"man-made\": {\n    \"pot\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"terracotta\"],\n      \"size\": \"large\",\n      \"description\": \"terracotta pot with embossed design\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "pot": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "terracotta"
-                ],
-                "size": "large",
-                "description": "terracotta pot with embossed design"
-              }
-            },
-            "natural": {
-              "plant": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "green"
-                ],
-                "size": "medium",
-                "description": "green leafy plant in terracotta pot"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 180,
-            "total_tokens": 666
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1416.840295,
-            "prompt_eval_duration_ms": 44.191071,
-            "generation_duration_ms": 1330.682605,
-            "load_duration_ms": 39.529973,
-            "tokens_per_second": 135.2689208708789
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2624,
-        "total_time_ms": 7193.5704160000005,
-        "average_speed": 136.24650664578581
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a cozy indoor setting, likely a corner of a room, with soft, warm lighting that creates a serene and inviting atmosphere. The main elements in the composition are a large, textured orange terracotta pot and a red analog clock. The terracotta pot, which is the focal point, is filled with lush green plants, including trailing vines and leafy herbs, giving the scene a vibrant and natural feel. The pot's rustic texture contrasts nicely with the smooth, glossy surface of the red clock, which is positioned in the foreground on a light-colored wooden surface, possibly a table or shelf. The clock's bold red color stands out against the neutral tones of the background and the warm orange of the pot. The background features a beige curtain, adding to the soft, muted color palette and contributing to the overall calm ambiance. The lighting is warm and diffused, casting gentle shadows and highlighting the textures of the pot and the greenery. The overall composition is balanced, with the pot and clock creating a harmonious blend of natural and man-made elements, evoking a sense of tranquility and domestic charm.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 227,
-            "total_tokens": 524
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12154.825393,
-            "prompt_eval_duration_ms": 3658.179912,
-            "generation_duration_ms": 8457.612163,
-            "load_duration_ms": 36.672053,
-            "tokens_per_second": 26.839726819476294
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a bright red analog clock with bold black numbers and hands, positioned prominently in the lower left corner. Its vibrant color contrasts sharply with the warm tones of the orange terracotta pot and the greenery, drawing immediate attention. The clock's placement suggests a sense of time and domesticity, adding a functional element to the scene.\n\nIn the background, the orange terracotta pot is the central focus, filled with lush green plants that spill over its edges, creating a natural and organic feel. The pot's textured surface and earthy color complement the greenery, enhancing the overall warmth and earthiness of the setting. Behind the pot, a beige curtain or fabric hangs, providing a soft, neutral backdrop that allows the vibrant colors of the pot and plants to stand out. The curtain's subtle folds add depth and a sense of indoor ambiance, suggesting a cozy, lived-in space.\n\nThe relationship between the foreground and background elements is harmonious and layered. The clock in the foreground serves as a grounding element, anchoring the scene in a specific moment, while the pot and plants in the background introduce a sense of life and growth. The contrast between the man-made clock and the natural elements of the pot and plants creates a balance between structure and organic beauty. The beige curtain in the background further softens the overall composition, tying the elements together and creating a cohesive, inviting atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 286,
-            "total_tokens": 589
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10773.398336,
-            "prompt_eval_duration_ms": 72.960966,
-            "generation_duration_ms": 10660.194004,
-            "load_duration_ms": 37.981611,
-            "tokens_per_second": 26.82878002902057
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a cozy indoor scene featuring a terracotta pot, a red clock, and some greenery, but no people or animals are present. The terracotta pot, which is the central object, is filled with soil and houses several small plants with vibrant green leaves. The plants appear to be thriving, with their leaves cascading over the edges of the pot, adding a natural and lively touch to the setting. The pot is placed on a light-colored surface, likely a wooden shelf or table, which complements the warm tones of the terracotta.\n\nIn the foreground, a red analog clock with white numbers and black hands is positioned in front of the pot. The clock displays the time as approximately 10:10, and its bright color contrasts with the earthy tones of the pot and the green of the plants. The clock and the pot are arranged in a way that suggests a deliberate aesthetic choice, creating a harmonious and inviting atmosphere.\n\nThe background includes a beige curtain, which adds to the warm and soft ambiance of the scene. The curtain's neutral color helps to highlight the vibrant elements in the foreground, such as the red clock and the green plants. The overall composition suggests a focus on simplicity, nature, and comfort, with the plants and clock working together to create a sense of life and time within the space. There are no interactions between people or animals since they are not present, but the elements in the image work together to create a peaceful and visually appealing setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 305,
-            "total_tokens": 611
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11485.926962,
-            "prompt_eval_duration_ms": 76.004208,
-            "generation_duration_ms": 11370.380622,
-            "load_duration_ms": 37.15233,
-            "tokens_per_second": 26.824080049692462
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a warm, cozy, and serene mood, evoking feelings of tranquility and comfort. The overall tone is positive, with a touch of nostalgia. The central orange terracotta pot, filled with lush green plants, creates a sense of life and vitality, symbolizing growth and renewal. The earthy tones of the pot and the vibrant greenery contribute to a natural and calming atmosphere. The clock in the foreground, with its simple red design and clear black numbers, adds a touch of order and timelessness, suggesting a peaceful, unhurried moment. The soft lighting enhances the warmth of the scene, making it feel inviting and intimate. The curtain in the background adds a layer of privacy and domesticity, reinforcing the sense of a quiet, personal space. The combination of the organic textures of the plants and the structured elements of the clock and pot creates a harmonious balance, evoking feelings of balance and contentment. Overall, the image feels like a snapshot of a peaceful indoor corner, where nature and human-made objects coexist in harmony, fostering a sense of calm and well-being.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 225,
-            "total_tokens": 533
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8492.263664,
-            "prompt_eval_duration_ms": 74.945214,
-            "generation_duration_ms": 8376.445851,
-            "load_duration_ms": 38.700396,
-            "tokens_per_second": 26.86103438168098
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"clock\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"red\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"Red analog clock with white face and black hands.\"\n    },\n    \"pot\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"orange\"],\n      \"size\": \"medium\",\n      \"description\": \"Orange terracotta pot with textured surface.\"\n    },\n    \"shelf\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"White wooden shelf holding the pot and clock.\"\n    }\n  },\n  \"natural\": {\n    \"plant\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"Green leafy plant growing out of the pot.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "clock": {
-                "count": 1,
-                "location": "center, bottom",
-                "color": [
-                  "red",
-                  "white"
-                ],
-                "size": "small",
-                "description": "Red analog clock with white face and black hands."
-              },
-              "pot": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "orange"
-                ],
-                "size": "medium",
-                "description": "Orange terracotta pot with textured surface."
-              },
-              "shelf": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "White wooden shelf holding the pot and clock."
-              }
-            },
-            "natural": {
-              "plant": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "green"
-                ],
-                "size": "medium",
-                "description": "Green leafy plant growing out of the pot."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 229,
-            "total_tokens": 715
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8638.650554,
-            "prompt_eval_duration_ms": 134.362212,
-            "generation_duration_ms": 8461.439797,
-            "load_duration_ms": 39.802966,
-            "tokens_per_second": 27.06395193891137
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2972,
-        "total_time_ms": 51545.06490899999,
-        "average_speed": 26.883514643756335
       }
     },
     {

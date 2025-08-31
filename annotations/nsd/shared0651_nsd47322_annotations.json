@@ -7,6 +7,328 @@
   "timestamp": "2025-08-30T21:41:24.122263+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a vibrant outdoor scene, likely taken during the daytime under bright sunlight, as indicated by the strong shadows and the warm, golden light that bathes the subject. The main subject is a person with a cheerful expression, holding a colorful rainbow umbrella that dominates the upper portion of the frame. The umbrella's bright hues of red, orange, yellow, green, blue, and purple create a striking contrast against the more muted tones of the background, which appears to be a natural setting with blurred greenery, suggesting a park or a garden. The person is wearing a black tank top with the word \"Corona Extra\" printed on it, adding a casual and relaxed vibe to the image. The subject's attire is complemented by a bracelet featuring the colors of the rainbow, echoing the umbrella and adding a thematic consistency to the composition. The overall lighting is natural and enhances the vividness of the colors, while the composition is balanced, with the umbrella and the subject's face drawing the viewer's attention. The background is softly out of focus, which helps to emphasize the subject and the umbrella, creating a sense of depth and space.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 230,
+            "total_tokens": 527
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1779.761244,
+            "prompt_eval_duration_ms": 79.031076,
+            "generation_duration_ms": 1660.007996,
+            "load_duration_ms": 36.158987,
+            "tokens_per_second": 138.55354947338458
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, a woman stands prominently, her face turned slightly to the side, offering a warm smile. She is wearing a black tank top with the iconic \"Corona Extra\" logo, and her hair is pulled back neatly. Her right hand, adorned with a rainbow bracelet, holds a vibrant, multi-colored umbrella that extends above her head, providing shade and adding a pop of color to the scene. Her left hand rests casually on her hip, and she wears a small earring in her left ear. The background, though slightly out of focus, reveals a natural setting with green foliage, suggesting a park or outdoor area, and a hint of a paved path or road, indicating a public space. The elements in the foreground and background are connected by the woman's presence, which serves as a focal point, drawing the viewer's eye from the colorful umbrella and her attire to the serene, natural backdrop, creating a harmonious blend of human activity and nature.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 195,
+            "total_tokens": 498
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1488.767171,
+            "prompt_eval_duration_ms": 31.424668,
+            "generation_duration_ms": 1416.76838,
+            "load_duration_ms": 38.267659,
+            "tokens_per_second": 137.6371767980875
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a person is the central figure, holding a vibrant rainbow umbrella over their head, likely to shield themselves from the sun. The individual is wearing a black tank top with \"Corona Extra\" printed on it, suggesting a casual, possibly summery setting. They have a tattoo on their left arm and are adorned with a bracelet featuring the colors of the rainbow, which aligns with the umbrella's design, indicating a possible connection to LGBTQ+ pride or celebration. The person's expression is relaxed and content, with a slight smile, and they are looking off to the side, possibly engaging with someone or something outside the frame. The background is blurred, but it appears to be an outdoor setting with greenery, suggesting a park or a similar public space. The umbrella and the person's attire, including the bracelet, create a harmonious and thematic connection, emphasizing a sense of pride and individuality.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 185,
+            "total_tokens": 491
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1410.422049,
+            "prompt_eval_duration_ms": 31.45482,
+            "generation_duration_ms": 1336.01118,
+            "load_duration_ms": 38.287074,
+            "tokens_per_second": 138.47189512291357
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of optimism and positivity, evoking feelings of joy and freedom. The vibrant rainbow umbrella, a symbol of diversity and celebration, dominates the scene, casting a cheerful and uplifting tone. The bright colors and the clear, sunny background contribute to a sense of warmth and happiness. The subject's relaxed posture and gentle smile further enhance the positive atmosphere, suggesting a carefree and contented state of mind. The casual attire and the presence of a backpack imply a day out, possibly at a festival or a public gathering, which adds to the overall sense of community and celebration. The combination of these elements creates an emotional atmosphere that is decidedly positive, reflecting a moment of personal and social well-being.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 144,
+            "total_tokens": 452
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1111.338099,
+            "prompt_eval_duration_ms": 31.17197,
+            "generation_duration_ms": 1040.789189,
+            "load_duration_ms": 37.248567,
+            "tokens_per_second": 138.35654859016796
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\", \"black\"],\n      \"size\": \"large\",\n      \"description\": \"wearing a black tank top with 'Corona Extra' text and a rainbow bracelet, holding a rainbow umbrella\"\n    }\n  },\n  \"man-made\": {\n    \"umbrella\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"red\", \"orange\", \"yellow\", \"green\", \"blue\", \"purple\"],\n      \"size\": \"large\",\n      \"description\": \"rainbow-colored umbrella with a blue handle\"\n    },\n    \"tank_top\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"large\",\n      \"description\": \"black tank top with 'Corona Extra' text\"\n    },\n    \"bracelet\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"rainbow\"],\n      \"size\": \"small\",\n      \"description\": \"rainbow-colored bracelet on the person's wrist\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear blue sky\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "brown",
+                  "black"
+                ],
+                "size": "large",
+                "description": "wearing a black tank top with 'Corona Extra' text and a rainbow bracelet, holding a rainbow umbrella"
+              }
+            },
+            "man-made": {
+              "umbrella": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "red",
+                  "orange",
+                  "yellow",
+                  "green",
+                  "blue",
+                  "purple"
+                ],
+                "size": "large",
+                "description": "rainbow-colored umbrella with a blue handle"
+              },
+              "tank_top": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black"
+                ],
+                "size": "large",
+                "description": "black tank top with 'Corona Extra' text"
+              },
+              "bracelet": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "rainbow"
+                ],
+                "size": "small",
+                "description": "rainbow-colored bracelet on the person's wrist"
+              }
+            },
+            "natural": {
+              "sky": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "clear blue sky"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 308,
+            "total_tokens": 794
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2292.213342,
+            "prompt_eval_duration_ms": 43.922056,
+            "generation_duration_ms": 2207.963622,
+            "load_duration_ms": 37.872466,
+            "tokens_per_second": 139.49505187998068
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2762,
+        "total_time_ms": 8082.501905,
+        "average_speed": 138.50284437290685
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a person standing outdoors on a sunny day, holding a vibrant, rainbow-colored umbrella. The umbrella features a classic rainbow pattern with alternating stripes of red, orange, yellow, green, blue, and purple, creating a striking visual contrast against the bright background. The individual is wearing a black tank top with a graphic design that includes the word \"Corona\" and the phrase \"Extra,\" suggesting a casual, summery vibe. The person's hair is short and dark, and they are accessorized with a rainbow-colored bracelet on their wrist, which complements the umbrella's colors. The background is slightly blurred, indicating a shallow depth of field, and shows a natural setting with trees and greenery, suggesting a park or open outdoor area. The lighting is bright and natural, casting soft shadows and highlighting the vivid colors of the umbrella and the person's attire. The overall composition is centered on the individual and the umbrella, drawing attention to the bold, cheerful colors and the relaxed, summery atmosphere. The image conveys a sense of joy and positivity, enhanced by the bright, sunny setting and the playful use of color.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 229,
+            "total_tokens": 526
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12143.183946,
+            "prompt_eval_duration_ms": 3539.46594,
+            "generation_duration_ms": 8563.522403,
+            "load_duration_ms": 37.91172,
+            "tokens_per_second": 26.741332505859503
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, the primary element is a person holding a vibrant, rainbow-striped umbrella. The individual is wearing a black tank top with a \"Corona Extra\" logo, accessorized with a rainbow bracelet on their wrist, which complements the umbrella's colorful design. The person's short hair and visible earrings add to the overall casual and expressive appearance. The umbrella, being the most prominent object, draws immediate attention due to its bold, multicolored pattern, symbolizing inclusivity and diversity, often associated with the LGBTQ+ community.\n\nThe background is relatively simple and unfocused, featuring a blurred natural setting with trees and greenery. This suggests an outdoor environment, possibly a park or a street lined with trees. The background's soft focus ensures that the person and the umbrella remain the central focus of the image, while the greenery provides a natural contrast to the bright, artificial colors of the umbrella. The lighting indicates it is daytime, with sunlight casting shadows and highlighting the vivid colors of the umbrella and the person's attire.\n\nThe relationship between the foreground and background is one of contrast and balance. The vibrant, human-centric foreground elements stand out sharply against the muted, natural backdrop, creating a visual hierarchy that emphasizes the individual and their symbolic umbrella. The background's simplicity ensures that the viewer's attention is not diverted, allowing the message conveyed by the rainbow colors to resonate strongly. Together, these layers create a cohesive image that blends personal expression with a broader, environmental context.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 297,
+            "total_tokens": 600
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11182.734708,
+            "prompt_eval_duration_ms": 72.316396,
+            "generation_duration_ms": 11069.27485,
+            "load_duration_ms": 38.695707,
+            "tokens_per_second": 26.831025882422644
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image features a single person standing outdoors, holding a colorful, rainbow-striped umbrella. The individual is a woman with short hair, wearing a black tank top with a \"Corona Extra\" logo and a black jacket with visible patches on her left shoulder. She is accessorized with a ring on her left hand and a rainbow-colored bracelet, which aligns with the vibrant colors of the umbrella. The umbrella, held open above her head, serves as a striking visual element, casting a colorful, geometric shadow on her face and body. The background is blurred, suggesting an outdoor setting with trees and possibly a paved area, indicating a casual, sunny day.\n\nThe woman appears to be posing for the photograph, as her gaze is directed slightly away from the camera, giving a relaxed and confident demeanor. The umbrella, with its bright, rainbow colors, draws attention and creates a playful, cheerful atmosphere. The rainbow bracelet on her wrist further emphasizes a theme of diversity and inclusivity, possibly symbolizing pride or celebration. The interaction between the woman and the umbrella is harmonious, as the umbrella not only provides shade but also complements her outfit and accessories, creating a cohesive and vibrant visual narrative. The overall scene conveys a sense of joy, individuality, and connection with the vibrant, colorful elements around her.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 263,
+            "total_tokens": 569
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9906.804673,
+            "prompt_eval_duration_ms": 75.878636,
+            "generation_duration_ms": 9788.588781,
+            "load_duration_ms": 39.568083,
+            "tokens_per_second": 26.868020087889725
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a positive and vibrant mood, evoking feelings of joy, optimism, and inclusivity. The use of a rainbow-colored umbrella is a strong visual element that symbolizes diversity, pride, and celebration, often associated with LGBTQ+ communities. The bright, cheerful colors of the umbrella contrast with the neutral background, drawing attention to the subject and creating a sense of playfulness and lightheartedness. The subject's relaxed posture, with one hand casually holding the umbrella, suggests a carefree and confident demeanor, further enhancing the positive tone. The black tank top featuring the \"Corona Extra\" logo adds a casual, laid-back vibe, reinforcing the overall sense of ease and enjoyment. The outdoor setting, with soft lighting and a clear sky, contributes to the image's uplifting atmosphere, suggesting a pleasant day and a moment of leisure. The combination of these elements\u2014colorful umbrella, relaxed posture, casual attire, and sunny setting\u2014creates a harmonious and uplifting emotional atmosphere, making the image feel warm, inclusive, and celebratory.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 214,
+            "total_tokens": 522
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8074.321436,
+            "prompt_eval_duration_ms": 72.531468,
+            "generation_duration_ms": 7959.456712,
+            "load_duration_ms": 39.553828,
+            "tokens_per_second": 26.886257158401893
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, foreground\",\n      \"color\": [\"light skin tone\"],\n      \"size\": \"medium\",\n      \"description\": \"A person wearing a black tank top with 'Corona Extra' text, holding a rainbow umbrella, and wearing a rainbow bracelet.\"\n    }\n  },\n  \"man-made\": {\n    \"umbrella\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"rainbow (red, orange, yellow, green, blue, purple)\"],\n      \"size\": \"medium\",\n      \"description\": \"A rainbow-colored umbrella being held by the person.\"\n    },\n    \"tank_top\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"A black tank top with 'Corona Extra' text and a crown logo.\"\n    },\n    \"bracelet\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"rainbow (red, orange, yellow, green, blue, purple)\"],\n      \"size\": \"small\",\n      \"description\": \"A rainbow-colored bracelet worn on the wrist.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"background, top\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"A blurred tree in the background.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center, foreground",
+                "color": [
+                  "light skin tone"
+                ],
+                "size": "medium",
+                "description": "A person wearing a black tank top with 'Corona Extra' text, holding a rainbow umbrella, and wearing a rainbow bracelet."
+              }
+            },
+            "man-made": {
+              "umbrella": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "rainbow (red, orange, yellow, green, blue, purple)"
+                ],
+                "size": "medium",
+                "description": "A rainbow-colored umbrella being held by the person."
+              },
+              "tank_top": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "black"
+                ],
+                "size": "medium",
+                "description": "A black tank top with 'Corona Extra' text and a crown logo."
+              },
+              "bracelet": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "rainbow (red, orange, yellow, green, blue, purple)"
+                ],
+                "size": "small",
+                "description": "A rainbow-colored bracelet worn on the wrist."
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 1,
+                "location": "background, top",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "A blurred tree in the background."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 340,
+            "total_tokens": 826
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12755.731431,
+            "prompt_eval_duration_ms": 137.034265,
+            "generation_duration_ms": 12578.135213,
+            "load_duration_ms": 38.041228,
+            "tokens_per_second": 27.03103395236176
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3043,
+        "total_time_ms": 54062.776194,
+        "average_speed": 26.871533917387104
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -527,328 +849,6 @@
         "total_tokens": 3012,
         "total_time_ms": 30212.381232,
         "average_speed": 42.1510076374885
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a vibrant outdoor scene, likely taken during the daytime under bright sunlight, as indicated by the strong shadows and the warm, golden light that bathes the subject. The main subject is a person with a cheerful expression, holding a colorful rainbow umbrella that dominates the upper portion of the frame. The umbrella's bright hues of red, orange, yellow, green, blue, and purple create a striking contrast against the more muted tones of the background, which appears to be a natural setting with blurred greenery, suggesting a park or a garden. The person is wearing a black tank top with the word \"Corona Extra\" printed on it, adding a casual and relaxed vibe to the image. The subject's attire is complemented by a bracelet featuring the colors of the rainbow, echoing the umbrella and adding a thematic consistency to the composition. The overall lighting is natural and enhances the vividness of the colors, while the composition is balanced, with the umbrella and the subject's face drawing the viewer's attention. The background is softly out of focus, which helps to emphasize the subject and the umbrella, creating a sense of depth and space.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 230,
-            "total_tokens": 527
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1779.761244,
-            "prompt_eval_duration_ms": 79.031076,
-            "generation_duration_ms": 1660.007996,
-            "load_duration_ms": 36.158987,
-            "tokens_per_second": 138.55354947338458
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, a woman stands prominently, her face turned slightly to the side, offering a warm smile. She is wearing a black tank top with the iconic \"Corona Extra\" logo, and her hair is pulled back neatly. Her right hand, adorned with a rainbow bracelet, holds a vibrant, multi-colored umbrella that extends above her head, providing shade and adding a pop of color to the scene. Her left hand rests casually on her hip, and she wears a small earring in her left ear. The background, though slightly out of focus, reveals a natural setting with green foliage, suggesting a park or outdoor area, and a hint of a paved path or road, indicating a public space. The elements in the foreground and background are connected by the woman's presence, which serves as a focal point, drawing the viewer's eye from the colorful umbrella and her attire to the serene, natural backdrop, creating a harmonious blend of human activity and nature.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 195,
-            "total_tokens": 498
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1488.767171,
-            "prompt_eval_duration_ms": 31.424668,
-            "generation_duration_ms": 1416.76838,
-            "load_duration_ms": 38.267659,
-            "tokens_per_second": 137.6371767980875
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a person is the central figure, holding a vibrant rainbow umbrella over their head, likely to shield themselves from the sun. The individual is wearing a black tank top with \"Corona Extra\" printed on it, suggesting a casual, possibly summery setting. They have a tattoo on their left arm and are adorned with a bracelet featuring the colors of the rainbow, which aligns with the umbrella's design, indicating a possible connection to LGBTQ+ pride or celebration. The person's expression is relaxed and content, with a slight smile, and they are looking off to the side, possibly engaging with someone or something outside the frame. The background is blurred, but it appears to be an outdoor setting with greenery, suggesting a park or a similar public space. The umbrella and the person's attire, including the bracelet, create a harmonious and thematic connection, emphasizing a sense of pride and individuality.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 185,
-            "total_tokens": 491
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1410.422049,
-            "prompt_eval_duration_ms": 31.45482,
-            "generation_duration_ms": 1336.01118,
-            "load_duration_ms": 38.287074,
-            "tokens_per_second": 138.47189512291357
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of optimism and positivity, evoking feelings of joy and freedom. The vibrant rainbow umbrella, a symbol of diversity and celebration, dominates the scene, casting a cheerful and uplifting tone. The bright colors and the clear, sunny background contribute to a sense of warmth and happiness. The subject's relaxed posture and gentle smile further enhance the positive atmosphere, suggesting a carefree and contented state of mind. The casual attire and the presence of a backpack imply a day out, possibly at a festival or a public gathering, which adds to the overall sense of community and celebration. The combination of these elements creates an emotional atmosphere that is decidedly positive, reflecting a moment of personal and social well-being.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 144,
-            "total_tokens": 452
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1111.338099,
-            "prompt_eval_duration_ms": 31.17197,
-            "generation_duration_ms": 1040.789189,
-            "load_duration_ms": 37.248567,
-            "tokens_per_second": 138.35654859016796
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\", \"black\"],\n      \"size\": \"large\",\n      \"description\": \"wearing a black tank top with 'Corona Extra' text and a rainbow bracelet, holding a rainbow umbrella\"\n    }\n  },\n  \"man-made\": {\n    \"umbrella\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"red\", \"orange\", \"yellow\", \"green\", \"blue\", \"purple\"],\n      \"size\": \"large\",\n      \"description\": \"rainbow-colored umbrella with a blue handle\"\n    },\n    \"tank_top\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"large\",\n      \"description\": \"black tank top with 'Corona Extra' text\"\n    },\n    \"bracelet\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"rainbow\"],\n      \"size\": \"small\",\n      \"description\": \"rainbow-colored bracelet on the person's wrist\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear blue sky\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "brown",
-                  "black"
-                ],
-                "size": "large",
-                "description": "wearing a black tank top with 'Corona Extra' text and a rainbow bracelet, holding a rainbow umbrella"
-              }
-            },
-            "man-made": {
-              "umbrella": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "red",
-                  "orange",
-                  "yellow",
-                  "green",
-                  "blue",
-                  "purple"
-                ],
-                "size": "large",
-                "description": "rainbow-colored umbrella with a blue handle"
-              },
-              "tank_top": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black"
-                ],
-                "size": "large",
-                "description": "black tank top with 'Corona Extra' text"
-              },
-              "bracelet": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "rainbow"
-                ],
-                "size": "small",
-                "description": "rainbow-colored bracelet on the person's wrist"
-              }
-            },
-            "natural": {
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "clear blue sky"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 308,
-            "total_tokens": 794
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2292.213342,
-            "prompt_eval_duration_ms": 43.922056,
-            "generation_duration_ms": 2207.963622,
-            "load_duration_ms": 37.872466,
-            "tokens_per_second": 139.49505187998068
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2762,
-        "total_time_ms": 8082.501905,
-        "average_speed": 138.50284437290685
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a person standing outdoors on a sunny day, holding a vibrant, rainbow-colored umbrella. The umbrella features a classic rainbow pattern with alternating stripes of red, orange, yellow, green, blue, and purple, creating a striking visual contrast against the bright background. The individual is wearing a black tank top with a graphic design that includes the word \"Corona\" and the phrase \"Extra,\" suggesting a casual, summery vibe. The person's hair is short and dark, and they are accessorized with a rainbow-colored bracelet on their wrist, which complements the umbrella's colors. The background is slightly blurred, indicating a shallow depth of field, and shows a natural setting with trees and greenery, suggesting a park or open outdoor area. The lighting is bright and natural, casting soft shadows and highlighting the vivid colors of the umbrella and the person's attire. The overall composition is centered on the individual and the umbrella, drawing attention to the bold, cheerful colors and the relaxed, summery atmosphere. The image conveys a sense of joy and positivity, enhanced by the bright, sunny setting and the playful use of color.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 229,
-            "total_tokens": 526
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12143.183946,
-            "prompt_eval_duration_ms": 3539.46594,
-            "generation_duration_ms": 8563.522403,
-            "load_duration_ms": 37.91172,
-            "tokens_per_second": 26.741332505859503
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, the primary element is a person holding a vibrant, rainbow-striped umbrella. The individual is wearing a black tank top with a \"Corona Extra\" logo, accessorized with a rainbow bracelet on their wrist, which complements the umbrella's colorful design. The person's short hair and visible earrings add to the overall casual and expressive appearance. The umbrella, being the most prominent object, draws immediate attention due to its bold, multicolored pattern, symbolizing inclusivity and diversity, often associated with the LGBTQ+ community.\n\nThe background is relatively simple and unfocused, featuring a blurred natural setting with trees and greenery. This suggests an outdoor environment, possibly a park or a street lined with trees. The background's soft focus ensures that the person and the umbrella remain the central focus of the image, while the greenery provides a natural contrast to the bright, artificial colors of the umbrella. The lighting indicates it is daytime, with sunlight casting shadows and highlighting the vivid colors of the umbrella and the person's attire.\n\nThe relationship between the foreground and background is one of contrast and balance. The vibrant, human-centric foreground elements stand out sharply against the muted, natural backdrop, creating a visual hierarchy that emphasizes the individual and their symbolic umbrella. The background's simplicity ensures that the viewer's attention is not diverted, allowing the message conveyed by the rainbow colors to resonate strongly. Together, these layers create a cohesive image that blends personal expression with a broader, environmental context.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 297,
-            "total_tokens": 600
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11182.734708,
-            "prompt_eval_duration_ms": 72.316396,
-            "generation_duration_ms": 11069.27485,
-            "load_duration_ms": 38.695707,
-            "tokens_per_second": 26.831025882422644
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image features a single person standing outdoors, holding a colorful, rainbow-striped umbrella. The individual is a woman with short hair, wearing a black tank top with a \"Corona Extra\" logo and a black jacket with visible patches on her left shoulder. She is accessorized with a ring on her left hand and a rainbow-colored bracelet, which aligns with the vibrant colors of the umbrella. The umbrella, held open above her head, serves as a striking visual element, casting a colorful, geometric shadow on her face and body. The background is blurred, suggesting an outdoor setting with trees and possibly a paved area, indicating a casual, sunny day.\n\nThe woman appears to be posing for the photograph, as her gaze is directed slightly away from the camera, giving a relaxed and confident demeanor. The umbrella, with its bright, rainbow colors, draws attention and creates a playful, cheerful atmosphere. The rainbow bracelet on her wrist further emphasizes a theme of diversity and inclusivity, possibly symbolizing pride or celebration. The interaction between the woman and the umbrella is harmonious, as the umbrella not only provides shade but also complements her outfit and accessories, creating a cohesive and vibrant visual narrative. The overall scene conveys a sense of joy, individuality, and connection with the vibrant, colorful elements around her.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 263,
-            "total_tokens": 569
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9906.804673,
-            "prompt_eval_duration_ms": 75.878636,
-            "generation_duration_ms": 9788.588781,
-            "load_duration_ms": 39.568083,
-            "tokens_per_second": 26.868020087889725
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a positive and vibrant mood, evoking feelings of joy, optimism, and inclusivity. The use of a rainbow-colored umbrella is a strong visual element that symbolizes diversity, pride, and celebration, often associated with LGBTQ+ communities. The bright, cheerful colors of the umbrella contrast with the neutral background, drawing attention to the subject and creating a sense of playfulness and lightheartedness. The subject's relaxed posture, with one hand casually holding the umbrella, suggests a carefree and confident demeanor, further enhancing the positive tone. The black tank top featuring the \"Corona Extra\" logo adds a casual, laid-back vibe, reinforcing the overall sense of ease and enjoyment. The outdoor setting, with soft lighting and a clear sky, contributes to the image's uplifting atmosphere, suggesting a pleasant day and a moment of leisure. The combination of these elements\u2014colorful umbrella, relaxed posture, casual attire, and sunny setting\u2014creates a harmonious and uplifting emotional atmosphere, making the image feel warm, inclusive, and celebratory.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 214,
-            "total_tokens": 522
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8074.321436,
-            "prompt_eval_duration_ms": 72.531468,
-            "generation_duration_ms": 7959.456712,
-            "load_duration_ms": 39.553828,
-            "tokens_per_second": 26.886257158401893
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, foreground\",\n      \"color\": [\"light skin tone\"],\n      \"size\": \"medium\",\n      \"description\": \"A person wearing a black tank top with 'Corona Extra' text, holding a rainbow umbrella, and wearing a rainbow bracelet.\"\n    }\n  },\n  \"man-made\": {\n    \"umbrella\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"rainbow (red, orange, yellow, green, blue, purple)\"],\n      \"size\": \"medium\",\n      \"description\": \"A rainbow-colored umbrella being held by the person.\"\n    },\n    \"tank_top\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"A black tank top with 'Corona Extra' text and a crown logo.\"\n    },\n    \"bracelet\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"rainbow (red, orange, yellow, green, blue, purple)\"],\n      \"size\": \"small\",\n      \"description\": \"A rainbow-colored bracelet worn on the wrist.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"background, top\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"A blurred tree in the background.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center, foreground",
-                "color": [
-                  "light skin tone"
-                ],
-                "size": "medium",
-                "description": "A person wearing a black tank top with 'Corona Extra' text, holding a rainbow umbrella, and wearing a rainbow bracelet."
-              }
-            },
-            "man-made": {
-              "umbrella": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "rainbow (red, orange, yellow, green, blue, purple)"
-                ],
-                "size": "medium",
-                "description": "A rainbow-colored umbrella being held by the person."
-              },
-              "tank_top": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "black"
-                ],
-                "size": "medium",
-                "description": "A black tank top with 'Corona Extra' text and a crown logo."
-              },
-              "bracelet": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "rainbow (red, orange, yellow, green, blue, purple)"
-                ],
-                "size": "small",
-                "description": "A rainbow-colored bracelet worn on the wrist."
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 1,
-                "location": "background, top",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "A blurred tree in the background."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 340,
-            "total_tokens": 826
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12755.731431,
-            "prompt_eval_duration_ms": 137.034265,
-            "generation_duration_ms": 12578.135213,
-            "load_duration_ms": 38.041228,
-            "tokens_per_second": 27.03103395236176
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3043,
-        "total_time_ms": 54062.776194,
-        "average_speed": 26.871533917387104
       }
     },
     {

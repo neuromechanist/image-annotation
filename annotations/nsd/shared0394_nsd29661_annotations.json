@@ -7,6 +7,464 @@
   "timestamp": "2025-08-30T19:19:35.992102+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image presents a modern kitchen with a minimalist design, predominantly white with accents of natural wood and subtle black elements. The setting is bright and airy, illuminated by natural light streaming in through a large window with a white frame, which offers a view of greenery outside. The kitchen features sleek, white cabinetry with a glossy finish, complemented by a large island with a dark wood countertop that adds a touch of warmth to the otherwise monochromatic palette. The island also houses a built-in wine cooler, showcasing a collection of bottles, adding a personal and stylish touch. The flooring is a dark wood, contrasting with the lighter tones of the walls and cabinetry. The lighting is soft and diffused, likely from recessed ceiling lights, enhancing the clean lines and simplicity of the space. The overall composition is balanced and harmonious, with a focus on functionality and aesthetics, creating a serene and inviting atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 185,
+            "total_tokens": 482
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1432.512535,
+            "prompt_eval_duration_ms": 80.578344,
+            "generation_duration_ms": 1313.208438,
+            "load_duration_ms": 36.433078,
+            "tokens_per_second": 140.8763412164429
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the viewer's attention is drawn to the kitchen island, which features a sleek white countertop and a dark wood surface on top. Below the countertop, glass-fronted cabinets reveal neatly arranged bottles, adding a touch of elegance and functionality to the space. The island itself is supported by a sturdy white base, which complements the overall minimalist aesthetic of the kitchen. The dark wood flooring contrasts with the lighter tones of the walls and cabinetry, enhancing the visual appeal of the room. \n\nIn the background, the kitchen opens up to a bright and airy setting. A white door stands at the far end, leading to what appears to be an outdoor area. To the right, a window with a white frame offers a view of lush greenery outside, suggesting a connection to nature. Above the window, a wooden accent wall adds a warm, natural element to the otherwise modern design. On the countertop near the window, a few decorative items, including a small potted plant and what looks like a coffee maker, are placed, adding a personal touch to the space. The overall composition of the image, with its foreground island and background window, creates a sense of depth and invites the viewer to imagine the space as a whole, from the functional kitchen island to the serene outdoor view.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 266,
+            "total_tokens": 569
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1975.22929,
+            "prompt_eval_duration_ms": 29.345497,
+            "generation_duration_ms": 1906.417507,
+            "load_duration_ms": 37.393267,
+            "tokens_per_second": 139.52872286542635
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a modern, minimalist kitchen with no visible people or animals present. The focus is on the architectural and design elements of the space. The kitchen features sleek white cabinetry and countertops, a large island with a wooden countertop, and a glass-fronted cabinet that displays bottles, likely for wine or spirits. The island also holds a toaster and a small potted plant, adding a touch of greenery. Above the island, a modern faucet is visible, and the backsplash is a combination of white and wood, providing a warm contrast to the cool tones of the rest of the kitchen. A window with a white frame allows natural light to flood the space, and outside, a glimpse of green foliage is visible, suggesting a connection to the outdoors. The overall design is clean and functional, with a focus on simplicity and modern aesthetics.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 171,
+            "total_tokens": 477
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1298.391911,
+            "prompt_eval_duration_ms": 31.781668,
+            "generation_duration_ms": 1226.298142,
+            "load_duration_ms": 38.220491,
+            "tokens_per_second": 139.44406677572866
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of calm and order, contributing to a positive emotional atmosphere. The clean lines and minimalist design of the kitchen, with its white cabinetry and sleek appliances, create a feeling of modernity and tranquility. The natural light streaming in through the window adds to this serene mood, suggesting a peaceful and inviting space. The wooden accents, such as the countertop and the backsplash, introduce warmth and a touch of nature, which can evoke feelings of comfort and coziness. The presence of a few potted plants on the windowsill further enhances this sense of life and vitality, making the space feel lived-in and nurturing. The overall tone is one of serenity and efficiency, which can make viewers feel at ease and inspired to create and enjoy a similar space in their own homes.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 163,
+            "total_tokens": 471
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1236.984729,
+            "prompt_eval_duration_ms": 30.58237,
+            "generation_duration_ms": 1166.585841,
+            "load_duration_ms": 37.646726,
+            "tokens_per_second": 139.72396567086398
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"human\": [],\n    \"animal\": [],\n    \"man-made\": {\n      \"cabinet\": {\n        \"count\": 2,\n        \"location\": \"left\",\n        \"color\": [\"white\"],\n        \"size\": \"large\",\n        \"description\": \"white cabinets with glass doors\"\n      },\n      \"door\": {\n        \"count\": 1,\n        \"location\": \"left\",\n        \"color\": [\"white\"],\n        \"size\": \"medium\",\n        \"description\": \"white door with handle\"\n      },\n      \"window\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"white\"],\n        \"size\": \"large\",\n        \"description\": \"white-framed window with view of greenery\"\n      },\n      \"shelf\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"white\"],\n        \"size\": \"small\",\n        \"description\": \"white shelf with items\"\n      },\n      \"countertop\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"white\"],\n        \"size\": \"large\",\n        \"description\": \"white countertop with sink\"\n      },\n      \"island\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"white\", \"brown\"],\n        \"size\": \"large\",\n        \"description\": \"white island with brown countertop\"\n      },\n      \"appliances\": {\n        \"count\": 2,\n        \"location\": \"left\",\n        \"color\": [\"black\"],\n        \"size\": \"small\",\n        \"description\": \"black appliances on countertop\"\n      },\n      \"floor\": {\n        \"count\": 1,\n        \"location\": \"bottom\",\n        \"color\": [\"brown\"],\n        \"size\": \"large\",\n        \"description\": \"brown wooden floor\"\n      },\n      \"wall\": {\n        \"count\": 1,\n        \"location\": \"right\",\n        \"color\": [\"white\"],\n        \"size\": \"large\",\n        \"description\": \"white wall with wooden paneling\"\n      }\n    },\n    \"natural\": {\n      \"plant\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"green\"],\n        \"size\": \"small\",\n        \"description\": \"green plant in pot\"\n      },\n      \"tree\": {\n        \"count\": 1,\n        \"location\": \"background\",\n        \"color\": [\"green\"],\n        \"size\": \"large\",\n        \"description\": \"green tree visible through window\"\n      }\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "human": [],
+              "animal": [],
+              "man-made": {
+                "cabinet": {
+                  "count": 2,
+                  "location": "left",
+                  "color": [
+                    "white"
+                  ],
+                  "size": "large",
+                  "description": "white cabinets with glass doors"
+                },
+                "door": {
+                  "count": 1,
+                  "location": "left",
+                  "color": [
+                    "white"
+                  ],
+                  "size": "medium",
+                  "description": "white door with handle"
+                },
+                "window": {
+                  "count": 1,
+                  "location": "center",
+                  "color": [
+                    "white"
+                  ],
+                  "size": "large",
+                  "description": "white-framed window with view of greenery"
+                },
+                "shelf": {
+                  "count": 1,
+                  "location": "center",
+                  "color": [
+                    "white"
+                  ],
+                  "size": "small",
+                  "description": "white shelf with items"
+                },
+                "countertop": {
+                  "count": 1,
+                  "location": "center",
+                  "color": [
+                    "white"
+                  ],
+                  "size": "large",
+                  "description": "white countertop with sink"
+                },
+                "island": {
+                  "count": 1,
+                  "location": "center",
+                  "color": [
+                    "white",
+                    "brown"
+                  ],
+                  "size": "large",
+                  "description": "white island with brown countertop"
+                },
+                "appliances": {
+                  "count": 2,
+                  "location": "left",
+                  "color": [
+                    "black"
+                  ],
+                  "size": "small",
+                  "description": "black appliances on countertop"
+                },
+                "floor": {
+                  "count": 1,
+                  "location": "bottom",
+                  "color": [
+                    "brown"
+                  ],
+                  "size": "large",
+                  "description": "brown wooden floor"
+                },
+                "wall": {
+                  "count": 1,
+                  "location": "right",
+                  "color": [
+                    "white"
+                  ],
+                  "size": "large",
+                  "description": "white wall with wooden paneling"
+                }
+              },
+              "natural": {
+                "plant": {
+                  "count": 1,
+                  "location": "center",
+                  "color": [
+                    "green"
+                  ],
+                  "size": "small",
+                  "description": "green plant in pot"
+                },
+                "tree": {
+                  "count": 1,
+                  "location": "background",
+                  "color": [
+                    "green"
+                  ],
+                  "size": "large",
+                  "description": "green tree visible through window"
+                }
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 555,
+            "total_tokens": 1041
+          },
+          "performance_metrics": {
+            "total_duration_ms": 4022.060977,
+            "prompt_eval_duration_ms": 45.558697,
+            "generation_duration_ms": 3933.658205,
+            "load_duration_ms": 38.98182,
+            "tokens_per_second": 141.09004165500446
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3040,
+        "total_time_ms": 9965.179442,
+        "average_speed": 140.13262763669326
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a modern, minimalist kitchen with a clean and sleek design. The setting is bright and airy, with natural light streaming in through a large window on the back wall, which offers a view of greenery outside. The overall color palette is neutral, dominated by white and light tones, with accents of wood and black for contrast.\n\nThe main elements include a central kitchen island with a white countertop and a dark wooden top section, which serves as a workspace or dining area. The island features built-in black glass-front cabinets, allowing for a display of bottles and other items inside. To the left of the island, there is a built-in oven and a microwave, integrated seamlessly into the cabinetry. The cabinetry itself is white, with simple, clean lines and minimal hardware, contributing to the minimalist aesthetic.\n\nOn the right side of the image, a wooden accent wall adds warmth and texture to the space, contrasting with the otherwise smooth surfaces. A small shelf above the sink holds decorative items, including plants and vases, adding a touch of life to the room. The sink area is modern, with a sleek faucet and a tiled backsplash in a light, neutral tone. The floor is a combination of dark wood and black tiles, which complements the overall design and adds depth to the space.\n\nThe lighting is soft and even, with recessed ceiling lights providing ample illumination without harsh shadows. The overall composition is balanced, with the island as the focal point, and the space feels open and inviting, emphasizing functionality and style.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 310,
+            "total_tokens": 607
+          },
+          "performance_metrics": {
+            "total_duration_ms": 15007.360426,
+            "prompt_eval_duration_ms": 3459.453345,
+            "generation_duration_ms": 11504.406588,
+            "load_duration_ms": 40.927737,
+            "tokens_per_second": 26.946196453396766
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a sleek, modern kitchen island with a white countertop and a dark glass base. The island features a built-in cooktop and a few black handles, suggesting it houses storage or a wine cooler. A wooden cutting board is placed on the countertop, adding a touch of warmth to the otherwise minimalist design. The island is positioned centrally, drawing attention as the focal point of the kitchen. \n\nIn the background, the setting reveals a bright, open kitchen space with clean lines and a predominantly white color scheme. The walls are painted white, creating a sense of spaciousness and brightness. To the left, there is a built-in oven and a small section of cabinetry, while to the right, a large window allows natural light to flood the room, offering a view of greenery outside. A small shelf above the window holds decorative items and plants, adding a personal touch. Adjacent to the window is a section of wooden paneling, contrasting with the white walls and adding texture and warmth to the space. The floor is wooden, complementing the natural elements and tying the room together.\n\nThe foreground and background elements relate to each other through a cohesive design aesthetic. The white and wood theme is consistent throughout, creating a harmonious flow from the island to the rest of the kitchen. The natural light from the window enhances the brightness of the white surfaces and highlights the clean, modern lines of the furniture and appliances. The presence of plants and the wooden accents in both the foreground and background contribute to a balanced, inviting atmosphere, blending functionality with aesthetic appeal.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 321,
+            "total_tokens": 624
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12020.267063,
+            "prompt_eval_duration_ms": 77.919824,
+            "generation_duration_ms": 11896.870515,
+            "load_duration_ms": 42.663148,
+            "tokens_per_second": 26.981885664408278
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a modern, minimalist kitchen with clean lines, neutral tones, and a blend of natural and industrial materials. There are no people or animals present in the scene, so the focus is entirely on the objects and their arrangement within the space.\n\nThe kitchen features a central island with a sleek, white countertop and a dark, reflective glass front, which houses several bottles, likely for wine or spirits. The island also includes a built-in cooktop and a dark wooden section on one side, adding warmth to the otherwise cool color palette. To the left of the island, there is a built-in oven and a black countertop, suggesting a functional and efficient design. A white wall-mounted cabinet above the oven provides additional storage.\n\nOn the right side of the image, a large window allows natural light to flood the space, creating a bright and airy atmosphere. Below the window is a sink with a modern faucet, and above it, a small shelf holds decorative items and greenery, adding a touch of life to the space. To the right of the window, a wooden accent wall provides a warm contrast to the otherwise white and gray tones.\n\nThe backsplash is a light gray tile, complementing the white cabinetry and countertops. The floor is a mix of dark wood and black tiles, contributing to the contemporary aesthetic. Various kitchen appliances, such as a toaster and a coffee maker, are neatly arranged on the countertops, indicating a well-organized and functional space.\n\nOverall, the objects in the kitchen are thoughtfully placed to create a harmonious balance between functionality and aesthetics. The interplay of materials, colors, and lighting enhances the modern and inviting feel of the space.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 338,
+            "total_tokens": 644
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12668.272688,
+            "prompt_eval_duration_ms": 77.723286,
+            "generation_duration_ms": 12549.689673,
+            "load_duration_ms": 38.37129,
+            "tokens_per_second": 26.932936893825296
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of modern elegance, cleanliness, and tranquility, evoking feelings of calmness, order, and sophistication. The overall tone is positive, as the space appears inviting and well-maintained, suggesting a harmonious and functional living environment. The use of white walls and cabinetry creates a sense of spaciousness and brightness, while the dark glass cabinets add a touch of sophistication and contrast, making the space visually interesting without feeling overwhelming. The wooden accents, such as the countertop and the slatted wall panel, introduce warmth and a natural element, softening the otherwise minimalist aesthetic. The large window allows natural light to flood the space, enhancing the sense of openness and connection to the outdoors, which further contributes to the serene and uplifting atmosphere. The organized arrangement of kitchen items, such as the neatly placed bottles and plants, reinforces a sense of order and care, making the space feel lived-in yet pristine. The clean lines and sleek design of the appliances and fixtures emphasize modernity and efficiency, contributing to the overall positive and uplifting emotional atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 216,
+            "total_tokens": 524
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8180.031235,
+            "prompt_eval_duration_ms": 74.818882,
+            "generation_duration_ms": 8064.788295,
+            "load_duration_ms": 38.185792,
+            "tokens_per_second": 26.783096108538334
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"kitchen\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"black\", \"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Modern kitchen with white cabinets, black appliances, and wooden accents.\"\n    },\n    \"cabinets\": {\n      \"count\": 2,\n      \"location\": \"left and right\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"White upper and lower cabinets.\"\n    },\n    \"island\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"black\", \"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Central kitchen island with black glass doors and wooden countertop.\"\n    },\n    \"appliances\": {\n      \"count\": 3,\n      \"location\": \"left and center\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Includes a stove, oven, and possibly a dishwasher.\"\n    },\n    \"sink\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Stainless steel sink.\"\n    },\n    \"faucet\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Stainless steel faucet.\"\n    },\n    \"shelves\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Wall-mounted shelves holding cups and bottles.\"\n    },\n    \"windows\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"clear\"],\n      \"size\": \"medium\",\n      \"description\": \"Large window letting in natural light.\"\n    },\n    \"door\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"White door with a handle.\"\n    },\n    \"countertop\": {\n      \"count\": 2,\n      \"location\": \"center and left\",\n      \"color\": [\"white\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"White and wooden countertops.\"\n    },\n    \"floor\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Wooden floor.\"\n    },\n    \"lights\": {\n      \"count\": 3,\n      \"location\": \"top\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Recessed ceiling lights.\"\n    },\n    \"decor\": {\n      \"count\": 3,\n      \"location\": \"center\",\n      \"color\": [\"green\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"Potted plants and decorative items on the countertop.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"center (through window)\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"Tree visible through the window.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "kitchen": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "white",
+                  "black",
+                  "brown"
+                ],
+                "size": "large",
+                "description": "Modern kitchen with white cabinets, black appliances, and wooden accents."
+              },
+              "cabinets": {
+                "count": 2,
+                "location": "left and right",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "White upper and lower cabinets."
+              },
+              "island": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "white",
+                  "black",
+                  "brown"
+                ],
+                "size": "large",
+                "description": "Central kitchen island with black glass doors and wooden countertop."
+              },
+              "appliances": {
+                "count": 3,
+                "location": "left and center",
+                "color": [
+                  "black"
+                ],
+                "size": "medium",
+                "description": "Includes a stove, oven, and possibly a dishwasher."
+              },
+              "sink": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "silver"
+                ],
+                "size": "small",
+                "description": "Stainless steel sink."
+              },
+              "faucet": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "silver"
+                ],
+                "size": "small",
+                "description": "Stainless steel faucet."
+              },
+              "shelves": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "Wall-mounted shelves holding cups and bottles."
+              },
+              "windows": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "clear"
+                ],
+                "size": "medium",
+                "description": "Large window letting in natural light."
+              },
+              "door": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "White door with a handle."
+              },
+              "countertop": {
+                "count": 2,
+                "location": "center and left",
+                "color": [
+                  "white",
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "White and wooden countertops."
+              },
+              "floor": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "Wooden floor."
+              },
+              "lights": {
+                "count": 3,
+                "location": "top",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "Recessed ceiling lights."
+              },
+              "decor": {
+                "count": 3,
+                "location": "center",
+                "color": [
+                  "green",
+                  "white"
+                ],
+                "size": "small",
+                "description": "Potted plants and decorative items on the countertop."
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 1,
+                "location": "center (through window)",
+                "color": [
+                  "green"
+                ],
+                "size": "medium",
+                "description": "Tree visible through the window."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 724,
+            "total_tokens": 1210
+          },
+          "performance_metrics": {
+            "total_duration_ms": 27115.945831,
+            "prompt_eval_duration_ms": 140.08835,
+            "generation_duration_ms": 26935.271227,
+            "load_duration_ms": 38.110013,
+            "tokens_per_second": 26.87925411622587
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3609,
+        "total_time_ms": 74991.877243,
+        "average_speed": 26.90467384727891
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -633,464 +1091,6 @@
         "total_tokens": 3139,
         "total_time_ms": 33153.231378,
         "average_speed": 42.21393065403502
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image presents a modern kitchen with a minimalist design, predominantly white with accents of natural wood and subtle black elements. The setting is bright and airy, illuminated by natural light streaming in through a large window with a white frame, which offers a view of greenery outside. The kitchen features sleek, white cabinetry with a glossy finish, complemented by a large island with a dark wood countertop that adds a touch of warmth to the otherwise monochromatic palette. The island also houses a built-in wine cooler, showcasing a collection of bottles, adding a personal and stylish touch. The flooring is a dark wood, contrasting with the lighter tones of the walls and cabinetry. The lighting is soft and diffused, likely from recessed ceiling lights, enhancing the clean lines and simplicity of the space. The overall composition is balanced and harmonious, with a focus on functionality and aesthetics, creating a serene and inviting atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 185,
-            "total_tokens": 482
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1432.512535,
-            "prompt_eval_duration_ms": 80.578344,
-            "generation_duration_ms": 1313.208438,
-            "load_duration_ms": 36.433078,
-            "tokens_per_second": 140.8763412164429
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the viewer's attention is drawn to the kitchen island, which features a sleek white countertop and a dark wood surface on top. Below the countertop, glass-fronted cabinets reveal neatly arranged bottles, adding a touch of elegance and functionality to the space. The island itself is supported by a sturdy white base, which complements the overall minimalist aesthetic of the kitchen. The dark wood flooring contrasts with the lighter tones of the walls and cabinetry, enhancing the visual appeal of the room. \n\nIn the background, the kitchen opens up to a bright and airy setting. A white door stands at the far end, leading to what appears to be an outdoor area. To the right, a window with a white frame offers a view of lush greenery outside, suggesting a connection to nature. Above the window, a wooden accent wall adds a warm, natural element to the otherwise modern design. On the countertop near the window, a few decorative items, including a small potted plant and what looks like a coffee maker, are placed, adding a personal touch to the space. The overall composition of the image, with its foreground island and background window, creates a sense of depth and invites the viewer to imagine the space as a whole, from the functional kitchen island to the serene outdoor view.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 266,
-            "total_tokens": 569
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1975.22929,
-            "prompt_eval_duration_ms": 29.345497,
-            "generation_duration_ms": 1906.417507,
-            "load_duration_ms": 37.393267,
-            "tokens_per_second": 139.52872286542635
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a modern, minimalist kitchen with no visible people or animals present. The focus is on the architectural and design elements of the space. The kitchen features sleek white cabinetry and countertops, a large island with a wooden countertop, and a glass-fronted cabinet that displays bottles, likely for wine or spirits. The island also holds a toaster and a small potted plant, adding a touch of greenery. Above the island, a modern faucet is visible, and the backsplash is a combination of white and wood, providing a warm contrast to the cool tones of the rest of the kitchen. A window with a white frame allows natural light to flood the space, and outside, a glimpse of green foliage is visible, suggesting a connection to the outdoors. The overall design is clean and functional, with a focus on simplicity and modern aesthetics.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 171,
-            "total_tokens": 477
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1298.391911,
-            "prompt_eval_duration_ms": 31.781668,
-            "generation_duration_ms": 1226.298142,
-            "load_duration_ms": 38.220491,
-            "tokens_per_second": 139.44406677572866
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of calm and order, contributing to a positive emotional atmosphere. The clean lines and minimalist design of the kitchen, with its white cabinetry and sleek appliances, create a feeling of modernity and tranquility. The natural light streaming in through the window adds to this serene mood, suggesting a peaceful and inviting space. The wooden accents, such as the countertop and the backsplash, introduce warmth and a touch of nature, which can evoke feelings of comfort and coziness. The presence of a few potted plants on the windowsill further enhances this sense of life and vitality, making the space feel lived-in and nurturing. The overall tone is one of serenity and efficiency, which can make viewers feel at ease and inspired to create and enjoy a similar space in their own homes.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 163,
-            "total_tokens": 471
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1236.984729,
-            "prompt_eval_duration_ms": 30.58237,
-            "generation_duration_ms": 1166.585841,
-            "load_duration_ms": 37.646726,
-            "tokens_per_second": 139.72396567086398
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"human\": [],\n    \"animal\": [],\n    \"man-made\": {\n      \"cabinet\": {\n        \"count\": 2,\n        \"location\": \"left\",\n        \"color\": [\"white\"],\n        \"size\": \"large\",\n        \"description\": \"white cabinets with glass doors\"\n      },\n      \"door\": {\n        \"count\": 1,\n        \"location\": \"left\",\n        \"color\": [\"white\"],\n        \"size\": \"medium\",\n        \"description\": \"white door with handle\"\n      },\n      \"window\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"white\"],\n        \"size\": \"large\",\n        \"description\": \"white-framed window with view of greenery\"\n      },\n      \"shelf\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"white\"],\n        \"size\": \"small\",\n        \"description\": \"white shelf with items\"\n      },\n      \"countertop\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"white\"],\n        \"size\": \"large\",\n        \"description\": \"white countertop with sink\"\n      },\n      \"island\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"white\", \"brown\"],\n        \"size\": \"large\",\n        \"description\": \"white island with brown countertop\"\n      },\n      \"appliances\": {\n        \"count\": 2,\n        \"location\": \"left\",\n        \"color\": [\"black\"],\n        \"size\": \"small\",\n        \"description\": \"black appliances on countertop\"\n      },\n      \"floor\": {\n        \"count\": 1,\n        \"location\": \"bottom\",\n        \"color\": [\"brown\"],\n        \"size\": \"large\",\n        \"description\": \"brown wooden floor\"\n      },\n      \"wall\": {\n        \"count\": 1,\n        \"location\": \"right\",\n        \"color\": [\"white\"],\n        \"size\": \"large\",\n        \"description\": \"white wall with wooden paneling\"\n      }\n    },\n    \"natural\": {\n      \"plant\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"green\"],\n        \"size\": \"small\",\n        \"description\": \"green plant in pot\"\n      },\n      \"tree\": {\n        \"count\": 1,\n        \"location\": \"background\",\n        \"color\": [\"green\"],\n        \"size\": \"large\",\n        \"description\": \"green tree visible through window\"\n      }\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "human": [],
-              "animal": [],
-              "man-made": {
-                "cabinet": {
-                  "count": 2,
-                  "location": "left",
-                  "color": [
-                    "white"
-                  ],
-                  "size": "large",
-                  "description": "white cabinets with glass doors"
-                },
-                "door": {
-                  "count": 1,
-                  "location": "left",
-                  "color": [
-                    "white"
-                  ],
-                  "size": "medium",
-                  "description": "white door with handle"
-                },
-                "window": {
-                  "count": 1,
-                  "location": "center",
-                  "color": [
-                    "white"
-                  ],
-                  "size": "large",
-                  "description": "white-framed window with view of greenery"
-                },
-                "shelf": {
-                  "count": 1,
-                  "location": "center",
-                  "color": [
-                    "white"
-                  ],
-                  "size": "small",
-                  "description": "white shelf with items"
-                },
-                "countertop": {
-                  "count": 1,
-                  "location": "center",
-                  "color": [
-                    "white"
-                  ],
-                  "size": "large",
-                  "description": "white countertop with sink"
-                },
-                "island": {
-                  "count": 1,
-                  "location": "center",
-                  "color": [
-                    "white",
-                    "brown"
-                  ],
-                  "size": "large",
-                  "description": "white island with brown countertop"
-                },
-                "appliances": {
-                  "count": 2,
-                  "location": "left",
-                  "color": [
-                    "black"
-                  ],
-                  "size": "small",
-                  "description": "black appliances on countertop"
-                },
-                "floor": {
-                  "count": 1,
-                  "location": "bottom",
-                  "color": [
-                    "brown"
-                  ],
-                  "size": "large",
-                  "description": "brown wooden floor"
-                },
-                "wall": {
-                  "count": 1,
-                  "location": "right",
-                  "color": [
-                    "white"
-                  ],
-                  "size": "large",
-                  "description": "white wall with wooden paneling"
-                }
-              },
-              "natural": {
-                "plant": {
-                  "count": 1,
-                  "location": "center",
-                  "color": [
-                    "green"
-                  ],
-                  "size": "small",
-                  "description": "green plant in pot"
-                },
-                "tree": {
-                  "count": 1,
-                  "location": "background",
-                  "color": [
-                    "green"
-                  ],
-                  "size": "large",
-                  "description": "green tree visible through window"
-                }
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 555,
-            "total_tokens": 1041
-          },
-          "performance_metrics": {
-            "total_duration_ms": 4022.060977,
-            "prompt_eval_duration_ms": 45.558697,
-            "generation_duration_ms": 3933.658205,
-            "load_duration_ms": 38.98182,
-            "tokens_per_second": 141.09004165500446
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3040,
-        "total_time_ms": 9965.179442,
-        "average_speed": 140.13262763669326
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a modern, minimalist kitchen with a clean and sleek design. The setting is bright and airy, with natural light streaming in through a large window on the back wall, which offers a view of greenery outside. The overall color palette is neutral, dominated by white and light tones, with accents of wood and black for contrast.\n\nThe main elements include a central kitchen island with a white countertop and a dark wooden top section, which serves as a workspace or dining area. The island features built-in black glass-front cabinets, allowing for a display of bottles and other items inside. To the left of the island, there is a built-in oven and a microwave, integrated seamlessly into the cabinetry. The cabinetry itself is white, with simple, clean lines and minimal hardware, contributing to the minimalist aesthetic.\n\nOn the right side of the image, a wooden accent wall adds warmth and texture to the space, contrasting with the otherwise smooth surfaces. A small shelf above the sink holds decorative items, including plants and vases, adding a touch of life to the room. The sink area is modern, with a sleek faucet and a tiled backsplash in a light, neutral tone. The floor is a combination of dark wood and black tiles, which complements the overall design and adds depth to the space.\n\nThe lighting is soft and even, with recessed ceiling lights providing ample illumination without harsh shadows. The overall composition is balanced, with the island as the focal point, and the space feels open and inviting, emphasizing functionality and style.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 310,
-            "total_tokens": 607
-          },
-          "performance_metrics": {
-            "total_duration_ms": 15007.360426,
-            "prompt_eval_duration_ms": 3459.453345,
-            "generation_duration_ms": 11504.406588,
-            "load_duration_ms": 40.927737,
-            "tokens_per_second": 26.946196453396766
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a sleek, modern kitchen island with a white countertop and a dark glass base. The island features a built-in cooktop and a few black handles, suggesting it houses storage or a wine cooler. A wooden cutting board is placed on the countertop, adding a touch of warmth to the otherwise minimalist design. The island is positioned centrally, drawing attention as the focal point of the kitchen. \n\nIn the background, the setting reveals a bright, open kitchen space with clean lines and a predominantly white color scheme. The walls are painted white, creating a sense of spaciousness and brightness. To the left, there is a built-in oven and a small section of cabinetry, while to the right, a large window allows natural light to flood the room, offering a view of greenery outside. A small shelf above the window holds decorative items and plants, adding a personal touch. Adjacent to the window is a section of wooden paneling, contrasting with the white walls and adding texture and warmth to the space. The floor is wooden, complementing the natural elements and tying the room together.\n\nThe foreground and background elements relate to each other through a cohesive design aesthetic. The white and wood theme is consistent throughout, creating a harmonious flow from the island to the rest of the kitchen. The natural light from the window enhances the brightness of the white surfaces and highlights the clean, modern lines of the furniture and appliances. The presence of plants and the wooden accents in both the foreground and background contribute to a balanced, inviting atmosphere, blending functionality with aesthetic appeal.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 321,
-            "total_tokens": 624
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12020.267063,
-            "prompt_eval_duration_ms": 77.919824,
-            "generation_duration_ms": 11896.870515,
-            "load_duration_ms": 42.663148,
-            "tokens_per_second": 26.981885664408278
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a modern, minimalist kitchen with clean lines, neutral tones, and a blend of natural and industrial materials. There are no people or animals present in the scene, so the focus is entirely on the objects and their arrangement within the space.\n\nThe kitchen features a central island with a sleek, white countertop and a dark, reflective glass front, which houses several bottles, likely for wine or spirits. The island also includes a built-in cooktop and a dark wooden section on one side, adding warmth to the otherwise cool color palette. To the left of the island, there is a built-in oven and a black countertop, suggesting a functional and efficient design. A white wall-mounted cabinet above the oven provides additional storage.\n\nOn the right side of the image, a large window allows natural light to flood the space, creating a bright and airy atmosphere. Below the window is a sink with a modern faucet, and above it, a small shelf holds decorative items and greenery, adding a touch of life to the space. To the right of the window, a wooden accent wall provides a warm contrast to the otherwise white and gray tones.\n\nThe backsplash is a light gray tile, complementing the white cabinetry and countertops. The floor is a mix of dark wood and black tiles, contributing to the contemporary aesthetic. Various kitchen appliances, such as a toaster and a coffee maker, are neatly arranged on the countertops, indicating a well-organized and functional space.\n\nOverall, the objects in the kitchen are thoughtfully placed to create a harmonious balance between functionality and aesthetics. The interplay of materials, colors, and lighting enhances the modern and inviting feel of the space.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 338,
-            "total_tokens": 644
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12668.272688,
-            "prompt_eval_duration_ms": 77.723286,
-            "generation_duration_ms": 12549.689673,
-            "load_duration_ms": 38.37129,
-            "tokens_per_second": 26.932936893825296
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of modern elegance, cleanliness, and tranquility, evoking feelings of calmness, order, and sophistication. The overall tone is positive, as the space appears inviting and well-maintained, suggesting a harmonious and functional living environment. The use of white walls and cabinetry creates a sense of spaciousness and brightness, while the dark glass cabinets add a touch of sophistication and contrast, making the space visually interesting without feeling overwhelming. The wooden accents, such as the countertop and the slatted wall panel, introduce warmth and a natural element, softening the otherwise minimalist aesthetic. The large window allows natural light to flood the space, enhancing the sense of openness and connection to the outdoors, which further contributes to the serene and uplifting atmosphere. The organized arrangement of kitchen items, such as the neatly placed bottles and plants, reinforces a sense of order and care, making the space feel lived-in yet pristine. The clean lines and sleek design of the appliances and fixtures emphasize modernity and efficiency, contributing to the overall positive and uplifting emotional atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 216,
-            "total_tokens": 524
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8180.031235,
-            "prompt_eval_duration_ms": 74.818882,
-            "generation_duration_ms": 8064.788295,
-            "load_duration_ms": 38.185792,
-            "tokens_per_second": 26.783096108538334
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"kitchen\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"black\", \"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Modern kitchen with white cabinets, black appliances, and wooden accents.\"\n    },\n    \"cabinets\": {\n      \"count\": 2,\n      \"location\": \"left and right\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"White upper and lower cabinets.\"\n    },\n    \"island\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"black\", \"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Central kitchen island with black glass doors and wooden countertop.\"\n    },\n    \"appliances\": {\n      \"count\": 3,\n      \"location\": \"left and center\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Includes a stove, oven, and possibly a dishwasher.\"\n    },\n    \"sink\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Stainless steel sink.\"\n    },\n    \"faucet\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Stainless steel faucet.\"\n    },\n    \"shelves\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Wall-mounted shelves holding cups and bottles.\"\n    },\n    \"windows\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"clear\"],\n      \"size\": \"medium\",\n      \"description\": \"Large window letting in natural light.\"\n    },\n    \"door\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"White door with a handle.\"\n    },\n    \"countertop\": {\n      \"count\": 2,\n      \"location\": \"center and left\",\n      \"color\": [\"white\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"White and wooden countertops.\"\n    },\n    \"floor\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Wooden floor.\"\n    },\n    \"lights\": {\n      \"count\": 3,\n      \"location\": \"top\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Recessed ceiling lights.\"\n    },\n    \"decor\": {\n      \"count\": 3,\n      \"location\": \"center\",\n      \"color\": [\"green\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"Potted plants and decorative items on the countertop.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"center (through window)\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"Tree visible through the window.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "kitchen": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "white",
-                  "black",
-                  "brown"
-                ],
-                "size": "large",
-                "description": "Modern kitchen with white cabinets, black appliances, and wooden accents."
-              },
-              "cabinets": {
-                "count": 2,
-                "location": "left and right",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "White upper and lower cabinets."
-              },
-              "island": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "white",
-                  "black",
-                  "brown"
-                ],
-                "size": "large",
-                "description": "Central kitchen island with black glass doors and wooden countertop."
-              },
-              "appliances": {
-                "count": 3,
-                "location": "left and center",
-                "color": [
-                  "black"
-                ],
-                "size": "medium",
-                "description": "Includes a stove, oven, and possibly a dishwasher."
-              },
-              "sink": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "silver"
-                ],
-                "size": "small",
-                "description": "Stainless steel sink."
-              },
-              "faucet": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "silver"
-                ],
-                "size": "small",
-                "description": "Stainless steel faucet."
-              },
-              "shelves": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "Wall-mounted shelves holding cups and bottles."
-              },
-              "windows": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "clear"
-                ],
-                "size": "medium",
-                "description": "Large window letting in natural light."
-              },
-              "door": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "White door with a handle."
-              },
-              "countertop": {
-                "count": 2,
-                "location": "center and left",
-                "color": [
-                  "white",
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "White and wooden countertops."
-              },
-              "floor": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "Wooden floor."
-              },
-              "lights": {
-                "count": 3,
-                "location": "top",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "Recessed ceiling lights."
-              },
-              "decor": {
-                "count": 3,
-                "location": "center",
-                "color": [
-                  "green",
-                  "white"
-                ],
-                "size": "small",
-                "description": "Potted plants and decorative items on the countertop."
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 1,
-                "location": "center (through window)",
-                "color": [
-                  "green"
-                ],
-                "size": "medium",
-                "description": "Tree visible through the window."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 724,
-            "total_tokens": 1210
-          },
-          "performance_metrics": {
-            "total_duration_ms": 27115.945831,
-            "prompt_eval_duration_ms": 140.08835,
-            "generation_duration_ms": 26935.271227,
-            "load_duration_ms": 38.110013,
-            "tokens_per_second": 26.87925411622587
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3609,
-        "total_time_ms": 74991.877243,
-        "average_speed": 26.90467384727891
       }
     },
     {

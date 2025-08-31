@@ -7,6 +7,262 @@
   "timestamp": "2025-08-30T23:31:58.886653+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image presents a close-up view of three golden-brown donuts, each generously coated with a glossy, translucent glaze that appears to be a light caramel or maple syrup, giving them a shiny, inviting appearance. The donuts are arranged on a white, scalloped-edged plate, which contrasts sharply with the vibrant yellow hue of the donuts, making them the focal point of the composition. The background is a stark white, which enhances the donuts' golden color and the reflective quality of the glaze, creating a clean and minimalist setting. The lighting is bright and even, casting minimal shadows and highlighting the texture of the donuts' surface and the smooth, glossy finish of the glaze. The overall composition is simple yet visually appealing, with the donuts centrally positioned on the plate, drawing the viewer's eye directly to them. The simplicity of the background and the focus on the donuts suggest a setting that is likely to be a food photography studio or a clean, bright kitchen environment, designed to showcase the donuts' appeal and texture.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 216,
+            "total_tokens": 513
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1642.166343,
+            "prompt_eval_duration_ms": 78.21359,
+            "generation_duration_ms": 1526.502229,
+            "load_duration_ms": 35.805149,
+            "tokens_per_second": 141.49995715466457
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, three golden-brown donuts with a glossy glaze are prominently displayed on a white plate with a scalloped edge. The glaze appears to be a light brown caramel or maple syrup, glistening under the light and pooling slightly on the plate, creating a sense of depth and texture. The donuts are arranged closely together, with the one in the center slightly overlapping the others, suggesting a casual and inviting presentation. The background is a stark white, which contrasts sharply with the warm tones of the donuts and the white plate, making the foreground elements stand out sharply and drawing the viewer's attention directly to them. The simplicity of the background ensures that there are no distractions from the main subject, allowing the viewer to focus entirely on the donuts and their tempting appearance.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 164,
+            "total_tokens": 467
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1243.941495,
+            "prompt_eval_duration_ms": 29.648614,
+            "generation_duration_ms": 1174.377179,
+            "load_duration_ms": 38.296952,
+            "tokens_per_second": 139.64849022325902
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image features a close-up of three glazed donuts resting on a white plate, which is placed against a stark white background. The donuts are golden brown with a shiny, glossy glaze that suggests they are freshly made and perhaps still warm. There are no people or animals present in the image; the focus is entirely on the donuts and the plate they are placed on. The donuts are arranged in a slightly overlapping manner, with the one in the foreground being the most prominent and the others slightly blurred in the background, creating a sense of depth. The white plate provides a clean, contrasting backdrop that makes the donuts stand out. The interaction between the elements is purely visual, with the donuts and the plate being the only objects in the frame, and their arrangement and lighting emphasizing their texture and color.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 166,
+            "total_tokens": 472
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1254.223612,
+            "prompt_eval_duration_ms": 30.393108,
+            "generation_duration_ms": 1185.658493,
+            "load_duration_ms": 36.521383,
+            "tokens_per_second": 140.00658788348088
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of warmth and indulgence, primarily due to the glossy, golden-brown glaze of the donuts that glistens under the light, suggesting a freshly made treat. The soft focus and the stark white background create a clean, almost ethereal atmosphere, which can make the donuts appear more tempting and inviting. The slight blur around the edges of the donuts adds a dreamy quality, enhancing the feeling of something sweet and comforting. The simplicity of the composition, with just the donuts on a plain white plate, directs all attention to the subject, making it feel like a moment of pure pleasure and satisfaction. The overall tone is decidedly positive, as the image is designed to make the viewer feel hungry and happy, evoking feelings of nostalgia and joy associated with simple pleasures. The use of light and color, combined with the inviting texture of the glaze, contributes significantly to this positive emotional atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 190,
+            "total_tokens": 498
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1436.341939,
+            "prompt_eval_duration_ms": 30.122913,
+            "generation_duration_ms": 1367.26911,
+            "load_duration_ms": 37.356977,
+            "tokens_per_second": 138.96313359993923
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"donut\": {\n      \"count\": 3,\n      \"location\": \"center\",\n      \"color\": [\"yellow\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"glazed donuts with a hole in the center\"\n    },\n    \"plate\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"white plate holding the donuts\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "donut": {
+                "count": 3,
+                "location": "center",
+                "color": [
+                  "yellow",
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "glazed donuts with a hole in the center"
+              },
+              "plate": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "white plate holding the donuts"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 117,
+            "total_tokens": 603
+          },
+          "performance_metrics": {
+            "total_duration_ms": 916.61576,
+            "prompt_eval_duration_ms": 44.335221,
+            "generation_duration_ms": 833.300443,
+            "load_duration_ms": 37.136653,
+            "tokens_per_second": 140.40554158207738
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2553,
+        "total_time_ms": 6493.289148999999,
+        "average_speed": 140.10474208868422
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image showcases a close-up view of three glazed donuts arranged on a white plate, set against a plain white background. The donuts are the central focus, with their golden-brown, slightly shiny surfaces indicating a freshly applied glaze. The glaze appears to be a light, translucent caramel or honey-like color, with some of it dripping down the sides and pooling on the plate, adding a sense of indulgence and freshness. The donuts are evenly spaced, with their circular shapes and central holes clearly visible, emphasizing their classic donut form. The lighting is bright and even, highlighting the glossy texture of the glaze and the soft, fluffy appearance of the donuts. The white plate provides a clean, minimalist contrast to the warm, inviting tones of the donuts, making them stand out prominently. The overall composition is simple yet visually appealing, with a focus on the textures and colors of the donuts, creating an appetizing and inviting scene. The lack of additional elements or distractions ensures that all attention is drawn to the donuts themselves.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 214,
+            "total_tokens": 511
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11587.27812,
+            "prompt_eval_duration_ms": 3580.409172,
+            "generation_duration_ms": 7968.190153,
+            "load_duration_ms": 36.919925,
+            "tokens_per_second": 26.85678879280129
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image prominently features three glazed donuts, which are the closest elements to the viewer. These donuts are golden-brown in color, with a shiny, glossy glaze that suggests a sweet, sticky texture. The glaze is visibly dripping down the sides, pooling slightly on the surface beneath, indicating a fresh and moist appearance. The donuts are arranged in a slightly overlapping manner, with the one in the foreground being the most prominent, drawing the viewer's attention directly to its rich, sugary coating.\n\nIn the background, the setting is minimalistic and unobtrusive, consisting of a plain white surface that serves as a plate or table. This stark, clean background ensures that the donuts remain the focal point of the image, with no distractions to detract from their visual appeal. The simplicity of the background enhances the contrast, making the golden hue of the donuts stand out even more vividly.\n\nThe relationship between the foreground and background is one of stark contrast and deliberate focus. The bright, detailed texture of the donuts in the foreground is sharply defined against the plain, neutral backdrop, creating a strong visual hierarchy. This composition emphasizes the donuts' allure and makes them appear even more tempting and appetizing. The minimal background ensures that the viewer's attention remains fixed on the donuts, highlighting their glossy, sugary surface and the inviting nature of the food. The overall effect is one of simplicity and indulgence, with the foreground elements commanding immediate attention while the background provides a clean, supportive setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 311,
+            "total_tokens": 614
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11677.604094,
+            "prompt_eval_duration_ms": 73.364714,
+            "generation_duration_ms": 11566.445134,
+            "load_duration_ms": 36.121812,
+            "tokens_per_second": 26.888123048783918
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a close-up view of three glazed donuts arranged on a white plate. There are no people or animals present in the image. The focus is entirely on the donuts, which are the central objects in the scene. The donuts are golden-brown in color, with a glossy, caramel-like glaze that appears to be dripping slightly, indicating a fresh and sticky texture. The glaze is applied generously, creating a shiny, inviting appearance. The donuts are positioned in a triangular formation, with one in the foreground and two slightly behind it, creating a sense of depth and visual interest. The white plate provides a clean, neutral background that contrasts with the warm, rich tones of the donuts, making them stand out prominently. The lighting is soft and diffused, enhancing the reflective quality of the glaze and giving the donuts a warm, appetizing glow. The overall composition emphasizes the appealing nature of the donuts, inviting the viewer to imagine their sweet and indulgent taste. There are no interactions between elements since the image solely features the donuts and the plate.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 222,
+            "total_tokens": 528
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8422.13229,
+            "prompt_eval_duration_ms": 74.688034,
+            "generation_duration_ms": 8308.124156,
+            "load_duration_ms": 37.558974,
+            "tokens_per_second": 26.72083322679705
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of warmth, indulgence, and comfort, evoking feelings of happiness, nostalgia, and satisfaction. The glossy, golden glaze on the donuts suggests a sense of sweetness and richness, inviting the viewer to imagine the taste and texture. The soft, warm lighting enhances the inviting appearance of the donuts, creating a cozy and comforting atmosphere. The blurred background focuses attention on the donuts, emphasizing their appeal and making them the central point of interest. The arrangement of the donuts, slightly overlapping and placed on a delicate white plate, adds a touch of elegance and care, further enhancing the positive tone. The overall composition is simple yet visually appealing, evoking a sense of joy and pleasure associated with indulging in a sweet treat. The image's tone is decidedly positive, as it taps into universal feelings of craving and delight, making it emotionally uplifting and engaging. The visual elements\u2014color, lighting, and composition\u2014all work together to create an atmosphere that is both inviting and emotionally satisfying.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 206,
+            "total_tokens": 514
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7806.521958,
+            "prompt_eval_duration_ms": 70.831818,
+            "generation_duration_ms": 7697.376755,
+            "load_duration_ms": 36.707271,
+            "tokens_per_second": 26.762364186758585
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"donuts\": {\n      \"count\": 3,\n      \"location\": \"center\",\n      \"color\": [\"golden brown\", \"yellow\"],\n      \"size\": \"medium\",\n      \"description\": \"Glazed donuts with a shiny glaze coating\"\n    },\n    \"plate\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"White plate holding the donuts\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "donuts": {
+                "count": 3,
+                "location": "center",
+                "color": [
+                  "golden brown",
+                  "yellow"
+                ],
+                "size": "medium",
+                "description": "Glazed donuts with a shiny glaze coating"
+              },
+              "plate": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "White plate holding the donuts"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 118,
+            "total_tokens": 604
+          },
+          "performance_metrics": {
+            "total_duration_ms": 4534.32719,
+            "prompt_eval_duration_ms": 134.759047,
+            "generation_duration_ms": 4359.244175,
+            "load_duration_ms": 38.257029,
+            "tokens_per_second": 27.068912697463205
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2771,
+        "total_time_ms": 44027.863652,
+        "average_speed": 26.859404390520808
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -404,262 +660,6 @@
         "total_tokens": 2634,
         "total_time_ms": 21296.816529999996,
         "average_speed": 41.87007710667624
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image presents a close-up view of three golden-brown donuts, each generously coated with a glossy, translucent glaze that appears to be a light caramel or maple syrup, giving them a shiny, inviting appearance. The donuts are arranged on a white, scalloped-edged plate, which contrasts sharply with the vibrant yellow hue of the donuts, making them the focal point of the composition. The background is a stark white, which enhances the donuts' golden color and the reflective quality of the glaze, creating a clean and minimalist setting. The lighting is bright and even, casting minimal shadows and highlighting the texture of the donuts' surface and the smooth, glossy finish of the glaze. The overall composition is simple yet visually appealing, with the donuts centrally positioned on the plate, drawing the viewer's eye directly to them. The simplicity of the background and the focus on the donuts suggest a setting that is likely to be a food photography studio or a clean, bright kitchen environment, designed to showcase the donuts' appeal and texture.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 216,
-            "total_tokens": 513
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1642.166343,
-            "prompt_eval_duration_ms": 78.21359,
-            "generation_duration_ms": 1526.502229,
-            "load_duration_ms": 35.805149,
-            "tokens_per_second": 141.49995715466457
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, three golden-brown donuts with a glossy glaze are prominently displayed on a white plate with a scalloped edge. The glaze appears to be a light brown caramel or maple syrup, glistening under the light and pooling slightly on the plate, creating a sense of depth and texture. The donuts are arranged closely together, with the one in the center slightly overlapping the others, suggesting a casual and inviting presentation. The background is a stark white, which contrasts sharply with the warm tones of the donuts and the white plate, making the foreground elements stand out sharply and drawing the viewer's attention directly to them. The simplicity of the background ensures that there are no distractions from the main subject, allowing the viewer to focus entirely on the donuts and their tempting appearance.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 164,
-            "total_tokens": 467
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1243.941495,
-            "prompt_eval_duration_ms": 29.648614,
-            "generation_duration_ms": 1174.377179,
-            "load_duration_ms": 38.296952,
-            "tokens_per_second": 139.64849022325902
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image features a close-up of three glazed donuts resting on a white plate, which is placed against a stark white background. The donuts are golden brown with a shiny, glossy glaze that suggests they are freshly made and perhaps still warm. There are no people or animals present in the image; the focus is entirely on the donuts and the plate they are placed on. The donuts are arranged in a slightly overlapping manner, with the one in the foreground being the most prominent and the others slightly blurred in the background, creating a sense of depth. The white plate provides a clean, contrasting backdrop that makes the donuts stand out. The interaction between the elements is purely visual, with the donuts and the plate being the only objects in the frame, and their arrangement and lighting emphasizing their texture and color.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 166,
-            "total_tokens": 472
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1254.223612,
-            "prompt_eval_duration_ms": 30.393108,
-            "generation_duration_ms": 1185.658493,
-            "load_duration_ms": 36.521383,
-            "tokens_per_second": 140.00658788348088
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of warmth and indulgence, primarily due to the glossy, golden-brown glaze of the donuts that glistens under the light, suggesting a freshly made treat. The soft focus and the stark white background create a clean, almost ethereal atmosphere, which can make the donuts appear more tempting and inviting. The slight blur around the edges of the donuts adds a dreamy quality, enhancing the feeling of something sweet and comforting. The simplicity of the composition, with just the donuts on a plain white plate, directs all attention to the subject, making it feel like a moment of pure pleasure and satisfaction. The overall tone is decidedly positive, as the image is designed to make the viewer feel hungry and happy, evoking feelings of nostalgia and joy associated with simple pleasures. The use of light and color, combined with the inviting texture of the glaze, contributes significantly to this positive emotional atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 190,
-            "total_tokens": 498
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1436.341939,
-            "prompt_eval_duration_ms": 30.122913,
-            "generation_duration_ms": 1367.26911,
-            "load_duration_ms": 37.356977,
-            "tokens_per_second": 138.96313359993923
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"donut\": {\n      \"count\": 3,\n      \"location\": \"center\",\n      \"color\": [\"yellow\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"glazed donuts with a hole in the center\"\n    },\n    \"plate\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"white plate holding the donuts\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "donut": {
-                "count": 3,
-                "location": "center",
-                "color": [
-                  "yellow",
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "glazed donuts with a hole in the center"
-              },
-              "plate": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "white plate holding the donuts"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 117,
-            "total_tokens": 603
-          },
-          "performance_metrics": {
-            "total_duration_ms": 916.61576,
-            "prompt_eval_duration_ms": 44.335221,
-            "generation_duration_ms": 833.300443,
-            "load_duration_ms": 37.136653,
-            "tokens_per_second": 140.40554158207738
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2553,
-        "total_time_ms": 6493.289148999999,
-        "average_speed": 140.10474208868422
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image showcases a close-up view of three glazed donuts arranged on a white plate, set against a plain white background. The donuts are the central focus, with their golden-brown, slightly shiny surfaces indicating a freshly applied glaze. The glaze appears to be a light, translucent caramel or honey-like color, with some of it dripping down the sides and pooling on the plate, adding a sense of indulgence and freshness. The donuts are evenly spaced, with their circular shapes and central holes clearly visible, emphasizing their classic donut form. The lighting is bright and even, highlighting the glossy texture of the glaze and the soft, fluffy appearance of the donuts. The white plate provides a clean, minimalist contrast to the warm, inviting tones of the donuts, making them stand out prominently. The overall composition is simple yet visually appealing, with a focus on the textures and colors of the donuts, creating an appetizing and inviting scene. The lack of additional elements or distractions ensures that all attention is drawn to the donuts themselves.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 214,
-            "total_tokens": 511
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11587.27812,
-            "prompt_eval_duration_ms": 3580.409172,
-            "generation_duration_ms": 7968.190153,
-            "load_duration_ms": 36.919925,
-            "tokens_per_second": 26.85678879280129
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image prominently features three glazed donuts, which are the closest elements to the viewer. These donuts are golden-brown in color, with a shiny, glossy glaze that suggests a sweet, sticky texture. The glaze is visibly dripping down the sides, pooling slightly on the surface beneath, indicating a fresh and moist appearance. The donuts are arranged in a slightly overlapping manner, with the one in the foreground being the most prominent, drawing the viewer's attention directly to its rich, sugary coating.\n\nIn the background, the setting is minimalistic and unobtrusive, consisting of a plain white surface that serves as a plate or table. This stark, clean background ensures that the donuts remain the focal point of the image, with no distractions to detract from their visual appeal. The simplicity of the background enhances the contrast, making the golden hue of the donuts stand out even more vividly.\n\nThe relationship between the foreground and background is one of stark contrast and deliberate focus. The bright, detailed texture of the donuts in the foreground is sharply defined against the plain, neutral backdrop, creating a strong visual hierarchy. This composition emphasizes the donuts' allure and makes them appear even more tempting and appetizing. The minimal background ensures that the viewer's attention remains fixed on the donuts, highlighting their glossy, sugary surface and the inviting nature of the food. The overall effect is one of simplicity and indulgence, with the foreground elements commanding immediate attention while the background provides a clean, supportive setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 311,
-            "total_tokens": 614
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11677.604094,
-            "prompt_eval_duration_ms": 73.364714,
-            "generation_duration_ms": 11566.445134,
-            "load_duration_ms": 36.121812,
-            "tokens_per_second": 26.888123048783918
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a close-up view of three glazed donuts arranged on a white plate. There are no people or animals present in the image. The focus is entirely on the donuts, which are the central objects in the scene. The donuts are golden-brown in color, with a glossy, caramel-like glaze that appears to be dripping slightly, indicating a fresh and sticky texture. The glaze is applied generously, creating a shiny, inviting appearance. The donuts are positioned in a triangular formation, with one in the foreground and two slightly behind it, creating a sense of depth and visual interest. The white plate provides a clean, neutral background that contrasts with the warm, rich tones of the donuts, making them stand out prominently. The lighting is soft and diffused, enhancing the reflective quality of the glaze and giving the donuts a warm, appetizing glow. The overall composition emphasizes the appealing nature of the donuts, inviting the viewer to imagine their sweet and indulgent taste. There are no interactions between elements since the image solely features the donuts and the plate.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 222,
-            "total_tokens": 528
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8422.13229,
-            "prompt_eval_duration_ms": 74.688034,
-            "generation_duration_ms": 8308.124156,
-            "load_duration_ms": 37.558974,
-            "tokens_per_second": 26.72083322679705
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of warmth, indulgence, and comfort, evoking feelings of happiness, nostalgia, and satisfaction. The glossy, golden glaze on the donuts suggests a sense of sweetness and richness, inviting the viewer to imagine the taste and texture. The soft, warm lighting enhances the inviting appearance of the donuts, creating a cozy and comforting atmosphere. The blurred background focuses attention on the donuts, emphasizing their appeal and making them the central point of interest. The arrangement of the donuts, slightly overlapping and placed on a delicate white plate, adds a touch of elegance and care, further enhancing the positive tone. The overall composition is simple yet visually appealing, evoking a sense of joy and pleasure associated with indulging in a sweet treat. The image's tone is decidedly positive, as it taps into universal feelings of craving and delight, making it emotionally uplifting and engaging. The visual elements\u2014color, lighting, and composition\u2014all work together to create an atmosphere that is both inviting and emotionally satisfying.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 206,
-            "total_tokens": 514
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7806.521958,
-            "prompt_eval_duration_ms": 70.831818,
-            "generation_duration_ms": 7697.376755,
-            "load_duration_ms": 36.707271,
-            "tokens_per_second": 26.762364186758585
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"donuts\": {\n      \"count\": 3,\n      \"location\": \"center\",\n      \"color\": [\"golden brown\", \"yellow\"],\n      \"size\": \"medium\",\n      \"description\": \"Glazed donuts with a shiny glaze coating\"\n    },\n    \"plate\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"White plate holding the donuts\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "donuts": {
-                "count": 3,
-                "location": "center",
-                "color": [
-                  "golden brown",
-                  "yellow"
-                ],
-                "size": "medium",
-                "description": "Glazed donuts with a shiny glaze coating"
-              },
-              "plate": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "White plate holding the donuts"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 118,
-            "total_tokens": 604
-          },
-          "performance_metrics": {
-            "total_duration_ms": 4534.32719,
-            "prompt_eval_duration_ms": 134.759047,
-            "generation_duration_ms": 4359.244175,
-            "load_duration_ms": 38.257029,
-            "tokens_per_second": 27.068912697463205
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2771,
-        "total_time_ms": 44027.863652,
-        "average_speed": 26.859404390520808
       }
     },
     {

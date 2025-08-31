@@ -7,6 +7,435 @@
   "timestamp": "2025-08-30T19:03:23.605956+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a cozy domestic scene set in a kitchen, likely during the evening given the warm, ambient lighting. The main subject is a woman standing in the center of the frame, dressed in a maroon robe and a dark beanie, with a light scarf wrapped around her neck. Her expression is animated, with her mouth open as if she is speaking or reacting to something off-camera. The kitchen is equipped with wooden cabinets, a white stove, and a black coffee maker on the counter. Various spice jars and a small bowl are visible on the counter, adding to the lived-in feel of the space. The lighting is soft and warm, casting gentle shadows and highlighting the textures of the woman's clothing and the kitchen's wooden elements. The overall composition is casual and intimate, suggesting a candid moment captured in a home environment. The color palette is dominated by earthy tones, with the maroon of the robe and the beige of the scarf providing a contrast against the neutral colors of the kitchen.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 202,
+            "total_tokens": 499
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1568.433495,
+            "prompt_eval_duration_ms": 80.270849,
+            "generation_duration_ms": 1446.334247,
+            "load_duration_ms": 39.24153,
+            "tokens_per_second": 139.66342871227056
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, a person stands in a kitchen, dressed in a maroon robe and a dark beanie with a small, light-colored logo. They are positioned near a white stovetop with a black oven below, where a silver pot rests on one of the burners. To the left, a row of spice jars and a black coffee maker are visible, adding to the domestic setting. The countertop, partially visible, holds a red bowl and a green sponge, suggesting recent or ongoing kitchen activity. The background, slightly out of focus, reveals wooden kitchen cabinets and a white range hood above the stovetop, indicating a well-used and functional kitchen environment. The person's attire and the kitchen setting suggest a casual, everyday scene, with the foreground elements providing a detailed view of the subject and immediate surroundings, while the background elements establish the context and setting of the image.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 181,
+            "total_tokens": 484
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1380.018162,
+            "prompt_eval_duration_ms": 33.327883,
+            "generation_duration_ms": 1303.501125,
+            "load_duration_ms": 39.776576,
+            "tokens_per_second": 138.85680382515972
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a person is standing in a kitchen, wearing a maroon robe, a gray scarf, and a black beanie with a small orange logo. The individual appears to be in the middle of a cooking or baking activity, as suggested by the presence of a pot on the stove, a coffee maker, and various spice jars on the counter. The person's mouth is open wide, possibly in a gesture of excitement, surprise, or laughter, adding a dynamic element to the scene. The kitchen itself is equipped with wooden cabinets, a white range hood, and a black stove, creating a cozy and functional environment. The person's interaction with the kitchen elements suggests a casual and comfortable setting, possibly indicating a moment of joy or discovery in the midst of a domestic routine. There are no animals present in the image, and the focus remains solely on the person and their immediate surroundings.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 180,
+            "total_tokens": 486
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1376.74447,
+            "prompt_eval_duration_ms": 29.847466,
+            "generation_duration_ms": 1304.904696,
+            "load_duration_ms": 39.481996,
+            "tokens_per_second": 137.9411083060429
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of warmth and informality, evoking a sense of comfort and lightheartedness. The subject's expression, characterized by a wide, open-mouthed smile, suggests a moment of joy or amusement, possibly in response to a humorous or lighthearted situation. The casual attire, including a robe and a beanie, further emphasizes a relaxed and informal atmosphere, as if the subject is in their own home, perhaps enjoying a moment of leisure or preparing a meal. The kitchen setting, with its wooden cabinets and everyday items like a coffee maker and spice jars, adds to the sense of familiarity and domesticity, reinforcing the feeling of comfort and ease. The warm lighting and the subject's direct gaze towards the camera contribute to a feeling of connection and openness, making the viewer feel included in this candid moment. Overall, the tone of the image is decidedly positive, capturing a snapshot of everyday life that is both relatable and heartwarming.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 200,
+            "total_tokens": 508
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1532.441644,
+            "prompt_eval_duration_ms": 29.626366,
+            "generation_duration_ms": 1461.986025,
+            "load_duration_ms": 38.390556,
+            "tokens_per_second": 136.80021325785245
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"maroon\", \"gray\"],\n      \"size\": \"large\",\n      \"description\": \"wearing a maroon robe, gray scarf, and black beanie with a small orange logo, smiling and looking to the right\"\n    }\n  },\n  \"man-made\": {\n    \"stove\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"large\",\n      \"description\": \"with a pot on the front burner and a kettle on the back burner\"\n    },\n    \"coffee maker\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"on the countertop\"\n    },\n    \"spices\": {\n      \"count\": 6,\n      \"location\": \"left\",\n      \"color\": [\"brown\", \"green\", \"red\"],\n      \"size\": \"small\",\n      \"description\": \"on the stove\"\n    },\n    \"kitchen utensils\": {\n      \"count\": 1,\n      \"location\": \"top right\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"hanging on the wall\"\n    },\n    \"countertop\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"with a red bowl and a sponge\"\n    },\n    \"cabinet\": {\n      \"count\": 2,\n      \"location\": \"top\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"wooden cabinets\"\n    },\n    \"vent hood\": {\n      \"count\": 1,\n      \"location\": \"top left\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"above the stove\"\n    },\n    \"wall outlet\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"with a plug inserted\"\n    },\n    \"window\": {\n      \"count\": 1,\n      \"location\": \"top right\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"with a partially open blind\"\n    },\n    \"light switch\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"on the wall\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "maroon",
+                  "gray"
+                ],
+                "size": "large",
+                "description": "wearing a maroon robe, gray scarf, and black beanie with a small orange logo, smiling and looking to the right"
+              }
+            },
+            "man-made": {
+              "stove": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "white",
+                  "black"
+                ],
+                "size": "large",
+                "description": "with a pot on the front burner and a kettle on the back burner"
+              },
+              "coffee maker": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "black"
+                ],
+                "size": "medium",
+                "description": "on the countertop"
+              },
+              "spices": {
+                "count": 6,
+                "location": "left",
+                "color": [
+                  "brown",
+                  "green",
+                  "red"
+                ],
+                "size": "small",
+                "description": "on the stove"
+              },
+              "kitchen utensils": {
+                "count": 1,
+                "location": "top right",
+                "color": [
+                  "silver"
+                ],
+                "size": "small",
+                "description": "hanging on the wall"
+              },
+              "countertop": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "with a red bowl and a sponge"
+              },
+              "cabinet": {
+                "count": 2,
+                "location": "top",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "wooden cabinets"
+              },
+              "vent hood": {
+                "count": 1,
+                "location": "top left",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "above the stove"
+              },
+              "wall outlet": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "with a plug inserted"
+              },
+              "window": {
+                "count": 1,
+                "location": "top right",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "with a partially open blind"
+              },
+              "light switch": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "on the wall"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 578,
+            "total_tokens": 1064
+          },
+          "performance_metrics": {
+            "total_duration_ms": 4200.455368,
+            "prompt_eval_duration_ms": 44.712974,
+            "generation_duration_ms": 4111.696283,
+            "load_duration_ms": 40.702865,
+            "tokens_per_second": 140.57458533349558
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3041,
+        "total_time_ms": 10058.093139,
+        "average_speed": 138.76722788696424
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a person standing in a kitchen, captured in a casual, candid moment. The setting is a typical residential kitchen with wooden cabinets, a white countertop, and a stove with a black cooktop in the background. The person is wearing a maroon robe, a light gray scarf, and a black beanie with a small orange logo on the front. Their facial expression is animated, with their mouth open as if they are speaking or reacting to something. The kitchen is well-lit, likely with natural light coming from a window on the right side of the frame, creating a warm and inviting atmosphere. Various kitchen items are visible, including jars of spices or condiments on the counter, a coffee maker, a red bowl, and a pot on the stove. The overall composition is slightly off-center, with the person positioned towards the right side of the frame, drawing attention to their expressive face and attire. The colors are warm and earthy, dominated by the maroon of the robe, the beige tones of the scarf, and the natural wood of the cabinets. The scene feels lived-in and casual, capturing a moment of everyday life.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 233,
+            "total_tokens": 530
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12346.836175,
+            "prompt_eval_duration_ms": 3586.870414,
+            "generation_duration_ms": 8716.318269,
+            "load_duration_ms": 40.504093,
+            "tokens_per_second": 26.73146996349084
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the most prominent element is a person standing in a kitchen setting. They are wearing a maroon robe, a beige scarf, and a black beanie with a small orange logo. The person is positioned slightly off-center, facing the camera with a playful or expressive gesture, adding a dynamic and human element to the scene. The foreground is sharply focused, drawing attention to the individual and their attire, which suggests a casual, cozy, or possibly chilly environment.\n\nIn the background, the kitchen setting is clearly visible, providing context for the scene. The background elements include a stove with a pot on it, a coffee maker, a sink with a dish rack, and various kitchen items such as jars, bottles, and utensils scattered across the countertops. The cabinets and backsplash are wooden, contributing to a warm, homey atmosphere. The background is slightly less focused than the foreground, creating a sense of depth and emphasizing the person as the primary subject.\n\nThe relationship between the foreground and background is harmonious and complementary. The person in the foreground is the focal point, but the kitchen setting in the background provides a relatable and familiar context, suggesting that the individual is in a domestic environment. The casual attire of the person aligns with the informal, everyday nature of the kitchen, reinforcing the scene's overall sense of comfort and relatability. The interplay between the sharp focus on the person and the softer focus on the kitchen elements creates a balanced composition, guiding the viewer's eye naturally from the subject to the setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 313,
+            "total_tokens": 616
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11796.288087,
+            "prompt_eval_duration_ms": 75.318389,
+            "generation_duration_ms": 11678.488354,
+            "load_duration_ms": 39.864285,
+            "tokens_per_second": 26.80141389127595
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a person standing in a kitchen, engaging in a casual and expressive moment. The individual is wearing a maroon robe, a light gray scarf, and a black beanie with a small orange logo on the front. Their facial expression is animated, with their mouth open as if they are speaking, singing, or reacting to something with enthusiasm. The person's body language suggests a relaxed and informal setting, possibly at home.\n\nThe kitchen is well-equipped and organized, featuring wooden cabinets, a white stove with a black cooktop, and a coffee maker on the countertop. Various kitchen items are visible, including jars, bottles, and utensils, indicating a functional and lived-in space. The person is positioned near the stove, with a frying pan and other cooking tools in the foreground, suggesting they might be in the middle of cooking or preparing a meal.\n\nThe interaction between the person and the environment is one of familiarity and comfort. The kitchen appears to be a personal space where the individual feels at ease, as evidenced by their casual attire and expressive demeanor. The presence of everyday kitchen items implies a connection to routine activities, such as cooking or preparing coffee. The overall scene conveys a sense of warmth and domesticity, with the person's animated expression adding a touch of personality and liveliness to the setting. There are no animals or other people present in the image, focusing solely on the individual and their interaction with the kitchen environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 291,
+            "total_tokens": 597
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10939.729989,
+            "prompt_eval_duration_ms": 74.051816,
+            "generation_duration_ms": 10822.877493,
+            "load_duration_ms": 40.515478,
+            "tokens_per_second": 26.887489042374582
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The mood conveyed in this image is predominantly lighthearted and playful, with a touch of warmth and coziness. The person in the kitchen appears to be in a cheerful or mischievous mood, as indicated by their open-mouthed expression, which could be interpreted as laughter, a playful yell, or even a moment of surprise. The casual and comfortable attire, including a cozy scarf and a knit hat, suggests a relaxed and informal setting, adding to the overall sense of ease and informality. The kitchen itself, with its warm lighting and visible spices and appliances, contributes to a homely and inviting atmosphere, evoking feelings of comfort and domesticity. The slightly messy counter, with items like a coffee maker and a bowl, further emphasizes the lived-in, authentic nature of the scene, reinforcing the idea of a spontaneous and unscripted moment. The overall tone is positive, as the image captures a candid and joyful moment in a familiar, comfortable environment. The visual elements, such as the bright colors of the scarf and robe, the warm tones of the kitchen, and the person's expressive demeanor, all work together to create an atmosphere of warmth, playfulness, and contentment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 242,
+            "total_tokens": 550
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9119.867144,
+            "prompt_eval_duration_ms": 75.062001,
+            "generation_duration_ms": 9001.631387,
+            "load_duration_ms": 40.675432,
+            "tokens_per_second": 26.884015751799414
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"red\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"A person wearing a red robe, black beanie, and scarf, standing in a kitchen with an open mouth, possibly speaking or reacting.\"\n    }\n  },\n  \"man-made\": {\n    \"kitchen\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\", \"black\", \"brown\"],\n      \"size\": \"large\",\n      \"description\": \"A kitchen with wooden cabinets, a stove, a coffee maker, and various kitchen items on the counter.\"\n    },\n    \"stove\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"black\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A black stove with a white top, containing a pot and a pan.\"\n    },\n    \"coffee maker\": {\n      \"count\": 1,\n      \"location\": \"center-right\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"A black coffee maker on the kitchen counter.\"\n    },\n    \"cabinets\": {\n      \"count\": 2,\n      \"location\": \"background\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"Wooden kitchen cabinets.\"\n    },\n    \"spices\": {\n      \"count\": 5,\n      \"location\": \"left\",\n      \"color\": [\"brown\", \"black\"],\n      \"size\": \"small\",\n      \"description\": \"Spice jars lined up on the counter.\"\n    },\n    \"sink\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A white kitchen sink with a faucet.\"\n    },\n    \"towel\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"pink\"],\n      \"size\": \"small\",\n      \"description\": \"A pink towel on the sink.\"\n    },\n    \"beanie\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"A black beanie worn by the person.\"\n    },\n    \"scarf\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"A gray scarf worn by the person.\"\n    },\n    \"robe\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"red\"],\n      \"size\": \"medium\",\n      \"description\": \"A red robe worn by the person.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "red",
+                  "black"
+                ],
+                "size": "medium",
+                "description": "A person wearing a red robe, black beanie, and scarf, standing in a kitchen with an open mouth, possibly speaking or reacting."
+              }
+            },
+            "man-made": {
+              "kitchen": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "white",
+                  "black",
+                  "brown"
+                ],
+                "size": "large",
+                "description": "A kitchen with wooden cabinets, a stove, a coffee maker, and various kitchen items on the counter."
+              },
+              "stove": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "black",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "A black stove with a white top, containing a pot and a pan."
+              },
+              "coffee maker": {
+                "count": 1,
+                "location": "center-right",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "A black coffee maker on the kitchen counter."
+              },
+              "cabinets": {
+                "count": 2,
+                "location": "background",
+                "color": [
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "Wooden kitchen cabinets."
+              },
+              "spices": {
+                "count": 5,
+                "location": "left",
+                "color": [
+                  "brown",
+                  "black"
+                ],
+                "size": "small",
+                "description": "Spice jars lined up on the counter."
+              },
+              "sink": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "A white kitchen sink with a faucet."
+              },
+              "towel": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "pink"
+                ],
+                "size": "small",
+                "description": "A pink towel on the sink."
+              },
+              "beanie": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "A black beanie worn by the person."
+              },
+              "scarf": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "gray"
+                ],
+                "size": "small",
+                "description": "A gray scarf worn by the person."
+              },
+              "robe": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "red"
+                ],
+                "size": "medium",
+                "description": "A red robe worn by the person."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 614,
+            "total_tokens": 1100
+          },
+          "performance_metrics": {
+            "total_duration_ms": 22973.925101,
+            "prompt_eval_duration_ms": 140.415802,
+            "generation_duration_ms": 22791.278317,
+            "load_duration_ms": 39.594957,
+            "tokens_per_second": 26.940129968138635
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3393,
+        "total_time_ms": 67176.646496,
+        "average_speed": 26.848903723415884
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -591,435 +1020,6 @@
         "total_tokens": 3036,
         "total_time_ms": 30725.027555999997,
         "average_speed": 42.100016488102824
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a cozy domestic scene set in a kitchen, likely during the evening given the warm, ambient lighting. The main subject is a woman standing in the center of the frame, dressed in a maroon robe and a dark beanie, with a light scarf wrapped around her neck. Her expression is animated, with her mouth open as if she is speaking or reacting to something off-camera. The kitchen is equipped with wooden cabinets, a white stove, and a black coffee maker on the counter. Various spice jars and a small bowl are visible on the counter, adding to the lived-in feel of the space. The lighting is soft and warm, casting gentle shadows and highlighting the textures of the woman's clothing and the kitchen's wooden elements. The overall composition is casual and intimate, suggesting a candid moment captured in a home environment. The color palette is dominated by earthy tones, with the maroon of the robe and the beige of the scarf providing a contrast against the neutral colors of the kitchen.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 202,
-            "total_tokens": 499
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1568.433495,
-            "prompt_eval_duration_ms": 80.270849,
-            "generation_duration_ms": 1446.334247,
-            "load_duration_ms": 39.24153,
-            "tokens_per_second": 139.66342871227056
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, a person stands in a kitchen, dressed in a maroon robe and a dark beanie with a small, light-colored logo. They are positioned near a white stovetop with a black oven below, where a silver pot rests on one of the burners. To the left, a row of spice jars and a black coffee maker are visible, adding to the domestic setting. The countertop, partially visible, holds a red bowl and a green sponge, suggesting recent or ongoing kitchen activity. The background, slightly out of focus, reveals wooden kitchen cabinets and a white range hood above the stovetop, indicating a well-used and functional kitchen environment. The person's attire and the kitchen setting suggest a casual, everyday scene, with the foreground elements providing a detailed view of the subject and immediate surroundings, while the background elements establish the context and setting of the image.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 181,
-            "total_tokens": 484
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1380.018162,
-            "prompt_eval_duration_ms": 33.327883,
-            "generation_duration_ms": 1303.501125,
-            "load_duration_ms": 39.776576,
-            "tokens_per_second": 138.85680382515972
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a person is standing in a kitchen, wearing a maroon robe, a gray scarf, and a black beanie with a small orange logo. The individual appears to be in the middle of a cooking or baking activity, as suggested by the presence of a pot on the stove, a coffee maker, and various spice jars on the counter. The person's mouth is open wide, possibly in a gesture of excitement, surprise, or laughter, adding a dynamic element to the scene. The kitchen itself is equipped with wooden cabinets, a white range hood, and a black stove, creating a cozy and functional environment. The person's interaction with the kitchen elements suggests a casual and comfortable setting, possibly indicating a moment of joy or discovery in the midst of a domestic routine. There are no animals present in the image, and the focus remains solely on the person and their immediate surroundings.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 180,
-            "total_tokens": 486
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1376.74447,
-            "prompt_eval_duration_ms": 29.847466,
-            "generation_duration_ms": 1304.904696,
-            "load_duration_ms": 39.481996,
-            "tokens_per_second": 137.9411083060429
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of warmth and informality, evoking a sense of comfort and lightheartedness. The subject's expression, characterized by a wide, open-mouthed smile, suggests a moment of joy or amusement, possibly in response to a humorous or lighthearted situation. The casual attire, including a robe and a beanie, further emphasizes a relaxed and informal atmosphere, as if the subject is in their own home, perhaps enjoying a moment of leisure or preparing a meal. The kitchen setting, with its wooden cabinets and everyday items like a coffee maker and spice jars, adds to the sense of familiarity and domesticity, reinforcing the feeling of comfort and ease. The warm lighting and the subject's direct gaze towards the camera contribute to a feeling of connection and openness, making the viewer feel included in this candid moment. Overall, the tone of the image is decidedly positive, capturing a snapshot of everyday life that is both relatable and heartwarming.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 200,
-            "total_tokens": 508
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1532.441644,
-            "prompt_eval_duration_ms": 29.626366,
-            "generation_duration_ms": 1461.986025,
-            "load_duration_ms": 38.390556,
-            "tokens_per_second": 136.80021325785245
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"maroon\", \"gray\"],\n      \"size\": \"large\",\n      \"description\": \"wearing a maroon robe, gray scarf, and black beanie with a small orange logo, smiling and looking to the right\"\n    }\n  },\n  \"man-made\": {\n    \"stove\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"large\",\n      \"description\": \"with a pot on the front burner and a kettle on the back burner\"\n    },\n    \"coffee maker\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"on the countertop\"\n    },\n    \"spices\": {\n      \"count\": 6,\n      \"location\": \"left\",\n      \"color\": [\"brown\", \"green\", \"red\"],\n      \"size\": \"small\",\n      \"description\": \"on the stove\"\n    },\n    \"kitchen utensils\": {\n      \"count\": 1,\n      \"location\": \"top right\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"hanging on the wall\"\n    },\n    \"countertop\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"with a red bowl and a sponge\"\n    },\n    \"cabinet\": {\n      \"count\": 2,\n      \"location\": \"top\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"wooden cabinets\"\n    },\n    \"vent hood\": {\n      \"count\": 1,\n      \"location\": \"top left\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"above the stove\"\n    },\n    \"wall outlet\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"with a plug inserted\"\n    },\n    \"window\": {\n      \"count\": 1,\n      \"location\": \"top right\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"with a partially open blind\"\n    },\n    \"light switch\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"on the wall\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "maroon",
-                  "gray"
-                ],
-                "size": "large",
-                "description": "wearing a maroon robe, gray scarf, and black beanie with a small orange logo, smiling and looking to the right"
-              }
-            },
-            "man-made": {
-              "stove": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "white",
-                  "black"
-                ],
-                "size": "large",
-                "description": "with a pot on the front burner and a kettle on the back burner"
-              },
-              "coffee maker": {
-                "count": 1,
-                "location": "right",
-                "color": [
-                  "black"
-                ],
-                "size": "medium",
-                "description": "on the countertop"
-              },
-              "spices": {
-                "count": 6,
-                "location": "left",
-                "color": [
-                  "brown",
-                  "green",
-                  "red"
-                ],
-                "size": "small",
-                "description": "on the stove"
-              },
-              "kitchen utensils": {
-                "count": 1,
-                "location": "top right",
-                "color": [
-                  "silver"
-                ],
-                "size": "small",
-                "description": "hanging on the wall"
-              },
-              "countertop": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "with a red bowl and a sponge"
-              },
-              "cabinet": {
-                "count": 2,
-                "location": "top",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "wooden cabinets"
-              },
-              "vent hood": {
-                "count": 1,
-                "location": "top left",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "above the stove"
-              },
-              "wall outlet": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "with a plug inserted"
-              },
-              "window": {
-                "count": 1,
-                "location": "top right",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "with a partially open blind"
-              },
-              "light switch": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "on the wall"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 578,
-            "total_tokens": 1064
-          },
-          "performance_metrics": {
-            "total_duration_ms": 4200.455368,
-            "prompt_eval_duration_ms": 44.712974,
-            "generation_duration_ms": 4111.696283,
-            "load_duration_ms": 40.702865,
-            "tokens_per_second": 140.57458533349558
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3041,
-        "total_time_ms": 10058.093139,
-        "average_speed": 138.76722788696424
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a person standing in a kitchen, captured in a casual, candid moment. The setting is a typical residential kitchen with wooden cabinets, a white countertop, and a stove with a black cooktop in the background. The person is wearing a maroon robe, a light gray scarf, and a black beanie with a small orange logo on the front. Their facial expression is animated, with their mouth open as if they are speaking or reacting to something. The kitchen is well-lit, likely with natural light coming from a window on the right side of the frame, creating a warm and inviting atmosphere. Various kitchen items are visible, including jars of spices or condiments on the counter, a coffee maker, a red bowl, and a pot on the stove. The overall composition is slightly off-center, with the person positioned towards the right side of the frame, drawing attention to their expressive face and attire. The colors are warm and earthy, dominated by the maroon of the robe, the beige tones of the scarf, and the natural wood of the cabinets. The scene feels lived-in and casual, capturing a moment of everyday life.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 233,
-            "total_tokens": 530
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12346.836175,
-            "prompt_eval_duration_ms": 3586.870414,
-            "generation_duration_ms": 8716.318269,
-            "load_duration_ms": 40.504093,
-            "tokens_per_second": 26.73146996349084
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the most prominent element is a person standing in a kitchen setting. They are wearing a maroon robe, a beige scarf, and a black beanie with a small orange logo. The person is positioned slightly off-center, facing the camera with a playful or expressive gesture, adding a dynamic and human element to the scene. The foreground is sharply focused, drawing attention to the individual and their attire, which suggests a casual, cozy, or possibly chilly environment.\n\nIn the background, the kitchen setting is clearly visible, providing context for the scene. The background elements include a stove with a pot on it, a coffee maker, a sink with a dish rack, and various kitchen items such as jars, bottles, and utensils scattered across the countertops. The cabinets and backsplash are wooden, contributing to a warm, homey atmosphere. The background is slightly less focused than the foreground, creating a sense of depth and emphasizing the person as the primary subject.\n\nThe relationship between the foreground and background is harmonious and complementary. The person in the foreground is the focal point, but the kitchen setting in the background provides a relatable and familiar context, suggesting that the individual is in a domestic environment. The casual attire of the person aligns with the informal, everyday nature of the kitchen, reinforcing the scene's overall sense of comfort and relatability. The interplay between the sharp focus on the person and the softer focus on the kitchen elements creates a balanced composition, guiding the viewer's eye naturally from the subject to the setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 313,
-            "total_tokens": 616
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11796.288087,
-            "prompt_eval_duration_ms": 75.318389,
-            "generation_duration_ms": 11678.488354,
-            "load_duration_ms": 39.864285,
-            "tokens_per_second": 26.80141389127595
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a person standing in a kitchen, engaging in a casual and expressive moment. The individual is wearing a maroon robe, a light gray scarf, and a black beanie with a small orange logo on the front. Their facial expression is animated, with their mouth open as if they are speaking, singing, or reacting to something with enthusiasm. The person's body language suggests a relaxed and informal setting, possibly at home.\n\nThe kitchen is well-equipped and organized, featuring wooden cabinets, a white stove with a black cooktop, and a coffee maker on the countertop. Various kitchen items are visible, including jars, bottles, and utensils, indicating a functional and lived-in space. The person is positioned near the stove, with a frying pan and other cooking tools in the foreground, suggesting they might be in the middle of cooking or preparing a meal.\n\nThe interaction between the person and the environment is one of familiarity and comfort. The kitchen appears to be a personal space where the individual feels at ease, as evidenced by their casual attire and expressive demeanor. The presence of everyday kitchen items implies a connection to routine activities, such as cooking or preparing coffee. The overall scene conveys a sense of warmth and domesticity, with the person's animated expression adding a touch of personality and liveliness to the setting. There are no animals or other people present in the image, focusing solely on the individual and their interaction with the kitchen environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 291,
-            "total_tokens": 597
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10939.729989,
-            "prompt_eval_duration_ms": 74.051816,
-            "generation_duration_ms": 10822.877493,
-            "load_duration_ms": 40.515478,
-            "tokens_per_second": 26.887489042374582
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The mood conveyed in this image is predominantly lighthearted and playful, with a touch of warmth and coziness. The person in the kitchen appears to be in a cheerful or mischievous mood, as indicated by their open-mouthed expression, which could be interpreted as laughter, a playful yell, or even a moment of surprise. The casual and comfortable attire, including a cozy scarf and a knit hat, suggests a relaxed and informal setting, adding to the overall sense of ease and informality. The kitchen itself, with its warm lighting and visible spices and appliances, contributes to a homely and inviting atmosphere, evoking feelings of comfort and domesticity. The slightly messy counter, with items like a coffee maker and a bowl, further emphasizes the lived-in, authentic nature of the scene, reinforcing the idea of a spontaneous and unscripted moment. The overall tone is positive, as the image captures a candid and joyful moment in a familiar, comfortable environment. The visual elements, such as the bright colors of the scarf and robe, the warm tones of the kitchen, and the person's expressive demeanor, all work together to create an atmosphere of warmth, playfulness, and contentment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 242,
-            "total_tokens": 550
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9119.867144,
-            "prompt_eval_duration_ms": 75.062001,
-            "generation_duration_ms": 9001.631387,
-            "load_duration_ms": 40.675432,
-            "tokens_per_second": 26.884015751799414
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"red\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"A person wearing a red robe, black beanie, and scarf, standing in a kitchen with an open mouth, possibly speaking or reacting.\"\n    }\n  },\n  \"man-made\": {\n    \"kitchen\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\", \"black\", \"brown\"],\n      \"size\": \"large\",\n      \"description\": \"A kitchen with wooden cabinets, a stove, a coffee maker, and various kitchen items on the counter.\"\n    },\n    \"stove\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"black\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A black stove with a white top, containing a pot and a pan.\"\n    },\n    \"coffee maker\": {\n      \"count\": 1,\n      \"location\": \"center-right\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"A black coffee maker on the kitchen counter.\"\n    },\n    \"cabinets\": {\n      \"count\": 2,\n      \"location\": \"background\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"Wooden kitchen cabinets.\"\n    },\n    \"spices\": {\n      \"count\": 5,\n      \"location\": \"left\",\n      \"color\": [\"brown\", \"black\"],\n      \"size\": \"small\",\n      \"description\": \"Spice jars lined up on the counter.\"\n    },\n    \"sink\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A white kitchen sink with a faucet.\"\n    },\n    \"towel\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"pink\"],\n      \"size\": \"small\",\n      \"description\": \"A pink towel on the sink.\"\n    },\n    \"beanie\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"A black beanie worn by the person.\"\n    },\n    \"scarf\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"A gray scarf worn by the person.\"\n    },\n    \"robe\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"red\"],\n      \"size\": \"medium\",\n      \"description\": \"A red robe worn by the person.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "red",
-                  "black"
-                ],
-                "size": "medium",
-                "description": "A person wearing a red robe, black beanie, and scarf, standing in a kitchen with an open mouth, possibly speaking or reacting."
-              }
-            },
-            "man-made": {
-              "kitchen": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "white",
-                  "black",
-                  "brown"
-                ],
-                "size": "large",
-                "description": "A kitchen with wooden cabinets, a stove, a coffee maker, and various kitchen items on the counter."
-              },
-              "stove": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "black",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "A black stove with a white top, containing a pot and a pan."
-              },
-              "coffee maker": {
-                "count": 1,
-                "location": "center-right",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "A black coffee maker on the kitchen counter."
-              },
-              "cabinets": {
-                "count": 2,
-                "location": "background",
-                "color": [
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "Wooden kitchen cabinets."
-              },
-              "spices": {
-                "count": 5,
-                "location": "left",
-                "color": [
-                  "brown",
-                  "black"
-                ],
-                "size": "small",
-                "description": "Spice jars lined up on the counter."
-              },
-              "sink": {
-                "count": 1,
-                "location": "right",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "A white kitchen sink with a faucet."
-              },
-              "towel": {
-                "count": 1,
-                "location": "right",
-                "color": [
-                  "pink"
-                ],
-                "size": "small",
-                "description": "A pink towel on the sink."
-              },
-              "beanie": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "A black beanie worn by the person."
-              },
-              "scarf": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "gray"
-                ],
-                "size": "small",
-                "description": "A gray scarf worn by the person."
-              },
-              "robe": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "red"
-                ],
-                "size": "medium",
-                "description": "A red robe worn by the person."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 614,
-            "total_tokens": 1100
-          },
-          "performance_metrics": {
-            "total_duration_ms": 22973.925101,
-            "prompt_eval_duration_ms": 140.415802,
-            "generation_duration_ms": 22791.278317,
-            "load_duration_ms": 39.594957,
-            "tokens_per_second": 26.940129968138635
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3393,
-        "total_time_ms": 67176.646496,
-        "average_speed": 26.848903723415884
       }
     },
     {

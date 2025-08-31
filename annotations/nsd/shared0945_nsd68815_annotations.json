@@ -7,6 +7,288 @@
   "timestamp": "2025-08-31T00:23:34.651819+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image presents a simple yet inviting scene of a white bowl filled with a variety of fresh fruits, set against the warm, textured backdrop of a wooden table. The bowl, positioned centrally, holds a mix of apples and an orange, their colors ranging from vibrant red and yellow hues to the greenish tones of the apples, creating a visually appealing contrast. The lighting is soft and natural, likely coming from a source above and slightly to the left, casting gentle shadows that add depth and dimension to the fruits and the bowl. The wooden table beneath the bowl has a rich, warm brown tone with visible grain patterns, enhancing the natural and rustic feel of the setting. The overall composition is balanced and harmonious, with the bowl and its contents taking center stage, while the warm tones of the table provide a comforting and inviting atmosphere. The simplicity of the scene, combined with the natural light and the earthy tones, evokes a sense of freshness and tranquility.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 194,
+            "total_tokens": 491
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1560.56878,
+            "prompt_eval_duration_ms": 81.383713,
+            "generation_duration_ms": 1434.187511,
+            "load_duration_ms": 42.340771,
+            "tokens_per_second": 135.26822574597082
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, a white bowl filled with a variety of fresh fruits, including green apples and a single orange, takes center stage. The fruits are piled in a casual, natural arrangement, suggesting a simple, everyday setting. The bowl is placed on a wooden table, which serves as the background element. The table's surface is a warm, light brown with visible wood grain, adding a rustic and organic feel to the scene. The lighting in the image is soft and even, highlighting the textures of both the fruits and the table, creating a harmonious and inviting composition that draws the viewer's eye directly to the bowl of fruit. The background is uncluttered, allowing the focus to remain on the bowl and its contents, emphasizing the freshness and simplicity of the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 160,
+            "total_tokens": 463
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1269.941188,
+            "prompt_eval_duration_ms": 32.08151,
+            "generation_duration_ms": 1194.678113,
+            "load_duration_ms": 37.920283,
+            "tokens_per_second": 133.92728824521456
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a simple scene featuring a white bowl placed on a wooden table. Inside the bowl, there are four apples and one orange. The apples vary in color, with two being a vibrant red and the other two a mix of green and yellow, suggesting they are ripe. The orange is a bright orange, contrasting with the green and red hues of the apples. There are no people or animals present in the image; the focus is entirely on the bowl and its contents. The bowl is stationary, and the fruits are arranged naturally within it, with no indication of any interaction or movement. The wooden table beneath the bowl provides a neutral background that highlights the colors of the fruits. The image captures a still life, emphasizing the natural beauty and simplicity of the fruits.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 155,
+            "total_tokens": 461
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1214.235588,
+            "prompt_eval_duration_ms": 28.978234,
+            "generation_duration_ms": 1143.263885,
+            "load_duration_ms": 39.115351,
+            "tokens_per_second": 135.57674832000836
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of simplicity and freshness, contributing to a positive and uplifting mood. The vibrant colors of the apples and the orange contrast beautifully against the neutral tones of the bowl and the wooden surface, creating a visually appealing and harmonious composition. The round shape of the bowl and the arrangement of the fruits suggest a sense of abundance and completeness, which can be associated with feelings of satisfaction and contentment. The natural light illuminating the scene adds to the freshness and vitality, enhancing the positive emotional atmosphere. The overall tone is decidedly positive, as the image conveys a sense of health, natural beauty, and the simple pleasures of life. The absence of any clutter or distractions in the background further emphasizes the focus on the fruits, making the image feel clean and refreshing.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 157,
+            "total_tokens": 465
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1235.68497,
+            "prompt_eval_duration_ms": 31.779907,
+            "generation_duration_ms": 1163.635596,
+            "load_duration_ms": 37.627976,
+            "tokens_per_second": 134.92196400633313
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"human\": [],\n    \"animal\": [],\n    \"man-made\": {\n      \"bowl\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"white\"],\n        \"size\": \"medium\",\n        \"description\": \"white bowl holding fruit\"\n      }\n    },\n    \"natural\": {\n      \"apple\": {\n        \"count\": 4,\n        \"location\": \"center\",\n        \"color\": [\"green\", \"red\"],\n        \"size\": \"medium\",\n        \"description\": \"apples with varying shades of green and red\"\n      },\n      \"orange\": {\n        \"count\": 1,\n        \"location\": \"bottom\",\n        \"color\": [\"orange\"],\n        \"size\": \"medium\",\n        \"description\": \"single orange fruit\"\n      }\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "human": [],
+              "animal": [],
+              "man-made": {
+                "bowl": {
+                  "count": 1,
+                  "location": "center",
+                  "color": [
+                    "white"
+                  ],
+                  "size": "medium",
+                  "description": "white bowl holding fruit"
+                }
+              },
+              "natural": {
+                "apple": {
+                  "count": 4,
+                  "location": "center",
+                  "color": [
+                    "green",
+                    "red"
+                  ],
+                  "size": "medium",
+                  "description": "apples with varying shades of green and red"
+                },
+                "orange": {
+                  "count": 1,
+                  "location": "bottom",
+                  "color": [
+                    "orange"
+                  ],
+                  "size": "medium",
+                  "description": "single orange fruit"
+                }
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 183,
+            "total_tokens": 669
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1432.688587,
+            "prompt_eval_duration_ms": 44.532338,
+            "generation_duration_ms": 1346.766847,
+            "load_duration_ms": 38.952713,
+            "tokens_per_second": 135.88098074113046
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2549,
+        "total_time_ms": 6713.119113000001,
+        "average_speed": 135.11504141173145
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a simple yet visually appealing arrangement of fruits placed in a white bowl on a wooden surface. The setting appears to be indoors, with warm, soft lighting that enhances the natural colors of the fruits and the wooden texture beneath them. The wooden surface has a light brown hue with visible grain patterns, adding a rustic and natural feel to the composition.\n\nThe main elements in the image are a collection of fruits, primarily apples and an orange. There are five green apples, their skin smooth and glossy, showcasing varying shades of green with some hints of red. Among the green apples, two red apples stand out with their vibrant, almost crimson tones, creating a striking contrast. The orange, with its bright, warm orange color, is positioned at the bottom of the bowl, adding another layer of color diversity to the scene. The fruits are arranged casually, with some overlapping, giving the image a natural and unposed look.\n\nThe overall composition is balanced and centered, with the white bowl serving as a clean and neutral backdrop that highlights the fruits' colors. The lighting is soft and diffused, casting gentle shadows that add depth and dimension to the image. The combination of the wooden surface, the white bowl, and the colorful fruits creates a harmonious and inviting visual experience. The image conveys a sense of freshness and simplicity, making it visually appealing and relatable.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 275,
+            "total_tokens": 572
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13814.949499,
+            "prompt_eval_duration_ms": 3535.300984,
+            "generation_duration_ms": 10236.419297,
+            "load_duration_ms": 39.018318,
+            "tokens_per_second": 26.864862802229545
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a white bowl containing a variety of fruits. The bowl is filled with green apples, red apples, and an orange, all of which are prominently displayed and in sharp focus. The apples vary in color, with some being predominantly green and others showing a mix of red and yellow hues, indicating a mix of apple varieties. The orange stands out with its bright, vibrant color, contrasting with the apples. The bowl itself is simple and white, which helps to highlight the colors of the fruits.\n\nIn the background, the setting is a wooden surface, likely a table or countertop, with a warm, natural wood grain pattern. The wood's texture is visible, providing a subtle, earthy backdrop that complements the organic nature of the fruits. The lighting in the image is soft and even, casting gentle shadows from the bowl and fruits, which adds depth and dimension to the scene.\n\nThe relationship between the foreground and background is harmonious. The white bowl and colorful fruits in the foreground draw immediate attention, while the wooden background provides a natural and unobtrusive setting that enhances the overall composition. The contrast between the bright, varied colors of the fruits and the warm, neutral tones of the wood creates a visually appealing balance. The lighting and shadows further integrate the elements, making the fruits appear fresh and inviting, as if they are ready to be enjoyed. The simplicity of the background ensures that the focus remains on the fruits, emphasizing their freshness and natural beauty.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 302,
+            "total_tokens": 605
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11378.845534,
+            "prompt_eval_duration_ms": 78.084148,
+            "generation_duration_ms": 11259.217125,
+            "load_duration_ms": 39.171794,
+            "tokens_per_second": 26.82246879576008
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a simple yet vibrant arrangement of fruits in a white bowl placed on a wooden surface. There are no people or animals present in the image. The objects in the image are:\n\n1. **Fruits**: The bowl contains a variety of fruits, including green apples, red apples, and an orange. The green apples are prominently displayed, with their smooth, shiny surfaces reflecting light. The red apples have a mix of red and yellow hues, indicating ripeness. The orange is bright and round, adding a pop of color to the composition.\n\n2. **Bowl**: The white bowl is a simple, round container that holds the fruits. It contrasts with the warm tones of the wooden surface and the colorful fruits, making the fruits stand out.\n\n3. **Wooden Surface**: The bowl is placed on a wooden table or countertop with a visible grain pattern, adding a natural and rustic texture to the scene.\n\nThe fruits are arranged in a casual, slightly overlapping manner, suggesting a natural and unstructured display. The interaction between the fruits is minimal, as they are simply placed together in the bowl. The green apples dominate the upper part of the bowl, while the red apples and orange are positioned more towards the bottom, creating a balanced and visually appealing composition. The lighting in the image is soft and even, highlighting the textures and colors of the fruits without creating harsh shadows. Overall, the image conveys a sense of freshness, simplicity, and natural beauty.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 297,
+            "total_tokens": 603
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11201.12642,
+            "prompt_eval_duration_ms": 78.30058,
+            "generation_duration_ms": 11081.959212,
+            "load_duration_ms": 38.250546,
+            "tokens_per_second": 26.800315207657167
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a positive and refreshing mood, evoking feelings of freshness, vitality, and simplicity. The vibrant colors of the fruits\u2014bright green apples, a mix of red and yellow apples, and a vivid orange\u2014create a visually appealing and cheerful composition. The natural lighting enhances the freshness and juiciness of the fruits, making them appear ripe and appetizing. The wooden surface beneath the bowl adds a warm, earthy tone that complements the natural theme, contributing to a sense of comfort and grounding. The arrangement of the fruits in the bowl is casual yet balanced, suggesting a sense of abundance and care, as if someone has thoughtfully gathered these fruits for enjoyment. The overall tone is neutral in a positive sense, as it does not evoke strong emotions but rather a calm, uplifting feeling. The simplicity of the scene, with no distractions or additional elements, allows the viewer to focus on the natural beauty and wholesome qualities of the fruits, reinforcing a sense of purity and health. This image is likely to evoke feelings of contentment, satisfaction, and a connection to nature.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 219,
+            "total_tokens": 527
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8315.44388,
+            "prompt_eval_duration_ms": 79.933002,
+            "generation_duration_ms": 8192.043105,
+            "load_duration_ms": 40.409544,
+            "tokens_per_second": 26.733257771353
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"natural\": {\n    \"apple\": {\n      \"count\": 5,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\", \"red\"],\n      \"size\": \"medium\",\n      \"description\": \"A mix of green and red apples\"\n    },\n    \"orange\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"orange\"],\n      \"size\": \"medium\",\n      \"description\": \"A single orange\"\n    }\n  },\n  \"man-made\": {\n    \"bowl\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A white bowl containing fruits\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "natural": {
+              "apple": {
+                "count": 5,
+                "location": "center, middle",
+                "color": [
+                  "green",
+                  "red"
+                ],
+                "size": "medium",
+                "description": "A mix of green and red apples"
+              },
+              "orange": {
+                "count": 1,
+                "location": "center, bottom",
+                "color": [
+                  "orange"
+                ],
+                "size": "medium",
+                "description": "A single orange"
+              }
+            },
+            "man-made": {
+              "bowl": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "A white bowl containing fruits"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 170,
+            "total_tokens": 656
+          },
+          "performance_metrics": {
+            "total_duration_ms": 6469.175392,
+            "prompt_eval_duration_ms": 140.960122,
+            "generation_duration_ms": 6286.92916,
+            "load_duration_ms": 38.61298,
+            "tokens_per_second": 27.040228333032466
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2963,
+        "total_time_ms": 51179.540725,
+        "average_speed": 26.85222658200645
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -459,288 +741,6 @@
         "total_tokens": 2683,
         "total_time_ms": 22339.787195,
         "average_speed": 42.16277754951793
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image presents a simple yet inviting scene of a white bowl filled with a variety of fresh fruits, set against the warm, textured backdrop of a wooden table. The bowl, positioned centrally, holds a mix of apples and an orange, their colors ranging from vibrant red and yellow hues to the greenish tones of the apples, creating a visually appealing contrast. The lighting is soft and natural, likely coming from a source above and slightly to the left, casting gentle shadows that add depth and dimension to the fruits and the bowl. The wooden table beneath the bowl has a rich, warm brown tone with visible grain patterns, enhancing the natural and rustic feel of the setting. The overall composition is balanced and harmonious, with the bowl and its contents taking center stage, while the warm tones of the table provide a comforting and inviting atmosphere. The simplicity of the scene, combined with the natural light and the earthy tones, evokes a sense of freshness and tranquility.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 194,
-            "total_tokens": 491
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1560.56878,
-            "prompt_eval_duration_ms": 81.383713,
-            "generation_duration_ms": 1434.187511,
-            "load_duration_ms": 42.340771,
-            "tokens_per_second": 135.26822574597082
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, a white bowl filled with a variety of fresh fruits, including green apples and a single orange, takes center stage. The fruits are piled in a casual, natural arrangement, suggesting a simple, everyday setting. The bowl is placed on a wooden table, which serves as the background element. The table's surface is a warm, light brown with visible wood grain, adding a rustic and organic feel to the scene. The lighting in the image is soft and even, highlighting the textures of both the fruits and the table, creating a harmonious and inviting composition that draws the viewer's eye directly to the bowl of fruit. The background is uncluttered, allowing the focus to remain on the bowl and its contents, emphasizing the freshness and simplicity of the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 160,
-            "total_tokens": 463
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1269.941188,
-            "prompt_eval_duration_ms": 32.08151,
-            "generation_duration_ms": 1194.678113,
-            "load_duration_ms": 37.920283,
-            "tokens_per_second": 133.92728824521456
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a simple scene featuring a white bowl placed on a wooden table. Inside the bowl, there are four apples and one orange. The apples vary in color, with two being a vibrant red and the other two a mix of green and yellow, suggesting they are ripe. The orange is a bright orange, contrasting with the green and red hues of the apples. There are no people or animals present in the image; the focus is entirely on the bowl and its contents. The bowl is stationary, and the fruits are arranged naturally within it, with no indication of any interaction or movement. The wooden table beneath the bowl provides a neutral background that highlights the colors of the fruits. The image captures a still life, emphasizing the natural beauty and simplicity of the fruits.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 155,
-            "total_tokens": 461
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1214.235588,
-            "prompt_eval_duration_ms": 28.978234,
-            "generation_duration_ms": 1143.263885,
-            "load_duration_ms": 39.115351,
-            "tokens_per_second": 135.57674832000836
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of simplicity and freshness, contributing to a positive and uplifting mood. The vibrant colors of the apples and the orange contrast beautifully against the neutral tones of the bowl and the wooden surface, creating a visually appealing and harmonious composition. The round shape of the bowl and the arrangement of the fruits suggest a sense of abundance and completeness, which can be associated with feelings of satisfaction and contentment. The natural light illuminating the scene adds to the freshness and vitality, enhancing the positive emotional atmosphere. The overall tone is decidedly positive, as the image conveys a sense of health, natural beauty, and the simple pleasures of life. The absence of any clutter or distractions in the background further emphasizes the focus on the fruits, making the image feel clean and refreshing.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 157,
-            "total_tokens": 465
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1235.68497,
-            "prompt_eval_duration_ms": 31.779907,
-            "generation_duration_ms": 1163.635596,
-            "load_duration_ms": 37.627976,
-            "tokens_per_second": 134.92196400633313
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"human\": [],\n    \"animal\": [],\n    \"man-made\": {\n      \"bowl\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"white\"],\n        \"size\": \"medium\",\n        \"description\": \"white bowl holding fruit\"\n      }\n    },\n    \"natural\": {\n      \"apple\": {\n        \"count\": 4,\n        \"location\": \"center\",\n        \"color\": [\"green\", \"red\"],\n        \"size\": \"medium\",\n        \"description\": \"apples with varying shades of green and red\"\n      },\n      \"orange\": {\n        \"count\": 1,\n        \"location\": \"bottom\",\n        \"color\": [\"orange\"],\n        \"size\": \"medium\",\n        \"description\": \"single orange fruit\"\n      }\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "human": [],
-              "animal": [],
-              "man-made": {
-                "bowl": {
-                  "count": 1,
-                  "location": "center",
-                  "color": [
-                    "white"
-                  ],
-                  "size": "medium",
-                  "description": "white bowl holding fruit"
-                }
-              },
-              "natural": {
-                "apple": {
-                  "count": 4,
-                  "location": "center",
-                  "color": [
-                    "green",
-                    "red"
-                  ],
-                  "size": "medium",
-                  "description": "apples with varying shades of green and red"
-                },
-                "orange": {
-                  "count": 1,
-                  "location": "bottom",
-                  "color": [
-                    "orange"
-                  ],
-                  "size": "medium",
-                  "description": "single orange fruit"
-                }
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 183,
-            "total_tokens": 669
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1432.688587,
-            "prompt_eval_duration_ms": 44.532338,
-            "generation_duration_ms": 1346.766847,
-            "load_duration_ms": 38.952713,
-            "tokens_per_second": 135.88098074113046
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2549,
-        "total_time_ms": 6713.119113000001,
-        "average_speed": 135.11504141173145
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a simple yet visually appealing arrangement of fruits placed in a white bowl on a wooden surface. The setting appears to be indoors, with warm, soft lighting that enhances the natural colors of the fruits and the wooden texture beneath them. The wooden surface has a light brown hue with visible grain patterns, adding a rustic and natural feel to the composition.\n\nThe main elements in the image are a collection of fruits, primarily apples and an orange. There are five green apples, their skin smooth and glossy, showcasing varying shades of green with some hints of red. Among the green apples, two red apples stand out with their vibrant, almost crimson tones, creating a striking contrast. The orange, with its bright, warm orange color, is positioned at the bottom of the bowl, adding another layer of color diversity to the scene. The fruits are arranged casually, with some overlapping, giving the image a natural and unposed look.\n\nThe overall composition is balanced and centered, with the white bowl serving as a clean and neutral backdrop that highlights the fruits' colors. The lighting is soft and diffused, casting gentle shadows that add depth and dimension to the image. The combination of the wooden surface, the white bowl, and the colorful fruits creates a harmonious and inviting visual experience. The image conveys a sense of freshness and simplicity, making it visually appealing and relatable.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 275,
-            "total_tokens": 572
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13814.949499,
-            "prompt_eval_duration_ms": 3535.300984,
-            "generation_duration_ms": 10236.419297,
-            "load_duration_ms": 39.018318,
-            "tokens_per_second": 26.864862802229545
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a white bowl containing a variety of fruits. The bowl is filled with green apples, red apples, and an orange, all of which are prominently displayed and in sharp focus. The apples vary in color, with some being predominantly green and others showing a mix of red and yellow hues, indicating a mix of apple varieties. The orange stands out with its bright, vibrant color, contrasting with the apples. The bowl itself is simple and white, which helps to highlight the colors of the fruits.\n\nIn the background, the setting is a wooden surface, likely a table or countertop, with a warm, natural wood grain pattern. The wood's texture is visible, providing a subtle, earthy backdrop that complements the organic nature of the fruits. The lighting in the image is soft and even, casting gentle shadows from the bowl and fruits, which adds depth and dimension to the scene.\n\nThe relationship between the foreground and background is harmonious. The white bowl and colorful fruits in the foreground draw immediate attention, while the wooden background provides a natural and unobtrusive setting that enhances the overall composition. The contrast between the bright, varied colors of the fruits and the warm, neutral tones of the wood creates a visually appealing balance. The lighting and shadows further integrate the elements, making the fruits appear fresh and inviting, as if they are ready to be enjoyed. The simplicity of the background ensures that the focus remains on the fruits, emphasizing their freshness and natural beauty.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 302,
-            "total_tokens": 605
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11378.845534,
-            "prompt_eval_duration_ms": 78.084148,
-            "generation_duration_ms": 11259.217125,
-            "load_duration_ms": 39.171794,
-            "tokens_per_second": 26.82246879576008
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a simple yet vibrant arrangement of fruits in a white bowl placed on a wooden surface. There are no people or animals present in the image. The objects in the image are:\n\n1. **Fruits**: The bowl contains a variety of fruits, including green apples, red apples, and an orange. The green apples are prominently displayed, with their smooth, shiny surfaces reflecting light. The red apples have a mix of red and yellow hues, indicating ripeness. The orange is bright and round, adding a pop of color to the composition.\n\n2. **Bowl**: The white bowl is a simple, round container that holds the fruits. It contrasts with the warm tones of the wooden surface and the colorful fruits, making the fruits stand out.\n\n3. **Wooden Surface**: The bowl is placed on a wooden table or countertop with a visible grain pattern, adding a natural and rustic texture to the scene.\n\nThe fruits are arranged in a casual, slightly overlapping manner, suggesting a natural and unstructured display. The interaction between the fruits is minimal, as they are simply placed together in the bowl. The green apples dominate the upper part of the bowl, while the red apples and orange are positioned more towards the bottom, creating a balanced and visually appealing composition. The lighting in the image is soft and even, highlighting the textures and colors of the fruits without creating harsh shadows. Overall, the image conveys a sense of freshness, simplicity, and natural beauty.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 297,
-            "total_tokens": 603
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11201.12642,
-            "prompt_eval_duration_ms": 78.30058,
-            "generation_duration_ms": 11081.959212,
-            "load_duration_ms": 38.250546,
-            "tokens_per_second": 26.800315207657167
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a positive and refreshing mood, evoking feelings of freshness, vitality, and simplicity. The vibrant colors of the fruits\u2014bright green apples, a mix of red and yellow apples, and a vivid orange\u2014create a visually appealing and cheerful composition. The natural lighting enhances the freshness and juiciness of the fruits, making them appear ripe and appetizing. The wooden surface beneath the bowl adds a warm, earthy tone that complements the natural theme, contributing to a sense of comfort and grounding. The arrangement of the fruits in the bowl is casual yet balanced, suggesting a sense of abundance and care, as if someone has thoughtfully gathered these fruits for enjoyment. The overall tone is neutral in a positive sense, as it does not evoke strong emotions but rather a calm, uplifting feeling. The simplicity of the scene, with no distractions or additional elements, allows the viewer to focus on the natural beauty and wholesome qualities of the fruits, reinforcing a sense of purity and health. This image is likely to evoke feelings of contentment, satisfaction, and a connection to nature.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 219,
-            "total_tokens": 527
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8315.44388,
-            "prompt_eval_duration_ms": 79.933002,
-            "generation_duration_ms": 8192.043105,
-            "load_duration_ms": 40.409544,
-            "tokens_per_second": 26.733257771353
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"natural\": {\n    \"apple\": {\n      \"count\": 5,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\", \"red\"],\n      \"size\": \"medium\",\n      \"description\": \"A mix of green and red apples\"\n    },\n    \"orange\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"orange\"],\n      \"size\": \"medium\",\n      \"description\": \"A single orange\"\n    }\n  },\n  \"man-made\": {\n    \"bowl\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A white bowl containing fruits\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "natural": {
-              "apple": {
-                "count": 5,
-                "location": "center, middle",
-                "color": [
-                  "green",
-                  "red"
-                ],
-                "size": "medium",
-                "description": "A mix of green and red apples"
-              },
-              "orange": {
-                "count": 1,
-                "location": "center, bottom",
-                "color": [
-                  "orange"
-                ],
-                "size": "medium",
-                "description": "A single orange"
-              }
-            },
-            "man-made": {
-              "bowl": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "A white bowl containing fruits"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 170,
-            "total_tokens": 656
-          },
-          "performance_metrics": {
-            "total_duration_ms": 6469.175392,
-            "prompt_eval_duration_ms": 140.960122,
-            "generation_duration_ms": 6286.92916,
-            "load_duration_ms": 38.61298,
-            "tokens_per_second": 27.040228333032466
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2963,
-        "total_time_ms": 51179.540725,
-        "average_speed": 26.85222658200645
       }
     },
     {

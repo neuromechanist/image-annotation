@@ -7,6 +7,375 @@
   "timestamp": "2025-08-30T18:11:02.725376+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a serene winter scene, set in a residential area where a person is cross-country skiing on a snow-covered street. The skier, dressed in a dark blue jacket and black pants, is wearing a colorful, patterned beanie and is holding ski poles. The snow blankets the ground and the rooftops of the houses, creating a pristine white landscape. The houses, painted in muted tones of green and brown, are partially obscured by the snow, adding to the quiet, wintry atmosphere. Trees with bare branches stand in the background, their dark silhouettes contrasting against the bright white snow. The lighting is soft and diffused, suggesting an overcast day, which enhances the calm and peaceful mood of the scene. The composition is balanced, with the skier positioned centrally, leading the viewer's eye through the image from the foreground to the background, where the houses and trees create a sense of depth. The overall color palette is dominated by whites and grays, with the dark greens and browns of the houses and the skier's dark clothing providing subtle contrasts.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 220,
+            "total_tokens": 517
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1709.339745,
+            "prompt_eval_duration_ms": 79.774641,
+            "generation_duration_ms": 1586.560673,
+            "load_duration_ms": 40.4738,
+            "tokens_per_second": 138.66472536723467
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, a person is seen cross-country skiing on a snow-covered street. They are dressed in dark winter attire, including a blue and white patterned beanie, and are holding ski poles, indicating they are actively engaged in the sport. The skis are red and white, and the snow beneath them is compacted, suggesting recent activity. The person is positioned slightly off-center, facing away from the camera, giving a sense of motion and direction towards the background.\n\nThe background elements include a residential setting with a green house partially visible on the left side of the frame. The house is surrounded by snow-covered trees and bushes, some of which still retain their green foliage, indicating a late winter or early spring season. The sky is overcast, casting a soft, diffused light over the scene, which enhances the wintry atmosphere. The snow on the ground and the trees creates a uniform, white backdrop, contrasting with the darker tones of the person's clothing and the green of the house and some of the trees. The overall composition suggests a peaceful, suburban environment where winter activities like skiing can be enjoyed.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 229,
+            "total_tokens": 532
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1768.561343,
+            "prompt_eval_duration_ms": 31.185689,
+            "generation_duration_ms": 1694.467205,
+            "load_duration_ms": 40.065197,
+            "tokens_per_second": 135.1457256441856
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a person is cross-country skiing on a snow-covered residential street. The skier, dressed in a dark jacket and pants with a colorful patterned beanie, is using ski poles to propel themselves forward. The scene is set in a quiet neighborhood with houses and trees lining the street, all blanketed in snow. The skier appears to be enjoying a peaceful winter activity, gliding smoothly along the snow-laden road, which has been partially cleared of snow, possibly by a snowplow. The trees and houses in the background stand still, their branches heavy with snow, creating a serene and isolated atmosphere. The skier's interaction with the environment is one of harmony and movement, as they navigate the snowy landscape with ease and grace. There are no animals visible in the image, and the focus remains solely on the skier and the tranquil winter setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 178,
+            "total_tokens": 484
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1377.614169,
+            "prompt_eval_duration_ms": 31.475523,
+            "generation_duration_ms": 1304.790465,
+            "load_duration_ms": 38.773806,
+            "tokens_per_second": 136.42037152685663
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of tranquility and peacefulness, suggesting a positive mood. The person skiing on a snow-covered street, dressed in warm, practical attire, conveys a sense of adventure and enjoyment of the winter season. The snow-covered trees and the serene, quiet environment contribute to a feeling of calm and isolation from the hustle and bustle of everyday life. The bright, colorful beanie adds a touch of vibrancy and happiness to the scene, enhancing the overall positive tone. The absence of other people and the quiet surroundings further emphasize a sense of solitude and personal enjoyment, making the image feel inviting and serene. The image does not evoke negative emotions; instead, it inspires feelings of relaxation, contentment, and a desire to engage with nature in a simple yet fulfilling way.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 160,
+            "total_tokens": 468
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1276.491496,
+            "prompt_eval_duration_ms": 31.18598,
+            "generation_duration_ms": 1199.032624,
+            "load_duration_ms": 43.701172,
+            "tokens_per_second": 133.440906275124
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"blue\"],\n      \"size\": \"medium\",\n      \"description\": \"wearing ski gear, standing on skis\"\n    }\n  },\n  \"man-made\": {\n    \"house\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"green\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"single-story house with snow-covered roof\"\n    },\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"evergreen tree with snow on branches\"\n    },\n    \"ski_poles\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"held by person skiing\"\n    },\n    \"skis\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"red\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"person wearing skis\"\n    }\n  },\n  \"natural\": {\n    \"snow\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"covering ground and trees\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"overcast sky\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black",
+                  "blue"
+                ],
+                "size": "medium",
+                "description": "wearing ski gear, standing on skis"
+              }
+            },
+            "man-made": {
+              "house": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "green",
+                  "white"
+                ],
+                "size": "large",
+                "description": "single-story house with snow-covered roof"
+              },
+              "tree": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "evergreen tree with snow on branches"
+              },
+              "ski_poles": {
+                "count": 2,
+                "location": "center",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "held by person skiing"
+              },
+              "skis": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "red",
+                  "white"
+                ],
+                "size": "large",
+                "description": "person wearing skis"
+              }
+            },
+            "natural": {
+              "snow": {
+                "count": 1,
+                "location": "foreground",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "covering ground and trees"
+              },
+              "sky": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "overcast sky"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 366,
+            "total_tokens": 852
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2748.399119,
+            "prompt_eval_duration_ms": 44.081739,
+            "generation_duration_ms": 2663.127566,
+            "load_duration_ms": 37.525832,
+            "tokens_per_second": 137.43239515549365
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2853,
+        "total_time_ms": 8880.405872,
+        "average_speed": 136.22082479377892
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a serene winter scene where a person is cross-country skiing on a snow-covered street. The setting appears to be a residential neighborhood, with houses and trees visible in the background. The sky is overcast, casting a soft, diffused light that enhances the wintry atmosphere. The main subject is a skier, dressed in a dark blue jacket, black pants, and a colorful, patterned ski hat in shades of blue, white, and pink. The skier is equipped with red and black skis and black ski poles, which stand out against the white snow. The street is blanketed in snow, with tire tracks visible, indicating recent snowfall or activity. A snow-covered evergreen tree stands prominently in the background, adding depth and a natural element to the scene. The houses in the background are modest, with one featuring a green exterior and a snow-covered roof. The overall composition is balanced, with the skier positioned slightly off-center, drawing the viewer's eye along the street. The muted tones of the snow and the subdued lighting create a calm, peaceful ambiance, emphasizing the quiet beauty of a winter day.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 231,
+            "total_tokens": 528
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12192.465439,
+            "prompt_eval_duration_ms": 3525.490971,
+            "generation_duration_ms": 8620.47968,
+            "load_duration_ms": 40.976513,
+            "tokens_per_second": 26.79665268928515
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the closest elements to the viewer are a person engaged in cross-country skiing on a snow-covered street. The individual is dressed in winter attire, including a dark jacket, black pants, and a colorful beanie, and is using ski poles for balance and propulsion. The skis are clearly visible, with red and white patterns, and the person is actively moving, as suggested by their posture and the positioning of the poles. The snow on the street is compacted, indicating frequent use, and the tracks left by the skier add a dynamic element to the scene.\n\nIn the background, the setting transitions to a residential area. Houses with snow-covered roofs and driveways are visible, along with a mix of bare and snow-laden trees. The houses appear to be single-story structures with varying architectural styles, and the driveways are partially cleared, showing a contrast between the untouched snow and the areas where snow has been removed. The trees, some of which are evergreen, add depth and texture to the background, with their branches heavily laden with snow. The overall atmosphere is serene and wintry, with a light dusting of snow continuing to fall, as evidenced by the faint snowflakes visible in the air.\n\nThe foreground and background elements are interconnected through the theme of winter and outdoor activity. The skier in the foreground is actively engaging with the snowy environment, while the background provides context by showcasing the residential setting and the natural elements of the winter landscape. The snow-covered street serves as a bridge between the two layers, tying the skier's activity to the broader winter scene and emphasizing the harmony between human activity and the natural environment. The overall composition highlights the beauty and tranquility of a snowy day, with the skier as a focal point amidst the serene backdrop of a winter neighborhood.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 368,
+            "total_tokens": 671
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13804.642094,
+            "prompt_eval_duration_ms": 72.681301,
+            "generation_duration_ms": 13689.873229,
+            "load_duration_ms": 39.315128,
+            "tokens_per_second": 26.881183911947822
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a person engaging in cross-country skiing on a snow-covered street in a residential neighborhood. The individual is dressed warmly in a dark jacket, black pants, and a colorful, patterned ski hat, indicating preparation for cold weather. They are equipped with ski poles and red skis, which are visible as they glide along the snow. The skier appears to be moving forward, using the poles for balance and propulsion, suggesting an active and focused approach to the activity.\n\nThe surroundings include a snow-laden environment, with trees and houses visible in the background. The trees are heavily covered in snow, creating a serene, wintry atmosphere. The houses, partially obscured by the snow and trees, add to the suburban setting. The street is blanketed in snow, providing a smooth surface for skiing. There are no visible animals in the image, and the skier is the sole human figure, emphasizing a solitary activity in a quiet, snow-covered neighborhood.\n\nThe interaction between the skier and the environment is harmonious, as the snow-covered street serves as a natural and ideal setting for cross-country skiing. The skier's attire and equipment are well-suited for the conditions, highlighting a connection between the individual and the winter landscape. The overall scene conveys a sense of tranquility and enjoyment of outdoor winter activities in a peaceful residential area.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 272,
+            "total_tokens": 578
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10251.474543,
+            "prompt_eval_duration_ms": 73.700914,
+            "generation_duration_ms": 10135.302605,
+            "load_duration_ms": 38.415642,
+            "tokens_per_second": 26.83688988879479
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a serene and slightly adventurous mood, evoking feelings of calmness, tranquility, and a touch of excitement. The overall tone is positive, as the scene captures a moment of peaceful activity amidst a snowy landscape. The individual skiing down a snow-covered street suggests a sense of freedom and enjoyment, as they engage with the winter environment. The soft, white snow blanketing the ground and trees creates a tranquil, almost ethereal atmosphere, enhancing the feeling of calm. The muted colors of the surroundings, including the green house and brown fence, contrast subtly with the bright white snow, adding depth and visual interest without overwhelming the scene. The skier's posture, with poles in hand and a focused stance, conveys a sense of purpose and movement, hinting at the exhilaration of the activity. The overcast sky adds a gentle, diffused light, which softens the scene and contributes to the serene mood. Overall, the combination of the quiet, snow-covered environment and the active, solitary figure creates a harmonious balance between stillness and motion, evoking a positive and reflective emotional atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 226,
+            "total_tokens": 534
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8556.347846,
+            "prompt_eval_duration_ms": 74.282531,
+            "generation_duration_ms": 8441.187077,
+            "load_duration_ms": 38.032363,
+            "tokens_per_second": 26.773485522645288
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\", \"blue\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Wearing a blue and white hat, black jacket, and black pants, skiing on a snowy street with ski poles.\"\n    }\n  },\n  \"man-made\": {\n    \"house\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"green\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"A green house with a white roof, partially covered in snow.\"\n    },\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"A wooden fence in front of the house.\"\n    },\n    \"road\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"A snowy road with visible tire tracks.\"\n    },\n    \"ski\": {\n      \"count\": 2,\n      \"location\": \"center, bottom\",\n      \"color\": [\"red\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Red and white skis worn by the person.\"\n    },\n    \"ski_pole\": {\n      \"count\": 2,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Black ski poles being used by the person.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"green\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A tree covered in snow.\"\n    },\n    \"snow\": {\n      \"count\": 1,\n      \"location\": \"entire image\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"Snow covering the ground and trees.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "black",
+                  "blue",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "Wearing a blue and white hat, black jacket, and black pants, skiing on a snowy street with ski poles."
+              }
+            },
+            "man-made": {
+              "house": {
+                "count": 1,
+                "location": "left, middle",
+                "color": [
+                  "green",
+                  "white"
+                ],
+                "size": "large",
+                "description": "A green house with a white roof, partially covered in snow."
+              },
+              "fence": {
+                "count": 1,
+                "location": "left, middle",
+                "color": [
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "A wooden fence in front of the house."
+              },
+              "road": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "A snowy road with visible tire tracks."
+              },
+              "ski": {
+                "count": 2,
+                "location": "center, bottom",
+                "color": [
+                  "red",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "Red and white skis worn by the person."
+              },
+              "ski_pole": {
+                "count": 2,
+                "location": "center, middle",
+                "color": [
+                  "black"
+                ],
+                "size": "medium",
+                "description": "Black ski poles being used by the person."
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 1,
+                "location": "center, top",
+                "color": [
+                  "green",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "A tree covered in snow."
+              },
+              "snow": {
+                "count": 1,
+                "location": "entire image",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "Snow covering the ground and trees."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 469,
+            "total_tokens": 955
+          },
+          "performance_metrics": {
+            "total_duration_ms": 17617.025511,
+            "prompt_eval_duration_ms": 137.991859,
+            "generation_duration_ms": 17436.189798,
+            "load_duration_ms": 39.750281,
+            "tokens_per_second": 26.89807838945388
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3266,
+        "total_time_ms": 62421.95543300001,
+        "average_speed": 26.837258080425386
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -551,375 +920,6 @@
         "total_tokens": 3112,
         "total_time_ms": 32744.825025,
         "average_speed": 41.89161682566295
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a serene winter scene, set in a residential area where a person is cross-country skiing on a snow-covered street. The skier, dressed in a dark blue jacket and black pants, is wearing a colorful, patterned beanie and is holding ski poles. The snow blankets the ground and the rooftops of the houses, creating a pristine white landscape. The houses, painted in muted tones of green and brown, are partially obscured by the snow, adding to the quiet, wintry atmosphere. Trees with bare branches stand in the background, their dark silhouettes contrasting against the bright white snow. The lighting is soft and diffused, suggesting an overcast day, which enhances the calm and peaceful mood of the scene. The composition is balanced, with the skier positioned centrally, leading the viewer's eye through the image from the foreground to the background, where the houses and trees create a sense of depth. The overall color palette is dominated by whites and grays, with the dark greens and browns of the houses and the skier's dark clothing providing subtle contrasts.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 220,
-            "total_tokens": 517
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1709.339745,
-            "prompt_eval_duration_ms": 79.774641,
-            "generation_duration_ms": 1586.560673,
-            "load_duration_ms": 40.4738,
-            "tokens_per_second": 138.66472536723467
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, a person is seen cross-country skiing on a snow-covered street. They are dressed in dark winter attire, including a blue and white patterned beanie, and are holding ski poles, indicating they are actively engaged in the sport. The skis are red and white, and the snow beneath them is compacted, suggesting recent activity. The person is positioned slightly off-center, facing away from the camera, giving a sense of motion and direction towards the background.\n\nThe background elements include a residential setting with a green house partially visible on the left side of the frame. The house is surrounded by snow-covered trees and bushes, some of which still retain their green foliage, indicating a late winter or early spring season. The sky is overcast, casting a soft, diffused light over the scene, which enhances the wintry atmosphere. The snow on the ground and the trees creates a uniform, white backdrop, contrasting with the darker tones of the person's clothing and the green of the house and some of the trees. The overall composition suggests a peaceful, suburban environment where winter activities like skiing can be enjoyed.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 229,
-            "total_tokens": 532
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1768.561343,
-            "prompt_eval_duration_ms": 31.185689,
-            "generation_duration_ms": 1694.467205,
-            "load_duration_ms": 40.065197,
-            "tokens_per_second": 135.1457256441856
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a person is cross-country skiing on a snow-covered residential street. The skier, dressed in a dark jacket and pants with a colorful patterned beanie, is using ski poles to propel themselves forward. The scene is set in a quiet neighborhood with houses and trees lining the street, all blanketed in snow. The skier appears to be enjoying a peaceful winter activity, gliding smoothly along the snow-laden road, which has been partially cleared of snow, possibly by a snowplow. The trees and houses in the background stand still, their branches heavy with snow, creating a serene and isolated atmosphere. The skier's interaction with the environment is one of harmony and movement, as they navigate the snowy landscape with ease and grace. There are no animals visible in the image, and the focus remains solely on the skier and the tranquil winter setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 178,
-            "total_tokens": 484
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1377.614169,
-            "prompt_eval_duration_ms": 31.475523,
-            "generation_duration_ms": 1304.790465,
-            "load_duration_ms": 38.773806,
-            "tokens_per_second": 136.42037152685663
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of tranquility and peacefulness, suggesting a positive mood. The person skiing on a snow-covered street, dressed in warm, practical attire, conveys a sense of adventure and enjoyment of the winter season. The snow-covered trees and the serene, quiet environment contribute to a feeling of calm and isolation from the hustle and bustle of everyday life. The bright, colorful beanie adds a touch of vibrancy and happiness to the scene, enhancing the overall positive tone. The absence of other people and the quiet surroundings further emphasize a sense of solitude and personal enjoyment, making the image feel inviting and serene. The image does not evoke negative emotions; instead, it inspires feelings of relaxation, contentment, and a desire to engage with nature in a simple yet fulfilling way.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 160,
-            "total_tokens": 468
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1276.491496,
-            "prompt_eval_duration_ms": 31.18598,
-            "generation_duration_ms": 1199.032624,
-            "load_duration_ms": 43.701172,
-            "tokens_per_second": 133.440906275124
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"blue\"],\n      \"size\": \"medium\",\n      \"description\": \"wearing ski gear, standing on skis\"\n    }\n  },\n  \"man-made\": {\n    \"house\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"green\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"single-story house with snow-covered roof\"\n    },\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"evergreen tree with snow on branches\"\n    },\n    \"ski_poles\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"held by person skiing\"\n    },\n    \"skis\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"red\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"person wearing skis\"\n    }\n  },\n  \"natural\": {\n    \"snow\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"covering ground and trees\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"overcast sky\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black",
-                  "blue"
-                ],
-                "size": "medium",
-                "description": "wearing ski gear, standing on skis"
-              }
-            },
-            "man-made": {
-              "house": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "green",
-                  "white"
-                ],
-                "size": "large",
-                "description": "single-story house with snow-covered roof"
-              },
-              "tree": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "evergreen tree with snow on branches"
-              },
-              "ski_poles": {
-                "count": 2,
-                "location": "center",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "held by person skiing"
-              },
-              "skis": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "red",
-                  "white"
-                ],
-                "size": "large",
-                "description": "person wearing skis"
-              }
-            },
-            "natural": {
-              "snow": {
-                "count": 1,
-                "location": "foreground",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "covering ground and trees"
-              },
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "overcast sky"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 366,
-            "total_tokens": 852
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2748.399119,
-            "prompt_eval_duration_ms": 44.081739,
-            "generation_duration_ms": 2663.127566,
-            "load_duration_ms": 37.525832,
-            "tokens_per_second": 137.43239515549365
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2853,
-        "total_time_ms": 8880.405872,
-        "average_speed": 136.22082479377892
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a serene winter scene where a person is cross-country skiing on a snow-covered street. The setting appears to be a residential neighborhood, with houses and trees visible in the background. The sky is overcast, casting a soft, diffused light that enhances the wintry atmosphere. The main subject is a skier, dressed in a dark blue jacket, black pants, and a colorful, patterned ski hat in shades of blue, white, and pink. The skier is equipped with red and black skis and black ski poles, which stand out against the white snow. The street is blanketed in snow, with tire tracks visible, indicating recent snowfall or activity. A snow-covered evergreen tree stands prominently in the background, adding depth and a natural element to the scene. The houses in the background are modest, with one featuring a green exterior and a snow-covered roof. The overall composition is balanced, with the skier positioned slightly off-center, drawing the viewer's eye along the street. The muted tones of the snow and the subdued lighting create a calm, peaceful ambiance, emphasizing the quiet beauty of a winter day.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 231,
-            "total_tokens": 528
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12192.465439,
-            "prompt_eval_duration_ms": 3525.490971,
-            "generation_duration_ms": 8620.47968,
-            "load_duration_ms": 40.976513,
-            "tokens_per_second": 26.79665268928515
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the closest elements to the viewer are a person engaged in cross-country skiing on a snow-covered street. The individual is dressed in winter attire, including a dark jacket, black pants, and a colorful beanie, and is using ski poles for balance and propulsion. The skis are clearly visible, with red and white patterns, and the person is actively moving, as suggested by their posture and the positioning of the poles. The snow on the street is compacted, indicating frequent use, and the tracks left by the skier add a dynamic element to the scene.\n\nIn the background, the setting transitions to a residential area. Houses with snow-covered roofs and driveways are visible, along with a mix of bare and snow-laden trees. The houses appear to be single-story structures with varying architectural styles, and the driveways are partially cleared, showing a contrast between the untouched snow and the areas where snow has been removed. The trees, some of which are evergreen, add depth and texture to the background, with their branches heavily laden with snow. The overall atmosphere is serene and wintry, with a light dusting of snow continuing to fall, as evidenced by the faint snowflakes visible in the air.\n\nThe foreground and background elements are interconnected through the theme of winter and outdoor activity. The skier in the foreground is actively engaging with the snowy environment, while the background provides context by showcasing the residential setting and the natural elements of the winter landscape. The snow-covered street serves as a bridge between the two layers, tying the skier's activity to the broader winter scene and emphasizing the harmony between human activity and the natural environment. The overall composition highlights the beauty and tranquility of a snowy day, with the skier as a focal point amidst the serene backdrop of a winter neighborhood.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 368,
-            "total_tokens": 671
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13804.642094,
-            "prompt_eval_duration_ms": 72.681301,
-            "generation_duration_ms": 13689.873229,
-            "load_duration_ms": 39.315128,
-            "tokens_per_second": 26.881183911947822
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a person engaging in cross-country skiing on a snow-covered street in a residential neighborhood. The individual is dressed warmly in a dark jacket, black pants, and a colorful, patterned ski hat, indicating preparation for cold weather. They are equipped with ski poles and red skis, which are visible as they glide along the snow. The skier appears to be moving forward, using the poles for balance and propulsion, suggesting an active and focused approach to the activity.\n\nThe surroundings include a snow-laden environment, with trees and houses visible in the background. The trees are heavily covered in snow, creating a serene, wintry atmosphere. The houses, partially obscured by the snow and trees, add to the suburban setting. The street is blanketed in snow, providing a smooth surface for skiing. There are no visible animals in the image, and the skier is the sole human figure, emphasizing a solitary activity in a quiet, snow-covered neighborhood.\n\nThe interaction between the skier and the environment is harmonious, as the snow-covered street serves as a natural and ideal setting for cross-country skiing. The skier's attire and equipment are well-suited for the conditions, highlighting a connection between the individual and the winter landscape. The overall scene conveys a sense of tranquility and enjoyment of outdoor winter activities in a peaceful residential area.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 272,
-            "total_tokens": 578
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10251.474543,
-            "prompt_eval_duration_ms": 73.700914,
-            "generation_duration_ms": 10135.302605,
-            "load_duration_ms": 38.415642,
-            "tokens_per_second": 26.83688988879479
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a serene and slightly adventurous mood, evoking feelings of calmness, tranquility, and a touch of excitement. The overall tone is positive, as the scene captures a moment of peaceful activity amidst a snowy landscape. The individual skiing down a snow-covered street suggests a sense of freedom and enjoyment, as they engage with the winter environment. The soft, white snow blanketing the ground and trees creates a tranquil, almost ethereal atmosphere, enhancing the feeling of calm. The muted colors of the surroundings, including the green house and brown fence, contrast subtly with the bright white snow, adding depth and visual interest without overwhelming the scene. The skier's posture, with poles in hand and a focused stance, conveys a sense of purpose and movement, hinting at the exhilaration of the activity. The overcast sky adds a gentle, diffused light, which softens the scene and contributes to the serene mood. Overall, the combination of the quiet, snow-covered environment and the active, solitary figure creates a harmonious balance between stillness and motion, evoking a positive and reflective emotional atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 226,
-            "total_tokens": 534
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8556.347846,
-            "prompt_eval_duration_ms": 74.282531,
-            "generation_duration_ms": 8441.187077,
-            "load_duration_ms": 38.032363,
-            "tokens_per_second": 26.773485522645288
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\", \"blue\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Wearing a blue and white hat, black jacket, and black pants, skiing on a snowy street with ski poles.\"\n    }\n  },\n  \"man-made\": {\n    \"house\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"green\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"A green house with a white roof, partially covered in snow.\"\n    },\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"A wooden fence in front of the house.\"\n    },\n    \"road\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"A snowy road with visible tire tracks.\"\n    },\n    \"ski\": {\n      \"count\": 2,\n      \"location\": \"center, bottom\",\n      \"color\": [\"red\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Red and white skis worn by the person.\"\n    },\n    \"ski_pole\": {\n      \"count\": 2,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Black ski poles being used by the person.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"green\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A tree covered in snow.\"\n    },\n    \"snow\": {\n      \"count\": 1,\n      \"location\": \"entire image\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"Snow covering the ground and trees.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "black",
-                  "blue",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "Wearing a blue and white hat, black jacket, and black pants, skiing on a snowy street with ski poles."
-              }
-            },
-            "man-made": {
-              "house": {
-                "count": 1,
-                "location": "left, middle",
-                "color": [
-                  "green",
-                  "white"
-                ],
-                "size": "large",
-                "description": "A green house with a white roof, partially covered in snow."
-              },
-              "fence": {
-                "count": 1,
-                "location": "left, middle",
-                "color": [
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "A wooden fence in front of the house."
-              },
-              "road": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "A snowy road with visible tire tracks."
-              },
-              "ski": {
-                "count": 2,
-                "location": "center, bottom",
-                "color": [
-                  "red",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "Red and white skis worn by the person."
-              },
-              "ski_pole": {
-                "count": 2,
-                "location": "center, middle",
-                "color": [
-                  "black"
-                ],
-                "size": "medium",
-                "description": "Black ski poles being used by the person."
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 1,
-                "location": "center, top",
-                "color": [
-                  "green",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "A tree covered in snow."
-              },
-              "snow": {
-                "count": 1,
-                "location": "entire image",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "Snow covering the ground and trees."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 469,
-            "total_tokens": 955
-          },
-          "performance_metrics": {
-            "total_duration_ms": 17617.025511,
-            "prompt_eval_duration_ms": 137.991859,
-            "generation_duration_ms": 17436.189798,
-            "load_duration_ms": 39.750281,
-            "tokens_per_second": 26.89807838945388
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3266,
-        "total_time_ms": 62421.95543300001,
-        "average_speed": 26.837258080425386
       }
     },
     {

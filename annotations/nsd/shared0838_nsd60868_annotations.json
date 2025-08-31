@@ -7,6 +7,318 @@
   "timestamp": "2025-08-30T23:23:21.046469+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a serene moment from the perspective of a car's side mirror, reflecting a small, alert dog with a predominantly white coat and brown patches, wearing a black collar. The dog's head is slightly tilted, and its eyes are wide, giving it an attentive and curious expression. The setting appears to be a sunny day, as indicated by the bright light and the greenery blurred in the background, suggesting the car is in motion on a road surrounded by trees. The car's interior is partially visible, showing a glimpse of the dashboard and the edge of the driver's seat. The side mirror itself is dark, almost black, with a slight reflection of the car's body and the road behind it. The overall composition is dynamic yet peaceful, with the dog's reflection adding a touch of life and companionship to the scene. The colors are vibrant, with the green of the trees and the blue of the sky contrasting against the white and brown of the dog and the darker tones of the car and mirror. The lighting is natural and soft, enhancing the clarity of the dog's features and the reflective surface of the mirror.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 228,
+            "total_tokens": 525
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1768.853581,
+            "prompt_eval_duration_ms": 78.451518,
+            "generation_duration_ms": 1650.48233,
+            "load_duration_ms": 37.685954,
+            "tokens_per_second": 138.14143650965352
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the viewer's attention is drawn to the side mirror of a car, which reflects the dog's face. The dog, with its distinctive white and brown fur, black nose, and perked-up ears, is the central focus, appearing as if it is looking directly at the camera. The dog's collar is visible, adding a touch of detail to its appearance. The side mirror itself is a dark, reflective surface that captures the dog's image sharply, creating a clear and detailed reflection. The background, slightly out of focus, reveals a road scene with other vehicles, including a blue car and a white car, suggesting that the car with the dog is in motion. The blurred greenery and the bright sunlight in the background indicate that the setting is likely a sunny day, possibly during a drive through a suburban or rural area. The relationship between the foreground and background is one of depth and perspective, with the dog and the side mirror in the foreground providing a sense of immediacy and the background offering context and a sense of the car's environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 218,
+            "total_tokens": 521
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1694.614175,
+            "prompt_eval_duration_ms": 31.543449,
+            "generation_duration_ms": 1623.523511,
+            "load_duration_ms": 37.147453,
+            "tokens_per_second": 134.27585034831074
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a dog, likely a Jack Russell Terrier, is the central focus, perched comfortably in the passenger seat of a car, its head and upper body visible through the open window. The dog appears calm and alert, gazing directly at the camera, suggesting a sense of curiosity or attentiveness. The car's side mirror reflects the dog's face, creating a symmetrical visual that emphasizes its presence. The background, slightly blurred, indicates the car is in motion, with other vehicles and greenery visible, suggesting a journey or a drive. The dog's interaction with the environment is passive yet engaging, as it observes its surroundings from the safety and comfort of the car. The relationship between the dog and the car is one of companionship and trust, with the dog enjoying the ride and the car providing a secure and familiar space for the animal.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 175,
+            "total_tokens": 481
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1359.96457,
+            "prompt_eval_duration_ms": 29.906889,
+            "generation_duration_ms": 1287.442498,
+            "load_duration_ms": 40.141246,
+            "tokens_per_second": 135.92840089701622
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of companionship and joy, with a positive emotional tone. The dog, with its head tilted slightly, appears curious and alert, suggesting a playful and content mood. The bright sunlight and the blurred greenery in the background contribute to a feeling of freedom and openness, enhancing the overall positive atmosphere. The dog's relaxed posture and the way it leans into the car window further emphasize a sense of ease and happiness, as if it is enjoying the ride and the breeze. The reflection in the side mirror adds a layer of depth, symbolizing the dog's journey and the shared experience of the car ride, which can be interpreted as a moment of bonding and adventure. The image, therefore, conveys a warm and uplifting feeling, making it a snapshot of a happy and carefree moment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 164,
+            "total_tokens": 472
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1271.515643,
+            "prompt_eval_duration_ms": 31.200387,
+            "generation_duration_ms": 1197.167516,
+            "load_duration_ms": 40.806228,
+            "tokens_per_second": 136.99001836264324
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"dog\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"peeking out of a car window\"\n    }\n  },\n  \"man-made\": {\n    \"car\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"silver\"],\n      \"size\": \"medium\",\n      \"description\": \"side mirror view\"\n    },\n    \"side mirror\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"reflecting the dog and car\"\n    },\n    \"road\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"partially visible in the mirror\"\n    }\n  },\n  \"natural\": {\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"blurred in the background\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "dog": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "white",
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "peeking out of a car window"
+              }
+            },
+            "man-made": {
+              "car": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black",
+                  "silver"
+                ],
+                "size": "medium",
+                "description": "side mirror view"
+              },
+              "side mirror": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "reflecting the dog and car"
+              },
+              "road": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "partially visible in the mirror"
+              }
+            },
+            "natural": {
+              "trees": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "blurred in the background"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 268,
+            "total_tokens": 754
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2044.3557,
+            "prompt_eval_duration_ms": 44.25195,
+            "generation_duration_ms": 1959.331245,
+            "load_duration_ms": 38.335966,
+            "tokens_per_second": 136.78136388826894
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2753,
+        "total_time_ms": 8139.303669,
+        "average_speed": 136.42341400117851
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a charming and lighthearted scene featuring a small dog, likely a Jack Russell Terrier, gazing out from the passenger side window of a car. The dog's face is prominently visible in the car's side mirror reflection, with its head slightly tilted and ears perked up, giving it an inquisitive and endearing expression. The dog's fur is a mix of white and light brown, with dark markings around its eyes and ears, and it wears a black collar. The car's interior is partially visible, showing a dark dashboard and window frame.\n\nThe setting appears to be outdoors, likely on a sunny day, as indicated by the bright, natural lighting and the greenery visible in the background. The background includes blurred trees and foliage, suggesting the car is moving along a road surrounded by nature. In the distance, another vehicle, possibly a blue SUV, is visible, adding depth to the scene. The overall composition is well-balanced, with the dog as the focal point in the foreground, framed by the car's mirror and window. The lighting is soft and natural, enhancing the warm and cheerful atmosphere of the image. The colors are vibrant, with the green of the trees contrasting nicely against the neutral tones of the car and the dog's fur. The scene conveys a sense of joy and companionship, capturing a moment of curiosity and adventure.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 281,
+            "total_tokens": 578
+          },
+          "performance_metrics": {
+            "total_duration_ms": 14033.205067,
+            "prompt_eval_duration_ms": 3518.584724,
+            "generation_duration_ms": 10473.769253,
+            "load_duration_ms": 38.320943,
+            "tokens_per_second": 26.828927887590535
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a close-up view of a dog's face, which is reflected in the side mirror of a car. The dog, a small breed with a white and brown coat and a black collar, is looking directly at the viewer, creating a sense of engagement and connection. The side mirror itself is a prominent element, framing the dog's face and adding depth to the composition. The mirror's reflective surface also captures a portion of the car's interior, including the window frame and a hint of the dashboard, grounding the scene in a realistic setting.\n\nIn the background, the setting transitions to a road scene. The background elements include a blurred view of the road ahead, with another vehicle visible in the distance. The distant car is slightly out of focus, emphasizing the depth of field and drawing attention to the foreground. The road is flanked by greenery, suggesting a rural or suburban environment. The background elements are less distinct, creating a sense of motion and context for the car's journey.\n\nThe relationship between the foreground and background is crucial to the image's composition. The dog in the foreground serves as the focal point, capturing the viewer's attention with its expressive face and direct gaze. The background provides context, indicating that the dog is traveling in a car on a road. The blurred motion of the background contrasts with the sharp focus on the dog, enhancing the sense of movement and travel. Together, these layers create a dynamic and relatable scene, blending the personal experience of the dog with the broader setting of a road trip.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 314,
+            "total_tokens": 617
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11821.261676,
+            "prompt_eval_duration_ms": 74.539849,
+            "generation_duration_ms": 11703.156797,
+            "load_duration_ms": 41.10699,
+            "tokens_per_second": 26.830367690236457
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image shows a side view mirror of a car, with the reflection of a dog's face prominently displayed. The dog, a small breed with a white and brown coat, appears to be looking out of the car window, seemingly enjoying the ride. Its expression is attentive and curious, suggesting it is engaged with the surroundings. The dog's head is slightly tilted, and its ears are perked up, indicating alertness and interest in the environment outside the vehicle.\n\nIn the background, the reflection in the mirror reveals a road with trees and greenery, indicating that the car is moving through a scenic area. Another vehicle, a blue car, is visible in the distance, traveling in the same direction, which suggests that the dog is experiencing a shared journey with other road users. The dog's position and posture imply it is comfortably seated inside the car, likely secured for safety, as is common when traveling with pets.\n\nThe interaction between the dog and the environment is one of observation and engagement. The dog's focus on the outside world highlights its curiosity and enjoyment of the experience. The presence of the other car in the background adds a sense of motion and context, emphasizing that the dog is part of a dynamic, moving scene. The image captures a moment of companionship and adventure, showcasing the dog's role as a passenger and its connection to the journey. The overall mood is lighthearted and serene, reflecting the joy of traveling with a pet.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 294,
+            "total_tokens": 600
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11077.006656,
+            "prompt_eval_duration_ms": 78.76939,
+            "generation_duration_ms": 10953.96461,
+            "load_duration_ms": 41.272001,
+            "tokens_per_second": 26.839597393952143
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a lighthearted and positive mood, evoking feelings of joy, companionship, and adventure. The dog, reflected in the car's side mirror, appears alert and curious, with its head slightly tilted and ears perked up, suggesting a sense of excitement and engagement with the surroundings. The bright outdoor setting, with greenery visible in the background, adds to the overall cheerful and uplifting tone. The dog's expression, combined with its position in the car, implies a sense of trust and comfort, as if it is enjoying a ride with its owner. The slight motion blur of the car in the background further enhances the feeling of movement and exploration, reinforcing the idea of a fun outing. The use of natural light and the clear, vibrant colors contribute to the image's warmth and positivity. The overall tone is decidedly positive, as the image captures a moment of simple happiness and connection between the dog and its environment, emphasizing themes of companionship and the joy of shared experiences.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 203,
+            "total_tokens": 511
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7717.447222,
+            "prompt_eval_duration_ms": 77.783413,
+            "generation_duration_ms": 7598.427803,
+            "load_duration_ms": 38.834261,
+            "tokens_per_second": 26.71605301294721
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"dog\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"white\", \"brown\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"A dog with a black collar, looking out of a car window, appears curious or alert.\"\n    }\n  },\n  \"man-made\": {\n    \"car\": {\n      \"count\": 2,\n      \"location\": \"center, background\",\n      \"color\": [\"black\", \"blue\"],\n      \"size\": \"medium\",\n      \"description\": \"The main car is black, with a dog in the passenger seat. Another car is visible in the background, partially obscured.\"\n    },\n    \"side mirror\": {\n      \"count\": 1,\n      \"location\": \"center, foreground\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"A car's side mirror reflecting the dog and part of the car.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"right, background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"A tree is visible in the background, partially out of focus.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "dog": {
+                "count": 1,
+                "location": "left, middle",
+                "color": [
+                  "white",
+                  "brown",
+                  "black"
+                ],
+                "size": "medium",
+                "description": "A dog with a black collar, looking out of a car window, appears curious or alert."
+              }
+            },
+            "man-made": {
+              "car": {
+                "count": 2,
+                "location": "center, background",
+                "color": [
+                  "black",
+                  "blue"
+                ],
+                "size": "medium",
+                "description": "The main car is black, with a dog in the passenger seat. Another car is visible in the background, partially obscured."
+              },
+              "side mirror": {
+                "count": 1,
+                "location": "center, foreground",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "A car's side mirror reflecting the dog and part of the car."
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 1,
+                "location": "right, background",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "A tree is visible in the background, partially out of focus."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 278,
+            "total_tokens": 764
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10478.435386,
+            "prompt_eval_duration_ms": 141.002514,
+            "generation_duration_ms": 10297.017514,
+            "load_duration_ms": 37.770994,
+            "tokens_per_second": 26.998108881724875
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3070,
+        "total_time_ms": 55127.356007,
+        "average_speed": 26.842610973290242
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -518,318 +830,6 @@
         "total_tokens": 2867,
         "total_time_ms": 26647.553677,
         "average_speed": 42.253937108061656
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a serene moment from the perspective of a car's side mirror, reflecting a small, alert dog with a predominantly white coat and brown patches, wearing a black collar. The dog's head is slightly tilted, and its eyes are wide, giving it an attentive and curious expression. The setting appears to be a sunny day, as indicated by the bright light and the greenery blurred in the background, suggesting the car is in motion on a road surrounded by trees. The car's interior is partially visible, showing a glimpse of the dashboard and the edge of the driver's seat. The side mirror itself is dark, almost black, with a slight reflection of the car's body and the road behind it. The overall composition is dynamic yet peaceful, with the dog's reflection adding a touch of life and companionship to the scene. The colors are vibrant, with the green of the trees and the blue of the sky contrasting against the white and brown of the dog and the darker tones of the car and mirror. The lighting is natural and soft, enhancing the clarity of the dog's features and the reflective surface of the mirror.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 228,
-            "total_tokens": 525
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1768.853581,
-            "prompt_eval_duration_ms": 78.451518,
-            "generation_duration_ms": 1650.48233,
-            "load_duration_ms": 37.685954,
-            "tokens_per_second": 138.14143650965352
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the viewer's attention is drawn to the side mirror of a car, which reflects the dog's face. The dog, with its distinctive white and brown fur, black nose, and perked-up ears, is the central focus, appearing as if it is looking directly at the camera. The dog's collar is visible, adding a touch of detail to its appearance. The side mirror itself is a dark, reflective surface that captures the dog's image sharply, creating a clear and detailed reflection. The background, slightly out of focus, reveals a road scene with other vehicles, including a blue car and a white car, suggesting that the car with the dog is in motion. The blurred greenery and the bright sunlight in the background indicate that the setting is likely a sunny day, possibly during a drive through a suburban or rural area. The relationship between the foreground and background is one of depth and perspective, with the dog and the side mirror in the foreground providing a sense of immediacy and the background offering context and a sense of the car's environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 218,
-            "total_tokens": 521
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1694.614175,
-            "prompt_eval_duration_ms": 31.543449,
-            "generation_duration_ms": 1623.523511,
-            "load_duration_ms": 37.147453,
-            "tokens_per_second": 134.27585034831074
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a dog, likely a Jack Russell Terrier, is the central focus, perched comfortably in the passenger seat of a car, its head and upper body visible through the open window. The dog appears calm and alert, gazing directly at the camera, suggesting a sense of curiosity or attentiveness. The car's side mirror reflects the dog's face, creating a symmetrical visual that emphasizes its presence. The background, slightly blurred, indicates the car is in motion, with other vehicles and greenery visible, suggesting a journey or a drive. The dog's interaction with the environment is passive yet engaging, as it observes its surroundings from the safety and comfort of the car. The relationship between the dog and the car is one of companionship and trust, with the dog enjoying the ride and the car providing a secure and familiar space for the animal.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 175,
-            "total_tokens": 481
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1359.96457,
-            "prompt_eval_duration_ms": 29.906889,
-            "generation_duration_ms": 1287.442498,
-            "load_duration_ms": 40.141246,
-            "tokens_per_second": 135.92840089701622
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of companionship and joy, with a positive emotional tone. The dog, with its head tilted slightly, appears curious and alert, suggesting a playful and content mood. The bright sunlight and the blurred greenery in the background contribute to a feeling of freedom and openness, enhancing the overall positive atmosphere. The dog's relaxed posture and the way it leans into the car window further emphasize a sense of ease and happiness, as if it is enjoying the ride and the breeze. The reflection in the side mirror adds a layer of depth, symbolizing the dog's journey and the shared experience of the car ride, which can be interpreted as a moment of bonding and adventure. The image, therefore, conveys a warm and uplifting feeling, making it a snapshot of a happy and carefree moment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 164,
-            "total_tokens": 472
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1271.515643,
-            "prompt_eval_duration_ms": 31.200387,
-            "generation_duration_ms": 1197.167516,
-            "load_duration_ms": 40.806228,
-            "tokens_per_second": 136.99001836264324
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"dog\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"peeking out of a car window\"\n    }\n  },\n  \"man-made\": {\n    \"car\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"silver\"],\n      \"size\": \"medium\",\n      \"description\": \"side mirror view\"\n    },\n    \"side mirror\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"reflecting the dog and car\"\n    },\n    \"road\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"partially visible in the mirror\"\n    }\n  },\n  \"natural\": {\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"blurred in the background\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "dog": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "white",
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "peeking out of a car window"
-              }
-            },
-            "man-made": {
-              "car": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black",
-                  "silver"
-                ],
-                "size": "medium",
-                "description": "side mirror view"
-              },
-              "side mirror": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "reflecting the dog and car"
-              },
-              "road": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "partially visible in the mirror"
-              }
-            },
-            "natural": {
-              "trees": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "blurred in the background"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 268,
-            "total_tokens": 754
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2044.3557,
-            "prompt_eval_duration_ms": 44.25195,
-            "generation_duration_ms": 1959.331245,
-            "load_duration_ms": 38.335966,
-            "tokens_per_second": 136.78136388826894
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2753,
-        "total_time_ms": 8139.303669,
-        "average_speed": 136.42341400117851
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a charming and lighthearted scene featuring a small dog, likely a Jack Russell Terrier, gazing out from the passenger side window of a car. The dog's face is prominently visible in the car's side mirror reflection, with its head slightly tilted and ears perked up, giving it an inquisitive and endearing expression. The dog's fur is a mix of white and light brown, with dark markings around its eyes and ears, and it wears a black collar. The car's interior is partially visible, showing a dark dashboard and window frame.\n\nThe setting appears to be outdoors, likely on a sunny day, as indicated by the bright, natural lighting and the greenery visible in the background. The background includes blurred trees and foliage, suggesting the car is moving along a road surrounded by nature. In the distance, another vehicle, possibly a blue SUV, is visible, adding depth to the scene. The overall composition is well-balanced, with the dog as the focal point in the foreground, framed by the car's mirror and window. The lighting is soft and natural, enhancing the warm and cheerful atmosphere of the image. The colors are vibrant, with the green of the trees contrasting nicely against the neutral tones of the car and the dog's fur. The scene conveys a sense of joy and companionship, capturing a moment of curiosity and adventure.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 281,
-            "total_tokens": 578
-          },
-          "performance_metrics": {
-            "total_duration_ms": 14033.205067,
-            "prompt_eval_duration_ms": 3518.584724,
-            "generation_duration_ms": 10473.769253,
-            "load_duration_ms": 38.320943,
-            "tokens_per_second": 26.828927887590535
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a close-up view of a dog's face, which is reflected in the side mirror of a car. The dog, a small breed with a white and brown coat and a black collar, is looking directly at the viewer, creating a sense of engagement and connection. The side mirror itself is a prominent element, framing the dog's face and adding depth to the composition. The mirror's reflective surface also captures a portion of the car's interior, including the window frame and a hint of the dashboard, grounding the scene in a realistic setting.\n\nIn the background, the setting transitions to a road scene. The background elements include a blurred view of the road ahead, with another vehicle visible in the distance. The distant car is slightly out of focus, emphasizing the depth of field and drawing attention to the foreground. The road is flanked by greenery, suggesting a rural or suburban environment. The background elements are less distinct, creating a sense of motion and context for the car's journey.\n\nThe relationship between the foreground and background is crucial to the image's composition. The dog in the foreground serves as the focal point, capturing the viewer's attention with its expressive face and direct gaze. The background provides context, indicating that the dog is traveling in a car on a road. The blurred motion of the background contrasts with the sharp focus on the dog, enhancing the sense of movement and travel. Together, these layers create a dynamic and relatable scene, blending the personal experience of the dog with the broader setting of a road trip.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 314,
-            "total_tokens": 617
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11821.261676,
-            "prompt_eval_duration_ms": 74.539849,
-            "generation_duration_ms": 11703.156797,
-            "load_duration_ms": 41.10699,
-            "tokens_per_second": 26.830367690236457
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image shows a side view mirror of a car, with the reflection of a dog's face prominently displayed. The dog, a small breed with a white and brown coat, appears to be looking out of the car window, seemingly enjoying the ride. Its expression is attentive and curious, suggesting it is engaged with the surroundings. The dog's head is slightly tilted, and its ears are perked up, indicating alertness and interest in the environment outside the vehicle.\n\nIn the background, the reflection in the mirror reveals a road with trees and greenery, indicating that the car is moving through a scenic area. Another vehicle, a blue car, is visible in the distance, traveling in the same direction, which suggests that the dog is experiencing a shared journey with other road users. The dog's position and posture imply it is comfortably seated inside the car, likely secured for safety, as is common when traveling with pets.\n\nThe interaction between the dog and the environment is one of observation and engagement. The dog's focus on the outside world highlights its curiosity and enjoyment of the experience. The presence of the other car in the background adds a sense of motion and context, emphasizing that the dog is part of a dynamic, moving scene. The image captures a moment of companionship and adventure, showcasing the dog's role as a passenger and its connection to the journey. The overall mood is lighthearted and serene, reflecting the joy of traveling with a pet.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 294,
-            "total_tokens": 600
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11077.006656,
-            "prompt_eval_duration_ms": 78.76939,
-            "generation_duration_ms": 10953.96461,
-            "load_duration_ms": 41.272001,
-            "tokens_per_second": 26.839597393952143
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a lighthearted and positive mood, evoking feelings of joy, companionship, and adventure. The dog, reflected in the car's side mirror, appears alert and curious, with its head slightly tilted and ears perked up, suggesting a sense of excitement and engagement with the surroundings. The bright outdoor setting, with greenery visible in the background, adds to the overall cheerful and uplifting tone. The dog's expression, combined with its position in the car, implies a sense of trust and comfort, as if it is enjoying a ride with its owner. The slight motion blur of the car in the background further enhances the feeling of movement and exploration, reinforcing the idea of a fun outing. The use of natural light and the clear, vibrant colors contribute to the image's warmth and positivity. The overall tone is decidedly positive, as the image captures a moment of simple happiness and connection between the dog and its environment, emphasizing themes of companionship and the joy of shared experiences.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 203,
-            "total_tokens": 511
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7717.447222,
-            "prompt_eval_duration_ms": 77.783413,
-            "generation_duration_ms": 7598.427803,
-            "load_duration_ms": 38.834261,
-            "tokens_per_second": 26.71605301294721
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"dog\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"white\", \"brown\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"A dog with a black collar, looking out of a car window, appears curious or alert.\"\n    }\n  },\n  \"man-made\": {\n    \"car\": {\n      \"count\": 2,\n      \"location\": \"center, background\",\n      \"color\": [\"black\", \"blue\"],\n      \"size\": \"medium\",\n      \"description\": \"The main car is black, with a dog in the passenger seat. Another car is visible in the background, partially obscured.\"\n    },\n    \"side mirror\": {\n      \"count\": 1,\n      \"location\": \"center, foreground\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"A car's side mirror reflecting the dog and part of the car.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"right, background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"A tree is visible in the background, partially out of focus.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "dog": {
-                "count": 1,
-                "location": "left, middle",
-                "color": [
-                  "white",
-                  "brown",
-                  "black"
-                ],
-                "size": "medium",
-                "description": "A dog with a black collar, looking out of a car window, appears curious or alert."
-              }
-            },
-            "man-made": {
-              "car": {
-                "count": 2,
-                "location": "center, background",
-                "color": [
-                  "black",
-                  "blue"
-                ],
-                "size": "medium",
-                "description": "The main car is black, with a dog in the passenger seat. Another car is visible in the background, partially obscured."
-              },
-              "side mirror": {
-                "count": 1,
-                "location": "center, foreground",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "A car's side mirror reflecting the dog and part of the car."
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 1,
-                "location": "right, background",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "A tree is visible in the background, partially out of focus."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 278,
-            "total_tokens": 764
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10478.435386,
-            "prompt_eval_duration_ms": 141.002514,
-            "generation_duration_ms": 10297.017514,
-            "load_duration_ms": 37.770994,
-            "tokens_per_second": 26.998108881724875
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3070,
-        "total_time_ms": 55127.356007,
-        "average_speed": 26.842610973290242
       }
     },
     {

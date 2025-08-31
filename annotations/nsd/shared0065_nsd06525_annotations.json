@@ -7,6 +7,307 @@
   "timestamp": "2025-08-31T07:14:13.882645+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a dynamic winter scene, set in a snowy landscape. The main subject is a person snowboarding, dressed in a vibrant red jacket, black pants, and a dark beanie, which contrasts sharply against the white snow. The snowboarder is in motion, leaning forward with arms outstretched, suggesting speed and balance. They are carrying a black backpack, adding a touch of utility to the scene. The background is a serene, snow-covered forest with bare trees, indicating it's likely late fall or winter. The lighting is natural, soft, and diffused, likely from an overcast sky, which enhances the peaceful yet invigorating atmosphere of the setting. The composition is balanced, with the snowboarder positioned slightly off-center, drawing the viewer's eye across the image from the foreground to the background, where the trees and snow create a sense of depth and tranquility. The overall mood is one of adventure and harmony with nature, captured in a moment of winter sports.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 202,
+            "total_tokens": 499
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1562.129623,
+            "prompt_eval_duration_ms": 80.973987,
+            "generation_duration_ms": 1439.478482,
+            "load_duration_ms": 39.472871,
+            "tokens_per_second": 140.32859992414947
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, a person is snowboarding down a snowy slope. They are wearing a red jacket, black pants, and a black beanie, with a black backpack slung over their shoulder. Their arms are outstretched for balance as they navigate the snow, and their snowboard is visible beneath them, kicking up a small spray of snow. The snow appears fresh and undisturbed except for the tracks left by the snowboarder. The background consists of a dense forest of bare trees, their branches reaching out against the pale sky, indicating a winter setting. The trees are scattered across a snowy landscape, with some closer to the foreground and others further back, creating a sense of depth. The snow on the ground and the trees suggests a cold, wintry environment, and the overall scene captures a moment of outdoor winter activity. The snowboarder in the foreground provides a sense of scale and action, while the background of the forest and snow creates a serene and expansive setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 203,
+            "total_tokens": 506
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1530.845502,
+            "prompt_eval_duration_ms": 30.936969,
+            "generation_duration_ms": 1460.488816,
+            "load_duration_ms": 36.752676,
+            "tokens_per_second": 138.99455975019256
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a person is snowboarding down a snowy slope, their body leaning forward in a dynamic pose, arms outstretched for balance as they carve through the fresh snow. They are dressed in a vibrant red jacket, black pants, and a dark beanie, with a black backpack strapped to their back, suggesting they are prepared for a day of outdoor adventure. The snowboarder is the central figure, moving swiftly and confidently, leaving a trail of disturbed snow behind them. The background features a serene winter landscape with snow-covered trees and a stone wall, adding a sense of tranquility to the scene. The trees stand bare, their branches reaching upwards, while the stone wall, partially obscured by snow, hints at a boundary or perhaps a path leading deeper into the woods. The snowboarder's actions contrast with the stillness of the environment, creating a dynamic interplay between human activity and the natural world. There are no animals visible in the image, and the focus remains solely on the snowboarder and their interaction with the snowy terrain.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 214,
+            "total_tokens": 520
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1611.238743,
+            "prompt_eval_duration_ms": 30.983478,
+            "generation_duration_ms": 1539.345806,
+            "load_duration_ms": 38.274608,
+            "tokens_per_second": 139.02009487788865
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of exhilaration and freedom, with a touch of adventure and tranquility. The individual, dressed in a vibrant red jacket and black pants, is captured mid-action, snowshoeing through a serene, snow-covered landscape. The expansive white expanse of the snow, contrasted against the dark silhouettes of the leafless trees, creates a peaceful and almost meditative atmosphere. The person's outstretched arms and the dynamic pose suggest a feeling of liberation and joy, as if they are embracing the vastness of the winter environment. The muted colors of the trees and the soft, undisturbed snow add to the calmness, while the individual's active engagement with the snowy terrain brings a sense of vitality and excitement. Overall, the tone is decidedly positive, reflecting a blend of adventure and serenity, where the individual appears to be fully immersed in the beauty and solitude of nature.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 187,
+            "total_tokens": 495
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1419.035836,
+            "prompt_eval_duration_ms": 30.056267,
+            "generation_duration_ms": 1349.600183,
+            "load_duration_ms": 36.896587,
+            "tokens_per_second": 138.5595544187919
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"red\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"wearing a red jacket, black pants, and a black hat, snowboarding\"\n    }\n  },\n  \"man-made\": {\n    \"snowboard\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"being used by the person snowboarding\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 10,\n      \"location\": \"background\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"bare trees with snow on the ground\"\n    },\n    \"snow\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"covering the ground and surrounding area\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "red",
+                  "black"
+                ],
+                "size": "medium",
+                "description": "wearing a red jacket, black pants, and a black hat, snowboarding"
+              }
+            },
+            "man-made": {
+              "snowboard": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "being used by the person snowboarding"
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 10,
+                "location": "background",
+                "color": [
+                  "brown",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "bare trees with snow on the ground"
+              },
+              "snow": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "covering the ground and surrounding area"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 237,
+            "total_tokens": 723
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1778.972608,
+            "prompt_eval_duration_ms": 43.831022,
+            "generation_duration_ms": 1694.247368,
+            "load_duration_ms": 38.311462,
+            "tokens_per_second": 139.88512213524655
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2743,
+        "total_time_ms": 7902.222312,
+        "average_speed": 139.35758622125383
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a snowy outdoor scene, likely in a park or wooded area during winter. The setting is serene and covered in a thick blanket of snow, with leafless trees scattered throughout the background, their bare branches reaching skyward. The lighting is soft and diffused, suggesting an overcast day, which casts an even, muted light across the scene without harsh shadows. \n\nThe main element in the image is a person dressed in winter clothing, including a bright red jacket, black pants, a black hat, and gloves. The individual is captured mid-motion, appearing to be snowshoeing or walking through the snow, as evidenced by the snow being kicked up behind them. The person is facing away from the camera, adding a sense of movement and dynamism to the otherwise still landscape. \n\nThe colors in the image are predominantly whites and grays from the snow and sky, contrasted by the vibrant red of the jacket, which stands out prominently against the muted background. The trees add a touch of earthy brown tones, enhancing the natural feel of the setting. The overall composition is balanced, with the person positioned slightly off-center, leading the viewer's eye through the scene and emphasizing the expansive, open space of the snowy landscape. The image conveys a sense of solitude and the quiet beauty of a winter day.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 268,
+            "total_tokens": 565
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13525.391731,
+            "prompt_eval_duration_ms": 3524.37049,
+            "generation_duration_ms": 9959.17154,
+            "load_duration_ms": 39.382525,
+            "tokens_per_second": 26.909868850396364
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the closest elements to the viewer are a person dressed in a vibrant red jacket, black pants, and a black hat, actively engaged in snowboarding. The individual is captured mid-motion, suggesting movement and action, with snow visibly kicked up around their feet, emphasizing the dynamic nature of the activity. The snowboarder's attire is practical for cold weather, and their stance indicates they are navigating a snowy slope.\n\nThe background elements, which form the setting, consist of a serene, snow-covered landscape. The ground is blanketed in a thick layer of snow, extending into the distance. Sparse, leafless trees are scattered throughout the scene, their bare branches reaching upwards, creating a stark contrast against the white snow. In the mid-ground, a stone wall or barrier is visible, adding a structural element to the natural environment. The overall atmosphere is calm and wintry, with the trees and snow creating a sense of depth and vastness.\n\nThe relationship between the foreground and background is one of interaction and contrast. The active, human element in the foreground provides a focal point and a sense of life against the still, natural backdrop. The snowboarding action in the foreground is set against the tranquil, expansive snow-covered landscape, highlighting the dynamic interplay between human activity and the serene environment. The bare trees and stone wall in the background frame the scene, grounding the snowboarder within the context of the wintry setting and emphasizing the scale and beauty of the natural surroundings.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 302,
+            "total_tokens": 605
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11359.045168,
+            "prompt_eval_duration_ms": 75.433931,
+            "generation_duration_ms": 11238.803551,
+            "load_duration_ms": 41.658056,
+            "tokens_per_second": 26.871187722925256
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a person outdoors in a snowy landscape, engaging in a winter activity. The individual is dressed warmly in a red jacket, black pants, a black hat, and gloves, indicating they are prepared for cold weather. They appear to be snowshoeing or walking on snow, as their feet are partially submerged in the snow, suggesting they are navigating the terrain. The person is facing away from the camera, and their posture suggests movement, with one arm extended forward and the other slightly behind, possibly for balance or to propel themselves forward.\n\nThe surrounding environment is a serene, wintry scene with snow-covered ground and bare trees, indicating it is likely winter. The trees are leafless, and their branches are silhouetted against a pale sky, adding to the cold, wintery atmosphere. In the background, there is a stone wall or structure, which adds a sense of depth and context to the scene, suggesting the person might be in a park, forest, or rural area.\n\nThere are no animals visible in the image, and the person appears to be alone, interacting solely with the natural environment. The snow and the person's attire highlight the connection between human activity and the challenges of winter weather. The overall scene conveys a sense of solitude and the peacefulness of a winter landscape, with the individual actively engaging with the snowy terrain.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 275,
+            "total_tokens": 581
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10385.303104,
+            "prompt_eval_duration_ms": 73.815073,
+            "generation_duration_ms": 10269.672086,
+            "load_duration_ms": 39.344823,
+            "tokens_per_second": 26.77787544695709
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of solitude and tranquility, tinged with a sense of adventure and resilience. The person, dressed warmly in a red jacket and black hat, is actively engaged in snowshoeing through a serene, snow-covered landscape. The expansive white snow, coupled with the bare, leafless trees, creates a sense of quiet isolation, evoking feelings of peacefulness and introspection. The individual's forward movement and upright posture suggest determination and a willingness to embrace the cold, wintry environment, which can inspire a sense of courage and self-reliance. The overall tone is positive, as the scene highlights the beauty of nature and the joy of outdoor activities, even in challenging weather conditions. The contrast between the vibrant red jacket and the stark white snow adds a touch of warmth and vibrancy, further enhancing the positive emotional atmosphere. The absence of other people or distractions emphasizes the solitude, allowing the viewer to focus on the harmony between the individual and the natural world. This image evokes feelings of calm, freedom, and a connection to nature, making it a visually and emotionally uplifting scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 225,
+            "total_tokens": 533
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8512.854592,
+            "prompt_eval_duration_ms": 78.851077,
+            "generation_duration_ms": 8392.949802,
+            "load_duration_ms": 38.401327,
+            "tokens_per_second": 26.80821466921958
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, foreground\",\n      \"color\": [\"red\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Wearing a red jacket and black pants, standing in the snow, facing away from the camera.\"\n    }\n  },\n  \"man-made\": {\n    \"stone wall\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"A stone wall running horizontally across the middle of the image.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 10,\n      \"location\": \"center, background\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"Bare trees without leaves, scattered across the background.\"\n    },\n    \"snow\": {\n      \"count\": 1,\n      \"location\": \"entire image\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"Covering the ground and surrounding area.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center, foreground",
+                "color": [
+                  "red",
+                  "black"
+                ],
+                "size": "medium",
+                "description": "Wearing a red jacket and black pants, standing in the snow, facing away from the camera."
+              }
+            },
+            "man-made": {
+              "stone wall": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "gray"
+                ],
+                "size": "medium",
+                "description": "A stone wall running horizontally across the middle of the image."
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 10,
+                "location": "center, background",
+                "color": [
+                  "brown"
+                ],
+                "size": "small",
+                "description": "Bare trees without leaves, scattered across the background."
+              },
+              "snow": {
+                "count": 1,
+                "location": "entire image",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "Covering the ground and surrounding area."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 253,
+            "total_tokens": 739
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9571.324831,
+            "prompt_eval_duration_ms": 140.728222,
+            "generation_duration_ms": 9385.287269,
+            "load_duration_ms": 42.370649,
+            "tokens_per_second": 26.957086421389537
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3023,
+        "total_time_ms": 53353.919426,
+        "average_speed": 26.864846622177566
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -331,6 +632,154 @@
       }
     },
     {
+      "model": "gemma3:27b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "Here's a description of the image:\n\nThe image captures a snowy winter scene with a person as the central figure, seemingly enjoying a snowy landscape. The setting appears to be a park or wooded area, evidenced by the numerous bare trees lining the background and a low stone wall visible in the distance. The main element is a person wearing a bright red jacket, black pants, and a dark hat, facing away from the viewer and appearing to be walking or gliding through the snow. They have a small bag or pouch attached to their waist. The color palette is dominated by whites and grays of the snow-covered ground and trees, contrasted by the vibrant red of the jacket. The lighting seems soft and diffused, typical of a snowy day, with a slight glow around the figure. The composition is centered on the person, with the trees framing the scene and leading the eye towards the background. The overall impression is one of peacefulness and winter enjoyment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 313,
+            "output_tokens": 193,
+            "total_tokens": 506
+          },
+          "performance_metrics": {
+            "total_duration_ms": 5061.241941,
+            "prompt_eval_duration_ms": 401.965737,
+            "generation_duration_ms": 4565.508607,
+            "load_duration_ms": 91.45727,
+            "tokens_per_second": 42.273493845589414
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "Here's a description of the image, separating foreground and background elements:\n\nThe foreground is dominated by a person, seen from the back, seemingly walking or gliding through deep snow. They are wearing a bright red jacket, dark pants, and a dark hat, with a large pouch or bag strapped around their waist. Their arms are outstretched for balance, and they are leaving visible tracks in the fresh, white snow. The snow itself is the immediate foreground, covering the ground and creating a sense of depth. \n\nThe background transitions into a wintry forest scene. Bare trees, stripped of their leaves, rise up from the snow-covered ground, creating a dense, yet delicate pattern against the pale sky. A low stone wall is visible amidst the trees, suggesting a boundary or path. The forest provides a natural setting for the person, implying they are enjoying a walk or hike in the winter landscape. The contrast between the bright red jacket and the muted tones of the forest draws the viewer's eye to the person, while the forest provides context and a sense of place.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 318,
+            "output_tokens": 218,
+            "total_tokens": 536
+          },
+          "performance_metrics": {
+            "total_duration_ms": 5341.891363,
+            "prompt_eval_duration_ms": 84.878877,
+            "generation_duration_ms": 5166.115253,
+            "load_duration_ms": 88.232428,
+            "tokens_per_second": 42.19805198372333
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "Here's a description of the image, focusing on the elements and their interactions:\n\nThe image depicts a person, seen from the back, seemingly enjoying a snowy landscape. The individual is wearing a bright red jacket, dark pants, and a black hat, and appears to be walking or possibly gliding through the snow. They have a bag or pouch strapped around their waist. The person is the central figure, actively engaging with the environment. \n\nThe surrounding environment is dominated by a snow-covered field and a forest of bare trees, suggesting a winter scene. The trees stand as silent observers, framing the person's activity. A low stone wall is visible in the background, adding to the natural setting. The snow itself is a key element, providing the surface for the person's movement and connecting all the elements visually. The interaction is one of a person immersed in and enjoying a winter landscape, with the natural elements forming the backdrop and context for their activity.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 321,
+            "output_tokens": 196,
+            "total_tokens": 517
+          },
+          "performance_metrics": {
+            "total_duration_ms": 4814.570545,
+            "prompt_eval_duration_ms": 91.748526,
+            "generation_duration_ms": 4631.75073,
+            "load_duration_ms": 88.534979,
+            "tokens_per_second": 42.31661231907443
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "Here's a description of the mood and emotions conveyed by the image:\n\nThe image evokes a sense of solitary joy and peacefulness amidst a winter landscape. The figure, clad in a bright red jacket, appears to be gliding through the snow, arms outstretched, suggesting a feeling of freedom and exhilaration. The snowy environment, while potentially cold, feels serene and quiet, contributing to a calming atmosphere. The figure's back is to the viewer, creating a sense of introspection and personal experience, as if we are witnessing a private moment of enjoyment. The muted tones of the trees and the vast expanse of white snow amplify the feeling of isolation and tranquility. While there's a hint of coldness inherent in the winter scene, the overall tone is decidedly positive, conveying a sense of contentment and the simple pleasure of being present in nature. It feels like a moment of escape and quiet reflection.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 324,
+            "output_tokens": 181,
+            "total_tokens": 505
+          },
+          "performance_metrics": {
+            "total_duration_ms": 4450.908074,
+            "prompt_eval_duration_ms": 81.989768,
+            "generation_duration_ms": 4276.408699,
+            "load_duration_ms": 90.000337,
+            "tokens_per_second": 42.325234265453915
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\n        \"red\",\n        \"black\"\n      ],\n      \"size\": \"medium\",\n      \"description\": \"Person is wearing a red jacket, black pants, and a black hat, appearing to be walking or gliding through the snow.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 10,\n      \"location\": \"background\",\n      \"color\": [\n        \"brown\",\n        \"gray\"\n      ],\n      \"size\": \"medium\",\n      \"description\": \"Bare trees, likely in winter, with no leaves.\"\n    },\n    \"snow\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"size\": \"large\",\n      \"description\": \"Snow covering the ground, creating a winter landscape.\"\n    }\n  },\n  \"man-made\": {\n    \"stone wall\": {\n      \"count\": 1,\n      \"location\": \"center-background\",\n      \"color\": [\n        \"gray\"\n      ],\n      \"size\": \"small\",\n      \"description\": \"A low stone wall partially visible behind the trees.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "red",
+                  "black"
+                ],
+                "size": "medium",
+                "description": "Person is wearing a red jacket, black pants, and a black hat, appearing to be walking or gliding through the snow."
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 10,
+                "location": "background",
+                "color": [
+                  "brown",
+                  "gray"
+                ],
+                "size": "medium",
+                "description": "Bare trees, likely in winter, with no leaves."
+              },
+              "snow": {
+                "count": 1,
+                "location": "foreground",
+                "size": "large",
+                "description": "Snow covering the ground, creating a winter landscape."
+              }
+            },
+            "man-made": {
+              "stone wall": {
+                "count": 1,
+                "location": "center-background",
+                "color": [
+                  "gray"
+                ],
+                "size": "small",
+                "description": "A low stone wall partially visible behind the trees."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 518,
+            "output_tokens": 306,
+            "total_tokens": 824
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7432.00257,
+            "prompt_eval_duration_ms": 140.554301,
+            "generation_duration_ms": 7201.778775,
+            "load_duration_ms": 87.224327,
+            "tokens_per_second": 42.48950287979375
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2888,
+        "total_time_ms": 27100.614492999997,
+        "average_speed": 42.32057905872697
+      }
+    },
+    {
       "model": "mistral-small3.2:24b",
       "temperature": 0.3,
       "prompts": {
@@ -489,578 +938,6 @@
         "total_tokens": 5259,
         "total_time_ms": 32720.757614000002,
         "average_speed": 35.95015700356636
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a dynamic winter scene, set in a snowy landscape. The main subject is a person snowboarding, dressed in a vibrant red jacket, black pants, and a dark beanie, which contrasts sharply against the white snow. The snowboarder is in motion, leaning forward with arms outstretched, suggesting speed and balance. They are carrying a black backpack, adding a touch of utility to the scene. The background is a serene, snow-covered forest with bare trees, indicating it's likely late fall or winter. The lighting is natural, soft, and diffused, likely from an overcast sky, which enhances the peaceful yet invigorating atmosphere of the setting. The composition is balanced, with the snowboarder positioned slightly off-center, drawing the viewer's eye across the image from the foreground to the background, where the trees and snow create a sense of depth and tranquility. The overall mood is one of adventure and harmony with nature, captured in a moment of winter sports.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 202,
-            "total_tokens": 499
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1562.129623,
-            "prompt_eval_duration_ms": 80.973987,
-            "generation_duration_ms": 1439.478482,
-            "load_duration_ms": 39.472871,
-            "tokens_per_second": 140.32859992414947
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, a person is snowboarding down a snowy slope. They are wearing a red jacket, black pants, and a black beanie, with a black backpack slung over their shoulder. Their arms are outstretched for balance as they navigate the snow, and their snowboard is visible beneath them, kicking up a small spray of snow. The snow appears fresh and undisturbed except for the tracks left by the snowboarder. The background consists of a dense forest of bare trees, their branches reaching out against the pale sky, indicating a winter setting. The trees are scattered across a snowy landscape, with some closer to the foreground and others further back, creating a sense of depth. The snow on the ground and the trees suggests a cold, wintry environment, and the overall scene captures a moment of outdoor winter activity. The snowboarder in the foreground provides a sense of scale and action, while the background of the forest and snow creates a serene and expansive setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 203,
-            "total_tokens": 506
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1530.845502,
-            "prompt_eval_duration_ms": 30.936969,
-            "generation_duration_ms": 1460.488816,
-            "load_duration_ms": 36.752676,
-            "tokens_per_second": 138.99455975019256
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a person is snowboarding down a snowy slope, their body leaning forward in a dynamic pose, arms outstretched for balance as they carve through the fresh snow. They are dressed in a vibrant red jacket, black pants, and a dark beanie, with a black backpack strapped to their back, suggesting they are prepared for a day of outdoor adventure. The snowboarder is the central figure, moving swiftly and confidently, leaving a trail of disturbed snow behind them. The background features a serene winter landscape with snow-covered trees and a stone wall, adding a sense of tranquility to the scene. The trees stand bare, their branches reaching upwards, while the stone wall, partially obscured by snow, hints at a boundary or perhaps a path leading deeper into the woods. The snowboarder's actions contrast with the stillness of the environment, creating a dynamic interplay between human activity and the natural world. There are no animals visible in the image, and the focus remains solely on the snowboarder and their interaction with the snowy terrain.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 214,
-            "total_tokens": 520
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1611.238743,
-            "prompt_eval_duration_ms": 30.983478,
-            "generation_duration_ms": 1539.345806,
-            "load_duration_ms": 38.274608,
-            "tokens_per_second": 139.02009487788865
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of exhilaration and freedom, with a touch of adventure and tranquility. The individual, dressed in a vibrant red jacket and black pants, is captured mid-action, snowshoeing through a serene, snow-covered landscape. The expansive white expanse of the snow, contrasted against the dark silhouettes of the leafless trees, creates a peaceful and almost meditative atmosphere. The person's outstretched arms and the dynamic pose suggest a feeling of liberation and joy, as if they are embracing the vastness of the winter environment. The muted colors of the trees and the soft, undisturbed snow add to the calmness, while the individual's active engagement with the snowy terrain brings a sense of vitality and excitement. Overall, the tone is decidedly positive, reflecting a blend of adventure and serenity, where the individual appears to be fully immersed in the beauty and solitude of nature.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 187,
-            "total_tokens": 495
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1419.035836,
-            "prompt_eval_duration_ms": 30.056267,
-            "generation_duration_ms": 1349.600183,
-            "load_duration_ms": 36.896587,
-            "tokens_per_second": 138.5595544187919
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"red\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"wearing a red jacket, black pants, and a black hat, snowboarding\"\n    }\n  },\n  \"man-made\": {\n    \"snowboard\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"being used by the person snowboarding\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 10,\n      \"location\": \"background\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"bare trees with snow on the ground\"\n    },\n    \"snow\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"covering the ground and surrounding area\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "red",
-                  "black"
-                ],
-                "size": "medium",
-                "description": "wearing a red jacket, black pants, and a black hat, snowboarding"
-              }
-            },
-            "man-made": {
-              "snowboard": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "being used by the person snowboarding"
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 10,
-                "location": "background",
-                "color": [
-                  "brown",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "bare trees with snow on the ground"
-              },
-              "snow": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "covering the ground and surrounding area"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 237,
-            "total_tokens": 723
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1778.972608,
-            "prompt_eval_duration_ms": 43.831022,
-            "generation_duration_ms": 1694.247368,
-            "load_duration_ms": 38.311462,
-            "tokens_per_second": 139.88512213524655
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2743,
-        "total_time_ms": 7902.222312,
-        "average_speed": 139.35758622125383
-      }
-    },
-    {
-      "model": "gemma3:27b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "Here's a description of the image:\n\nThe image captures a snowy winter scene with a person as the central figure, seemingly enjoying a snowy landscape. The setting appears to be a park or wooded area, evidenced by the numerous bare trees lining the background and a low stone wall visible in the distance. The main element is a person wearing a bright red jacket, black pants, and a dark hat, facing away from the viewer and appearing to be walking or gliding through the snow. They have a small bag or pouch attached to their waist. The color palette is dominated by whites and grays of the snow-covered ground and trees, contrasted by the vibrant red of the jacket. The lighting seems soft and diffused, typical of a snowy day, with a slight glow around the figure. The composition is centered on the person, with the trees framing the scene and leading the eye towards the background. The overall impression is one of peacefulness and winter enjoyment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 313,
-            "output_tokens": 193,
-            "total_tokens": 506
-          },
-          "performance_metrics": {
-            "total_duration_ms": 5061.241941,
-            "prompt_eval_duration_ms": 401.965737,
-            "generation_duration_ms": 4565.508607,
-            "load_duration_ms": 91.45727,
-            "tokens_per_second": 42.273493845589414
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "Here's a description of the image, separating foreground and background elements:\n\nThe foreground is dominated by a person, seen from the back, seemingly walking or gliding through deep snow. They are wearing a bright red jacket, dark pants, and a dark hat, with a large pouch or bag strapped around their waist. Their arms are outstretched for balance, and they are leaving visible tracks in the fresh, white snow. The snow itself is the immediate foreground, covering the ground and creating a sense of depth. \n\nThe background transitions into a wintry forest scene. Bare trees, stripped of their leaves, rise up from the snow-covered ground, creating a dense, yet delicate pattern against the pale sky. A low stone wall is visible amidst the trees, suggesting a boundary or path. The forest provides a natural setting for the person, implying they are enjoying a walk or hike in the winter landscape. The contrast between the bright red jacket and the muted tones of the forest draws the viewer's eye to the person, while the forest provides context and a sense of place.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 318,
-            "output_tokens": 218,
-            "total_tokens": 536
-          },
-          "performance_metrics": {
-            "total_duration_ms": 5341.891363,
-            "prompt_eval_duration_ms": 84.878877,
-            "generation_duration_ms": 5166.115253,
-            "load_duration_ms": 88.232428,
-            "tokens_per_second": 42.19805198372333
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "Here's a description of the image, focusing on the elements and their interactions:\n\nThe image depicts a person, seen from the back, seemingly enjoying a snowy landscape. The individual is wearing a bright red jacket, dark pants, and a black hat, and appears to be walking or possibly gliding through the snow. They have a bag or pouch strapped around their waist. The person is the central figure, actively engaging with the environment. \n\nThe surrounding environment is dominated by a snow-covered field and a forest of bare trees, suggesting a winter scene. The trees stand as silent observers, framing the person's activity. A low stone wall is visible in the background, adding to the natural setting. The snow itself is a key element, providing the surface for the person's movement and connecting all the elements visually. The interaction is one of a person immersed in and enjoying a winter landscape, with the natural elements forming the backdrop and context for their activity.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 321,
-            "output_tokens": 196,
-            "total_tokens": 517
-          },
-          "performance_metrics": {
-            "total_duration_ms": 4814.570545,
-            "prompt_eval_duration_ms": 91.748526,
-            "generation_duration_ms": 4631.75073,
-            "load_duration_ms": 88.534979,
-            "tokens_per_second": 42.31661231907443
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "Here's a description of the mood and emotions conveyed by the image:\n\nThe image evokes a sense of solitary joy and peacefulness amidst a winter landscape. The figure, clad in a bright red jacket, appears to be gliding through the snow, arms outstretched, suggesting a feeling of freedom and exhilaration. The snowy environment, while potentially cold, feels serene and quiet, contributing to a calming atmosphere. The figure's back is to the viewer, creating a sense of introspection and personal experience, as if we are witnessing a private moment of enjoyment. The muted tones of the trees and the vast expanse of white snow amplify the feeling of isolation and tranquility. While there's a hint of coldness inherent in the winter scene, the overall tone is decidedly positive, conveying a sense of contentment and the simple pleasure of being present in nature. It feels like a moment of escape and quiet reflection.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 324,
-            "output_tokens": 181,
-            "total_tokens": 505
-          },
-          "performance_metrics": {
-            "total_duration_ms": 4450.908074,
-            "prompt_eval_duration_ms": 81.989768,
-            "generation_duration_ms": 4276.408699,
-            "load_duration_ms": 90.000337,
-            "tokens_per_second": 42.325234265453915
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\n        \"red\",\n        \"black\"\n      ],\n      \"size\": \"medium\",\n      \"description\": \"Person is wearing a red jacket, black pants, and a black hat, appearing to be walking or gliding through the snow.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 10,\n      \"location\": \"background\",\n      \"color\": [\n        \"brown\",\n        \"gray\"\n      ],\n      \"size\": \"medium\",\n      \"description\": \"Bare trees, likely in winter, with no leaves.\"\n    },\n    \"snow\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"size\": \"large\",\n      \"description\": \"Snow covering the ground, creating a winter landscape.\"\n    }\n  },\n  \"man-made\": {\n    \"stone wall\": {\n      \"count\": 1,\n      \"location\": \"center-background\",\n      \"color\": [\n        \"gray\"\n      ],\n      \"size\": \"small\",\n      \"description\": \"A low stone wall partially visible behind the trees.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "red",
-                  "black"
-                ],
-                "size": "medium",
-                "description": "Person is wearing a red jacket, black pants, and a black hat, appearing to be walking or gliding through the snow."
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 10,
-                "location": "background",
-                "color": [
-                  "brown",
-                  "gray"
-                ],
-                "size": "medium",
-                "description": "Bare trees, likely in winter, with no leaves."
-              },
-              "snow": {
-                "count": 1,
-                "location": "foreground",
-                "size": "large",
-                "description": "Snow covering the ground, creating a winter landscape."
-              }
-            },
-            "man-made": {
-              "stone wall": {
-                "count": 1,
-                "location": "center-background",
-                "color": [
-                  "gray"
-                ],
-                "size": "small",
-                "description": "A low stone wall partially visible behind the trees."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 518,
-            "output_tokens": 306,
-            "total_tokens": 824
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7432.00257,
-            "prompt_eval_duration_ms": 140.554301,
-            "generation_duration_ms": 7201.778775,
-            "load_duration_ms": 87.224327,
-            "tokens_per_second": 42.48950287979375
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2888,
-        "total_time_ms": 27100.614492999997,
-        "average_speed": 42.32057905872697
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a snowy outdoor scene, likely in a park or wooded area during winter. The setting is serene and covered in a thick blanket of snow, with leafless trees scattered throughout the background, their bare branches reaching skyward. The lighting is soft and diffused, suggesting an overcast day, which casts an even, muted light across the scene without harsh shadows. \n\nThe main element in the image is a person dressed in winter clothing, including a bright red jacket, black pants, a black hat, and gloves. The individual is captured mid-motion, appearing to be snowshoeing or walking through the snow, as evidenced by the snow being kicked up behind them. The person is facing away from the camera, adding a sense of movement and dynamism to the otherwise still landscape. \n\nThe colors in the image are predominantly whites and grays from the snow and sky, contrasted by the vibrant red of the jacket, which stands out prominently against the muted background. The trees add a touch of earthy brown tones, enhancing the natural feel of the setting. The overall composition is balanced, with the person positioned slightly off-center, leading the viewer's eye through the scene and emphasizing the expansive, open space of the snowy landscape. The image conveys a sense of solitude and the quiet beauty of a winter day.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 268,
-            "total_tokens": 565
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13525.391731,
-            "prompt_eval_duration_ms": 3524.37049,
-            "generation_duration_ms": 9959.17154,
-            "load_duration_ms": 39.382525,
-            "tokens_per_second": 26.909868850396364
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the closest elements to the viewer are a person dressed in a vibrant red jacket, black pants, and a black hat, actively engaged in snowboarding. The individual is captured mid-motion, suggesting movement and action, with snow visibly kicked up around their feet, emphasizing the dynamic nature of the activity. The snowboarder's attire is practical for cold weather, and their stance indicates they are navigating a snowy slope.\n\nThe background elements, which form the setting, consist of a serene, snow-covered landscape. The ground is blanketed in a thick layer of snow, extending into the distance. Sparse, leafless trees are scattered throughout the scene, their bare branches reaching upwards, creating a stark contrast against the white snow. In the mid-ground, a stone wall or barrier is visible, adding a structural element to the natural environment. The overall atmosphere is calm and wintry, with the trees and snow creating a sense of depth and vastness.\n\nThe relationship between the foreground and background is one of interaction and contrast. The active, human element in the foreground provides a focal point and a sense of life against the still, natural backdrop. The snowboarding action in the foreground is set against the tranquil, expansive snow-covered landscape, highlighting the dynamic interplay between human activity and the serene environment. The bare trees and stone wall in the background frame the scene, grounding the snowboarder within the context of the wintry setting and emphasizing the scale and beauty of the natural surroundings.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 302,
-            "total_tokens": 605
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11359.045168,
-            "prompt_eval_duration_ms": 75.433931,
-            "generation_duration_ms": 11238.803551,
-            "load_duration_ms": 41.658056,
-            "tokens_per_second": 26.871187722925256
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a person outdoors in a snowy landscape, engaging in a winter activity. The individual is dressed warmly in a red jacket, black pants, a black hat, and gloves, indicating they are prepared for cold weather. They appear to be snowshoeing or walking on snow, as their feet are partially submerged in the snow, suggesting they are navigating the terrain. The person is facing away from the camera, and their posture suggests movement, with one arm extended forward and the other slightly behind, possibly for balance or to propel themselves forward.\n\nThe surrounding environment is a serene, wintry scene with snow-covered ground and bare trees, indicating it is likely winter. The trees are leafless, and their branches are silhouetted against a pale sky, adding to the cold, wintery atmosphere. In the background, there is a stone wall or structure, which adds a sense of depth and context to the scene, suggesting the person might be in a park, forest, or rural area.\n\nThere are no animals visible in the image, and the person appears to be alone, interacting solely with the natural environment. The snow and the person's attire highlight the connection between human activity and the challenges of winter weather. The overall scene conveys a sense of solitude and the peacefulness of a winter landscape, with the individual actively engaging with the snowy terrain.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 275,
-            "total_tokens": 581
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10385.303104,
-            "prompt_eval_duration_ms": 73.815073,
-            "generation_duration_ms": 10269.672086,
-            "load_duration_ms": 39.344823,
-            "tokens_per_second": 26.77787544695709
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of solitude and tranquility, tinged with a sense of adventure and resilience. The person, dressed warmly in a red jacket and black hat, is actively engaged in snowshoeing through a serene, snow-covered landscape. The expansive white snow, coupled with the bare, leafless trees, creates a sense of quiet isolation, evoking feelings of peacefulness and introspection. The individual's forward movement and upright posture suggest determination and a willingness to embrace the cold, wintry environment, which can inspire a sense of courage and self-reliance. The overall tone is positive, as the scene highlights the beauty of nature and the joy of outdoor activities, even in challenging weather conditions. The contrast between the vibrant red jacket and the stark white snow adds a touch of warmth and vibrancy, further enhancing the positive emotional atmosphere. The absence of other people or distractions emphasizes the solitude, allowing the viewer to focus on the harmony between the individual and the natural world. This image evokes feelings of calm, freedom, and a connection to nature, making it a visually and emotionally uplifting scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 225,
-            "total_tokens": 533
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8512.854592,
-            "prompt_eval_duration_ms": 78.851077,
-            "generation_duration_ms": 8392.949802,
-            "load_duration_ms": 38.401327,
-            "tokens_per_second": 26.80821466921958
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, foreground\",\n      \"color\": [\"red\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Wearing a red jacket and black pants, standing in the snow, facing away from the camera.\"\n    }\n  },\n  \"man-made\": {\n    \"stone wall\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"A stone wall running horizontally across the middle of the image.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 10,\n      \"location\": \"center, background\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"Bare trees without leaves, scattered across the background.\"\n    },\n    \"snow\": {\n      \"count\": 1,\n      \"location\": \"entire image\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"Covering the ground and surrounding area.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center, foreground",
-                "color": [
-                  "red",
-                  "black"
-                ],
-                "size": "medium",
-                "description": "Wearing a red jacket and black pants, standing in the snow, facing away from the camera."
-              }
-            },
-            "man-made": {
-              "stone wall": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "gray"
-                ],
-                "size": "medium",
-                "description": "A stone wall running horizontally across the middle of the image."
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 10,
-                "location": "center, background",
-                "color": [
-                  "brown"
-                ],
-                "size": "small",
-                "description": "Bare trees without leaves, scattered across the background."
-              },
-              "snow": {
-                "count": 1,
-                "location": "entire image",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "Covering the ground and surrounding area."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 253,
-            "total_tokens": 739
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9571.324831,
-            "prompt_eval_duration_ms": 140.728222,
-            "generation_duration_ms": 9385.287269,
-            "load_duration_ms": 42.370649,
-            "tokens_per_second": 26.957086421389537
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3023,
-        "total_time_ms": 53353.919426,
-        "average_speed": 26.864846622177566
-      }
-    },
-    {
-      "model": "llama3.2-vision:11b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "",
-          "response_format": "text",
-          "response_data": null,
-          "error": "unsupported format string passed to NoneType.__format__",
-          "token_metrics": null,
-          "performance_metrics": null
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground elements of the scene are the snow-covered ground and the snowboarder, who is seen in the center of the frame, wearing a red jacket and black pants, with his arms outstretched and his body in a dynamic position, as he is about to land a snowboarding trick. The snowboarder is the main focus of the scene, and his movements and actions are the most important elements in the foreground.\n\nThe background elements of the scene are the snow-covered trees and the snow-covered hill, which are both located in the distance, behind the snowboarder. The trees are the most important background elements, as they are the only ones that are not in the foreground, and they are also the ones that are most important in the scene. The trees are the most important in the background, and they are the ones that are most important in the scene, and they are the ones that are most important in the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 58,
-            "output_tokens": 191,
-            "total_tokens": 249
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2227.85128,
-            "prompt_eval_duration_ms": 45.107223,
-            "generation_duration_ms": 2131.955789,
-            "load_duration_ms": 48.351601,
-            "tokens_per_second": 89.58909982349545
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image shows a person, likely a child, wearing a red jacket and black pants, standing in a snowy landscape. The person is facing away from the camera, with their arms outstretched and their body slightly bent. The person is likely snowboarding or skiing, as they are in a position to be in the middle of a snow- or ski- related activity. The person is surrounded by snow and trees, with a few branches and a small tree in the background. The person is not interacting with any other people or animals in the image. The person is alone in the snow- or ski- related activity, and there is no other person or animal in the image. The person is in a snow- or ski- related activity, and they are in a snow- or ski- related environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 61,
-            "output_tokens": 164,
-            "total_tokens": 225
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1934.386117,
-            "prompt_eval_duration_ms": 44.543697,
-            "generation_duration_ms": 1838.657812,
-            "load_duration_ms": 49.112152,
-            "tokens_per_second": 89.195498438945
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a sense of freedom and joy, evoking feelings of exhilaration and thrill. The snowboarder's dynamic pose, with arms outstretched and body bent, suggests a sense of exhilaration and joy. The snow-covered landscape, with its snow- and snow- and snow- and snow- and snow- and snow- and snow- and snow- and snow- and snow- and snow- and snow- and snow- and snow- and snow- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and-1- and- and- and- and- and- and-1- and- and- and- and- and- and- and- and- and-1- and- and- and- and- and- and-1- and- and- and-1- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and-1- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and-1- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and- and",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 63,
-            "output_tokens": 40960,
-            "total_tokens": 41023
-          },
-          "performance_metrics": {
-            "total_duration_ms": 343429.844133,
-            "prompt_eval_duration_ms": 44.409905,
-            "generation_duration_ms": 343336.532426,
-            "load_duration_ms": 46.689352,
-            "tokens_per_second": 119.29985926804392
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"categories\": {\n    \"human\": {\n      \"person\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"size\": \"large\",\n        \"description\": \"A person is snowboarding down a snowy slope.\"\n      }\n    },\n    \"man-made\": {\n      \"snowboard\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"size\": \"large\",\n        \"description\": \"A person is riding a snowboard down a snowy slope.\"\n      }\n    },\n    \"natural\": {\n      \"tree\": {\n        \"count\": 5,\n        \"location\": \"background\",\n        \"size\": \"small/medium/large\",\n        \"description\": \"Multiple trees are scattered throughout the snowy landscape.\"\n      }\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "categories": {
-              "human": {
-                "person": {
-                  "count": 1,
-                  "location": "center",
-                  "size": "large",
-                  "description": "A person is snowboarding down a snowy slope."
-                }
-              },
-              "man-made": {
-                "snowboard": {
-                  "count": 1,
-                  "location": "center",
-                  "size": "large",
-                  "description": "A person is riding a snowboard down a snowy slope."
-                }
-              },
-              "natural": {
-                "tree": {
-                  "count": 5,
-                  "location": "background",
-                  "size": "small/medium/large",
-                  "description": "Multiple trees are scattered throughout the snowy landscape."
-                }
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 243,
-            "output_tokens": 171,
-            "total_tokens": 414
-          },
-          "performance_metrics": {
-            "total_duration_ms": 3001.394375,
-            "prompt_eval_duration_ms": 992.483407,
-            "generation_duration_ms": 1954.448523,
-            "load_duration_ms": 51.445082,
-            "tokens_per_second": 87.49271110887172
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 41911,
-        "total_time_ms": 350593.475905,
-        "average_speed": 96.39429215983901
       }
     }
   ]

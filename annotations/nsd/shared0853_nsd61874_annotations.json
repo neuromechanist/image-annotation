@@ -7,6 +7,303 @@
   "timestamp": "2025-08-30T23:31:33.509177+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a striking clock tower set against a vivid blue sky, suggesting a clear, sunny day. The clock, a prominent feature, is square-shaped with a black frame and adorned with intricate detailing, including small decorative elements and a finial at the top. The clock face itself is white, with black Roman numerals and hands, and a central emblem featuring a yellow circle with a cross, possibly indicating a specific organization or location. The clock is mounted on a tall, slender black column that tapers slightly towards the top, with a classical column-like structure near the base. The surrounding environment includes bare tree branches, indicating the photo was likely taken during late autumn or winter. The lighting is bright and natural, casting sharp shadows and highlighting the textures of the clock and the column, while the blue sky provides a contrasting backdrop that enhances the clock's prominence. The overall composition is balanced, with the clock tower centered and the bare branches framing the image on either side, creating a sense of symmetry and focus on the clock as the main subject.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 211,
+            "total_tokens": 508
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1609.818975,
+            "prompt_eval_duration_ms": 78.407381,
+            "generation_duration_ms": 1489.8262,
+            "load_duration_ms": 39.064534,
+            "tokens_per_second": 141.62725826676964
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, a prominent clock tower stands tall against the clear blue sky. The clock face, adorned with Roman numerals and a central emblem, is the focal point, with ornate details such as decorative carvings and a column-like structure supporting it. The clock is mounted on a sturdy black post, which extends upwards, leading the viewer's eye towards the sky. Bare tree branches, devoid of leaves, are visible in the background, suggesting a winter or early spring setting. These branches frame the clock, adding a natural contrast to the man-made structure. The background elements, the sky and the bare branches, provide a serene and open backdrop, enhancing the prominence of the clock tower in the foreground. The relationship between the elements is one of contrast and harmony; the intricate details of the clock and the stark simplicity of the branches and sky create a visually balanced composition.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 180,
+            "total_tokens": 483
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1358.403413,
+            "prompt_eval_duration_ms": 30.32445,
+            "generation_duration_ms": 1288.324468,
+            "load_duration_ms": 37.079696,
+            "tokens_per_second": 139.71635598866854
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a solitary clock tower standing against a clear blue sky, with bare tree branches framing its base. The clock, adorned with Roman numerals and a central emblem, is the focal point, suggesting a sense of timelessness and permanence. There are no people or animals present in the image, and the interaction between the elements is static. The clock tower, with its ornate design and classical columns, stands as a silent sentinel, unchanging and isolated in the vastness of the sky. The bare branches of the tree add a touch of natural simplicity, contrasting with the structured, man-made elegance of the clock tower. The scene evokes a feeling of solitude and tranquility, with the clock tower and tree branches existing in harmony, each contributing to a serene and timeless atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 160,
+            "total_tokens": 466
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1219.870386,
+            "prompt_eval_duration_ms": 28.550338,
+            "generation_duration_ms": 1148.236598,
+            "load_duration_ms": 40.666957,
+            "tokens_per_second": 139.34410406242773
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of timeless elegance and tranquility, with a subtle hint of nostalgia. The ornate clock, standing tall against the clear blue sky, exudes a sense of stability and order, symbolizing the passage of time and the enduring nature of certain structures. The bare branches of the tree in the background suggest the crispness of winter or the transition into a new season, adding a touch of melancholy or introspection to the scene. The stark contrast between the dark clock and the bright sky enhances the feeling of solitude and quiet reflection. The overall tone is neutral with a slight leaning towards positive, as the clock represents a reliable and steady presence amidst the changing seasons and the passage of time. The absence of people or movement in the image further contributes to a serene and contemplative mood, inviting the viewer to pause and appreciate the beauty in simplicity and permanence.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 178,
+            "total_tokens": 486
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1340.481654,
+            "prompt_eval_duration_ms": 29.727464,
+            "generation_duration_ms": 1269.555778,
+            "load_duration_ms": 36.749408,
+            "tokens_per_second": 140.20652190675156
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"clock\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"ornate clock with Roman numerals and a central emblem\"\n    },\n    \"pole\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"large\",\n      \"description\": \"black pole supporting the clock\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"bare tree branches against clear blue sky\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear blue sky with no clouds\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "clock": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black",
+                  "white"
+                ],
+                "size": "large",
+                "description": "ornate clock with Roman numerals and a central emblem"
+              },
+              "pole": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black"
+                ],
+                "size": "large",
+                "description": "black pole supporting the clock"
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "bare tree branches against clear blue sky"
+              },
+              "sky": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "clear blue sky with no clouds"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 218,
+            "total_tokens": 704
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1625.52634,
+            "prompt_eval_duration_ms": 43.674446,
+            "generation_duration_ms": 1540.637918,
+            "load_duration_ms": 38.548886,
+            "tokens_per_second": 141.4998277356432
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2647,
+        "total_time_ms": 7154.100768,
+        "average_speed": 140.47881359205215
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a tall, ornate clock mounted on a black, cylindrical pole against a clear blue sky. The clock is the central focus, featuring a classic design with Roman numerals marking the hours and a prominent, intricate emblem at its center. The clock face is white with black numerals and hands, providing a stark contrast that enhances readability. The clock's structure is adorned with decorative elements, including small, pointed finials at the top and ornate details around the clock face, suggesting a vintage or historical style.\n\nSurrounding the clock are bare tree branches, indicating that the photo was likely taken during late autumn or winter. The branches are thin and sparse, allowing the blue sky to dominate the background, which adds a sense of openness and clarity to the scene. The lighting is bright and natural, suggesting a sunny day, with the sunlight casting subtle shadows and highlighting the clock's details. The overall composition is balanced, with the clock positioned slightly off-center, creating a dynamic visual flow. The contrast between the dark pole and the bright sky, along with the bare branches, gives the image a serene yet striking aesthetic. The scene conveys a sense of quiet urban or park-like setting, blending functionality with historical charm.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 248,
+            "total_tokens": 545
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12822.857404,
+            "prompt_eval_duration_ms": 3551.983174,
+            "generation_duration_ms": 9228.88845,
+            "load_duration_ms": 38.61191,
+            "tokens_per_second": 26.872141899168803
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a prominent, ornate clock mounted on a tall, dark metal pole. The clock face is circular, featuring Roman numerals and a central emblem, suggesting a classical or historical design. The pole itself is intricately detailed, with decorative elements at the top and base, adding to the overall elegance of the structure. This clock is the primary focus, standing out sharply against the backdrop.\n\nIn the background, the setting is a clear, bright blue sky, indicating a sunny day with no visible clouds. The sky serves as a clean, open canvas that emphasizes the clock's presence. To the right of the clock, there are bare tree branches, likely from deciduous trees that have shed their leaves, suggesting the image was taken during late autumn or winter. These branches add a natural, organic element to the scene, contrasting with the man-made, structured design of the clock.\n\nThe relationship between the foreground and background is one of contrast and balance. The clock, with its intricate details and bold presence, draws immediate attention, while the background provides a serene and uncluttered setting that enhances the clock's prominence. The bare tree branches introduce a subtle natural element, softening the starkness of the sky and adding depth to the composition. Together, these elements create a harmonious visual narrative, where the clock stands as a focal point against a tranquil, natural backdrop.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 283,
+            "total_tokens": 586
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10664.792073,
+            "prompt_eval_duration_ms": 80.400937,
+            "generation_duration_ms": 10543.922058,
+            "load_duration_ms": 38.010501,
+            "tokens_per_second": 26.840107356946852
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a tall, ornate clock mounted on a black, cylindrical column against a clear blue sky. The clock is intricately designed, featuring Roman numerals (I through XII) to indicate the hours, and a central emblem or logo that appears to be a stylized cross or star-like symbol. The clock's face is white with black numerals and hands, and the structure surrounding the clock is adorned with decorative elements, including pointed finials and cross-like motifs, suggesting a historical or classical architectural style.\n\nSurrounding the clock are bare tree branches, indicating that the photo was taken during a season when trees are without leaves, such as late autumn or winter. The branches are sparse, allowing the clock and the sky to be the primary focal points. The contrast between the dark, intricate metalwork of the clock and the bright blue sky creates a striking visual effect.\n\nThere are no people or animals visible in the image. The interaction here is purely between the man-made clock and the natural elements of the sky and trees. The clock stands as a solitary, static object, serving as a timekeeping device and a piece of architectural art. The bare branches of the trees frame the clock, adding a sense of depth and context to the scene. The clear sky emphasizes the clock's prominence and the overall serene atmosphere of the image. The relationship between the clock and the environment suggests a harmonious blend of human craftsmanship and natural surroundings.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 290,
+            "total_tokens": 596
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10909.007953,
+            "prompt_eval_duration_ms": 72.323983,
+            "generation_duration_ms": 10795.822116,
+            "load_duration_ms": 38.203356,
+            "tokens_per_second": 26.862243271886086
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a serene and slightly nostalgic mood, evoking a sense of calm and timelessness. The clock, with its ornate design and Roman numerals, suggests a historical or classical aesthetic, which adds a touch of elegance and tradition. The clear blue sky in the background enhances the feeling of tranquility and openness, while the bare tree branches in the foreground hint at a quiet, perhaps early spring or late autumn atmosphere, further emphasizing a sense of stillness and reflection. The contrast between the dark, sturdy clock tower and the light, airy sky creates a balanced visual harmony, reinforcing the image's peaceful tone. The overall composition, with its symmetrical elements and the clock's central position, contributes to a sense of order and stability. The absence of people or movement adds to the serene and contemplative mood, inviting the viewer to pause and reflect on the passage of time. The emotional atmosphere is predominantly neutral to positive, as it does not evoke strong negative emotions but rather a calm, reflective state of mind. The image's visual elements work together to create a mood that is soothing and slightly melancholic, yet ultimately uplifting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 229,
+            "total_tokens": 537
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8664.995566,
+            "prompt_eval_duration_ms": 73.224389,
+            "generation_duration_ms": 8549.839229,
+            "load_duration_ms": 38.681358,
+            "tokens_per_second": 26.784129369738352
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"clock\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"white\", \"gold\"],\n      \"size\": \"large\",\n      \"description\": \"A tall, ornate clock with Roman numerals and a decorative design.\"\n    },\n    \"pole\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"large\",\n      \"description\": \"A tall, dark pole supporting the clock.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"A tree with bare branches, indicating it might be winter or early spring.\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"A clear, bright blue sky.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "clock": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black",
+                  "white",
+                  "gold"
+                ],
+                "size": "large",
+                "description": "A tall, ornate clock with Roman numerals and a decorative design."
+              },
+              "pole": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black"
+                ],
+                "size": "large",
+                "description": "A tall, dark pole supporting the clock."
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "A tree with bare branches, indicating it might be winter or early spring."
+              },
+              "sky": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "A clear, bright blue sky."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 234,
+            "total_tokens": 720
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8823.013751,
+            "prompt_eval_duration_ms": 134.822115,
+            "generation_duration_ms": 8646.730824,
+            "load_duration_ms": 38.650547,
+            "tokens_per_second": 27.062251012892176
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2984,
+        "total_time_ms": 51884.666746999996,
+        "average_speed": 26.884174582126455
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -450,303 +747,6 @@
         "total_tokens": 2735,
         "total_time_ms": 23434.530535,
         "average_speed": 42.41418798031059
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a striking clock tower set against a vivid blue sky, suggesting a clear, sunny day. The clock, a prominent feature, is square-shaped with a black frame and adorned with intricate detailing, including small decorative elements and a finial at the top. The clock face itself is white, with black Roman numerals and hands, and a central emblem featuring a yellow circle with a cross, possibly indicating a specific organization or location. The clock is mounted on a tall, slender black column that tapers slightly towards the top, with a classical column-like structure near the base. The surrounding environment includes bare tree branches, indicating the photo was likely taken during late autumn or winter. The lighting is bright and natural, casting sharp shadows and highlighting the textures of the clock and the column, while the blue sky provides a contrasting backdrop that enhances the clock's prominence. The overall composition is balanced, with the clock tower centered and the bare branches framing the image on either side, creating a sense of symmetry and focus on the clock as the main subject.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 211,
-            "total_tokens": 508
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1609.818975,
-            "prompt_eval_duration_ms": 78.407381,
-            "generation_duration_ms": 1489.8262,
-            "load_duration_ms": 39.064534,
-            "tokens_per_second": 141.62725826676964
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, a prominent clock tower stands tall against the clear blue sky. The clock face, adorned with Roman numerals and a central emblem, is the focal point, with ornate details such as decorative carvings and a column-like structure supporting it. The clock is mounted on a sturdy black post, which extends upwards, leading the viewer's eye towards the sky. Bare tree branches, devoid of leaves, are visible in the background, suggesting a winter or early spring setting. These branches frame the clock, adding a natural contrast to the man-made structure. The background elements, the sky and the bare branches, provide a serene and open backdrop, enhancing the prominence of the clock tower in the foreground. The relationship between the elements is one of contrast and harmony; the intricate details of the clock and the stark simplicity of the branches and sky create a visually balanced composition.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 180,
-            "total_tokens": 483
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1358.403413,
-            "prompt_eval_duration_ms": 30.32445,
-            "generation_duration_ms": 1288.324468,
-            "load_duration_ms": 37.079696,
-            "tokens_per_second": 139.71635598866854
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a solitary clock tower standing against a clear blue sky, with bare tree branches framing its base. The clock, adorned with Roman numerals and a central emblem, is the focal point, suggesting a sense of timelessness and permanence. There are no people or animals present in the image, and the interaction between the elements is static. The clock tower, with its ornate design and classical columns, stands as a silent sentinel, unchanging and isolated in the vastness of the sky. The bare branches of the tree add a touch of natural simplicity, contrasting with the structured, man-made elegance of the clock tower. The scene evokes a feeling of solitude and tranquility, with the clock tower and tree branches existing in harmony, each contributing to a serene and timeless atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 160,
-            "total_tokens": 466
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1219.870386,
-            "prompt_eval_duration_ms": 28.550338,
-            "generation_duration_ms": 1148.236598,
-            "load_duration_ms": 40.666957,
-            "tokens_per_second": 139.34410406242773
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of timeless elegance and tranquility, with a subtle hint of nostalgia. The ornate clock, standing tall against the clear blue sky, exudes a sense of stability and order, symbolizing the passage of time and the enduring nature of certain structures. The bare branches of the tree in the background suggest the crispness of winter or the transition into a new season, adding a touch of melancholy or introspection to the scene. The stark contrast between the dark clock and the bright sky enhances the feeling of solitude and quiet reflection. The overall tone is neutral with a slight leaning towards positive, as the clock represents a reliable and steady presence amidst the changing seasons and the passage of time. The absence of people or movement in the image further contributes to a serene and contemplative mood, inviting the viewer to pause and appreciate the beauty in simplicity and permanence.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 178,
-            "total_tokens": 486
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1340.481654,
-            "prompt_eval_duration_ms": 29.727464,
-            "generation_duration_ms": 1269.555778,
-            "load_duration_ms": 36.749408,
-            "tokens_per_second": 140.20652190675156
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"clock\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"ornate clock with Roman numerals and a central emblem\"\n    },\n    \"pole\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"large\",\n      \"description\": \"black pole supporting the clock\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"bare tree branches against clear blue sky\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear blue sky with no clouds\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "clock": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black",
-                  "white"
-                ],
-                "size": "large",
-                "description": "ornate clock with Roman numerals and a central emblem"
-              },
-              "pole": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black"
-                ],
-                "size": "large",
-                "description": "black pole supporting the clock"
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 1,
-                "location": "right",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "bare tree branches against clear blue sky"
-              },
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "clear blue sky with no clouds"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 218,
-            "total_tokens": 704
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1625.52634,
-            "prompt_eval_duration_ms": 43.674446,
-            "generation_duration_ms": 1540.637918,
-            "load_duration_ms": 38.548886,
-            "tokens_per_second": 141.4998277356432
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2647,
-        "total_time_ms": 7154.100768,
-        "average_speed": 140.47881359205215
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a tall, ornate clock mounted on a black, cylindrical pole against a clear blue sky. The clock is the central focus, featuring a classic design with Roman numerals marking the hours and a prominent, intricate emblem at its center. The clock face is white with black numerals and hands, providing a stark contrast that enhances readability. The clock's structure is adorned with decorative elements, including small, pointed finials at the top and ornate details around the clock face, suggesting a vintage or historical style.\n\nSurrounding the clock are bare tree branches, indicating that the photo was likely taken during late autumn or winter. The branches are thin and sparse, allowing the blue sky to dominate the background, which adds a sense of openness and clarity to the scene. The lighting is bright and natural, suggesting a sunny day, with the sunlight casting subtle shadows and highlighting the clock's details. The overall composition is balanced, with the clock positioned slightly off-center, creating a dynamic visual flow. The contrast between the dark pole and the bright sky, along with the bare branches, gives the image a serene yet striking aesthetic. The scene conveys a sense of quiet urban or park-like setting, blending functionality with historical charm.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 248,
-            "total_tokens": 545
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12822.857404,
-            "prompt_eval_duration_ms": 3551.983174,
-            "generation_duration_ms": 9228.88845,
-            "load_duration_ms": 38.61191,
-            "tokens_per_second": 26.872141899168803
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a prominent, ornate clock mounted on a tall, dark metal pole. The clock face is circular, featuring Roman numerals and a central emblem, suggesting a classical or historical design. The pole itself is intricately detailed, with decorative elements at the top and base, adding to the overall elegance of the structure. This clock is the primary focus, standing out sharply against the backdrop.\n\nIn the background, the setting is a clear, bright blue sky, indicating a sunny day with no visible clouds. The sky serves as a clean, open canvas that emphasizes the clock's presence. To the right of the clock, there are bare tree branches, likely from deciduous trees that have shed their leaves, suggesting the image was taken during late autumn or winter. These branches add a natural, organic element to the scene, contrasting with the man-made, structured design of the clock.\n\nThe relationship between the foreground and background is one of contrast and balance. The clock, with its intricate details and bold presence, draws immediate attention, while the background provides a serene and uncluttered setting that enhances the clock's prominence. The bare tree branches introduce a subtle natural element, softening the starkness of the sky and adding depth to the composition. Together, these elements create a harmonious visual narrative, where the clock stands as a focal point against a tranquil, natural backdrop.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 283,
-            "total_tokens": 586
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10664.792073,
-            "prompt_eval_duration_ms": 80.400937,
-            "generation_duration_ms": 10543.922058,
-            "load_duration_ms": 38.010501,
-            "tokens_per_second": 26.840107356946852
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a tall, ornate clock mounted on a black, cylindrical column against a clear blue sky. The clock is intricately designed, featuring Roman numerals (I through XII) to indicate the hours, and a central emblem or logo that appears to be a stylized cross or star-like symbol. The clock's face is white with black numerals and hands, and the structure surrounding the clock is adorned with decorative elements, including pointed finials and cross-like motifs, suggesting a historical or classical architectural style.\n\nSurrounding the clock are bare tree branches, indicating that the photo was taken during a season when trees are without leaves, such as late autumn or winter. The branches are sparse, allowing the clock and the sky to be the primary focal points. The contrast between the dark, intricate metalwork of the clock and the bright blue sky creates a striking visual effect.\n\nThere are no people or animals visible in the image. The interaction here is purely between the man-made clock and the natural elements of the sky and trees. The clock stands as a solitary, static object, serving as a timekeeping device and a piece of architectural art. The bare branches of the trees frame the clock, adding a sense of depth and context to the scene. The clear sky emphasizes the clock's prominence and the overall serene atmosphere of the image. The relationship between the clock and the environment suggests a harmonious blend of human craftsmanship and natural surroundings.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 290,
-            "total_tokens": 596
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10909.007953,
-            "prompt_eval_duration_ms": 72.323983,
-            "generation_duration_ms": 10795.822116,
-            "load_duration_ms": 38.203356,
-            "tokens_per_second": 26.862243271886086
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a serene and slightly nostalgic mood, evoking a sense of calm and timelessness. The clock, with its ornate design and Roman numerals, suggests a historical or classical aesthetic, which adds a touch of elegance and tradition. The clear blue sky in the background enhances the feeling of tranquility and openness, while the bare tree branches in the foreground hint at a quiet, perhaps early spring or late autumn atmosphere, further emphasizing a sense of stillness and reflection. The contrast between the dark, sturdy clock tower and the light, airy sky creates a balanced visual harmony, reinforcing the image's peaceful tone. The overall composition, with its symmetrical elements and the clock's central position, contributes to a sense of order and stability. The absence of people or movement adds to the serene and contemplative mood, inviting the viewer to pause and reflect on the passage of time. The emotional atmosphere is predominantly neutral to positive, as it does not evoke strong negative emotions but rather a calm, reflective state of mind. The image's visual elements work together to create a mood that is soothing and slightly melancholic, yet ultimately uplifting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 229,
-            "total_tokens": 537
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8664.995566,
-            "prompt_eval_duration_ms": 73.224389,
-            "generation_duration_ms": 8549.839229,
-            "load_duration_ms": 38.681358,
-            "tokens_per_second": 26.784129369738352
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"clock\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"white\", \"gold\"],\n      \"size\": \"large\",\n      \"description\": \"A tall, ornate clock with Roman numerals and a decorative design.\"\n    },\n    \"pole\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"large\",\n      \"description\": \"A tall, dark pole supporting the clock.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"A tree with bare branches, indicating it might be winter or early spring.\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"A clear, bright blue sky.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "clock": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black",
-                  "white",
-                  "gold"
-                ],
-                "size": "large",
-                "description": "A tall, ornate clock with Roman numerals and a decorative design."
-              },
-              "pole": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black"
-                ],
-                "size": "large",
-                "description": "A tall, dark pole supporting the clock."
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 1,
-                "location": "right",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "A tree with bare branches, indicating it might be winter or early spring."
-              },
-              "sky": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "A clear, bright blue sky."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 234,
-            "total_tokens": 720
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8823.013751,
-            "prompt_eval_duration_ms": 134.822115,
-            "generation_duration_ms": 8646.730824,
-            "load_duration_ms": 38.650547,
-            "tokens_per_second": 27.062251012892176
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2984,
-        "total_time_ms": 51884.666746999996,
-        "average_speed": 26.884174582126455
       }
     },
     {

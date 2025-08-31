@@ -7,6 +7,364 @@
   "timestamp": "2025-08-31T05:12:09.791012+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a scene at an airport, with a clear view of an Alitalia aircraft on the runway, preparing for takeoff or having just landed. The aircraft, painted in the distinctive Alitalia livery with a green and white tail featuring the red and green logo, dominates the foreground. The plane's white fuselage contrasts sharply with the green and red tail, and the word \"Alitalia\" is prominently displayed in green on the side. The setting appears to be a modern airport, with a large glass terminal building in the background, showcasing a mix of architectural styles. The sky is a soft blue, suggesting a clear day with ample natural light, which illuminates the scene evenly. The runway is a dark gray, and there are some yellow safety markers on the grassy area near the edge of the tarmac. The distant hills and faint outlines of other buildings add depth to the background, while the overall composition is balanced, with the airplane as the focal point, and the airport infrastructure providing context to the setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 210,
+            "total_tokens": 507
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1618.498538,
+            "prompt_eval_duration_ms": 79.223131,
+            "generation_duration_ms": 1495.005832,
+            "load_duration_ms": 41.619959,
+            "tokens_per_second": 140.4676794598618
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, the viewer's attention is drawn to the Alitalia aircraft, prominently displayed as it taxis on the runway. The plane's livery, featuring a white fuselage with green and red accents, is clearly visible, along with the airline's logo and name. The aircraft's landing gear is deployed, indicating it is in the process of either landing or preparing to take off. The runway itself is bordered by a strip of grass, adding a natural element to the scene. In the background, the airport terminal buildings rise, showcasing a mix of modern architecture with glass facades and metal structures. Beyond the terminal, the hazy outline of hills or mountains can be seen, suggesting the airport's location in a region with a backdrop of natural landscape. The relationship between the foreground and background elements creates a layered perspective, with the airplane as the focal point, the airport as the setting, and the distant hills providing a sense of depth and context to the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 196,
+            "total_tokens": 499
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1477.255977,
+            "prompt_eval_duration_ms": 30.836939,
+            "generation_duration_ms": 1407.32261,
+            "load_duration_ms": 36.387608,
+            "tokens_per_second": 139.27154911552228
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a scene at an airport where an Alitalia airplane, adorned with its distinctive green and red tail, is taxiing on the runway. The aircraft, a commercial jet, is the central focus, moving steadily towards the terminal. The background reveals the airport's infrastructure, including the terminal building with its glass facade and the control tower, which stands tall against the clear sky. The runway is bordered by grass, and safety cones are strategically placed to guide the plane. The absence of people and animals in the image suggests a moment of calm before the plane's departure or after its arrival. The interaction between the airplane and the airport environment is one of mutual dependence: the plane relies on the airport for takeoff and landing, while the airport facilitates the plane's journey. The image does not depict any direct interaction between the airplane and other objects, but the presence of the runway, terminal, and control tower underscores the complex relationship between the airplane and its surroundings.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 195,
+            "total_tokens": 501
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1463.085648,
+            "prompt_eval_duration_ms": 30.686639,
+            "generation_duration_ms": 1391.663517,
+            "load_duration_ms": 38.307817,
+            "tokens_per_second": 140.1200776035002
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of calm and anticipation, leaning slightly towards the positive. The clear sky and the well-maintained airport infrastructure suggest a routine, orderly environment, which can be comforting. The Alitalia airplane, with its vibrant green and red tail, stands out against the muted tones of the airport, drawing the viewer's eye and adding a touch of vibrancy to the scene. The presence of the airplane on the tarmac, ready for departure, conveys a sense of readiness and the promise of travel, which can be exciting and hopeful. The distant hills and buildings in the background add depth and a sense of scale, grounding the image in a real-world setting, which can make the viewer feel connected to the scene. The overall tone is neutral to positive, as the image captures a moment of transition, a snapshot of a journey about to begin, which can be both thrilling and reassuring.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 184,
+            "total_tokens": 492
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1393.516721,
+            "prompt_eval_duration_ms": 31.736215,
+            "generation_duration_ms": 1318.473274,
+            "load_duration_ms": 40.59161,
+            "tokens_per_second": 139.55535059256727
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"airplane\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"green\", \"red\"],\n      \"size\": \"large\",\n      \"description\": \"Alitalia airplane on runway\"\n    },\n    \"airport\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"gray\", \"blue\"],\n      \"size\": \"large\",\n      \"description\": \"airport terminal buildings\"\n    },\n    \"runway\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"airplane on runway\"\n    },\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"grass near runway\"\n    },\n    \"aircraft lights\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"aircraft lights on ground\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear sky\"\n    },\n    \"mountains\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"mountains in distance\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "airplane": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "white",
+                  "green",
+                  "red"
+                ],
+                "size": "large",
+                "description": "Alitalia airplane on runway"
+              },
+              "airport": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "gray",
+                  "blue"
+                ],
+                "size": "large",
+                "description": "airport terminal buildings"
+              },
+              "runway": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "airplane on runway"
+              },
+              "grass": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "grass near runway"
+              },
+              "aircraft lights": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "yellow"
+                ],
+                "size": "small",
+                "description": "aircraft lights on ground"
+              }
+            },
+            "natural": {
+              "sky": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "clear sky"
+              },
+              "mountains": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "mountains in distance"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 350,
+            "total_tokens": 836
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2572.106595,
+            "prompt_eval_duration_ms": 45.767974,
+            "generation_duration_ms": 2480.770931,
+            "load_duration_ms": 39.457129,
+            "tokens_per_second": 141.0851746230817
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2835,
+        "total_time_ms": 8524.463479,
+        "average_speed": 140.09996627890663
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts an airport scene with a clear focus on an Alitalia airplane, prominently positioned in the foreground. The aircraft, painted in the airline's iconic livery of white with green and red accents on the tail, is taxiing on a runway. The plane's engines are visible, and the landing gear is deployed, indicating it is either preparing for takeoff or has recently landed. The background features a modern airport terminal with large glass windows and a mix of architectural structures, including a control tower and other support buildings. The terminal's facade is primarily gray and white, with some blue accents visible on the signage. In the distance, a mountain range is faintly visible, adding depth to the scene. The sky is a clear, light blue, suggesting good weather conditions. The foreground includes a grassy area adjacent to the runway, with yellow safety cones placed along the edge, likely for guiding aircraft movement. The overall lighting is bright and even, indicative of daytime, with no harsh shadows, contributing to a calm and orderly atmosphere. The composition effectively balances the airplane in the foreground with the terminal and landscape in the background, creating a sense of scale and context.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 236,
+            "total_tokens": 533
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12459.054926,
+            "prompt_eval_duration_ms": 3666.037792,
+            "generation_duration_ms": 8751.84279,
+            "load_duration_ms": 38.553259,
+            "tokens_per_second": 26.965749461320023
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image prominently features an Alitalia airplane, which is the central focus. The aircraft is positioned on a paved runway, with its engines and wings clearly visible. In front of the plane, there are yellow ground markings, likely used for guiding aircraft during taxiing or takeoff procedures. The grassy area adjacent to the runway adds a natural element to the foreground, contrasting with the industrial setting of the airport. These elements are sharp and in focus, drawing immediate attention to the plane and its immediate surroundings.\n\nIn the background, the setting transitions to the airport infrastructure. The distant elements include a large terminal building with glass facades and modern architectural features, indicative of a major international airport. Beyond the terminal, there are additional structures, possibly hangars or maintenance facilities, and a control tower, which is a key component of airport operations. The background also includes a clear blue sky and distant hills or mountains, providing depth and context to the scene. The background elements are slightly less sharp, creating a sense of distance and scale.\n\nThe relationship between the foreground and background is one of depth and context. The airplane in the foreground represents the primary activity of the airport\u2014aviation and travel\u2014while the background provides the setting and infrastructure that supports this activity. The clear sky and distant landscape further enhance the sense of space, emphasizing the expansive nature of the airport environment. Together, these layers create a comprehensive view of an airport scene, highlighting both the operational aspects and the broader setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 300,
+            "total_tokens": 603
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11298.817332,
+            "prompt_eval_duration_ms": 75.481217,
+            "generation_duration_ms": 11180.543636,
+            "load_duration_ms": 38.394484,
+            "tokens_per_second": 26.832326742506176
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts an airport scene featuring an Alitalia airplane on a runway, with no visible people or animals. The primary object in focus is the Alitalia aircraft, which is a commercial passenger plane, identifiable by its livery featuring the airline's logo and colors. The plane is positioned on the tarmac, suggesting it is either preparing for takeoff or has recently landed. The runway is marked with yellow safety cones, indicating a controlled area for aircraft movement.\n\nIn the background, there are airport structures, including terminal buildings and control towers, which are essential for managing air traffic and passenger operations. The terminal buildings have large windows and modern architectural features, typical of an international airport. The presence of other aircraft tails in the background suggests that this is a busy airport with multiple flights operating simultaneously.\n\nThe relationship between the elements in the image is primarily functional and operational. The Alitalia plane interacts with the runway and airport infrastructure, adhering to the guidelines set by air traffic control. The yellow cones on the runway serve as safety markers to ensure the plane stays within designated areas. The terminal buildings in the background are connected to the plane through the flow of passengers and cargo, although no individuals are visible in this particular image. The overall scene portrays a typical moment in the daily operations of an airport, emphasizing the coordination and infrastructure required for air travel.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 272,
+            "total_tokens": 578
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10258.238749,
+            "prompt_eval_duration_ms": 73.149467,
+            "generation_duration_ms": 10143.5639,
+            "load_duration_ms": 38.871092,
+            "tokens_per_second": 26.81503292940265
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a neutral to slightly positive mood, evoking feelings of calmness, routine, and anticipation. The clear blue sky and the well-maintained airport infrastructure suggest a sense of order and efficiency, which can be reassuring. The prominent Alitalia aircraft, with its sleek design and vibrant green, white, and red tail, adds a touch of vibrancy and national pride, subtly enhancing the positive tone. The presence of multiple planes on the tarmac indicates activity and movement, which can evoke a sense of excitement and readiness for travel, though the overall scene remains calm and unhurried.\n\nThe visual elements contributing to this atmosphere include the bright, open sky, which conveys openness and freedom, and the structured, organized layout of the airport, which suggests reliability and safety. The green grass in the foreground adds a natural element, softening the industrial setting and providing a contrast that balances the scene. The distant buildings and mountains in the background give depth and context, reinforcing the idea of a gateway to distant destinations. The absence of crowds or visible stressors contributes to the overall sense of calm, making the image feel neutral yet optimistic. The mood is neither overly positive nor negative, but rather a balanced representation of the everyday operations of air travel.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 254,
+            "total_tokens": 562
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9603.124627,
+            "prompt_eval_duration_ms": 74.242585,
+            "generation_duration_ms": 9484.04694,
+            "load_duration_ms": 39.963302,
+            "tokens_per_second": 26.781815991307187
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {},\n  \"animal\": {},\n  \"man-made\": {\n    \"airplane\": {\n      \"count\": 2,\n      \"location\": \"center, foreground\",\n      \"color\": [\"white\", \"green\", \"red\", \"blue\", \"yellow\"],\n      \"size\": \"large\",\n      \"description\": \"Two airplanes, one prominently visible with Alitalia branding and the other partially visible in the background.\"\n    },\n    \"airport terminal\": {\n      \"count\": 1,\n      \"location\": \"center, background\",\n      \"color\": [\"gray\", \"blue\"],\n      \"size\": \"large\",\n      \"description\": \"Modern airport terminal building with glass windows and structural elements.\"\n    },\n    \"runway\": {\n      \"count\": 1,\n      \"location\": \"bottom, foreground\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Airport runway with visible markings and safety cones.\"\n    },\n    \"safety cones\": {\n      \"count\": 4,\n      \"location\": \"bottom, foreground\",\n      \"color\": [\"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"Yellow safety cones lined up on the runway.\"\n    },\n    \"lighting pole\": {\n      \"count\": 1,\n      \"location\": \"center, background\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"Airport lighting pole.\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top, background\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"Clear blue sky.\"\n    },\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"bottom, foreground\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Grass area near the runway.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {},
+            "animal": {},
+            "man-made": {
+              "airplane": {
+                "count": 2,
+                "location": "center, foreground",
+                "color": [
+                  "white",
+                  "green",
+                  "red",
+                  "blue",
+                  "yellow"
+                ],
+                "size": "large",
+                "description": "Two airplanes, one prominently visible with Alitalia branding and the other partially visible in the background."
+              },
+              "airport terminal": {
+                "count": 1,
+                "location": "center, background",
+                "color": [
+                  "gray",
+                  "blue"
+                ],
+                "size": "large",
+                "description": "Modern airport terminal building with glass windows and structural elements."
+              },
+              "runway": {
+                "count": 1,
+                "location": "bottom, foreground",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "Airport runway with visible markings and safety cones."
+              },
+              "safety cones": {
+                "count": 4,
+                "location": "bottom, foreground",
+                "color": [
+                  "yellow"
+                ],
+                "size": "small",
+                "description": "Yellow safety cones lined up on the runway."
+              },
+              "lighting pole": {
+                "count": 1,
+                "location": "center, background",
+                "color": [
+                  "gray"
+                ],
+                "size": "medium",
+                "description": "Airport lighting pole."
+              }
+            },
+            "natural": {
+              "sky": {
+                "count": 1,
+                "location": "top, background",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "Clear blue sky."
+              },
+              "grass": {
+                "count": 1,
+                "location": "bottom, foreground",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "Grass area near the runway."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 412,
+            "total_tokens": 898
+          },
+          "performance_metrics": {
+            "total_duration_ms": 15416.850278,
+            "prompt_eval_duration_ms": 134.609901,
+            "generation_duration_ms": 15241.474372,
+            "load_duration_ms": 38.145576,
+            "tokens_per_second": 27.031505610564956
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3174,
+        "total_time_ms": 59036.085911999995,
+        "average_speed": 26.885286147020203
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -376,361 +734,6 @@
       }
     },
     {
-      "model": "mistral-small3.2:24b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts an airport scene with a focus on an Alitalia airplane. The airplane, predominantly white with green and red accents, is positioned on the runway, suggesting it is either preparing for takeoff or has just landed. The Alitalia logo and branding are prominently displayed on the fuselage. In the background, there is a terminal building with a modern architectural design, featuring large glass windows and a distinctive curved roof. The terminal is adorned with the Lufthansa logo, indicating a possible collaboration or shared facilities between the two airlines. The setting appears to be a clear day with good visibility, as the sky is bright and the sunlight illuminates the scene, casting soft shadows. The overall composition includes elements of urban infrastructure, aviation technology, and natural light, creating a dynamic and bustling atmosphere typical of a busy airport environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 792,
-            "output_tokens": 169,
-            "total_tokens": 961
-          },
-          "performance_metrics": {
-            "total_duration_ms": 6796.950568,
-            "prompt_eval_duration_ms": 2051.497499,
-            "generation_duration_ms": 4695.380451,
-            "load_duration_ms": 46.998865,
-            "tokens_per_second": 35.992823534460804
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, there is an Alitalia airplane prominently positioned on the runway, appearing close to the viewer. The aircraft is detailed with the Alitalia logo and livery, and it seems to be either taxiing or preparing for takeoff. In front of the airplane, there are several yellow runway markers, which are used for navigation and positioning on the tarmac. The grass around the runway is visible, indicating the edge of the paved surface.\n\nIn the background, there are several airport buildings and structures, including a terminal with large glass windows and a control tower. The terminal features the logo of Lufthansa, suggesting this is an international airport with multiple airlines operating there. The buildings are set against a backdrop of distant hills or mountains, under a clear sky, providing a sense of location and context. The foreground elements, such as the airplane and runway markers, are directly related to the background elements, as they are all part of the airport infrastructure and operations. The airplane is likely preparing to depart from or arrive at the terminal visible in the background, creating a cohesive scene of airport activity.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 798,
-            "output_tokens": 226,
-            "total_tokens": 1024
-          },
-          "performance_metrics": {
-            "total_duration_ms": 6402.605961,
-            "prompt_eval_duration_ms": 56.773148,
-            "generation_duration_ms": 6296.912262,
-            "load_duration_ms": 45.064255,
-            "tokens_per_second": 35.890606474516574
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts an airport scene with an Alitalia airplane prominently positioned on the runway. The airplane, adorned with the Alitalia logo and a distinctive green, white, and red tail, appears to be either preparing for takeoff or taxiing. In the background, there is a Lufthansa airplane parked at a gate, identifiable by its logo and livery. The airport buildings, including a control tower and terminal structures, are visible, suggesting a busy airport environment. There are no discernible people or animals in the image, focusing the attention solely on the aircraft and infrastructure. The airplanes and buildings interact as part of the airport's operational landscape, with the runways and taxiways connecting them. The presence of the Lufthansa airplane at the gate indicates ongoing flight operations, while the Alitalia airplane on the runway suggests active movement and preparation for flight. The overall scene captures the dynamic and interconnected nature of airport activities.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 800,
-            "output_tokens": 191,
-            "total_tokens": 991
-          },
-          "performance_metrics": {
-            "total_duration_ms": 5411.579525,
-            "prompt_eval_duration_ms": 56.548377,
-            "generation_duration_ms": 5307.34809,
-            "load_duration_ms": 44.611799,
-            "tokens_per_second": 35.98784115175683
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of anticipation and excitement, evoking feelings of travel and adventure. The overall tone is positive, primarily due to the vibrant colors and the dynamic setting of an airport. The Alitalia airplane, adorned with its distinctive green, white, and red livery, stands out prominently on the runway, suggesting readiness for departure. The clear sky and distant buildings add a sense of openness and possibility, reinforcing the idea of journeys and new experiences. The presence of the Lufthansa logo in the background further emphasizes the international and interconnected nature of travel, contributing to a sense of global exploration. The bright lighting and well-maintained surroundings of the airport create a welcoming and efficient atmosphere, enhancing the positive emotions associated with travel. Overall, the image captures the essence of travel preparation, evoking feelings of optimism and the thrill of embarking on a new journey.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 803,
-            "output_tokens": 179,
-            "total_tokens": 982
-          },
-          "performance_metrics": {
-            "total_duration_ms": 5086.676192,
-            "prompt_eval_duration_ms": 58.862858,
-            "generation_duration_ms": 4978.521296,
-            "load_duration_ms": 46.141129,
-            "tokens_per_second": 35.95445100211137
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"airplane\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"green\", \"red\"],\n      \"size\": \"large\",\n      \"description\": \"An Alitalia airplane on the runway.\"\n    },\n    \"airport_terminal\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"gray\", \"blue\"],\n      \"size\": \"large\",\n      \"description\": \"An airport terminal building.\"\n    },\n    \"light_tower\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"A light tower near the runway.\"\n    },\n    \"cones\": {\n      \"count\": 5,\n      \"location\": \"foreground\",\n      \"color\": [\"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"Yellow traffic cones placed on the runway.\"\n    },\n    \"logo\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"yellow\", \"blue\"],\n      \"size\": \"small\",\n      \"description\": \"A Lufthansa logo on the terminal building.\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"description\": \"Clear sky with some clouds.\"\n    },\n    \"mountain\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"description\": \"Distant mountains in the background.\"\n    },\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"green\"],\n      \"description\": \"Grass on the sides of the runway.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "airplane": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "white",
-                  "green",
-                  "red"
-                ],
-                "size": "large",
-                "description": "An Alitalia airplane on the runway."
-              },
-              "airport_terminal": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "gray",
-                  "blue"
-                ],
-                "size": "large",
-                "description": "An airport terminal building."
-              },
-              "light_tower": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "gray"
-                ],
-                "size": "medium",
-                "description": "A light tower near the runway."
-              },
-              "cones": {
-                "count": 5,
-                "location": "foreground",
-                "color": [
-                  "yellow"
-                ],
-                "size": "small",
-                "description": "Yellow traffic cones placed on the runway."
-              },
-              "logo": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "yellow",
-                  "blue"
-                ],
-                "size": "small",
-                "description": "A Lufthansa logo on the terminal building."
-              }
-            },
-            "natural": {
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "description": "Clear sky with some clouds."
-              },
-              "mountain": {
-                "count": 1,
-                "location": "background",
-                "description": "Distant mountains in the background."
-              },
-              "grass": {
-                "count": 1,
-                "location": "foreground",
-                "color": [
-                  "green"
-                ],
-                "description": "Grass on the sides of the runway."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 982,
-            "output_tokens": 388,
-            "total_tokens": 1370
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10975.604717,
-            "prompt_eval_duration_ms": 107.746582,
-            "generation_duration_ms": 10816.285287,
-            "load_duration_ms": 48.417772,
-            "tokens_per_second": 35.871834895695095
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 5328,
-        "total_time_ms": 34673.416963,
-        "average_speed": 35.93951141170813
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a scene at an airport, with a clear view of an Alitalia aircraft on the runway, preparing for takeoff or having just landed. The aircraft, painted in the distinctive Alitalia livery with a green and white tail featuring the red and green logo, dominates the foreground. The plane's white fuselage contrasts sharply with the green and red tail, and the word \"Alitalia\" is prominently displayed in green on the side. The setting appears to be a modern airport, with a large glass terminal building in the background, showcasing a mix of architectural styles. The sky is a soft blue, suggesting a clear day with ample natural light, which illuminates the scene evenly. The runway is a dark gray, and there are some yellow safety markers on the grassy area near the edge of the tarmac. The distant hills and faint outlines of other buildings add depth to the background, while the overall composition is balanced, with the airplane as the focal point, and the airport infrastructure providing context to the setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 210,
-            "total_tokens": 507
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1618.498538,
-            "prompt_eval_duration_ms": 79.223131,
-            "generation_duration_ms": 1495.005832,
-            "load_duration_ms": 41.619959,
-            "tokens_per_second": 140.4676794598618
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, the viewer's attention is drawn to the Alitalia aircraft, prominently displayed as it taxis on the runway. The plane's livery, featuring a white fuselage with green and red accents, is clearly visible, along with the airline's logo and name. The aircraft's landing gear is deployed, indicating it is in the process of either landing or preparing to take off. The runway itself is bordered by a strip of grass, adding a natural element to the scene. In the background, the airport terminal buildings rise, showcasing a mix of modern architecture with glass facades and metal structures. Beyond the terminal, the hazy outline of hills or mountains can be seen, suggesting the airport's location in a region with a backdrop of natural landscape. The relationship between the foreground and background elements creates a layered perspective, with the airplane as the focal point, the airport as the setting, and the distant hills providing a sense of depth and context to the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 196,
-            "total_tokens": 499
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1477.255977,
-            "prompt_eval_duration_ms": 30.836939,
-            "generation_duration_ms": 1407.32261,
-            "load_duration_ms": 36.387608,
-            "tokens_per_second": 139.27154911552228
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a scene at an airport where an Alitalia airplane, adorned with its distinctive green and red tail, is taxiing on the runway. The aircraft, a commercial jet, is the central focus, moving steadily towards the terminal. The background reveals the airport's infrastructure, including the terminal building with its glass facade and the control tower, which stands tall against the clear sky. The runway is bordered by grass, and safety cones are strategically placed to guide the plane. The absence of people and animals in the image suggests a moment of calm before the plane's departure or after its arrival. The interaction between the airplane and the airport environment is one of mutual dependence: the plane relies on the airport for takeoff and landing, while the airport facilitates the plane's journey. The image does not depict any direct interaction between the airplane and other objects, but the presence of the runway, terminal, and control tower underscores the complex relationship between the airplane and its surroundings.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 195,
-            "total_tokens": 501
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1463.085648,
-            "prompt_eval_duration_ms": 30.686639,
-            "generation_duration_ms": 1391.663517,
-            "load_duration_ms": 38.307817,
-            "tokens_per_second": 140.1200776035002
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of calm and anticipation, leaning slightly towards the positive. The clear sky and the well-maintained airport infrastructure suggest a routine, orderly environment, which can be comforting. The Alitalia airplane, with its vibrant green and red tail, stands out against the muted tones of the airport, drawing the viewer's eye and adding a touch of vibrancy to the scene. The presence of the airplane on the tarmac, ready for departure, conveys a sense of readiness and the promise of travel, which can be exciting and hopeful. The distant hills and buildings in the background add depth and a sense of scale, grounding the image in a real-world setting, which can make the viewer feel connected to the scene. The overall tone is neutral to positive, as the image captures a moment of transition, a snapshot of a journey about to begin, which can be both thrilling and reassuring.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 184,
-            "total_tokens": 492
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1393.516721,
-            "prompt_eval_duration_ms": 31.736215,
-            "generation_duration_ms": 1318.473274,
-            "load_duration_ms": 40.59161,
-            "tokens_per_second": 139.55535059256727
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"airplane\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"green\", \"red\"],\n      \"size\": \"large\",\n      \"description\": \"Alitalia airplane on runway\"\n    },\n    \"airport\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"gray\", \"blue\"],\n      \"size\": \"large\",\n      \"description\": \"airport terminal buildings\"\n    },\n    \"runway\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"airplane on runway\"\n    },\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"grass near runway\"\n    },\n    \"aircraft lights\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"aircraft lights on ground\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear sky\"\n    },\n    \"mountains\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"mountains in distance\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "airplane": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "white",
-                  "green",
-                  "red"
-                ],
-                "size": "large",
-                "description": "Alitalia airplane on runway"
-              },
-              "airport": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "gray",
-                  "blue"
-                ],
-                "size": "large",
-                "description": "airport terminal buildings"
-              },
-              "runway": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "airplane on runway"
-              },
-              "grass": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "grass near runway"
-              },
-              "aircraft lights": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "yellow"
-                ],
-                "size": "small",
-                "description": "aircraft lights on ground"
-              }
-            },
-            "natural": {
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "clear sky"
-              },
-              "mountains": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "mountains in distance"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 350,
-            "total_tokens": 836
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2572.106595,
-            "prompt_eval_duration_ms": 45.767974,
-            "generation_duration_ms": 2480.770931,
-            "load_duration_ms": 39.457129,
-            "tokens_per_second": 141.0851746230817
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2835,
-        "total_time_ms": 8524.463479,
-        "average_speed": 140.09996627890663
-      }
-    },
-    {
       "model": "gemma3:27b",
       "temperature": 0.3,
       "prompts": {
@@ -908,295 +911,181 @@
       }
     },
     {
-      "model": "qwen2.5vl:32b",
+      "model": "mistral-small3.2:24b",
       "temperature": 0.3,
       "prompts": {
         "general_description": {
           "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts an airport scene with a clear focus on an Alitalia airplane, prominently positioned in the foreground. The aircraft, painted in the airline's iconic livery of white with green and red accents on the tail, is taxiing on a runway. The plane's engines are visible, and the landing gear is deployed, indicating it is either preparing for takeoff or has recently landed. The background features a modern airport terminal with large glass windows and a mix of architectural structures, including a control tower and other support buildings. The terminal's facade is primarily gray and white, with some blue accents visible on the signage. In the distance, a mountain range is faintly visible, adding depth to the scene. The sky is a clear, light blue, suggesting good weather conditions. The foreground includes a grassy area adjacent to the runway, with yellow safety cones placed along the edge, likely for guiding aircraft movement. The overall lighting is bright and even, indicative of daytime, with no harsh shadows, contributing to a calm and orderly atmosphere. The composition effectively balances the airplane in the foreground with the terminal and landscape in the background, creating a sense of scale and context.",
+          "response": "The image depicts an airport scene with a focus on an Alitalia airplane. The airplane, predominantly white with green and red accents, is positioned on the runway, suggesting it is either preparing for takeoff or has just landed. The Alitalia logo and branding are prominently displayed on the fuselage. In the background, there is a terminal building with a modern architectural design, featuring large glass windows and a distinctive curved roof. The terminal is adorned with the Lufthansa logo, indicating a possible collaboration or shared facilities between the two airlines. The setting appears to be a clear day with good visibility, as the sky is bright and the sunlight illuminates the scene, casting soft shadows. The overall composition includes elements of urban infrastructure, aviation technology, and natural light, creating a dynamic and bustling atmosphere typical of a busy airport environment.",
           "response_format": "text",
           "response_data": null,
           "error": null,
           "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 236,
-            "total_tokens": 533
+            "input_tokens": 792,
+            "output_tokens": 169,
+            "total_tokens": 961
           },
           "performance_metrics": {
-            "total_duration_ms": 12459.054926,
-            "prompt_eval_duration_ms": 3666.037792,
-            "generation_duration_ms": 8751.84279,
-            "load_duration_ms": 38.553259,
-            "tokens_per_second": 26.965749461320023
+            "total_duration_ms": 6796.950568,
+            "prompt_eval_duration_ms": 2051.497499,
+            "generation_duration_ms": 4695.380451,
+            "load_duration_ms": 46.998865,
+            "tokens_per_second": 35.992823534460804
           }
         },
         "foreground_background": {
           "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image prominently features an Alitalia airplane, which is the central focus. The aircraft is positioned on a paved runway, with its engines and wings clearly visible. In front of the plane, there are yellow ground markings, likely used for guiding aircraft during taxiing or takeoff procedures. The grassy area adjacent to the runway adds a natural element to the foreground, contrasting with the industrial setting of the airport. These elements are sharp and in focus, drawing immediate attention to the plane and its immediate surroundings.\n\nIn the background, the setting transitions to the airport infrastructure. The distant elements include a large terminal building with glass facades and modern architectural features, indicative of a major international airport. Beyond the terminal, there are additional structures, possibly hangars or maintenance facilities, and a control tower, which is a key component of airport operations. The background also includes a clear blue sky and distant hills or mountains, providing depth and context to the scene. The background elements are slightly less sharp, creating a sense of distance and scale.\n\nThe relationship between the foreground and background is one of depth and context. The airplane in the foreground represents the primary activity of the airport\u2014aviation and travel\u2014while the background provides the setting and infrastructure that supports this activity. The clear sky and distant landscape further enhance the sense of space, emphasizing the expansive nature of the airport environment. Together, these layers create a comprehensive view of an airport scene, highlighting both the operational aspects and the broader setting.",
+          "response": "In the foreground of the image, there is an Alitalia airplane prominently positioned on the runway, appearing close to the viewer. The aircraft is detailed with the Alitalia logo and livery, and it seems to be either taxiing or preparing for takeoff. In front of the airplane, there are several yellow runway markers, which are used for navigation and positioning on the tarmac. The grass around the runway is visible, indicating the edge of the paved surface.\n\nIn the background, there are several airport buildings and structures, including a terminal with large glass windows and a control tower. The terminal features the logo of Lufthansa, suggesting this is an international airport with multiple airlines operating there. The buildings are set against a backdrop of distant hills or mountains, under a clear sky, providing a sense of location and context. The foreground elements, such as the airplane and runway markers, are directly related to the background elements, as they are all part of the airport infrastructure and operations. The airplane is likely preparing to depart from or arrive at the terminal visible in the background, creating a cohesive scene of airport activity.",
           "response_format": "text",
           "response_data": null,
           "error": null,
           "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 300,
-            "total_tokens": 603
+            "input_tokens": 798,
+            "output_tokens": 226,
+            "total_tokens": 1024
           },
           "performance_metrics": {
-            "total_duration_ms": 11298.817332,
-            "prompt_eval_duration_ms": 75.481217,
-            "generation_duration_ms": 11180.543636,
-            "load_duration_ms": 38.394484,
-            "tokens_per_second": 26.832326742506176
+            "total_duration_ms": 6402.605961,
+            "prompt_eval_duration_ms": 56.773148,
+            "generation_duration_ms": 6296.912262,
+            "load_duration_ms": 45.064255,
+            "tokens_per_second": 35.890606474516574
           }
         },
         "entities_interactions": {
           "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts an airport scene featuring an Alitalia airplane on a runway, with no visible people or animals. The primary object in focus is the Alitalia aircraft, which is a commercial passenger plane, identifiable by its livery featuring the airline's logo and colors. The plane is positioned on the tarmac, suggesting it is either preparing for takeoff or has recently landed. The runway is marked with yellow safety cones, indicating a controlled area for aircraft movement.\n\nIn the background, there are airport structures, including terminal buildings and control towers, which are essential for managing air traffic and passenger operations. The terminal buildings have large windows and modern architectural features, typical of an international airport. The presence of other aircraft tails in the background suggests that this is a busy airport with multiple flights operating simultaneously.\n\nThe relationship between the elements in the image is primarily functional and operational. The Alitalia plane interacts with the runway and airport infrastructure, adhering to the guidelines set by air traffic control. The yellow cones on the runway serve as safety markers to ensure the plane stays within designated areas. The terminal buildings in the background are connected to the plane through the flow of passengers and cargo, although no individuals are visible in this particular image. The overall scene portrays a typical moment in the daily operations of an airport, emphasizing the coordination and infrastructure required for air travel.",
+          "response": "The image depicts an airport scene with an Alitalia airplane prominently positioned on the runway. The airplane, adorned with the Alitalia logo and a distinctive green, white, and red tail, appears to be either preparing for takeoff or taxiing. In the background, there is a Lufthansa airplane parked at a gate, identifiable by its logo and livery. The airport buildings, including a control tower and terminal structures, are visible, suggesting a busy airport environment. There are no discernible people or animals in the image, focusing the attention solely on the aircraft and infrastructure. The airplanes and buildings interact as part of the airport's operational landscape, with the runways and taxiways connecting them. The presence of the Lufthansa airplane at the gate indicates ongoing flight operations, while the Alitalia airplane on the runway suggests active movement and preparation for flight. The overall scene captures the dynamic and interconnected nature of airport activities.",
           "response_format": "text",
           "response_data": null,
           "error": null,
           "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 272,
-            "total_tokens": 578
+            "input_tokens": 800,
+            "output_tokens": 191,
+            "total_tokens": 991
           },
           "performance_metrics": {
-            "total_duration_ms": 10258.238749,
-            "prompt_eval_duration_ms": 73.149467,
-            "generation_duration_ms": 10143.5639,
-            "load_duration_ms": 38.871092,
-            "tokens_per_second": 26.81503292940265
+            "total_duration_ms": 5411.579525,
+            "prompt_eval_duration_ms": 56.548377,
+            "generation_duration_ms": 5307.34809,
+            "load_duration_ms": 44.611799,
+            "tokens_per_second": 35.98784115175683
           }
         },
         "mood_emotions": {
           "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a neutral to slightly positive mood, evoking feelings of calmness, routine, and anticipation. The clear blue sky and the well-maintained airport infrastructure suggest a sense of order and efficiency, which can be reassuring. The prominent Alitalia aircraft, with its sleek design and vibrant green, white, and red tail, adds a touch of vibrancy and national pride, subtly enhancing the positive tone. The presence of multiple planes on the tarmac indicates activity and movement, which can evoke a sense of excitement and readiness for travel, though the overall scene remains calm and unhurried.\n\nThe visual elements contributing to this atmosphere include the bright, open sky, which conveys openness and freedom, and the structured, organized layout of the airport, which suggests reliability and safety. The green grass in the foreground adds a natural element, softening the industrial setting and providing a contrast that balances the scene. The distant buildings and mountains in the background give depth and context, reinforcing the idea of a gateway to distant destinations. The absence of crowds or visible stressors contributes to the overall sense of calm, making the image feel neutral yet optimistic. The mood is neither overly positive nor negative, but rather a balanced representation of the everyday operations of air travel.",
+          "response": "The image conveys a mood of anticipation and excitement, evoking feelings of travel and adventure. The overall tone is positive, primarily due to the vibrant colors and the dynamic setting of an airport. The Alitalia airplane, adorned with its distinctive green, white, and red livery, stands out prominently on the runway, suggesting readiness for departure. The clear sky and distant buildings add a sense of openness and possibility, reinforcing the idea of journeys and new experiences. The presence of the Lufthansa logo in the background further emphasizes the international and interconnected nature of travel, contributing to a sense of global exploration. The bright lighting and well-maintained surroundings of the airport create a welcoming and efficient atmosphere, enhancing the positive emotions associated with travel. Overall, the image captures the essence of travel preparation, evoking feelings of optimism and the thrill of embarking on a new journey.",
           "response_format": "text",
           "response_data": null,
           "error": null,
           "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 254,
-            "total_tokens": 562
+            "input_tokens": 803,
+            "output_tokens": 179,
+            "total_tokens": 982
           },
           "performance_metrics": {
-            "total_duration_ms": 9603.124627,
-            "prompt_eval_duration_ms": 74.242585,
-            "generation_duration_ms": 9484.04694,
-            "load_duration_ms": 39.963302,
-            "tokens_per_second": 26.781815991307187
+            "total_duration_ms": 5086.676192,
+            "prompt_eval_duration_ms": 58.862858,
+            "generation_duration_ms": 4978.521296,
+            "load_duration_ms": 46.141129,
+            "tokens_per_second": 35.95445100211137
           }
         },
         "structured_inventory": {
           "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {},\n  \"animal\": {},\n  \"man-made\": {\n    \"airplane\": {\n      \"count\": 2,\n      \"location\": \"center, foreground\",\n      \"color\": [\"white\", \"green\", \"red\", \"blue\", \"yellow\"],\n      \"size\": \"large\",\n      \"description\": \"Two airplanes, one prominently visible with Alitalia branding and the other partially visible in the background.\"\n    },\n    \"airport terminal\": {\n      \"count\": 1,\n      \"location\": \"center, background\",\n      \"color\": [\"gray\", \"blue\"],\n      \"size\": \"large\",\n      \"description\": \"Modern airport terminal building with glass windows and structural elements.\"\n    },\n    \"runway\": {\n      \"count\": 1,\n      \"location\": \"bottom, foreground\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Airport runway with visible markings and safety cones.\"\n    },\n    \"safety cones\": {\n      \"count\": 4,\n      \"location\": \"bottom, foreground\",\n      \"color\": [\"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"Yellow safety cones lined up on the runway.\"\n    },\n    \"lighting pole\": {\n      \"count\": 1,\n      \"location\": \"center, background\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"Airport lighting pole.\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top, background\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"Clear blue sky.\"\n    },\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"bottom, foreground\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Grass area near the runway.\"\n    }\n  }\n}\n```",
+          "response": "```json\n{\n  \"man-made\": {\n    \"airplane\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"green\", \"red\"],\n      \"size\": \"large\",\n      \"description\": \"An Alitalia airplane on the runway.\"\n    },\n    \"airport_terminal\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"gray\", \"blue\"],\n      \"size\": \"large\",\n      \"description\": \"An airport terminal building.\"\n    },\n    \"light_tower\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"A light tower near the runway.\"\n    },\n    \"cones\": {\n      \"count\": 5,\n      \"location\": \"foreground\",\n      \"color\": [\"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"Yellow traffic cones placed on the runway.\"\n    },\n    \"logo\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"yellow\", \"blue\"],\n      \"size\": \"small\",\n      \"description\": \"A Lufthansa logo on the terminal building.\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"description\": \"Clear sky with some clouds.\"\n    },\n    \"mountain\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"description\": \"Distant mountains in the background.\"\n    },\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"green\"],\n      \"description\": \"Grass on the sides of the runway.\"\n    }\n  }\n}\n```",
           "response_format": "json",
           "response_data": {
-            "human": {},
-            "animal": {},
             "man-made": {
               "airplane": {
-                "count": 2,
-                "location": "center, foreground",
+                "count": 1,
+                "location": "center",
                 "color": [
                   "white",
                   "green",
-                  "red",
-                  "blue",
-                  "yellow"
+                  "red"
                 ],
                 "size": "large",
-                "description": "Two airplanes, one prominently visible with Alitalia branding and the other partially visible in the background."
+                "description": "An Alitalia airplane on the runway."
               },
-              "airport terminal": {
+              "airport_terminal": {
                 "count": 1,
-                "location": "center, background",
+                "location": "background",
                 "color": [
                   "gray",
                   "blue"
                 ],
                 "size": "large",
-                "description": "Modern airport terminal building with glass windows and structural elements."
+                "description": "An airport terminal building."
               },
-              "runway": {
+              "light_tower": {
                 "count": 1,
-                "location": "bottom, foreground",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "Airport runway with visible markings and safety cones."
-              },
-              "safety cones": {
-                "count": 4,
-                "location": "bottom, foreground",
-                "color": [
-                  "yellow"
-                ],
-                "size": "small",
-                "description": "Yellow safety cones lined up on the runway."
-              },
-              "lighting pole": {
-                "count": 1,
-                "location": "center, background",
+                "location": "background",
                 "color": [
                   "gray"
                 ],
                 "size": "medium",
-                "description": "Airport lighting pole."
+                "description": "A light tower near the runway."
+              },
+              "cones": {
+                "count": 5,
+                "location": "foreground",
+                "color": [
+                  "yellow"
+                ],
+                "size": "small",
+                "description": "Yellow traffic cones placed on the runway."
+              },
+              "logo": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "yellow",
+                  "blue"
+                ],
+                "size": "small",
+                "description": "A Lufthansa logo on the terminal building."
               }
             },
             "natural": {
               "sky": {
                 "count": 1,
-                "location": "top, background",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "Clear blue sky."
+                "location": "top",
+                "description": "Clear sky with some clouds."
+              },
+              "mountain": {
+                "count": 1,
+                "location": "background",
+                "description": "Distant mountains in the background."
               },
               "grass": {
                 "count": 1,
-                "location": "bottom, foreground",
+                "location": "foreground",
                 "color": [
                   "green"
                 ],
-                "size": "large",
-                "description": "Grass area near the runway."
+                "description": "Grass on the sides of the runway."
               }
             }
           },
           "error": null,
           "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 412,
-            "total_tokens": 898
+            "input_tokens": 982,
+            "output_tokens": 388,
+            "total_tokens": 1370
           },
           "performance_metrics": {
-            "total_duration_ms": 15416.850278,
-            "prompt_eval_duration_ms": 134.609901,
-            "generation_duration_ms": 15241.474372,
-            "load_duration_ms": 38.145576,
-            "tokens_per_second": 27.031505610564956
+            "total_duration_ms": 10975.604717,
+            "prompt_eval_duration_ms": 107.746582,
+            "generation_duration_ms": 10816.285287,
+            "load_duration_ms": 48.417772,
+            "tokens_per_second": 35.871834895695095
           }
         }
       },
       "metrics": {
-        "total_tokens": 3174,
-        "total_time_ms": 59036.085911999995,
-        "average_speed": 26.885286147020203
-      }
-    },
-    {
-      "model": "llama3.2-vision:11b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "",
-          "response_format": "text",
-          "response_data": null,
-          "error": "unsupported format string passed to NoneType.__format__",
-          "token_metrics": null,
-          "performance_metrics": null
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground elements in this image are the grassy and wet-looked ground, the yellow and black road markings, and the three yellow traffic cones. The background elements are the airport's buildings, the airport's runway, and the distant mountains. The airport's buildings are the main structures in the background, with the airport's runway being the long, flat, and straight path that leads to the airport's buildings. The mountains are in the background, far away from the airport's buildings and the airport's runway. The airport's buildings and the airport's runway are both in the same area, with the airport's buildings being in the background and the airport's runway being in the foreground.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 58,
-            "output_tokens": 140,
-            "total_tokens": 198
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1633.669792,
-            "prompt_eval_duration_ms": 51.628556,
-            "generation_duration_ms": 1531.756029,
-            "load_duration_ms": 47.803109,
-            "tokens_per_second": 91.39836720042052
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image shows a white and green Alitalia plane on the runway, with a large building and a mountain in the background. The plane is parked on the runway, with its engines and wheels still in place. The Alitalia logo is visible on the plane's side, indicating that it is a commercial aircraft. In the background, a large building with a yellow and blue sign is visible, possibly a airport or a hotel. The mountain in the background is a large, green and brown mountain, with a few trees and a small lake in the distance. The plane is not moving, and it is not clear what it is doing. The plane is not moving, and it is not clear what it is doing. The plane is not moving, and it is not clear what it is doing. The plane is not moving, and it is not.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 61,
-            "output_tokens": 173,
-            "total_tokens": 234
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1992.222927,
-            "prompt_eval_duration_ms": 45.503323,
-            "generation_duration_ms": 1896.043508,
-            "load_duration_ms": 48.576842,
-            "tokens_per_second": 91.24263197023642
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image of an Alitalia plane on the runway evokes a sense of excitement and anticipation, as it prepares to take off. The vibrant colors of the Italian flag on the tail of the plane add a touch of national pride, while the Alitalia logo on the side of the plane adds a sense of professionalism and efficiency. The image is neutral in tone, as it simply shows a plane on the runway, without any emotional or emotional content. The visual elements that contribute to this neutral tone are the simple, clean design of the plane, the lack of any dramatic or emotional content, and the focus on the plane's functionality, which is a neutral and practical approach. Overall, the image is a simple and straightforward representation of a plane on the runway, without any emotional or emotional content.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 63,
-            "output_tokens": 161,
-            "total_tokens": 224
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1870.460904,
-            "prompt_eval_duration_ms": 45.487954,
-            "generation_duration_ms": 1770.990898,
-            "load_duration_ms": 51.85216,
-            "tokens_per_second": 90.90955813596734
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"categories\": {\n    \"man-made\": {\n      \"airplane\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"white\", \"blue\"],\n        \"size\": \"large\",\n        \"description\": \"a commercial airliner with a distinctive livery\"\n      }\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "categories": {
-              "man-made": {
-                "airplane": {
-                  "count": 1,
-                  "location": "center",
-                  "color": [
-                    "white",
-                    "blue"
-                  ],
-                  "size": "large",
-                  "description": "a commercial airliner with a distinctive livery"
-                }
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 243,
-            "output_tokens": 76,
-            "total_tokens": 319
-          },
-          "performance_metrics": {
-            "total_duration_ms": 958.667224,
-            "prompt_eval_duration_ms": 74.883423,
-            "generation_duration_ms": 833.472949,
-            "load_duration_ms": 46.576828,
-            "tokens_per_second": 91.18472302092674
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 975,
-        "total_time_ms": 6455.020847,
-        "average_speed": 91.18382008188776
+        "total_tokens": 5328,
+        "total_time_ms": 34673.416963,
+        "average_speed": 35.93951141170813
       }
     }
   ]

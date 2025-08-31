@@ -7,6 +7,394 @@
   "timestamp": "2025-08-31T00:24:10.960297+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a quintessential London scene, dominated by a vibrant red double-decker bus, a hallmark of the city's public transport system. The bus, adorned with a large advertisement featuring two figures, is positioned in front of a modern, minimalist bus shelter with a curved metal roof supported by sleek white columns. The shelter's design contrasts with the traditional red of the bus, creating a visually interesting juxtaposition. The setting appears to be an urban environment, with a backdrop of contemporary high-rise buildings partially obscured by the overcast sky, which casts a muted, diffused light over the scene. The pavement is wet, suggesting recent rain, and the overall color palette is subdued, with the red of the bus standing out against the gray tones of the sky and pavement. The composition is balanced, with the bus and shelter centrally framed, drawing the viewer's eye across the image from the foreground to the background, where the buildings recede into the distance. The absence of people and the stillness of the scene give it a quiet, almost contemplative feel, despite the bustling nature of the subject matter.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 223,
+            "total_tokens": 520
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1758.731476,
+            "prompt_eval_duration_ms": 80.371745,
+            "generation_duration_ms": 1638.985891,
+            "load_duration_ms": 37.256107,
+            "tokens_per_second": 136.05974354296623
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, a classic red double-decker bus is prominently positioned, suggesting it is either arriving at or departing from a station. The bus is adorned with advertisements, adding a layer of urban life and commercial activity to the scene. The road beneath the bus is wet, reflecting the overcast sky above, which dominates the background. The sky is a uniform gray, indicating a cloudy day, and it stretches across the entire image, creating a sense of vastness and continuity. In the background, a modern architectural structure, possibly a pedestrian bridge or a part of a larger urban development, extends horizontally across the frame. Beyond this structure, a cluster of high-rise buildings rises, hinting at a dense urban environment. The juxtaposition of the traditional red bus against the backdrop of contemporary architecture and the expansive sky creates a dynamic contrast between old and new, nature and urban development, and the everyday life of the city against its broader setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 192,
+            "total_tokens": 495
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1492.017589,
+            "prompt_eval_duration_ms": 30.375598,
+            "generation_duration_ms": 1420.381764,
+            "load_duration_ms": 38.959055,
+            "tokens_per_second": 135.17492611232933
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a red double-decker bus, a quintessential symbol of London, is parked under a modern, white, overhanging structure that appears to be a bus shelter or a part of a larger urban infrastructure. The bus is stationary, likely at a bus stop, as indicated by the presence of a traffic light and a pedestrian crossing sign. The bus's windows are clear, suggesting it is not in operation at the moment. The bus is adorned with an advertisement, adding a splash of color to the otherwise muted tones of the scene. The background features a tall building, possibly an apartment or office complex, under a cloudy sky, hinting at an urban setting. No people or animals are visible in the image, and the bus and the structure appear to be the main elements in this scene, with no direct interaction between them. The bus is parked in a designated area, and the traffic light and pedestrian crossing sign suggest a controlled traffic environment, emphasizing the urban context of the image.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 202,
+            "total_tokens": 508
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1574.085965,
+            "prompt_eval_duration_ms": 31.544203,
+            "generation_duration_ms": 1501.147768,
+            "load_duration_ms": 38.620001,
+            "tokens_per_second": 134.56370139305298
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a sense of calm and routine, evoking a neutral to slightly positive mood. The overcast sky and the muted colors of the surroundings contribute to a subdued atmosphere, suggesting a typical day in an urban setting. The red double-decker bus, a symbol often associated with London, adds a touch of vibrancy and familiarity to the scene, hinting at the busyness and orderliness of city life. The presence of the bus stop and the neatly arranged motorcycles under the shelter further emphasize the structured and organized nature of the environment. The overall tone is neither overly cheerful nor gloomy, but rather a balanced representation of a moment in time in a bustling city, where life continues its steady pace. The absence of people and the quietness of the scene might also evoke a sense of solitude or introspection, adding a subtle layer of contemplation to the viewer's experience.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 180,
+            "total_tokens": 488
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1413.255181,
+            "prompt_eval_duration_ms": 31.083363,
+            "generation_duration_ms": 1342.024744,
+            "load_duration_ms": 37.78827,
+            "tokens_per_second": 134.1256938851196
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"bus\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"red\"],\n      \"size\": \"large\",\n      \"description\": \"double-decker red bus with visible advertisements\"\n    },\n    \"motorcycles\": {\n      \"count\": 3,\n      \"location\": \"right\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"parked motorcycles near the bus\"\n    },\n    \"streetlights\": {\n      \"count\": 2,\n      \"location\": \"left\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"tall streetlights near the bus\"\n    },\n    \"sign\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"red\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"red and white sign near the motorcycles\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"top right\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"modern building with multiple windows\"\n    },\n    \"overpass\": {\n      \"count\": 1,\n      \"location\": \"top left\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"metal overpass structure\"\n    },\n    \"road\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"paved road with visible manhole cover\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"overcast sky\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "bus": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "red"
+                ],
+                "size": "large",
+                "description": "double-decker red bus with visible advertisements"
+              },
+              "motorcycles": {
+                "count": 3,
+                "location": "right",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "parked motorcycles near the bus"
+              },
+              "streetlights": {
+                "count": 2,
+                "location": "left",
+                "color": [
+                  "gray"
+                ],
+                "size": "medium",
+                "description": "tall streetlights near the bus"
+              },
+              "sign": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "red",
+                  "white"
+                ],
+                "size": "small",
+                "description": "red and white sign near the motorcycles"
+              },
+              "building": {
+                "count": 1,
+                "location": "top right",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "modern building with multiple windows"
+              },
+              "overpass": {
+                "count": 1,
+                "location": "top left",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "metal overpass structure"
+              },
+              "road": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "paved road with visible manhole cover"
+              }
+            },
+            "natural": {
+              "sky": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "overcast sky"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 406,
+            "total_tokens": 892
+          },
+          "performance_metrics": {
+            "total_duration_ms": 3047.803504,
+            "prompt_eval_duration_ms": 44.51823,
+            "generation_duration_ms": 2963.114513,
+            "load_duration_ms": 37.927153,
+            "tokens_per_second": 137.0179917849162
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2903,
+        "total_time_ms": 9285.893715,
+        "average_speed": 135.38841134367686
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a modern urban setting featuring a classic red double-decker bus as the central element. The bus, prominently displayed in the foreground, is parked at a bus stop under a large, sleek, white canopy structure. The canopy is supported by slender, modern pillars, creating a clean and contemporary aesthetic. The bus has a large advertisement on its side, featuring two individuals, though the details of the ad are not entirely clear. The bus's front displays a digital destination sign, indicating its route or destination.\n\nThe setting appears to be a bus station or a designated bus stop area, as evidenced by the organized layout, the presence of a pedestrian crossing signal, and the structured canopy. The background reveals a mix of urban elements, including a multi-story building with a modern architectural design, featuring large windows and a neutral color palette. The sky is overcast, casting a soft, diffused light over the scene, which contributes to a muted and somewhat somber atmosphere. The pavement is dark gray, and the overall color palette is dominated by the red of the bus, the white of the canopy, and the gray tones of the pavement and sky. The composition is balanced, with the bus centrally positioned, drawing the viewer's attention, while the background elements provide context and depth to the urban environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 262,
+            "total_tokens": 559
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13315.676831,
+            "prompt_eval_duration_ms": 3533.050453,
+            "generation_duration_ms": 9741.49094,
+            "load_duration_ms": 38.805516,
+            "tokens_per_second": 26.895267019567743
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a large, red double-decker bus, which is the most prominent object closest to the viewer. The bus is parked or moving slowly, as indicated by its position on the road and the visible motion blur. The bus features a large advertisement on its side, adding a layer of urban commercial context. The road surface is visible, showing a clean, paved area with a circular marking in the center, likely a manhole cover or drainage feature. The foreground also includes a traffic signal and a blue directional sign, indicating a structured urban environment with regulated traffic flow.\n\nIn the background, the setting transitions to a more distant urban landscape. A modern, multi-story building with a glass facade is visible, suggesting a commercial or office district. The building's sleek design contrasts with the more traditional, functional appearance of the bus and the road. A covered bus stop or shelter is also present in the background, providing a sense of continuity in the urban infrastructure. The sky appears overcast, adding a muted, gray tone to the overall scene. The background elements, including the building and shelter, establish the context of a busy city environment, where the bus is an integral part of the transportation system. The relationship between the foreground and background is one of interaction and dependency; the bus serves the urban setting, connecting different parts of the city, while the background provides the context and infrastructure that supports its operation.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 287,
+            "total_tokens": 590
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10790.368955,
+            "prompt_eval_duration_ms": 73.00196,
+            "generation_duration_ms": 10677.282203,
+            "load_duration_ms": 37.750223,
+            "tokens_per_second": 26.87949934669344
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a red double-decker bus parked at a bus stop in an urban setting. The bus, a classic symbol of London, is stationary, with its front facing the viewer. The bus features a large advertisement on its side, showcasing a movie poster with two individuals, suggesting it is promoting a film. The bus stop is covered by a modern, sleek canopy structure, providing shelter for passengers. The canopy is supported by tall, slender poles, and the area appears clean and well-maintained.\n\nIn the background, there are several parked motorcycles, indicating that this bus stop is also a convenient location for commuters using two-wheel vehicles. The surrounding environment includes a mix of modern and industrial elements, with a tall building visible in the distance, hinting at an urban or suburban setting. The sky is overcast, suggesting a cloudy day, and the overall atmosphere is calm and orderly.\n\nNo people are actively visible in the image, but the presence of the bus and the parked motorcycles implies that this is a transportation hub where people would typically gather to board the bus or park their vehicles. The bus and the motorcycles are connected through their shared purpose of facilitating transportation, and the canopy serves as a unifying element, providing a common space for commuters. The advertisement on the bus adds a layer of commercial interaction, engaging potential passengers with entertainment content. The image captures a moment of stillness in an otherwise bustling urban environment, highlighting the interconnectedness of public transportation, personal mobility, and commercial advertising.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 301,
+            "total_tokens": 607
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11312.846196,
+            "prompt_eval_duration_ms": 72.39608,
+            "generation_duration_ms": 11199.232184,
+            "load_duration_ms": 38.996965,
+            "tokens_per_second": 26.876842541940462
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The mood conveyed by this image is predominantly neutral, with a hint of calmness and routine. The scene depicts a red double-decker bus parked at a bus stop, likely in an urban environment, as suggested by the modern buildings in the background and the structured design of the bus stop. The overcast sky adds a subdued, slightly melancholic tone, but it does not evoke strong negative emotions. Instead, the overall atmosphere feels orderly and functional, reflecting the everyday rhythm of city life.\n\nThe red bus, a symbol of London, stands out as a vibrant focal point, but its presence is more indicative of routine rather than excitement. The lack of visible people and the quiet, empty streets contribute to a sense of calm and stillness, almost as if the city is in a moment of pause. The clean lines of the bus stop and the organized layout of the area suggest efficiency and structure, which can evoke feelings of reliability and predictability.\n\nThe visual elements that contribute to this neutral tone include the muted colors of the sky and the surrounding environment, the orderly arrangement of the bus stop, and the absence of bustling activity. While the image does not elicit strong emotions, it captures a moment of urban tranquility, where the focus is on the mundane yet essential aspects of daily life. The overall tone remains balanced, neither overtly positive nor negative, but rather reflective of the quiet persistence of city life.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 283,
+            "total_tokens": 591
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10637.508529,
+            "prompt_eval_duration_ms": 76.553941,
+            "generation_duration_ms": 10519.752548,
+            "load_duration_ms": 38.981656,
+            "tokens_per_second": 26.901773469358226
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"blue\"],\n      \"size\": \"small\",\n      \"description\": \"Driver visible through the bus window\"\n    }\n  },\n  \"man-made\": {\n    \"bus\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"red\"],\n      \"size\": \"large\",\n      \"description\": \"Double-decker bus with advertisement on the side\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Modern multi-story building in the background\"\n    },\n    \"bus stop shelter\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"Canopy structure over the bus stop\"\n    },\n    \"traffic light\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Traffic signal near the bus\"\n    },\n    \"bicycles\": {\n      \"count\": 3,\n      \"location\": \"right, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Parked bicycles near the bus stop\"\n    },\n    \"sign\": {\n      \"count\": 2,\n      \"location\": \"right, middle\",\n      \"color\": [\"white\", \"red\"],\n      \"size\": \"small\",\n      \"description\": \"Traffic signs near the bus stop\"\n    },\n    \"streetlight\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"Street lamp above the bus stop\"\n    },\n    \"road\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Paved road surface\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Overcast sky\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "blue"
+                ],
+                "size": "small",
+                "description": "Driver visible through the bus window"
+              }
+            },
+            "man-made": {
+              "bus": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "red"
+                ],
+                "size": "large",
+                "description": "Double-decker bus with advertisement on the side"
+              },
+              "building": {
+                "count": 1,
+                "location": "right, middle",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "Modern multi-story building in the background"
+              },
+              "bus stop shelter": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "gray"
+                ],
+                "size": "medium",
+                "description": "Canopy structure over the bus stop"
+              },
+              "traffic light": {
+                "count": 1,
+                "location": "left, middle",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "Traffic signal near the bus"
+              },
+              "bicycles": {
+                "count": 3,
+                "location": "right, middle",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "Parked bicycles near the bus stop"
+              },
+              "sign": {
+                "count": 2,
+                "location": "right, middle",
+                "color": [
+                  "white",
+                  "red"
+                ],
+                "size": "small",
+                "description": "Traffic signs near the bus stop"
+              },
+              "streetlight": {
+                "count": 1,
+                "location": "center, top",
+                "color": [
+                  "gray"
+                ],
+                "size": "small",
+                "description": "Street lamp above the bus stop"
+              },
+              "road": {
+                "count": 1,
+                "location": "center, bottom",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "Paved road surface"
+              }
+            },
+            "natural": {
+              "sky": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "Overcast sky"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 526,
+            "total_tokens": 1012
+          },
+          "performance_metrics": {
+            "total_duration_ms": 19691.004037,
+            "prompt_eval_duration_ms": 138.429726,
+            "generation_duration_ms": 19509.528833,
+            "load_duration_ms": 40.608903,
+            "tokens_per_second": 26.961184173257987
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3359,
+        "total_time_ms": 65747.40454799999,
+        "average_speed": 26.90291331016357
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -571,394 +959,6 @@
         "total_tokens": 2984,
         "total_time_ms": 29679.090220000002,
         "average_speed": 41.85546344648465
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a quintessential London scene, dominated by a vibrant red double-decker bus, a hallmark of the city's public transport system. The bus, adorned with a large advertisement featuring two figures, is positioned in front of a modern, minimalist bus shelter with a curved metal roof supported by sleek white columns. The shelter's design contrasts with the traditional red of the bus, creating a visually interesting juxtaposition. The setting appears to be an urban environment, with a backdrop of contemporary high-rise buildings partially obscured by the overcast sky, which casts a muted, diffused light over the scene. The pavement is wet, suggesting recent rain, and the overall color palette is subdued, with the red of the bus standing out against the gray tones of the sky and pavement. The composition is balanced, with the bus and shelter centrally framed, drawing the viewer's eye across the image from the foreground to the background, where the buildings recede into the distance. The absence of people and the stillness of the scene give it a quiet, almost contemplative feel, despite the bustling nature of the subject matter.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 223,
-            "total_tokens": 520
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1758.731476,
-            "prompt_eval_duration_ms": 80.371745,
-            "generation_duration_ms": 1638.985891,
-            "load_duration_ms": 37.256107,
-            "tokens_per_second": 136.05974354296623
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, a classic red double-decker bus is prominently positioned, suggesting it is either arriving at or departing from a station. The bus is adorned with advertisements, adding a layer of urban life and commercial activity to the scene. The road beneath the bus is wet, reflecting the overcast sky above, which dominates the background. The sky is a uniform gray, indicating a cloudy day, and it stretches across the entire image, creating a sense of vastness and continuity. In the background, a modern architectural structure, possibly a pedestrian bridge or a part of a larger urban development, extends horizontally across the frame. Beyond this structure, a cluster of high-rise buildings rises, hinting at a dense urban environment. The juxtaposition of the traditional red bus against the backdrop of contemporary architecture and the expansive sky creates a dynamic contrast between old and new, nature and urban development, and the everyday life of the city against its broader setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 192,
-            "total_tokens": 495
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1492.017589,
-            "prompt_eval_duration_ms": 30.375598,
-            "generation_duration_ms": 1420.381764,
-            "load_duration_ms": 38.959055,
-            "tokens_per_second": 135.17492611232933
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a red double-decker bus, a quintessential symbol of London, is parked under a modern, white, overhanging structure that appears to be a bus shelter or a part of a larger urban infrastructure. The bus is stationary, likely at a bus stop, as indicated by the presence of a traffic light and a pedestrian crossing sign. The bus's windows are clear, suggesting it is not in operation at the moment. The bus is adorned with an advertisement, adding a splash of color to the otherwise muted tones of the scene. The background features a tall building, possibly an apartment or office complex, under a cloudy sky, hinting at an urban setting. No people or animals are visible in the image, and the bus and the structure appear to be the main elements in this scene, with no direct interaction between them. The bus is parked in a designated area, and the traffic light and pedestrian crossing sign suggest a controlled traffic environment, emphasizing the urban context of the image.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 202,
-            "total_tokens": 508
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1574.085965,
-            "prompt_eval_duration_ms": 31.544203,
-            "generation_duration_ms": 1501.147768,
-            "load_duration_ms": 38.620001,
-            "tokens_per_second": 134.56370139305298
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a sense of calm and routine, evoking a neutral to slightly positive mood. The overcast sky and the muted colors of the surroundings contribute to a subdued atmosphere, suggesting a typical day in an urban setting. The red double-decker bus, a symbol often associated with London, adds a touch of vibrancy and familiarity to the scene, hinting at the busyness and orderliness of city life. The presence of the bus stop and the neatly arranged motorcycles under the shelter further emphasize the structured and organized nature of the environment. The overall tone is neither overly cheerful nor gloomy, but rather a balanced representation of a moment in time in a bustling city, where life continues its steady pace. The absence of people and the quietness of the scene might also evoke a sense of solitude or introspection, adding a subtle layer of contemplation to the viewer's experience.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 180,
-            "total_tokens": 488
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1413.255181,
-            "prompt_eval_duration_ms": 31.083363,
-            "generation_duration_ms": 1342.024744,
-            "load_duration_ms": 37.78827,
-            "tokens_per_second": 134.1256938851196
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"bus\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"red\"],\n      \"size\": \"large\",\n      \"description\": \"double-decker red bus with visible advertisements\"\n    },\n    \"motorcycles\": {\n      \"count\": 3,\n      \"location\": \"right\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"parked motorcycles near the bus\"\n    },\n    \"streetlights\": {\n      \"count\": 2,\n      \"location\": \"left\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"tall streetlights near the bus\"\n    },\n    \"sign\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"red\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"red and white sign near the motorcycles\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"top right\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"modern building with multiple windows\"\n    },\n    \"overpass\": {\n      \"count\": 1,\n      \"location\": \"top left\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"metal overpass structure\"\n    },\n    \"road\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"paved road with visible manhole cover\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"overcast sky\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "bus": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "red"
-                ],
-                "size": "large",
-                "description": "double-decker red bus with visible advertisements"
-              },
-              "motorcycles": {
-                "count": 3,
-                "location": "right",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "parked motorcycles near the bus"
-              },
-              "streetlights": {
-                "count": 2,
-                "location": "left",
-                "color": [
-                  "gray"
-                ],
-                "size": "medium",
-                "description": "tall streetlights near the bus"
-              },
-              "sign": {
-                "count": 1,
-                "location": "right",
-                "color": [
-                  "red",
-                  "white"
-                ],
-                "size": "small",
-                "description": "red and white sign near the motorcycles"
-              },
-              "building": {
-                "count": 1,
-                "location": "top right",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "modern building with multiple windows"
-              },
-              "overpass": {
-                "count": 1,
-                "location": "top left",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "metal overpass structure"
-              },
-              "road": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "paved road with visible manhole cover"
-              }
-            },
-            "natural": {
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "overcast sky"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 406,
-            "total_tokens": 892
-          },
-          "performance_metrics": {
-            "total_duration_ms": 3047.803504,
-            "prompt_eval_duration_ms": 44.51823,
-            "generation_duration_ms": 2963.114513,
-            "load_duration_ms": 37.927153,
-            "tokens_per_second": 137.0179917849162
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2903,
-        "total_time_ms": 9285.893715,
-        "average_speed": 135.38841134367686
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a modern urban setting featuring a classic red double-decker bus as the central element. The bus, prominently displayed in the foreground, is parked at a bus stop under a large, sleek, white canopy structure. The canopy is supported by slender, modern pillars, creating a clean and contemporary aesthetic. The bus has a large advertisement on its side, featuring two individuals, though the details of the ad are not entirely clear. The bus's front displays a digital destination sign, indicating its route or destination.\n\nThe setting appears to be a bus station or a designated bus stop area, as evidenced by the organized layout, the presence of a pedestrian crossing signal, and the structured canopy. The background reveals a mix of urban elements, including a multi-story building with a modern architectural design, featuring large windows and a neutral color palette. The sky is overcast, casting a soft, diffused light over the scene, which contributes to a muted and somewhat somber atmosphere. The pavement is dark gray, and the overall color palette is dominated by the red of the bus, the white of the canopy, and the gray tones of the pavement and sky. The composition is balanced, with the bus centrally positioned, drawing the viewer's attention, while the background elements provide context and depth to the urban environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 262,
-            "total_tokens": 559
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13315.676831,
-            "prompt_eval_duration_ms": 3533.050453,
-            "generation_duration_ms": 9741.49094,
-            "load_duration_ms": 38.805516,
-            "tokens_per_second": 26.895267019567743
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a large, red double-decker bus, which is the most prominent object closest to the viewer. The bus is parked or moving slowly, as indicated by its position on the road and the visible motion blur. The bus features a large advertisement on its side, adding a layer of urban commercial context. The road surface is visible, showing a clean, paved area with a circular marking in the center, likely a manhole cover or drainage feature. The foreground also includes a traffic signal and a blue directional sign, indicating a structured urban environment with regulated traffic flow.\n\nIn the background, the setting transitions to a more distant urban landscape. A modern, multi-story building with a glass facade is visible, suggesting a commercial or office district. The building's sleek design contrasts with the more traditional, functional appearance of the bus and the road. A covered bus stop or shelter is also present in the background, providing a sense of continuity in the urban infrastructure. The sky appears overcast, adding a muted, gray tone to the overall scene. The background elements, including the building and shelter, establish the context of a busy city environment, where the bus is an integral part of the transportation system. The relationship between the foreground and background is one of interaction and dependency; the bus serves the urban setting, connecting different parts of the city, while the background provides the context and infrastructure that supports its operation.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 287,
-            "total_tokens": 590
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10790.368955,
-            "prompt_eval_duration_ms": 73.00196,
-            "generation_duration_ms": 10677.282203,
-            "load_duration_ms": 37.750223,
-            "tokens_per_second": 26.87949934669344
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a red double-decker bus parked at a bus stop in an urban setting. The bus, a classic symbol of London, is stationary, with its front facing the viewer. The bus features a large advertisement on its side, showcasing a movie poster with two individuals, suggesting it is promoting a film. The bus stop is covered by a modern, sleek canopy structure, providing shelter for passengers. The canopy is supported by tall, slender poles, and the area appears clean and well-maintained.\n\nIn the background, there are several parked motorcycles, indicating that this bus stop is also a convenient location for commuters using two-wheel vehicles. The surrounding environment includes a mix of modern and industrial elements, with a tall building visible in the distance, hinting at an urban or suburban setting. The sky is overcast, suggesting a cloudy day, and the overall atmosphere is calm and orderly.\n\nNo people are actively visible in the image, but the presence of the bus and the parked motorcycles implies that this is a transportation hub where people would typically gather to board the bus or park their vehicles. The bus and the motorcycles are connected through their shared purpose of facilitating transportation, and the canopy serves as a unifying element, providing a common space for commuters. The advertisement on the bus adds a layer of commercial interaction, engaging potential passengers with entertainment content. The image captures a moment of stillness in an otherwise bustling urban environment, highlighting the interconnectedness of public transportation, personal mobility, and commercial advertising.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 301,
-            "total_tokens": 607
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11312.846196,
-            "prompt_eval_duration_ms": 72.39608,
-            "generation_duration_ms": 11199.232184,
-            "load_duration_ms": 38.996965,
-            "tokens_per_second": 26.876842541940462
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The mood conveyed by this image is predominantly neutral, with a hint of calmness and routine. The scene depicts a red double-decker bus parked at a bus stop, likely in an urban environment, as suggested by the modern buildings in the background and the structured design of the bus stop. The overcast sky adds a subdued, slightly melancholic tone, but it does not evoke strong negative emotions. Instead, the overall atmosphere feels orderly and functional, reflecting the everyday rhythm of city life.\n\nThe red bus, a symbol of London, stands out as a vibrant focal point, but its presence is more indicative of routine rather than excitement. The lack of visible people and the quiet, empty streets contribute to a sense of calm and stillness, almost as if the city is in a moment of pause. The clean lines of the bus stop and the organized layout of the area suggest efficiency and structure, which can evoke feelings of reliability and predictability.\n\nThe visual elements that contribute to this neutral tone include the muted colors of the sky and the surrounding environment, the orderly arrangement of the bus stop, and the absence of bustling activity. While the image does not elicit strong emotions, it captures a moment of urban tranquility, where the focus is on the mundane yet essential aspects of daily life. The overall tone remains balanced, neither overtly positive nor negative, but rather reflective of the quiet persistence of city life.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 283,
-            "total_tokens": 591
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10637.508529,
-            "prompt_eval_duration_ms": 76.553941,
-            "generation_duration_ms": 10519.752548,
-            "load_duration_ms": 38.981656,
-            "tokens_per_second": 26.901773469358226
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"blue\"],\n      \"size\": \"small\",\n      \"description\": \"Driver visible through the bus window\"\n    }\n  },\n  \"man-made\": {\n    \"bus\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"red\"],\n      \"size\": \"large\",\n      \"description\": \"Double-decker bus with advertisement on the side\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Modern multi-story building in the background\"\n    },\n    \"bus stop shelter\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"Canopy structure over the bus stop\"\n    },\n    \"traffic light\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Traffic signal near the bus\"\n    },\n    \"bicycles\": {\n      \"count\": 3,\n      \"location\": \"right, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Parked bicycles near the bus stop\"\n    },\n    \"sign\": {\n      \"count\": 2,\n      \"location\": \"right, middle\",\n      \"color\": [\"white\", \"red\"],\n      \"size\": \"small\",\n      \"description\": \"Traffic signs near the bus stop\"\n    },\n    \"streetlight\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"Street lamp above the bus stop\"\n    },\n    \"road\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Paved road surface\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Overcast sky\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "blue"
-                ],
-                "size": "small",
-                "description": "Driver visible through the bus window"
-              }
-            },
-            "man-made": {
-              "bus": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "red"
-                ],
-                "size": "large",
-                "description": "Double-decker bus with advertisement on the side"
-              },
-              "building": {
-                "count": 1,
-                "location": "right, middle",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "Modern multi-story building in the background"
-              },
-              "bus stop shelter": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "gray"
-                ],
-                "size": "medium",
-                "description": "Canopy structure over the bus stop"
-              },
-              "traffic light": {
-                "count": 1,
-                "location": "left, middle",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "Traffic signal near the bus"
-              },
-              "bicycles": {
-                "count": 3,
-                "location": "right, middle",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "Parked bicycles near the bus stop"
-              },
-              "sign": {
-                "count": 2,
-                "location": "right, middle",
-                "color": [
-                  "white",
-                  "red"
-                ],
-                "size": "small",
-                "description": "Traffic signs near the bus stop"
-              },
-              "streetlight": {
-                "count": 1,
-                "location": "center, top",
-                "color": [
-                  "gray"
-                ],
-                "size": "small",
-                "description": "Street lamp above the bus stop"
-              },
-              "road": {
-                "count": 1,
-                "location": "center, bottom",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "Paved road surface"
-              }
-            },
-            "natural": {
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "Overcast sky"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 526,
-            "total_tokens": 1012
-          },
-          "performance_metrics": {
-            "total_duration_ms": 19691.004037,
-            "prompt_eval_duration_ms": 138.429726,
-            "generation_duration_ms": 19509.528833,
-            "load_duration_ms": 40.608903,
-            "tokens_per_second": 26.961184173257987
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3359,
-        "total_time_ms": 65747.40454799999,
-        "average_speed": 26.90291331016357
       }
     },
     {

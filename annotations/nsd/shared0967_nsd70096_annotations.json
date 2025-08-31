@@ -7,6 +7,322 @@
   "timestamp": "2025-08-31T00:35:44.665153+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a surfer in motion, walking along the shoreline with a surfboard under his arm. The setting is a beach with gentle waves lapping at the shore, suggesting a calm yet dynamic environment. The main elements include the surfer, his wetsuit, and the surfboard, which are the focal points of the composition. The wetsuit is predominantly black with red and white accents, and the surfboard is white with green and blue designs, adding a pop of color against the natural backdrop. The lighting is natural, likely from the sun, casting soft shadows and highlighting the textures of the wetsuit and the wet sand. The overall composition is balanced, with the surfer positioned slightly off-center, leading the viewer's eye towards the horizon where the ocean meets the sky. The colors are vibrant yet natural, with the blue of the ocean and sky contrasting beautifully with the earthy tones of the sand and the surfer's attire. The image conveys a sense of adventure and connection with nature.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 207,
+            "total_tokens": 504
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1590.190112,
+            "prompt_eval_duration_ms": 81.108091,
+            "generation_duration_ms": 1468.874624,
+            "load_duration_ms": 37.871264,
+            "tokens_per_second": 140.92421273934406
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, a surfer dressed in a black and red wetsuit, holding a white surfboard with a green and blue design, is the focal point. His attire suggests readiness for the ocean's conditions, and the surfboard indicates his preparedness for surfing. The sand beneath his feet is speckled with seaweed, adding a natural texture to the scene. The water in the background is a dynamic mix of turquoise and white, with waves crashing towards the shore, creating a sense of movement and energy. The distant waves and the horizon line separate the viewer from the surfer, emphasizing the vastness of the ocean and the surfer's solitary presence within it. The interplay between the surfer, the sand, the seaweed, and the ocean waves creates a layered composition that draws the viewer's eye from the foreground to the background, highlighting the surfer's interaction with the environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 184,
+            "total_tokens": 487
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1391.566253,
+            "prompt_eval_duration_ms": 31.123836,
+            "generation_duration_ms": 1318.477654,
+            "load_duration_ms": 38.822459,
+            "tokens_per_second": 139.5548869878685
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a person, dressed in a black and red wetsuit, is walking along the sandy beach, carrying a white surfboard under their arm. The individual appears to be heading towards the ocean, likely after a surfing session or preparing to enter the water. The surfboard, with its bright white color, contrasts sharply with the darker tones of the wetsuit and the sandy beach. The ocean in the background is a dynamic mix of light blue and green hues, with small waves breaking near the shore, suggesting a gentle, yet lively sea. The person's posture and the direction of their gaze indicate a sense of purpose and readiness, possibly reflecting a connection to the ocean and the sport of surfing. The interaction between the person, the surfboard, and the ocean suggests a narrative of adventure and connection with nature, with the person as the central figure in this scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 179,
+            "total_tokens": 485
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1355.915675,
+            "prompt_eval_duration_ms": 31.143614,
+            "generation_duration_ms": 1284.752448,
+            "load_duration_ms": 37.709392,
+            "tokens_per_second": 139.32645178349563
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of adventure and anticipation, with a positive and uplifting mood. The surfer, clad in a wetsuit, carries his surfboard with a confident stride, suggesting readiness and enthusiasm for the upcoming challenge of riding the waves. The bright sunlight and the dynamic, frothy waves in the background add to the vibrant and energetic atmosphere, enhancing the feeling of excitement and freedom. The clear sky and the vastness of the ocean further amplify the sense of openness and possibility, contributing to a mood of optimism and joy. The visual elements, such as the surfer's determined expression and the lively, crashing waves, collectively create an emotional atmosphere that is both invigorating and inspiring, making the overall tone decidedly positive.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 149,
+            "total_tokens": 457
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1144.599375,
+            "prompt_eval_duration_ms": 29.821754,
+            "generation_duration_ms": 1071.112175,
+            "load_duration_ms": 40.801375,
+            "tokens_per_second": 139.1077456476489
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"red\"],\n      \"size\": \"medium\",\n      \"description\": \"wearing a wetsuit, holding a surfboard, smiling, standing on the beach\"\n    }\n  },\n  \"man-made\": {\n    \"surfboard\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"green\"],\n      \"size\": \"medium\",\n      \"description\": \"being held by the person\"\n    }\n  },\n  \"natural\": {\n    \"ocean\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\", \"green\"],\n      \"size\": \"large\",\n      \"description\": \"waves crashing on the shore\"\n    },\n    \"beach\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"sand and seaweed\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black",
+                  "red"
+                ],
+                "size": "medium",
+                "description": "wearing a wetsuit, holding a surfboard, smiling, standing on the beach"
+              }
+            },
+            "man-made": {
+              "surfboard": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "white",
+                  "green"
+                ],
+                "size": "medium",
+                "description": "being held by the person"
+              }
+            },
+            "natural": {
+              "ocean": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "blue",
+                  "green"
+                ],
+                "size": "large",
+                "description": "waves crashing on the shore"
+              },
+              "beach": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "sand and seaweed"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 237,
+            "total_tokens": 723
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1768.263066,
+            "prompt_eval_duration_ms": 44.515581,
+            "generation_duration_ms": 1683.914286,
+            "load_duration_ms": 36.914172,
+            "tokens_per_second": 140.74350575347515
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2656,
+        "total_time_ms": 7250.534481000001,
+        "average_speed": 139.93136058236647
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a surfer standing on a sandy beach near the shoreline, with the ocean in the background. The setting appears to be a sunny day, as indicated by the bright lighting and the vivid colors. The surfer is wearing a black and red wetsuit with the word \"ONDA\" prominently displayed on the chest, suggesting a brand or team affiliation. The individual is holding a white surfboard with a colorful design, including teal and yellow accents, under one arm. The surfboard has a classic shape, suitable for riding waves.\n\nThe ocean in the background is a mix of turquoise and deeper blue hues, with gentle waves rolling toward the shore. The waves are breaking near the beach, creating white foam that contrasts with the darker water. The sand is light-colored, and patches of seaweed or driftwood are scattered along the shoreline, adding texture to the foreground. The lighting is natural and bright, casting soft shadows and highlighting the details of the surfer's wetsuit and the surfboard. The overall composition is balanced, with the surfer positioned slightly off-center, drawing the viewer's attention to both the subject and the expansive ocean behind them. The image conveys a sense of adventure and connection with nature, typical of a coastal surfing scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 256,
+            "total_tokens": 553
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13064.251856,
+            "prompt_eval_duration_ms": 3504.316147,
+            "generation_duration_ms": 9515.689959,
+            "load_duration_ms": 40.140963,
+            "tokens_per_second": 26.902936214086463
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image prominently features a surfer standing on a sandy beach. The surfer is wearing a black and red wetsuit with the word \"ONDA\" printed on the chest, indicating a connection to surfing or a surf-related brand. They are holding a white surfboard with a colorful design, which is angled slightly upward, suggesting they have just finished a session or are preparing to enter the water. The surfer's stance and expression convey a sense of readiness or contemplation, possibly reflecting on the waves or the experience. The sandy beach in the immediate foreground is textured with small patches of seaweed or driftwood, adding a natural, coastal detail to the scene.\n\nIn the background, the ocean stretches out, with varying shades of blue and green, indicating depth and movement. The waves are visible, with white foam forming as they break near the shore, creating a dynamic contrast to the stillness of the surfer on land. The horizon line is clear, separating the ocean from the sky, which is not visible in the image but implied by the lighting and color gradient. The overall setting is a typical coastal environment, emphasizing the relationship between the surfer and the ocean. The foreground and background are interconnected through the theme of surfing; the surfer's presence on the beach and their equipment directly relate to the ocean, highlighting the sport's dependence on the natural elements. The image captures a moment of transition, where the surfer is either approaching or departing from the water, bridging the human activity with the natural setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 311,
+            "total_tokens": 614
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11728.031808,
+            "prompt_eval_duration_ms": 76.180853,
+            "generation_duration_ms": 11611.749006,
+            "load_duration_ms": 37.772285,
+            "tokens_per_second": 26.783217570350573
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a surfer standing on a sandy beach near the ocean, holding a surfboard. The person is wearing a black and red wetsuit with the word \"ONDA\" printed on the chest, indicating a connection to surfing or a brand associated with the sport. The surfer appears to be male, with short dark hair, and is looking off to the side, possibly observing the waves or another person. The surfboard is white with colorful accents, including a teal and yellow design, and is held securely under one arm. The ocean in the background is a vibrant blue-green, with gentle waves breaking near the shore, suggesting favorable conditions for surfing.\n\nThe surfer's posture and attire indicate preparation for or a break from surfing. The wetsuit suggests that the water temperature might be cool, necessitating the protective gear. The surfboard, a central object in the image, is the primary tool for the activity, highlighting the surfer's connection to the sport. The beach setting, with its sandy shore and seaweed scattered along the edge, adds to the coastal ambiance, emphasizing the natural environment in which the surfer interacts. The waves in the background create a dynamic backdrop, reinforcing the surfer's engagement with the ocean. There are no other people or animals visible in the image, focusing the scene solely on the surfer and their interaction with the natural elements of the beach and ocean. The overall composition conveys a sense of calm preparation and anticipation for the surfing experience.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 302,
+            "total_tokens": 608
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11373.684087,
+            "prompt_eval_duration_ms": 73.627155,
+            "generation_duration_ms": 11258.26161,
+            "load_duration_ms": 37.545107,
+            "tokens_per_second": 26.82474528143426
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of excitement, adventure, and a sense of freedom, evoking feelings of joy and enthusiasm. The surfer, dressed in a wetsuit with a surfboard under his arm, stands on a sandy beach with the ocean in the background, suggesting a readiness to engage in an exhilarating activity. The bright, clear sky and the vibrant turquoise water create a sense of openness and tranquility, enhancing the overall positive tone. The surfer's posture, with a slight smile and a confident stance, further emphasizes a feeling of anticipation and enjoyment. The waves crashing onto the shore add a dynamic element, symbolizing the thrill and unpredictability of surfing. The natural lighting and the contrast between the surfer's dark wetsuit and the bright surroundings contribute to a visually striking composition, reinforcing the image's energetic and optimistic atmosphere. The absence of any negative elements, such as stormy weather or a desolate landscape, ensures that the tone remains overwhelmingly positive, capturing the essence of a carefree and adventurous lifestyle.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 209,
+            "total_tokens": 517
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7942.429055,
+            "prompt_eval_duration_ms": 84.72108,
+            "generation_duration_ms": 7817.556468,
+            "load_duration_ms": 37.775815,
+            "tokens_per_second": 26.734696558382442
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\", \"red\"],\n      \"size\": \"medium\",\n      \"description\": \"Wearing a wetsuit, holding a surfboard, standing on the beach\"\n    }\n  },\n  \"man-made\": {\n    \"surfboard\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\", \"green\", \"blue\"],\n      \"size\": \"medium\",\n      \"description\": \"Carried by the person, partially visible\"\n    },\n    \"wetsuit\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\", \"red\"],\n      \"size\": \"medium\",\n      \"description\": \"Worn by the person, with visible text on the chest\"\n    }\n  },\n  \"natural\": {\n    \"ocean\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"blue\", \"green\"],\n      \"size\": \"large\",\n      \"description\": \"Waves visible, extending to the horizon\"\n    },\n    \"beach\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Sandy with some seaweed or debris\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "black",
+                  "red"
+                ],
+                "size": "medium",
+                "description": "Wearing a wetsuit, holding a surfboard, standing on the beach"
+              }
+            },
+            "man-made": {
+              "surfboard": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "white",
+                  "green",
+                  "blue"
+                ],
+                "size": "medium",
+                "description": "Carried by the person, partially visible"
+              },
+              "wetsuit": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "black",
+                  "red"
+                ],
+                "size": "medium",
+                "description": "Worn by the person, with visible text on the chest"
+              }
+            },
+            "natural": {
+              "ocean": {
+                "count": 1,
+                "location": "center, top",
+                "color": [
+                  "blue",
+                  "green"
+                ],
+                "size": "large",
+                "description": "Waves visible, extending to the horizon"
+              },
+              "beach": {
+                "count": 1,
+                "location": "center, bottom",
+                "color": [
+                  "brown",
+                  "white"
+                ],
+                "size": "large",
+                "description": "Sandy with some seaweed or debris"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 319,
+            "total_tokens": 805
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11992.989612,
+            "prompt_eval_duration_ms": 139.415091,
+            "generation_duration_ms": 11808.544473,
+            "load_duration_ms": 40.176666,
+            "tokens_per_second": 27.01433701074566
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3097,
+        "total_time_ms": 56101.386418,
+        "average_speed": 26.851986526999877
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -522,322 +838,6 @@
         "total_tokens": 2904,
         "total_time_ms": 27757.928959999997,
         "average_speed": 41.85841639319357
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a surfer in motion, walking along the shoreline with a surfboard under his arm. The setting is a beach with gentle waves lapping at the shore, suggesting a calm yet dynamic environment. The main elements include the surfer, his wetsuit, and the surfboard, which are the focal points of the composition. The wetsuit is predominantly black with red and white accents, and the surfboard is white with green and blue designs, adding a pop of color against the natural backdrop. The lighting is natural, likely from the sun, casting soft shadows and highlighting the textures of the wetsuit and the wet sand. The overall composition is balanced, with the surfer positioned slightly off-center, leading the viewer's eye towards the horizon where the ocean meets the sky. The colors are vibrant yet natural, with the blue of the ocean and sky contrasting beautifully with the earthy tones of the sand and the surfer's attire. The image conveys a sense of adventure and connection with nature.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 207,
-            "total_tokens": 504
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1590.190112,
-            "prompt_eval_duration_ms": 81.108091,
-            "generation_duration_ms": 1468.874624,
-            "load_duration_ms": 37.871264,
-            "tokens_per_second": 140.92421273934406
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, a surfer dressed in a black and red wetsuit, holding a white surfboard with a green and blue design, is the focal point. His attire suggests readiness for the ocean's conditions, and the surfboard indicates his preparedness for surfing. The sand beneath his feet is speckled with seaweed, adding a natural texture to the scene. The water in the background is a dynamic mix of turquoise and white, with waves crashing towards the shore, creating a sense of movement and energy. The distant waves and the horizon line separate the viewer from the surfer, emphasizing the vastness of the ocean and the surfer's solitary presence within it. The interplay between the surfer, the sand, the seaweed, and the ocean waves creates a layered composition that draws the viewer's eye from the foreground to the background, highlighting the surfer's interaction with the environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 184,
-            "total_tokens": 487
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1391.566253,
-            "prompt_eval_duration_ms": 31.123836,
-            "generation_duration_ms": 1318.477654,
-            "load_duration_ms": 38.822459,
-            "tokens_per_second": 139.5548869878685
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a person, dressed in a black and red wetsuit, is walking along the sandy beach, carrying a white surfboard under their arm. The individual appears to be heading towards the ocean, likely after a surfing session or preparing to enter the water. The surfboard, with its bright white color, contrasts sharply with the darker tones of the wetsuit and the sandy beach. The ocean in the background is a dynamic mix of light blue and green hues, with small waves breaking near the shore, suggesting a gentle, yet lively sea. The person's posture and the direction of their gaze indicate a sense of purpose and readiness, possibly reflecting a connection to the ocean and the sport of surfing. The interaction between the person, the surfboard, and the ocean suggests a narrative of adventure and connection with nature, with the person as the central figure in this scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 179,
-            "total_tokens": 485
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1355.915675,
-            "prompt_eval_duration_ms": 31.143614,
-            "generation_duration_ms": 1284.752448,
-            "load_duration_ms": 37.709392,
-            "tokens_per_second": 139.32645178349563
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of adventure and anticipation, with a positive and uplifting mood. The surfer, clad in a wetsuit, carries his surfboard with a confident stride, suggesting readiness and enthusiasm for the upcoming challenge of riding the waves. The bright sunlight and the dynamic, frothy waves in the background add to the vibrant and energetic atmosphere, enhancing the feeling of excitement and freedom. The clear sky and the vastness of the ocean further amplify the sense of openness and possibility, contributing to a mood of optimism and joy. The visual elements, such as the surfer's determined expression and the lively, crashing waves, collectively create an emotional atmosphere that is both invigorating and inspiring, making the overall tone decidedly positive.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 149,
-            "total_tokens": 457
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1144.599375,
-            "prompt_eval_duration_ms": 29.821754,
-            "generation_duration_ms": 1071.112175,
-            "load_duration_ms": 40.801375,
-            "tokens_per_second": 139.1077456476489
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"red\"],\n      \"size\": \"medium\",\n      \"description\": \"wearing a wetsuit, holding a surfboard, smiling, standing on the beach\"\n    }\n  },\n  \"man-made\": {\n    \"surfboard\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"green\"],\n      \"size\": \"medium\",\n      \"description\": \"being held by the person\"\n    }\n  },\n  \"natural\": {\n    \"ocean\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\", \"green\"],\n      \"size\": \"large\",\n      \"description\": \"waves crashing on the shore\"\n    },\n    \"beach\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"sand and seaweed\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black",
-                  "red"
-                ],
-                "size": "medium",
-                "description": "wearing a wetsuit, holding a surfboard, smiling, standing on the beach"
-              }
-            },
-            "man-made": {
-              "surfboard": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "white",
-                  "green"
-                ],
-                "size": "medium",
-                "description": "being held by the person"
-              }
-            },
-            "natural": {
-              "ocean": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "blue",
-                  "green"
-                ],
-                "size": "large",
-                "description": "waves crashing on the shore"
-              },
-              "beach": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "sand and seaweed"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 237,
-            "total_tokens": 723
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1768.263066,
-            "prompt_eval_duration_ms": 44.515581,
-            "generation_duration_ms": 1683.914286,
-            "load_duration_ms": 36.914172,
-            "tokens_per_second": 140.74350575347515
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2656,
-        "total_time_ms": 7250.534481000001,
-        "average_speed": 139.93136058236647
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a surfer standing on a sandy beach near the shoreline, with the ocean in the background. The setting appears to be a sunny day, as indicated by the bright lighting and the vivid colors. The surfer is wearing a black and red wetsuit with the word \"ONDA\" prominently displayed on the chest, suggesting a brand or team affiliation. The individual is holding a white surfboard with a colorful design, including teal and yellow accents, under one arm. The surfboard has a classic shape, suitable for riding waves.\n\nThe ocean in the background is a mix of turquoise and deeper blue hues, with gentle waves rolling toward the shore. The waves are breaking near the beach, creating white foam that contrasts with the darker water. The sand is light-colored, and patches of seaweed or driftwood are scattered along the shoreline, adding texture to the foreground. The lighting is natural and bright, casting soft shadows and highlighting the details of the surfer's wetsuit and the surfboard. The overall composition is balanced, with the surfer positioned slightly off-center, drawing the viewer's attention to both the subject and the expansive ocean behind them. The image conveys a sense of adventure and connection with nature, typical of a coastal surfing scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 256,
-            "total_tokens": 553
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13064.251856,
-            "prompt_eval_duration_ms": 3504.316147,
-            "generation_duration_ms": 9515.689959,
-            "load_duration_ms": 40.140963,
-            "tokens_per_second": 26.902936214086463
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image prominently features a surfer standing on a sandy beach. The surfer is wearing a black and red wetsuit with the word \"ONDA\" printed on the chest, indicating a connection to surfing or a surf-related brand. They are holding a white surfboard with a colorful design, which is angled slightly upward, suggesting they have just finished a session or are preparing to enter the water. The surfer's stance and expression convey a sense of readiness or contemplation, possibly reflecting on the waves or the experience. The sandy beach in the immediate foreground is textured with small patches of seaweed or driftwood, adding a natural, coastal detail to the scene.\n\nIn the background, the ocean stretches out, with varying shades of blue and green, indicating depth and movement. The waves are visible, with white foam forming as they break near the shore, creating a dynamic contrast to the stillness of the surfer on land. The horizon line is clear, separating the ocean from the sky, which is not visible in the image but implied by the lighting and color gradient. The overall setting is a typical coastal environment, emphasizing the relationship between the surfer and the ocean. The foreground and background are interconnected through the theme of surfing; the surfer's presence on the beach and their equipment directly relate to the ocean, highlighting the sport's dependence on the natural elements. The image captures a moment of transition, where the surfer is either approaching or departing from the water, bridging the human activity with the natural setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 311,
-            "total_tokens": 614
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11728.031808,
-            "prompt_eval_duration_ms": 76.180853,
-            "generation_duration_ms": 11611.749006,
-            "load_duration_ms": 37.772285,
-            "tokens_per_second": 26.783217570350573
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a surfer standing on a sandy beach near the ocean, holding a surfboard. The person is wearing a black and red wetsuit with the word \"ONDA\" printed on the chest, indicating a connection to surfing or a brand associated with the sport. The surfer appears to be male, with short dark hair, and is looking off to the side, possibly observing the waves or another person. The surfboard is white with colorful accents, including a teal and yellow design, and is held securely under one arm. The ocean in the background is a vibrant blue-green, with gentle waves breaking near the shore, suggesting favorable conditions for surfing.\n\nThe surfer's posture and attire indicate preparation for or a break from surfing. The wetsuit suggests that the water temperature might be cool, necessitating the protective gear. The surfboard, a central object in the image, is the primary tool for the activity, highlighting the surfer's connection to the sport. The beach setting, with its sandy shore and seaweed scattered along the edge, adds to the coastal ambiance, emphasizing the natural environment in which the surfer interacts. The waves in the background create a dynamic backdrop, reinforcing the surfer's engagement with the ocean. There are no other people or animals visible in the image, focusing the scene solely on the surfer and their interaction with the natural elements of the beach and ocean. The overall composition conveys a sense of calm preparation and anticipation for the surfing experience.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 302,
-            "total_tokens": 608
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11373.684087,
-            "prompt_eval_duration_ms": 73.627155,
-            "generation_duration_ms": 11258.26161,
-            "load_duration_ms": 37.545107,
-            "tokens_per_second": 26.82474528143426
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of excitement, adventure, and a sense of freedom, evoking feelings of joy and enthusiasm. The surfer, dressed in a wetsuit with a surfboard under his arm, stands on a sandy beach with the ocean in the background, suggesting a readiness to engage in an exhilarating activity. The bright, clear sky and the vibrant turquoise water create a sense of openness and tranquility, enhancing the overall positive tone. The surfer's posture, with a slight smile and a confident stance, further emphasizes a feeling of anticipation and enjoyment. The waves crashing onto the shore add a dynamic element, symbolizing the thrill and unpredictability of surfing. The natural lighting and the contrast between the surfer's dark wetsuit and the bright surroundings contribute to a visually striking composition, reinforcing the image's energetic and optimistic atmosphere. The absence of any negative elements, such as stormy weather or a desolate landscape, ensures that the tone remains overwhelmingly positive, capturing the essence of a carefree and adventurous lifestyle.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 209,
-            "total_tokens": 517
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7942.429055,
-            "prompt_eval_duration_ms": 84.72108,
-            "generation_duration_ms": 7817.556468,
-            "load_duration_ms": 37.775815,
-            "tokens_per_second": 26.734696558382442
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\", \"red\"],\n      \"size\": \"medium\",\n      \"description\": \"Wearing a wetsuit, holding a surfboard, standing on the beach\"\n    }\n  },\n  \"man-made\": {\n    \"surfboard\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\", \"green\", \"blue\"],\n      \"size\": \"medium\",\n      \"description\": \"Carried by the person, partially visible\"\n    },\n    \"wetsuit\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\", \"red\"],\n      \"size\": \"medium\",\n      \"description\": \"Worn by the person, with visible text on the chest\"\n    }\n  },\n  \"natural\": {\n    \"ocean\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"blue\", \"green\"],\n      \"size\": \"large\",\n      \"description\": \"Waves visible, extending to the horizon\"\n    },\n    \"beach\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Sandy with some seaweed or debris\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "black",
-                  "red"
-                ],
-                "size": "medium",
-                "description": "Wearing a wetsuit, holding a surfboard, standing on the beach"
-              }
-            },
-            "man-made": {
-              "surfboard": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "white",
-                  "green",
-                  "blue"
-                ],
-                "size": "medium",
-                "description": "Carried by the person, partially visible"
-              },
-              "wetsuit": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "black",
-                  "red"
-                ],
-                "size": "medium",
-                "description": "Worn by the person, with visible text on the chest"
-              }
-            },
-            "natural": {
-              "ocean": {
-                "count": 1,
-                "location": "center, top",
-                "color": [
-                  "blue",
-                  "green"
-                ],
-                "size": "large",
-                "description": "Waves visible, extending to the horizon"
-              },
-              "beach": {
-                "count": 1,
-                "location": "center, bottom",
-                "color": [
-                  "brown",
-                  "white"
-                ],
-                "size": "large",
-                "description": "Sandy with some seaweed or debris"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 319,
-            "total_tokens": 805
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11992.989612,
-            "prompt_eval_duration_ms": 139.415091,
-            "generation_duration_ms": 11808.544473,
-            "load_duration_ms": 40.176666,
-            "tokens_per_second": 27.01433701074566
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3097,
-        "total_time_ms": 56101.386418,
-        "average_speed": 26.851986526999877
       }
     },
     {

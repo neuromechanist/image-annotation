@@ -7,6 +7,305 @@
   "timestamp": "2025-08-30T17:38:21.465989+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image presents a classic stop sign, octagonal in shape, with bold white lettering on a vibrant red background, set against a backdrop of a cloudy sky. The sign is mounted on a metal pole, and beneath it, a smaller rectangular sign reads \"4-WAY,\" indicating the intersection type. The setting appears to be outdoors, likely in a suburban or rural area, as suggested by the bare, leafless trees in the background, hinting at a winter or early spring season. The lighting is natural, with diffused sunlight filtering through the clouds, casting soft shadows and giving the scene a muted, slightly overcast appearance. The overall composition is straightforward and functional, focusing on the traffic signs as the primary subjects, with the natural elements providing a contrasting and serene background. The red of the stop sign stands out vividly against the more subdued tones of the sky and trees, emphasizing its importance in the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 186,
+            "total_tokens": 483
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1449.605864,
+            "prompt_eval_duration_ms": 82.211466,
+            "generation_duration_ms": 1325.753153,
+            "load_duration_ms": 39.214981,
+            "tokens_per_second": 140.2976108931796
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, the most prominent element is a red octagonal stop sign with the word \"STOP\" in bold white letters, mounted on a metal pole. Below it, a smaller rectangular sign reads \"4-WAY,\" indicating the type of intersection. The sign's reflective surface catches the light, suggesting it is made of a durable material designed for visibility. The background, slightly out of focus, features a cloudy sky with a mix of white and gray clouds, hinting at overcast weather. Bare tree branches extend into the frame, their dark silhouettes contrasting against the lighter sky, suggesting it might be late autumn or winter. The stop sign and the smaller sign are directly in front of these trees, creating a layered effect where the man-made signs are in the immediate foreground, while the natural elements of the sky and trees form the distant background. This arrangement emphasizes the importance of the traffic signs in the scene, as they are the focal point, while the background provides context and depth to the image.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 204,
+            "total_tokens": 507
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1537.392752,
+            "prompt_eval_duration_ms": 29.755096,
+            "generation_duration_ms": 1465.661724,
+            "load_duration_ms": 39.399176,
+            "tokens_per_second": 139.18627788358617
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image prominently features a red octagonal stop sign with the word \"STOP\" in white, indicating a mandatory halt in traffic. Below it, a smaller rectangular sign reads \"4-WAY,\" suggesting that the stop sign applies to a four-way intersection. The background consists of a cloudy sky and bare tree branches, hinting at a winter or early spring setting. There are no people or animals present in the image; the focus is entirely on the traffic signs and the natural elements surrounding them. The stop sign and the smaller sign are mounted on a single pole, which is positioned at the intersection, serving as a clear directive for drivers to come to a complete stop before proceeding. The interaction between the elements is static, with the signs functioning as a regulatory tool in the absence of any human or animal activity.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 163,
+            "total_tokens": 469
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1234.531782,
+            "prompt_eval_duration_ms": 30.062588,
+            "generation_duration_ms": 1161.46992,
+            "load_duration_ms": 39.818295,
+            "tokens_per_second": 140.33940715399672
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image of the stop sign and the \"4-WAY\" sign below it evokes a sense of order and caution, which can be interpreted as slightly negative due to the mandatory halt it represents. The stark red of the stop sign, a universally recognized color for warning and prohibition, immediately draws the viewer's attention, creating a feeling of urgency and alertness. The white text against the red background is bold and clear, reinforcing the imperative nature of the sign, which can be seen as a reminder of the need to pause and be mindful of one's surroundings. The bare branches of the trees in the background suggest a cold or late autumn or winter season, adding a touch of melancholy or the end of something, which might contribute to a slightly somber mood. The overcast sky further enhances this feeling, as it can symbolize uncertainty or a pause in progress. The overall tone is neutral to slightly negative, as the image primarily conveys the necessity of stopping and being cautious, which is a necessary but not inherently positive action. The visual elements of the bold colors, the clear text, and the bare trees all work together to create a mood that is both alert and reflective.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 239,
+            "total_tokens": 547
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1782.832578,
+            "prompt_eval_duration_ms": 29.017741,
+            "generation_duration_ms": 1710.785978,
+            "load_duration_ms": 40.554084,
+            "tokens_per_second": 139.70186982675864
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"stop_sign\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"red\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"octagonal shape, reflective surface\"\n    },\n    \"4_way_sign\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"red\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"text '4-WAY' below stop sign\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 3,\n      \"location\": \"top\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"bare branches against sky\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"cloudy sky with scattered clouds\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "stop_sign": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "red",
+                  "white"
+                ],
+                "size": "large",
+                "description": "octagonal shape, reflective surface"
+              },
+              "4_way_sign": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "red",
+                  "white"
+                ],
+                "size": "small",
+                "description": "text '4-WAY' below stop sign"
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 3,
+                "location": "top",
+                "color": [
+                  "brown"
+                ],
+                "size": "small",
+                "description": "bare branches against sky"
+              },
+              "sky": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "blue",
+                  "white"
+                ],
+                "size": "large",
+                "description": "cloudy sky with scattered clouds"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 223,
+            "total_tokens": 709
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1671.689224,
+            "prompt_eval_duration_ms": 44.188673,
+            "generation_duration_ms": 1585.840524,
+            "load_duration_ms": 38.961281,
+            "tokens_per_second": 140.61943595533947
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2715,
+        "total_time_ms": 7676.0522,
+        "average_speed": 140.02892034257212
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a standard red octagonal stop sign prominently positioned in the foreground, with a smaller rectangular sign below it that reads \"4-WAY\" in white letters on a red background. The stop sign is mounted on a metal pole, and its bright red color contrasts sharply with the muted, overcast sky in the background. The sky is filled with soft, diffused clouds, suggesting a cloudy or slightly gloomy day, and the lighting is even and natural, without harsh shadows, indicating an overcast or diffused light source.\n\nThe setting appears to be outdoors, likely on a street or intersection, as suggested by the presence of the stop sign. In the background, there are bare tree branches, indicating that the photo was likely taken during late fall or winter. The trees are dark and silhouetted against the pale sky, adding depth and a sense of seasonality to the image. The overall composition is straightforward and focused, with the stop sign as the central element, drawing the viewer's attention immediately. The simplicity of the scene, combined with the stark contrast between the red signs and the muted background, creates a clear and impactful visual. The image conveys a sense of order and regulation, typical of traffic signage.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 249,
+            "total_tokens": 546
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12781.345383,
+            "prompt_eval_duration_ms": 3470.363502,
+            "generation_duration_ms": 9265.462979,
+            "load_duration_ms": 42.627722,
+            "tokens_per_second": 26.873994377221504
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a prominent red octagonal stop sign, which is the most immediate and central element. Below the stop sign is a smaller rectangular sign that reads \"4-WAY,\" indicating that this is a four-way stop intersection. These signs are mounted on a metal pole, which is partially visible. The stop sign's bold, white lettering and bright red color make it stand out sharply against the background, ensuring high visibility and emphasizing its importance as a traffic control device.\n\nIn the background, the setting is a natural, outdoor environment. The sky is visible, with a mix of clouds and patches of blue, suggesting a daytime scene. Bare tree branches extend into the frame from the top and bottom, indicating that the photo was likely taken during late autumn or winter when trees have shed their leaves. The trees provide a stark contrast to the man-made stop sign, creating a juxtaposition between the natural and urban elements. The branches frame the stop sign, drawing attention to it while also grounding the scene in a natural setting.\n\nThe relationship between the foreground and background is one of contrast and context. The stop sign, as a man-made object, stands out sharply against the organic shapes and muted tones of the trees and sky. The background elements provide a sense of place, situating the stop sign within a natural environment, while the stop sign itself serves as a focal point, emphasizing human intervention in the natural world. The combination of these elements creates a balanced composition that highlights both the functionality of the stop sign and the serene, natural surroundings.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 314,
+            "total_tokens": 617
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11771.250888,
+            "prompt_eval_duration_ms": 80.142912,
+            "generation_duration_ms": 11649.579063,
+            "load_duration_ms": 38.462416,
+            "tokens_per_second": 26.95376359110599
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image shows a standard red octagonal stop sign with the word \"STOP\" in bold white letters, indicating a traffic control measure. Below the stop sign, there is a smaller rectangular sign that reads \"4-WAY,\" which specifies that this is a four-way stop intersection. The signs are mounted on a metal pole, and the background features a cloudy sky and bare tree branches, suggesting a winter or early spring setting. There are no people or animals visible in the image.\n\nThe stop sign is the central object, serving as a directive for drivers to come to a complete stop before proceeding. The \"4-WAY\" sign beneath it clarifies the nature of the intersection, ensuring that all drivers approaching from different directions must stop and yield to one another. The relationship between the two signs is hierarchical and functional; the stop sign provides the primary instruction, while the \"4-WAY\" sign offers additional context to avoid confusion. The bare tree branches in the background create a stark contrast with the bright red signs, emphasizing their visibility and importance. The cloudy sky adds a neutral backdrop, ensuring the signs remain the focal point of the image. Overall, the elements in the image work together to convey a clear and essential traffic rule.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 247,
+            "total_tokens": 553
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9273.033771,
+            "prompt_eval_duration_ms": 85.814649,
+            "generation_duration_ms": 9142.348739,
+            "load_duration_ms": 42.422286,
+            "tokens_per_second": 27.01712733253459
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image of the stop sign conveys a neutral yet slightly somber mood, primarily due to the visual elements present. The stark red color of the stop sign is a universal symbol of caution and authority, which can evoke a sense of seriousness or obligation. The bold, white letters spelling \"STOP\" reinforce this authoritative tone, suggesting a pause or interruption in movement, which can be interpreted as a moment of stillness or contemplation. The \"4-WAY\" sign below adds a layer of complexity, indicating that this is a multi-directional intersection, further emphasizing the need for caution and awareness.\n\nThe background, featuring bare trees and a cloudy sky, contributes to the overall somber and subdued atmosphere. The absence of leaves on the trees and the overcast sky suggest a colder, perhaps winter or late autumn season, which can evoke feelings of quietness or introspection. The lack of vibrant colors or dynamic elements in the scene reinforces the neutral and slightly melancholic tone.\n\nDespite the authoritative nature of the stop sign, the image does not evoke strong negative emotions but rather a sense of calm and order. The mood is one of quiet reflection, as the viewer is reminded to pause and consider their surroundings. The overall tone is neutral, leaning slightly toward the contemplative, with the visual elements working together to create a sense of stillness and attentiveness.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 272,
+            "total_tokens": 580
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10266.411229,
+            "prompt_eval_duration_ms": 73.629276,
+            "generation_duration_ms": 10151.838386,
+            "load_duration_ms": 38.29989,
+            "tokens_per_second": 26.793176728966102
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"stop_sign\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"red\"],\n      \"size\": \"large\",\n      \"description\": \"Octagonal red stop sign with white text 'STOP'\"\n    },\n    \"4-way_sign\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"red\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"Rectangular red sign with white text '4-WAY'\"\n    }\n  },\n  \"natural\": {\n    \"trees\": {\n      \"count\": 2,\n      \"location\": \"left, bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"Bare trees with no leaves\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top, background\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Cloudy sky with patches of blue\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "stop_sign": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "red"
+                ],
+                "size": "large",
+                "description": "Octagonal red stop sign with white text 'STOP'"
+              },
+              "4-way_sign": {
+                "count": 1,
+                "location": "center, bottom",
+                "color": [
+                  "red",
+                  "white"
+                ],
+                "size": "small",
+                "description": "Rectangular red sign with white text '4-WAY'"
+              }
+            },
+            "natural": {
+              "trees": {
+                "count": 2,
+                "location": "left, bottom",
+                "color": [
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "Bare trees with no leaves"
+              },
+              "sky": {
+                "count": 1,
+                "location": "top, background",
+                "color": [
+                  "blue",
+                  "white"
+                ],
+                "size": "large",
+                "description": "Cloudy sky with patches of blue"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 237,
+            "total_tokens": 723
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8942.656856,
+            "prompt_eval_duration_ms": 134.181856,
+            "generation_duration_ms": 8767.539499,
+            "load_duration_ms": 38.309406,
+            "tokens_per_second": 27.031529202352786
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3019,
+        "total_time_ms": 53034.698127,
+        "average_speed": 26.933918246436196
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -460,305 +759,6 @@
         "total_tokens": 2852,
         "total_time_ms": 26389.516682999998,
         "average_speed": 42.06871131617402
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image presents a classic stop sign, octagonal in shape, with bold white lettering on a vibrant red background, set against a backdrop of a cloudy sky. The sign is mounted on a metal pole, and beneath it, a smaller rectangular sign reads \"4-WAY,\" indicating the intersection type. The setting appears to be outdoors, likely in a suburban or rural area, as suggested by the bare, leafless trees in the background, hinting at a winter or early spring season. The lighting is natural, with diffused sunlight filtering through the clouds, casting soft shadows and giving the scene a muted, slightly overcast appearance. The overall composition is straightforward and functional, focusing on the traffic signs as the primary subjects, with the natural elements providing a contrasting and serene background. The red of the stop sign stands out vividly against the more subdued tones of the sky and trees, emphasizing its importance in the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 186,
-            "total_tokens": 483
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1449.605864,
-            "prompt_eval_duration_ms": 82.211466,
-            "generation_duration_ms": 1325.753153,
-            "load_duration_ms": 39.214981,
-            "tokens_per_second": 140.2976108931796
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, the most prominent element is a red octagonal stop sign with the word \"STOP\" in bold white letters, mounted on a metal pole. Below it, a smaller rectangular sign reads \"4-WAY,\" indicating the type of intersection. The sign's reflective surface catches the light, suggesting it is made of a durable material designed for visibility. The background, slightly out of focus, features a cloudy sky with a mix of white and gray clouds, hinting at overcast weather. Bare tree branches extend into the frame, their dark silhouettes contrasting against the lighter sky, suggesting it might be late autumn or winter. The stop sign and the smaller sign are directly in front of these trees, creating a layered effect where the man-made signs are in the immediate foreground, while the natural elements of the sky and trees form the distant background. This arrangement emphasizes the importance of the traffic signs in the scene, as they are the focal point, while the background provides context and depth to the image.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 204,
-            "total_tokens": 507
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1537.392752,
-            "prompt_eval_duration_ms": 29.755096,
-            "generation_duration_ms": 1465.661724,
-            "load_duration_ms": 39.399176,
-            "tokens_per_second": 139.18627788358617
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image prominently features a red octagonal stop sign with the word \"STOP\" in white, indicating a mandatory halt in traffic. Below it, a smaller rectangular sign reads \"4-WAY,\" suggesting that the stop sign applies to a four-way intersection. The background consists of a cloudy sky and bare tree branches, hinting at a winter or early spring setting. There are no people or animals present in the image; the focus is entirely on the traffic signs and the natural elements surrounding them. The stop sign and the smaller sign are mounted on a single pole, which is positioned at the intersection, serving as a clear directive for drivers to come to a complete stop before proceeding. The interaction between the elements is static, with the signs functioning as a regulatory tool in the absence of any human or animal activity.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 163,
-            "total_tokens": 469
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1234.531782,
-            "prompt_eval_duration_ms": 30.062588,
-            "generation_duration_ms": 1161.46992,
-            "load_duration_ms": 39.818295,
-            "tokens_per_second": 140.33940715399672
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image of the stop sign and the \"4-WAY\" sign below it evokes a sense of order and caution, which can be interpreted as slightly negative due to the mandatory halt it represents. The stark red of the stop sign, a universally recognized color for warning and prohibition, immediately draws the viewer's attention, creating a feeling of urgency and alertness. The white text against the red background is bold and clear, reinforcing the imperative nature of the sign, which can be seen as a reminder of the need to pause and be mindful of one's surroundings. The bare branches of the trees in the background suggest a cold or late autumn or winter season, adding a touch of melancholy or the end of something, which might contribute to a slightly somber mood. The overcast sky further enhances this feeling, as it can symbolize uncertainty or a pause in progress. The overall tone is neutral to slightly negative, as the image primarily conveys the necessity of stopping and being cautious, which is a necessary but not inherently positive action. The visual elements of the bold colors, the clear text, and the bare trees all work together to create a mood that is both alert and reflective.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 239,
-            "total_tokens": 547
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1782.832578,
-            "prompt_eval_duration_ms": 29.017741,
-            "generation_duration_ms": 1710.785978,
-            "load_duration_ms": 40.554084,
-            "tokens_per_second": 139.70186982675864
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"stop_sign\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"red\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"octagonal shape, reflective surface\"\n    },\n    \"4_way_sign\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"red\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"text '4-WAY' below stop sign\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 3,\n      \"location\": \"top\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"bare branches against sky\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"cloudy sky with scattered clouds\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "stop_sign": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "red",
-                  "white"
-                ],
-                "size": "large",
-                "description": "octagonal shape, reflective surface"
-              },
-              "4_way_sign": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "red",
-                  "white"
-                ],
-                "size": "small",
-                "description": "text '4-WAY' below stop sign"
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 3,
-                "location": "top",
-                "color": [
-                  "brown"
-                ],
-                "size": "small",
-                "description": "bare branches against sky"
-              },
-              "sky": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "blue",
-                  "white"
-                ],
-                "size": "large",
-                "description": "cloudy sky with scattered clouds"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 223,
-            "total_tokens": 709
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1671.689224,
-            "prompt_eval_duration_ms": 44.188673,
-            "generation_duration_ms": 1585.840524,
-            "load_duration_ms": 38.961281,
-            "tokens_per_second": 140.61943595533947
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2715,
-        "total_time_ms": 7676.0522,
-        "average_speed": 140.02892034257212
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a standard red octagonal stop sign prominently positioned in the foreground, with a smaller rectangular sign below it that reads \"4-WAY\" in white letters on a red background. The stop sign is mounted on a metal pole, and its bright red color contrasts sharply with the muted, overcast sky in the background. The sky is filled with soft, diffused clouds, suggesting a cloudy or slightly gloomy day, and the lighting is even and natural, without harsh shadows, indicating an overcast or diffused light source.\n\nThe setting appears to be outdoors, likely on a street or intersection, as suggested by the presence of the stop sign. In the background, there are bare tree branches, indicating that the photo was likely taken during late fall or winter. The trees are dark and silhouetted against the pale sky, adding depth and a sense of seasonality to the image. The overall composition is straightforward and focused, with the stop sign as the central element, drawing the viewer's attention immediately. The simplicity of the scene, combined with the stark contrast between the red signs and the muted background, creates a clear and impactful visual. The image conveys a sense of order and regulation, typical of traffic signage.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 249,
-            "total_tokens": 546
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12781.345383,
-            "prompt_eval_duration_ms": 3470.363502,
-            "generation_duration_ms": 9265.462979,
-            "load_duration_ms": 42.627722,
-            "tokens_per_second": 26.873994377221504
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a prominent red octagonal stop sign, which is the most immediate and central element. Below the stop sign is a smaller rectangular sign that reads \"4-WAY,\" indicating that this is a four-way stop intersection. These signs are mounted on a metal pole, which is partially visible. The stop sign's bold, white lettering and bright red color make it stand out sharply against the background, ensuring high visibility and emphasizing its importance as a traffic control device.\n\nIn the background, the setting is a natural, outdoor environment. The sky is visible, with a mix of clouds and patches of blue, suggesting a daytime scene. Bare tree branches extend into the frame from the top and bottom, indicating that the photo was likely taken during late autumn or winter when trees have shed their leaves. The trees provide a stark contrast to the man-made stop sign, creating a juxtaposition between the natural and urban elements. The branches frame the stop sign, drawing attention to it while also grounding the scene in a natural setting.\n\nThe relationship between the foreground and background is one of contrast and context. The stop sign, as a man-made object, stands out sharply against the organic shapes and muted tones of the trees and sky. The background elements provide a sense of place, situating the stop sign within a natural environment, while the stop sign itself serves as a focal point, emphasizing human intervention in the natural world. The combination of these elements creates a balanced composition that highlights both the functionality of the stop sign and the serene, natural surroundings.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 314,
-            "total_tokens": 617
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11771.250888,
-            "prompt_eval_duration_ms": 80.142912,
-            "generation_duration_ms": 11649.579063,
-            "load_duration_ms": 38.462416,
-            "tokens_per_second": 26.95376359110599
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image shows a standard red octagonal stop sign with the word \"STOP\" in bold white letters, indicating a traffic control measure. Below the stop sign, there is a smaller rectangular sign that reads \"4-WAY,\" which specifies that this is a four-way stop intersection. The signs are mounted on a metal pole, and the background features a cloudy sky and bare tree branches, suggesting a winter or early spring setting. There are no people or animals visible in the image.\n\nThe stop sign is the central object, serving as a directive for drivers to come to a complete stop before proceeding. The \"4-WAY\" sign beneath it clarifies the nature of the intersection, ensuring that all drivers approaching from different directions must stop and yield to one another. The relationship between the two signs is hierarchical and functional; the stop sign provides the primary instruction, while the \"4-WAY\" sign offers additional context to avoid confusion. The bare tree branches in the background create a stark contrast with the bright red signs, emphasizing their visibility and importance. The cloudy sky adds a neutral backdrop, ensuring the signs remain the focal point of the image. Overall, the elements in the image work together to convey a clear and essential traffic rule.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 247,
-            "total_tokens": 553
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9273.033771,
-            "prompt_eval_duration_ms": 85.814649,
-            "generation_duration_ms": 9142.348739,
-            "load_duration_ms": 42.422286,
-            "tokens_per_second": 27.01712733253459
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image of the stop sign conveys a neutral yet slightly somber mood, primarily due to the visual elements present. The stark red color of the stop sign is a universal symbol of caution and authority, which can evoke a sense of seriousness or obligation. The bold, white letters spelling \"STOP\" reinforce this authoritative tone, suggesting a pause or interruption in movement, which can be interpreted as a moment of stillness or contemplation. The \"4-WAY\" sign below adds a layer of complexity, indicating that this is a multi-directional intersection, further emphasizing the need for caution and awareness.\n\nThe background, featuring bare trees and a cloudy sky, contributes to the overall somber and subdued atmosphere. The absence of leaves on the trees and the overcast sky suggest a colder, perhaps winter or late autumn season, which can evoke feelings of quietness or introspection. The lack of vibrant colors or dynamic elements in the scene reinforces the neutral and slightly melancholic tone.\n\nDespite the authoritative nature of the stop sign, the image does not evoke strong negative emotions but rather a sense of calm and order. The mood is one of quiet reflection, as the viewer is reminded to pause and consider their surroundings. The overall tone is neutral, leaning slightly toward the contemplative, with the visual elements working together to create a sense of stillness and attentiveness.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 272,
-            "total_tokens": 580
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10266.411229,
-            "prompt_eval_duration_ms": 73.629276,
-            "generation_duration_ms": 10151.838386,
-            "load_duration_ms": 38.29989,
-            "tokens_per_second": 26.793176728966102
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"stop_sign\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"red\"],\n      \"size\": \"large\",\n      \"description\": \"Octagonal red stop sign with white text 'STOP'\"\n    },\n    \"4-way_sign\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"red\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"Rectangular red sign with white text '4-WAY'\"\n    }\n  },\n  \"natural\": {\n    \"trees\": {\n      \"count\": 2,\n      \"location\": \"left, bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"Bare trees with no leaves\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top, background\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Cloudy sky with patches of blue\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "stop_sign": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "red"
-                ],
-                "size": "large",
-                "description": "Octagonal red stop sign with white text 'STOP'"
-              },
-              "4-way_sign": {
-                "count": 1,
-                "location": "center, bottom",
-                "color": [
-                  "red",
-                  "white"
-                ],
-                "size": "small",
-                "description": "Rectangular red sign with white text '4-WAY'"
-              }
-            },
-            "natural": {
-              "trees": {
-                "count": 2,
-                "location": "left, bottom",
-                "color": [
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "Bare trees with no leaves"
-              },
-              "sky": {
-                "count": 1,
-                "location": "top, background",
-                "color": [
-                  "blue",
-                  "white"
-                ],
-                "size": "large",
-                "description": "Cloudy sky with patches of blue"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 237,
-            "total_tokens": 723
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8942.656856,
-            "prompt_eval_duration_ms": 134.181856,
-            "generation_duration_ms": 8767.539499,
-            "load_duration_ms": 38.309406,
-            "tokens_per_second": 27.031529202352786
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3019,
-        "total_time_ms": 53034.698127,
-        "average_speed": 26.933918246436196
       }
     },
     {

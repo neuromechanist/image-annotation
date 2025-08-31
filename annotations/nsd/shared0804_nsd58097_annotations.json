@@ -7,6 +7,307 @@
   "timestamp": "2025-08-30T23:04:25.117565+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a serene pastoral scene featuring two Highland cattle in a lush, green field. The foreground is dominated by a Highland cow with a thick, shaggy coat of reddish-brown fur, standing prominently in the center of the frame. Its large, curved horns are a striking feature, and its gaze is directed towards the camera, giving a sense of connection with the viewer. The cow's fur appears slightly damp, suggesting recent rain or a misty morning. In the background, another Highland cow is grazing peacefully, its reddish-brown coat blending harmoniously with the first. The field is a vibrant green, dotted with small yellow wildflowers, and the ground is a mix of grass and patches of bare earth. The setting appears to be a rural area, with a line of trees and shrubs forming a natural backdrop, adding depth to the composition. The lighting is soft and diffused, likely from an overcast sky, which enhances the rich colors of the scene and creates a calm, tranquil atmosphere. The overall composition is balanced, with the two cows positioned to draw the viewer's eye across the image, from the foreground to the background, and the natural setting provides a sense of peace and simplicity.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 247,
+            "total_tokens": 544
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1890.220449,
+            "prompt_eval_duration_ms": 80.399036,
+            "generation_duration_ms": 1766.972181,
+            "load_duration_ms": 39.267447,
+            "tokens_per_second": 139.7871469941382
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, a Highland cow stands prominently, its thick, shaggy coat a rich, warm brown, contrasting with the darker, more rugged texture of its legs and horns. The cow's gaze is directed towards the viewer, creating a sense of connection and immediacy. The ground beneath the cow is a mix of dry, patchy grass and patches of bare earth, indicating a natural, rural setting. \n\nThe background elements consist of a lush, green field stretching into the distance, dotted with trees that provide a sense of depth and scale. The trees vary in size and density, with some appearing closer and others further away, enhancing the three-dimensional effect. The sky is not visible, suggesting the photo was taken at a low angle, focusing on the cow and the immediate surroundings. The overall composition creates a layered effect, with the cow in the foreground serving as a focal point, the field in the middle ground providing context, and the trees in the background adding a sense of vastness and tranquility to the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 211,
+            "total_tokens": 514
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1622.830449,
+            "prompt_eval_duration_ms": 31.138628,
+            "generation_duration_ms": 1547.995344,
+            "load_duration_ms": 40.466733,
+            "tokens_per_second": 136.30531953331248
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, two Highland cattle are the focal point, standing in a lush green field. The foreground cow, with its distinctive long, curved horns and shaggy reddish-brown coat, is facing the camera directly, appearing curious or alert. Its body language suggests a relaxed yet attentive stance. In the background, another Highland cow is grazing peacefully, its head lowered to the grass, indicating a calm and undisturbed environment. The field is dotted with patches of wildflowers, adding splashes of color to the verdant landscape. The trees in the distance provide a natural backdrop, enhancing the pastoral setting. There are no people visible in the image, and the animals are not interacting directly with each other; instead, they are each engaged in their own activities, one observing and the other feeding, highlighting a serene coexistence in their shared habitat.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 173,
+            "total_tokens": 479
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1326.30578,
+            "prompt_eval_duration_ms": 30.644932,
+            "generation_duration_ms": 1252.23924,
+            "load_duration_ms": 40.451449,
+            "tokens_per_second": 138.15251469040373
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of tranquility and serenity, with a positive emotional tone that is largely influenced by the pastoral setting and the presence of the Highland cattle. The lush green grass and the soft, natural light suggest a peaceful, idyllic countryside, which can evoke feelings of calmness and contentment. The cattle, with their majestic horns and rich, reddish-brown fur, add a touch of rustic charm and a sense of strength and resilience, which can inspire admiration and a feeling of connection to nature. The blurred background of trees and open fields further enhances the feeling of spaciousness and freedom, contributing to the overall positive mood. The absence of any human presence or artificial elements in the scene allows the viewer to fully immerse themselves in the natural beauty and tranquility of the environment, evoking a sense of peace and relaxation.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 172,
+            "total_tokens": 480
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1339.065513,
+            "prompt_eval_duration_ms": 32.722486,
+            "generation_duration_ms": 1262.563675,
+            "load_duration_ms": 40.877104,
+            "tokens_per_second": 136.23075287668163
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"cow\": {\n      \"count\": 2,\n      \"location\": [\"left\", \"background\"],\n      \"color\": [\"brown\", \"green\"],\n      \"size\": \"large\",\n      \"description\": \"one cow in foreground, another grazing in background\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"lush green grassy field\"\n    },\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"trees in the distance\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "cow": {
+                "count": 2,
+                "location": [
+                  "left",
+                  "background"
+                ],
+                "color": [
+                  "brown",
+                  "green"
+                ],
+                "size": "large",
+                "description": "one cow in foreground, another grazing in background"
+              }
+            },
+            "natural": {
+              "grass": {
+                "count": 1,
+                "location": "foreground",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "lush green grassy field"
+              },
+              "trees": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "green"
+                ],
+                "size": "medium",
+                "description": "trees in the distance"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 168,
+            "total_tokens": 654
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1292.558801,
+            "prompt_eval_duration_ms": 43.148856,
+            "generation_duration_ms": 1206.764308,
+            "load_duration_ms": 39.551055,
+            "tokens_per_second": 139.21525428476627
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2671,
+        "total_time_ms": 7470.980992,
+        "average_speed": 137.93819767586047
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a serene rural scene featuring two Highland cattle in a lush, green pasture. The setting appears to be a countryside area, with a mix of grassy fields and a backdrop of trees and shrubs in the distance. The lighting is bright and natural, suggesting a sunny day, which enhances the vividness of the colors in the scene.\n\nThe main elements of the image are the two Highland cattle. The one in the foreground is prominently positioned, facing the camera with its large, curved horns and shaggy, reddish-brown coat. Its thick mane and tail are clearly visible, and a small yellow tag is attached to its ear, indicating it might be part of a managed herd. The second Highland cow is positioned further back, grazing peacefully in the field. Both animals have a robust and sturdy build, characteristic of the breed.\n\nThe colors in the image are vibrant and varied. The Highland cattle's reddish-brown fur contrasts beautifully with the bright green of the grass. The background features a mix of green foliage and hints of earthy tones from the trees and shrubs, adding depth to the composition. The lighting is even, casting soft shadows and highlighting the textures of the animals' fur and the grass.\n\nThe overall composition is balanced, with the cow in the foreground drawing immediate attention due to its size and central placement. The second cow in the background adds depth and context, creating a sense of scale and tranquility. The image captures a peaceful moment in nature, emphasizing the harmony between the animals and their environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 310,
+            "total_tokens": 607
+          },
+          "performance_metrics": {
+            "total_duration_ms": 15148.942493,
+            "prompt_eval_duration_ms": 3523.235857,
+            "generation_duration_ms": 11581.135123,
+            "load_duration_ms": 41.37612,
+            "tokens_per_second": 26.7676697238722
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the closest elements to the viewer are two Highland cattle. The primary focus is on the larger, more prominent Highland cow in the foreground, characterized by its long, curved horns, shaggy brown coat, and distinctive facial features. This cow is positioned slightly to the left, facing the camera directly, giving it a commanding presence. Its size and detailed features make it the central subject of the image. Behind it, slightly to the right, is a second Highland cow, grazing and facing away from the viewer, adding depth to the scene.\n\nThe background elements consist of a lush, green field that stretches into the distance. The field is dotted with small yellow wildflowers, adding a touch of color and texture. Beyond the field, there is a line of trees forming a natural boundary, which provides a sense of enclosure and adds to the rural, pastoral setting. The trees are a mix of deciduous types, with varying shades of green, indicating a vibrant, healthy environment. The sky is not visible, but the lighting suggests a bright, sunny day.\n\nThe relationship between the foreground and background elements is harmonious and creates a sense of depth. The Highland cattle in the foreground are grounded in the rich, green field, which serves as a natural habitat for them. The field and trees in the background provide context and a serene, natural setting, emphasizing the cattle's connection to the land. The overall composition highlights the beauty of rural life and the majesty of these iconic animals within their environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 307,
+            "total_tokens": 610
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11553.650226,
+            "prompt_eval_duration_ms": 73.151169,
+            "generation_duration_ms": 11437.469377,
+            "load_duration_ms": 40.013286,
+            "tokens_per_second": 26.84160192090716
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a serene rural scene featuring two Highland cattle grazing in a lush, green field. There are no people visible in the image. The animals, characterized by their long, curved horns and shaggy, reddish-brown coats, are the primary focus. The Highland cow in the foreground stands prominently, facing the camera, with its head slightly tilted, giving the impression of curiosity or alertness. Its posture suggests it is aware of its surroundings, possibly observing the photographer or the environment. The second Highland cow is positioned further back in the field, grazing peacefully on the grass. The two animals appear to be calmly coexisting, with no visible interaction between them, indicating a tranquil and undisturbed setting.\n\nThe field is vibrant with green grass and scattered wildflowers, suggesting a healthy, natural environment. In the background, a line of trees and shrubs provides a natural boundary, enhancing the pastoral ambiance. The overall scene conveys a sense of harmony and tranquility, with the animals at ease in their natural habitat. The lack of human presence emphasizes the peaceful coexistence of the Highland cattle with their environment. The image captures a moment of rural life, highlighting the beauty and calmness of nature.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 244,
+            "total_tokens": 550
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9206.097032,
+            "prompt_eval_duration_ms": 72.918488,
+            "generation_duration_ms": 9090.738175,
+            "load_duration_ms": 39.517797,
+            "tokens_per_second": 26.840504621617264
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a serene and peaceful mood, evoking feelings of calmness and tranquility. The lush green field, dotted with wildflowers and framed by a backdrop of dense trees, creates a sense of natural harmony and untouched beauty. The Highland cattle, with their long horns and shaggy coats, add a touch of rustic charm and timelessness to the scene. The cow in the foreground, standing still and gazing directly at the camera, exudes a gentle curiosity and a sense of connection with the viewer, while the other cow grazing in the background contributes to the overall sense of quiet activity and contentment. The soft lighting and vibrant colors enhance the pastoral atmosphere, making the scene feel warm and inviting. The overall tone is positive, as the image captures the essence of a peaceful rural life, free from the hustle and bustle of modernity. The visual elements, such as the expansive field, the gentle animals, and the lush greenery, all work together to create an emotional atmosphere of relaxation and appreciation for nature's simplicity and beauty.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 213,
+            "total_tokens": 521
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8047.714899,
+            "prompt_eval_duration_ms": 73.36045,
+            "generation_duration_ms": 7931.920396,
+            "load_duration_ms": 39.243459,
+            "tokens_per_second": 26.85352214419778
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"highland_cow\": {\n      \"count\": 2,\n      \"location\": \"left/center, right/middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Two Highland cows with long horns, one in the foreground and one in the background grazing.\"\n    }\n  },\n  \"man-made\": {\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"left/top\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"A wooden fence in the background.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 5,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"Several trees in the background.\"\n    },\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"center/middle\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"A grassy field.\"\n    },\n    \"ground\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\", \"green\"],\n      \"size\": \"large\",\n      \"description\": \"Muddy and grassy ground.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "highland_cow": {
+                "count": 2,
+                "location": "left/center, right/middle",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "Two Highland cows with long horns, one in the foreground and one in the background grazing."
+              }
+            },
+            "man-made": {
+              "fence": {
+                "count": 1,
+                "location": "left/top",
+                "color": [
+                  "brown"
+                ],
+                "size": "small",
+                "description": "A wooden fence in the background."
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 5,
+                "location": "background",
+                "color": [
+                  "green"
+                ],
+                "size": "medium",
+                "description": "Several trees in the background."
+              },
+              "grass": {
+                "count": 1,
+                "location": "center/middle",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "A grassy field."
+              },
+              "ground": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "brown",
+                  "green"
+                ],
+                "size": "large",
+                "description": "Muddy and grassy ground."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 288,
+            "total_tokens": 774
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10862.388393,
+            "prompt_eval_duration_ms": 135.424359,
+            "generation_duration_ms": 10685.446143,
+            "load_duration_ms": 38.113308,
+            "tokens_per_second": 26.95254799339079
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3062,
+        "total_time_ms": 54818.793043,
+        "average_speed": 26.85116928079704
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -494,307 +795,6 @@
         "total_tokens": 2830,
         "total_time_ms": 25838.842594999995,
         "average_speed": 42.17860669499085
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a serene pastoral scene featuring two Highland cattle in a lush, green field. The foreground is dominated by a Highland cow with a thick, shaggy coat of reddish-brown fur, standing prominently in the center of the frame. Its large, curved horns are a striking feature, and its gaze is directed towards the camera, giving a sense of connection with the viewer. The cow's fur appears slightly damp, suggesting recent rain or a misty morning. In the background, another Highland cow is grazing peacefully, its reddish-brown coat blending harmoniously with the first. The field is a vibrant green, dotted with small yellow wildflowers, and the ground is a mix of grass and patches of bare earth. The setting appears to be a rural area, with a line of trees and shrubs forming a natural backdrop, adding depth to the composition. The lighting is soft and diffused, likely from an overcast sky, which enhances the rich colors of the scene and creates a calm, tranquil atmosphere. The overall composition is balanced, with the two cows positioned to draw the viewer's eye across the image, from the foreground to the background, and the natural setting provides a sense of peace and simplicity.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 247,
-            "total_tokens": 544
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1890.220449,
-            "prompt_eval_duration_ms": 80.399036,
-            "generation_duration_ms": 1766.972181,
-            "load_duration_ms": 39.267447,
-            "tokens_per_second": 139.7871469941382
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, a Highland cow stands prominently, its thick, shaggy coat a rich, warm brown, contrasting with the darker, more rugged texture of its legs and horns. The cow's gaze is directed towards the viewer, creating a sense of connection and immediacy. The ground beneath the cow is a mix of dry, patchy grass and patches of bare earth, indicating a natural, rural setting. \n\nThe background elements consist of a lush, green field stretching into the distance, dotted with trees that provide a sense of depth and scale. The trees vary in size and density, with some appearing closer and others further away, enhancing the three-dimensional effect. The sky is not visible, suggesting the photo was taken at a low angle, focusing on the cow and the immediate surroundings. The overall composition creates a layered effect, with the cow in the foreground serving as a focal point, the field in the middle ground providing context, and the trees in the background adding a sense of vastness and tranquility to the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 211,
-            "total_tokens": 514
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1622.830449,
-            "prompt_eval_duration_ms": 31.138628,
-            "generation_duration_ms": 1547.995344,
-            "load_duration_ms": 40.466733,
-            "tokens_per_second": 136.30531953331248
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, two Highland cattle are the focal point, standing in a lush green field. The foreground cow, with its distinctive long, curved horns and shaggy reddish-brown coat, is facing the camera directly, appearing curious or alert. Its body language suggests a relaxed yet attentive stance. In the background, another Highland cow is grazing peacefully, its head lowered to the grass, indicating a calm and undisturbed environment. The field is dotted with patches of wildflowers, adding splashes of color to the verdant landscape. The trees in the distance provide a natural backdrop, enhancing the pastoral setting. There are no people visible in the image, and the animals are not interacting directly with each other; instead, they are each engaged in their own activities, one observing and the other feeding, highlighting a serene coexistence in their shared habitat.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 173,
-            "total_tokens": 479
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1326.30578,
-            "prompt_eval_duration_ms": 30.644932,
-            "generation_duration_ms": 1252.23924,
-            "load_duration_ms": 40.451449,
-            "tokens_per_second": 138.15251469040373
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of tranquility and serenity, with a positive emotional tone that is largely influenced by the pastoral setting and the presence of the Highland cattle. The lush green grass and the soft, natural light suggest a peaceful, idyllic countryside, which can evoke feelings of calmness and contentment. The cattle, with their majestic horns and rich, reddish-brown fur, add a touch of rustic charm and a sense of strength and resilience, which can inspire admiration and a feeling of connection to nature. The blurred background of trees and open fields further enhances the feeling of spaciousness and freedom, contributing to the overall positive mood. The absence of any human presence or artificial elements in the scene allows the viewer to fully immerse themselves in the natural beauty and tranquility of the environment, evoking a sense of peace and relaxation.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 172,
-            "total_tokens": 480
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1339.065513,
-            "prompt_eval_duration_ms": 32.722486,
-            "generation_duration_ms": 1262.563675,
-            "load_duration_ms": 40.877104,
-            "tokens_per_second": 136.23075287668163
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"cow\": {\n      \"count\": 2,\n      \"location\": [\"left\", \"background\"],\n      \"color\": [\"brown\", \"green\"],\n      \"size\": \"large\",\n      \"description\": \"one cow in foreground, another grazing in background\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"lush green grassy field\"\n    },\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"trees in the distance\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "cow": {
-                "count": 2,
-                "location": [
-                  "left",
-                  "background"
-                ],
-                "color": [
-                  "brown",
-                  "green"
-                ],
-                "size": "large",
-                "description": "one cow in foreground, another grazing in background"
-              }
-            },
-            "natural": {
-              "grass": {
-                "count": 1,
-                "location": "foreground",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "lush green grassy field"
-              },
-              "trees": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "green"
-                ],
-                "size": "medium",
-                "description": "trees in the distance"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 168,
-            "total_tokens": 654
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1292.558801,
-            "prompt_eval_duration_ms": 43.148856,
-            "generation_duration_ms": 1206.764308,
-            "load_duration_ms": 39.551055,
-            "tokens_per_second": 139.21525428476627
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2671,
-        "total_time_ms": 7470.980992,
-        "average_speed": 137.93819767586047
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a serene rural scene featuring two Highland cattle in a lush, green pasture. The setting appears to be a countryside area, with a mix of grassy fields and a backdrop of trees and shrubs in the distance. The lighting is bright and natural, suggesting a sunny day, which enhances the vividness of the colors in the scene.\n\nThe main elements of the image are the two Highland cattle. The one in the foreground is prominently positioned, facing the camera with its large, curved horns and shaggy, reddish-brown coat. Its thick mane and tail are clearly visible, and a small yellow tag is attached to its ear, indicating it might be part of a managed herd. The second Highland cow is positioned further back, grazing peacefully in the field. Both animals have a robust and sturdy build, characteristic of the breed.\n\nThe colors in the image are vibrant and varied. The Highland cattle's reddish-brown fur contrasts beautifully with the bright green of the grass. The background features a mix of green foliage and hints of earthy tones from the trees and shrubs, adding depth to the composition. The lighting is even, casting soft shadows and highlighting the textures of the animals' fur and the grass.\n\nThe overall composition is balanced, with the cow in the foreground drawing immediate attention due to its size and central placement. The second cow in the background adds depth and context, creating a sense of scale and tranquility. The image captures a peaceful moment in nature, emphasizing the harmony between the animals and their environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 310,
-            "total_tokens": 607
-          },
-          "performance_metrics": {
-            "total_duration_ms": 15148.942493,
-            "prompt_eval_duration_ms": 3523.235857,
-            "generation_duration_ms": 11581.135123,
-            "load_duration_ms": 41.37612,
-            "tokens_per_second": 26.7676697238722
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the closest elements to the viewer are two Highland cattle. The primary focus is on the larger, more prominent Highland cow in the foreground, characterized by its long, curved horns, shaggy brown coat, and distinctive facial features. This cow is positioned slightly to the left, facing the camera directly, giving it a commanding presence. Its size and detailed features make it the central subject of the image. Behind it, slightly to the right, is a second Highland cow, grazing and facing away from the viewer, adding depth to the scene.\n\nThe background elements consist of a lush, green field that stretches into the distance. The field is dotted with small yellow wildflowers, adding a touch of color and texture. Beyond the field, there is a line of trees forming a natural boundary, which provides a sense of enclosure and adds to the rural, pastoral setting. The trees are a mix of deciduous types, with varying shades of green, indicating a vibrant, healthy environment. The sky is not visible, but the lighting suggests a bright, sunny day.\n\nThe relationship between the foreground and background elements is harmonious and creates a sense of depth. The Highland cattle in the foreground are grounded in the rich, green field, which serves as a natural habitat for them. The field and trees in the background provide context and a serene, natural setting, emphasizing the cattle's connection to the land. The overall composition highlights the beauty of rural life and the majesty of these iconic animals within their environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 307,
-            "total_tokens": 610
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11553.650226,
-            "prompt_eval_duration_ms": 73.151169,
-            "generation_duration_ms": 11437.469377,
-            "load_duration_ms": 40.013286,
-            "tokens_per_second": 26.84160192090716
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a serene rural scene featuring two Highland cattle grazing in a lush, green field. There are no people visible in the image. The animals, characterized by their long, curved horns and shaggy, reddish-brown coats, are the primary focus. The Highland cow in the foreground stands prominently, facing the camera, with its head slightly tilted, giving the impression of curiosity or alertness. Its posture suggests it is aware of its surroundings, possibly observing the photographer or the environment. The second Highland cow is positioned further back in the field, grazing peacefully on the grass. The two animals appear to be calmly coexisting, with no visible interaction between them, indicating a tranquil and undisturbed setting.\n\nThe field is vibrant with green grass and scattered wildflowers, suggesting a healthy, natural environment. In the background, a line of trees and shrubs provides a natural boundary, enhancing the pastoral ambiance. The overall scene conveys a sense of harmony and tranquility, with the animals at ease in their natural habitat. The lack of human presence emphasizes the peaceful coexistence of the Highland cattle with their environment. The image captures a moment of rural life, highlighting the beauty and calmness of nature.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 244,
-            "total_tokens": 550
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9206.097032,
-            "prompt_eval_duration_ms": 72.918488,
-            "generation_duration_ms": 9090.738175,
-            "load_duration_ms": 39.517797,
-            "tokens_per_second": 26.840504621617264
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a serene and peaceful mood, evoking feelings of calmness and tranquility. The lush green field, dotted with wildflowers and framed by a backdrop of dense trees, creates a sense of natural harmony and untouched beauty. The Highland cattle, with their long horns and shaggy coats, add a touch of rustic charm and timelessness to the scene. The cow in the foreground, standing still and gazing directly at the camera, exudes a gentle curiosity and a sense of connection with the viewer, while the other cow grazing in the background contributes to the overall sense of quiet activity and contentment. The soft lighting and vibrant colors enhance the pastoral atmosphere, making the scene feel warm and inviting. The overall tone is positive, as the image captures the essence of a peaceful rural life, free from the hustle and bustle of modernity. The visual elements, such as the expansive field, the gentle animals, and the lush greenery, all work together to create an emotional atmosphere of relaxation and appreciation for nature's simplicity and beauty.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 213,
-            "total_tokens": 521
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8047.714899,
-            "prompt_eval_duration_ms": 73.36045,
-            "generation_duration_ms": 7931.920396,
-            "load_duration_ms": 39.243459,
-            "tokens_per_second": 26.85352214419778
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"highland_cow\": {\n      \"count\": 2,\n      \"location\": \"left/center, right/middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Two Highland cows with long horns, one in the foreground and one in the background grazing.\"\n    }\n  },\n  \"man-made\": {\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"left/top\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"A wooden fence in the background.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 5,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"Several trees in the background.\"\n    },\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"center/middle\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"A grassy field.\"\n    },\n    \"ground\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\", \"green\"],\n      \"size\": \"large\",\n      \"description\": \"Muddy and grassy ground.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "highland_cow": {
-                "count": 2,
-                "location": "left/center, right/middle",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "Two Highland cows with long horns, one in the foreground and one in the background grazing."
-              }
-            },
-            "man-made": {
-              "fence": {
-                "count": 1,
-                "location": "left/top",
-                "color": [
-                  "brown"
-                ],
-                "size": "small",
-                "description": "A wooden fence in the background."
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 5,
-                "location": "background",
-                "color": [
-                  "green"
-                ],
-                "size": "medium",
-                "description": "Several trees in the background."
-              },
-              "grass": {
-                "count": 1,
-                "location": "center/middle",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "A grassy field."
-              },
-              "ground": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "brown",
-                  "green"
-                ],
-                "size": "large",
-                "description": "Muddy and grassy ground."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 288,
-            "total_tokens": 774
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10862.388393,
-            "prompt_eval_duration_ms": 135.424359,
-            "generation_duration_ms": 10685.446143,
-            "load_duration_ms": 38.113308,
-            "tokens_per_second": 26.95254799339079
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3062,
-        "total_time_ms": 54818.793043,
-        "average_speed": 26.85116928079704
       }
     },
     {

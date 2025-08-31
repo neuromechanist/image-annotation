@@ -7,6 +7,436 @@
   "timestamp": "2025-08-31T04:41:20.170136+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a bustling urban street scene during what appears to be the early evening, as the sky is a soft gradient of light blue and orange hues, suggesting either sunrise or sunset. The setting is a multi-lane road with traffic flowing in both directions, featuring a mix of vehicles including buses, cars, and a few pedestrians. The road is lined with streetlights, some of which are illuminated, casting a warm glow on the pavement. The trees along the roadside are bare, indicating the season might be late autumn or winter. In the background, a bridge is visible, with its structure partially obscured by the trees and the angle of the shot. The buildings on the right side of the image are modern, with one having a distinctive yellow facade. The overall composition is dynamic, with the movement of the traffic and the interplay of light and shadow creating a sense of depth and activity. The colors are muted yet rich, with the earthy tones of the road and the muted greens of the trees contrasting against the brighter elements like the yellow building and the warm streetlights.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 217,
+            "total_tokens": 514
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1707.149024,
+            "prompt_eval_duration_ms": 80.919002,
+            "generation_duration_ms": 1583.670911,
+            "load_duration_ms": 39.995658,
+            "tokens_per_second": 137.0234172344408
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the viewer's perspective is dominated by a busy urban street scene. Several vehicles, including buses and cars, are captured in motion, with their taillights glowing red, indicating they are stopped or moving slowly. Pedestrians are also present, some walking on the sidewalks, adding a human element to the urban landscape. Overhead, power lines crisscross the scene, while streetlights line the road, suggesting a well-lit urban environment. The immediate surroundings include a mix of greenery and urban structures, with trees partially obscuring the view of buildings and a construction site with a yellow sign visible on the right, hinting at ongoing development.\n\nThe background elements provide a sense of depth and setting. The road stretches into the distance, flanked by more trees and urban infrastructure, including a bridge or overpass that spans the scene. The sky is overcast, casting a soft, diffused light over the entire image, which enhances the muted colors and gives the scene a calm, almost serene atmosphere despite the bustling activity in the foreground. The relationship between the foreground and background is one of perspective, with the foreground elements closer to the viewer and the background elements receding into the distance, creating a sense of space and depth.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 256,
+            "total_tokens": 559
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1941.705315,
+            "prompt_eval_duration_ms": 30.818839,
+            "generation_duration_ms": 1868.736509,
+            "load_duration_ms": 39.469844,
+            "tokens_per_second": 136.99095552908685
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a bustling urban scene unfolds under a clear sky, with the primary focus on a busy street intersection. The street is lined with various vehicles, including buses and cars, all seemingly in motion, suggesting a typical day in a city. The buses, prominently featured in the foreground, are stopped at a traffic light, indicating a moment of pause in their journey. Pedestrians are visible on the sidewalks, some walking and others standing, adding to the dynamic human element of the scene. The interaction between the vehicles and pedestrians is minimal, as they are in their respective lanes and areas, maintaining a safe distance. The background reveals a mix of urban and natural elements, with trees and buildings framing the scene, providing a contrast to the urban environment. The overall atmosphere suggests a typical day in a city where people and vehicles coexist within a structured yet fluid environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 176,
+            "total_tokens": 482
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1346.802894,
+            "prompt_eval_duration_ms": 31.460658,
+            "generation_duration_ms": 1272.53555,
+            "load_duration_ms": 40.373969,
+            "tokens_per_second": 138.30654868541788
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of calm and routine, reflecting a neutral to slightly positive mood. The scene captures a typical urban street during what appears to be the early evening, as the sky is a soft, muted hue, suggesting the transition from day to night. The traffic lights are green, indicating a smooth flow of vehicles, which contributes to the feeling of order and normalcy. The presence of buses and cars, along with a few pedestrians, suggests a bustling yet orderly city life. The trees lining the street, with their autumnal colors, add a touch of seasonal beauty, enhancing the overall peacefulness. The buildings in the background, though not overly detailed, provide a sense of urban infrastructure and stability. The absence of any dramatic elements or intense colors keeps the mood grounded and subdued, evoking a feeling of everyday life unfolding without urgency or distress.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 173,
+            "total_tokens": 481
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1344.388179,
+            "prompt_eval_duration_ms": 30.344355,
+            "generation_duration_ms": 1271.369821,
+            "load_duration_ms": 40.028188,
+            "tokens_per_second": 136.0737034515467
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 2,\n      \"location\": \"bottom\",\n      \"color\": [\"black\", \"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"walking on sidewalk\"\n    }\n  },\n  \"man-made\": {\n    \"car\": {\n      \"count\": 5,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"white\", \"red\"],\n      \"size\": \"medium\",\n      \"description\": \"on road\"\n    },\n    \"bus\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"red\"],\n      \"size\": \"large\",\n      \"description\": \"on road\"\n    },\n    \"streetlight\": {\n      \"count\": 6,\n      \"location\": \"left\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"on poles\"\n    },\n    \"traffic_light\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"on poles\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"yellow\", \"gray\"],\n      \"size\": \"large\",\n      \"description\": \"under construction\"\n    },\n    \"bridge\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"overhead\"\n    },\n    \"road\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"with vehicles\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 10,\n      \"location\": \"left\",\n      \"color\": [\"brown\", \"green\"],\n      \"size\": \"medium\",\n      \"description\": \"on sidewalk\"\n    },\n    \"tree\": {\n      \"count\": 10,\n      \"location\": \"right\",\n      \"color\": [\"brown\", \"green\"],\n      \"size\": \"medium\",\n      \"description\": \"on sidewalk\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"clear\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 2,
+                "location": "bottom",
+                "color": [
+                  "black",
+                  "yellow"
+                ],
+                "size": "small",
+                "description": "walking on sidewalk"
+              }
+            },
+            "man-made": {
+              "car": {
+                "count": 5,
+                "location": "center",
+                "color": [
+                  "black",
+                  "white",
+                  "red"
+                ],
+                "size": "medium",
+                "description": "on road"
+              },
+              "bus": {
+                "count": 2,
+                "location": "center",
+                "color": [
+                  "black",
+                  "red"
+                ],
+                "size": "large",
+                "description": "on road"
+              },
+              "streetlight": {
+                "count": 6,
+                "location": "left",
+                "color": [
+                  "gray"
+                ],
+                "size": "small",
+                "description": "on poles"
+              },
+              "traffic_light": {
+                "count": 2,
+                "location": "center",
+                "color": [
+                  "green"
+                ],
+                "size": "small",
+                "description": "on poles"
+              },
+              "building": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "yellow",
+                  "gray"
+                ],
+                "size": "large",
+                "description": "under construction"
+              },
+              "bridge": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "overhead"
+              },
+              "road": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "with vehicles"
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 10,
+                "location": "right",
+                "color": [
+                  "brown",
+                  "green"
+                ],
+                "size": "medium",
+                "description": "on sidewalk"
+              },
+              "sky": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "clear"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 527,
+            "total_tokens": 1013
+          },
+          "performance_metrics": {
+            "total_duration_ms": 3891.294797,
+            "prompt_eval_duration_ms": 44.380209,
+            "generation_duration_ms": 3802.857669,
+            "load_duration_ms": 40.524771,
+            "tokens_per_second": 138.57999585311327
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3049,
+        "total_time_ms": 10231.340209,
+        "average_speed": 137.3949241507211
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts an urban street scene during what appears to be late afternoon or early evening, as indicated by the warm, soft lighting and long shadows. The setting is a cityscape with a mix of modern infrastructure and natural elements. The main elements include a multi-lane road with several buses and cars traveling in both directions. The buses, painted in a combination of dark and light colors, are the focal point, suggesting a public transportation system. Overhead, a network of power lines crisscrosses the street, adding a sense of urban complexity.\n\nThe background features a mix of trees with autumnal foliage, displaying shades of green, orange, and red, indicating the season. A prominent overpass or elevated roadway stretches across the scene, connecting distant parts of the city. The architecture includes modern buildings, with one yellow structure on the right side of the image standing out due to its bright color. The lighting is warm and golden, casting a serene glow over the entire scene, which enhances the autumnal atmosphere. The overall composition is balanced, with the road and buses leading the viewer's eye into the distance, creating a sense of depth. The presence of pedestrians on the sidewalks adds a human element, grounding the scene in everyday city life. The image captures a blend of urban development and natural beauty, highlighting the coexistence of infrastructure and nature in a city environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 276,
+            "total_tokens": 573
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13819.258678,
+            "prompt_eval_duration_ms": 3454.948545,
+            "generation_duration_ms": 10324.043891,
+            "load_duration_ms": 37.730723,
+            "tokens_per_second": 26.73371044466436
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the closest elements to the viewer include a street-level view of a busy urban intersection. Prominently featured are several buses, likely part of a public transportation system, traveling along the road. The buses are in motion, with their rear lights visible, indicating they are either accelerating or maintaining speed. Pedestrians can be seen crossing the street at a crosswalk, suggesting an active pedestrian environment. The foreground also includes street-level infrastructure such as traffic lights, which are green, signaling that vehicles and pedestrians can proceed. Overhead, power lines crisscross the scene, adding to the urban atmosphere.\n\nIn the background, the setting shifts to a more distant view of the cityscape. A multi-lane overpass or elevated highway is visible, spanning across the image and connecting different parts of the city. The overpass is flanked by trees, some of which have autumnal foliage, indicating the season. Beyond the overpass, a dense cluster of trees and greenery forms a natural backdrop, contrasting with the urban elements in the foreground. Buildings, including a yellow structure on the right side, are also visible, adding to the urban landscape. The sky is clear and bright, suggesting it is either early morning or late afternoon.\n\nThe foreground and background elements relate to each other by creating a layered composition that illustrates the dynamic interplay between urban infrastructure and natural elements. The buses and pedestrians in the foreground represent the daily activity and movement of city life, while the overpass and trees in the background provide context and depth, showcasing the city's layout and its integration with nature. The power lines and traffic lights connect the two layers, emphasizing the functional aspects of urban planning and the flow of traffic and people through the city. Together, these elements create a cohesive scene that highlights the complexity and vibrancy of urban life.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 372,
+            "total_tokens": 675
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13943.209225,
+            "prompt_eval_duration_ms": 72.769348,
+            "generation_duration_ms": 13826.287603,
+            "load_duration_ms": 41.606971,
+            "tokens_per_second": 26.905269923597146
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a bustling urban street scene during what appears to be early morning or late afternoon, as indicated by the soft, warm lighting. The primary elements in the image include people, vehicles, and infrastructure, all interacting within the context of a busy city environment.\n\nSeveral buses are prominently visible, occupying the center of the street. They are moving in both directions, suggesting a well-used public transportation route. The buses are closely spaced, indicating a high volume of traffic, which is typical for a busy urban area. The buses' design and the presence of multiple routes suggest an organized public transit system.\n\nTwo pedestrians are crossing the street at a crosswalk, carefully navigating the flow of traffic. They appear to be moving with purpose, likely commuting or traveling to a destination. Their presence highlights the coexistence of different modes of transportation in the city.\n\nThe street is lined with traffic lights, which are green, allowing vehicles to proceed. The traffic lights are part of a larger network of urban infrastructure, including overhead power lines and streetlights, which contribute to the organized and structured feel of the scene.\n\nIn the background, there are trees with autumnal foliage, adding a touch of nature to the urban setting. The trees are interspersed with buildings, including a multi-story structure on the right side of the image, which could be an office building or residential complex.\n\nOverall, the image captures the dynamic interaction between people, vehicles, and urban infrastructure. The buses, pedestrians, and traffic lights all work together to facilitate movement and connectivity within the city. The scene portrays a typical day in a bustling urban environment, where various elements coexist and interact to support the daily activities of its inhabitants.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 339,
+            "total_tokens": 645
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12716.517464,
+            "prompt_eval_duration_ms": 80.542671,
+            "generation_duration_ms": 12595.003481,
+            "load_duration_ms": 38.166067,
+            "tokens_per_second": 26.91543519709171
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The mood conveyed by this image is predominantly neutral, with a hint of calmness and routine. The scene depicts a typical urban street during what appears to be late afternoon or early evening, as suggested by the soft, warm light and the long shadows cast by the streetlights and buildings. The presence of multiple buses and cars on the road suggests a sense of activity and movement, but the overall atmosphere is not chaotic or rushed; instead, it feels orderly and methodical.\n\nThe visual elements that contribute to this emotional atmosphere include the clear sky, which adds a sense of openness and tranquility, and the green traffic lights, signaling a smooth flow of traffic. The trees with autumnal colors in the background introduce a touch of warmth and natural beauty, contrasting with the urban setting and softening the overall mood. The pedestrians walking on the sidewalk appear relaxed, further emphasizing the routine nature of the scene. The tall buildings and streetlights create a sense of structure and order, reinforcing the neutral tone. The image does not evoke strong positive or negative emotions but rather a sense of everyday life, where the hustle and bustle of the city coexists with moments of calm and natural beauty. This balance gives the image a reflective and slightly serene quality.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 248,
+            "total_tokens": 556
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9348.262004,
+            "prompt_eval_duration_ms": 75.025242,
+            "generation_duration_ms": 9231.187818,
+            "load_duration_ms": 37.516404,
+            "tokens_per_second": 26.86544840052132
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 2,\n      \"location\": \"bottom, center\",\n      \"color\": [\"black\", \"green\"],\n      \"size\": \"small\",\n      \"description\": \"Two pedestrians crossing the street.\"\n    }\n  },\n  \"animal\": {},\n  \"man-made\": {\n    \"bus\": {\n      \"count\": 4,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\", \"blue\", \"red\"],\n      \"size\": \"large\",\n      \"description\": \"Multiple buses on the road, some with visible headlights and taillights.\"\n    },\n    \"car\": {\n      \"count\": 6,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\", \"white\", \"silver\"],\n      \"size\": \"medium\",\n      \"description\": \"Cars driving on the road, some in traffic.\"\n    },\n    \"traffic light\": {\n      \"count\": 3,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Traffic lights showing green signals.\"\n    },\n    \"streetlight\": {\n      \"count\": 5,\n      \"location\": \"left, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Streetlights lining the road.\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"right, top\",\n      \"color\": [\"yellow\", \"brown\"],\n      \"size\": \"large\",\n      \"description\": \"A multi-story building with visible signage.\"\n    },\n    \"bridge\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"An overpass or bridge spanning the road.\"\n    },\n    \"road\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"A multi-lane road with traffic.\"\n    },\n    \"sign\": {\n      \"count\": 2,\n      \"location\": \"center, middle\",\n      \"color\": [\"yellow\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"Traffic signs visible on the right side of the road.\"\n    },\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"A metal fence along the left side of the road.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 10,\n      \"location\": \"left, top\",\n      \"color\": [\"green\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"Trees lining the road and in the background.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 2,
+                "location": "bottom, center",
+                "color": [
+                  "black",
+                  "green"
+                ],
+                "size": "small",
+                "description": "Two pedestrians crossing the street."
+              }
+            },
+            "animal": {},
+            "man-made": {
+              "bus": {
+                "count": 4,
+                "location": "center, middle",
+                "color": [
+                  "white",
+                  "blue",
+                  "red"
+                ],
+                "size": "large",
+                "description": "Multiple buses on the road, some with visible headlights and taillights."
+              },
+              "car": {
+                "count": 6,
+                "location": "center, middle",
+                "color": [
+                  "black",
+                  "white",
+                  "silver"
+                ],
+                "size": "medium",
+                "description": "Cars driving on the road, some in traffic."
+              },
+              "traffic light": {
+                "count": 3,
+                "location": "center, middle",
+                "color": [
+                  "green"
+                ],
+                "size": "small",
+                "description": "Traffic lights showing green signals."
+              },
+              "streetlight": {
+                "count": 5,
+                "location": "left, middle",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "Streetlights lining the road."
+              },
+              "building": {
+                "count": 1,
+                "location": "right, top",
+                "color": [
+                  "yellow",
+                  "brown"
+                ],
+                "size": "large",
+                "description": "A multi-story building with visible signage."
+              },
+              "bridge": {
+                "count": 1,
+                "location": "center, top",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "An overpass or bridge spanning the road."
+              },
+              "road": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "A multi-lane road with traffic."
+              },
+              "sign": {
+                "count": 2,
+                "location": "center, middle",
+                "color": [
+                  "yellow",
+                  "white"
+                ],
+                "size": "small",
+                "description": "Traffic signs visible on the right side of the road."
+              },
+              "fence": {
+                "count": 1,
+                "location": "left, middle",
+                "color": [
+                  "gray"
+                ],
+                "size": "medium",
+                "description": "A metal fence along the left side of the road."
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 10,
+                "location": "left, top",
+                "color": [
+                  "green",
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "Trees lining the road and in the background."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 623,
+            "total_tokens": 1109
+          },
+          "performance_metrics": {
+            "total_duration_ms": 23393.553775,
+            "prompt_eval_duration_ms": 139.793746,
+            "generation_duration_ms": 23212.823985,
+            "load_duration_ms": 38.368912,
+            "tokens_per_second": 26.83861301850129
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3558,
+        "total_time_ms": 73220.80114600001,
+        "average_speed": 26.851695396875165
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -443,400 +873,6 @@
       }
     },
     {
-      "model": "mistral-small3.2:24b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts an urban street scene during what appears to be the early evening or late afternoon, as indicated by the soft, warm lighting. The setting features a multi-lane road with several vehicles, including cars and a bus, moving in both directions. The traffic lights are prominently green, suggesting that the vehicles are in motion. The road is lined with streetlights and traffic signs, adding to the urban atmosphere. On the right side of the image, there is a large, yellowish building with multiple windows, possibly an office or commercial structure. The left side of the image showcases a grassy area with trees and shrubs, providing a natural contrast to the urban elements. The sky is clear, with a hint of orange near the horizon, indicating the setting sun. The overall composition is balanced, with the road and vehicles drawing the viewer's attention to the center, while the surrounding elements frame the scene, creating a harmonious blend of urban and natural elements.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 792,
-            "output_tokens": 196,
-            "total_tokens": 988
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7568.347602,
-            "prompt_eval_duration_ms": 2051.412981,
-            "generation_duration_ms": 5467.492542,
-            "load_duration_ms": 46.327008,
-            "tokens_per_second": 35.84824277205205
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of this image, we see a busy urban street scene with several vehicles, including cars and a bus, waiting at a traffic light. The traffic lights are prominently visible and are currently green, indicating that the vehicles are likely in the process of moving forward. Pedestrians can also be spotted on the sidewalks, adding to the bustling atmosphere. The street is lined with streetlights and utility poles, contributing to the urban infrastructure. The foreground elements are dynamic, showcasing the everyday hustle and bustle of city life.\n\nIn contrast, the background of the image provides a more serene and distant view. It features a row of trees and a building, possibly an apartment complex or office building, set against a backdrop of a clear sky. The trees add a touch of nature to the urban setting, creating a harmonious blend of man-made and natural elements. The distant view includes more buildings and possibly a bridge or overpass, indicating that this scene is part of a larger urban area. The background elements provide context and depth, framing the foreground activity within a broader urban landscape. Together, the foreground and background elements create a comprehensive picture of city life, where the vibrancy of urban activity is balanced by the tranquility of natural and architectural features.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 798,
-            "output_tokens": 258,
-            "total_tokens": 1056
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7298.560968,
-            "prompt_eval_duration_ms": 54.679571,
-            "generation_duration_ms": 7192.820807,
-            "load_duration_ms": 48.16409,
-            "tokens_per_second": 35.86909877539509
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts an urban intersection with several elements interacting dynamically. Multiple vehicles, including cars and a bus, are navigating the intersection, adhering to the traffic lights that are currently green, allowing the traffic to proceed. The vehicles appear to be moving in different directions, suggesting a well-regulated flow of traffic. Pedestrians are visible on the sidewalks, with one individual walking near the bus, possibly waiting to cross the street or board the bus. The presence of traffic lights and street signs indicates a structured environment aimed at ensuring safety and order. In the background, there are buildings and trees, adding to the urban setting. The interaction between the vehicles and the traffic lights, as well as the pedestrians' adherence to the crosswalk, highlights the organized nature of city life. The overall scene captures a typical moment in an urban area where various elements coexist and function in harmony.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 800,
-            "output_tokens": 179,
-            "total_tokens": 979
-          },
-          "performance_metrics": {
-            "total_duration_ms": 5083.771457,
-            "prompt_eval_duration_ms": 56.861233,
-            "generation_duration_ms": 4975.647689,
-            "load_duration_ms": 45.835973,
-            "tokens_per_second": 35.9752159293206
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a calm and serene mood, evoking feelings of tranquility and everyday routine. The overall tone is neutral, leaning slightly towards positive due to the peaceful urban setting. The soft, warm lighting of the setting sun casts a gentle glow over the scene, creating a soothing atmosphere. The presence of greenery, such as trees and grass, adds a touch of nature to the urban environment, enhancing the sense of calm. The traffic lights and streetlights are well-lit, indicating a well-maintained and orderly cityscape. The few vehicles on the road and the pedestrian crossing suggest a quiet, unhurried moment in the day. The buildings in the background, though modern, do not overpower the natural elements, contributing to a balanced and harmonious composition. The absence of any signs of chaos or distress further reinforces the sense of peace and normalcy, making the scene feel safe and inviting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 803,
-            "output_tokens": 188,
-            "total_tokens": 991
-          },
-          "performance_metrics": {
-            "total_duration_ms": 5334.181876,
-            "prompt_eval_duration_ms": 57.029419,
-            "generation_duration_ms": 5228.580646,
-            "load_duration_ms": 44.013159,
-            "tokens_per_second": 35.956220765921415
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 2,\n      \"location\": \"foreground, bottom\",\n      \"size\": \"small\",\n      \"description\": \"Two individuals standing near the bottom of the image, possibly waiting to cross the street.\"\n    }\n  },\n  \"man-made\": {\n    \"car\": {\n      \"count\": 3,\n      \"location\": \"foreground, middle\",\n      \"color\": [\"silver\", \"black\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Three cars waiting at a traffic light.\"\n    },\n    \"bus\": {\n      \"count\": 1,\n      \"location\": \"foreground, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"A bus waiting at a traffic light.\"\n    },\n    \"traffic light\": {\n      \"count\": 4,\n      \"location\": \"foreground, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Four traffic lights showing green.\"\n    },\n    \"street light\": {\n      \"count\": 5,\n      \"location\": \"foreground, middle\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"Five street lights lining the road.\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"background, right\",\n      \"color\": [\"yellow\"],\n      \"size\": \"large\",\n      \"description\": \"A tall yellow building in the background.\"\n    },\n    \"traffic sign\": {\n      \"count\": 1,\n      \"location\": \"background, middle\",\n      \"color\": [\"blue\"],\n      \"size\": \"small\",\n      \"description\": \"A blue traffic sign in the background.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 10,\n      \"location\": \"background\",\n      \"color\": [\"green\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"Trees lining the road and in the background.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 2,
-                "location": "foreground, bottom",
-                "size": "small",
-                "description": "Two individuals standing near the bottom of the image, possibly waiting to cross the street."
-              }
-            },
-            "man-made": {
-              "car": {
-                "count": 3,
-                "location": "foreground, middle",
-                "color": [
-                  "silver",
-                  "black",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "Three cars waiting at a traffic light."
-              },
-              "bus": {
-                "count": 1,
-                "location": "foreground, middle",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "A bus waiting at a traffic light."
-              },
-              "traffic light": {
-                "count": 4,
-                "location": "foreground, middle",
-                "color": [
-                  "green"
-                ],
-                "size": "small",
-                "description": "Four traffic lights showing green."
-              },
-              "street light": {
-                "count": 5,
-                "location": "foreground, middle",
-                "color": [
-                  "gray"
-                ],
-                "size": "medium",
-                "description": "Five street lights lining the road."
-              },
-              "building": {
-                "count": 1,
-                "location": "background, right",
-                "color": [
-                  "yellow"
-                ],
-                "size": "large",
-                "description": "A tall yellow building in the background."
-              },
-              "traffic sign": {
-                "count": 1,
-                "location": "background, middle",
-                "color": [
-                  "blue"
-                ],
-                "size": "small",
-                "description": "A blue traffic sign in the background."
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 10,
-                "location": "background",
-                "color": [
-                  "green",
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "Trees lining the road and in the background."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 982,
-            "output_tokens": 445,
-            "total_tokens": 1427
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12560.324225,
-            "prompt_eval_duration_ms": 106.54479,
-            "generation_duration_ms": 12404.467064,
-            "load_duration_ms": 44.4216,
-            "tokens_per_second": 35.87417320744639
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 5441,
-        "total_time_ms": 37845.186128,
-        "average_speed": 35.90459029002711
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a bustling urban street scene during what appears to be the early evening, as the sky is a soft gradient of light blue and orange hues, suggesting either sunrise or sunset. The setting is a multi-lane road with traffic flowing in both directions, featuring a mix of vehicles including buses, cars, and a few pedestrians. The road is lined with streetlights, some of which are illuminated, casting a warm glow on the pavement. The trees along the roadside are bare, indicating the season might be late autumn or winter. In the background, a bridge is visible, with its structure partially obscured by the trees and the angle of the shot. The buildings on the right side of the image are modern, with one having a distinctive yellow facade. The overall composition is dynamic, with the movement of the traffic and the interplay of light and shadow creating a sense of depth and activity. The colors are muted yet rich, with the earthy tones of the road and the muted greens of the trees contrasting against the brighter elements like the yellow building and the warm streetlights.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 217,
-            "total_tokens": 514
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1707.149024,
-            "prompt_eval_duration_ms": 80.919002,
-            "generation_duration_ms": 1583.670911,
-            "load_duration_ms": 39.995658,
-            "tokens_per_second": 137.0234172344408
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the viewer's perspective is dominated by a busy urban street scene. Several vehicles, including buses and cars, are captured in motion, with their taillights glowing red, indicating they are stopped or moving slowly. Pedestrians are also present, some walking on the sidewalks, adding a human element to the urban landscape. Overhead, power lines crisscross the scene, while streetlights line the road, suggesting a well-lit urban environment. The immediate surroundings include a mix of greenery and urban structures, with trees partially obscuring the view of buildings and a construction site with a yellow sign visible on the right, hinting at ongoing development.\n\nThe background elements provide a sense of depth and setting. The road stretches into the distance, flanked by more trees and urban infrastructure, including a bridge or overpass that spans the scene. The sky is overcast, casting a soft, diffused light over the entire image, which enhances the muted colors and gives the scene a calm, almost serene atmosphere despite the bustling activity in the foreground. The relationship between the foreground and background is one of perspective, with the foreground elements closer to the viewer and the background elements receding into the distance, creating a sense of space and depth.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 256,
-            "total_tokens": 559
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1941.705315,
-            "prompt_eval_duration_ms": 30.818839,
-            "generation_duration_ms": 1868.736509,
-            "load_duration_ms": 39.469844,
-            "tokens_per_second": 136.99095552908685
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a bustling urban scene unfolds under a clear sky, with the primary focus on a busy street intersection. The street is lined with various vehicles, including buses and cars, all seemingly in motion, suggesting a typical day in a city. The buses, prominently featured in the foreground, are stopped at a traffic light, indicating a moment of pause in their journey. Pedestrians are visible on the sidewalks, some walking and others standing, adding to the dynamic human element of the scene. The interaction between the vehicles and pedestrians is minimal, as they are in their respective lanes and areas, maintaining a safe distance. The background reveals a mix of urban and natural elements, with trees and buildings framing the scene, providing a contrast to the urban environment. The overall atmosphere suggests a typical day in a city where people and vehicles coexist within a structured yet fluid environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 176,
-            "total_tokens": 482
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1346.802894,
-            "prompt_eval_duration_ms": 31.460658,
-            "generation_duration_ms": 1272.53555,
-            "load_duration_ms": 40.373969,
-            "tokens_per_second": 138.30654868541788
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of calm and routine, reflecting a neutral to slightly positive mood. The scene captures a typical urban street during what appears to be the early evening, as the sky is a soft, muted hue, suggesting the transition from day to night. The traffic lights are green, indicating a smooth flow of vehicles, which contributes to the feeling of order and normalcy. The presence of buses and cars, along with a few pedestrians, suggests a bustling yet orderly city life. The trees lining the street, with their autumnal colors, add a touch of seasonal beauty, enhancing the overall peacefulness. The buildings in the background, though not overly detailed, provide a sense of urban infrastructure and stability. The absence of any dramatic elements or intense colors keeps the mood grounded and subdued, evoking a feeling of everyday life unfolding without urgency or distress.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 173,
-            "total_tokens": 481
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1344.388179,
-            "prompt_eval_duration_ms": 30.344355,
-            "generation_duration_ms": 1271.369821,
-            "load_duration_ms": 40.028188,
-            "tokens_per_second": 136.0737034515467
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 2,\n      \"location\": \"bottom\",\n      \"color\": [\"black\", \"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"walking on sidewalk\"\n    }\n  },\n  \"man-made\": {\n    \"car\": {\n      \"count\": 5,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"white\", \"red\"],\n      \"size\": \"medium\",\n      \"description\": \"on road\"\n    },\n    \"bus\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"red\"],\n      \"size\": \"large\",\n      \"description\": \"on road\"\n    },\n    \"streetlight\": {\n      \"count\": 6,\n      \"location\": \"left\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"on poles\"\n    },\n    \"traffic_light\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"on poles\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"yellow\", \"gray\"],\n      \"size\": \"large\",\n      \"description\": \"under construction\"\n    },\n    \"bridge\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"overhead\"\n    },\n    \"road\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"with vehicles\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 10,\n      \"location\": \"left\",\n      \"color\": [\"brown\", \"green\"],\n      \"size\": \"medium\",\n      \"description\": \"on sidewalk\"\n    },\n    \"tree\": {\n      \"count\": 10,\n      \"location\": \"right\",\n      \"color\": [\"brown\", \"green\"],\n      \"size\": \"medium\",\n      \"description\": \"on sidewalk\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"clear\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 2,
-                "location": "bottom",
-                "color": [
-                  "black",
-                  "yellow"
-                ],
-                "size": "small",
-                "description": "walking on sidewalk"
-              }
-            },
-            "man-made": {
-              "car": {
-                "count": 5,
-                "location": "center",
-                "color": [
-                  "black",
-                  "white",
-                  "red"
-                ],
-                "size": "medium",
-                "description": "on road"
-              },
-              "bus": {
-                "count": 2,
-                "location": "center",
-                "color": [
-                  "black",
-                  "red"
-                ],
-                "size": "large",
-                "description": "on road"
-              },
-              "streetlight": {
-                "count": 6,
-                "location": "left",
-                "color": [
-                  "gray"
-                ],
-                "size": "small",
-                "description": "on poles"
-              },
-              "traffic_light": {
-                "count": 2,
-                "location": "center",
-                "color": [
-                  "green"
-                ],
-                "size": "small",
-                "description": "on poles"
-              },
-              "building": {
-                "count": 1,
-                "location": "right",
-                "color": [
-                  "yellow",
-                  "gray"
-                ],
-                "size": "large",
-                "description": "under construction"
-              },
-              "bridge": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "overhead"
-              },
-              "road": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "with vehicles"
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 10,
-                "location": "right",
-                "color": [
-                  "brown",
-                  "green"
-                ],
-                "size": "medium",
-                "description": "on sidewalk"
-              },
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "clear"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 527,
-            "total_tokens": 1013
-          },
-          "performance_metrics": {
-            "total_duration_ms": 3891.294797,
-            "prompt_eval_duration_ms": 44.380209,
-            "generation_duration_ms": 3802.857669,
-            "load_duration_ms": 40.524771,
-            "tokens_per_second": 138.57999585311327
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3049,
-        "total_time_ms": 10231.340209,
-        "average_speed": 137.3949241507211
-      }
-    },
-    {
       "model": "gemma3:27b",
       "temperature": 0.3,
       "prompts": {
@@ -1032,196 +1068,160 @@
       }
     },
     {
-      "model": "qwen2.5vl:32b",
+      "model": "mistral-small3.2:24b",
       "temperature": 0.3,
       "prompts": {
         "general_description": {
           "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts an urban street scene during what appears to be late afternoon or early evening, as indicated by the warm, soft lighting and long shadows. The setting is a cityscape with a mix of modern infrastructure and natural elements. The main elements include a multi-lane road with several buses and cars traveling in both directions. The buses, painted in a combination of dark and light colors, are the focal point, suggesting a public transportation system. Overhead, a network of power lines crisscrosses the street, adding a sense of urban complexity.\n\nThe background features a mix of trees with autumnal foliage, displaying shades of green, orange, and red, indicating the season. A prominent overpass or elevated roadway stretches across the scene, connecting distant parts of the city. The architecture includes modern buildings, with one yellow structure on the right side of the image standing out due to its bright color. The lighting is warm and golden, casting a serene glow over the entire scene, which enhances the autumnal atmosphere. The overall composition is balanced, with the road and buses leading the viewer's eye into the distance, creating a sense of depth. The presence of pedestrians on the sidewalks adds a human element, grounding the scene in everyday city life. The image captures a blend of urban development and natural beauty, highlighting the coexistence of infrastructure and nature in a city environment.",
+          "response": "The image depicts an urban street scene during what appears to be the early evening or late afternoon, as indicated by the soft, warm lighting. The setting features a multi-lane road with several vehicles, including cars and a bus, moving in both directions. The traffic lights are prominently green, suggesting that the vehicles are in motion. The road is lined with streetlights and traffic signs, adding to the urban atmosphere. On the right side of the image, there is a large, yellowish building with multiple windows, possibly an office or commercial structure. The left side of the image showcases a grassy area with trees and shrubs, providing a natural contrast to the urban elements. The sky is clear, with a hint of orange near the horizon, indicating the setting sun. The overall composition is balanced, with the road and vehicles drawing the viewer's attention to the center, while the surrounding elements frame the scene, creating a harmonious blend of urban and natural elements.",
           "response_format": "text",
           "response_data": null,
           "error": null,
           "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 276,
-            "total_tokens": 573
+            "input_tokens": 792,
+            "output_tokens": 196,
+            "total_tokens": 988
           },
           "performance_metrics": {
-            "total_duration_ms": 13819.258678,
-            "prompt_eval_duration_ms": 3454.948545,
-            "generation_duration_ms": 10324.043891,
-            "load_duration_ms": 37.730723,
-            "tokens_per_second": 26.73371044466436
+            "total_duration_ms": 7568.347602,
+            "prompt_eval_duration_ms": 2051.412981,
+            "generation_duration_ms": 5467.492542,
+            "load_duration_ms": 46.327008,
+            "tokens_per_second": 35.84824277205205
           }
         },
         "foreground_background": {
           "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the closest elements to the viewer include a street-level view of a busy urban intersection. Prominently featured are several buses, likely part of a public transportation system, traveling along the road. The buses are in motion, with their rear lights visible, indicating they are either accelerating or maintaining speed. Pedestrians can be seen crossing the street at a crosswalk, suggesting an active pedestrian environment. The foreground also includes street-level infrastructure such as traffic lights, which are green, signaling that vehicles and pedestrians can proceed. Overhead, power lines crisscross the scene, adding to the urban atmosphere.\n\nIn the background, the setting shifts to a more distant view of the cityscape. A multi-lane overpass or elevated highway is visible, spanning across the image and connecting different parts of the city. The overpass is flanked by trees, some of which have autumnal foliage, indicating the season. Beyond the overpass, a dense cluster of trees and greenery forms a natural backdrop, contrasting with the urban elements in the foreground. Buildings, including a yellow structure on the right side, are also visible, adding to the urban landscape. The sky is clear and bright, suggesting it is either early morning or late afternoon.\n\nThe foreground and background elements relate to each other by creating a layered composition that illustrates the dynamic interplay between urban infrastructure and natural elements. The buses and pedestrians in the foreground represent the daily activity and movement of city life, while the overpass and trees in the background provide context and depth, showcasing the city's layout and its integration with nature. The power lines and traffic lights connect the two layers, emphasizing the functional aspects of urban planning and the flow of traffic and people through the city. Together, these elements create a cohesive scene that highlights the complexity and vibrancy of urban life.",
+          "response": "In the foreground of this image, we see a busy urban street scene with several vehicles, including cars and a bus, waiting at a traffic light. The traffic lights are prominently visible and are currently green, indicating that the vehicles are likely in the process of moving forward. Pedestrians can also be spotted on the sidewalks, adding to the bustling atmosphere. The street is lined with streetlights and utility poles, contributing to the urban infrastructure. The foreground elements are dynamic, showcasing the everyday hustle and bustle of city life.\n\nIn contrast, the background of the image provides a more serene and distant view. It features a row of trees and a building, possibly an apartment complex or office building, set against a backdrop of a clear sky. The trees add a touch of nature to the urban setting, creating a harmonious blend of man-made and natural elements. The distant view includes more buildings and possibly a bridge or overpass, indicating that this scene is part of a larger urban area. The background elements provide context and depth, framing the foreground activity within a broader urban landscape. Together, the foreground and background elements create a comprehensive picture of city life, where the vibrancy of urban activity is balanced by the tranquility of natural and architectural features.",
           "response_format": "text",
           "response_data": null,
           "error": null,
           "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 372,
-            "total_tokens": 675
+            "input_tokens": 798,
+            "output_tokens": 258,
+            "total_tokens": 1056
           },
           "performance_metrics": {
-            "total_duration_ms": 13943.209225,
-            "prompt_eval_duration_ms": 72.769348,
-            "generation_duration_ms": 13826.287603,
-            "load_duration_ms": 41.606971,
-            "tokens_per_second": 26.905269923597146
+            "total_duration_ms": 7298.560968,
+            "prompt_eval_duration_ms": 54.679571,
+            "generation_duration_ms": 7192.820807,
+            "load_duration_ms": 48.16409,
+            "tokens_per_second": 35.86909877539509
           }
         },
         "entities_interactions": {
           "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a bustling urban street scene during what appears to be early morning or late afternoon, as indicated by the soft, warm lighting. The primary elements in the image include people, vehicles, and infrastructure, all interacting within the context of a busy city environment.\n\nSeveral buses are prominently visible, occupying the center of the street. They are moving in both directions, suggesting a well-used public transportation route. The buses are closely spaced, indicating a high volume of traffic, which is typical for a busy urban area. The buses' design and the presence of multiple routes suggest an organized public transit system.\n\nTwo pedestrians are crossing the street at a crosswalk, carefully navigating the flow of traffic. They appear to be moving with purpose, likely commuting or traveling to a destination. Their presence highlights the coexistence of different modes of transportation in the city.\n\nThe street is lined with traffic lights, which are green, allowing vehicles to proceed. The traffic lights are part of a larger network of urban infrastructure, including overhead power lines and streetlights, which contribute to the organized and structured feel of the scene.\n\nIn the background, there are trees with autumnal foliage, adding a touch of nature to the urban setting. The trees are interspersed with buildings, including a multi-story structure on the right side of the image, which could be an office building or residential complex.\n\nOverall, the image captures the dynamic interaction between people, vehicles, and urban infrastructure. The buses, pedestrians, and traffic lights all work together to facilitate movement and connectivity within the city. The scene portrays a typical day in a bustling urban environment, where various elements coexist and interact to support the daily activities of its inhabitants.",
+          "response": "The image depicts an urban intersection with several elements interacting dynamically. Multiple vehicles, including cars and a bus, are navigating the intersection, adhering to the traffic lights that are currently green, allowing the traffic to proceed. The vehicles appear to be moving in different directions, suggesting a well-regulated flow of traffic. Pedestrians are visible on the sidewalks, with one individual walking near the bus, possibly waiting to cross the street or board the bus. The presence of traffic lights and street signs indicates a structured environment aimed at ensuring safety and order. In the background, there are buildings and trees, adding to the urban setting. The interaction between the vehicles and the traffic lights, as well as the pedestrians' adherence to the crosswalk, highlights the organized nature of city life. The overall scene captures a typical moment in an urban area where various elements coexist and function in harmony.",
           "response_format": "text",
           "response_data": null,
           "error": null,
           "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 339,
-            "total_tokens": 645
+            "input_tokens": 800,
+            "output_tokens": 179,
+            "total_tokens": 979
           },
           "performance_metrics": {
-            "total_duration_ms": 12716.517464,
-            "prompt_eval_duration_ms": 80.542671,
-            "generation_duration_ms": 12595.003481,
-            "load_duration_ms": 38.166067,
-            "tokens_per_second": 26.91543519709171
+            "total_duration_ms": 5083.771457,
+            "prompt_eval_duration_ms": 56.861233,
+            "generation_duration_ms": 4975.647689,
+            "load_duration_ms": 45.835973,
+            "tokens_per_second": 35.9752159293206
           }
         },
         "mood_emotions": {
           "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The mood conveyed by this image is predominantly neutral, with a hint of calmness and routine. The scene depicts a typical urban street during what appears to be late afternoon or early evening, as suggested by the soft, warm light and the long shadows cast by the streetlights and buildings. The presence of multiple buses and cars on the road suggests a sense of activity and movement, but the overall atmosphere is not chaotic or rushed; instead, it feels orderly and methodical.\n\nThe visual elements that contribute to this emotional atmosphere include the clear sky, which adds a sense of openness and tranquility, and the green traffic lights, signaling a smooth flow of traffic. The trees with autumnal colors in the background introduce a touch of warmth and natural beauty, contrasting with the urban setting and softening the overall mood. The pedestrians walking on the sidewalk appear relaxed, further emphasizing the routine nature of the scene. The tall buildings and streetlights create a sense of structure and order, reinforcing the neutral tone. The image does not evoke strong positive or negative emotions but rather a sense of everyday life, where the hustle and bustle of the city coexists with moments of calm and natural beauty. This balance gives the image a reflective and slightly serene quality.",
+          "response": "The image conveys a calm and serene mood, evoking feelings of tranquility and everyday routine. The overall tone is neutral, leaning slightly towards positive due to the peaceful urban setting. The soft, warm lighting of the setting sun casts a gentle glow over the scene, creating a soothing atmosphere. The presence of greenery, such as trees and grass, adds a touch of nature to the urban environment, enhancing the sense of calm. The traffic lights and streetlights are well-lit, indicating a well-maintained and orderly cityscape. The few vehicles on the road and the pedestrian crossing suggest a quiet, unhurried moment in the day. The buildings in the background, though modern, do not overpower the natural elements, contributing to a balanced and harmonious composition. The absence of any signs of chaos or distress further reinforces the sense of peace and normalcy, making the scene feel safe and inviting.",
           "response_format": "text",
           "response_data": null,
           "error": null,
           "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 248,
-            "total_tokens": 556
+            "input_tokens": 803,
+            "output_tokens": 188,
+            "total_tokens": 991
           },
           "performance_metrics": {
-            "total_duration_ms": 9348.262004,
-            "prompt_eval_duration_ms": 75.025242,
-            "generation_duration_ms": 9231.187818,
-            "load_duration_ms": 37.516404,
-            "tokens_per_second": 26.86544840052132
+            "total_duration_ms": 5334.181876,
+            "prompt_eval_duration_ms": 57.029419,
+            "generation_duration_ms": 5228.580646,
+            "load_duration_ms": 44.013159,
+            "tokens_per_second": 35.956220765921415
           }
         },
         "structured_inventory": {
           "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 2,\n      \"location\": \"bottom, center\",\n      \"color\": [\"black\", \"green\"],\n      \"size\": \"small\",\n      \"description\": \"Two pedestrians crossing the street.\"\n    }\n  },\n  \"animal\": {},\n  \"man-made\": {\n    \"bus\": {\n      \"count\": 4,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\", \"blue\", \"red\"],\n      \"size\": \"large\",\n      \"description\": \"Multiple buses on the road, some with visible headlights and taillights.\"\n    },\n    \"car\": {\n      \"count\": 6,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\", \"white\", \"silver\"],\n      \"size\": \"medium\",\n      \"description\": \"Cars driving on the road, some in traffic.\"\n    },\n    \"traffic light\": {\n      \"count\": 3,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Traffic lights showing green signals.\"\n    },\n    \"streetlight\": {\n      \"count\": 5,\n      \"location\": \"left, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Streetlights lining the road.\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"right, top\",\n      \"color\": [\"yellow\", \"brown\"],\n      \"size\": \"large\",\n      \"description\": \"A multi-story building with visible signage.\"\n    },\n    \"bridge\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"An overpass or bridge spanning the road.\"\n    },\n    \"road\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"A multi-lane road with traffic.\"\n    },\n    \"sign\": {\n      \"count\": 2,\n      \"location\": \"center, middle\",\n      \"color\": [\"yellow\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"Traffic signs visible on the right side of the road.\"\n    },\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"A metal fence along the left side of the road.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 10,\n      \"location\": \"left, top\",\n      \"color\": [\"green\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"Trees lining the road and in the background.\"\n    }\n  }\n}\n```",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 2,\n      \"location\": \"foreground, bottom\",\n      \"size\": \"small\",\n      \"description\": \"Two individuals standing near the bottom of the image, possibly waiting to cross the street.\"\n    }\n  },\n  \"man-made\": {\n    \"car\": {\n      \"count\": 3,\n      \"location\": \"foreground, middle\",\n      \"color\": [\"silver\", \"black\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Three cars waiting at a traffic light.\"\n    },\n    \"bus\": {\n      \"count\": 1,\n      \"location\": \"foreground, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"A bus waiting at a traffic light.\"\n    },\n    \"traffic light\": {\n      \"count\": 4,\n      \"location\": \"foreground, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Four traffic lights showing green.\"\n    },\n    \"street light\": {\n      \"count\": 5,\n      \"location\": \"foreground, middle\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"Five street lights lining the road.\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"background, right\",\n      \"color\": [\"yellow\"],\n      \"size\": \"large\",\n      \"description\": \"A tall yellow building in the background.\"\n    },\n    \"traffic sign\": {\n      \"count\": 1,\n      \"location\": \"background, middle\",\n      \"color\": [\"blue\"],\n      \"size\": \"small\",\n      \"description\": \"A blue traffic sign in the background.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 10,\n      \"location\": \"background\",\n      \"color\": [\"green\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"Trees lining the road and in the background.\"\n    }\n  }\n}\n```",
           "response_format": "json",
           "response_data": {
             "human": {
               "person": {
                 "count": 2,
-                "location": "bottom, center",
-                "color": [
-                  "black",
-                  "green"
-                ],
+                "location": "foreground, bottom",
                 "size": "small",
-                "description": "Two pedestrians crossing the street."
+                "description": "Two individuals standing near the bottom of the image, possibly waiting to cross the street."
               }
             },
-            "animal": {},
             "man-made": {
-              "bus": {
-                "count": 4,
-                "location": "center, middle",
-                "color": [
-                  "white",
-                  "blue",
-                  "red"
-                ],
-                "size": "large",
-                "description": "Multiple buses on the road, some with visible headlights and taillights."
-              },
               "car": {
-                "count": 6,
-                "location": "center, middle",
+                "count": 3,
+                "location": "foreground, middle",
                 "color": [
+                  "silver",
                   "black",
-                  "white",
-                  "silver"
+                  "white"
                 ],
                 "size": "medium",
-                "description": "Cars driving on the road, some in traffic."
+                "description": "Three cars waiting at a traffic light."
               },
-              "traffic light": {
-                "count": 3,
-                "location": "center, middle",
-                "color": [
-                  "green"
-                ],
-                "size": "small",
-                "description": "Traffic lights showing green signals."
-              },
-              "streetlight": {
-                "count": 5,
-                "location": "left, middle",
+              "bus": {
+                "count": 1,
+                "location": "foreground, middle",
                 "color": [
                   "white"
                 ],
+                "size": "large",
+                "description": "A bus waiting at a traffic light."
+              },
+              "traffic light": {
+                "count": 4,
+                "location": "foreground, middle",
+                "color": [
+                  "green"
+                ],
                 "size": "small",
-                "description": "Streetlights lining the road."
+                "description": "Four traffic lights showing green."
+              },
+              "street light": {
+                "count": 5,
+                "location": "foreground, middle",
+                "color": [
+                  "gray"
+                ],
+                "size": "medium",
+                "description": "Five street lights lining the road."
               },
               "building": {
                 "count": 1,
-                "location": "right, top",
+                "location": "background, right",
                 "color": [
-                  "yellow",
-                  "brown"
+                  "yellow"
                 ],
                 "size": "large",
-                "description": "A multi-story building with visible signage."
+                "description": "A tall yellow building in the background."
               },
-              "bridge": {
+              "traffic sign": {
                 "count": 1,
-                "location": "center, top",
+                "location": "background, middle",
                 "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "An overpass or bridge spanning the road."
-              },
-              "road": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "A multi-lane road with traffic."
-              },
-              "sign": {
-                "count": 2,
-                "location": "center, middle",
-                "color": [
-                  "yellow",
-                  "white"
+                  "blue"
                 ],
                 "size": "small",
-                "description": "Traffic signs visible on the right side of the road."
-              },
-              "fence": {
-                "count": 1,
-                "location": "left, middle",
-                "color": [
-                  "gray"
-                ],
-                "size": "medium",
-                "description": "A metal fence along the left side of the road."
+                "description": "A blue traffic sign in the background."
               }
             },
             "natural": {
               "tree": {
                 "count": 10,
-                "location": "left, top",
+                "location": "background",
                 "color": [
                   "green",
                   "brown"
@@ -1233,175 +1233,23 @@
           },
           "error": null,
           "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 623,
-            "total_tokens": 1109
+            "input_tokens": 982,
+            "output_tokens": 445,
+            "total_tokens": 1427
           },
           "performance_metrics": {
-            "total_duration_ms": 23393.553775,
-            "prompt_eval_duration_ms": 139.793746,
-            "generation_duration_ms": 23212.823985,
-            "load_duration_ms": 38.368912,
-            "tokens_per_second": 26.83861301850129
+            "total_duration_ms": 12560.324225,
+            "prompt_eval_duration_ms": 106.54479,
+            "generation_duration_ms": 12404.467064,
+            "load_duration_ms": 44.4216,
+            "tokens_per_second": 35.87417320744639
           }
         }
       },
       "metrics": {
-        "total_tokens": 3558,
-        "total_time_ms": 73220.80114600001,
-        "average_speed": 26.851695396875165
-      }
-    },
-    {
-      "model": "llama3.2-vision:11b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a busy urban street scene, with a mix of cars, buses, and pedestrians. The setting is a typical city street, with a wide, paved road, lined with trees and buildings. The main elements in the image are the vehicles, including a bus, cars, and a few pedestrians, all moving in different directions. The colors are muted, with a mix of green, brown, and gray, with some trees and buildings adding a touch of color. The lighting is natural, with a few clouds in the sky, adding a sense of depth and atmosphere. The composition is dynamic, with a mix of movement and action, with the bus and cars moving in different directions, and the pedestrians, including a few, walking and walking, adding to the sense of movement and action. The overall atmosphere is busy, with a mix of people, cars, and buses, and a sense of movement and action, making it a dynamic and interesting scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 52,
-            "output_tokens": 194,
-            "total_tokens": 246
-          },
-          "performance_metrics": {
-            "total_duration_ms": 3165.538082,
-            "prompt_eval_duration_ms": 978.584682,
-            "generation_duration_ms": 2135.819336,
-            "load_duration_ms": 48.947989,
-            "tokens_per_second": 90.8316526262594
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground elements of the scene are the vehicles on the road, including a bus, cars, and a truck, which are all moving in the same direction. The bus is the most prominent foreground element, with its large size and prominent position on the road. The vehicles in the foreground are all moving in the same direction, creating a sense of movement and flow. The background elements of the scene are the trees and buildings on the hillside, which are distant and set in the background. The trees and buildings are not directly related to the vehicles in the foreground, but they do provide a sense of context and context for the scene. The trees and buildings are also in the background, providing a sense of depth and context for the scene. The vehicles in the foreground and the trees and buildings in the background are all connected by the road, which is the central element of the scene. The road is the most important element of the scene, and it is the central element that connects the vehicles in the foreground and the trees and buildings in the background.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 58,
-            "output_tokens": 211,
-            "total_tokens": 269
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2409.899096,
-            "prompt_eval_duration_ms": 38.788104,
-            "generation_duration_ms": 2322.110463,
-            "load_duration_ms": 46.898308,
-            "tokens_per_second": 90.86561701608422
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a city street with multiple vehicles, pedestrians, and trees. A bus is driving down the center of the road, followed by several cars and a pedestrian walking on the sidewalk. The bus has a sign on the back reading \"FREEMO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO-ON-TH-RO",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 61,
-            "output_tokens": 40960,
-            "total_tokens": 41021
-          },
-          "performance_metrics": {
-            "total_duration_ms": 344067.400972,
-            "prompt_eval_duration_ms": 46.107102,
-            "generation_duration_ms": 343969.502405,
-            "load_duration_ms": 49.845337,
-            "tokens_per_second": 119.08032460323318
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a sense of urbanity and activity, with a mix of emotions that range from excitement to frustration. The scene is bustling with cars and people, creating a sense of energy and movement. The overall tone is neutral, with a hint of tension and anxiety. The visual elements that contribute to this emotional atmosphere are the crowded streets, the traffic lights, and the people walking and driving. The image is shot from a high angle, which adds to the sense of urbanity and the feeling of being in a busy, fast-paced environment. The use of colors, such as the green and red lights, and the people's movements, add to the sense of energy and movement, creating a sense of energy and tension. Overall, the image is a dynamic and exciting one, with a mix of emotions and a sense of energy and movement.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 63,
-            "output_tokens": 171,
-            "total_tokens": 234
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2905.919173,
-            "prompt_eval_duration_ms": 969.063431,
-            "generation_duration_ms": 1885.606013,
-            "load_duration_ms": 49.031926,
-            "tokens_per_second": 90.68702519034659
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"categories\": {\n    \"human\": {\n      \"person\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"black\"],\n        \"size\": \"medium\",\n        \"description\": \"A person is walking in the middle of the road\"\n      }\n    },\n    \"man-made\": {\n      \"car\": {\n        \"count\": 3,\n        \"location\": \"left\",\n        \"color\": [\"red\", \"white\"],\n        \"size\": \"large\",\n        \"description\": \"A car is driving on the left side of the road\"\n      },\n      \"bus\": {\n        \"count\": 1,\n        \"location\": \"right\",\n        \"color\": [\"blue\"],\n        \"size\": \"large\",\n        \"description\": \"A bus is driving on the right side of the road\"\n      }\n    },\n    \"natural\": {\n      \"tree\": {\n        \"count\": 5,\n        \"location\": \"left\",\n        \"color\": [\"green\"],\n        \"size\": \"small\",\n        \"description\": \"A tree is located on the left side of the road\"\n      }\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "categories": {
-              "human": {
-                "person": {
-                  "count": 1,
-                  "location": "center",
-                  "color": [
-                    "black"
-                  ],
-                  "size": "medium",
-                  "description": "A person is walking in the middle of the road"
-                }
-              },
-              "man-made": {
-                "car": {
-                  "count": 3,
-                  "location": "left",
-                  "color": [
-                    "red",
-                    "white"
-                  ],
-                  "size": "large",
-                  "description": "A car is driving on the left side of the road"
-                },
-                "bus": {
-                  "count": 1,
-                  "location": "right",
-                  "color": [
-                    "blue"
-                  ],
-                  "size": "large",
-                  "description": "A bus is driving on the right side of the road"
-                }
-              },
-              "natural": {
-                "tree": {
-                  "count": 5,
-                  "location": "left",
-                  "color": [
-                    "green"
-                  ],
-                  "size": "small",
-                  "description": "A tree is located on the left side of the road"
-                }
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 243,
-            "output_tokens": 246,
-            "total_tokens": 489
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2869.233511,
-            "prompt_eval_duration_ms": 72.921235,
-            "generation_duration_ms": 2747.202142,
-            "load_duration_ms": 46.83499,
-            "tokens_per_second": 89.54564945880128
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 42259,
-        "total_time_ms": 355417.99083399994,
-        "average_speed": 96.20205377894493
+        "total_tokens": 5441,
+        "total_time_ms": 37845.186128,
+        "average_speed": 35.90459029002711
       }
     }
   ]

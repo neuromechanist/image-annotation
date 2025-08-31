@@ -7,6 +7,325 @@
   "timestamp": "2025-08-30T17:25:17.441014+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a serene rural scene, likely taken during the daytime under natural light that casts soft shadows, suggesting it might be mid-morning or early afternoon. The setting is a grassy area bordered by a simple wire fence, which separates the foreground from a wooden structure, possibly a barn or a house, with a window featuring white shutters. The wooden planks of the structure are a warm brown, contrasting with the vibrant green of the grass. In the foreground, two lambs are the focal point. One lamb, predominantly white with a hint of beige, stands upright, its ears perked up, gazing directly at the camera with a curious expression. Its wool appears fluffy and clean. The second lamb, smaller and darker in color, lies down in the shade, partially obscured by the grass and the fence. The overall composition is simple and pastoral, evoking a sense of calm and the tranquility of rural life. The colors are natural and earthy, with the green of the grass, the brown of the wood, and the white and beige of the lambs creating a harmonious palette.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 225,
+            "total_tokens": 522
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1747.111133,
+            "prompt_eval_duration_ms": 81.342179,
+            "generation_duration_ms": 1623.719161,
+            "load_duration_ms": 39.482111,
+            "tokens_per_second": 138.570761129301
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the lush green grass dominates, its vibrant hue suggesting a healthy, well-maintained lawn. This layer serves as a natural carpet, leading the viewer's eye towards the central subject. Just beyond the grass, a wire fence stretches horizontally, acting as a boundary marker, separating the grassy area from the wooden structure behind it. The fence's simple, utilitarian design contrasts with the organic texture of the grass, creating a visual transition. In the background, a wooden house with horizontal planks forms the setting. Its rustic appearance complements the pastoral scene, while the white-framed windows add a touch of modernity. The house's siding and the wire fence together frame the scene, anchoring the image and providing a sense of depth and context. The sheep in the middle ground, partially obscured by the fence, add a focal point and a sense of life and activity to the otherwise tranquil setting. The overall composition suggests a peaceful rural environment where nature and human habitation coexist harmoniously.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 208,
+            "total_tokens": 511
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1601.289427,
+            "prompt_eval_duration_ms": 28.918174,
+            "generation_duration_ms": 1531.483549,
+            "load_duration_ms": 38.314694,
+            "tokens_per_second": 135.8160197906246
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a small white lamb stands in the foreground, its gaze directed towards the camera, seemingly curious or alert. Behind it, two other lambs, one black and one white, are partially obscured by a wire fence that runs horizontally across the scene. The black lamb appears to be lying down, possibly resting or grazing, while the white lamb is also lying down, perhaps napping or simply enjoying the tranquility of the setting. The wire fence acts as a barrier, separating the lambs from the wooden structure in the background, which could be a barn or a house. The wooden structure has a window with white shutters, adding a rustic charm to the scene. The grassy area where the lambs are situated is lush and green, suggesting a healthy and well-maintained environment. The overall interaction between the elements in the image is peaceful and natural, with the lambs appearing content and at ease in their surroundings.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 190,
+            "total_tokens": 496
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1461.236188,
+            "prompt_eval_duration_ms": 31.987251,
+            "generation_duration_ms": 1384.170462,
+            "load_duration_ms": 42.480744,
+            "tokens_per_second": 137.26633042397637
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of tranquility and innocence, contributing to a predominantly positive mood. The presence of the young lambs, with their fluffy white wool and curious expressions, immediately draws the viewer in, evoking feelings of warmth and affection. The lush green grass and the rustic wooden fence in the background add to the serene and pastoral setting, enhancing the peaceful atmosphere. The lambs' innocent gaze and the quiet, undisturbed environment suggest a moment of calm and simplicity, free from the hustle and bustle of urban life. The overall tone is uplifting, as the image captures a slice of rural life that is both charming and soothing. The visual elements, such as the soft lighting, the natural colors, and the gentle interaction between the lambs and their surroundings, all work together to create a harmonious and emotionally positive scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 170,
+            "total_tokens": 478
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1298.195756,
+            "prompt_eval_duration_ms": 29.893684,
+            "generation_duration_ms": 1225.214145,
+            "load_duration_ms": 37.444604,
+            "tokens_per_second": 138.75125478575012
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"sheep\": {\n      \"count\": 3,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"small\",\n      \"description\": \"standing and lying on grass\"\n    }\n  },\n  \"man-made\": {\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"wire mesh fence\"\n    },\n    \"house\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"wooden house with windows\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"green grassy area\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "sheep": {
+                "count": 3,
+                "location": "center",
+                "color": [
+                  "white",
+                  "black"
+                ],
+                "size": "small",
+                "description": "standing and lying on grass"
+              }
+            },
+            "man-made": {
+              "fence": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "gray"
+                ],
+                "size": "medium",
+                "description": "wire mesh fence"
+              },
+              "house": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "brown",
+                  "white"
+                ],
+                "size": "large",
+                "description": "wooden house with windows"
+              }
+            },
+            "natural": {
+              "grass": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "green grassy area"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 218,
+            "total_tokens": 704
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1650.088444,
+            "prompt_eval_duration_ms": 45.44483,
+            "generation_duration_ms": 1559.866273,
+            "load_duration_ms": 41.838919,
+            "tokens_per_second": 139.75556993147453
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2711,
+        "total_time_ms": 7757.920948,
+        "average_speed": 138.03198721222532
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a serene rural or suburban setting, featuring a grassy yard enclosed by a wire fence. In the foreground, a small white lamb with a green tag on its ear stands prominently, gazing directly at the camera. Its wool is fluffy and clean, and its ears are perked up, giving it an alert and curious appearance. Behind the lamb, two more lambs are visible, one white and one black, lying or sitting on the grass, appearing more relaxed. The black lamb is partially obscured by the greenery, adding depth to the scene.\n\nThe background consists of a wooden fence with horizontal planks, painted in a dark brown or reddish-brown color, which contrasts with the green grass and the white lambs. Above the fence, a section of a building is visible, featuring white-framed windows and a dark-colored roof, suggesting a residential or farm structure. The lighting is natural and soft, indicating an overcast or slightly shaded day, which evenly illuminates the scene without harsh shadows. The overall composition is balanced, with the lambs as the focal point, while the fence and building provide context and structure. The colors are muted yet natural, with earthy tones of brown, green, and white dominating the image, creating a peaceful and pastoral atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 261,
+            "total_tokens": 558
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13293.694044,
+            "prompt_eval_duration_ms": 3543.817062,
+            "generation_duration_ms": 9708.581792,
+            "load_duration_ms": 38.691544,
+            "tokens_per_second": 26.88343216257059
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a grassy area where a white lamb stands prominently, facing the camera. The lamb is the closest element to the viewer, with its fluffy wool and bright green tag on its ear clearly visible. The grass is short and green, indicating a well-maintained lawn or pasture. This area is enclosed by a wire fence, which serves as a boundary between the foreground and the background.\n\nIn the background, the setting shifts to a more structured environment. A wooden fence with vertical planks and a black horizontal beam runs along the perimeter, separating the grassy area from a building. The building has a light-colored wall with two windows featuring white frames, suggesting a residential or farm-like structure. Behind the fence, there are additional animals, including a black lamb and another white lamb, lying or standing near the fence. A small green plant or shrub is visible near the fence, adding a touch of nature to the background.\n\nThe relationship between the foreground and background is defined by the wire fence, which acts as a visual and physical barrier. The lamb in the foreground appears curious or alert, possibly observing the viewer, while the background animals seem more relaxed, lying or standing near the fence. The contrast between the open, grassy foreground and the structured, enclosed background creates a sense of depth and context, highlighting the pastoral and domestic setting of the scene. The overall composition suggests a peaceful rural or farm environment where the animals are contained and cared for.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 299,
+            "total_tokens": 602
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11265.042512,
+            "prompt_eval_duration_ms": 72.855472,
+            "generation_duration_ms": 11150.525598,
+            "load_duration_ms": 38.914981,
+            "tokens_per_second": 26.81487947560335
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a serene rural scene featuring a group of animals, primarily sheep, in a grassy area enclosed by a wire fence. There are no people visible in the image. The focus is on the animals and their environment.\n\nIn the foreground, a white lamb stands prominently, facing the camera with a curious expression. It appears to be the most active of the group, standing alert and looking directly at the viewer. Behind it, two other lambs are lying on the grass, appearing relaxed and content. One of these lambs is white, while the other is black, adding a contrast in color to the scene. The black lamb is positioned slightly behind the white lambs, nestled close to the fence.\n\nThe animals seem to be interacting peacefully, with the standing lamb possibly exploring or observing its surroundings, while the others rest. The wire fence separates the animals from the wooden structure in the background, which includes a window and a door, suggesting a barn or a farm building. The grassy area provides a natural and comfortable environment for the lambs, and the overall atmosphere is calm and pastoral. The animals' positions and behaviors indicate a sense of tranquility and companionship among them.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 240,
+            "total_tokens": 546
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9076.140842,
+            "prompt_eval_duration_ms": 72.968382,
+            "generation_duration_ms": 8959.025687,
+            "load_duration_ms": 40.271999,
+            "tokens_per_second": 26.788627288819157
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a serene and peaceful mood, evoking feelings of calmness, innocence, and tranquility. The overall tone is positive, as the scene is bathed in natural light, suggesting a pleasant, sunny day. The presence of the lambs, with their soft, fluffy wool and gentle expressions, adds a sense of innocence and purity, which is further emphasized by the bright green grass and the simple, uncluttered setting. The lambs appear curious and content, standing close to each other, which fosters a feeling of warmth and companionship. The wire fence in the background, though a barrier, does not detract from the peacefulness but rather frames the scene, creating a sense of enclosure and safety. The wooden fence and the house in the background provide a rustic, homely atmosphere, reinforcing the idea of a quiet, rural environment. The overall composition, with its soft colors and gentle subjects, contributes to a soothing and uplifting emotional atmosphere, making the viewer feel relaxed and connected to nature.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 207,
+            "total_tokens": 515
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7857.519007,
+            "prompt_eval_duration_ms": 77.422723,
+            "generation_duration_ms": 7737.201409,
+            "load_duration_ms": 40.138309,
+            "tokens_per_second": 26.75385957501575
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"sheep\": {\n      \"count\": 3,\n      \"location\": \"center, foreground\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"One sheep standing in the foreground, two lying down in the background.\"\n    },\n    \"dog\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"A black dog lying down behind the fence.\"\n    }\n  },\n  \"man-made\": {\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"silver\"],\n      \"size\": \"medium\",\n      \"description\": \"Metal wire fence separating the sheep from the foreground.\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"right, top\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Wooden building with white-framed windows.\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Short green grass covering the ground.\"\n    },\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Small green tree or bush near the fence.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "sheep": {
+                "count": 3,
+                "location": "center, foreground",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "One sheep standing in the foreground, two lying down in the background."
+              },
+              "dog": {
+                "count": 1,
+                "location": "left, middle",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "A black dog lying down behind the fence."
+              }
+            },
+            "man-made": {
+              "fence": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "silver"
+                ],
+                "size": "medium",
+                "description": "Metal wire fence separating the sheep from the foreground."
+              },
+              "building": {
+                "count": 1,
+                "location": "right, top",
+                "color": [
+                  "brown",
+                  "white"
+                ],
+                "size": "large",
+                "description": "Wooden building with white-framed windows."
+              }
+            },
+            "natural": {
+              "grass": {
+                "count": 1,
+                "location": "foreground",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "Short green grass covering the ground."
+              },
+              "tree": {
+                "count": 1,
+                "location": "left, middle",
+                "color": [
+                  "green"
+                ],
+                "size": "small",
+                "description": "Small green tree or bush near the fence."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 342,
+            "total_tokens": 828
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12886.514209,
+            "prompt_eval_duration_ms": 135.017756,
+            "generation_duration_ms": 12708.078286,
+            "load_duration_ms": 39.300119,
+            "tokens_per_second": 26.912015515104926
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3049,
+        "total_time_ms": 54378.910614,
+        "average_speed": 26.830562803422755
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -524,325 +843,6 @@
         "total_tokens": 2849,
         "total_time_ms": 26372.903694,
         "average_speed": 41.965813740789294
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a serene rural scene, likely taken during the daytime under natural light that casts soft shadows, suggesting it might be mid-morning or early afternoon. The setting is a grassy area bordered by a simple wire fence, which separates the foreground from a wooden structure, possibly a barn or a house, with a window featuring white shutters. The wooden planks of the structure are a warm brown, contrasting with the vibrant green of the grass. In the foreground, two lambs are the focal point. One lamb, predominantly white with a hint of beige, stands upright, its ears perked up, gazing directly at the camera with a curious expression. Its wool appears fluffy and clean. The second lamb, smaller and darker in color, lies down in the shade, partially obscured by the grass and the fence. The overall composition is simple and pastoral, evoking a sense of calm and the tranquility of rural life. The colors are natural and earthy, with the green of the grass, the brown of the wood, and the white and beige of the lambs creating a harmonious palette.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 225,
-            "total_tokens": 522
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1747.111133,
-            "prompt_eval_duration_ms": 81.342179,
-            "generation_duration_ms": 1623.719161,
-            "load_duration_ms": 39.482111,
-            "tokens_per_second": 138.570761129301
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the lush green grass dominates, its vibrant hue suggesting a healthy, well-maintained lawn. This layer serves as a natural carpet, leading the viewer's eye towards the central subject. Just beyond the grass, a wire fence stretches horizontally, acting as a boundary marker, separating the grassy area from the wooden structure behind it. The fence's simple, utilitarian design contrasts with the organic texture of the grass, creating a visual transition. In the background, a wooden house with horizontal planks forms the setting. Its rustic appearance complements the pastoral scene, while the white-framed windows add a touch of modernity. The house's siding and the wire fence together frame the scene, anchoring the image and providing a sense of depth and context. The sheep in the middle ground, partially obscured by the fence, add a focal point and a sense of life and activity to the otherwise tranquil setting. The overall composition suggests a peaceful rural environment where nature and human habitation coexist harmoniously.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 208,
-            "total_tokens": 511
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1601.289427,
-            "prompt_eval_duration_ms": 28.918174,
-            "generation_duration_ms": 1531.483549,
-            "load_duration_ms": 38.314694,
-            "tokens_per_second": 135.8160197906246
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a small white lamb stands in the foreground, its gaze directed towards the camera, seemingly curious or alert. Behind it, two other lambs, one black and one white, are partially obscured by a wire fence that runs horizontally across the scene. The black lamb appears to be lying down, possibly resting or grazing, while the white lamb is also lying down, perhaps napping or simply enjoying the tranquility of the setting. The wire fence acts as a barrier, separating the lambs from the wooden structure in the background, which could be a barn or a house. The wooden structure has a window with white shutters, adding a rustic charm to the scene. The grassy area where the lambs are situated is lush and green, suggesting a healthy and well-maintained environment. The overall interaction between the elements in the image is peaceful and natural, with the lambs appearing content and at ease in their surroundings.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 190,
-            "total_tokens": 496
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1461.236188,
-            "prompt_eval_duration_ms": 31.987251,
-            "generation_duration_ms": 1384.170462,
-            "load_duration_ms": 42.480744,
-            "tokens_per_second": 137.26633042397637
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of tranquility and innocence, contributing to a predominantly positive mood. The presence of the young lambs, with their fluffy white wool and curious expressions, immediately draws the viewer in, evoking feelings of warmth and affection. The lush green grass and the rustic wooden fence in the background add to the serene and pastoral setting, enhancing the peaceful atmosphere. The lambs' innocent gaze and the quiet, undisturbed environment suggest a moment of calm and simplicity, free from the hustle and bustle of urban life. The overall tone is uplifting, as the image captures a slice of rural life that is both charming and soothing. The visual elements, such as the soft lighting, the natural colors, and the gentle interaction between the lambs and their surroundings, all work together to create a harmonious and emotionally positive scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 170,
-            "total_tokens": 478
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1298.195756,
-            "prompt_eval_duration_ms": 29.893684,
-            "generation_duration_ms": 1225.214145,
-            "load_duration_ms": 37.444604,
-            "tokens_per_second": 138.75125478575012
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"sheep\": {\n      \"count\": 3,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"small\",\n      \"description\": \"standing and lying on grass\"\n    }\n  },\n  \"man-made\": {\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"wire mesh fence\"\n    },\n    \"house\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"wooden house with windows\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"green grassy area\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "sheep": {
-                "count": 3,
-                "location": "center",
-                "color": [
-                  "white",
-                  "black"
-                ],
-                "size": "small",
-                "description": "standing and lying on grass"
-              }
-            },
-            "man-made": {
-              "fence": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "gray"
-                ],
-                "size": "medium",
-                "description": "wire mesh fence"
-              },
-              "house": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "brown",
-                  "white"
-                ],
-                "size": "large",
-                "description": "wooden house with windows"
-              }
-            },
-            "natural": {
-              "grass": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "green grassy area"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 218,
-            "total_tokens": 704
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1650.088444,
-            "prompt_eval_duration_ms": 45.44483,
-            "generation_duration_ms": 1559.866273,
-            "load_duration_ms": 41.838919,
-            "tokens_per_second": 139.75556993147453
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2711,
-        "total_time_ms": 7757.920948,
-        "average_speed": 138.03198721222532
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a serene rural or suburban setting, featuring a grassy yard enclosed by a wire fence. In the foreground, a small white lamb with a green tag on its ear stands prominently, gazing directly at the camera. Its wool is fluffy and clean, and its ears are perked up, giving it an alert and curious appearance. Behind the lamb, two more lambs are visible, one white and one black, lying or sitting on the grass, appearing more relaxed. The black lamb is partially obscured by the greenery, adding depth to the scene.\n\nThe background consists of a wooden fence with horizontal planks, painted in a dark brown or reddish-brown color, which contrasts with the green grass and the white lambs. Above the fence, a section of a building is visible, featuring white-framed windows and a dark-colored roof, suggesting a residential or farm structure. The lighting is natural and soft, indicating an overcast or slightly shaded day, which evenly illuminates the scene without harsh shadows. The overall composition is balanced, with the lambs as the focal point, while the fence and building provide context and structure. The colors are muted yet natural, with earthy tones of brown, green, and white dominating the image, creating a peaceful and pastoral atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 261,
-            "total_tokens": 558
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13293.694044,
-            "prompt_eval_duration_ms": 3543.817062,
-            "generation_duration_ms": 9708.581792,
-            "load_duration_ms": 38.691544,
-            "tokens_per_second": 26.88343216257059
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a grassy area where a white lamb stands prominently, facing the camera. The lamb is the closest element to the viewer, with its fluffy wool and bright green tag on its ear clearly visible. The grass is short and green, indicating a well-maintained lawn or pasture. This area is enclosed by a wire fence, which serves as a boundary between the foreground and the background.\n\nIn the background, the setting shifts to a more structured environment. A wooden fence with vertical planks and a black horizontal beam runs along the perimeter, separating the grassy area from a building. The building has a light-colored wall with two windows featuring white frames, suggesting a residential or farm-like structure. Behind the fence, there are additional animals, including a black lamb and another white lamb, lying or standing near the fence. A small green plant or shrub is visible near the fence, adding a touch of nature to the background.\n\nThe relationship between the foreground and background is defined by the wire fence, which acts as a visual and physical barrier. The lamb in the foreground appears curious or alert, possibly observing the viewer, while the background animals seem more relaxed, lying or standing near the fence. The contrast between the open, grassy foreground and the structured, enclosed background creates a sense of depth and context, highlighting the pastoral and domestic setting of the scene. The overall composition suggests a peaceful rural or farm environment where the animals are contained and cared for.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 299,
-            "total_tokens": 602
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11265.042512,
-            "prompt_eval_duration_ms": 72.855472,
-            "generation_duration_ms": 11150.525598,
-            "load_duration_ms": 38.914981,
-            "tokens_per_second": 26.81487947560335
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a serene rural scene featuring a group of animals, primarily sheep, in a grassy area enclosed by a wire fence. There are no people visible in the image. The focus is on the animals and their environment.\n\nIn the foreground, a white lamb stands prominently, facing the camera with a curious expression. It appears to be the most active of the group, standing alert and looking directly at the viewer. Behind it, two other lambs are lying on the grass, appearing relaxed and content. One of these lambs is white, while the other is black, adding a contrast in color to the scene. The black lamb is positioned slightly behind the white lambs, nestled close to the fence.\n\nThe animals seem to be interacting peacefully, with the standing lamb possibly exploring or observing its surroundings, while the others rest. The wire fence separates the animals from the wooden structure in the background, which includes a window and a door, suggesting a barn or a farm building. The grassy area provides a natural and comfortable environment for the lambs, and the overall atmosphere is calm and pastoral. The animals' positions and behaviors indicate a sense of tranquility and companionship among them.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 240,
-            "total_tokens": 546
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9076.140842,
-            "prompt_eval_duration_ms": 72.968382,
-            "generation_duration_ms": 8959.025687,
-            "load_duration_ms": 40.271999,
-            "tokens_per_second": 26.788627288819157
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a serene and peaceful mood, evoking feelings of calmness, innocence, and tranquility. The overall tone is positive, as the scene is bathed in natural light, suggesting a pleasant, sunny day. The presence of the lambs, with their soft, fluffy wool and gentle expressions, adds a sense of innocence and purity, which is further emphasized by the bright green grass and the simple, uncluttered setting. The lambs appear curious and content, standing close to each other, which fosters a feeling of warmth and companionship. The wire fence in the background, though a barrier, does not detract from the peacefulness but rather frames the scene, creating a sense of enclosure and safety. The wooden fence and the house in the background provide a rustic, homely atmosphere, reinforcing the idea of a quiet, rural environment. The overall composition, with its soft colors and gentle subjects, contributes to a soothing and uplifting emotional atmosphere, making the viewer feel relaxed and connected to nature.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 207,
-            "total_tokens": 515
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7857.519007,
-            "prompt_eval_duration_ms": 77.422723,
-            "generation_duration_ms": 7737.201409,
-            "load_duration_ms": 40.138309,
-            "tokens_per_second": 26.75385957501575
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"sheep\": {\n      \"count\": 3,\n      \"location\": \"center, foreground\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"One sheep standing in the foreground, two lying down in the background.\"\n    },\n    \"dog\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"A black dog lying down behind the fence.\"\n    }\n  },\n  \"man-made\": {\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"silver\"],\n      \"size\": \"medium\",\n      \"description\": \"Metal wire fence separating the sheep from the foreground.\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"right, top\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Wooden building with white-framed windows.\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Short green grass covering the ground.\"\n    },\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Small green tree or bush near the fence.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "sheep": {
-                "count": 3,
-                "location": "center, foreground",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "One sheep standing in the foreground, two lying down in the background."
-              },
-              "dog": {
-                "count": 1,
-                "location": "left, middle",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "A black dog lying down behind the fence."
-              }
-            },
-            "man-made": {
-              "fence": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "silver"
-                ],
-                "size": "medium",
-                "description": "Metal wire fence separating the sheep from the foreground."
-              },
-              "building": {
-                "count": 1,
-                "location": "right, top",
-                "color": [
-                  "brown",
-                  "white"
-                ],
-                "size": "large",
-                "description": "Wooden building with white-framed windows."
-              }
-            },
-            "natural": {
-              "grass": {
-                "count": 1,
-                "location": "foreground",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "Short green grass covering the ground."
-              },
-              "tree": {
-                "count": 1,
-                "location": "left, middle",
-                "color": [
-                  "green"
-                ],
-                "size": "small",
-                "description": "Small green tree or bush near the fence."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 342,
-            "total_tokens": 828
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12886.514209,
-            "prompt_eval_duration_ms": 135.017756,
-            "generation_duration_ms": 12708.078286,
-            "load_duration_ms": 39.300119,
-            "tokens_per_second": 26.912015515104926
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3049,
-        "total_time_ms": 54378.910614,
-        "average_speed": 26.830562803422755
       }
     },
     {

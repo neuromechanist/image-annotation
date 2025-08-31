@@ -7,6 +7,282 @@
   "timestamp": "2025-08-30T20:31:30.891975+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a tender moment in a natural setting, likely a wildlife sanctuary or reserve, characterized by a backdrop of lush greenery and a cloudy sky, suggesting a serene, overcast day. The main elements are a young elephant, with its large ears and wrinkled skin, and a person dressed in a bright green raincoat and dark rubber boots, indicative of a caretaker or guide. The elephant, appearing curious and gentle, extends its trunk towards the person's hand, creating a sense of connection and mutual respect. The lighting is soft and diffused, likely due to the cloud cover, which enhances the earthy tones of the elephant's skin and the rich greens of the background. The composition is balanced, with the elephant positioned slightly to the left and the person to the right, drawing the viewer's eye across the scene. The overall mood is peaceful and heartwarming, emphasizing the bond between humans and wildlife.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 187,
+            "total_tokens": 484
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1461.39002,
+            "prompt_eval_duration_ms": 79.822758,
+            "generation_duration_ms": 1338.233149,
+            "load_duration_ms": 40.960823,
+            "tokens_per_second": 139.73648772617574
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, a young elephant, its skin a textured beige, stands close to a man dressed in a vibrant green raincoat and dark rubber boots. The elephant's trunk, long and coiled, reaches out towards the man's hand, suggesting a moment of connection or interaction. The man, bald and facing the elephant, appears to be in a nurturing or guiding role, possibly a caretaker or trainer. The elephant's posture and the man's gesture indicate a moment of trust and communication. The background is a lush, verdant landscape, filled with dense green foliage and trees, suggesting a natural habitat or a sanctuary. The sky above is a soft, pale blue with scattered white clouds, adding to the serene and peaceful atmosphere of the scene. The layers of the image, from the intimate interaction in the foreground to the expansive natural setting in the background, create a narrative of human-animal connection within a wild environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 187,
+            "total_tokens": 490
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1427.632703,
+            "prompt_eval_duration_ms": 31.264302,
+            "generation_duration_ms": 1354.888272,
+            "load_duration_ms": 38.876297,
+            "tokens_per_second": 138.01876056094463
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a person in a green raincoat stands facing a young elephant, extending a hand towards the elephant's trunk. The elephant, with its large ears and wrinkled skin, appears to be interacting with the person, possibly in a nurturing or educational setting. The person's hand is gently held by the elephant's trunk, suggesting a moment of connection or training. The background is lush with greenery, indicating a natural or wildlife sanctuary environment. The interaction between the person and the elephant is central to the scene, highlighting a bond or a moment of learning and care in a serene outdoor setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 122,
+            "total_tokens": 428
+          },
+          "performance_metrics": {
+            "total_duration_ms": 943.455332,
+            "prompt_eval_duration_ms": 30.122358,
+            "generation_duration_ms": 869.455745,
+            "load_duration_ms": 41.457204,
+            "tokens_per_second": 140.31766504688517
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a profound sense of connection and tenderness, primarily due to the intimate interaction between the man and the young elephant. The man's gentle touch and the elephant's relaxed posture suggest a mutual respect and a shared moment of peace. The lush greenery in the background adds to the serene and natural atmosphere, enhancing the feeling of harmony and tranquility. The man's green coat, which contrasts subtly with the earthy tones of the elephant and the ground, draws the viewer's eye to the central interaction, emphasizing the bond between human and animal. The overall tone is decidedly positive, as the image captures a moment of gentle interaction that speaks to the beauty of interspecies connection and the potential for mutual understanding and care. The absence of any aggressive or tense body language further reinforces the positive and uplifting mood of the photograph.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 167,
+            "total_tokens": 475
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1275.512221,
+            "prompt_eval_duration_ms": 30.439141,
+            "generation_duration_ms": 1199.632303,
+            "load_duration_ms": 43.216668,
+            "tokens_per_second": 139.20932237517448
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"man wearing green raincoat and rubber boots\"\n    }\n  },\n  \"animal\": {\n    \"elephant\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"young elephant with trunk extended towards person\"\n    }\n  },\n  \"man-made\": {\n    \"raincoat\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"green raincoat worn by person\"\n    },\n    \"rubber boots\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"black\"],\n      \"size\": \"large\",\n      \"description\": \"rubber boots worn by person\"\n    }\n  },\n  \"natural\": {\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"dense green foliage in the background\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"cloudy sky above the trees\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "man wearing green raincoat and rubber boots"
+              }
+            },
+            "animal": {
+              "elephant": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "gray"
+                ],
+                "size": "medium",
+                "description": "young elephant with trunk extended towards person"
+              }
+            },
+            "man-made": {
+              "raincoat": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "green raincoat worn by person"
+              },
+              "rubber boots": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "black"
+                ],
+                "size": "large",
+                "description": "rubber boots worn by person"
+              }
+            },
+            "natural": {
+              "trees": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "dense green foliage in the background"
+              },
+              "sky": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "blue",
+                  "white"
+                ],
+                "size": "large",
+                "description": "cloudy sky above the trees"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 328,
+            "total_tokens": 814
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2423.907414,
+            "prompt_eval_duration_ms": 44.439771,
+            "generation_duration_ms": 2337.356929,
+            "load_duration_ms": 38.357021,
+            "tokens_per_second": 140.329444737535
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2691,
+        "total_time_ms": 7531.89769,
+        "average_speed": 139.522336089343
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a serene and touching moment between a young elephant and a human caregiver in a natural outdoor setting. The scene is set in what appears to be a wildlife sanctuary or a natural reserve, with a backdrop of lush green trees and a slightly overcast sky, suggesting a calm, possibly early morning or late afternoon atmosphere. The lighting is soft and diffused, likely due to the cloud cover, which adds a gentle, muted tone to the overall composition.\n\nThe main elements in the image are the elephant and the caregiver. The elephant, a young calf with a light brown, dusty coat, stands on the left side of the frame. Its trunk is extended, gently reaching out to touch the hand of the caregiver, who is positioned on the right. The caregiver, a man with a bald head, is dressed in a bright green uniform, which contrasts vividly with the earthy tones of the elephant and the surrounding environment. His posture is attentive and caring, with his hand extended to meet the elephant's trunk, creating a sense of connection and tenderness.\n\nThe composition is balanced, with the elephant and the caregiver positioned symmetrically, drawing the viewer's attention to their interaction. The background is filled with dense green foliage, providing a natural and tranquil setting that emphasizes the harmony between the human and the animal. The overall mood of the image is peaceful and heartwarming, highlighting a moment of trust and care between species.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 287,
+            "total_tokens": 584
+          },
+          "performance_metrics": {
+            "total_duration_ms": 14236.403415,
+            "prompt_eval_duration_ms": 3454.823826,
+            "generation_duration_ms": 10740.457407,
+            "load_duration_ms": 38.592534,
+            "tokens_per_second": 26.721394548145618
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the most prominent elements are a young elephant and a person wearing a green coat. The elephant, with its large ears and long trunk, is standing close to the person, who appears to be interacting with it by holding the elephant's trunk. The elephant's size and the person's posture suggest a gentle and caring interaction, emphasizing a bond or connection between them. The person's attire, a green coat, indicates they might be a caretaker or wildlife worker, further reinforcing the nurturing atmosphere.\n\nIn the background, the setting is a natural, outdoor environment characterized by a lush, green landscape. Trees and vegetation are visible, creating a dense, forested backdrop that suggests a wildlife reserve or a natural habitat. The sky above is partly cloudy, adding to the serene and open ambiance of the scene. The background elements provide context, indicating that the interaction is taking place in a natural or semi-natural environment, likely designed for the care and protection of wildlife.\n\nThe relationship between the foreground and background is harmonious and complementary. The natural setting in the background enhances the authenticity and significance of the interaction in the foreground, highlighting the importance of conservation and the care of wildlife. The greenery and open space in the background contrast with the intimate and focused interaction in the foreground, drawing attention to the bond between the human and the elephant while situating it within a broader ecological context. This layered composition effectively conveys a narrative of care, conservation, and the interconnectedness of humans and nature.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 304,
+            "total_tokens": 607
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11454.790771,
+            "prompt_eval_duration_ms": 75.026135,
+            "generation_duration_ms": 11339.782458,
+            "load_duration_ms": 37.015433,
+            "tokens_per_second": 26.808274420249905
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a tender and heartwarming interaction between a human and a young elephant in a natural, outdoor setting. A man, dressed in a green uniform, stands facing the elephant, suggesting he may be a caretaker or wildlife worker. The elephant, a baby with large ears and a long trunk, appears to be reaching out with its trunk, gently touching the man's hand. The man, in turn, extends his hand toward the elephant, reciprocating the gesture. This mutual touch creates a sense of connection and trust between the two.\n\nThe background features a lush, green forested area, indicating that the scene is likely set in a wildlife reserve or sanctuary. The man's posture and the elephant's gentle reach suggest a moment of care and bonding, highlighting the nurturing relationship between humans and animals in conservation efforts. The elephant's calm demeanor and the man's attentive stance further emphasize the harmony and mutual respect in their interaction. This image captures a poignant moment of interspecies communication and care, showcasing the profound connection that can exist between humans and wildlife. The overall atmosphere is serene and hopeful, reflecting the importance of conservation and the emotional bonds that can be formed in such environments.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 239,
+            "total_tokens": 545
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9015.986928,
+            "prompt_eval_duration_ms": 77.950213,
+            "generation_duration_ms": 8896.236262,
+            "load_duration_ms": 39.381355,
+            "tokens_per_second": 26.86529369963803
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of tenderness, connection, and mutual trust, evoking feelings of warmth, empathy, and hope. The scene depicts a man in a green coat gently holding the trunk of a young elephant, suggesting a bond between human and animal. The elephant's posture, with its head slightly tilted and its trunk extended, conveys curiosity and trust, while the man's calm and attentive expression reflects care and compassion. The natural setting, with lush green trees and an open sky, adds to the serene and peaceful atmosphere, emphasizing a harmonious relationship between humans and nature. The earthy tones of the elephant and the vibrant green of the man's coat create a visual contrast that draws attention to the interaction, highlighting the emotional depth of the moment. The overall tone is positive, as the image captures a moment of connection that transcends species barriers, inspiring feelings of hope for coexistence and mutual respect. The simplicity of the scene, devoid of distractions, allows the viewer to focus on the emotional exchange, reinforcing the sense of warmth and empathy.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 213,
+            "total_tokens": 521
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8056.530628,
+            "prompt_eval_duration_ms": 76.614629,
+            "generation_duration_ms": 7938.54466,
+            "load_duration_ms": 38.812406,
+            "tokens_per_second": 26.831114407310018
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"Wearing a green jacket, standing and interacting with an elephant\"\n    }\n  },\n  \"animal\": {\n    \"elephant\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Young elephant with trunk extended, interacting with a person\"\n    }\n  },\n  \"man-made\": {\n    \"clothing\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"Green jacket worn by the person\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 10, // Approximate count of visible trees\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Dense forest in the background\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Cloudy sky\"\n    },\n    \"ground\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Dirt ground\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": null,
+          "error": "JSON parsing failed: Expecting property name enclosed in double quotes: line 31 column 20 (char 714)",
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 342,
+            "total_tokens": 828
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12841.225277,
+            "prompt_eval_duration_ms": 135.96831,
+            "generation_duration_ms": 12661.085671,
+            "load_duration_ms": 40.31251,
+            "tokens_per_second": 27.01190157676171
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3085,
+        "total_time_ms": 55604.937019,
+        "average_speed": 26.847595730421055
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -572,282 +848,6 @@
         "total_tokens": 2880,
         "total_time_ms": 27078.050348,
         "average_speed": 42.050890628495964
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a tender moment in a natural setting, likely a wildlife sanctuary or reserve, characterized by a backdrop of lush greenery and a cloudy sky, suggesting a serene, overcast day. The main elements are a young elephant, with its large ears and wrinkled skin, and a person dressed in a bright green raincoat and dark rubber boots, indicative of a caretaker or guide. The elephant, appearing curious and gentle, extends its trunk towards the person's hand, creating a sense of connection and mutual respect. The lighting is soft and diffused, likely due to the cloud cover, which enhances the earthy tones of the elephant's skin and the rich greens of the background. The composition is balanced, with the elephant positioned slightly to the left and the person to the right, drawing the viewer's eye across the scene. The overall mood is peaceful and heartwarming, emphasizing the bond between humans and wildlife.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 187,
-            "total_tokens": 484
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1461.39002,
-            "prompt_eval_duration_ms": 79.822758,
-            "generation_duration_ms": 1338.233149,
-            "load_duration_ms": 40.960823,
-            "tokens_per_second": 139.73648772617574
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, a young elephant, its skin a textured beige, stands close to a man dressed in a vibrant green raincoat and dark rubber boots. The elephant's trunk, long and coiled, reaches out towards the man's hand, suggesting a moment of connection or interaction. The man, bald and facing the elephant, appears to be in a nurturing or guiding role, possibly a caretaker or trainer. The elephant's posture and the man's gesture indicate a moment of trust and communication. The background is a lush, verdant landscape, filled with dense green foliage and trees, suggesting a natural habitat or a sanctuary. The sky above is a soft, pale blue with scattered white clouds, adding to the serene and peaceful atmosphere of the scene. The layers of the image, from the intimate interaction in the foreground to the expansive natural setting in the background, create a narrative of human-animal connection within a wild environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 187,
-            "total_tokens": 490
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1427.632703,
-            "prompt_eval_duration_ms": 31.264302,
-            "generation_duration_ms": 1354.888272,
-            "load_duration_ms": 38.876297,
-            "tokens_per_second": 138.01876056094463
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a person in a green raincoat stands facing a young elephant, extending a hand towards the elephant's trunk. The elephant, with its large ears and wrinkled skin, appears to be interacting with the person, possibly in a nurturing or educational setting. The person's hand is gently held by the elephant's trunk, suggesting a moment of connection or training. The background is lush with greenery, indicating a natural or wildlife sanctuary environment. The interaction between the person and the elephant is central to the scene, highlighting a bond or a moment of learning and care in a serene outdoor setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 122,
-            "total_tokens": 428
-          },
-          "performance_metrics": {
-            "total_duration_ms": 943.455332,
-            "prompt_eval_duration_ms": 30.122358,
-            "generation_duration_ms": 869.455745,
-            "load_duration_ms": 41.457204,
-            "tokens_per_second": 140.31766504688517
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a profound sense of connection and tenderness, primarily due to the intimate interaction between the man and the young elephant. The man's gentle touch and the elephant's relaxed posture suggest a mutual respect and a shared moment of peace. The lush greenery in the background adds to the serene and natural atmosphere, enhancing the feeling of harmony and tranquility. The man's green coat, which contrasts subtly with the earthy tones of the elephant and the ground, draws the viewer's eye to the central interaction, emphasizing the bond between human and animal. The overall tone is decidedly positive, as the image captures a moment of gentle interaction that speaks to the beauty of interspecies connection and the potential for mutual understanding and care. The absence of any aggressive or tense body language further reinforces the positive and uplifting mood of the photograph.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 167,
-            "total_tokens": 475
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1275.512221,
-            "prompt_eval_duration_ms": 30.439141,
-            "generation_duration_ms": 1199.632303,
-            "load_duration_ms": 43.216668,
-            "tokens_per_second": 139.20932237517448
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"man wearing green raincoat and rubber boots\"\n    }\n  },\n  \"animal\": {\n    \"elephant\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"young elephant with trunk extended towards person\"\n    }\n  },\n  \"man-made\": {\n    \"raincoat\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"green raincoat worn by person\"\n    },\n    \"rubber boots\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"black\"],\n      \"size\": \"large\",\n      \"description\": \"rubber boots worn by person\"\n    }\n  },\n  \"natural\": {\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"dense green foliage in the background\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"cloudy sky above the trees\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "right",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "man wearing green raincoat and rubber boots"
-              }
-            },
-            "animal": {
-              "elephant": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "gray"
-                ],
-                "size": "medium",
-                "description": "young elephant with trunk extended towards person"
-              }
-            },
-            "man-made": {
-              "raincoat": {
-                "count": 1,
-                "location": "right",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "green raincoat worn by person"
-              },
-              "rubber boots": {
-                "count": 1,
-                "location": "right",
-                "color": [
-                  "black"
-                ],
-                "size": "large",
-                "description": "rubber boots worn by person"
-              }
-            },
-            "natural": {
-              "trees": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "dense green foliage in the background"
-              },
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "blue",
-                  "white"
-                ],
-                "size": "large",
-                "description": "cloudy sky above the trees"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 328,
-            "total_tokens": 814
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2423.907414,
-            "prompt_eval_duration_ms": 44.439771,
-            "generation_duration_ms": 2337.356929,
-            "load_duration_ms": 38.357021,
-            "tokens_per_second": 140.329444737535
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2691,
-        "total_time_ms": 7531.89769,
-        "average_speed": 139.522336089343
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a serene and touching moment between a young elephant and a human caregiver in a natural outdoor setting. The scene is set in what appears to be a wildlife sanctuary or a natural reserve, with a backdrop of lush green trees and a slightly overcast sky, suggesting a calm, possibly early morning or late afternoon atmosphere. The lighting is soft and diffused, likely due to the cloud cover, which adds a gentle, muted tone to the overall composition.\n\nThe main elements in the image are the elephant and the caregiver. The elephant, a young calf with a light brown, dusty coat, stands on the left side of the frame. Its trunk is extended, gently reaching out to touch the hand of the caregiver, who is positioned on the right. The caregiver, a man with a bald head, is dressed in a bright green uniform, which contrasts vividly with the earthy tones of the elephant and the surrounding environment. His posture is attentive and caring, with his hand extended to meet the elephant's trunk, creating a sense of connection and tenderness.\n\nThe composition is balanced, with the elephant and the caregiver positioned symmetrically, drawing the viewer's attention to their interaction. The background is filled with dense green foliage, providing a natural and tranquil setting that emphasizes the harmony between the human and the animal. The overall mood of the image is peaceful and heartwarming, highlighting a moment of trust and care between species.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 287,
-            "total_tokens": 584
-          },
-          "performance_metrics": {
-            "total_duration_ms": 14236.403415,
-            "prompt_eval_duration_ms": 3454.823826,
-            "generation_duration_ms": 10740.457407,
-            "load_duration_ms": 38.592534,
-            "tokens_per_second": 26.721394548145618
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the most prominent elements are a young elephant and a person wearing a green coat. The elephant, with its large ears and long trunk, is standing close to the person, who appears to be interacting with it by holding the elephant's trunk. The elephant's size and the person's posture suggest a gentle and caring interaction, emphasizing a bond or connection between them. The person's attire, a green coat, indicates they might be a caretaker or wildlife worker, further reinforcing the nurturing atmosphere.\n\nIn the background, the setting is a natural, outdoor environment characterized by a lush, green landscape. Trees and vegetation are visible, creating a dense, forested backdrop that suggests a wildlife reserve or a natural habitat. The sky above is partly cloudy, adding to the serene and open ambiance of the scene. The background elements provide context, indicating that the interaction is taking place in a natural or semi-natural environment, likely designed for the care and protection of wildlife.\n\nThe relationship between the foreground and background is harmonious and complementary. The natural setting in the background enhances the authenticity and significance of the interaction in the foreground, highlighting the importance of conservation and the care of wildlife. The greenery and open space in the background contrast with the intimate and focused interaction in the foreground, drawing attention to the bond between the human and the elephant while situating it within a broader ecological context. This layered composition effectively conveys a narrative of care, conservation, and the interconnectedness of humans and nature.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 304,
-            "total_tokens": 607
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11454.790771,
-            "prompt_eval_duration_ms": 75.026135,
-            "generation_duration_ms": 11339.782458,
-            "load_duration_ms": 37.015433,
-            "tokens_per_second": 26.808274420249905
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a tender and heartwarming interaction between a human and a young elephant in a natural, outdoor setting. A man, dressed in a green uniform, stands facing the elephant, suggesting he may be a caretaker or wildlife worker. The elephant, a baby with large ears and a long trunk, appears to be reaching out with its trunk, gently touching the man's hand. The man, in turn, extends his hand toward the elephant, reciprocating the gesture. This mutual touch creates a sense of connection and trust between the two.\n\nThe background features a lush, green forested area, indicating that the scene is likely set in a wildlife reserve or sanctuary. The man's posture and the elephant's gentle reach suggest a moment of care and bonding, highlighting the nurturing relationship between humans and animals in conservation efforts. The elephant's calm demeanor and the man's attentive stance further emphasize the harmony and mutual respect in their interaction. This image captures a poignant moment of interspecies communication and care, showcasing the profound connection that can exist between humans and wildlife. The overall atmosphere is serene and hopeful, reflecting the importance of conservation and the emotional bonds that can be formed in such environments.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 239,
-            "total_tokens": 545
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9015.986928,
-            "prompt_eval_duration_ms": 77.950213,
-            "generation_duration_ms": 8896.236262,
-            "load_duration_ms": 39.381355,
-            "tokens_per_second": 26.86529369963803
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of tenderness, connection, and mutual trust, evoking feelings of warmth, empathy, and hope. The scene depicts a man in a green coat gently holding the trunk of a young elephant, suggesting a bond between human and animal. The elephant's posture, with its head slightly tilted and its trunk extended, conveys curiosity and trust, while the man's calm and attentive expression reflects care and compassion. The natural setting, with lush green trees and an open sky, adds to the serene and peaceful atmosphere, emphasizing a harmonious relationship between humans and nature. The earthy tones of the elephant and the vibrant green of the man's coat create a visual contrast that draws attention to the interaction, highlighting the emotional depth of the moment. The overall tone is positive, as the image captures a moment of connection that transcends species barriers, inspiring feelings of hope for coexistence and mutual respect. The simplicity of the scene, devoid of distractions, allows the viewer to focus on the emotional exchange, reinforcing the sense of warmth and empathy.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 213,
-            "total_tokens": 521
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8056.530628,
-            "prompt_eval_duration_ms": 76.614629,
-            "generation_duration_ms": 7938.54466,
-            "load_duration_ms": 38.812406,
-            "tokens_per_second": 26.831114407310018
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"Wearing a green jacket, standing and interacting with an elephant\"\n    }\n  },\n  \"animal\": {\n    \"elephant\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Young elephant with trunk extended, interacting with a person\"\n    }\n  },\n  \"man-made\": {\n    \"clothing\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"Green jacket worn by the person\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 10, // Approximate count of visible trees\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Dense forest in the background\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Cloudy sky\"\n    },\n    \"ground\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Dirt ground\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": null,
-          "error": "JSON parsing failed: Expecting property name enclosed in double quotes: line 31 column 20 (char 714)",
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 342,
-            "total_tokens": 828
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12841.225277,
-            "prompt_eval_duration_ms": 135.96831,
-            "generation_duration_ms": 12661.085671,
-            "load_duration_ms": 40.31251,
-            "tokens_per_second": 27.01190157676171
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3085,
-        "total_time_ms": 55604.937019,
-        "average_speed": 26.847595730421055
       }
     },
     {

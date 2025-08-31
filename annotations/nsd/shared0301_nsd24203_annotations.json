@@ -7,6 +7,324 @@
   "timestamp": "2025-08-30T18:27:52.171195+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a cozy, slightly cluttered bedroom scene, bathed in the soft, muted light of what appears to be either early morning or late evening. The main focus is a patchwork quilt, rich in color and pattern, draped over a bed. The quilt features a variety of squares in shades of red, blue, green, yellow, and white, creating a vibrant and textured appearance. A gray and white cat is nestled comfortably on the quilt, adding a sense of warmth and life to the scene. The bed itself is partially covered with a dark brown blanket, which contrasts with the lighter tones of the quilt and the white walls of the room. The walls are plain and white, with a window partially visible in the background, suggesting a simple, uncluttered space. The overall composition is casual and homey, with the cat and the quilt serving as the primary elements that draw the viewer's attention. The lighting is soft and diffused, possibly from a window out of frame, which enhances the tranquil and relaxed atmosphere of the room.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 213,
+            "total_tokens": 510
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1645.670223,
+            "prompt_eval_duration_ms": 78.932022,
+            "generation_duration_ms": 1524.89476,
+            "load_duration_ms": 37.168191,
+            "tokens_per_second": 139.68177056362893
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the viewer is drawn to a patchwork quilt with a variety of colorful squares, each featuring different patterns and designs, creating a vibrant and textured appearance. Resting on this quilt is a gray cat with a white chest and face, its body partially obscured by the quilt, adding a sense of coziness and domesticity to the scene. The quilt's edges are slightly rumpled, suggesting a lived-in and comfortable environment. Moving to the background, the setting appears to be a simple room with plain white walls, which provide a stark contrast to the colorful quilt and the cat, making these elements stand out more prominently. The simplicity of the background enhances the focus on the quilt and the cat, creating a harmonious balance between the foreground and background elements. The overall composition suggests a quiet, peaceful moment in a home, where the cat has found a comfortable spot to rest amidst the warmth and comfort of the quilt.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 190,
+            "total_tokens": 493
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1440.275973,
+            "prompt_eval_duration_ms": 30.772087,
+            "generation_duration_ms": 1367.509999,
+            "load_duration_ms": 39.426403,
+            "tokens_per_second": 138.93865502916884
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a gray and white cat is curled up comfortably on a patchwork quilt, which is spread over a bed. The quilt features a variety of colorful squares, creating a vibrant and cozy atmosphere. The cat appears to be resting or perhaps dozing, with its body relaxed and its head slightly tilted, suggesting a state of contentment or mild alertness. The bed itself is partially covered with dark brown sheets, and there are additional layers of bedding, including a green blanket, adding to the sense of warmth and comfort. The background is minimal, with a plain white wall and a closed window, which helps to focus attention on the cat and the quilt. There are no other animals or people in the image, and the cat's interaction with its environment is primarily one of rest and relaxation, with no visible signs of interaction with the objects or the space around it. The overall scene conveys a sense of tranquility and domesticity.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 191,
+            "total_tokens": 497
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1439.469246,
+            "prompt_eval_duration_ms": 31.043209,
+            "generation_duration_ms": 1368.020051,
+            "load_duration_ms": 36.871564,
+            "tokens_per_second": 139.61783663944266
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of calm and tranquility, with a touch of nostalgia and comfort. The soft, muted colors of the patchwork quilt and the muted tones of the room create a serene atmosphere, suggesting a peaceful retreat. The presence of the cat, curled up in a relaxed position, adds to the feeling of contentment and security, as cats are often associated with comfort and domesticity. The slightly rumpled state of the bed and the casual arrangement of the quilt further enhance the feeling of a lived-in, cozy space, inviting the viewer to imagine themselves in this quiet, restful environment. The overall tone is decidedly positive, as the image conveys a sense of warmth, security, and the simple pleasures of a quiet moment at home. The visual elements of the quilt's intricate patterns, the cat's peaceful demeanor, and the soft lighting all contribute to this warm, comforting mood.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 182,
+            "total_tokens": 490
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1387.774221,
+            "prompt_eval_duration_ms": 30.327374,
+            "generation_duration_ms": 1317.241452,
+            "load_duration_ms": 37.850378,
+            "tokens_per_second": 138.1675316424828
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"cat\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"sitting on a quilted blanket\"\n    }\n  },\n  \"man-made\": {\n    \"quilt\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"red\", \"green\", \"blue\"],\n      \"size\": \"large\",\n      \"description\": \"patchwork quilt with various patterns\"\n    },\n    \"blanket\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"plain brown blanket underneath the quilt\"\n    },\n    \"window\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"closed window with blinds\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "cat": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "gray",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "sitting on a quilted blanket"
+              }
+            },
+            "man-made": {
+              "quilt": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "white",
+                  "red",
+                  "green",
+                  "blue"
+                ],
+                "size": "large",
+                "description": "patchwork quilt with various patterns"
+              },
+              "blanket": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "plain brown blanket underneath the quilt"
+              },
+              "window": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "closed window with blinds"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 223,
+            "total_tokens": 709
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1663.013716,
+            "prompt_eval_duration_ms": 44.308111,
+            "generation_duration_ms": 1578.564729,
+            "load_duration_ms": 36.839767,
+            "tokens_per_second": 141.26756787557744
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2699,
+        "total_time_ms": 7576.203378999999,
+        "average_speed": 139.53467235006013
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a cozy indoor setting, likely a bedroom, with a focus on a cat resting on a colorful patchwork quilt. The quilt is the central element, featuring a vibrant array of geometric patterns and colors, including shades of blue, red, green, yellow, and white. The cat, which appears to be gray or tabby with darker markings, is curled up on the quilt, adding a sense of warmth and comfort to the scene. The quilt is spread out on a bed, which is partially visible, with some pillows and bedding in muted tones like gray and brown in the background. The lighting is soft and natural, suggesting daylight coming from a window or light source outside the frame, which creates a calm and inviting atmosphere. The overall composition is balanced, with the cat positioned slightly off-center, drawing the viewer's attention to its relaxed posture. The background includes a plain white wall and a window with a partially visible blind, contributing to the simplicity and tranquility of the setting. The image evokes a sense of domesticity and peacefulness.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 213,
+            "total_tokens": 510
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11513.476782,
+            "prompt_eval_duration_ms": 3541.49875,
+            "generation_duration_ms": 7930.422809,
+            "load_duration_ms": 39.160986,
+            "tokens_per_second": 26.85859318348987
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a patchwork quilt, which is the closest element to the viewer. The quilt features a variety of colorful patterns and geometric shapes, including triangles, squares, and other designs in hues of red, blue, green, yellow, and white. The quilt is spread out on a bed, and a gray cat is nestled comfortably in the middle, partially covered by a white blanket. The cat's presence adds a sense of warmth and coziness to the scene, as it appears relaxed and at ease.\n\nIn the background, the setting is a simple, uncluttered room. The wall is plain and light-colored, providing a neutral backdrop that contrasts with the vibrant quilt. A window with a white frame is visible, suggesting natural light might be entering the room, although the lighting in the image appears soft and diffused. To the right of the quilt, there are some pillows and bedding, including a dark green pillow and a brown pillow, which add to the overall comfort and lived-in feel of the space. The background elements are relatively minimal, allowing the quilt and the cat to remain the focal points of the image.\n\nThe relationship between the foreground and background is one of contrast and balance. The colorful, intricate quilt in the foreground draws the viewer's attention immediately, while the plain background ensures that the quilt and the cat stand out without distraction. The background elements, such as the pillows and the wall, provide context and a sense of place, grounding the scene in a domestic setting. Together, the layers create a harmonious composition that emphasizes comfort, warmth, and simplicity.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 324,
+            "total_tokens": 627
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12193.226907,
+            "prompt_eval_duration_ms": 79.885472,
+            "generation_duration_ms": 12071.922432,
+            "load_duration_ms": 38.773619,
+            "tokens_per_second": 26.839138656254747
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a cozy indoor scene featuring a cat resting on a colorful patchwork quilt. The cat, which appears to be gray with a white chest, is curled up comfortably in the center of the quilt, seemingly asleep or in a state of deep relaxation. The quilt itself is vibrant and intricate, composed of various geometric patterns and colors, including red, green, blue, and white, which add a warm and inviting atmosphere to the scene.\n\nIn the background, there is a bed with a dark-colored pillow and a green blanket, suggesting a bedroom setting. The walls are plain and white, and a window with a white blind is partially visible, indicating natural light filtering into the room. The overall ambiance is calm and peaceful, with no other people or animals present in the image.\n\nThe cat's interaction with the quilt is central to the image, as it uses the quilt as a soft and comfortable resting place. The quilt's vibrant patterns and textures seem to complement the cat's relaxed posture, creating a harmonious and serene environment. There are no other visible objects or people in the image, emphasizing the solitude and tranquility of the scene. The relationship between the cat and the quilt is one of comfort and rest, highlighting the cat's contentment in its chosen spot. The overall composition suggests a quiet, domestic moment of rest and relaxation.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 270,
+            "total_tokens": 576
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10209.616417,
+            "prompt_eval_duration_ms": 75.82427,
+            "generation_duration_ms": 10092.493165,
+            "load_duration_ms": 38.793696,
+            "tokens_per_second": 26.752557131902698
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a sense of warmth, comfort, and tranquility, evoking feelings of relaxation and contentment. The overall tone is positive, with a neutral undertone that suggests a peaceful domestic setting. The visual elements contributing to this emotional atmosphere include the cozy quilt with its patchwork pattern, which adds a touch of homeliness and nostalgia. The soft, muted colors of the quilt and the cat's gray fur blend harmoniously, reinforcing a calm and soothing ambiance. The cat, curled up in a relaxed posture, appears to be resting peacefully, which further enhances the sense of serenity. The slightly cluttered bedding and the casual arrangement of pillows suggest a lived-in, informal space, adding to the authenticity and comfort of the scene. The soft lighting and the plain, unobtrusive background keep the focus on the cat and the quilt, emphasizing a quiet, intimate moment. Overall, the image evokes a feeling of warmth and contentment, inviting the viewer to imagine a peaceful, quiet afternoon at home.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 206,
+            "total_tokens": 514
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7837.745735,
+            "prompt_eval_duration_ms": 72.672684,
+            "generation_duration_ms": 7721.254794,
+            "load_duration_ms": 39.350965,
+            "tokens_per_second": 26.67960137257452
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"cat\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A gray and white cat lying on a quilt.\"\n    }\n  },\n  \"man-made\": {\n    \"quilt\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"multicolored\"],\n      \"size\": \"large\",\n      \"description\": \"A colorful patchwork quilt covering the bed.\"\n    },\n    \"pillows\": {\n      \"count\": 2,\n      \"location\": \"right\",\n      \"color\": [\"green\", \"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"Two pillows, one green and one gray, on the bed.\"\n    },\n    \"bed\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"A bed with a quilt and pillows.\"\n    },\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"A plain white wall in the background.\"\n    },\n    \"window\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A window with a white frame.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "cat": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "gray",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "A gray and white cat lying on a quilt."
+              }
+            },
+            "man-made": {
+              "quilt": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "multicolored"
+                ],
+                "size": "large",
+                "description": "A colorful patchwork quilt covering the bed."
+              },
+              "pillows": {
+                "count": 2,
+                "location": "right",
+                "color": [
+                  "green",
+                  "gray"
+                ],
+                "size": "medium",
+                "description": "Two pillows, one green and one gray, on the bed."
+              },
+              "bed": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "A bed with a quilt and pillows."
+              },
+              "wall": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "A plain white wall in the background."
+              },
+              "window": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "A window with a white frame."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 327,
+            "total_tokens": 813
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12318.602857,
+            "prompt_eval_duration_ms": 133.353131,
+            "generation_duration_ms": 12144.259001,
+            "load_duration_ms": 38.339054,
+            "tokens_per_second": 26.926303199978992
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3040,
+        "total_time_ms": 54072.668698,
+        "average_speed": 26.811238708840165
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -484,324 +802,6 @@
         "total_tokens": 2772,
         "total_time_ms": 24548.352961999997,
         "average_speed": 41.958057369899464
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a cozy, slightly cluttered bedroom scene, bathed in the soft, muted light of what appears to be either early morning or late evening. The main focus is a patchwork quilt, rich in color and pattern, draped over a bed. The quilt features a variety of squares in shades of red, blue, green, yellow, and white, creating a vibrant and textured appearance. A gray and white cat is nestled comfortably on the quilt, adding a sense of warmth and life to the scene. The bed itself is partially covered with a dark brown blanket, which contrasts with the lighter tones of the quilt and the white walls of the room. The walls are plain and white, with a window partially visible in the background, suggesting a simple, uncluttered space. The overall composition is casual and homey, with the cat and the quilt serving as the primary elements that draw the viewer's attention. The lighting is soft and diffused, possibly from a window out of frame, which enhances the tranquil and relaxed atmosphere of the room.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 213,
-            "total_tokens": 510
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1645.670223,
-            "prompt_eval_duration_ms": 78.932022,
-            "generation_duration_ms": 1524.89476,
-            "load_duration_ms": 37.168191,
-            "tokens_per_second": 139.68177056362893
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the viewer is drawn to a patchwork quilt with a variety of colorful squares, each featuring different patterns and designs, creating a vibrant and textured appearance. Resting on this quilt is a gray cat with a white chest and face, its body partially obscured by the quilt, adding a sense of coziness and domesticity to the scene. The quilt's edges are slightly rumpled, suggesting a lived-in and comfortable environment. Moving to the background, the setting appears to be a simple room with plain white walls, which provide a stark contrast to the colorful quilt and the cat, making these elements stand out more prominently. The simplicity of the background enhances the focus on the quilt and the cat, creating a harmonious balance between the foreground and background elements. The overall composition suggests a quiet, peaceful moment in a home, where the cat has found a comfortable spot to rest amidst the warmth and comfort of the quilt.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 190,
-            "total_tokens": 493
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1440.275973,
-            "prompt_eval_duration_ms": 30.772087,
-            "generation_duration_ms": 1367.509999,
-            "load_duration_ms": 39.426403,
-            "tokens_per_second": 138.93865502916884
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a gray and white cat is curled up comfortably on a patchwork quilt, which is spread over a bed. The quilt features a variety of colorful squares, creating a vibrant and cozy atmosphere. The cat appears to be resting or perhaps dozing, with its body relaxed and its head slightly tilted, suggesting a state of contentment or mild alertness. The bed itself is partially covered with dark brown sheets, and there are additional layers of bedding, including a green blanket, adding to the sense of warmth and comfort. The background is minimal, with a plain white wall and a closed window, which helps to focus attention on the cat and the quilt. There are no other animals or people in the image, and the cat's interaction with its environment is primarily one of rest and relaxation, with no visible signs of interaction with the objects or the space around it. The overall scene conveys a sense of tranquility and domesticity.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 191,
-            "total_tokens": 497
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1439.469246,
-            "prompt_eval_duration_ms": 31.043209,
-            "generation_duration_ms": 1368.020051,
-            "load_duration_ms": 36.871564,
-            "tokens_per_second": 139.61783663944266
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of calm and tranquility, with a touch of nostalgia and comfort. The soft, muted colors of the patchwork quilt and the muted tones of the room create a serene atmosphere, suggesting a peaceful retreat. The presence of the cat, curled up in a relaxed position, adds to the feeling of contentment and security, as cats are often associated with comfort and domesticity. The slightly rumpled state of the bed and the casual arrangement of the quilt further enhance the feeling of a lived-in, cozy space, inviting the viewer to imagine themselves in this quiet, restful environment. The overall tone is decidedly positive, as the image conveys a sense of warmth, security, and the simple pleasures of a quiet moment at home. The visual elements of the quilt's intricate patterns, the cat's peaceful demeanor, and the soft lighting all contribute to this warm, comforting mood.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 182,
-            "total_tokens": 490
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1387.774221,
-            "prompt_eval_duration_ms": 30.327374,
-            "generation_duration_ms": 1317.241452,
-            "load_duration_ms": 37.850378,
-            "tokens_per_second": 138.1675316424828
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"cat\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"sitting on a quilted blanket\"\n    }\n  },\n  \"man-made\": {\n    \"quilt\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"red\", \"green\", \"blue\"],\n      \"size\": \"large\",\n      \"description\": \"patchwork quilt with various patterns\"\n    },\n    \"blanket\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"plain brown blanket underneath the quilt\"\n    },\n    \"window\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"closed window with blinds\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "cat": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "gray",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "sitting on a quilted blanket"
-              }
-            },
-            "man-made": {
-              "quilt": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "white",
-                  "red",
-                  "green",
-                  "blue"
-                ],
-                "size": "large",
-                "description": "patchwork quilt with various patterns"
-              },
-              "blanket": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "plain brown blanket underneath the quilt"
-              },
-              "window": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "closed window with blinds"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 223,
-            "total_tokens": 709
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1663.013716,
-            "prompt_eval_duration_ms": 44.308111,
-            "generation_duration_ms": 1578.564729,
-            "load_duration_ms": 36.839767,
-            "tokens_per_second": 141.26756787557744
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2699,
-        "total_time_ms": 7576.203378999999,
-        "average_speed": 139.53467235006013
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a cozy indoor setting, likely a bedroom, with a focus on a cat resting on a colorful patchwork quilt. The quilt is the central element, featuring a vibrant array of geometric patterns and colors, including shades of blue, red, green, yellow, and white. The cat, which appears to be gray or tabby with darker markings, is curled up on the quilt, adding a sense of warmth and comfort to the scene. The quilt is spread out on a bed, which is partially visible, with some pillows and bedding in muted tones like gray and brown in the background. The lighting is soft and natural, suggesting daylight coming from a window or light source outside the frame, which creates a calm and inviting atmosphere. The overall composition is balanced, with the cat positioned slightly off-center, drawing the viewer's attention to its relaxed posture. The background includes a plain white wall and a window with a partially visible blind, contributing to the simplicity and tranquility of the setting. The image evokes a sense of domesticity and peacefulness.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 213,
-            "total_tokens": 510
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11513.476782,
-            "prompt_eval_duration_ms": 3541.49875,
-            "generation_duration_ms": 7930.422809,
-            "load_duration_ms": 39.160986,
-            "tokens_per_second": 26.85859318348987
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a patchwork quilt, which is the closest element to the viewer. The quilt features a variety of colorful patterns and geometric shapes, including triangles, squares, and other designs in hues of red, blue, green, yellow, and white. The quilt is spread out on a bed, and a gray cat is nestled comfortably in the middle, partially covered by a white blanket. The cat's presence adds a sense of warmth and coziness to the scene, as it appears relaxed and at ease.\n\nIn the background, the setting is a simple, uncluttered room. The wall is plain and light-colored, providing a neutral backdrop that contrasts with the vibrant quilt. A window with a white frame is visible, suggesting natural light might be entering the room, although the lighting in the image appears soft and diffused. To the right of the quilt, there are some pillows and bedding, including a dark green pillow and a brown pillow, which add to the overall comfort and lived-in feel of the space. The background elements are relatively minimal, allowing the quilt and the cat to remain the focal points of the image.\n\nThe relationship between the foreground and background is one of contrast and balance. The colorful, intricate quilt in the foreground draws the viewer's attention immediately, while the plain background ensures that the quilt and the cat stand out without distraction. The background elements, such as the pillows and the wall, provide context and a sense of place, grounding the scene in a domestic setting. Together, the layers create a harmonious composition that emphasizes comfort, warmth, and simplicity.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 324,
-            "total_tokens": 627
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12193.226907,
-            "prompt_eval_duration_ms": 79.885472,
-            "generation_duration_ms": 12071.922432,
-            "load_duration_ms": 38.773619,
-            "tokens_per_second": 26.839138656254747
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a cozy indoor scene featuring a cat resting on a colorful patchwork quilt. The cat, which appears to be gray with a white chest, is curled up comfortably in the center of the quilt, seemingly asleep or in a state of deep relaxation. The quilt itself is vibrant and intricate, composed of various geometric patterns and colors, including red, green, blue, and white, which add a warm and inviting atmosphere to the scene.\n\nIn the background, there is a bed with a dark-colored pillow and a green blanket, suggesting a bedroom setting. The walls are plain and white, and a window with a white blind is partially visible, indicating natural light filtering into the room. The overall ambiance is calm and peaceful, with no other people or animals present in the image.\n\nThe cat's interaction with the quilt is central to the image, as it uses the quilt as a soft and comfortable resting place. The quilt's vibrant patterns and textures seem to complement the cat's relaxed posture, creating a harmonious and serene environment. There are no other visible objects or people in the image, emphasizing the solitude and tranquility of the scene. The relationship between the cat and the quilt is one of comfort and rest, highlighting the cat's contentment in its chosen spot. The overall composition suggests a quiet, domestic moment of rest and relaxation.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 270,
-            "total_tokens": 576
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10209.616417,
-            "prompt_eval_duration_ms": 75.82427,
-            "generation_duration_ms": 10092.493165,
-            "load_duration_ms": 38.793696,
-            "tokens_per_second": 26.752557131902698
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a sense of warmth, comfort, and tranquility, evoking feelings of relaxation and contentment. The overall tone is positive, with a neutral undertone that suggests a peaceful domestic setting. The visual elements contributing to this emotional atmosphere include the cozy quilt with its patchwork pattern, which adds a touch of homeliness and nostalgia. The soft, muted colors of the quilt and the cat's gray fur blend harmoniously, reinforcing a calm and soothing ambiance. The cat, curled up in a relaxed posture, appears to be resting peacefully, which further enhances the sense of serenity. The slightly cluttered bedding and the casual arrangement of pillows suggest a lived-in, informal space, adding to the authenticity and comfort of the scene. The soft lighting and the plain, unobtrusive background keep the focus on the cat and the quilt, emphasizing a quiet, intimate moment. Overall, the image evokes a feeling of warmth and contentment, inviting the viewer to imagine a peaceful, quiet afternoon at home.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 206,
-            "total_tokens": 514
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7837.745735,
-            "prompt_eval_duration_ms": 72.672684,
-            "generation_duration_ms": 7721.254794,
-            "load_duration_ms": 39.350965,
-            "tokens_per_second": 26.67960137257452
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"cat\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A gray and white cat lying on a quilt.\"\n    }\n  },\n  \"man-made\": {\n    \"quilt\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"multicolored\"],\n      \"size\": \"large\",\n      \"description\": \"A colorful patchwork quilt covering the bed.\"\n    },\n    \"pillows\": {\n      \"count\": 2,\n      \"location\": \"right\",\n      \"color\": [\"green\", \"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"Two pillows, one green and one gray, on the bed.\"\n    },\n    \"bed\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"A bed with a quilt and pillows.\"\n    },\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"A plain white wall in the background.\"\n    },\n    \"window\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A window with a white frame.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "cat": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "gray",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "A gray and white cat lying on a quilt."
-              }
-            },
-            "man-made": {
-              "quilt": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "multicolored"
-                ],
-                "size": "large",
-                "description": "A colorful patchwork quilt covering the bed."
-              },
-              "pillows": {
-                "count": 2,
-                "location": "right",
-                "color": [
-                  "green",
-                  "gray"
-                ],
-                "size": "medium",
-                "description": "Two pillows, one green and one gray, on the bed."
-              },
-              "bed": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "A bed with a quilt and pillows."
-              },
-              "wall": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "A plain white wall in the background."
-              },
-              "window": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "A window with a white frame."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 327,
-            "total_tokens": 813
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12318.602857,
-            "prompt_eval_duration_ms": 133.353131,
-            "generation_duration_ms": 12144.259001,
-            "load_duration_ms": 38.339054,
-            "tokens_per_second": 26.926303199978992
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3040,
-        "total_time_ms": 54072.668698,
-        "average_speed": 26.811238708840165
       }
     },
     {

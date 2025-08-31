@@ -7,6 +7,284 @@
   "timestamp": "2025-08-30T18:38:05.662262+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image presents a serene and delicate scene centered around a bouquet of tulips arranged in a clear, geometric glass vase. The setting appears to be a warm, indoor environment, possibly a kitchen or dining area, as suggested by the wooden table and the partial view of a wooden chair in the background. The lighting is soft and natural, likely from a nearby window, casting gentle shadows and highlighting the subtle hues of the tulips and the transparency of the glass vase. The tulips themselves are a soft blend of white and pink, with some petals showing a gentle gradient of color, adding depth and a touch of elegance to the arrangement. The green stems and leaves of the tulips provide a natural contrast to the white and pink flowers, and the vase, with its clear, faceted design, allows the viewer to see the water and the stems, adding a sense of simplicity and purity to the composition. The overall impression is one of tranquility and natural beauty, with the tulips serving as the focal point against the simple, uncluttered background.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 213,
+            "total_tokens": 510
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1627.449101,
+            "prompt_eval_duration_ms": 78.580204,
+            "generation_duration_ms": 1508.040203,
+            "load_duration_ms": 38.375699,
+            "tokens_per_second": 141.24291884014184
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, a clear glass vase filled with water and holding a bouquet of tulips takes center stage. The tulips, predominantly white with subtle pink streaks, are arranged in a loose, natural style, their long green stems and leaves adding a touch of freshness and depth to the composition. The vase, with its geometric cut edges, sits on a wooden surface, which provides a warm, natural backdrop that contrasts with the cool transparency of the glass. The background, slightly out of focus, reveals a wooden floor that extends into the distance, suggesting a cozy indoor setting. The soft lighting, possibly from a natural source, enhances the natural beauty of the tulips and casts gentle shadows, creating a serene and inviting atmosphere. The relationship between the foreground and background is one of depth and contrast, with the vibrant tulips in the vase drawing the viewer's eye while the blurred background provides a sense of space and context, tying the entire scene together harmoniously.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 194,
+            "total_tokens": 497
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1465.481976,
+            "prompt_eval_duration_ms": 28.815747,
+            "generation_duration_ms": 1394.421731,
+            "load_duration_ms": 37.996966,
+            "tokens_per_second": 139.12577212983783
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image showcases a serene still life scene featuring a bouquet of tulips arranged in a clear glass vase. The tulips, with their delicate white petals adorned with soft pink stripes, are the focal point of the composition, standing tall and slightly drooping gracefully, suggesting a gentle breeze or the natural droop of the flowers. The green leaves of the tulips are long and slender, adding a vibrant contrast to the white and pink hues of the flowers. The vase, simple and transparent, allows the viewer to see the stems and water clearly, emphasizing the freshness and vitality of the bouquet. The background is a warm-toned wooden surface, possibly a table or a floor, which provides a natural and rustic backdrop that complements the organic beauty of the flowers. There are no people or animals present in the image; the interaction is solely between the flowers, the vase, and the wooden surface, creating a harmonious and tranquil scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 188,
+            "total_tokens": 494
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1426.830726,
+            "prompt_eval_duration_ms": 29.510738,
+            "generation_duration_ms": 1354.469994,
+            "load_duration_ms": 37.871145,
+            "tokens_per_second": 138.7996787177258
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of tranquility and gentle optimism, contributing to an overall positive mood. The soft, pastel hues of the tulips, with their delicate pink and white stripes, suggest a gentle and serene atmosphere, reminiscent of a calm spring day. The clear glass vase, simple and unobtrusive, allows the focus to remain on the flowers, enhancing their natural beauty and purity. The natural light filtering through, casting subtle shadows and highlighting the petals, adds a touch of warmth and life to the scene, further amplifying the feeling of freshness and renewal. The wooden table in the background provides a grounding element, grounding the image in a familiar and comforting setting. The simplicity of the composition, with its minimalistic approach, contributes to a peaceful and contemplative mood, inviting the viewer to pause and appreciate the beauty of the moment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 172,
+            "total_tokens": 480
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1304.184829,
+            "prompt_eval_duration_ms": 30.541828,
+            "generation_duration_ms": 1229.574364,
+            "load_duration_ms": 40.275826,
+            "tokens_per_second": 139.8858052313784
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"vase\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"clear\"],\n      \"size\": \"small\",\n      \"description\": \"transparent glass vase holding flowers\"\n    }\n  },\n  \"natural\": {\n    \"tulips\": {\n      \"count\": 10,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"pink\"],\n      \"size\": \"medium\",\n      \"description\": \"flowers with green stems and leaves\"\n    }\n  },\n  \"man-made\": {\n    \"table\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"wooden surface with a vase of flowers\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "table": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "wooden surface with a vase of flowers"
+              }
+            },
+            "natural": {
+              "tulips": {
+                "count": 10,
+                "location": "center",
+                "color": [
+                  "white",
+                  "pink"
+                ],
+                "size": "medium",
+                "description": "flowers with green stems and leaves"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 179,
+            "total_tokens": 665
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1357.840353,
+            "prompt_eval_duration_ms": 44.157269,
+            "generation_duration_ms": 1268.930884,
+            "load_duration_ms": 42.262925,
+            "tokens_per_second": 141.06363258788807
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2646,
+        "total_time_ms": 7181.786985000001,
+        "average_speed": 140.0235615013944
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a simple yet elegant arrangement of tulips in a clear glass vase, set against a wooden surface. The setting appears to be indoors, likely on a wooden table or floor, as indicated by the warm, natural tones of the wood. The lighting is soft and natural, suggesting daylight streaming in from a nearby window, casting gentle shadows and highlighting the delicate textures of the flowers and vase.\n\nThe main elements of the composition are the tulips and the vase. The tulips are predominantly white with subtle pink or light red streaks on their petals, giving them a soft, pastel appearance. They are arranged in a loose, organic cluster, with some flowers fully bloomed and others still in bud form, creating a sense of natural growth and dynamism. The stems are long and green, adding a fresh, vibrant contrast to the pale petals. The clear glass vase is simple and rectangular, allowing the water inside to be visible, which adds a sense of transparency and purity to the arrangement.\n\nThe overall composition is balanced and harmonious, with the tulips positioned slightly off-center, creating visual interest and depth. The interplay of colors\u2014soft whites and pinks of the flowers, the green of the stems, and the warm brown of the wood\u2014creates a calming and inviting atmosphere. The simplicity of the scene emphasizes the beauty of the flowers and the natural setting, making it a serene and aesthetically pleasing image.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 289,
+            "total_tokens": 586
+          },
+          "performance_metrics": {
+            "total_duration_ms": 14314.546822,
+            "prompt_eval_duration_ms": 3508.079204,
+            "generation_duration_ms": 10764.61523,
+            "load_duration_ms": 37.211211,
+            "tokens_per_second": 26.847220622859176
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a clear glass vase filled with water, which serves as the primary focus. The vase contains a bouquet of tulips with delicate, pastel-colored petals in shades of white, pink, and yellow, accented by subtle red streaks. The tulips are arranged in a natural, slightly cascading manner, with their green stems and leaves extending outward, adding a fresh and organic feel to the composition. The transparency of the vase allows the water to be visible, enhancing the overall clarity and simplicity of the scene.\n\nIn the background, the setting is a wooden surface, likely a table or floor, with a warm, natural tone that complements the soft hues of the flowers. The wood grain is visible, adding texture and depth to the image. The background is relatively uncluttered, with only a small portion of a wooden chair or piece of furniture visible in the top-left corner, which subtly frames the scene without distracting from the main subject. The lighting in the image is soft and natural, suggesting a calm, indoor environment, possibly near a window.\n\nThe relationship between the foreground and background is harmonious and balanced. The vibrant, colorful tulips in the foreground draw the viewer's attention, while the warm, neutral tones of the wooden background provide a serene and grounding contrast. The simplicity of the background ensures that the flowers remain the focal point, while the natural elements of the wood and the soft lighting create a cohesive and tranquil atmosphere. The overall composition emphasizes the beauty and elegance of the tulips, making them stand out against the understated backdrop.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 322,
+            "total_tokens": 625
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12115.418657,
+            "prompt_eval_duration_ms": 82.151505,
+            "generation_duration_ms": 11992.902549,
+            "load_duration_ms": 37.903544,
+            "tokens_per_second": 26.849213414716623
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a simple yet elegant floral arrangement consisting of tulips in a clear glass vase placed on a wooden surface. There are no people or animals visible in the image. The focus is entirely on the flowers and the vase. The tulips are light pink with subtle red streaks, creating a delicate and soft aesthetic. They are arranged in a natural, slightly cascading manner, with their green stems and leaves extending outward, adding a fresh and organic feel to the composition. The clear glass vase is minimalist, allowing the water inside to be visible, which enhances the transparency and purity of the setup. The wooden surface beneath the vase provides a warm, earthy contrast to the cool tones of the glass and the pastel hues of the flowers. The overall interaction between the elements is harmonious, with the vase serving as a simple yet effective container that highlights the beauty of the tulips. The lighting in the image is soft, casting gentle shadows and emphasizing the natural textures of the wood and the delicate petals of the flowers. The arrangement exudes a sense of tranquility and simplicity, focusing on the natural beauty of the flowers and the understated elegance of the vase.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 236,
+            "total_tokens": 542
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8915.403251,
+            "prompt_eval_duration_ms": 83.125604,
+            "generation_duration_ms": 8789.891615,
+            "load_duration_ms": 39.57871,
+            "tokens_per_second": 26.849022756693
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a serene and uplifting mood, evoking feelings of calmness, freshness, and subtle elegance. The vibrant yet soft pastel hues of the tulips, ranging from delicate white to gentle pink, create a sense of gentle beauty and natural grace. The clear glass vase, with its minimalist design, enhances the purity and simplicity of the scene, allowing the flowers to be the focal point. The wooden surface beneath the vase adds warmth and a touch of rustic charm, grounding the image in a cozy, homey atmosphere. The soft lighting enhances the delicate petals and the smooth texture of the vase, contributing to a tranquil and inviting ambiance. The overall tone is decidedly positive, as the image radiates a sense of renewal and tranquility, often associated with spring or fresh beginnings. The visual elements\u2014such as the soft colors, the natural materials, and the clean lines\u2014work together harmoniously to create an emotional atmosphere that is soothing, uplifting, and subtly celebratory of nature's beauty. This image is likely to evoke feelings of contentment, hope, and a gentle appreciation for the simple pleasures of life.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 226,
+            "total_tokens": 534
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8536.927225,
+            "prompt_eval_duration_ms": 71.623413,
+            "generation_duration_ms": 8425.969416,
+            "load_duration_ms": 36.760672,
+            "tokens_per_second": 26.82183958214358
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"vase\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"transparent\"],\n      \"size\": \"small\",\n      \"description\": \"Clear glass vase holding flowers\"\n    },\n    \"table\": {\n      \"count\": 1,\n      \"location\": \"bottom, background\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Wooden table surface\"\n    }\n  },\n  \"natural\": {\n    \"flowers\": {\n      \"count\": 10,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\", \"pink\"],\n      \"size\": \"small\",\n      \"description\": \"Tulips with white petals and pink stripes\"\n    },\n    \"leaves\": {\n      \"count\": 10,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Green leaves of the tulips\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "vase": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "transparent"
+                ],
+                "size": "small",
+                "description": "Clear glass vase holding flowers"
+              },
+              "table": {
+                "count": 1,
+                "location": "bottom, background",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "Wooden table surface"
+              }
+            },
+            "natural": {
+              "flowers": {
+                "count": 10,
+                "location": "center, middle",
+                "color": [
+                  "white",
+                  "pink"
+                ],
+                "size": "small",
+                "description": "Tulips with white petals and pink stripes"
+              },
+              "leaves": {
+                "count": 10,
+                "location": "center, middle",
+                "color": [
+                  "green"
+                ],
+                "size": "small",
+                "description": "Green leaves of the tulips"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 225,
+            "total_tokens": 711
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8519.223886,
+            "prompt_eval_duration_ms": 140.791552,
+            "generation_duration_ms": 8337.0554,
+            "load_duration_ms": 38.755331,
+            "tokens_per_second": 26.98794588794504
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2998,
+        "total_time_ms": 52401.519841,
+        "average_speed": 26.87104845287148
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -435,284 +713,6 @@
         "total_tokens": 2725,
         "total_time_ms": 23325.611201,
         "average_speed": 42.18767577702511
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image presents a serene and delicate scene centered around a bouquet of tulips arranged in a clear, geometric glass vase. The setting appears to be a warm, indoor environment, possibly a kitchen or dining area, as suggested by the wooden table and the partial view of a wooden chair in the background. The lighting is soft and natural, likely from a nearby window, casting gentle shadows and highlighting the subtle hues of the tulips and the transparency of the glass vase. The tulips themselves are a soft blend of white and pink, with some petals showing a gentle gradient of color, adding depth and a touch of elegance to the arrangement. The green stems and leaves of the tulips provide a natural contrast to the white and pink flowers, and the vase, with its clear, faceted design, allows the viewer to see the water and the stems, adding a sense of simplicity and purity to the composition. The overall impression is one of tranquility and natural beauty, with the tulips serving as the focal point against the simple, uncluttered background.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 213,
-            "total_tokens": 510
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1627.449101,
-            "prompt_eval_duration_ms": 78.580204,
-            "generation_duration_ms": 1508.040203,
-            "load_duration_ms": 38.375699,
-            "tokens_per_second": 141.24291884014184
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, a clear glass vase filled with water and holding a bouquet of tulips takes center stage. The tulips, predominantly white with subtle pink streaks, are arranged in a loose, natural style, their long green stems and leaves adding a touch of freshness and depth to the composition. The vase, with its geometric cut edges, sits on a wooden surface, which provides a warm, natural backdrop that contrasts with the cool transparency of the glass. The background, slightly out of focus, reveals a wooden floor that extends into the distance, suggesting a cozy indoor setting. The soft lighting, possibly from a natural source, enhances the natural beauty of the tulips and casts gentle shadows, creating a serene and inviting atmosphere. The relationship between the foreground and background is one of depth and contrast, with the vibrant tulips in the vase drawing the viewer's eye while the blurred background provides a sense of space and context, tying the entire scene together harmoniously.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 194,
-            "total_tokens": 497
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1465.481976,
-            "prompt_eval_duration_ms": 28.815747,
-            "generation_duration_ms": 1394.421731,
-            "load_duration_ms": 37.996966,
-            "tokens_per_second": 139.12577212983783
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image showcases a serene still life scene featuring a bouquet of tulips arranged in a clear glass vase. The tulips, with their delicate white petals adorned with soft pink stripes, are the focal point of the composition, standing tall and slightly drooping gracefully, suggesting a gentle breeze or the natural droop of the flowers. The green leaves of the tulips are long and slender, adding a vibrant contrast to the white and pink hues of the flowers. The vase, simple and transparent, allows the viewer to see the stems and water clearly, emphasizing the freshness and vitality of the bouquet. The background is a warm-toned wooden surface, possibly a table or a floor, which provides a natural and rustic backdrop that complements the organic beauty of the flowers. There are no people or animals present in the image; the interaction is solely between the flowers, the vase, and the wooden surface, creating a harmonious and tranquil scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 188,
-            "total_tokens": 494
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1426.830726,
-            "prompt_eval_duration_ms": 29.510738,
-            "generation_duration_ms": 1354.469994,
-            "load_duration_ms": 37.871145,
-            "tokens_per_second": 138.7996787177258
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of tranquility and gentle optimism, contributing to an overall positive mood. The soft, pastel hues of the tulips, with their delicate pink and white stripes, suggest a gentle and serene atmosphere, reminiscent of a calm spring day. The clear glass vase, simple and unobtrusive, allows the focus to remain on the flowers, enhancing their natural beauty and purity. The natural light filtering through, casting subtle shadows and highlighting the petals, adds a touch of warmth and life to the scene, further amplifying the feeling of freshness and renewal. The wooden table in the background provides a grounding element, grounding the image in a familiar and comforting setting. The simplicity of the composition, with its minimalistic approach, contributes to a peaceful and contemplative mood, inviting the viewer to pause and appreciate the beauty of the moment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 172,
-            "total_tokens": 480
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1304.184829,
-            "prompt_eval_duration_ms": 30.541828,
-            "generation_duration_ms": 1229.574364,
-            "load_duration_ms": 40.275826,
-            "tokens_per_second": 139.8858052313784
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"vase\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"clear\"],\n      \"size\": \"small\",\n      \"description\": \"transparent glass vase holding flowers\"\n    }\n  },\n  \"natural\": {\n    \"tulips\": {\n      \"count\": 10,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"pink\"],\n      \"size\": \"medium\",\n      \"description\": \"flowers with green stems and leaves\"\n    }\n  },\n  \"man-made\": {\n    \"table\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"wooden surface with a vase of flowers\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "table": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "wooden surface with a vase of flowers"
-              }
-            },
-            "natural": {
-              "tulips": {
-                "count": 10,
-                "location": "center",
-                "color": [
-                  "white",
-                  "pink"
-                ],
-                "size": "medium",
-                "description": "flowers with green stems and leaves"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 179,
-            "total_tokens": 665
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1357.840353,
-            "prompt_eval_duration_ms": 44.157269,
-            "generation_duration_ms": 1268.930884,
-            "load_duration_ms": 42.262925,
-            "tokens_per_second": 141.06363258788807
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2646,
-        "total_time_ms": 7181.786985000001,
-        "average_speed": 140.0235615013944
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a simple yet elegant arrangement of tulips in a clear glass vase, set against a wooden surface. The setting appears to be indoors, likely on a wooden table or floor, as indicated by the warm, natural tones of the wood. The lighting is soft and natural, suggesting daylight streaming in from a nearby window, casting gentle shadows and highlighting the delicate textures of the flowers and vase.\n\nThe main elements of the composition are the tulips and the vase. The tulips are predominantly white with subtle pink or light red streaks on their petals, giving them a soft, pastel appearance. They are arranged in a loose, organic cluster, with some flowers fully bloomed and others still in bud form, creating a sense of natural growth and dynamism. The stems are long and green, adding a fresh, vibrant contrast to the pale petals. The clear glass vase is simple and rectangular, allowing the water inside to be visible, which adds a sense of transparency and purity to the arrangement.\n\nThe overall composition is balanced and harmonious, with the tulips positioned slightly off-center, creating visual interest and depth. The interplay of colors\u2014soft whites and pinks of the flowers, the green of the stems, and the warm brown of the wood\u2014creates a calming and inviting atmosphere. The simplicity of the scene emphasizes the beauty of the flowers and the natural setting, making it a serene and aesthetically pleasing image.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 289,
-            "total_tokens": 586
-          },
-          "performance_metrics": {
-            "total_duration_ms": 14314.546822,
-            "prompt_eval_duration_ms": 3508.079204,
-            "generation_duration_ms": 10764.61523,
-            "load_duration_ms": 37.211211,
-            "tokens_per_second": 26.847220622859176
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a clear glass vase filled with water, which serves as the primary focus. The vase contains a bouquet of tulips with delicate, pastel-colored petals in shades of white, pink, and yellow, accented by subtle red streaks. The tulips are arranged in a natural, slightly cascading manner, with their green stems and leaves extending outward, adding a fresh and organic feel to the composition. The transparency of the vase allows the water to be visible, enhancing the overall clarity and simplicity of the scene.\n\nIn the background, the setting is a wooden surface, likely a table or floor, with a warm, natural tone that complements the soft hues of the flowers. The wood grain is visible, adding texture and depth to the image. The background is relatively uncluttered, with only a small portion of a wooden chair or piece of furniture visible in the top-left corner, which subtly frames the scene without distracting from the main subject. The lighting in the image is soft and natural, suggesting a calm, indoor environment, possibly near a window.\n\nThe relationship between the foreground and background is harmonious and balanced. The vibrant, colorful tulips in the foreground draw the viewer's attention, while the warm, neutral tones of the wooden background provide a serene and grounding contrast. The simplicity of the background ensures that the flowers remain the focal point, while the natural elements of the wood and the soft lighting create a cohesive and tranquil atmosphere. The overall composition emphasizes the beauty and elegance of the tulips, making them stand out against the understated backdrop.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 322,
-            "total_tokens": 625
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12115.418657,
-            "prompt_eval_duration_ms": 82.151505,
-            "generation_duration_ms": 11992.902549,
-            "load_duration_ms": 37.903544,
-            "tokens_per_second": 26.849213414716623
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a simple yet elegant floral arrangement consisting of tulips in a clear glass vase placed on a wooden surface. There are no people or animals visible in the image. The focus is entirely on the flowers and the vase. The tulips are light pink with subtle red streaks, creating a delicate and soft aesthetic. They are arranged in a natural, slightly cascading manner, with their green stems and leaves extending outward, adding a fresh and organic feel to the composition. The clear glass vase is minimalist, allowing the water inside to be visible, which enhances the transparency and purity of the setup. The wooden surface beneath the vase provides a warm, earthy contrast to the cool tones of the glass and the pastel hues of the flowers. The overall interaction between the elements is harmonious, with the vase serving as a simple yet effective container that highlights the beauty of the tulips. The lighting in the image is soft, casting gentle shadows and emphasizing the natural textures of the wood and the delicate petals of the flowers. The arrangement exudes a sense of tranquility and simplicity, focusing on the natural beauty of the flowers and the understated elegance of the vase.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 236,
-            "total_tokens": 542
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8915.403251,
-            "prompt_eval_duration_ms": 83.125604,
-            "generation_duration_ms": 8789.891615,
-            "load_duration_ms": 39.57871,
-            "tokens_per_second": 26.849022756693
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a serene and uplifting mood, evoking feelings of calmness, freshness, and subtle elegance. The vibrant yet soft pastel hues of the tulips, ranging from delicate white to gentle pink, create a sense of gentle beauty and natural grace. The clear glass vase, with its minimalist design, enhances the purity and simplicity of the scene, allowing the flowers to be the focal point. The wooden surface beneath the vase adds warmth and a touch of rustic charm, grounding the image in a cozy, homey atmosphere. The soft lighting enhances the delicate petals and the smooth texture of the vase, contributing to a tranquil and inviting ambiance. The overall tone is decidedly positive, as the image radiates a sense of renewal and tranquility, often associated with spring or fresh beginnings. The visual elements\u2014such as the soft colors, the natural materials, and the clean lines\u2014work together harmoniously to create an emotional atmosphere that is soothing, uplifting, and subtly celebratory of nature's beauty. This image is likely to evoke feelings of contentment, hope, and a gentle appreciation for the simple pleasures of life.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 226,
-            "total_tokens": 534
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8536.927225,
-            "prompt_eval_duration_ms": 71.623413,
-            "generation_duration_ms": 8425.969416,
-            "load_duration_ms": 36.760672,
-            "tokens_per_second": 26.82183958214358
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"vase\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"transparent\"],\n      \"size\": \"small\",\n      \"description\": \"Clear glass vase holding flowers\"\n    },\n    \"table\": {\n      \"count\": 1,\n      \"location\": \"bottom, background\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Wooden table surface\"\n    }\n  },\n  \"natural\": {\n    \"flowers\": {\n      \"count\": 10,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\", \"pink\"],\n      \"size\": \"small\",\n      \"description\": \"Tulips with white petals and pink stripes\"\n    },\n    \"leaves\": {\n      \"count\": 10,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Green leaves of the tulips\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "vase": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "transparent"
-                ],
-                "size": "small",
-                "description": "Clear glass vase holding flowers"
-              },
-              "table": {
-                "count": 1,
-                "location": "bottom, background",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "Wooden table surface"
-              }
-            },
-            "natural": {
-              "flowers": {
-                "count": 10,
-                "location": "center, middle",
-                "color": [
-                  "white",
-                  "pink"
-                ],
-                "size": "small",
-                "description": "Tulips with white petals and pink stripes"
-              },
-              "leaves": {
-                "count": 10,
-                "location": "center, middle",
-                "color": [
-                  "green"
-                ],
-                "size": "small",
-                "description": "Green leaves of the tulips"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 225,
-            "total_tokens": 711
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8519.223886,
-            "prompt_eval_duration_ms": 140.791552,
-            "generation_duration_ms": 8337.0554,
-            "load_duration_ms": 38.755331,
-            "tokens_per_second": 26.98794588794504
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2998,
-        "total_time_ms": 52401.519841,
-        "average_speed": 26.87104845287148
       }
     },
     {

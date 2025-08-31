@@ -7,6 +7,320 @@
   "timestamp": "2025-08-30T17:06:37.801030+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a vibrant scene dominated by a bright red fire hydrant positioned prominently in the foreground, set against a backdrop of lush green grass. The hydrant, with its classic conical shape and multiple outlets, stands out vividly against the natural setting. Its glossy surface reflects the sunlight, adding a sense of vibrancy and sharpness to the image. The lighting is natural, suggesting a sunny day, with the sunlight casting distinct shadows of the hydrant and the surrounding grass onto the ground, enhancing the three-dimensional feel of the scene. In the background, a row of orange traffic cones is visible, slightly blurred, indicating depth and drawing the viewer's eye towards the foreground. These cones, along with the hydrant, are set against a backdrop of a building with large windows, which are partially obscured by the trees visible through them. The overall composition is balanced, with the fire hydrant as the focal point, and the contrasting colors of red, green, and orange against the neutral tones of the building and the shadows add to the visual interest and clarity of the image.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 218,
+            "total_tokens": 515
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1679.219799,
+            "prompt_eval_duration_ms": 84.213763,
+            "generation_duration_ms": 1551.591027,
+            "load_duration_ms": 41.111555,
+            "tokens_per_second": 140.50094142494677
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, a vibrant red fire hydrant stands prominently on a neatly mowed lawn, its glossy surface reflecting the sunlight. The hydrant, with its two caps and a chain hanging from its side, is the focal point of the image, drawing the viewer's attention immediately. The grass surrounding the hydrant is a lush green, indicating a well-maintained area, and the shadow cast by the hydrant suggests a bright, sunny day. In the background, a row of orange traffic cones with white stripes is positioned against a large, dark gray building, which appears to be a commercial or institutional structure. The cones are slightly out of focus, creating a sense of depth and placing the viewer in a location that might be under construction or undergoing maintenance. The contrast between the bright red hydrant in the foreground and the muted tones of the building and cones in the background creates a visually striking composition, emphasizing the hydrant as a crucial element in the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 195,
+            "total_tokens": 498
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1480.982398,
+            "prompt_eval_duration_ms": 30.178637,
+            "generation_duration_ms": 1409.396348,
+            "load_duration_ms": 39.163649,
+            "tokens_per_second": 138.3571060594234
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image features a red fire hydrant prominently positioned in the foreground, standing out against a backdrop of green grass and a blurred building with large windows. The fire hydrant, a crucial object for emergency services, is stationary and serves no immediate action. In the background, a series of orange traffic cones are arranged in a line, suggesting a construction or maintenance area. These cones are also static, serving as a visual marker to guide or restrict access. The grassy area appears undisturbed, indicating no immediate interaction between the fire hydrant and the cones. The building in the background is out of focus, emphasizing the foreground elements. There are no people or animals present in the image, and the objects are not interacting with each other; they are simply coexisting in the scene, each serving a distinct purpose in their respective environments.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 168,
+            "total_tokens": 474
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1283.783056,
+            "prompt_eval_duration_ms": 30.57727,
+            "generation_duration_ms": 1211.037973,
+            "load_duration_ms": 39.92061,
+            "tokens_per_second": 138.72397376923539
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of calm and order, with a slightly positive undertone. The vibrant red fire hydrant stands out against the lush green grass, symbolizing safety and preparedness, which can be reassuring. The blurred construction cones in the background suggest ongoing work, but their muted colors and soft focus contribute to a feeling of stability rather than chaos. The bright sunlight and clear shadows add to the image's clarity and optimism, while the well-maintained grass and the orderly arrangement of the cones imply a community that values its infrastructure and environment. The overall tone is neutral with a subtle positive edge, as the image conveys a sense of readiness and care for the area, without any immediate urgency or distress. The visual elements of color contrast, focus, and lighting work together to create a harmonious and slightly uplifting atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 168,
+            "total_tokens": 476
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1291.759932,
+            "prompt_eval_duration_ms": 32.477605,
+            "generation_duration_ms": 1217.716987,
+            "load_duration_ms": 39.226305,
+            "tokens_per_second": 137.96309141904086
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"fire_hydrant\": {\n      \"count\": 1,\n      \"location\": \"bottom right\",\n      \"color\": [\"red\"],\n      \"size\": \"medium\",\n      \"description\": \"chain attached, grassy area surrounding\"\n    },\n    \"traffic_cones\": {\n      \"count\": 4,\n      \"location\": \"left\",\n      \"color\": [\"orange\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"stacked in a row\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"well-maintained lawn\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear, no visible clouds\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "fire_hydrant": {
+                "count": 1,
+                "location": "bottom right",
+                "color": [
+                  "red"
+                ],
+                "size": "medium",
+                "description": "chain attached, grassy area surrounding"
+              },
+              "traffic_cones": {
+                "count": 4,
+                "location": "left",
+                "color": [
+                  "orange",
+                  "white"
+                ],
+                "size": "small",
+                "description": "stacked in a row"
+              }
+            },
+            "natural": {
+              "grass": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "well-maintained lawn"
+              },
+              "sky": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "clear, no visible clouds"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 218,
+            "total_tokens": 704
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1639.883025,
+            "prompt_eval_duration_ms": 44.249633,
+            "generation_duration_ms": 1553.676606,
+            "load_duration_ms": 39.314492,
+            "tokens_per_second": 140.31233987698982
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2667,
+        "total_time_ms": 7375.62821,
+        "average_speed": 139.17149050992725
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a bright, sunny outdoor scene featuring a red fire hydrant as the central focal point. The hydrant is situated on a lush, green grassy area, which occupies the foreground and middle ground of the composition. The hydrant is painted a vivid red, with a textured surface and two prominent nozzles connected by a chain. The chain is metallic and contrasts with the red hydrant. The hydrant's design includes a small, pointed cap on top, adding a touch of detail.\n\nIn the background, several orange traffic cones with reflective white stripes are lined up, creating a sense of depth and guiding the viewer's eye toward the building in the distance. The building appears to be a modern structure with large windows and a neutral gray facade, partially obscured by trees and foliage. The trees are lush and green, indicating a summery or spring setting. The lighting is bright and natural, suggesting a clear, sunny day, with soft shadows cast by the hydrant and cones on the grass. The overall composition is balanced, with the hydrant in the foreground drawing immediate attention, while the cones and building provide context and depth. The image conveys a sense of order and safety, typical of a well-maintained urban or suburban environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 254,
+            "total_tokens": 551
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13013.352969,
+            "prompt_eval_duration_ms": 3532.338599,
+            "generation_duration_ms": 9439.646914,
+            "load_duration_ms": 38.661969,
+            "tokens_per_second": 26.907786097729034
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a bright red fire hydrant, which is the most prominent object closest to the viewer. The hydrant is positioned centrally and features a cylindrical body with a hexagonal top, capped with a small red knob. Chains hang from the hydrant's outlets, adding to its functional appearance. The hydrant is situated on a patch of green grass, which provides a stark contrast to its vivid red color. The grass appears well-maintained, suggesting a park-like or urban setting.\n\nIn the background, the scene transitions to a more structured environment. A row of orange traffic cones with reflective stripes is visible, placed in a line and leaning against a low wall or barrier. These cones indicate some form of construction, maintenance, or restricted area, adding a sense of caution or activity to the setting. Beyond the cones, a modern building with large glass windows and a neutral facade is visible, suggesting an institutional or commercial setting. Trees and greenery are also present in the background, providing a natural element that contrasts with the urban structures.\n\nThe relationship between the foreground and background elements is one of juxtaposition and context. The fire hydrant in the foreground serves as a focal point, drawing immediate attention due to its bright color and central placement. The background elements, including the traffic cones and building, provide context, indicating that the scene is likely part of a managed or developed area. The grassy foreground and trees in the background create a layered depth, while the cones and building suggest ongoing activity or regulation, tying the scene together into a cohesive urban environment. The overall composition highlights the interplay between natural and man-made elements, emphasizing the functional and aesthetic aspects of the setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 343,
+            "total_tokens": 646
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12861.005395,
+            "prompt_eval_duration_ms": 73.396499,
+            "generation_duration_ms": 12746.100239,
+            "load_duration_ms": 38.903189,
+            "tokens_per_second": 26.910191632614225
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts an outdoor urban setting featuring a red fire hydrant in the foreground, prominently positioned on a grassy area. The hydrant is secured with a chain, suggesting it is in use or ready for emergency access. In the background, there are several orange traffic cones arranged in a line, indicating a temporary construction or maintenance zone. The cones are placed near a building with large windows, which appears to be a modern structure, possibly an office or institutional building. Trees are visible beyond the building, adding a touch of greenery to the scene.\n\nThere are no visible people or animals in the image. The primary interaction in the scene is between the fire hydrant and the traffic cones, which seem to be set up to manage pedestrian or vehicular traffic around the hydrant or the building. The hydrant, as a public safety feature, is stationary and serves as a focal point, while the cones act as barriers or guides, ensuring safety and order in the area. The grassy foreground and the building in the background create a contrast between natural and urban elements, emphasizing the integration of infrastructure within a landscaped environment. The overall composition suggests a moment of calm, with no immediate activity or interaction beyond the static placement of objects.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 249,
+            "total_tokens": 555
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9394.524239,
+            "prompt_eval_duration_ms": 73.652141,
+            "generation_duration_ms": 9277.613706,
+            "load_duration_ms": 40.439079,
+            "tokens_per_second": 26.838797980882433
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a neutral yet slightly utilitarian mood, with a touch of calmness and order. The bright red fire hydrant in the foreground stands out vividly against the green grass, symbolizing readiness and safety, which can evoke a sense of security and preparedness. However, the overall tone is not particularly emotional or dramatic; it leans more toward a practical, everyday scene. The presence of orange traffic cones in the background suggests caution or a temporary disruption, but the cones are not actively in use, which softens any potential sense of urgency or alarm. The green grass and the clear sky contribute to a peaceful and serene atmosphere, balancing the utilitarian elements. The building in the background, with its neutral tones and clean lines, adds to the sense of order and structure. The image does not evoke strong positive or negative emotions but rather a calm, methodical mood, emphasizing functionality and routine in an urban or suburban setting. The visual elements work together to create a scene that is orderly and safe, yet unremarkable, reflecting a quiet moment in a well-maintained environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 221,
+            "total_tokens": 529
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8369.117558,
+            "prompt_eval_duration_ms": 74.88886,
+            "generation_duration_ms": 8252.793761,
+            "load_duration_ms": 39.02684,
+            "tokens_per_second": 26.778810473172566
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"fire_hydrant\": {\n      \"count\": 1,\n      \"location\": \"center, foreground\",\n      \"color\": [\"red\"],\n      \"size\": \"medium\",\n      \"description\": \"Red fire hydrant with chains and yellow markings.\"\n    },\n    \"traffic_cones\": {\n      \"count\": 4,\n      \"location\": \"left, background\",\n      \"color\": [\"orange\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"Orange traffic cones with white stripes.\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Modern building with large windows.\"\n    },\n    \"chains\": {\n      \"count\": 2,\n      \"location\": \"center, foreground\",\n      \"color\": [\"metallic\"],\n      \"size\": \"small\",\n      \"description\": \"Metal chains attached to the fire hydrant.\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"center, foreground\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Lush green grass covering the ground.\"\n    },\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Green trees visible behind the building.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "fire_hydrant": {
+                "count": 1,
+                "location": "center, foreground",
+                "color": [
+                  "red"
+                ],
+                "size": "medium",
+                "description": "Red fire hydrant with chains and yellow markings."
+              },
+              "traffic_cones": {
+                "count": 4,
+                "location": "left, background",
+                "color": [
+                  "orange",
+                  "white"
+                ],
+                "size": "small",
+                "description": "Orange traffic cones with white stripes."
+              },
+              "building": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "Modern building with large windows."
+              },
+              "chains": {
+                "count": 2,
+                "location": "center, foreground",
+                "color": [
+                  "metallic"
+                ],
+                "size": "small",
+                "description": "Metal chains attached to the fire hydrant."
+              }
+            },
+            "natural": {
+              "grass": {
+                "count": 1,
+                "location": "center, foreground",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "Lush green grass covering the ground."
+              },
+              "trees": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "Green trees visible behind the building."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 327,
+            "total_tokens": 813
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12312.052211,
+            "prompt_eval_duration_ms": 134.4662,
+            "generation_duration_ms": 12136.719366,
+            "load_duration_ms": 38.426435,
+            "tokens_per_second": 26.94303049603858
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3094,
+        "total_time_ms": 55950.052372,
+        "average_speed": 26.87572333608737
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -400,320 +714,6 @@
         "total_tokens": 2766,
         "total_time_ms": 24204.855466,
         "average_speed": 42.352391747105216
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a vibrant scene dominated by a bright red fire hydrant positioned prominently in the foreground, set against a backdrop of lush green grass. The hydrant, with its classic conical shape and multiple outlets, stands out vividly against the natural setting. Its glossy surface reflects the sunlight, adding a sense of vibrancy and sharpness to the image. The lighting is natural, suggesting a sunny day, with the sunlight casting distinct shadows of the hydrant and the surrounding grass onto the ground, enhancing the three-dimensional feel of the scene. In the background, a row of orange traffic cones is visible, slightly blurred, indicating depth and drawing the viewer's eye towards the foreground. These cones, along with the hydrant, are set against a backdrop of a building with large windows, which are partially obscured by the trees visible through them. The overall composition is balanced, with the fire hydrant as the focal point, and the contrasting colors of red, green, and orange against the neutral tones of the building and the shadows add to the visual interest and clarity of the image.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 218,
-            "total_tokens": 515
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1679.219799,
-            "prompt_eval_duration_ms": 84.213763,
-            "generation_duration_ms": 1551.591027,
-            "load_duration_ms": 41.111555,
-            "tokens_per_second": 140.50094142494677
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, a vibrant red fire hydrant stands prominently on a neatly mowed lawn, its glossy surface reflecting the sunlight. The hydrant, with its two caps and a chain hanging from its side, is the focal point of the image, drawing the viewer's attention immediately. The grass surrounding the hydrant is a lush green, indicating a well-maintained area, and the shadow cast by the hydrant suggests a bright, sunny day. In the background, a row of orange traffic cones with white stripes is positioned against a large, dark gray building, which appears to be a commercial or institutional structure. The cones are slightly out of focus, creating a sense of depth and placing the viewer in a location that might be under construction or undergoing maintenance. The contrast between the bright red hydrant in the foreground and the muted tones of the building and cones in the background creates a visually striking composition, emphasizing the hydrant as a crucial element in the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 195,
-            "total_tokens": 498
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1480.982398,
-            "prompt_eval_duration_ms": 30.178637,
-            "generation_duration_ms": 1409.396348,
-            "load_duration_ms": 39.163649,
-            "tokens_per_second": 138.3571060594234
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image features a red fire hydrant prominently positioned in the foreground, standing out against a backdrop of green grass and a blurred building with large windows. The fire hydrant, a crucial object for emergency services, is stationary and serves no immediate action. In the background, a series of orange traffic cones are arranged in a line, suggesting a construction or maintenance area. These cones are also static, serving as a visual marker to guide or restrict access. The grassy area appears undisturbed, indicating no immediate interaction between the fire hydrant and the cones. The building in the background is out of focus, emphasizing the foreground elements. There are no people or animals present in the image, and the objects are not interacting with each other; they are simply coexisting in the scene, each serving a distinct purpose in their respective environments.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 168,
-            "total_tokens": 474
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1283.783056,
-            "prompt_eval_duration_ms": 30.57727,
-            "generation_duration_ms": 1211.037973,
-            "load_duration_ms": 39.92061,
-            "tokens_per_second": 138.72397376923539
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of calm and order, with a slightly positive undertone. The vibrant red fire hydrant stands out against the lush green grass, symbolizing safety and preparedness, which can be reassuring. The blurred construction cones in the background suggest ongoing work, but their muted colors and soft focus contribute to a feeling of stability rather than chaos. The bright sunlight and clear shadows add to the image's clarity and optimism, while the well-maintained grass and the orderly arrangement of the cones imply a community that values its infrastructure and environment. The overall tone is neutral with a subtle positive edge, as the image conveys a sense of readiness and care for the area, without any immediate urgency or distress. The visual elements of color contrast, focus, and lighting work together to create a harmonious and slightly uplifting atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 168,
-            "total_tokens": 476
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1291.759932,
-            "prompt_eval_duration_ms": 32.477605,
-            "generation_duration_ms": 1217.716987,
-            "load_duration_ms": 39.226305,
-            "tokens_per_second": 137.96309141904086
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"fire_hydrant\": {\n      \"count\": 1,\n      \"location\": \"bottom right\",\n      \"color\": [\"red\"],\n      \"size\": \"medium\",\n      \"description\": \"chain attached, grassy area surrounding\"\n    },\n    \"traffic_cones\": {\n      \"count\": 4,\n      \"location\": \"left\",\n      \"color\": [\"orange\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"stacked in a row\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"well-maintained lawn\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear, no visible clouds\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "fire_hydrant": {
-                "count": 1,
-                "location": "bottom right",
-                "color": [
-                  "red"
-                ],
-                "size": "medium",
-                "description": "chain attached, grassy area surrounding"
-              },
-              "traffic_cones": {
-                "count": 4,
-                "location": "left",
-                "color": [
-                  "orange",
-                  "white"
-                ],
-                "size": "small",
-                "description": "stacked in a row"
-              }
-            },
-            "natural": {
-              "grass": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "well-maintained lawn"
-              },
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "clear, no visible clouds"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 218,
-            "total_tokens": 704
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1639.883025,
-            "prompt_eval_duration_ms": 44.249633,
-            "generation_duration_ms": 1553.676606,
-            "load_duration_ms": 39.314492,
-            "tokens_per_second": 140.31233987698982
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2667,
-        "total_time_ms": 7375.62821,
-        "average_speed": 139.17149050992725
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a bright, sunny outdoor scene featuring a red fire hydrant as the central focal point. The hydrant is situated on a lush, green grassy area, which occupies the foreground and middle ground of the composition. The hydrant is painted a vivid red, with a textured surface and two prominent nozzles connected by a chain. The chain is metallic and contrasts with the red hydrant. The hydrant's design includes a small, pointed cap on top, adding a touch of detail.\n\nIn the background, several orange traffic cones with reflective white stripes are lined up, creating a sense of depth and guiding the viewer's eye toward the building in the distance. The building appears to be a modern structure with large windows and a neutral gray facade, partially obscured by trees and foliage. The trees are lush and green, indicating a summery or spring setting. The lighting is bright and natural, suggesting a clear, sunny day, with soft shadows cast by the hydrant and cones on the grass. The overall composition is balanced, with the hydrant in the foreground drawing immediate attention, while the cones and building provide context and depth. The image conveys a sense of order and safety, typical of a well-maintained urban or suburban environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 254,
-            "total_tokens": 551
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13013.352969,
-            "prompt_eval_duration_ms": 3532.338599,
-            "generation_duration_ms": 9439.646914,
-            "load_duration_ms": 38.661969,
-            "tokens_per_second": 26.907786097729034
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a bright red fire hydrant, which is the most prominent object closest to the viewer. The hydrant is positioned centrally and features a cylindrical body with a hexagonal top, capped with a small red knob. Chains hang from the hydrant's outlets, adding to its functional appearance. The hydrant is situated on a patch of green grass, which provides a stark contrast to its vivid red color. The grass appears well-maintained, suggesting a park-like or urban setting.\n\nIn the background, the scene transitions to a more structured environment. A row of orange traffic cones with reflective stripes is visible, placed in a line and leaning against a low wall or barrier. These cones indicate some form of construction, maintenance, or restricted area, adding a sense of caution or activity to the setting. Beyond the cones, a modern building with large glass windows and a neutral facade is visible, suggesting an institutional or commercial setting. Trees and greenery are also present in the background, providing a natural element that contrasts with the urban structures.\n\nThe relationship between the foreground and background elements is one of juxtaposition and context. The fire hydrant in the foreground serves as a focal point, drawing immediate attention due to its bright color and central placement. The background elements, including the traffic cones and building, provide context, indicating that the scene is likely part of a managed or developed area. The grassy foreground and trees in the background create a layered depth, while the cones and building suggest ongoing activity or regulation, tying the scene together into a cohesive urban environment. The overall composition highlights the interplay between natural and man-made elements, emphasizing the functional and aesthetic aspects of the setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 343,
-            "total_tokens": 646
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12861.005395,
-            "prompt_eval_duration_ms": 73.396499,
-            "generation_duration_ms": 12746.100239,
-            "load_duration_ms": 38.903189,
-            "tokens_per_second": 26.910191632614225
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts an outdoor urban setting featuring a red fire hydrant in the foreground, prominently positioned on a grassy area. The hydrant is secured with a chain, suggesting it is in use or ready for emergency access. In the background, there are several orange traffic cones arranged in a line, indicating a temporary construction or maintenance zone. The cones are placed near a building with large windows, which appears to be a modern structure, possibly an office or institutional building. Trees are visible beyond the building, adding a touch of greenery to the scene.\n\nThere are no visible people or animals in the image. The primary interaction in the scene is between the fire hydrant and the traffic cones, which seem to be set up to manage pedestrian or vehicular traffic around the hydrant or the building. The hydrant, as a public safety feature, is stationary and serves as a focal point, while the cones act as barriers or guides, ensuring safety and order in the area. The grassy foreground and the building in the background create a contrast between natural and urban elements, emphasizing the integration of infrastructure within a landscaped environment. The overall composition suggests a moment of calm, with no immediate activity or interaction beyond the static placement of objects.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 249,
-            "total_tokens": 555
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9394.524239,
-            "prompt_eval_duration_ms": 73.652141,
-            "generation_duration_ms": 9277.613706,
-            "load_duration_ms": 40.439079,
-            "tokens_per_second": 26.838797980882433
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a neutral yet slightly utilitarian mood, with a touch of calmness and order. The bright red fire hydrant in the foreground stands out vividly against the green grass, symbolizing readiness and safety, which can evoke a sense of security and preparedness. However, the overall tone is not particularly emotional or dramatic; it leans more toward a practical, everyday scene. The presence of orange traffic cones in the background suggests caution or a temporary disruption, but the cones are not actively in use, which softens any potential sense of urgency or alarm. The green grass and the clear sky contribute to a peaceful and serene atmosphere, balancing the utilitarian elements. The building in the background, with its neutral tones and clean lines, adds to the sense of order and structure. The image does not evoke strong positive or negative emotions but rather a calm, methodical mood, emphasizing functionality and routine in an urban or suburban setting. The visual elements work together to create a scene that is orderly and safe, yet unremarkable, reflecting a quiet moment in a well-maintained environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 221,
-            "total_tokens": 529
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8369.117558,
-            "prompt_eval_duration_ms": 74.88886,
-            "generation_duration_ms": 8252.793761,
-            "load_duration_ms": 39.02684,
-            "tokens_per_second": 26.778810473172566
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"fire_hydrant\": {\n      \"count\": 1,\n      \"location\": \"center, foreground\",\n      \"color\": [\"red\"],\n      \"size\": \"medium\",\n      \"description\": \"Red fire hydrant with chains and yellow markings.\"\n    },\n    \"traffic_cones\": {\n      \"count\": 4,\n      \"location\": \"left, background\",\n      \"color\": [\"orange\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"Orange traffic cones with white stripes.\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Modern building with large windows.\"\n    },\n    \"chains\": {\n      \"count\": 2,\n      \"location\": \"center, foreground\",\n      \"color\": [\"metallic\"],\n      \"size\": \"small\",\n      \"description\": \"Metal chains attached to the fire hydrant.\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"center, foreground\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Lush green grass covering the ground.\"\n    },\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Green trees visible behind the building.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "fire_hydrant": {
-                "count": 1,
-                "location": "center, foreground",
-                "color": [
-                  "red"
-                ],
-                "size": "medium",
-                "description": "Red fire hydrant with chains and yellow markings."
-              },
-              "traffic_cones": {
-                "count": 4,
-                "location": "left, background",
-                "color": [
-                  "orange",
-                  "white"
-                ],
-                "size": "small",
-                "description": "Orange traffic cones with white stripes."
-              },
-              "building": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "Modern building with large windows."
-              },
-              "chains": {
-                "count": 2,
-                "location": "center, foreground",
-                "color": [
-                  "metallic"
-                ],
-                "size": "small",
-                "description": "Metal chains attached to the fire hydrant."
-              }
-            },
-            "natural": {
-              "grass": {
-                "count": 1,
-                "location": "center, foreground",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "Lush green grass covering the ground."
-              },
-              "trees": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "Green trees visible behind the building."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 327,
-            "total_tokens": 813
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12312.052211,
-            "prompt_eval_duration_ms": 134.4662,
-            "generation_duration_ms": 12136.719366,
-            "load_duration_ms": 38.426435,
-            "tokens_per_second": 26.94303049603858
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3094,
-        "total_time_ms": 55950.052372,
-        "average_speed": 26.87572333608737
       }
     },
     {

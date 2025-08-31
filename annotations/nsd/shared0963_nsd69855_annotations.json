@@ -7,6 +7,407 @@
   "timestamp": "2025-08-31T00:33:34.436249+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a vibrant scene of a group of motorcyclists riding down a tree-lined street on a sunny day. The setting is urban, with buildings lining the street on the right, featuring a mix of architectural styles, including what appears to be a row of townhouses. The street is moderately busy with cars, some of which are visible in the foreground and background, adding a sense of depth to the composition. The motorcyclists, clad in dark jackets and helmets, are the focal point, riding in a single file, suggesting a group ride or a parade. The motorcycles, varying in model and color, add a dynamic element to the image. The lighting is bright and natural, indicative of a clear day, casting soft shadows on the road and highlighting the green foliage of the trees. The overall color palette is dominated by the greens of the trees, the dark tones of the motorcyclists' gear, and the neutral colors of the buildings and cars, creating a balanced and visually appealing composition. The image conveys a sense of movement and community, with the motorcyclists moving towards the viewer, drawing the eye along the street.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 231,
+            "total_tokens": 528
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1782.344065,
+            "prompt_eval_duration_ms": 79.616032,
+            "generation_duration_ms": 1661.550988,
+            "load_duration_ms": 38.689262,
+            "tokens_per_second": 139.02672964496472
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, the viewer's attention is drawn to a group of motorcyclists riding in a line down a tree-lined street. The riders are dressed in protective gear, including helmets and jackets, and their motorcycles, varying in style and color, are prominently featured. The lead motorcycle has a large windshield, and the riders appear to be moving at a moderate speed, suggesting a casual ride or a group outing. The motorcycles' chrome and the riders' gear reflect the sunlight, adding a dynamic element to the scene. The background consists of a street lined with mature trees, providing a natural canopy over the road. Beyond the trees, the urban setting becomes more apparent with buildings of varying heights and a clear sky above, indicating a pleasant day. The trees and buildings create a sense of depth, framing the motorcyclists and giving context to their location. The overall composition suggests a harmonious blend of nature and urban life, with the motorcyclists as the focal point, moving through the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 201,
+            "total_tokens": 504
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1532.026053,
+            "prompt_eval_duration_ms": 30.379564,
+            "generation_duration_ms": 1457.926037,
+            "load_duration_ms": 41.158908,
+            "tokens_per_second": 137.86707617459197
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a group of motorcyclists, clad in protective gear and helmets, are riding in a line down a tree-lined street. They are navigating through traffic, with cars and other vehicles visible in the background, indicating a shared road space. The motorcyclists are focused on the road ahead, suggesting they are engaged in the act of riding. The trees provide a natural canopy, adding a serene backdrop to the urban setting. The interaction between the motorcyclists and the environment is dynamic, as they move through the street, while the cars and other vehicles are stationary or moving in the opposite direction, creating a sense of movement and flow in the scene. The overall atmosphere is one of a typical day in a city where different modes of transportation coexist.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 155,
+            "total_tokens": 461
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1193.038281,
+            "prompt_eval_duration_ms": 30.511461,
+            "generation_duration_ms": 1117.018289,
+            "load_duration_ms": 41.992705,
+            "tokens_per_second": 138.76227589680943
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of camaraderie and adventure, suggesting a positive and exhilarating mood. The group of motorcyclists, all wearing helmets and riding in close formation, conveys a strong sense of unity and shared purpose, as if they are on a journey together. The sunny day and the lush green trees lining the street add to the uplifting atmosphere, creating a feeling of optimism and freedom. The presence of other vehicles and pedestrians in the background, though not the main focus, adds a layer of normalcy and everyday life, grounding the scene in a relatable context. The overall tone is decidedly positive, as the image captures a moment of shared experience and the thrill of riding together. The visual elements, such as the bright sunlight, the vibrant greenery, and the sense of movement and direction, all contribute to a feeling of positivity and excitement.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 175,
+            "total_tokens": 483
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1335.645353,
+            "prompt_eval_duration_ms": 30.50705,
+            "generation_duration_ms": 1264.572725,
+            "load_duration_ms": 37.548401,
+            "tokens_per_second": 138.38666336884657
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 5,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"motorcycle riders wearing helmets\"\n    }\n  },\n  \"man-made\": {\n    \"motorcycle\": {\n      \"count\": 5,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"silver\"],\n      \"size\": \"medium\",\n      \"description\": \"motorcycles with riders\"\n    },\n    \"car\": {\n      \"count\": 4,\n      \"location\": \"left\",\n      \"color\": [\"black\", \"silver\"],\n      \"size\": \"medium\",\n      \"description\": \"cars parked or moving on the street\"\n    },\n    \"traffic_light\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"red\", \"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"traffic lights at an intersection\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"row of buildings with windows\"\n    },\n    \"sign\": {\n      \"count\": 3,\n      \"location\": \"left\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"advertising signs on a pole\"\n    },\n    \"streetlight\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"streetlight on a pole\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 6,\n      \"location\": \"center\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"trees lining the street\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear sky above the street\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 5,
+                "location": "center",
+                "color": [
+                  "black",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "motorcycle riders wearing helmets"
+              }
+            },
+            "man-made": {
+              "motorcycle": {
+                "count": 5,
+                "location": "center",
+                "color": [
+                  "black",
+                  "silver"
+                ],
+                "size": "medium",
+                "description": "motorcycles with riders"
+              },
+              "car": {
+                "count": 4,
+                "location": "left",
+                "color": [
+                  "black",
+                  "silver"
+                ],
+                "size": "medium",
+                "description": "cars parked or moving on the street"
+              },
+              "traffic_light": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "red",
+                  "yellow"
+                ],
+                "size": "small",
+                "description": "traffic lights at an intersection"
+              },
+              "building": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "row of buildings with windows"
+              },
+              "sign": {
+                "count": 3,
+                "location": "left",
+                "color": [
+                  "blue",
+                  "white"
+                ],
+                "size": "small",
+                "description": "advertising signs on a pole"
+              },
+              "streetlight": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "streetlight on a pole"
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 6,
+                "location": "center",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "trees lining the street"
+              },
+              "sky": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "clear sky above the street"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 462,
+            "total_tokens": 948
+          },
+          "performance_metrics": {
+            "total_duration_ms": 3399.0297,
+            "prompt_eval_duration_ms": 44.332868,
+            "generation_duration_ms": 3312.58193,
+            "load_duration_ms": 39.330736,
+            "tokens_per_second": 139.46824856344006
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2924,
+        "total_time_ms": 9242.083451999999,
+        "average_speed": 138.70219872973055
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a bustling urban street scene, likely in a European city, given the architecture and road signs. The setting is daytime, with clear skies and ample natural light illuminating the scene. The main elements include a group of motorcyclists riding in a line, wearing helmets and protective gear. The motorcycles vary in design, with some featuring windshield visors, and they are positioned in the foreground, drawing immediate attention. The riders are wearing colorful helmets, including shades of white, purple, and black, adding vibrancy to the composition.\n\nIn the background, the street is lined with trees, which provide a touch of greenery against the urban backdrop. The trees are lush and leafy, suggesting the photo was taken during spring or summer. The road is flanked by buildings, including residential or commercial structures with visible windows and doors. There are also vehicles, such as cars, parked along the sides of the road, and traffic lights and street signs are visible, indicating a well-organized urban environment.\n\nThe lighting is natural and soft, with no harsh shadows, suggesting the photo was taken either in the morning or late afternoon. The overall composition balances the dynamic movement of the motorcyclists in the foreground with the static, orderly background, creating a contrast between the energy of the riders and the calmness of the cityscape. The image captures a moment of urban life, blending human activity with the structured environment of the city.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 289,
+            "total_tokens": 586
+          },
+          "performance_metrics": {
+            "total_duration_ms": 14299.089185,
+            "prompt_eval_duration_ms": 3489.194812,
+            "generation_duration_ms": 10768.653449,
+            "load_duration_ms": 38.641889,
+            "tokens_per_second": 26.83715298005408
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the closest elements to the viewer are a group of motorcyclists riding in a line on a city street. The riders are wearing helmets and protective gear, with the lead motorcycle prominently featuring a large windshield. The motorcycles are modern, with visible headlights and chrome details, suggesting a sense of motion and urban commuting. The riders appear to be part of a group, possibly a motorcycle club or a group ride, given their coordinated presence.\n\nIn the background, the setting reveals a typical urban environment. The street is lined with trees, providing a touch of greenery amidst the concrete surroundings. On the left side, there are tall streetlights and banners or posters attached to the poles, adding a sense of city life and advertising. Buildings with a mix of residential and commercial styles are visible further back, indicating a densely populated area. The road is shared with other vehicles, including cars, which are parked or moving in the opposite direction, suggesting a busy street. The distant background includes a hazy horizon, possibly indicating a river or open space beyond the urban area.\n\nThe foreground and background elements relate to each other by creating a layered composition that emphasizes depth and context. The motorcyclists in the foreground draw immediate attention, while the background provides the setting and atmosphere of a bustling city street. The trees and buildings in the mid-ground serve as a transition, connecting the dynamic foreground activity with the broader urban environment. This layered arrangement creates a narrative of movement within a structured, everyday urban scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 304,
+            "total_tokens": 607
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11491.449837,
+            "prompt_eval_duration_ms": 76.968973,
+            "generation_duration_ms": 11373.583641,
+            "load_duration_ms": 38.40992,
+            "tokens_per_second": 26.72860283931331
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a group of motorcyclists riding in a line down a city street, showcasing a sense of camaraderie and coordination. The riders are wearing full protective gear, including helmets, jackets, and gloves, indicating a focus on safety. The lead rider is prominently visible, guiding the group, while the others follow closely behind, maintaining a tight formation. This suggests a sense of unity and shared purpose among the riders, possibly part of a motorcycle club or group ride.\n\nThe motorbikes are diverse in style and color, ranging from classic cruiser designs to sportier models, reflecting individual preferences and personalities. The riders appear to be engaged in a leisurely ride, as their relaxed postures and the casual nature of the scene suggest they are enjoying the experience rather than racing.\n\nThe surrounding environment is urban, with trees lining the street, providing a contrast between the natural elements and the cityscape. Cars are visible in the background, indicating that the motorcyclists are navigating through regular traffic. The presence of traffic lights and street signs further emphasizes the urban setting. The riders interact with the environment by adhering to traffic rules and navigating through the shared road space with other vehicles, demonstrating a respectful coexistence.\n\nOverall, the image captures a moment of collective enjoyment and shared adventure, highlighting the bond among the riders and their interaction with the urban environment. The riders' coordinated movement and protective gear underscore a sense of responsibility and mutual support, while the city backdrop adds a dynamic and relatable context to their journey.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 304,
+            "total_tokens": 610
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11435.261007,
+            "prompt_eval_duration_ms": 75.977291,
+            "generation_duration_ms": 11317.841781,
+            "load_duration_ms": 38.868581,
+            "tokens_per_second": 26.860244725310142
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a sense of camaraderie, adventure, and freedom, evoking feelings of excitement and unity among the motorcycle riders. The riders, clad in helmets and riding together in a group, suggest a shared purpose or journey, which fosters a positive and collective mood. The bright, sunny day with clear skies and lush green trees adds to the overall uplifting tone, reinforcing a sense of vibrancy and vitality. The urban setting, with cars and buildings in the background, provides a contrast to the open road ahead, hinting at the riders' escape from the routine of city life and their pursuit of adventure. The motorcycles themselves, with their sleek designs and prominent headlights, symbolize power and freedom, further enhancing the image's dynamic and adventurous feel. The riders' forward-facing posture and the way they are grouped together suggest a sense of purpose and determination, contributing to the image's positive and empowering atmosphere. Overall, the visual elements\u2014such as the bright lighting, greenery, and the riders' coordinated movement\u2014work together to create a mood that is predominantly positive and inspiring.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 220,
+            "total_tokens": 528
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8342.882674,
+            "prompt_eval_duration_ms": 77.094267,
+            "generation_duration_ms": 8221.878871,
+            "load_duration_ms": 40.651404,
+            "tokens_per_second": 26.75787413701488
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 4,\n      \"location\": \"center, foreground\",\n      \"color\": [\"black\", \"silver\", \"red\"],\n      \"size\": \"medium\",\n      \"description\": \"Motorcyclists wearing helmets and protective gear, riding motorcycles.\"\n    }\n  },\n  \"man-made\": {\n    \"motorcycle\": {\n      \"count\": 4,\n      \"location\": \"center, foreground\",\n      \"color\": [\"black\", \"silver\", \"blue\"],\n      \"size\": \"medium\",\n      \"description\": \"Motorcycles with riders, some with windshield.\"\n    },\n    \"car\": {\n      \"count\": 5,\n      \"location\": \"left, center, background\",\n      \"color\": [\"black\", \"white\", \"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Cars parked or moving along the street.\"\n    },\n    \"streetlight\": {\n      \"count\": 1,\n      \"location\": \"left, top\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Tall streetlight pole with multiple lights.\"\n    },\n    \"building\": {\n      \"count\": 2,\n      \"location\": \"right, background\",\n      \"color\": [\"white\", \"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Residential or commercial buildings along the street.\"\n    },\n    \"traffic light\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"red\"],\n      \"size\": \"small\",\n      \"description\": \"Traffic signal showing red light.\"\n    },\n    \"billboard\": {\n      \"count\": 2,\n      \"location\": \"left, middle\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Large billboards with images and text.\"\n    },\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Metal fence along the sidewalk.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 2,\n      \"location\": \"right, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Tall trees with green leaves lining the street.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 4,
+                "location": "center, foreground",
+                "color": [
+                  "black",
+                  "silver",
+                  "red"
+                ],
+                "size": "medium",
+                "description": "Motorcyclists wearing helmets and protective gear, riding motorcycles."
+              }
+            },
+            "man-made": {
+              "motorcycle": {
+                "count": 4,
+                "location": "center, foreground",
+                "color": [
+                  "black",
+                  "silver",
+                  "blue"
+                ],
+                "size": "medium",
+                "description": "Motorcycles with riders, some with windshield."
+              },
+              "car": {
+                "count": 5,
+                "location": "left, center, background",
+                "color": [
+                  "black",
+                  "white",
+                  "silver"
+                ],
+                "size": "small",
+                "description": "Cars parked or moving along the street."
+              },
+              "streetlight": {
+                "count": 1,
+                "location": "left, top",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "Tall streetlight pole with multiple lights."
+              },
+              "building": {
+                "count": 2,
+                "location": "right, background",
+                "color": [
+                  "white",
+                  "gray"
+                ],
+                "size": "large",
+                "description": "Residential or commercial buildings along the street."
+              },
+              "traffic light": {
+                "count": 1,
+                "location": "left, middle",
+                "color": [
+                  "red"
+                ],
+                "size": "small",
+                "description": "Traffic signal showing red light."
+              },
+              "billboard": {
+                "count": 2,
+                "location": "left, middle",
+                "color": [
+                  "blue",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "Large billboards with images and text."
+              },
+              "fence": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "Metal fence along the sidewalk."
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 2,
+                "location": "right, middle",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "Tall trees with green leaves lining the street."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 515,
+            "total_tokens": 1001
+          },
+          "performance_metrics": {
+            "total_duration_ms": 19279.600744,
+            "prompt_eval_duration_ms": 139.81508,
+            "generation_duration_ms": 19095.381698,
+            "load_duration_ms": 40.894624,
+            "tokens_per_second": 26.969871990248812
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3332,
+        "total_time_ms": 64848.283446999994,
+        "average_speed": 26.830749334388248
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -617,407 +1018,6 @@
         "total_tokens": 3086,
         "total_time_ms": 31861.008088999995,
         "average_speed": 42.21270168763084
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a vibrant scene of a group of motorcyclists riding down a tree-lined street on a sunny day. The setting is urban, with buildings lining the street on the right, featuring a mix of architectural styles, including what appears to be a row of townhouses. The street is moderately busy with cars, some of which are visible in the foreground and background, adding a sense of depth to the composition. The motorcyclists, clad in dark jackets and helmets, are the focal point, riding in a single file, suggesting a group ride or a parade. The motorcycles, varying in model and color, add a dynamic element to the image. The lighting is bright and natural, indicative of a clear day, casting soft shadows on the road and highlighting the green foliage of the trees. The overall color palette is dominated by the greens of the trees, the dark tones of the motorcyclists' gear, and the neutral colors of the buildings and cars, creating a balanced and visually appealing composition. The image conveys a sense of movement and community, with the motorcyclists moving towards the viewer, drawing the eye along the street.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 231,
-            "total_tokens": 528
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1782.344065,
-            "prompt_eval_duration_ms": 79.616032,
-            "generation_duration_ms": 1661.550988,
-            "load_duration_ms": 38.689262,
-            "tokens_per_second": 139.02672964496472
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, the viewer's attention is drawn to a group of motorcyclists riding in a line down a tree-lined street. The riders are dressed in protective gear, including helmets and jackets, and their motorcycles, varying in style and color, are prominently featured. The lead motorcycle has a large windshield, and the riders appear to be moving at a moderate speed, suggesting a casual ride or a group outing. The motorcycles' chrome and the riders' gear reflect the sunlight, adding a dynamic element to the scene. The background consists of a street lined with mature trees, providing a natural canopy over the road. Beyond the trees, the urban setting becomes more apparent with buildings of varying heights and a clear sky above, indicating a pleasant day. The trees and buildings create a sense of depth, framing the motorcyclists and giving context to their location. The overall composition suggests a harmonious blend of nature and urban life, with the motorcyclists as the focal point, moving through the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 201,
-            "total_tokens": 504
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1532.026053,
-            "prompt_eval_duration_ms": 30.379564,
-            "generation_duration_ms": 1457.926037,
-            "load_duration_ms": 41.158908,
-            "tokens_per_second": 137.86707617459197
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a group of motorcyclists, clad in protective gear and helmets, are riding in a line down a tree-lined street. They are navigating through traffic, with cars and other vehicles visible in the background, indicating a shared road space. The motorcyclists are focused on the road ahead, suggesting they are engaged in the act of riding. The trees provide a natural canopy, adding a serene backdrop to the urban setting. The interaction between the motorcyclists and the environment is dynamic, as they move through the street, while the cars and other vehicles are stationary or moving in the opposite direction, creating a sense of movement and flow in the scene. The overall atmosphere is one of a typical day in a city where different modes of transportation coexist.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 155,
-            "total_tokens": 461
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1193.038281,
-            "prompt_eval_duration_ms": 30.511461,
-            "generation_duration_ms": 1117.018289,
-            "load_duration_ms": 41.992705,
-            "tokens_per_second": 138.76227589680943
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of camaraderie and adventure, suggesting a positive and exhilarating mood. The group of motorcyclists, all wearing helmets and riding in close formation, conveys a strong sense of unity and shared purpose, as if they are on a journey together. The sunny day and the lush green trees lining the street add to the uplifting atmosphere, creating a feeling of optimism and freedom. The presence of other vehicles and pedestrians in the background, though not the main focus, adds a layer of normalcy and everyday life, grounding the scene in a relatable context. The overall tone is decidedly positive, as the image captures a moment of shared experience and the thrill of riding together. The visual elements, such as the bright sunlight, the vibrant greenery, and the sense of movement and direction, all contribute to a feeling of positivity and excitement.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 175,
-            "total_tokens": 483
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1335.645353,
-            "prompt_eval_duration_ms": 30.50705,
-            "generation_duration_ms": 1264.572725,
-            "load_duration_ms": 37.548401,
-            "tokens_per_second": 138.38666336884657
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 5,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"motorcycle riders wearing helmets\"\n    }\n  },\n  \"man-made\": {\n    \"motorcycle\": {\n      \"count\": 5,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"silver\"],\n      \"size\": \"medium\",\n      \"description\": \"motorcycles with riders\"\n    },\n    \"car\": {\n      \"count\": 4,\n      \"location\": \"left\",\n      \"color\": [\"black\", \"silver\"],\n      \"size\": \"medium\",\n      \"description\": \"cars parked or moving on the street\"\n    },\n    \"traffic_light\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"red\", \"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"traffic lights at an intersection\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"row of buildings with windows\"\n    },\n    \"sign\": {\n      \"count\": 3,\n      \"location\": \"left\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"advertising signs on a pole\"\n    },\n    \"streetlight\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"streetlight on a pole\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 6,\n      \"location\": \"center\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"trees lining the street\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear sky above the street\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 5,
-                "location": "center",
-                "color": [
-                  "black",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "motorcycle riders wearing helmets"
-              }
-            },
-            "man-made": {
-              "motorcycle": {
-                "count": 5,
-                "location": "center",
-                "color": [
-                  "black",
-                  "silver"
-                ],
-                "size": "medium",
-                "description": "motorcycles with riders"
-              },
-              "car": {
-                "count": 4,
-                "location": "left",
-                "color": [
-                  "black",
-                  "silver"
-                ],
-                "size": "medium",
-                "description": "cars parked or moving on the street"
-              },
-              "traffic_light": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "red",
-                  "yellow"
-                ],
-                "size": "small",
-                "description": "traffic lights at an intersection"
-              },
-              "building": {
-                "count": 1,
-                "location": "right",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "row of buildings with windows"
-              },
-              "sign": {
-                "count": 3,
-                "location": "left",
-                "color": [
-                  "blue",
-                  "white"
-                ],
-                "size": "small",
-                "description": "advertising signs on a pole"
-              },
-              "streetlight": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "streetlight on a pole"
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 6,
-                "location": "center",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "trees lining the street"
-              },
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "clear sky above the street"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 462,
-            "total_tokens": 948
-          },
-          "performance_metrics": {
-            "total_duration_ms": 3399.0297,
-            "prompt_eval_duration_ms": 44.332868,
-            "generation_duration_ms": 3312.58193,
-            "load_duration_ms": 39.330736,
-            "tokens_per_second": 139.46824856344006
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2924,
-        "total_time_ms": 9242.083451999999,
-        "average_speed": 138.70219872973055
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a bustling urban street scene, likely in a European city, given the architecture and road signs. The setting is daytime, with clear skies and ample natural light illuminating the scene. The main elements include a group of motorcyclists riding in a line, wearing helmets and protective gear. The motorcycles vary in design, with some featuring windshield visors, and they are positioned in the foreground, drawing immediate attention. The riders are wearing colorful helmets, including shades of white, purple, and black, adding vibrancy to the composition.\n\nIn the background, the street is lined with trees, which provide a touch of greenery against the urban backdrop. The trees are lush and leafy, suggesting the photo was taken during spring or summer. The road is flanked by buildings, including residential or commercial structures with visible windows and doors. There are also vehicles, such as cars, parked along the sides of the road, and traffic lights and street signs are visible, indicating a well-organized urban environment.\n\nThe lighting is natural and soft, with no harsh shadows, suggesting the photo was taken either in the morning or late afternoon. The overall composition balances the dynamic movement of the motorcyclists in the foreground with the static, orderly background, creating a contrast between the energy of the riders and the calmness of the cityscape. The image captures a moment of urban life, blending human activity with the structured environment of the city.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 289,
-            "total_tokens": 586
-          },
-          "performance_metrics": {
-            "total_duration_ms": 14299.089185,
-            "prompt_eval_duration_ms": 3489.194812,
-            "generation_duration_ms": 10768.653449,
-            "load_duration_ms": 38.641889,
-            "tokens_per_second": 26.83715298005408
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the closest elements to the viewer are a group of motorcyclists riding in a line on a city street. The riders are wearing helmets and protective gear, with the lead motorcycle prominently featuring a large windshield. The motorcycles are modern, with visible headlights and chrome details, suggesting a sense of motion and urban commuting. The riders appear to be part of a group, possibly a motorcycle club or a group ride, given their coordinated presence.\n\nIn the background, the setting reveals a typical urban environment. The street is lined with trees, providing a touch of greenery amidst the concrete surroundings. On the left side, there are tall streetlights and banners or posters attached to the poles, adding a sense of city life and advertising. Buildings with a mix of residential and commercial styles are visible further back, indicating a densely populated area. The road is shared with other vehicles, including cars, which are parked or moving in the opposite direction, suggesting a busy street. The distant background includes a hazy horizon, possibly indicating a river or open space beyond the urban area.\n\nThe foreground and background elements relate to each other by creating a layered composition that emphasizes depth and context. The motorcyclists in the foreground draw immediate attention, while the background provides the setting and atmosphere of a bustling city street. The trees and buildings in the mid-ground serve as a transition, connecting the dynamic foreground activity with the broader urban environment. This layered arrangement creates a narrative of movement within a structured, everyday urban scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 304,
-            "total_tokens": 607
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11491.449837,
-            "prompt_eval_duration_ms": 76.968973,
-            "generation_duration_ms": 11373.583641,
-            "load_duration_ms": 38.40992,
-            "tokens_per_second": 26.72860283931331
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a group of motorcyclists riding in a line down a city street, showcasing a sense of camaraderie and coordination. The riders are wearing full protective gear, including helmets, jackets, and gloves, indicating a focus on safety. The lead rider is prominently visible, guiding the group, while the others follow closely behind, maintaining a tight formation. This suggests a sense of unity and shared purpose among the riders, possibly part of a motorcycle club or group ride.\n\nThe motorbikes are diverse in style and color, ranging from classic cruiser designs to sportier models, reflecting individual preferences and personalities. The riders appear to be engaged in a leisurely ride, as their relaxed postures and the casual nature of the scene suggest they are enjoying the experience rather than racing.\n\nThe surrounding environment is urban, with trees lining the street, providing a contrast between the natural elements and the cityscape. Cars are visible in the background, indicating that the motorcyclists are navigating through regular traffic. The presence of traffic lights and street signs further emphasizes the urban setting. The riders interact with the environment by adhering to traffic rules and navigating through the shared road space with other vehicles, demonstrating a respectful coexistence.\n\nOverall, the image captures a moment of collective enjoyment and shared adventure, highlighting the bond among the riders and their interaction with the urban environment. The riders' coordinated movement and protective gear underscore a sense of responsibility and mutual support, while the city backdrop adds a dynamic and relatable context to their journey.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 304,
-            "total_tokens": 610
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11435.261007,
-            "prompt_eval_duration_ms": 75.977291,
-            "generation_duration_ms": 11317.841781,
-            "load_duration_ms": 38.868581,
-            "tokens_per_second": 26.860244725310142
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a sense of camaraderie, adventure, and freedom, evoking feelings of excitement and unity among the motorcycle riders. The riders, clad in helmets and riding together in a group, suggest a shared purpose or journey, which fosters a positive and collective mood. The bright, sunny day with clear skies and lush green trees adds to the overall uplifting tone, reinforcing a sense of vibrancy and vitality. The urban setting, with cars and buildings in the background, provides a contrast to the open road ahead, hinting at the riders' escape from the routine of city life and their pursuit of adventure. The motorcycles themselves, with their sleek designs and prominent headlights, symbolize power and freedom, further enhancing the image's dynamic and adventurous feel. The riders' forward-facing posture and the way they are grouped together suggest a sense of purpose and determination, contributing to the image's positive and empowering atmosphere. Overall, the visual elements\u2014such as the bright lighting, greenery, and the riders' coordinated movement\u2014work together to create a mood that is predominantly positive and inspiring.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 220,
-            "total_tokens": 528
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8342.882674,
-            "prompt_eval_duration_ms": 77.094267,
-            "generation_duration_ms": 8221.878871,
-            "load_duration_ms": 40.651404,
-            "tokens_per_second": 26.75787413701488
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 4,\n      \"location\": \"center, foreground\",\n      \"color\": [\"black\", \"silver\", \"red\"],\n      \"size\": \"medium\",\n      \"description\": \"Motorcyclists wearing helmets and protective gear, riding motorcycles.\"\n    }\n  },\n  \"man-made\": {\n    \"motorcycle\": {\n      \"count\": 4,\n      \"location\": \"center, foreground\",\n      \"color\": [\"black\", \"silver\", \"blue\"],\n      \"size\": \"medium\",\n      \"description\": \"Motorcycles with riders, some with windshield.\"\n    },\n    \"car\": {\n      \"count\": 5,\n      \"location\": \"left, center, background\",\n      \"color\": [\"black\", \"white\", \"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Cars parked or moving along the street.\"\n    },\n    \"streetlight\": {\n      \"count\": 1,\n      \"location\": \"left, top\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Tall streetlight pole with multiple lights.\"\n    },\n    \"building\": {\n      \"count\": 2,\n      \"location\": \"right, background\",\n      \"color\": [\"white\", \"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Residential or commercial buildings along the street.\"\n    },\n    \"traffic light\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"red\"],\n      \"size\": \"small\",\n      \"description\": \"Traffic signal showing red light.\"\n    },\n    \"billboard\": {\n      \"count\": 2,\n      \"location\": \"left, middle\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Large billboards with images and text.\"\n    },\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Metal fence along the sidewalk.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 2,\n      \"location\": \"right, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Tall trees with green leaves lining the street.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 4,
-                "location": "center, foreground",
-                "color": [
-                  "black",
-                  "silver",
-                  "red"
-                ],
-                "size": "medium",
-                "description": "Motorcyclists wearing helmets and protective gear, riding motorcycles."
-              }
-            },
-            "man-made": {
-              "motorcycle": {
-                "count": 4,
-                "location": "center, foreground",
-                "color": [
-                  "black",
-                  "silver",
-                  "blue"
-                ],
-                "size": "medium",
-                "description": "Motorcycles with riders, some with windshield."
-              },
-              "car": {
-                "count": 5,
-                "location": "left, center, background",
-                "color": [
-                  "black",
-                  "white",
-                  "silver"
-                ],
-                "size": "small",
-                "description": "Cars parked or moving along the street."
-              },
-              "streetlight": {
-                "count": 1,
-                "location": "left, top",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "Tall streetlight pole with multiple lights."
-              },
-              "building": {
-                "count": 2,
-                "location": "right, background",
-                "color": [
-                  "white",
-                  "gray"
-                ],
-                "size": "large",
-                "description": "Residential or commercial buildings along the street."
-              },
-              "traffic light": {
-                "count": 1,
-                "location": "left, middle",
-                "color": [
-                  "red"
-                ],
-                "size": "small",
-                "description": "Traffic signal showing red light."
-              },
-              "billboard": {
-                "count": 2,
-                "location": "left, middle",
-                "color": [
-                  "blue",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "Large billboards with images and text."
-              },
-              "fence": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "Metal fence along the sidewalk."
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 2,
-                "location": "right, middle",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "Tall trees with green leaves lining the street."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 515,
-            "total_tokens": 1001
-          },
-          "performance_metrics": {
-            "total_duration_ms": 19279.600744,
-            "prompt_eval_duration_ms": 139.81508,
-            "generation_duration_ms": 19095.381698,
-            "load_duration_ms": 40.894624,
-            "tokens_per_second": 26.969871990248812
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3332,
-        "total_time_ms": 64848.283446999994,
-        "average_speed": 26.830749334388248
       }
     },
     {

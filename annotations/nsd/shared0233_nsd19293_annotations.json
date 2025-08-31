@@ -7,6 +7,335 @@
   "timestamp": "2025-08-30T17:50:17.928070+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a small, neatly organized bathroom with a minimalist design. The walls are painted a calming light blue, creating a serene atmosphere. The flooring is covered with small, square tiles in a light beige color, which complements the blue walls and adds a subtle texture to the space. A white pedestal sink with a modern chrome faucet stands prominently against the wall, its clean lines and simple design adding to the room's contemporary feel. To the left of the sink, a white toilet with a sleek, modern design is positioned, its lid closed. Above the toilet, a small tissue box with a floral pattern sits on the tank, adding a touch of color and personality to the otherwise neutral palette. The lighting in the room is soft and even, likely from an overhead source, which enhances the brightness and clarity of the space. The overall composition is simple and functional, with each element thoughtfully placed to maximize the use of the limited space, creating a tidy and inviting bathroom environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 198,
+            "total_tokens": 495
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1539.052238,
+            "prompt_eval_duration_ms": 79.466456,
+            "generation_duration_ms": 1418.426965,
+            "load_duration_ms": 38.799006,
+            "tokens_per_second": 139.5912548800142
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the closest elements to the viewer are the toilet and the pedestal sink. The toilet is positioned on the left side, with its lid closed, and the pedestal sink is on the right, featuring a single faucet and a white basin. The floor beneath these fixtures is covered with small, square tiles in a light beige color, which contrasts subtly with the pale blue walls that enclose the space. The background elements, which are more distant and form the setting of the image, consist of the same pale blue walls and the continuation of the floor tiles, creating a seamless and uniform appearance throughout the bathroom. The relationship between the foreground and background elements is one of depth and perspective, with the foreground items providing a sense of scale and the background walls and floor serving as a backdrop that emphasizes the cleanliness and simplicity of the bathroom design.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 172,
+            "total_tokens": 475
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1313.138734,
+            "prompt_eval_duration_ms": 31.016674,
+            "generation_duration_ms": 1241.120212,
+            "load_duration_ms": 38.517632,
+            "tokens_per_second": 138.58448064658543
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a small bathroom with a toilet and a pedestal sink against a light blue wall. The toilet is positioned on the left side of the frame, with a roll of toilet paper and a tissue box placed on top of it. The tissue box has a decorative cover with a green and white pattern. The pedestal sink is on the right, with a faucet and two handles for hot and cold water. The floor is covered with small, square tiles in a light beige color. There are no people or animals present in the image. The objects are stationary, with no interaction between them. The toilet paper and tissue box are placed on top of the toilet, suggesting a common bathroom setup where these items are kept for convenience. The overall scene is a typical bathroom setup with no actions or interactions taking place.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 162,
+            "total_tokens": 468
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1244.202791,
+            "prompt_eval_duration_ms": 29.731778,
+            "generation_duration_ms": 1173.508939,
+            "load_duration_ms": 38.667643,
+            "tokens_per_second": 138.0475210849672
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of simplicity and cleanliness, contributing to a neutral to slightly positive mood. The bright blue walls and the white fixtures create a fresh and airy atmosphere, which can be associated with feelings of calmness and order. The small size of the bathroom, however, might evoke a sense of claustrophobia or confinement in some viewers, depending on their personal comfort with small spaces. The presence of the tissue box and toilet paper roll adds a touch of practicality and everyday life, which can make the scene feel relatable and grounded. The mosaic tile floor, while not overly decorative, adds a subtle texture that breaks the monotony of the white fixtures and blue walls, preventing the scene from feeling too sterile or cold. Overall, the image strikes a balance between being functional and aesthetically pleasing, evoking a sense of practicality and tranquility.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 176,
+            "total_tokens": 484
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1344.054041,
+            "prompt_eval_duration_ms": 30.525329,
+            "generation_duration_ms": 1273.401479,
+            "load_duration_ms": 37.946049,
+            "tokens_per_second": 138.2124984951427
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"toilet\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"standard toilet with tank and seat\"\n    },\n    \"sink\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"pedestal sink with faucet\"\n    },\n    \"tissue_box\": {\n      \"count\": 1,\n      \"location\": \"top left\",\n      \"color\": [\"green\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"tissue box with floral pattern\"\n    },\n    \"toilet_paper\": {\n      \"count\": 1,\n      \"location\": \"top left\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"roll of toilet paper on top of tissue box\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "toilet": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "standard toilet with tank and seat"
+              },
+              "sink": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "pedestal sink with faucet"
+              },
+              "tissue_box": {
+                "count": 1,
+                "location": "top left",
+                "color": [
+                  "green",
+                  "white"
+                ],
+                "size": "small",
+                "description": "tissue box with floral pattern"
+              },
+              "toilet_paper": {
+                "count": 1,
+                "location": "top left",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "roll of toilet paper on top of tissue box"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 216,
+            "total_tokens": 702
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1619.650857,
+            "prompt_eval_duration_ms": 43.292871,
+            "generation_duration_ms": 1534.699755,
+            "load_duration_ms": 39.374526,
+            "tokens_per_second": 140.7441418403041
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2624,
+        "total_time_ms": 7060.098661,
+        "average_speed": 139.0359793894027
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a small, clean, and well-lit bathroom with a minimalist and functional design. The setting appears to be a compact space, likely in a residential home. The main elements include a white pedestal sink with a chrome faucet, a matching white toilet, and a small shelf or caddy on top of the toilet tank holding a box of tissues and a roll of toilet paper. The walls are painted a soothing light blue, which adds a calming and airy feel to the space. The floor is covered with small, square, beige and white mosaic tiles, creating a subtle pattern that complements the overall color scheme. The lighting is bright and even, likely from an overhead source, illuminating the space without harsh shadows and enhancing the cleanliness and simplicity of the room. The composition is symmetrical, with the sink and toilet positioned centrally and aligned, contributing to a balanced and organized appearance. The overall aesthetic is modern and uncluttered, with a focus on functionality and a fresh, inviting atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 203,
+            "total_tokens": 500
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11288.894223,
+            "prompt_eval_duration_ms": 3689.891258,
+            "generation_duration_ms": 7559.026248,
+            "load_duration_ms": 37.8806,
+            "tokens_per_second": 26.855310901150872
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image prominently features a white pedestal sink and a toilet, both positioned side by side. The sink, with its chrome faucet and basin, is centrally located, while the toilet is to the left. The toilet is accompanied by a tissue box and a roll of toilet paper on its tank lid, adding a touch of functionality and everyday use. The floor is covered with small, square, light-colored tiles, which create a clean and organized appearance. The sink and toilet are the most immediate elements, drawing the viewer's attention due to their size and central placement.\n\nIn the background, the setting is defined by light blue walls that provide a calming and cohesive aesthetic. The walls are plain, with no visible decorations, which emphasizes the simplicity and cleanliness of the space. The corner of the room is visible, indicating a compact and well-organized bathroom layout. The walls and floor tiles work together to create a harmonious and functional environment, with the light blue walls complementing the neutral tones of the fixtures and tiles. The overall design is minimalistic, with each element serving a practical purpose while contributing to the overall aesthetic. The foreground and background elements are closely related, as the clean lines and neutral color palette of the fixtures and tiles harmonize with the light blue walls, creating a unified and inviting space.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 264,
+            "total_tokens": 567
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9952.291105,
+            "prompt_eval_duration_ms": 75.253504,
+            "generation_duration_ms": 9834.620671,
+            "load_duration_ms": 40.32538,
+            "tokens_per_second": 26.843943333622857
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a clean and well-organized small bathroom with no people or animals present. The primary objects in the image include a toilet, a pedestal sink, a roll of toilet paper, a tissue box, and a tiled floor. The toilet is positioned on the left side of the image, with a closed lid, and is accompanied by a roll of toilet paper and a tissue box placed on top of the tank lid. The tissue box has a patterned design, adding a touch of color to the otherwise minimalist space. The pedestal sink is located on the right side of the image, featuring a chrome faucet with two handles for hot and cold water. The sink is white, matching the toilet, and is set against a light blue wall, which provides a calming and fresh aesthetic. The floor is covered with small, square, light-colored tiles arranged in a grid pattern, contributing to the clean and modern look of the bathroom.\n\nThere are no visible interactions between the objects since they are inanimate. However, the arrangement suggests a functional and aesthetically pleasing design. The toilet and sink are placed in a way that maximizes space efficiency, while the tissue box and toilet paper are conveniently located for easy access. The light blue walls and neutral-toned tiles create a cohesive and inviting atmosphere, emphasizing cleanliness and simplicity. The overall layout and design elements work together harmoniously to create a practical and visually appealing bathroom space.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 285,
+            "total_tokens": 591
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10752.857769,
+            "prompt_eval_duration_ms": 73.752196,
+            "generation_duration_ms": 10638.719363,
+            "load_duration_ms": 37.985127,
+            "tokens_per_second": 26.788938618983664
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a small, clean, and well-maintained bathroom with a predominantly blue and white color scheme. The mood conveyed is one of calmness, order, and simplicity. The light blue walls create a soothing and airy atmosphere, while the white fixtures and tiles contribute to a sense of cleanliness and sterility. The neatly arranged toilet paper and tissue box on the toilet tank add a touch of organization, reinforcing the overall sense of tidiness. The pedestal sink, with its sleek design and metallic faucet, exudes a modern and minimalist aesthetic, further enhancing the feeling of simplicity and functionality.\n\nThe visual elements that contribute to this emotional atmosphere include the soft, pastel blue walls, which evoke a sense of tranquility and relaxation. The white fixtures and tiles provide a stark contrast, emphasizing cleanliness and purity. The small size of the bathroom, combined with the efficient use of space, suggests practicality and efficiency, which can be comforting and reassuring. The overall tone is positive, as the image portrays a space that is inviting, well-kept, and free from clutter or chaos. The lack of personal touches or decorative elements keeps the focus on the clean and orderly nature of the space, which can evoke feelings of peace and satisfaction. The image does not convey any negative emotions, as it lacks any signs of disarray or discomfort. Overall, the mood is neutral to slightly positive, leaning towards a sense of calm and order.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 287,
+            "total_tokens": 595
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10827.726048,
+            "prompt_eval_duration_ms": 74.350472,
+            "generation_duration_ms": 10710.950413,
+            "load_duration_ms": 40.134042,
+            "tokens_per_second": 26.795007812907514
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"toilet\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Standard white toilet with closed lid\"\n    },\n    \"sink\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Pedestal sink with silver faucet\"\n    },\n    \"toilet paper\": {\n      \"count\": 1,\n      \"location\": \"left, top\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Rolled toilet paper on top of the toilet tank\"\n    },\n    \"tissue box\": {\n      \"count\": 1,\n      \"location\": \"left, top\",\n      \"color\": [\"green\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"Tissue box with a patterned design\"\n    },\n    \"faucet\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Silver faucet on the sink\"\n    },\n    \"tile floor\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"beige\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Mosaic tile floor with small square patterns\"\n    },\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"Light blue painted wall\"\n    },\n    \"door\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Partially visible white door frame\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "toilet": {
+                "count": 1,
+                "location": "left, middle",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "Standard white toilet with closed lid"
+              },
+              "sink": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "Pedestal sink with silver faucet"
+              },
+              "toilet paper": {
+                "count": 1,
+                "location": "left, top",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "Rolled toilet paper on top of the toilet tank"
+              },
+              "tissue box": {
+                "count": 1,
+                "location": "left, top",
+                "color": [
+                  "green",
+                  "white"
+                ],
+                "size": "small",
+                "description": "Tissue box with a patterned design"
+              },
+              "faucet": {
+                "count": 1,
+                "location": "center, top",
+                "color": [
+                  "silver"
+                ],
+                "size": "small",
+                "description": "Silver faucet on the sink"
+              },
+              "tile floor": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "beige",
+                  "white"
+                ],
+                "size": "large",
+                "description": "Mosaic tile floor with small square patterns"
+              },
+              "wall": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "Light blue painted wall"
+              },
+              "door": {
+                "count": 1,
+                "location": "right, middle",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "Partially visible white door frame"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 424,
+            "total_tokens": 910
+          },
+          "performance_metrics": {
+            "total_duration_ms": 15951.221775,
+            "prompt_eval_duration_ms": 142.518758,
+            "generation_duration_ms": 15764.641035,
+            "load_duration_ms": 41.097115,
+            "tokens_per_second": 26.8956330219415
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3163,
+        "total_time_ms": 58772.99092,
+        "average_speed": 26.83576673772128
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -548,335 +877,6 @@
         "total_tokens": 2920,
         "total_time_ms": 28159.370394999998,
         "average_speed": 41.81387547839266
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a small, neatly organized bathroom with a minimalist design. The walls are painted a calming light blue, creating a serene atmosphere. The flooring is covered with small, square tiles in a light beige color, which complements the blue walls and adds a subtle texture to the space. A white pedestal sink with a modern chrome faucet stands prominently against the wall, its clean lines and simple design adding to the room's contemporary feel. To the left of the sink, a white toilet with a sleek, modern design is positioned, its lid closed. Above the toilet, a small tissue box with a floral pattern sits on the tank, adding a touch of color and personality to the otherwise neutral palette. The lighting in the room is soft and even, likely from an overhead source, which enhances the brightness and clarity of the space. The overall composition is simple and functional, with each element thoughtfully placed to maximize the use of the limited space, creating a tidy and inviting bathroom environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 198,
-            "total_tokens": 495
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1539.052238,
-            "prompt_eval_duration_ms": 79.466456,
-            "generation_duration_ms": 1418.426965,
-            "load_duration_ms": 38.799006,
-            "tokens_per_second": 139.5912548800142
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the closest elements to the viewer are the toilet and the pedestal sink. The toilet is positioned on the left side, with its lid closed, and the pedestal sink is on the right, featuring a single faucet and a white basin. The floor beneath these fixtures is covered with small, square tiles in a light beige color, which contrasts subtly with the pale blue walls that enclose the space. The background elements, which are more distant and form the setting of the image, consist of the same pale blue walls and the continuation of the floor tiles, creating a seamless and uniform appearance throughout the bathroom. The relationship between the foreground and background elements is one of depth and perspective, with the foreground items providing a sense of scale and the background walls and floor serving as a backdrop that emphasizes the cleanliness and simplicity of the bathroom design.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 172,
-            "total_tokens": 475
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1313.138734,
-            "prompt_eval_duration_ms": 31.016674,
-            "generation_duration_ms": 1241.120212,
-            "load_duration_ms": 38.517632,
-            "tokens_per_second": 138.58448064658543
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a small bathroom with a toilet and a pedestal sink against a light blue wall. The toilet is positioned on the left side of the frame, with a roll of toilet paper and a tissue box placed on top of it. The tissue box has a decorative cover with a green and white pattern. The pedestal sink is on the right, with a faucet and two handles for hot and cold water. The floor is covered with small, square tiles in a light beige color. There are no people or animals present in the image. The objects are stationary, with no interaction between them. The toilet paper and tissue box are placed on top of the toilet, suggesting a common bathroom setup where these items are kept for convenience. The overall scene is a typical bathroom setup with no actions or interactions taking place.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 162,
-            "total_tokens": 468
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1244.202791,
-            "prompt_eval_duration_ms": 29.731778,
-            "generation_duration_ms": 1173.508939,
-            "load_duration_ms": 38.667643,
-            "tokens_per_second": 138.0475210849672
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of simplicity and cleanliness, contributing to a neutral to slightly positive mood. The bright blue walls and the white fixtures create a fresh and airy atmosphere, which can be associated with feelings of calmness and order. The small size of the bathroom, however, might evoke a sense of claustrophobia or confinement in some viewers, depending on their personal comfort with small spaces. The presence of the tissue box and toilet paper roll adds a touch of practicality and everyday life, which can make the scene feel relatable and grounded. The mosaic tile floor, while not overly decorative, adds a subtle texture that breaks the monotony of the white fixtures and blue walls, preventing the scene from feeling too sterile or cold. Overall, the image strikes a balance between being functional and aesthetically pleasing, evoking a sense of practicality and tranquility.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 176,
-            "total_tokens": 484
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1344.054041,
-            "prompt_eval_duration_ms": 30.525329,
-            "generation_duration_ms": 1273.401479,
-            "load_duration_ms": 37.946049,
-            "tokens_per_second": 138.2124984951427
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"toilet\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"standard toilet with tank and seat\"\n    },\n    \"sink\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"pedestal sink with faucet\"\n    },\n    \"tissue_box\": {\n      \"count\": 1,\n      \"location\": \"top left\",\n      \"color\": [\"green\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"tissue box with floral pattern\"\n    },\n    \"toilet_paper\": {\n      \"count\": 1,\n      \"location\": \"top left\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"roll of toilet paper on top of tissue box\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "toilet": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "standard toilet with tank and seat"
-              },
-              "sink": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "pedestal sink with faucet"
-              },
-              "tissue_box": {
-                "count": 1,
-                "location": "top left",
-                "color": [
-                  "green",
-                  "white"
-                ],
-                "size": "small",
-                "description": "tissue box with floral pattern"
-              },
-              "toilet_paper": {
-                "count": 1,
-                "location": "top left",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "roll of toilet paper on top of tissue box"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 216,
-            "total_tokens": 702
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1619.650857,
-            "prompt_eval_duration_ms": 43.292871,
-            "generation_duration_ms": 1534.699755,
-            "load_duration_ms": 39.374526,
-            "tokens_per_second": 140.7441418403041
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2624,
-        "total_time_ms": 7060.098661,
-        "average_speed": 139.0359793894027
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a small, clean, and well-lit bathroom with a minimalist and functional design. The setting appears to be a compact space, likely in a residential home. The main elements include a white pedestal sink with a chrome faucet, a matching white toilet, and a small shelf or caddy on top of the toilet tank holding a box of tissues and a roll of toilet paper. The walls are painted a soothing light blue, which adds a calming and airy feel to the space. The floor is covered with small, square, beige and white mosaic tiles, creating a subtle pattern that complements the overall color scheme. The lighting is bright and even, likely from an overhead source, illuminating the space without harsh shadows and enhancing the cleanliness and simplicity of the room. The composition is symmetrical, with the sink and toilet positioned centrally and aligned, contributing to a balanced and organized appearance. The overall aesthetic is modern and uncluttered, with a focus on functionality and a fresh, inviting atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 203,
-            "total_tokens": 500
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11288.894223,
-            "prompt_eval_duration_ms": 3689.891258,
-            "generation_duration_ms": 7559.026248,
-            "load_duration_ms": 37.8806,
-            "tokens_per_second": 26.855310901150872
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image prominently features a white pedestal sink and a toilet, both positioned side by side. The sink, with its chrome faucet and basin, is centrally located, while the toilet is to the left. The toilet is accompanied by a tissue box and a roll of toilet paper on its tank lid, adding a touch of functionality and everyday use. The floor is covered with small, square, light-colored tiles, which create a clean and organized appearance. The sink and toilet are the most immediate elements, drawing the viewer's attention due to their size and central placement.\n\nIn the background, the setting is defined by light blue walls that provide a calming and cohesive aesthetic. The walls are plain, with no visible decorations, which emphasizes the simplicity and cleanliness of the space. The corner of the room is visible, indicating a compact and well-organized bathroom layout. The walls and floor tiles work together to create a harmonious and functional environment, with the light blue walls complementing the neutral tones of the fixtures and tiles. The overall design is minimalistic, with each element serving a practical purpose while contributing to the overall aesthetic. The foreground and background elements are closely related, as the clean lines and neutral color palette of the fixtures and tiles harmonize with the light blue walls, creating a unified and inviting space.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 264,
-            "total_tokens": 567
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9952.291105,
-            "prompt_eval_duration_ms": 75.253504,
-            "generation_duration_ms": 9834.620671,
-            "load_duration_ms": 40.32538,
-            "tokens_per_second": 26.843943333622857
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a clean and well-organized small bathroom with no people or animals present. The primary objects in the image include a toilet, a pedestal sink, a roll of toilet paper, a tissue box, and a tiled floor. The toilet is positioned on the left side of the image, with a closed lid, and is accompanied by a roll of toilet paper and a tissue box placed on top of the tank lid. The tissue box has a patterned design, adding a touch of color to the otherwise minimalist space. The pedestal sink is located on the right side of the image, featuring a chrome faucet with two handles for hot and cold water. The sink is white, matching the toilet, and is set against a light blue wall, which provides a calming and fresh aesthetic. The floor is covered with small, square, light-colored tiles arranged in a grid pattern, contributing to the clean and modern look of the bathroom.\n\nThere are no visible interactions between the objects since they are inanimate. However, the arrangement suggests a functional and aesthetically pleasing design. The toilet and sink are placed in a way that maximizes space efficiency, while the tissue box and toilet paper are conveniently located for easy access. The light blue walls and neutral-toned tiles create a cohesive and inviting atmosphere, emphasizing cleanliness and simplicity. The overall layout and design elements work together harmoniously to create a practical and visually appealing bathroom space.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 285,
-            "total_tokens": 591
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10752.857769,
-            "prompt_eval_duration_ms": 73.752196,
-            "generation_duration_ms": 10638.719363,
-            "load_duration_ms": 37.985127,
-            "tokens_per_second": 26.788938618983664
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a small, clean, and well-maintained bathroom with a predominantly blue and white color scheme. The mood conveyed is one of calmness, order, and simplicity. The light blue walls create a soothing and airy atmosphere, while the white fixtures and tiles contribute to a sense of cleanliness and sterility. The neatly arranged toilet paper and tissue box on the toilet tank add a touch of organization, reinforcing the overall sense of tidiness. The pedestal sink, with its sleek design and metallic faucet, exudes a modern and minimalist aesthetic, further enhancing the feeling of simplicity and functionality.\n\nThe visual elements that contribute to this emotional atmosphere include the soft, pastel blue walls, which evoke a sense of tranquility and relaxation. The white fixtures and tiles provide a stark contrast, emphasizing cleanliness and purity. The small size of the bathroom, combined with the efficient use of space, suggests practicality and efficiency, which can be comforting and reassuring. The overall tone is positive, as the image portrays a space that is inviting, well-kept, and free from clutter or chaos. The lack of personal touches or decorative elements keeps the focus on the clean and orderly nature of the space, which can evoke feelings of peace and satisfaction. The image does not convey any negative emotions, as it lacks any signs of disarray or discomfort. Overall, the mood is neutral to slightly positive, leaning towards a sense of calm and order.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 287,
-            "total_tokens": 595
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10827.726048,
-            "prompt_eval_duration_ms": 74.350472,
-            "generation_duration_ms": 10710.950413,
-            "load_duration_ms": 40.134042,
-            "tokens_per_second": 26.795007812907514
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"toilet\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Standard white toilet with closed lid\"\n    },\n    \"sink\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Pedestal sink with silver faucet\"\n    },\n    \"toilet paper\": {\n      \"count\": 1,\n      \"location\": \"left, top\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Rolled toilet paper on top of the toilet tank\"\n    },\n    \"tissue box\": {\n      \"count\": 1,\n      \"location\": \"left, top\",\n      \"color\": [\"green\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"Tissue box with a patterned design\"\n    },\n    \"faucet\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Silver faucet on the sink\"\n    },\n    \"tile floor\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"beige\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Mosaic tile floor with small square patterns\"\n    },\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"Light blue painted wall\"\n    },\n    \"door\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Partially visible white door frame\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "toilet": {
-                "count": 1,
-                "location": "left, middle",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "Standard white toilet with closed lid"
-              },
-              "sink": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "Pedestal sink with silver faucet"
-              },
-              "toilet paper": {
-                "count": 1,
-                "location": "left, top",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "Rolled toilet paper on top of the toilet tank"
-              },
-              "tissue box": {
-                "count": 1,
-                "location": "left, top",
-                "color": [
-                  "green",
-                  "white"
-                ],
-                "size": "small",
-                "description": "Tissue box with a patterned design"
-              },
-              "faucet": {
-                "count": 1,
-                "location": "center, top",
-                "color": [
-                  "silver"
-                ],
-                "size": "small",
-                "description": "Silver faucet on the sink"
-              },
-              "tile floor": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "beige",
-                  "white"
-                ],
-                "size": "large",
-                "description": "Mosaic tile floor with small square patterns"
-              },
-              "wall": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "Light blue painted wall"
-              },
-              "door": {
-                "count": 1,
-                "location": "right, middle",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "Partially visible white door frame"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 424,
-            "total_tokens": 910
-          },
-          "performance_metrics": {
-            "total_duration_ms": 15951.221775,
-            "prompt_eval_duration_ms": 142.518758,
-            "generation_duration_ms": 15764.641035,
-            "load_duration_ms": 41.097115,
-            "tokens_per_second": 26.8956330219415
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3163,
-        "total_time_ms": 58772.99092,
-        "average_speed": 26.83576673772128
       }
     },
     {

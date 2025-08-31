@@ -7,6 +7,315 @@
   "timestamp": "2025-08-30T18:39:10.861590+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a serene rural setting, with a clear blue sky dotted with a few wispy clouds, suggesting a bright and pleasant day. The main subject is a Weimaraner dog, its light gray fur contrasting with the darker tones of the car window and the greenery outside. The dog's head is tilted slightly to the side, with its mouth open, tongue visible, and eyes looking forward, giving a sense of curiosity or anticipation. The car, a dark-colored sedan, is positioned on a dirt road that stretches into the distance, bordered by lush green trees and bushes, indicating a peaceful countryside location. The lighting is natural, with the sun casting soft shadows, enhancing the textures of the dog's fur and the car's surface. The composition is balanced, with the dog in the foreground and the road leading the viewer's eye into the background, creating a sense of depth and tranquility. The overall mood of the image is calm and joyful, capturing a moment of simple pleasure in nature.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 203,
+            "total_tokens": 500
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1554.678244,
+            "prompt_eval_duration_ms": 77.86121,
+            "generation_duration_ms": 1435.244819,
+            "load_duration_ms": 39.218245,
+            "tokens_per_second": 141.43928430373242
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, a Weimaraner dog is the central focus, its head and upper body partially protruding from the open window of a car. The dog's fur is a light gray, and its ears are flopped down, with its tongue slightly out, suggesting it is enjoying the breeze. The car's interior is visible, with a glimpse of the dashboard and a black collar around the dog's neck. The car appears to be a dark-colored sedan, and the window is partially rolled down, allowing the dog to lean out. The background features a rural setting with a dirt road stretching into the distance, bordered by lush green trees and a clear blue sky with a few scattered clouds, creating a serene and natural atmosphere. The dog's position in the foreground, with the car and its interior elements, draws the viewer's attention, while the background provides a sense of depth and context, indicating that the dog is on a journey or a leisurely drive through a peaceful countryside.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 202,
+            "total_tokens": 505
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1532.664994,
+            "prompt_eval_duration_ms": 28.779455,
+            "generation_duration_ms": 1460.437331,
+            "load_duration_ms": 39.241283,
+            "tokens_per_second": 138.31473334202246
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a Weimaraner dog is the central figure, leaning out of the open window of a car, its head and part of its body visible. The dog appears to be enjoying the breeze, with its tongue out and eyes wide, suggesting it is having a good time. The car, a dark-colored sedan, is parked on a dirt road surrounded by lush green trees, indicating a rural or suburban setting. The dog's interaction with the environment is evident as it leans out, possibly seeking to smell or observe the surroundings. There are no other people or animals in the image, and the dog's primary interaction is with the car and the outdoor environment. The car's window is partially open, allowing the dog to stick its head out, and the dog's relaxed posture and expression suggest a comfortable and happy state. The scene captures a moment of simple joy and connection with nature.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 181,
+            "total_tokens": 487
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1378.636182,
+            "prompt_eval_duration_ms": 32.188482,
+            "generation_duration_ms": 1305.353099,
+            "load_duration_ms": 38.766428,
+            "tokens_per_second": 138.65980027830003
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of joy and freedom, with a positive and uplifting mood. The dog's relaxed posture with its head out of the car window suggests a carefree and happy demeanor, as if it is thoroughly enjoying the breeze and the journey. The bright daylight and the lush greenery in the background add to the overall feeling of optimism and tranquility. The dog's slightly open mouth and the way its tongue is visible contribute to the impression of a content and satisfied animal, further enhancing the positive emotional atmosphere. The clear blue sky and the serene rural setting in the background also play a significant role in creating a peaceful and pleasant visual experience, reinforcing the positive tone of the image.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 139,
+            "total_tokens": 447
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1073.979245,
+            "prompt_eval_duration_ms": 29.839236,
+            "generation_duration_ms": 1000.273467,
+            "load_duration_ms": 40.886626,
+            "tokens_per_second": 138.9619984791619
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"dog\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"dog sticking head out of car window, tongue out\"\n    }\n  },\n  \"man-made\": {\n    \"car\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"blue\"],\n      \"size\": \"medium\",\n      \"description\": \"car with dog sticking head out of window\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 3,\n      \"location\": \"left\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"trees lining the road\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear blue sky with some clouds\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "dog": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "gray",
+                  "white"
+                ],
+                "size": "large",
+                "description": "dog sticking head out of car window, tongue out"
+              }
+            },
+            "man-made": {
+              "car": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "blue"
+                ],
+                "size": "medium",
+                "description": "car with dog sticking head out of window"
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 3,
+                "location": "left",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "trees lining the road"
+              },
+              "sky": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "clear blue sky with some clouds"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 224,
+            "total_tokens": 710
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1681.413117,
+            "prompt_eval_duration_ms": 45.12162,
+            "generation_duration_ms": 1596.385657,
+            "load_duration_ms": 36.799729,
+            "tokens_per_second": 140.31697103878452
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2649,
+        "total_time_ms": 7221.371782,
+        "average_speed": 139.53855748840027
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a cheerful Weimaraner dog enjoying a car ride, with its head sticking out of the open window. The setting appears to be a rural or suburban area, characterized by a gravel road flanked by lush green grass and trees. The sky is bright and mostly clear, suggesting a sunny day with good weather. The dog, with its sleek gray coat and floppy ears, is the focal point of the image. Its tongue is hanging out, indicating it is likely enjoying the breeze, and its expression conveys a sense of happiness and excitement. The car's interior is partially visible, showing a black harness around the dog's neck, which is secured for safety. The car's exterior is a dark color, possibly gray or blue, contrasting with the vibrant greenery in the background. The lighting is natural and bright, casting soft shadows and highlighting the dog's features and the surrounding environment. The overall composition is dynamic, with the dog's head and the open window drawing attention, while the road and trees in the background provide depth and context, creating a lively and joyful scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 220,
+            "total_tokens": 517
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11807.531443,
+            "prompt_eval_duration_ms": 3552.275052,
+            "generation_duration_ms": 8213.756772,
+            "load_duration_ms": 37.725465,
+            "tokens_per_second": 26.784333418535272
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image prominently features a dog with its head sticking out of a car window. The dog appears to be a Weimaraner, characterized by its light gray coat, floppy ears, and an alert expression. Its mouth is open, suggesting it is enjoying the breeze, and it is wearing a black harness or collar. The car window is partially visible, and the dog's head is the focal point, drawing immediate attention due to its size and position.\n\nIn the background, the setting transitions to a rural or suburban environment. The road is a narrow, unpaved path surrounded by lush green trees and grass, indicating a natural, serene setting. The trees are tall and leafy, creating a canopy-like effect along the road. The sky above is clear and blue, with a few scattered clouds, adding to the overall peaceful atmosphere. The road stretches into the distance, converging at a vanishing point, which creates a sense of depth and perspective.\n\nThe relationship between the foreground and background is dynamic. The dog, as the primary subject in the foreground, contrasts sharply with the tranquil, natural backdrop. The movement implied by the dog's position and the breeze suggests a journey or adventure, while the calm, green surroundings provide a sense of relaxation and escape. The juxtaposition of the lively dog against the serene environment creates a harmonious balance, emphasizing the joy and freedom of the moment. The road leading into the distance further enhances this narrative, inviting the viewer to imagine the journey ahead.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 302,
+            "total_tokens": 605
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11338.805624,
+            "prompt_eval_duration_ms": 72.644269,
+            "generation_duration_ms": 11225.301662,
+            "load_duration_ms": 38.432917,
+            "tokens_per_second": 26.903508617708987
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a Weimaraner dog enjoying a car ride with its head sticking out of the open car window. The dog appears to be in a relaxed and happy state, with its mouth open and tongue slightly out, suggesting it is enjoying the fresh air and the sensation of the wind. The car is moving along a rural road lined with lush green trees and grass, indicating a peaceful, scenic environment. The road is unpaved, adding to the sense of a leisurely drive in a natural setting.\n\nThere are no people visible in the image, but the presence of the car implies that someone is driving, though they are not shown. The dog's position and expression suggest a strong bond between the pet and its owner, as the dog is comfortable and happy in the car, indicating trust and companionship. The interaction between the dog and the car is dynamic, as the dog actively participates in the experience by sticking its head out, engaging with the environment as the car moves forward. The surrounding natural elements, such as the trees and open road, create a serene backdrop, enhancing the overall sense of freedom and enjoyment for the dog. The image captures a moment of simple pleasure and connection between a pet and its surroundings.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 246,
+            "total_tokens": 552
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9309.274913,
+            "prompt_eval_duration_ms": 77.885976,
+            "generation_duration_ms": 9189.540685,
+            "load_duration_ms": 39.225482,
+            "tokens_per_second": 26.769564272297465
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a positive and joyful mood, evoking feelings of happiness, freedom, and excitement. The central subject, a dog with its head sticking out of a car window, exudes an expression of pure delight, with its tongue out and eyes wide open, seemingly enjoying the rush of wind and the open road. The dog's body language, particularly its relaxed posture and open mouth, suggests a sense of contentment and thrill, as if it is thoroughly enjoying the experience of being on a car ride. The background, featuring a serene rural road lined with lush green trees and a clear blue sky, adds to the overall sense of tranquility and adventure. The bright lighting and vibrant colors enhance the cheerful atmosphere, making the scene feel lively and uplifting. The combination of the dog's joyful expression and the picturesque setting creates a tone that is overwhelmingly positive, evoking feelings of nostalgia, freedom, and the simple pleasures of life. The image effectively captures a moment of pure happiness, making it relatable and heartwarming.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 207,
+            "total_tokens": 515
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7834.446662,
+            "prompt_eval_duration_ms": 74.158307,
+            "generation_duration_ms": 7719.192771,
+            "load_duration_ms": 38.161229,
+            "tokens_per_second": 26.816275501976317
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"dog\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"A dog with its head out of a car window, tongue out, enjoying the ride.\"\n    }\n  },\n  \"man-made\": {\n    \"car\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"A car with the window down, allowing the dog to stick its head out.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 5,\n      \"location\": \"left, right, background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Tall trees lining the road, providing shade and greenery.\"\n    },\n    \"road\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"A gravel or dirt road stretching into the distance.\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"A clear blue sky with a few scattered clouds.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "dog": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "gray",
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "A dog with its head out of a car window, tongue out, enjoying the ride."
+              }
+            },
+            "man-made": {
+              "car": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "A car with the window down, allowing the dog to stick its head out."
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 5,
+                "location": "left, right, background",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "Tall trees lining the road, providing shade and greenery."
+              },
+              "road": {
+                "count": 1,
+                "location": "center, bottom",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "A gravel or dirt road stretching into the distance."
+              },
+              "sky": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "A clear blue sky with a few scattered clouds."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 305,
+            "total_tokens": 791
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11499.460848,
+            "prompt_eval_duration_ms": 137.376393,
+            "generation_duration_ms": 11321.126116,
+            "load_duration_ms": 38.372744,
+            "tokens_per_second": 26.940782822739468
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2980,
+        "total_time_ms": 51789.519490000006,
+        "average_speed": 26.8428929266515
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -503,315 +812,6 @@
         "total_tokens": 2937,
         "total_time_ms": 28633.865233,
         "average_speed": 41.72940873720516
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a serene rural setting, with a clear blue sky dotted with a few wispy clouds, suggesting a bright and pleasant day. The main subject is a Weimaraner dog, its light gray fur contrasting with the darker tones of the car window and the greenery outside. The dog's head is tilted slightly to the side, with its mouth open, tongue visible, and eyes looking forward, giving a sense of curiosity or anticipation. The car, a dark-colored sedan, is positioned on a dirt road that stretches into the distance, bordered by lush green trees and bushes, indicating a peaceful countryside location. The lighting is natural, with the sun casting soft shadows, enhancing the textures of the dog's fur and the car's surface. The composition is balanced, with the dog in the foreground and the road leading the viewer's eye into the background, creating a sense of depth and tranquility. The overall mood of the image is calm and joyful, capturing a moment of simple pleasure in nature.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 203,
-            "total_tokens": 500
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1554.678244,
-            "prompt_eval_duration_ms": 77.86121,
-            "generation_duration_ms": 1435.244819,
-            "load_duration_ms": 39.218245,
-            "tokens_per_second": 141.43928430373242
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, a Weimaraner dog is the central focus, its head and upper body partially protruding from the open window of a car. The dog's fur is a light gray, and its ears are flopped down, with its tongue slightly out, suggesting it is enjoying the breeze. The car's interior is visible, with a glimpse of the dashboard and a black collar around the dog's neck. The car appears to be a dark-colored sedan, and the window is partially rolled down, allowing the dog to lean out. The background features a rural setting with a dirt road stretching into the distance, bordered by lush green trees and a clear blue sky with a few scattered clouds, creating a serene and natural atmosphere. The dog's position in the foreground, with the car and its interior elements, draws the viewer's attention, while the background provides a sense of depth and context, indicating that the dog is on a journey or a leisurely drive through a peaceful countryside.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 202,
-            "total_tokens": 505
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1532.664994,
-            "prompt_eval_duration_ms": 28.779455,
-            "generation_duration_ms": 1460.437331,
-            "load_duration_ms": 39.241283,
-            "tokens_per_second": 138.31473334202246
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a Weimaraner dog is the central figure, leaning out of the open window of a car, its head and part of its body visible. The dog appears to be enjoying the breeze, with its tongue out and eyes wide, suggesting it is having a good time. The car, a dark-colored sedan, is parked on a dirt road surrounded by lush green trees, indicating a rural or suburban setting. The dog's interaction with the environment is evident as it leans out, possibly seeking to smell or observe the surroundings. There are no other people or animals in the image, and the dog's primary interaction is with the car and the outdoor environment. The car's window is partially open, allowing the dog to stick its head out, and the dog's relaxed posture and expression suggest a comfortable and happy state. The scene captures a moment of simple joy and connection with nature.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 181,
-            "total_tokens": 487
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1378.636182,
-            "prompt_eval_duration_ms": 32.188482,
-            "generation_duration_ms": 1305.353099,
-            "load_duration_ms": 38.766428,
-            "tokens_per_second": 138.65980027830003
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of joy and freedom, with a positive and uplifting mood. The dog's relaxed posture with its head out of the car window suggests a carefree and happy demeanor, as if it is thoroughly enjoying the breeze and the journey. The bright daylight and the lush greenery in the background add to the overall feeling of optimism and tranquility. The dog's slightly open mouth and the way its tongue is visible contribute to the impression of a content and satisfied animal, further enhancing the positive emotional atmosphere. The clear blue sky and the serene rural setting in the background also play a significant role in creating a peaceful and pleasant visual experience, reinforcing the positive tone of the image.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 139,
-            "total_tokens": 447
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1073.979245,
-            "prompt_eval_duration_ms": 29.839236,
-            "generation_duration_ms": 1000.273467,
-            "load_duration_ms": 40.886626,
-            "tokens_per_second": 138.9619984791619
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"dog\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"dog sticking head out of car window, tongue out\"\n    }\n  },\n  \"man-made\": {\n    \"car\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"blue\"],\n      \"size\": \"medium\",\n      \"description\": \"car with dog sticking head out of window\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 3,\n      \"location\": \"left\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"trees lining the road\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear blue sky with some clouds\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "dog": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "gray",
-                  "white"
-                ],
-                "size": "large",
-                "description": "dog sticking head out of car window, tongue out"
-              }
-            },
-            "man-made": {
-              "car": {
-                "count": 1,
-                "location": "right",
-                "color": [
-                  "blue"
-                ],
-                "size": "medium",
-                "description": "car with dog sticking head out of window"
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 3,
-                "location": "left",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "trees lining the road"
-              },
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "clear blue sky with some clouds"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 224,
-            "total_tokens": 710
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1681.413117,
-            "prompt_eval_duration_ms": 45.12162,
-            "generation_duration_ms": 1596.385657,
-            "load_duration_ms": 36.799729,
-            "tokens_per_second": 140.31697103878452
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2649,
-        "total_time_ms": 7221.371782,
-        "average_speed": 139.53855748840027
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a cheerful Weimaraner dog enjoying a car ride, with its head sticking out of the open window. The setting appears to be a rural or suburban area, characterized by a gravel road flanked by lush green grass and trees. The sky is bright and mostly clear, suggesting a sunny day with good weather. The dog, with its sleek gray coat and floppy ears, is the focal point of the image. Its tongue is hanging out, indicating it is likely enjoying the breeze, and its expression conveys a sense of happiness and excitement. The car's interior is partially visible, showing a black harness around the dog's neck, which is secured for safety. The car's exterior is a dark color, possibly gray or blue, contrasting with the vibrant greenery in the background. The lighting is natural and bright, casting soft shadows and highlighting the dog's features and the surrounding environment. The overall composition is dynamic, with the dog's head and the open window drawing attention, while the road and trees in the background provide depth and context, creating a lively and joyful scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 220,
-            "total_tokens": 517
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11807.531443,
-            "prompt_eval_duration_ms": 3552.275052,
-            "generation_duration_ms": 8213.756772,
-            "load_duration_ms": 37.725465,
-            "tokens_per_second": 26.784333418535272
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image prominently features a dog with its head sticking out of a car window. The dog appears to be a Weimaraner, characterized by its light gray coat, floppy ears, and an alert expression. Its mouth is open, suggesting it is enjoying the breeze, and it is wearing a black harness or collar. The car window is partially visible, and the dog's head is the focal point, drawing immediate attention due to its size and position.\n\nIn the background, the setting transitions to a rural or suburban environment. The road is a narrow, unpaved path surrounded by lush green trees and grass, indicating a natural, serene setting. The trees are tall and leafy, creating a canopy-like effect along the road. The sky above is clear and blue, with a few scattered clouds, adding to the overall peaceful atmosphere. The road stretches into the distance, converging at a vanishing point, which creates a sense of depth and perspective.\n\nThe relationship between the foreground and background is dynamic. The dog, as the primary subject in the foreground, contrasts sharply with the tranquil, natural backdrop. The movement implied by the dog's position and the breeze suggests a journey or adventure, while the calm, green surroundings provide a sense of relaxation and escape. The juxtaposition of the lively dog against the serene environment creates a harmonious balance, emphasizing the joy and freedom of the moment. The road leading into the distance further enhances this narrative, inviting the viewer to imagine the journey ahead.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 302,
-            "total_tokens": 605
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11338.805624,
-            "prompt_eval_duration_ms": 72.644269,
-            "generation_duration_ms": 11225.301662,
-            "load_duration_ms": 38.432917,
-            "tokens_per_second": 26.903508617708987
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a Weimaraner dog enjoying a car ride with its head sticking out of the open car window. The dog appears to be in a relaxed and happy state, with its mouth open and tongue slightly out, suggesting it is enjoying the fresh air and the sensation of the wind. The car is moving along a rural road lined with lush green trees and grass, indicating a peaceful, scenic environment. The road is unpaved, adding to the sense of a leisurely drive in a natural setting.\n\nThere are no people visible in the image, but the presence of the car implies that someone is driving, though they are not shown. The dog's position and expression suggest a strong bond between the pet and its owner, as the dog is comfortable and happy in the car, indicating trust and companionship. The interaction between the dog and the car is dynamic, as the dog actively participates in the experience by sticking its head out, engaging with the environment as the car moves forward. The surrounding natural elements, such as the trees and open road, create a serene backdrop, enhancing the overall sense of freedom and enjoyment for the dog. The image captures a moment of simple pleasure and connection between a pet and its surroundings.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 246,
-            "total_tokens": 552
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9309.274913,
-            "prompt_eval_duration_ms": 77.885976,
-            "generation_duration_ms": 9189.540685,
-            "load_duration_ms": 39.225482,
-            "tokens_per_second": 26.769564272297465
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a positive and joyful mood, evoking feelings of happiness, freedom, and excitement. The central subject, a dog with its head sticking out of a car window, exudes an expression of pure delight, with its tongue out and eyes wide open, seemingly enjoying the rush of wind and the open road. The dog's body language, particularly its relaxed posture and open mouth, suggests a sense of contentment and thrill, as if it is thoroughly enjoying the experience of being on a car ride. The background, featuring a serene rural road lined with lush green trees and a clear blue sky, adds to the overall sense of tranquility and adventure. The bright lighting and vibrant colors enhance the cheerful atmosphere, making the scene feel lively and uplifting. The combination of the dog's joyful expression and the picturesque setting creates a tone that is overwhelmingly positive, evoking feelings of nostalgia, freedom, and the simple pleasures of life. The image effectively captures a moment of pure happiness, making it relatable and heartwarming.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 207,
-            "total_tokens": 515
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7834.446662,
-            "prompt_eval_duration_ms": 74.158307,
-            "generation_duration_ms": 7719.192771,
-            "load_duration_ms": 38.161229,
-            "tokens_per_second": 26.816275501976317
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"dog\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"A dog with its head out of a car window, tongue out, enjoying the ride.\"\n    }\n  },\n  \"man-made\": {\n    \"car\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"A car with the window down, allowing the dog to stick its head out.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 5,\n      \"location\": \"left, right, background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Tall trees lining the road, providing shade and greenery.\"\n    },\n    \"road\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"A gravel or dirt road stretching into the distance.\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"A clear blue sky with a few scattered clouds.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "dog": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "gray",
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "A dog with its head out of a car window, tongue out, enjoying the ride."
-              }
-            },
-            "man-made": {
-              "car": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "A car with the window down, allowing the dog to stick its head out."
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 5,
-                "location": "left, right, background",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "Tall trees lining the road, providing shade and greenery."
-              },
-              "road": {
-                "count": 1,
-                "location": "center, bottom",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "A gravel or dirt road stretching into the distance."
-              },
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "A clear blue sky with a few scattered clouds."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 305,
-            "total_tokens": 791
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11499.460848,
-            "prompt_eval_duration_ms": 137.376393,
-            "generation_duration_ms": 11321.126116,
-            "load_duration_ms": 38.372744,
-            "tokens_per_second": 26.940782822739468
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2980,
-        "total_time_ms": 51789.519490000006,
-        "average_speed": 26.8428929266515
       }
     },
     {

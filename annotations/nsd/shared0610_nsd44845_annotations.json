@@ -7,6 +7,385 @@
   "timestamp": "2025-08-30T21:18:46.040651+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a striking scene set in what appears to be a zoo or wildlife park, under a large, light-colored, corrugated metal roof that provides shade for the audience below. The main subject is an elephant, seemingly performing a balancing act on a rotating platform, its trunk raised in a pose that suggests it is either dancing or mimicking a trick. The elephant's skin is a rich, textured brown, contrasting with the silver metallic platform it stands on. The background reveals a large crowd of spectators, seated on tiered bleachers, dressed in a variety of casual summer attire, indicating a warm day. The audience is engaged, some leaning forward in anticipation, while others are seated more casually, enjoying the spectacle. The setting is further defined by the brick wall at the base of the bleachers and the lush greenery visible in the distance, suggesting a well-maintained outdoor space. The lighting is bright and natural, indicative of a sunny day, casting soft shadows and highlighting the elephant's form and the audience's reactions. The overall composition is dynamic, with the elephant as the focal point, drawing the viewer's eye through the scene, from the platform to the audience and the surrounding environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 244,
+            "total_tokens": 541
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1874.305257,
+            "prompt_eval_duration_ms": 80.15288,
+            "generation_duration_ms": 1752.869702,
+            "load_duration_ms": 38.835632,
+            "tokens_per_second": 139.20030662952266
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, a large elephant is the central focus, perched on a circular platform, seemingly performing a trick by standing on its hind legs. Its trunk is raised, and its body is angled slightly forward, suggesting motion or readiness to perform. The platform is metallic and circular, contrasting with the elephant's textured skin. The background, which is the setting, features a large crowd of spectators seated in rows, watching the performance. The audience is diverse, with many individuals appearing engaged and entertained. Behind the spectators, there is a structure with a roof, likely providing shade, and beyond that, a line of trees and a clear sky, indicating a sunny day. The elephant and the platform are in the immediate foreground, while the audience and the surrounding environment form the background, creating a layered scene that emphasizes the performance and the event's atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 171,
+            "total_tokens": 474
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1324.122543,
+            "prompt_eval_duration_ms": 31.327474,
+            "generation_duration_ms": 1251.705458,
+            "load_duration_ms": 38.698614,
+            "tokens_per_second": 136.61360898212206
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a large elephant, seemingly trained, is the focal point, standing on its hind legs atop a circular platform, possibly a rotating stage, in a performance setting. The elephant appears to be interacting with a small object, perhaps a stick or a prop, held in its trunk, suggesting a demonstration of its training or a part of a show. Surrounding the elephant is a crowd of people, seated and standing, watching the performance. The audience is engaged, some leaning forward in interest, others sitting back, all focused on the elephant's actions. The setting is outdoors, under a large canopy, with brick walls and greenery visible in the background, indicating a zoo or a similar venue designed for animal performances. The elephant's interaction with the object and the audience's attention suggest a dynamic scene where the elephant is the star of the show, entertaining and possibly teaching the audience about its capabilities.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 183,
+            "total_tokens": 489
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1415.891032,
+            "prompt_eval_duration_ms": 30.241885,
+            "generation_duration_ms": 1342.257631,
+            "load_duration_ms": 40.397809,
+            "tokens_per_second": 136.33746292331566
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of curiosity and amusement, with a hint of nostalgia, as it captures a moment of an elephant performing on a stool in front of an audience. The elephant's posture, with its trunk raised and body balanced on the stool, suggests a display of intelligence and training, which can be both impressive and endearing. The audience, composed of a diverse group of people, appears engaged and entertained, adding to the positive atmosphere. The bright daylight and the open-air setting contribute to a relaxed and cheerful mood, while the brick platform and the white canopy overhead provide a structured and organized environment that enhances the sense of a carefully planned performance. The overall tone is decidedly positive, as the image portrays a harmonious interaction between the animal and its audience, highlighting the beauty of human-animal connection and the joy of shared experiences.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 169,
+            "total_tokens": 477
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1317.606446,
+            "prompt_eval_duration_ms": 31.219234,
+            "generation_duration_ms": 1243.73358,
+            "load_duration_ms": 40.078757,
+            "tokens_per_second": 135.8811908897724
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"performer in a circus act\"\n    },\n    \"audience\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"spectators watching the performance\"\n    }\n  },\n  \"animal\": {\n    \"elephant\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"gray\", \"brown\"],\n      \"size\": \"large\",\n      \"description\": \"standing on a platform, performing a trick\"\n    }\n  },\n  \"man-made\": {\n    \"platform\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"gray\", \"silver\"],\n      \"size\": \"medium\",\n      \"description\": \"metallic structure supporting the elephant\"\n    },\n    \"ceiling\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"white\", \"gray\"],\n      \"size\": \"large\",\n      \"description\": \"roof covering the performance area\"\n    },\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"separating the audience from the performance area\"\n    },\n    \"projector\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"device mounted on the ceiling\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear blue sky above the scene\"\n    },\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"trees visible in the background\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "blue",
+                  "white"
+                ],
+                "size": "small",
+                "description": "performer in a circus act"
+              },
+              "audience": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "blue",
+                  "white"
+                ],
+                "size": "large",
+                "description": "spectators watching the performance"
+              }
+            },
+            "animal": {
+              "elephant": {
+                "count": 1,
+                "location": "foreground",
+                "color": [
+                  "gray",
+                  "brown"
+                ],
+                "size": "large",
+                "description": "standing on a platform, performing a trick"
+              }
+            },
+            "man-made": {
+              "platform": {
+                "count": 1,
+                "location": "foreground",
+                "color": [
+                  "gray",
+                  "silver"
+                ],
+                "size": "medium",
+                "description": "metallic structure supporting the elephant"
+              },
+              "ceiling": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "white",
+                  "gray"
+                ],
+                "size": "large",
+                "description": "roof covering the performance area"
+              },
+              "fence": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "separating the audience from the performance area"
+              },
+              "projector": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "device mounted on the ceiling"
+              }
+            },
+            "natural": {
+              "sky": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "clear blue sky above the scene"
+              },
+              "trees": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "green"
+                ],
+                "size": "small",
+                "description": "trees visible in the background"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 480,
+            "total_tokens": 966
+          },
+          "performance_metrics": {
+            "total_duration_ms": 3541.231189,
+            "prompt_eval_duration_ms": 44.428844,
+            "generation_duration_ms": 3456.466442,
+            "load_duration_ms": 37.740586,
+            "tokens_per_second": 138.87014616067262
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2947,
+        "total_time_ms": 9473.156467,
+        "average_speed": 137.3805431170811
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a lively outdoor scene featuring a trained elephant performing in what appears to be a circus or zoo setting. The main subject is a large elephant, adorned with a harness and standing on a circular platform, which is likely part of the performance area. The elephant is positioned in the foreground, facing the audience, and appears to be engaged in a trick or act, possibly involving its trunk or legs. The background shows a large crowd of spectators seated on bleachers, dressed in casual attire, indicating a sunny day. The audience is diverse, with people of various ages, including children, all focused on the performance.\n\nThe setting is an open-air arena with a large, curved, beige awning providing shade for the audience. The awning is supported by a metal framework, and the area is enclosed by a low brick wall, which separates the performance space from the spectators. The lighting is bright and natural, suggesting the event is taking place during the daytime under clear skies. The colors are vibrant, with the earthy tones of the elephant and platform contrasting against the bright colors of the audience's clothing and the greenery in the background. The overall composition is dynamic, with the elephant as the focal point and the audience creating a sense of engagement and excitement. The image captures a moment of interaction between the animal and the crowd, emphasizing the spectacle and entertainment of the performance.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 277,
+            "total_tokens": 574
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13895.552796,
+            "prompt_eval_duration_ms": 3520.80893,
+            "generation_duration_ms": 10333.740931,
+            "load_duration_ms": 38.323606,
+            "tokens_per_second": 26.805394275855395
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a large, mechanical elephant, which is the central focus. This elephant is positioned on a raised platform, appearing to perform or interact with its surroundings. Its design is intricate, with visible details such as the texture of its skin and the mechanical elements that suggest movement or articulation. The elephant is situated under a large, curved canopy, which provides shade and adds to the overall theatrical ambiance of the scene. The platform is elevated, creating a clear separation between the elephant and the audience, emphasizing its prominence.\n\nIn the background, a large crowd of spectators is visible, seated and standing in what appears to be an outdoor amphitheater or performance area. The audience is diverse, with people of various ages and attire, indicating a public event or show. The setting is bright and sunny, suggesting a daytime performance, and the open sky and distant trees add to the outdoor atmosphere. The canopy above the elephant extends over part of the audience, creating a shared space that connects the performer and the spectators.\n\nThe relationship between the foreground and background is dynamic and intentional. The mechanical elephant, as the focal point, draws the audience's attention, while the audience's presence and engagement create a sense of interaction and spectacle. The elevated platform and canopy enhance the theatrical effect, making the elephant appear larger and more impressive. The bright, open setting further amplifies the grandeur of the performance, blending the mechanical marvel with the natural environment to create a captivating scene. The overall composition suggests a lively and entertaining event, where technology and nature come together to captivate the audience.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 320,
+            "total_tokens": 623
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12040.808002,
+            "prompt_eval_duration_ms": 72.855041,
+            "generation_duration_ms": 11927.919358,
+            "load_duration_ms": 37.626008,
+            "tokens_per_second": 26.827813837069368
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a lively scene at what appears to be a circus or animal performance. A large elephant is the central focus, standing on a raised platform under a large canopy. The elephant is wearing a harness, suggesting it is part of a trained performance. It is positioned in a dynamic pose, with one front leg raised, as if it is performing a trick or interacting with its surroundings. The elephant's posture and the harness indicate it is participating in a controlled, entertaining act.\n\nIn the background, a large audience of people is seated and standing, watching the performance. The audience appears engaged and entertained, with some individuals clapping or cheering, suggesting they are enjoying the show. The people are dressed in casual attire, indicating a relaxed and family-friendly environment. The audience's attention is directed toward the elephant, highlighting the connection between the performer and the spectators.\n\nThe canopy above the stage provides shade and adds to the ambiance of the performance area. The platform on which the elephant stands is elevated, drawing attention to the animal and enhancing the visual impact of its actions. The interaction between the elephant and the audience is central to the scene, with the elephant's performance being the focal point of the entertainment. The overall atmosphere is one of excitement and enjoyment, showcasing a traditional circus or animal show where the audience appreciates the skills and training of the elephant.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 271,
+            "total_tokens": 577
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10196.688902,
+            "prompt_eval_duration_ms": 74.357652,
+            "generation_duration_ms": 10079.104431,
+            "load_duration_ms": 40.462811,
+            "tokens_per_second": 26.887309468338618
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a scene of a trained elephant performing in front of an audience, evoking a sense of amusement and wonder. The elephant is standing on a platform, seemingly engaged in a playful or entertaining act, which contributes to a lighthearted and cheerful mood. The audience, seated in rows and appearing engaged, adds to the positive atmosphere, as their presence suggests enjoyment and appreciation of the performance. The bright, sunny outdoor setting further enhances the overall tone, with clear skies and ample natural light creating a warm and inviting environment.\n\nThe visual elements that contribute to this emotional atmosphere include the elephant's posture, which appears calm and composed, reinforcing a sense of trust and harmony between the animal and its trainer. The audience's varied expressions of interest and amusement convey a collective sense of delight, which is contagious and uplifting. The open-air venue, with its large canopy providing shade, adds to the relaxed and festive ambiance, suggesting a family-friendly event. The overall tone is decidedly positive, as the image captures a moment of shared joy and connection between humans and animals, highlighting the entertainment and wonder that such performances can evoke.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 226,
+            "total_tokens": 534
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8544.478546,
+            "prompt_eval_duration_ms": 79.308085,
+            "generation_duration_ms": 8421.381509,
+            "load_duration_ms": 40.804577,
+            "tokens_per_second": 26.836451924006997
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 40,\n      \"location\": \"center, right, middle, background\",\n      \"color\": [\"various\"],\n      \"size\": \"small\",\n      \"description\": \"Audience watching a performance, some standing, some sitting\"\n    }\n  },\n  \"animal\": {\n    \"elephant\": {\n      \"count\": 1,\n      \"location\": \"left, center, foreground\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Performing on a platform, wearing a harness\"\n    }\n  },\n  \"man-made\": {\n    \"platform\": {\n      \"count\": 1,\n      \"location\": \"center, middle, foreground\",\n      \"color\": [\"silver\"],\n      \"size\": \"medium\",\n      \"description\": \"Circular, metallic, supporting the elephant\"\n    },\n    \"roof\": {\n      \"count\": 1,\n      \"location\": \"top, center, background\",\n      \"color\": [\"beige\"],\n      \"size\": \"large\",\n      \"description\": \"Canopy-like structure providing shade\"\n    },\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"center, middle, background\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Separating the audience from the performance area\"\n    },\n    \"seating\": {\n      \"count\": 1,\n      \"location\": \"center, right, middle, background\",\n      \"color\": [\"various\"],\n      \"size\": \"medium\",\n      \"description\": \"Rows of chairs or benches for the audience\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 10,\n      \"location\": \"center, right, top, background\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Scattered trees in the background\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 40,
+                "location": "center, right, middle, background",
+                "color": [
+                  "various"
+                ],
+                "size": "small",
+                "description": "Audience watching a performance, some standing, some sitting"
+              }
+            },
+            "animal": {
+              "elephant": {
+                "count": 1,
+                "location": "left, center, foreground",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "Performing on a platform, wearing a harness"
+              }
+            },
+            "man-made": {
+              "platform": {
+                "count": 1,
+                "location": "center, middle, foreground",
+                "color": [
+                  "silver"
+                ],
+                "size": "medium",
+                "description": "Circular, metallic, supporting the elephant"
+              },
+              "roof": {
+                "count": 1,
+                "location": "top, center, background",
+                "color": [
+                  "beige"
+                ],
+                "size": "large",
+                "description": "Canopy-like structure providing shade"
+              },
+              "fence": {
+                "count": 1,
+                "location": "center, middle, background",
+                "color": [
+                  "black"
+                ],
+                "size": "medium",
+                "description": "Separating the audience from the performance area"
+              },
+              "seating": {
+                "count": 1,
+                "location": "center, right, middle, background",
+                "color": [
+                  "various"
+                ],
+                "size": "medium",
+                "description": "Rows of chairs or benches for the audience"
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 10,
+                "location": "center, right, top, background",
+                "color": [
+                  "green"
+                ],
+                "size": "small",
+                "description": "Scattered trees in the background"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 420,
+            "total_tokens": 906
+          },
+          "performance_metrics": {
+            "total_duration_ms": 15757.841982,
+            "prompt_eval_duration_ms": 140.333219,
+            "generation_duration_ms": 15575.602723,
+            "load_duration_ms": 39.20637,
+            "tokens_per_second": 26.965248630783275
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3214,
+        "total_time_ms": 60435.370228,
+        "average_speed": 26.864443627210733
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -536,385 +915,6 @@
         "total_tokens": 3158,
         "total_time_ms": 33537.116812,
         "average_speed": 42.246758680647126
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a striking scene set in what appears to be a zoo or wildlife park, under a large, light-colored, corrugated metal roof that provides shade for the audience below. The main subject is an elephant, seemingly performing a balancing act on a rotating platform, its trunk raised in a pose that suggests it is either dancing or mimicking a trick. The elephant's skin is a rich, textured brown, contrasting with the silver metallic platform it stands on. The background reveals a large crowd of spectators, seated on tiered bleachers, dressed in a variety of casual summer attire, indicating a warm day. The audience is engaged, some leaning forward in anticipation, while others are seated more casually, enjoying the spectacle. The setting is further defined by the brick wall at the base of the bleachers and the lush greenery visible in the distance, suggesting a well-maintained outdoor space. The lighting is bright and natural, indicative of a sunny day, casting soft shadows and highlighting the elephant's form and the audience's reactions. The overall composition is dynamic, with the elephant as the focal point, drawing the viewer's eye through the scene, from the platform to the audience and the surrounding environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 244,
-            "total_tokens": 541
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1874.305257,
-            "prompt_eval_duration_ms": 80.15288,
-            "generation_duration_ms": 1752.869702,
-            "load_duration_ms": 38.835632,
-            "tokens_per_second": 139.20030662952266
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, a large elephant is the central focus, perched on a circular platform, seemingly performing a trick by standing on its hind legs. Its trunk is raised, and its body is angled slightly forward, suggesting motion or readiness to perform. The platform is metallic and circular, contrasting with the elephant's textured skin. The background, which is the setting, features a large crowd of spectators seated in rows, watching the performance. The audience is diverse, with many individuals appearing engaged and entertained. Behind the spectators, there is a structure with a roof, likely providing shade, and beyond that, a line of trees and a clear sky, indicating a sunny day. The elephant and the platform are in the immediate foreground, while the audience and the surrounding environment form the background, creating a layered scene that emphasizes the performance and the event's atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 171,
-            "total_tokens": 474
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1324.122543,
-            "prompt_eval_duration_ms": 31.327474,
-            "generation_duration_ms": 1251.705458,
-            "load_duration_ms": 38.698614,
-            "tokens_per_second": 136.61360898212206
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a large elephant, seemingly trained, is the focal point, standing on its hind legs atop a circular platform, possibly a rotating stage, in a performance setting. The elephant appears to be interacting with a small object, perhaps a stick or a prop, held in its trunk, suggesting a demonstration of its training or a part of a show. Surrounding the elephant is a crowd of people, seated and standing, watching the performance. The audience is engaged, some leaning forward in interest, others sitting back, all focused on the elephant's actions. The setting is outdoors, under a large canopy, with brick walls and greenery visible in the background, indicating a zoo or a similar venue designed for animal performances. The elephant's interaction with the object and the audience's attention suggest a dynamic scene where the elephant is the star of the show, entertaining and possibly teaching the audience about its capabilities.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 183,
-            "total_tokens": 489
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1415.891032,
-            "prompt_eval_duration_ms": 30.241885,
-            "generation_duration_ms": 1342.257631,
-            "load_duration_ms": 40.397809,
-            "tokens_per_second": 136.33746292331566
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of curiosity and amusement, with a hint of nostalgia, as it captures a moment of an elephant performing on a stool in front of an audience. The elephant's posture, with its trunk raised and body balanced on the stool, suggests a display of intelligence and training, which can be both impressive and endearing. The audience, composed of a diverse group of people, appears engaged and entertained, adding to the positive atmosphere. The bright daylight and the open-air setting contribute to a relaxed and cheerful mood, while the brick platform and the white canopy overhead provide a structured and organized environment that enhances the sense of a carefully planned performance. The overall tone is decidedly positive, as the image portrays a harmonious interaction between the animal and its audience, highlighting the beauty of human-animal connection and the joy of shared experiences.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 169,
-            "total_tokens": 477
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1317.606446,
-            "prompt_eval_duration_ms": 31.219234,
-            "generation_duration_ms": 1243.73358,
-            "load_duration_ms": 40.078757,
-            "tokens_per_second": 135.8811908897724
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"performer in a circus act\"\n    },\n    \"audience\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"spectators watching the performance\"\n    }\n  },\n  \"animal\": {\n    \"elephant\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"gray\", \"brown\"],\n      \"size\": \"large\",\n      \"description\": \"standing on a platform, performing a trick\"\n    }\n  },\n  \"man-made\": {\n    \"platform\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"gray\", \"silver\"],\n      \"size\": \"medium\",\n      \"description\": \"metallic structure supporting the elephant\"\n    },\n    \"ceiling\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"white\", \"gray\"],\n      \"size\": \"large\",\n      \"description\": \"roof covering the performance area\"\n    },\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"separating the audience from the performance area\"\n    },\n    \"projector\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"device mounted on the ceiling\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear blue sky above the scene\"\n    },\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"trees visible in the background\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "blue",
-                  "white"
-                ],
-                "size": "small",
-                "description": "performer in a circus act"
-              },
-              "audience": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "blue",
-                  "white"
-                ],
-                "size": "large",
-                "description": "spectators watching the performance"
-              }
-            },
-            "animal": {
-              "elephant": {
-                "count": 1,
-                "location": "foreground",
-                "color": [
-                  "gray",
-                  "brown"
-                ],
-                "size": "large",
-                "description": "standing on a platform, performing a trick"
-              }
-            },
-            "man-made": {
-              "platform": {
-                "count": 1,
-                "location": "foreground",
-                "color": [
-                  "gray",
-                  "silver"
-                ],
-                "size": "medium",
-                "description": "metallic structure supporting the elephant"
-              },
-              "ceiling": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "white",
-                  "gray"
-                ],
-                "size": "large",
-                "description": "roof covering the performance area"
-              },
-              "fence": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "separating the audience from the performance area"
-              },
-              "projector": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "device mounted on the ceiling"
-              }
-            },
-            "natural": {
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "clear blue sky above the scene"
-              },
-              "trees": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "green"
-                ],
-                "size": "small",
-                "description": "trees visible in the background"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 480,
-            "total_tokens": 966
-          },
-          "performance_metrics": {
-            "total_duration_ms": 3541.231189,
-            "prompt_eval_duration_ms": 44.428844,
-            "generation_duration_ms": 3456.466442,
-            "load_duration_ms": 37.740586,
-            "tokens_per_second": 138.87014616067262
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2947,
-        "total_time_ms": 9473.156467,
-        "average_speed": 137.3805431170811
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a lively outdoor scene featuring a trained elephant performing in what appears to be a circus or zoo setting. The main subject is a large elephant, adorned with a harness and standing on a circular platform, which is likely part of the performance area. The elephant is positioned in the foreground, facing the audience, and appears to be engaged in a trick or act, possibly involving its trunk or legs. The background shows a large crowd of spectators seated on bleachers, dressed in casual attire, indicating a sunny day. The audience is diverse, with people of various ages, including children, all focused on the performance.\n\nThe setting is an open-air arena with a large, curved, beige awning providing shade for the audience. The awning is supported by a metal framework, and the area is enclosed by a low brick wall, which separates the performance space from the spectators. The lighting is bright and natural, suggesting the event is taking place during the daytime under clear skies. The colors are vibrant, with the earthy tones of the elephant and platform contrasting against the bright colors of the audience's clothing and the greenery in the background. The overall composition is dynamic, with the elephant as the focal point and the audience creating a sense of engagement and excitement. The image captures a moment of interaction between the animal and the crowd, emphasizing the spectacle and entertainment of the performance.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 277,
-            "total_tokens": 574
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13895.552796,
-            "prompt_eval_duration_ms": 3520.80893,
-            "generation_duration_ms": 10333.740931,
-            "load_duration_ms": 38.323606,
-            "tokens_per_second": 26.805394275855395
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a large, mechanical elephant, which is the central focus. This elephant is positioned on a raised platform, appearing to perform or interact with its surroundings. Its design is intricate, with visible details such as the texture of its skin and the mechanical elements that suggest movement or articulation. The elephant is situated under a large, curved canopy, which provides shade and adds to the overall theatrical ambiance of the scene. The platform is elevated, creating a clear separation between the elephant and the audience, emphasizing its prominence.\n\nIn the background, a large crowd of spectators is visible, seated and standing in what appears to be an outdoor amphitheater or performance area. The audience is diverse, with people of various ages and attire, indicating a public event or show. The setting is bright and sunny, suggesting a daytime performance, and the open sky and distant trees add to the outdoor atmosphere. The canopy above the elephant extends over part of the audience, creating a shared space that connects the performer and the spectators.\n\nThe relationship between the foreground and background is dynamic and intentional. The mechanical elephant, as the focal point, draws the audience's attention, while the audience's presence and engagement create a sense of interaction and spectacle. The elevated platform and canopy enhance the theatrical effect, making the elephant appear larger and more impressive. The bright, open setting further amplifies the grandeur of the performance, blending the mechanical marvel with the natural environment to create a captivating scene. The overall composition suggests a lively and entertaining event, where technology and nature come together to captivate the audience.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 320,
-            "total_tokens": 623
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12040.808002,
-            "prompt_eval_duration_ms": 72.855041,
-            "generation_duration_ms": 11927.919358,
-            "load_duration_ms": 37.626008,
-            "tokens_per_second": 26.827813837069368
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a lively scene at what appears to be a circus or animal performance. A large elephant is the central focus, standing on a raised platform under a large canopy. The elephant is wearing a harness, suggesting it is part of a trained performance. It is positioned in a dynamic pose, with one front leg raised, as if it is performing a trick or interacting with its surroundings. The elephant's posture and the harness indicate it is participating in a controlled, entertaining act.\n\nIn the background, a large audience of people is seated and standing, watching the performance. The audience appears engaged and entertained, with some individuals clapping or cheering, suggesting they are enjoying the show. The people are dressed in casual attire, indicating a relaxed and family-friendly environment. The audience's attention is directed toward the elephant, highlighting the connection between the performer and the spectators.\n\nThe canopy above the stage provides shade and adds to the ambiance of the performance area. The platform on which the elephant stands is elevated, drawing attention to the animal and enhancing the visual impact of its actions. The interaction between the elephant and the audience is central to the scene, with the elephant's performance being the focal point of the entertainment. The overall atmosphere is one of excitement and enjoyment, showcasing a traditional circus or animal show where the audience appreciates the skills and training of the elephant.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 271,
-            "total_tokens": 577
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10196.688902,
-            "prompt_eval_duration_ms": 74.357652,
-            "generation_duration_ms": 10079.104431,
-            "load_duration_ms": 40.462811,
-            "tokens_per_second": 26.887309468338618
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a scene of a trained elephant performing in front of an audience, evoking a sense of amusement and wonder. The elephant is standing on a platform, seemingly engaged in a playful or entertaining act, which contributes to a lighthearted and cheerful mood. The audience, seated in rows and appearing engaged, adds to the positive atmosphere, as their presence suggests enjoyment and appreciation of the performance. The bright, sunny outdoor setting further enhances the overall tone, with clear skies and ample natural light creating a warm and inviting environment.\n\nThe visual elements that contribute to this emotional atmosphere include the elephant's posture, which appears calm and composed, reinforcing a sense of trust and harmony between the animal and its trainer. The audience's varied expressions of interest and amusement convey a collective sense of delight, which is contagious and uplifting. The open-air venue, with its large canopy providing shade, adds to the relaxed and festive ambiance, suggesting a family-friendly event. The overall tone is decidedly positive, as the image captures a moment of shared joy and connection between humans and animals, highlighting the entertainment and wonder that such performances can evoke.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 226,
-            "total_tokens": 534
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8544.478546,
-            "prompt_eval_duration_ms": 79.308085,
-            "generation_duration_ms": 8421.381509,
-            "load_duration_ms": 40.804577,
-            "tokens_per_second": 26.836451924006997
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 40,\n      \"location\": \"center, right, middle, background\",\n      \"color\": [\"various\"],\n      \"size\": \"small\",\n      \"description\": \"Audience watching a performance, some standing, some sitting\"\n    }\n  },\n  \"animal\": {\n    \"elephant\": {\n      \"count\": 1,\n      \"location\": \"left, center, foreground\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Performing on a platform, wearing a harness\"\n    }\n  },\n  \"man-made\": {\n    \"platform\": {\n      \"count\": 1,\n      \"location\": \"center, middle, foreground\",\n      \"color\": [\"silver\"],\n      \"size\": \"medium\",\n      \"description\": \"Circular, metallic, supporting the elephant\"\n    },\n    \"roof\": {\n      \"count\": 1,\n      \"location\": \"top, center, background\",\n      \"color\": [\"beige\"],\n      \"size\": \"large\",\n      \"description\": \"Canopy-like structure providing shade\"\n    },\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"center, middle, background\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Separating the audience from the performance area\"\n    },\n    \"seating\": {\n      \"count\": 1,\n      \"location\": \"center, right, middle, background\",\n      \"color\": [\"various\"],\n      \"size\": \"medium\",\n      \"description\": \"Rows of chairs or benches for the audience\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 10,\n      \"location\": \"center, right, top, background\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Scattered trees in the background\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 40,
-                "location": "center, right, middle, background",
-                "color": [
-                  "various"
-                ],
-                "size": "small",
-                "description": "Audience watching a performance, some standing, some sitting"
-              }
-            },
-            "animal": {
-              "elephant": {
-                "count": 1,
-                "location": "left, center, foreground",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "Performing on a platform, wearing a harness"
-              }
-            },
-            "man-made": {
-              "platform": {
-                "count": 1,
-                "location": "center, middle, foreground",
-                "color": [
-                  "silver"
-                ],
-                "size": "medium",
-                "description": "Circular, metallic, supporting the elephant"
-              },
-              "roof": {
-                "count": 1,
-                "location": "top, center, background",
-                "color": [
-                  "beige"
-                ],
-                "size": "large",
-                "description": "Canopy-like structure providing shade"
-              },
-              "fence": {
-                "count": 1,
-                "location": "center, middle, background",
-                "color": [
-                  "black"
-                ],
-                "size": "medium",
-                "description": "Separating the audience from the performance area"
-              },
-              "seating": {
-                "count": 1,
-                "location": "center, right, middle, background",
-                "color": [
-                  "various"
-                ],
-                "size": "medium",
-                "description": "Rows of chairs or benches for the audience"
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 10,
-                "location": "center, right, top, background",
-                "color": [
-                  "green"
-                ],
-                "size": "small",
-                "description": "Scattered trees in the background"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 420,
-            "total_tokens": 906
-          },
-          "performance_metrics": {
-            "total_duration_ms": 15757.841982,
-            "prompt_eval_duration_ms": 140.333219,
-            "generation_duration_ms": 15575.602723,
-            "load_duration_ms": 39.20637,
-            "tokens_per_second": 26.965248630783275
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3214,
-        "total_time_ms": 60435.370228,
-        "average_speed": 26.864443627210733
       }
     },
     {

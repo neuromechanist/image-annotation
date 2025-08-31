@@ -7,6 +7,353 @@
   "timestamp": "2025-08-30T19:32:57.945205+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a candid moment of a woman seated on a wooden bench outside a building with large glass windows reflecting the street scene behind her. The woman, with vibrant red hair styled in a bob, is dressed casually in a black t-shirt, dark pants with a subtle pink stripe down the side, and black sneakers with pink accents. She is engaged in a phone conversation, her body language relaxed yet attentive. The bench, made of polished wood, contrasts with the woman's dark attire and the bright red of her hair. The setting appears to be a public space, possibly a bus stop or a waiting area, given the presence of the bench and the reflective windows. The lighting is natural, suggesting the photo was taken during the day, with soft shadows indicating either morning or late afternoon light. The overall composition is balanced, with the woman as the focal point, and the reflections in the glass adding depth and context to the scene. The colors are muted yet distinct, with the red hair and the black and pink of her clothing standing out against the more subdued tones of the bench and the building's exterior.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 223,
+            "total_tokens": 520
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1717.505348,
+            "prompt_eval_duration_ms": 79.343059,
+            "generation_duration_ms": 1598.800679,
+            "load_duration_ms": 36.650958,
+            "tokens_per_second": 139.47955047121917
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, a woman sits on a wooden bench, her figure framed by the bench's slatted backrest and armrests. She is casually dressed in a black T-shirt and dark pants with a pink stripe, paired with black shoes. Her posture is relaxed, with one arm resting on the bench and the other holding a phone to her ear, suggesting she is engaged in a conversation. A small, dark object, possibly a wallet or phone case, rests on the bench beside her. The bench is positioned on a concrete surface, indicating an urban setting. The background, slightly out of focus, reveals a storefront with large windows reflecting the street and parked cars, suggesting a commercial area. The white brick wall and the reflection of the cars and buildings in the windows create a layered effect, with the woman and bench in the immediate foreground, the storefront in the mid-ground, and the street and parked cars in the background. This arrangement creates a sense of depth and situates the woman within a public, everyday urban environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 208,
+            "total_tokens": 511
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1585.651264,
+            "prompt_eval_duration_ms": 30.689387,
+            "generation_duration_ms": 1511.842802,
+            "load_duration_ms": 39.876668,
+            "tokens_per_second": 137.58044138242357
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a person is seated on a wooden bench, engaged in a phone conversation, holding the phone to their ear with their right hand while gesturing with their left. The individual is dressed in a black T-shirt, dark pants with a light stripe down the side, and black shoes with pink accents. Their red hair is styled in a short, vibrant cut. The bench is positioned in front of a glass storefront, reflecting the scene behind it, including a parked car and a portion of a building with a white brick facade. The person appears relaxed yet focused on their call, with a small object, possibly a book or a folder, resting on the bench beside them. The setting suggests a casual urban environment, where the person is likely taking a break or waiting, perhaps in a caf\u00e9 or a public space, while maintaining a connection through their phone.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 174,
+            "total_tokens": 480
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1330.345473,
+            "prompt_eval_duration_ms": 31.253623,
+            "generation_duration_ms": 1258.744603,
+            "load_duration_ms": 37.702542,
+            "tokens_per_second": 138.23296607214925
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of quiet contemplation and subtle melancholy. The woman's posture, leaning slightly back with her legs crossed, suggests a relaxed yet somewhat introspective mood. Her expression, though not fully visible, seems to carry a hint of weariness or perhaps a reflective thoughtfulness, which contributes to the overall subdued tone. The muted colors of her clothing and the neutral tones of the bench and background further enhance this calm, almost somber atmosphere. The presence of the bottle on the bench adds an element of everyday life, perhaps hinting at a moment of pause or rest during a routine activity. The large window in the background, reflecting the street and cars, subtly introduces a sense of the outside world, which might contrast with the woman's internal focus, adding a layer of introspection to the scene. Overall, the image leans towards a neutral tone, with elements that suggest a quiet moment of reflection or rest, evoking feelings of calmness and introspection.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 198,
+            "total_tokens": 506
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1505.30245,
+            "prompt_eval_duration_ms": 31.050218,
+            "generation_duration_ms": 1432.346884,
+            "load_duration_ms": 39.082139,
+            "tokens_per_second": 138.23467081316315
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"pink\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"sitting on a bench, wearing black shirt and pink sneakers, holding a phone to ear\"\n    }\n  },\n  \"man-made\": {\n    \"bench\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"wooden bench with armrests\"\n    },\n    \"car\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"partially visible car parked behind the bench\"\n    },\n    \"window\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"transparent\"],\n      \"size\": \"large\",\n      \"description\": \"large window with reflections\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\", \"blue\"],\n      \"size\": \"large\",\n      \"description\": \"building with white brick wall and blue trim\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black",
+                  "pink",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "sitting on a bench, wearing black shirt and pink sneakers, holding a phone to ear"
+              }
+            },
+            "man-made": {
+              "bench": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "wooden bench with armrests"
+              },
+              "car": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "partially visible car parked behind the bench"
+              },
+              "window": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "transparent"
+                ],
+                "size": "large",
+                "description": "large window with reflections"
+              },
+              "building": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "white",
+                  "blue"
+                ],
+                "size": "large",
+                "description": "building with white brick wall and blue trim"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 281,
+            "total_tokens": 767
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2096.551868,
+            "prompt_eval_duration_ms": 46.590174,
+            "generation_duration_ms": 2006.167874,
+            "load_duration_ms": 41.183454,
+            "tokens_per_second": 140.068038992035
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2784,
+        "total_time_ms": 8235.356403,
+        "average_speed": 138.71913354619804
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a person sitting on a wooden bench outside a building, likely a storefront or public space. The setting appears to be an urban or suburban environment, as indicated by the visible parking lot and cars in the background. The individual, who has vibrant red hair, is dressed casually in a black T-shirt, dark pants with a light-colored stripe down the side, and colorful sneakers with pink and black accents. They are holding a phone to their ear, suggesting they are engaged in a conversation. The bench is simple and functional, made of light-colored wood, and positioned near a glass storefront with white brick walls visible in the background. The lighting is natural, likely from daylight, casting soft shadows and giving the scene a calm, everyday atmosphere. The overall composition is straightforward, focusing on the person and their immediate surroundings. The colors are muted, with the red hair and colorful sneakers providing a pop of vibrancy against the more subdued tones of the bench, building, and pavement. The scene conveys a sense of quiet contemplation or waiting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 211,
+            "total_tokens": 508
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11257.302374,
+            "prompt_eval_duration_ms": 3403.500457,
+            "generation_duration_ms": 7811.756456,
+            "load_duration_ms": 37.880025,
+            "tokens_per_second": 27.01057069411535
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a wooden bench, which is the most prominent element closest to the viewer. On the bench sits a person with red hair, dressed in a black shirt, black pants with a white stripe, and black and pink sneakers. The individual is holding a phone to their ear, suggesting they are engaged in a conversation. The bench is positioned on a paved surface, likely a sidewalk or outdoor seating area, and the person's relaxed posture indicates they are taking a break or waiting for someone.\n\nIn the background, the setting appears to be an urban or commercial environment. Behind the bench, there is a glass storefront or window, through which parts of a building and parked cars are visible. The building has a white brick facade, and the cars parked outside suggest a parking lot or street adjacent to the storefront. The background also includes some reflections on the glass, adding depth and context to the scene. The overall lighting indicates it is daytime, with natural light illuminating the scene.\n\nThe relationship between the foreground and background is one of contrast and context. The person on the bench is the focal point in the foreground, drawing the viewer's attention. The background provides the setting, situating the individual in an urban or commercial space. The bench serves as a transitional element, bridging the immediate foreground and the broader setting, while the reflections on the glass add a layer of depth, connecting the person to the environment around them. The overall composition creates a sense of everyday life, with the individual engaged in a personal activity within a public space.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 314,
+            "total_tokens": 617
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11796.675975,
+            "prompt_eval_duration_ms": 72.531154,
+            "generation_duration_ms": 11683.462369,
+            "load_duration_ms": 38.311574,
+            "tokens_per_second": 26.875594758035376
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a person sitting on a wooden bench outside a building, likely in a public space such as a bus stop or a shopping area. The individual, who appears to be a woman with short, vibrant red hair, is dressed casually in a black T-shirt, black pants with a white stripe down the side, and black athletic shoes with pink accents. She is holding a phone to her ear with her right hand, suggesting she is engaged in a conversation. Her left hand rests on her lap, and she appears relaxed yet attentive, possibly waiting for someone or something.\n\nNear her feet, there is a black bag, which could be a purse or a small backpack, indicating she may be carrying personal items. A bottle, possibly a beverage, is placed on the bench next to her, suggesting she might be taking a break or waiting for an extended period. The bench is positioned against a glass window, which reflects the exterior environment, including parked cars and parts of the building. The setting appears calm and quiet, with no other people or animals visible in the immediate vicinity.\n\nThe woman's posture and the objects around her suggest a moment of pause or anticipation. The phone indicates communication, while the bag and bottle imply preparedness for a longer wait. The overall scene conveys a sense of everyday life, with the individual engaged in a common activity of waiting and talking on the phone. There are no animals or other people interacting with her in the image, emphasizing her solitary presence in the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 301,
+            "total_tokens": 607
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11364.465912,
+            "prompt_eval_duration_ms": 73.787412,
+            "generation_duration_ms": 11246.792899,
+            "load_duration_ms": 40.829215,
+            "tokens_per_second": 26.763185087791843
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood that is predominantly neutral with a hint of introspection or contemplation. The individual sitting on the bench appears relaxed but slightly withdrawn, as indicated by their posture\u2014leaning back with one hand resting on the bench and the other holding a phone to their ear. The person's facial expression is not clearly visible, but the overall body language suggests a state of calmness or perhaps mild distraction. The setting, a simple outdoor bench near a building with large windows, contributes to the neutral tone, as it is neither particularly inviting nor hostile. The lighting is natural and soft, which adds to the calm atmosphere without introducing any strong emotional cues.\n\nThe visual elements that contribute to this mood include the person's casual attire, which suggests comfort and a lack of urgency, and the plain, unadorned bench, which reinforces the simplicity of the scene. The background, with its clean lines and neutral colors, further emphasizes a sense of ordinariness and quietude. The presence of the phone in the person's hand hints at a connection to the outside world, yet the individual's relaxed posture suggests they are not deeply engaged in the conversation. Overall, the image evokes feelings of solitude, quiet reflection, and a moment of pause in an otherwise mundane setting. The tone is neither overtly positive nor negative, but rather a balanced neutrality that invites the viewer to interpret the scene as a quiet, reflective moment in everyday life.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 290,
+            "total_tokens": 598
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10936.483384,
+            "prompt_eval_duration_ms": 75.369308,
+            "generation_duration_ms": 10819.863333,
+            "load_duration_ms": 38.614526,
+            "tokens_per_second": 26.802556656655323
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\", \"red\"],\n      \"size\": \"medium\",\n      \"description\": \"Sitting on a bench, wearing a black shirt, black pants with a pink stripe, and pink shoes. Red hair, holding a phone to their ear.\"\n    }\n  },\n  \"man-made\": {\n    \"bench\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"Wooden bench with slats, positioned outdoors.\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"large\",\n      \"description\": \"Brick wall and glass windows, part of a building structure.\"\n    },\n    \"car\": {\n      \"count\": 1,\n      \"location\": \"background, center\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Partially visible car in the background.\"\n    },\n    \"shoes\": {\n      \"count\": 2,\n      \"location\": \"foreground, bottom\",\n      \"color\": [\"pink\", \"black\"],\n      \"size\": \"small\",\n      \"description\": \"Pink and black sneakers worn by the person.\"\n    },\n    \"handbag\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Black handbag placed on the bench.\"\n    },\n    \"phone\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Held to the person's ear.\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"background, top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"Visible through the windows in the background.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "black",
+                  "red"
+                ],
+                "size": "medium",
+                "description": "Sitting on a bench, wearing a black shirt, black pants with a pink stripe, and pink shoes. Red hair, holding a phone to their ear."
+              }
+            },
+            "man-made": {
+              "bench": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "Wooden bench with slats, positioned outdoors."
+              },
+              "building": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "white",
+                  "black"
+                ],
+                "size": "large",
+                "description": "Brick wall and glass windows, part of a building structure."
+              },
+              "car": {
+                "count": 1,
+                "location": "background, center",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "Partially visible car in the background."
+              },
+              "shoes": {
+                "count": 2,
+                "location": "foreground, bottom",
+                "color": [
+                  "pink",
+                  "black"
+                ],
+                "size": "small",
+                "description": "Pink and black sneakers worn by the person."
+              },
+              "handbag": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "Black handbag placed on the bench."
+              },
+              "phone": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "Held to the person's ear."
+              }
+            },
+            "natural": {
+              "sky": {
+                "count": 1,
+                "location": "background, top",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "Visible through the windows in the background."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 470,
+            "total_tokens": 956
+          },
+          "performance_metrics": {
+            "total_duration_ms": 17611.434818,
+            "prompt_eval_duration_ms": 136.330414,
+            "generation_duration_ms": 17432.238892,
+            "load_duration_ms": 39.812615,
+            "tokens_per_second": 26.961539645701638
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3286,
+        "total_time_ms": 62966.362463,
+        "average_speed": 26.882689368459904
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -497,353 +844,6 @@
         "total_tokens": 2992,
         "total_time_ms": 29567.943418000003,
         "average_speed": 42.265289976306825
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a candid moment of a woman seated on a wooden bench outside a building with large glass windows reflecting the street scene behind her. The woman, with vibrant red hair styled in a bob, is dressed casually in a black t-shirt, dark pants with a subtle pink stripe down the side, and black sneakers with pink accents. She is engaged in a phone conversation, her body language relaxed yet attentive. The bench, made of polished wood, contrasts with the woman's dark attire and the bright red of her hair. The setting appears to be a public space, possibly a bus stop or a waiting area, given the presence of the bench and the reflective windows. The lighting is natural, suggesting the photo was taken during the day, with soft shadows indicating either morning or late afternoon light. The overall composition is balanced, with the woman as the focal point, and the reflections in the glass adding depth and context to the scene. The colors are muted yet distinct, with the red hair and the black and pink of her clothing standing out against the more subdued tones of the bench and the building's exterior.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 223,
-            "total_tokens": 520
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1717.505348,
-            "prompt_eval_duration_ms": 79.343059,
-            "generation_duration_ms": 1598.800679,
-            "load_duration_ms": 36.650958,
-            "tokens_per_second": 139.47955047121917
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, a woman sits on a wooden bench, her figure framed by the bench's slatted backrest and armrests. She is casually dressed in a black T-shirt and dark pants with a pink stripe, paired with black shoes. Her posture is relaxed, with one arm resting on the bench and the other holding a phone to her ear, suggesting she is engaged in a conversation. A small, dark object, possibly a wallet or phone case, rests on the bench beside her. The bench is positioned on a concrete surface, indicating an urban setting. The background, slightly out of focus, reveals a storefront with large windows reflecting the street and parked cars, suggesting a commercial area. The white brick wall and the reflection of the cars and buildings in the windows create a layered effect, with the woman and bench in the immediate foreground, the storefront in the mid-ground, and the street and parked cars in the background. This arrangement creates a sense of depth and situates the woman within a public, everyday urban environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 208,
-            "total_tokens": 511
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1585.651264,
-            "prompt_eval_duration_ms": 30.689387,
-            "generation_duration_ms": 1511.842802,
-            "load_duration_ms": 39.876668,
-            "tokens_per_second": 137.58044138242357
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a person is seated on a wooden bench, engaged in a phone conversation, holding the phone to their ear with their right hand while gesturing with their left. The individual is dressed in a black T-shirt, dark pants with a light stripe down the side, and black shoes with pink accents. Their red hair is styled in a short, vibrant cut. The bench is positioned in front of a glass storefront, reflecting the scene behind it, including a parked car and a portion of a building with a white brick facade. The person appears relaxed yet focused on their call, with a small object, possibly a book or a folder, resting on the bench beside them. The setting suggests a casual urban environment, where the person is likely taking a break or waiting, perhaps in a caf\u00e9 or a public space, while maintaining a connection through their phone.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 174,
-            "total_tokens": 480
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1330.345473,
-            "prompt_eval_duration_ms": 31.253623,
-            "generation_duration_ms": 1258.744603,
-            "load_duration_ms": 37.702542,
-            "tokens_per_second": 138.23296607214925
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of quiet contemplation and subtle melancholy. The woman's posture, leaning slightly back with her legs crossed, suggests a relaxed yet somewhat introspective mood. Her expression, though not fully visible, seems to carry a hint of weariness or perhaps a reflective thoughtfulness, which contributes to the overall subdued tone. The muted colors of her clothing and the neutral tones of the bench and background further enhance this calm, almost somber atmosphere. The presence of the bottle on the bench adds an element of everyday life, perhaps hinting at a moment of pause or rest during a routine activity. The large window in the background, reflecting the street and cars, subtly introduces a sense of the outside world, which might contrast with the woman's internal focus, adding a layer of introspection to the scene. Overall, the image leans towards a neutral tone, with elements that suggest a quiet moment of reflection or rest, evoking feelings of calmness and introspection.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 198,
-            "total_tokens": 506
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1505.30245,
-            "prompt_eval_duration_ms": 31.050218,
-            "generation_duration_ms": 1432.346884,
-            "load_duration_ms": 39.082139,
-            "tokens_per_second": 138.23467081316315
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"pink\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"sitting on a bench, wearing black shirt and pink sneakers, holding a phone to ear\"\n    }\n  },\n  \"man-made\": {\n    \"bench\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"wooden bench with armrests\"\n    },\n    \"car\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"partially visible car parked behind the bench\"\n    },\n    \"window\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"transparent\"],\n      \"size\": \"large\",\n      \"description\": \"large window with reflections\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\", \"blue\"],\n      \"size\": \"large\",\n      \"description\": \"building with white brick wall and blue trim\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black",
-                  "pink",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "sitting on a bench, wearing black shirt and pink sneakers, holding a phone to ear"
-              }
-            },
-            "man-made": {
-              "bench": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "wooden bench with armrests"
-              },
-              "car": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "partially visible car parked behind the bench"
-              },
-              "window": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "transparent"
-                ],
-                "size": "large",
-                "description": "large window with reflections"
-              },
-              "building": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "white",
-                  "blue"
-                ],
-                "size": "large",
-                "description": "building with white brick wall and blue trim"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 281,
-            "total_tokens": 767
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2096.551868,
-            "prompt_eval_duration_ms": 46.590174,
-            "generation_duration_ms": 2006.167874,
-            "load_duration_ms": 41.183454,
-            "tokens_per_second": 140.068038992035
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2784,
-        "total_time_ms": 8235.356403,
-        "average_speed": 138.71913354619804
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a person sitting on a wooden bench outside a building, likely a storefront or public space. The setting appears to be an urban or suburban environment, as indicated by the visible parking lot and cars in the background. The individual, who has vibrant red hair, is dressed casually in a black T-shirt, dark pants with a light-colored stripe down the side, and colorful sneakers with pink and black accents. They are holding a phone to their ear, suggesting they are engaged in a conversation. The bench is simple and functional, made of light-colored wood, and positioned near a glass storefront with white brick walls visible in the background. The lighting is natural, likely from daylight, casting soft shadows and giving the scene a calm, everyday atmosphere. The overall composition is straightforward, focusing on the person and their immediate surroundings. The colors are muted, with the red hair and colorful sneakers providing a pop of vibrancy against the more subdued tones of the bench, building, and pavement. The scene conveys a sense of quiet contemplation or waiting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 211,
-            "total_tokens": 508
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11257.302374,
-            "prompt_eval_duration_ms": 3403.500457,
-            "generation_duration_ms": 7811.756456,
-            "load_duration_ms": 37.880025,
-            "tokens_per_second": 27.01057069411535
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a wooden bench, which is the most prominent element closest to the viewer. On the bench sits a person with red hair, dressed in a black shirt, black pants with a white stripe, and black and pink sneakers. The individual is holding a phone to their ear, suggesting they are engaged in a conversation. The bench is positioned on a paved surface, likely a sidewalk or outdoor seating area, and the person's relaxed posture indicates they are taking a break or waiting for someone.\n\nIn the background, the setting appears to be an urban or commercial environment. Behind the bench, there is a glass storefront or window, through which parts of a building and parked cars are visible. The building has a white brick facade, and the cars parked outside suggest a parking lot or street adjacent to the storefront. The background also includes some reflections on the glass, adding depth and context to the scene. The overall lighting indicates it is daytime, with natural light illuminating the scene.\n\nThe relationship between the foreground and background is one of contrast and context. The person on the bench is the focal point in the foreground, drawing the viewer's attention. The background provides the setting, situating the individual in an urban or commercial space. The bench serves as a transitional element, bridging the immediate foreground and the broader setting, while the reflections on the glass add a layer of depth, connecting the person to the environment around them. The overall composition creates a sense of everyday life, with the individual engaged in a personal activity within a public space.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 314,
-            "total_tokens": 617
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11796.675975,
-            "prompt_eval_duration_ms": 72.531154,
-            "generation_duration_ms": 11683.462369,
-            "load_duration_ms": 38.311574,
-            "tokens_per_second": 26.875594758035376
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a person sitting on a wooden bench outside a building, likely in a public space such as a bus stop or a shopping area. The individual, who appears to be a woman with short, vibrant red hair, is dressed casually in a black T-shirt, black pants with a white stripe down the side, and black athletic shoes with pink accents. She is holding a phone to her ear with her right hand, suggesting she is engaged in a conversation. Her left hand rests on her lap, and she appears relaxed yet attentive, possibly waiting for someone or something.\n\nNear her feet, there is a black bag, which could be a purse or a small backpack, indicating she may be carrying personal items. A bottle, possibly a beverage, is placed on the bench next to her, suggesting she might be taking a break or waiting for an extended period. The bench is positioned against a glass window, which reflects the exterior environment, including parked cars and parts of the building. The setting appears calm and quiet, with no other people or animals visible in the immediate vicinity.\n\nThe woman's posture and the objects around her suggest a moment of pause or anticipation. The phone indicates communication, while the bag and bottle imply preparedness for a longer wait. The overall scene conveys a sense of everyday life, with the individual engaged in a common activity of waiting and talking on the phone. There are no animals or other people interacting with her in the image, emphasizing her solitary presence in the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 301,
-            "total_tokens": 607
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11364.465912,
-            "prompt_eval_duration_ms": 73.787412,
-            "generation_duration_ms": 11246.792899,
-            "load_duration_ms": 40.829215,
-            "tokens_per_second": 26.763185087791843
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood that is predominantly neutral with a hint of introspection or contemplation. The individual sitting on the bench appears relaxed but slightly withdrawn, as indicated by their posture\u2014leaning back with one hand resting on the bench and the other holding a phone to their ear. The person's facial expression is not clearly visible, but the overall body language suggests a state of calmness or perhaps mild distraction. The setting, a simple outdoor bench near a building with large windows, contributes to the neutral tone, as it is neither particularly inviting nor hostile. The lighting is natural and soft, which adds to the calm atmosphere without introducing any strong emotional cues.\n\nThe visual elements that contribute to this mood include the person's casual attire, which suggests comfort and a lack of urgency, and the plain, unadorned bench, which reinforces the simplicity of the scene. The background, with its clean lines and neutral colors, further emphasizes a sense of ordinariness and quietude. The presence of the phone in the person's hand hints at a connection to the outside world, yet the individual's relaxed posture suggests they are not deeply engaged in the conversation. Overall, the image evokes feelings of solitude, quiet reflection, and a moment of pause in an otherwise mundane setting. The tone is neither overtly positive nor negative, but rather a balanced neutrality that invites the viewer to interpret the scene as a quiet, reflective moment in everyday life.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 290,
-            "total_tokens": 598
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10936.483384,
-            "prompt_eval_duration_ms": 75.369308,
-            "generation_duration_ms": 10819.863333,
-            "load_duration_ms": 38.614526,
-            "tokens_per_second": 26.802556656655323
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\", \"red\"],\n      \"size\": \"medium\",\n      \"description\": \"Sitting on a bench, wearing a black shirt, black pants with a pink stripe, and pink shoes. Red hair, holding a phone to their ear.\"\n    }\n  },\n  \"man-made\": {\n    \"bench\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"Wooden bench with slats, positioned outdoors.\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"large\",\n      \"description\": \"Brick wall and glass windows, part of a building structure.\"\n    },\n    \"car\": {\n      \"count\": 1,\n      \"location\": \"background, center\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Partially visible car in the background.\"\n    },\n    \"shoes\": {\n      \"count\": 2,\n      \"location\": \"foreground, bottom\",\n      \"color\": [\"pink\", \"black\"],\n      \"size\": \"small\",\n      \"description\": \"Pink and black sneakers worn by the person.\"\n    },\n    \"handbag\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Black handbag placed on the bench.\"\n    },\n    \"phone\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Held to the person's ear.\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"background, top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"Visible through the windows in the background.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "black",
-                  "red"
-                ],
-                "size": "medium",
-                "description": "Sitting on a bench, wearing a black shirt, black pants with a pink stripe, and pink shoes. Red hair, holding a phone to their ear."
-              }
-            },
-            "man-made": {
-              "bench": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "Wooden bench with slats, positioned outdoors."
-              },
-              "building": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "white",
-                  "black"
-                ],
-                "size": "large",
-                "description": "Brick wall and glass windows, part of a building structure."
-              },
-              "car": {
-                "count": 1,
-                "location": "background, center",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "Partially visible car in the background."
-              },
-              "shoes": {
-                "count": 2,
-                "location": "foreground, bottom",
-                "color": [
-                  "pink",
-                  "black"
-                ],
-                "size": "small",
-                "description": "Pink and black sneakers worn by the person."
-              },
-              "handbag": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "Black handbag placed on the bench."
-              },
-              "phone": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "Held to the person's ear."
-              }
-            },
-            "natural": {
-              "sky": {
-                "count": 1,
-                "location": "background, top",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "Visible through the windows in the background."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 470,
-            "total_tokens": 956
-          },
-          "performance_metrics": {
-            "total_duration_ms": 17611.434818,
-            "prompt_eval_duration_ms": 136.330414,
-            "generation_duration_ms": 17432.238892,
-            "load_duration_ms": 39.812615,
-            "tokens_per_second": 26.961539645701638
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3286,
-        "total_time_ms": 62966.362463,
-        "average_speed": 26.882689368459904
       }
     },
     {

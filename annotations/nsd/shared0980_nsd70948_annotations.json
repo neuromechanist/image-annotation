@@ -7,6 +7,353 @@
   "timestamp": "2025-08-31T00:43:31.166198+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a lively scene at a ski resort on a bright, sunny day. The setting is a snowy mountain slope, with a clear blue sky dotted with fluffy white clouds. The main elements include a group of people engaged in winter sports, predominantly snowboarding and skiing. The foreground features a snowboarder in a vibrant red jacket and pink pants, standing confidently on their snowboard, casting a long shadow on the pristine white snow. Surrounding this individual are other skiers and snowboarders, some in motion, others stationary, all dressed in colorful winter gear that contrasts beautifully with the white snow. The background reveals a gently sloping mountain dotted with sparse evergreen trees, and a ski lift is visible on the right side of the image, adding to the recreational atmosphere. The lighting is natural and bright, suggesting it is midday, with the sun casting sharp shadows and enhancing the vividness of the scene. The overall composition is dynamic, with the group of people in the center and the expansive mountain landscape in the background, creating a sense of depth and activity.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 217,
+            "total_tokens": 514
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1667.921996,
+            "prompt_eval_duration_ms": 79.030133,
+            "generation_duration_ms": 1542.168409,
+            "load_duration_ms": 39.962695,
+            "tokens_per_second": 140.71096174295968
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, a snowboarder in a bright red jacket and black pants stands prominently on a snowy slope, their shadow stretching out across the pristine white snow. The snowboarder is surrounded by a group of skiers and snowboarders, all dressed in colorful winter gear, some in motion and others standing still, creating a dynamic scene of winter sports activity. The snow-covered ground is marked with ski tracks and snowboard paths, indicating the area is well-used for winter sports. The background features a vast expanse of snow-covered hills under a clear blue sky dotted with fluffy white clouds, providing a serene and expansive setting that contrasts with the lively activity in the foreground. The relationship between the foreground and background is one of depth and scale, with the foreground capturing the immediate action and the background offering a broader, tranquil context for the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 174,
+            "total_tokens": 477
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1321.594277,
+            "prompt_eval_duration_ms": 29.697152,
+            "generation_duration_ms": 1248.60491,
+            "load_duration_ms": 40.142272,
+            "tokens_per_second": 139.35553080597768
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a group of people is gathered on a snowy slope under a clear blue sky, preparing for or engaging in snowboarding and skiing activities. The individuals are dressed in colorful winter gear, with some wearing jackets and hats, while others have on helmets and goggles, indicating they are either learning or experienced in snow sports. The snowboarder in the foreground, wearing a bright red jacket and black pants, is adjusting their stance, possibly preparing to descend the slope. Behind them, a variety of skiers and snowboarders are either standing in a line, waiting for their turn, or casually chatting, creating a sense of community and shared interest. The ski lift in the background suggests that this is a well-equipped ski resort, providing transportation for visitors to different parts of the mountain. The snow-covered landscape and the bright sunlight add to the vibrant and dynamic atmosphere of the scene, where people are enjoying the winter sports and the beautiful natural environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 192,
+            "total_tokens": 498
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1456.252695,
+            "prompt_eval_duration_ms": 30.856773,
+            "generation_duration_ms": 1381.322502,
+            "load_duration_ms": 40.866102,
+            "tokens_per_second": 138.99722890346428
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of exhilaration and joy, characteristic of a positive mood. The bright blue sky and the pristine white snow create a serene and inviting atmosphere, suggesting a perfect day for outdoor activities. The presence of people engaged in snow sports, such as skiing and snowboarding, conveys a sense of adventure and excitement. The colorful attire of the individuals, especially the person in the red snowsuit, adds vibrancy and energy to the scene, enhancing the overall positive tone. The shadows cast by the individuals and the ski lift add depth and a dynamic quality to the image, further emphasizing the lively and active nature of the setting. The expansive snowy landscape in the background contributes to a feeling of freedom and vastness, which can evoke a sense of liberation and awe. Overall, the image is filled with positive emotions, reflecting the joy and enthusiasm typically associated with winter sports and outdoor recreation.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 181,
+            "total_tokens": 489
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1367.970559,
+            "prompt_eval_duration_ms": 29.610084,
+            "generation_duration_ms": 1297.7496,
+            "load_duration_ms": 37.637505,
+            "tokens_per_second": 139.4722063485899
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 10,\n      \"location\": \"center\",\n      \"color\": [\"red\", \"black\", \"white\", \"green\", \"blue\"],\n      \"size\": \"small\",\n      \"description\": \"people snowboarding and skiing\"\n    }\n  },\n  \"man-made\": {\n    \"ski lift\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"green\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"partially visible ski lift\"\n    }\n  },\n  \"natural\": {\n    \"snow\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"snow-covered landscape\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"clear blue sky with scattered clouds\"\n    },\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"trees on the left side of the image\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 10,
+                "location": "center",
+                "color": [
+                  "red",
+                  "black",
+                  "white",
+                  "green",
+                  "blue"
+                ],
+                "size": "small",
+                "description": "people snowboarding and skiing"
+              }
+            },
+            "man-made": {
+              "ski lift": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "green",
+                  "white"
+                ],
+                "size": "small",
+                "description": "partially visible ski lift"
+              }
+            },
+            "natural": {
+              "snow": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "snow-covered landscape"
+              },
+              "sky": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "blue",
+                  "white"
+                ],
+                "size": "large",
+                "description": "clear blue sky with scattered clouds"
+              },
+              "trees": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "brown"
+                ],
+                "size": "small",
+                "description": "trees on the left side of the image"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 281,
+            "total_tokens": 767
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2080.161125,
+            "prompt_eval_duration_ms": 43.845647,
+            "generation_duration_ms": 1993.075828,
+            "load_duration_ms": 39.418792,
+            "tokens_per_second": 140.98811297208707
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2745,
+        "total_time_ms": 7893.900652,
+        "average_speed": 139.90480815461572
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a vibrant winter scene at a ski resort on a bright, sunny day. The setting is a snowy mountain slope, with a clear blue sky dotted with a few fluffy white clouds. The foreground features a group of people dressed in colorful winter gear, engaging in snowboarding and skiing activities. The main elements include snow-covered terrain, skiers and snowboarders in various poses, and a ski lift visible in the background.\n\nThe individuals are wearing bright, eye-catching outfits, with colors like red, pink, orange, black, and white standing out against the white snow. The person in the foreground, wearing a red snowsuit and helmet, is preparing to snowboard, adding a focal point to the composition. The lighting is natural and bright, casting sharp shadows on the snow, which enhances the depth and texture of the scene. The shadows of the people and ski lift poles stretch across the snow, contributing to the dynamic feel of the image.\n\nThe overall composition is balanced, with the group of people scattered across the frame, creating a sense of activity and movement. The expansive snowy landscape in the background, dotted with trees and ski trails, adds a sense of scale and openness. The clear blue sky and bright sunlight create a cheerful and energetic atmosphere, emphasizing the excitement and joy of winter sports. The image captures the essence of a lively day at a ski resort, blending the natural beauty of the mountain with the vibrant energy of its visitors.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 292,
+            "total_tokens": 589
+          },
+          "performance_metrics": {
+            "total_duration_ms": 14427.595104,
+            "prompt_eval_duration_ms": 3488.773566,
+            "generation_duration_ms": 10893.727572,
+            "load_duration_ms": 39.20847,
+            "tokens_per_second": 26.80441548313762
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a group of snowboarders and skiers, primarily focused on the central figure in a bright red snowsuit and helmet, standing on a snowboard. This individual is the most prominent subject, drawing immediate attention due to their vibrant attire and central positioning. Surrounding this person are other individuals in various winter sports gear, including jackets, helmets, and ski poles, indicating a lively and active ski resort environment. The snow-covered ground is textured with ski tracks, suggesting recent activity and movement.\n\nIn the background, the scene transitions to a vast, snow-covered mountain slope dotted with trees, creating a serene and expansive setting. The slope is marked with ski trails, hinting at organized ski runs and the infrastructure of a well-maintained ski area. The sky above is clear and blue with scattered clouds, adding to the bright and open atmosphere. The distant horizon features a mix of snow and patches of greenery, indicating the natural landscape beyond the immediate ski area.\n\nThe foreground and background elements are intricately related, as the active participants in the foreground are clearly engaged in the recreational activities that the expansive, snow-covered mountain in the background provides. The contrast between the vibrant, human-centric foreground and the tranquil, natural background emphasizes the dynamic interaction between people and the environment, showcasing the allure of winter sports in a picturesque alpine setting. The clear sky and bright sunlight unify the scene, highlighting the harmony between the lively activity and the serene natural backdrop.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 299,
+            "total_tokens": 602
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11258.574394,
+            "prompt_eval_duration_ms": 73.491077,
+            "generation_duration_ms": 11141.417719,
+            "load_duration_ms": 40.448963,
+            "tokens_per_second": 26.83680008605196
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a lively ski resort scene on a bright, sunny day with clear blue skies and scattered clouds. The central focus is a group of people engaged in winter sports activities, primarily skiing and snowboarding. In the foreground, a person dressed in a bright red snowsuit and helmet is standing on a snowboard, appearing to prepare for a run or pause between runs. This individual is surrounded by other skiers and snowboarders, some of whom are standing still, possibly waiting for their turn or observing the surroundings, while others are actively skiing down the slope.\n\nThe people in the image are dressed in winter gear, including jackets, pants, helmets, and goggles, indicating a focus on safety and warmth. The individuals are spread across the snow-covered slope, with some closer to the camera and others further up the hill. The presence of ski lifts and marked trails suggests an organized and well-maintained ski area, designed to accommodate a variety of skill levels.\n\nThe relationships between the people are primarily social and recreational. They appear to be enjoying the shared experience of skiing and snowboarding, with some individuals possibly traveling in groups or families. The interactions are casual and friendly, with no visible signs of competition or conflict. The environment is peaceful yet active, with the sound of skis and snowboards likely adding to the ambiance.\n\nThe snow-covered landscape is expansive, with gentle slopes and scattered evergreen trees, providing a picturesque backdrop. The shadows cast by the people and objects indicate the sun is high in the sky, enhancing the brightness and vibrancy of the scene. The overall atmosphere is one of enjoyment and camaraderie, as individuals partake in the exhilarating and scenic activity of skiing and snowboarding.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 345,
+            "total_tokens": 651
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12938.121754,
+            "prompt_eval_duration_ms": 78.929774,
+            "generation_duration_ms": 12812.411391,
+            "load_duration_ms": 41.200261,
+            "tokens_per_second": 26.92701549080317
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a positive and lively mood, evoking feelings of excitement, adventure, and enjoyment. The bright, sunny day with a clear blue sky and scattered clouds creates a cheerful and invigorating atmosphere. The snow-covered landscape, with its pristine white slopes and distant trees, adds to the sense of tranquility and natural beauty, which is often associated with winter sports. The presence of numerous people engaged in snowboarding and skiing activities suggests a sense of community, fun, and shared enthusiasm for outdoor recreation. The colorful clothing of the individuals, particularly the vibrant red outfit of the person in the foreground, adds a playful and energetic touch to the scene. The overall composition, with people of various ages and skill levels, conveys inclusivity and the universal appeal of skiing and snowboarding. The shadows cast by the skiers and snowboarders, along with the bright sunlight, enhance the dynamic and energetic feel of the image. The image's tone is predominantly positive, as it captures the joy and exhilaration of a day spent in the mountains, surrounded by nature and fellow adventurers.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 219,
+            "total_tokens": 527
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8296.797471,
+            "prompt_eval_duration_ms": 72.322924,
+            "generation_duration_ms": 8180.706485,
+            "load_duration_ms": 40.850128,
+            "tokens_per_second": 26.770304056447273
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 15,\n      \"location\": \"center, foreground\",\n      \"color\": [\"red\", \"black\", \"white\", \"green\", \"blue\", \"orange\"],\n      \"size\": \"small\",\n      \"description\": \"People wearing winter clothing and ski gear, some standing and some skiing/snowboarding.\"\n    }\n  },\n  \"man-made\": {\n    \"ski lift\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"black\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A ski lift structure with a chair visible.\"\n    },\n    \"ski tracks\": {\n      \"count\": 1,\n      \"location\": \"center, foreground\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"Visible ski tracks in the snow.\"\n    },\n    \"ski poles\": {\n      \"count\": 2,\n      \"location\": \"center, foreground\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Ski poles held by individuals.\"\n    }\n  },\n  \"natural\": {\n    \"snow\": {\n      \"count\": 1,\n      \"location\": \"entire image\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"Covering the ground and slopes.\"\n    },\n    \"trees\": {\n      \"count\": 10,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Sparse trees on the snowy slope.\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Blue sky with scattered clouds.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 15,
+                "location": "center, foreground",
+                "color": [
+                  "red",
+                  "black",
+                  "white",
+                  "green",
+                  "blue",
+                  "orange"
+                ],
+                "size": "small",
+                "description": "People wearing winter clothing and ski gear, some standing and some skiing/snowboarding."
+              }
+            },
+            "man-made": {
+              "ski lift": {
+                "count": 1,
+                "location": "right, middle",
+                "color": [
+                  "black",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "A ski lift structure with a chair visible."
+              },
+              "ski tracks": {
+                "count": 1,
+                "location": "center, foreground",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "Visible ski tracks in the snow."
+              },
+              "ski poles": {
+                "count": 2,
+                "location": "center, foreground",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "Ski poles held by individuals."
+              }
+            },
+            "natural": {
+              "snow": {
+                "count": 1,
+                "location": "entire image",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "Covering the ground and slopes."
+              },
+              "trees": {
+                "count": 10,
+                "location": "background",
+                "color": [
+                  "green"
+                ],
+                "size": "small",
+                "description": "Sparse trees on the snowy slope."
+              },
+              "sky": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "blue",
+                  "white"
+                ],
+                "size": "large",
+                "description": "Blue sky with scattered clouds."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 405,
+            "total_tokens": 891
+          },
+          "performance_metrics": {
+            "total_duration_ms": 15309.377454,
+            "prompt_eval_duration_ms": 134.140583,
+            "generation_duration_ms": 15130.700561,
+            "load_duration_ms": 39.958031,
+            "tokens_per_second": 26.766771199207
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3260,
+        "total_time_ms": 62230.466176999995,
+        "average_speed": 26.821061263129405
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -570,353 +917,6 @@
         "total_tokens": 2928,
         "total_time_ms": 28462.111016,
         "average_speed": 41.691871624112984
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a lively scene at a ski resort on a bright, sunny day. The setting is a snowy mountain slope, with a clear blue sky dotted with fluffy white clouds. The main elements include a group of people engaged in winter sports, predominantly snowboarding and skiing. The foreground features a snowboarder in a vibrant red jacket and pink pants, standing confidently on their snowboard, casting a long shadow on the pristine white snow. Surrounding this individual are other skiers and snowboarders, some in motion, others stationary, all dressed in colorful winter gear that contrasts beautifully with the white snow. The background reveals a gently sloping mountain dotted with sparse evergreen trees, and a ski lift is visible on the right side of the image, adding to the recreational atmosphere. The lighting is natural and bright, suggesting it is midday, with the sun casting sharp shadows and enhancing the vividness of the scene. The overall composition is dynamic, with the group of people in the center and the expansive mountain landscape in the background, creating a sense of depth and activity.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 217,
-            "total_tokens": 514
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1667.921996,
-            "prompt_eval_duration_ms": 79.030133,
-            "generation_duration_ms": 1542.168409,
-            "load_duration_ms": 39.962695,
-            "tokens_per_second": 140.71096174295968
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, a snowboarder in a bright red jacket and black pants stands prominently on a snowy slope, their shadow stretching out across the pristine white snow. The snowboarder is surrounded by a group of skiers and snowboarders, all dressed in colorful winter gear, some in motion and others standing still, creating a dynamic scene of winter sports activity. The snow-covered ground is marked with ski tracks and snowboard paths, indicating the area is well-used for winter sports. The background features a vast expanse of snow-covered hills under a clear blue sky dotted with fluffy white clouds, providing a serene and expansive setting that contrasts with the lively activity in the foreground. The relationship between the foreground and background is one of depth and scale, with the foreground capturing the immediate action and the background offering a broader, tranquil context for the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 174,
-            "total_tokens": 477
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1321.594277,
-            "prompt_eval_duration_ms": 29.697152,
-            "generation_duration_ms": 1248.60491,
-            "load_duration_ms": 40.142272,
-            "tokens_per_second": 139.35553080597768
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a group of people is gathered on a snowy slope under a clear blue sky, preparing for or engaging in snowboarding and skiing activities. The individuals are dressed in colorful winter gear, with some wearing jackets and hats, while others have on helmets and goggles, indicating they are either learning or experienced in snow sports. The snowboarder in the foreground, wearing a bright red jacket and black pants, is adjusting their stance, possibly preparing to descend the slope. Behind them, a variety of skiers and snowboarders are either standing in a line, waiting for their turn, or casually chatting, creating a sense of community and shared interest. The ski lift in the background suggests that this is a well-equipped ski resort, providing transportation for visitors to different parts of the mountain. The snow-covered landscape and the bright sunlight add to the vibrant and dynamic atmosphere of the scene, where people are enjoying the winter sports and the beautiful natural environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 192,
-            "total_tokens": 498
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1456.252695,
-            "prompt_eval_duration_ms": 30.856773,
-            "generation_duration_ms": 1381.322502,
-            "load_duration_ms": 40.866102,
-            "tokens_per_second": 138.99722890346428
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of exhilaration and joy, characteristic of a positive mood. The bright blue sky and the pristine white snow create a serene and inviting atmosphere, suggesting a perfect day for outdoor activities. The presence of people engaged in snow sports, such as skiing and snowboarding, conveys a sense of adventure and excitement. The colorful attire of the individuals, especially the person in the red snowsuit, adds vibrancy and energy to the scene, enhancing the overall positive tone. The shadows cast by the individuals and the ski lift add depth and a dynamic quality to the image, further emphasizing the lively and active nature of the setting. The expansive snowy landscape in the background contributes to a feeling of freedom and vastness, which can evoke a sense of liberation and awe. Overall, the image is filled with positive emotions, reflecting the joy and enthusiasm typically associated with winter sports and outdoor recreation.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 181,
-            "total_tokens": 489
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1367.970559,
-            "prompt_eval_duration_ms": 29.610084,
-            "generation_duration_ms": 1297.7496,
-            "load_duration_ms": 37.637505,
-            "tokens_per_second": 139.4722063485899
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 10,\n      \"location\": \"center\",\n      \"color\": [\"red\", \"black\", \"white\", \"green\", \"blue\"],\n      \"size\": \"small\",\n      \"description\": \"people snowboarding and skiing\"\n    }\n  },\n  \"man-made\": {\n    \"ski lift\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"green\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"partially visible ski lift\"\n    }\n  },\n  \"natural\": {\n    \"snow\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"snow-covered landscape\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"clear blue sky with scattered clouds\"\n    },\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"trees on the left side of the image\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 10,
-                "location": "center",
-                "color": [
-                  "red",
-                  "black",
-                  "white",
-                  "green",
-                  "blue"
-                ],
-                "size": "small",
-                "description": "people snowboarding and skiing"
-              }
-            },
-            "man-made": {
-              "ski lift": {
-                "count": 1,
-                "location": "right",
-                "color": [
-                  "green",
-                  "white"
-                ],
-                "size": "small",
-                "description": "partially visible ski lift"
-              }
-            },
-            "natural": {
-              "snow": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "snow-covered landscape"
-              },
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "blue",
-                  "white"
-                ],
-                "size": "large",
-                "description": "clear blue sky with scattered clouds"
-              },
-              "trees": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "brown"
-                ],
-                "size": "small",
-                "description": "trees on the left side of the image"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 281,
-            "total_tokens": 767
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2080.161125,
-            "prompt_eval_duration_ms": 43.845647,
-            "generation_duration_ms": 1993.075828,
-            "load_duration_ms": 39.418792,
-            "tokens_per_second": 140.98811297208707
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2745,
-        "total_time_ms": 7893.900652,
-        "average_speed": 139.90480815461572
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a vibrant winter scene at a ski resort on a bright, sunny day. The setting is a snowy mountain slope, with a clear blue sky dotted with a few fluffy white clouds. The foreground features a group of people dressed in colorful winter gear, engaging in snowboarding and skiing activities. The main elements include snow-covered terrain, skiers and snowboarders in various poses, and a ski lift visible in the background.\n\nThe individuals are wearing bright, eye-catching outfits, with colors like red, pink, orange, black, and white standing out against the white snow. The person in the foreground, wearing a red snowsuit and helmet, is preparing to snowboard, adding a focal point to the composition. The lighting is natural and bright, casting sharp shadows on the snow, which enhances the depth and texture of the scene. The shadows of the people and ski lift poles stretch across the snow, contributing to the dynamic feel of the image.\n\nThe overall composition is balanced, with the group of people scattered across the frame, creating a sense of activity and movement. The expansive snowy landscape in the background, dotted with trees and ski trails, adds a sense of scale and openness. The clear blue sky and bright sunlight create a cheerful and energetic atmosphere, emphasizing the excitement and joy of winter sports. The image captures the essence of a lively day at a ski resort, blending the natural beauty of the mountain with the vibrant energy of its visitors.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 292,
-            "total_tokens": 589
-          },
-          "performance_metrics": {
-            "total_duration_ms": 14427.595104,
-            "prompt_eval_duration_ms": 3488.773566,
-            "generation_duration_ms": 10893.727572,
-            "load_duration_ms": 39.20847,
-            "tokens_per_second": 26.80441548313762
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a group of snowboarders and skiers, primarily focused on the central figure in a bright red snowsuit and helmet, standing on a snowboard. This individual is the most prominent subject, drawing immediate attention due to their vibrant attire and central positioning. Surrounding this person are other individuals in various winter sports gear, including jackets, helmets, and ski poles, indicating a lively and active ski resort environment. The snow-covered ground is textured with ski tracks, suggesting recent activity and movement.\n\nIn the background, the scene transitions to a vast, snow-covered mountain slope dotted with trees, creating a serene and expansive setting. The slope is marked with ski trails, hinting at organized ski runs and the infrastructure of a well-maintained ski area. The sky above is clear and blue with scattered clouds, adding to the bright and open atmosphere. The distant horizon features a mix of snow and patches of greenery, indicating the natural landscape beyond the immediate ski area.\n\nThe foreground and background elements are intricately related, as the active participants in the foreground are clearly engaged in the recreational activities that the expansive, snow-covered mountain in the background provides. The contrast between the vibrant, human-centric foreground and the tranquil, natural background emphasizes the dynamic interaction between people and the environment, showcasing the allure of winter sports in a picturesque alpine setting. The clear sky and bright sunlight unify the scene, highlighting the harmony between the lively activity and the serene natural backdrop.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 299,
-            "total_tokens": 602
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11258.574394,
-            "prompt_eval_duration_ms": 73.491077,
-            "generation_duration_ms": 11141.417719,
-            "load_duration_ms": 40.448963,
-            "tokens_per_second": 26.83680008605196
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a lively ski resort scene on a bright, sunny day with clear blue skies and scattered clouds. The central focus is a group of people engaged in winter sports activities, primarily skiing and snowboarding. In the foreground, a person dressed in a bright red snowsuit and helmet is standing on a snowboard, appearing to prepare for a run or pause between runs. This individual is surrounded by other skiers and snowboarders, some of whom are standing still, possibly waiting for their turn or observing the surroundings, while others are actively skiing down the slope.\n\nThe people in the image are dressed in winter gear, including jackets, pants, helmets, and goggles, indicating a focus on safety and warmth. The individuals are spread across the snow-covered slope, with some closer to the camera and others further up the hill. The presence of ski lifts and marked trails suggests an organized and well-maintained ski area, designed to accommodate a variety of skill levels.\n\nThe relationships between the people are primarily social and recreational. They appear to be enjoying the shared experience of skiing and snowboarding, with some individuals possibly traveling in groups or families. The interactions are casual and friendly, with no visible signs of competition or conflict. The environment is peaceful yet active, with the sound of skis and snowboards likely adding to the ambiance.\n\nThe snow-covered landscape is expansive, with gentle slopes and scattered evergreen trees, providing a picturesque backdrop. The shadows cast by the people and objects indicate the sun is high in the sky, enhancing the brightness and vibrancy of the scene. The overall atmosphere is one of enjoyment and camaraderie, as individuals partake in the exhilarating and scenic activity of skiing and snowboarding.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 345,
-            "total_tokens": 651
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12938.121754,
-            "prompt_eval_duration_ms": 78.929774,
-            "generation_duration_ms": 12812.411391,
-            "load_duration_ms": 41.200261,
-            "tokens_per_second": 26.92701549080317
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a positive and lively mood, evoking feelings of excitement, adventure, and enjoyment. The bright, sunny day with a clear blue sky and scattered clouds creates a cheerful and invigorating atmosphere. The snow-covered landscape, with its pristine white slopes and distant trees, adds to the sense of tranquility and natural beauty, which is often associated with winter sports. The presence of numerous people engaged in snowboarding and skiing activities suggests a sense of community, fun, and shared enthusiasm for outdoor recreation. The colorful clothing of the individuals, particularly the vibrant red outfit of the person in the foreground, adds a playful and energetic touch to the scene. The overall composition, with people of various ages and skill levels, conveys inclusivity and the universal appeal of skiing and snowboarding. The shadows cast by the skiers and snowboarders, along with the bright sunlight, enhance the dynamic and energetic feel of the image. The image's tone is predominantly positive, as it captures the joy and exhilaration of a day spent in the mountains, surrounded by nature and fellow adventurers.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 219,
-            "total_tokens": 527
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8296.797471,
-            "prompt_eval_duration_ms": 72.322924,
-            "generation_duration_ms": 8180.706485,
-            "load_duration_ms": 40.850128,
-            "tokens_per_second": 26.770304056447273
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 15,\n      \"location\": \"center, foreground\",\n      \"color\": [\"red\", \"black\", \"white\", \"green\", \"blue\", \"orange\"],\n      \"size\": \"small\",\n      \"description\": \"People wearing winter clothing and ski gear, some standing and some skiing/snowboarding.\"\n    }\n  },\n  \"man-made\": {\n    \"ski lift\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"black\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A ski lift structure with a chair visible.\"\n    },\n    \"ski tracks\": {\n      \"count\": 1,\n      \"location\": \"center, foreground\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"Visible ski tracks in the snow.\"\n    },\n    \"ski poles\": {\n      \"count\": 2,\n      \"location\": \"center, foreground\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Ski poles held by individuals.\"\n    }\n  },\n  \"natural\": {\n    \"snow\": {\n      \"count\": 1,\n      \"location\": \"entire image\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"Covering the ground and slopes.\"\n    },\n    \"trees\": {\n      \"count\": 10,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Sparse trees on the snowy slope.\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Blue sky with scattered clouds.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 15,
-                "location": "center, foreground",
-                "color": [
-                  "red",
-                  "black",
-                  "white",
-                  "green",
-                  "blue",
-                  "orange"
-                ],
-                "size": "small",
-                "description": "People wearing winter clothing and ski gear, some standing and some skiing/snowboarding."
-              }
-            },
-            "man-made": {
-              "ski lift": {
-                "count": 1,
-                "location": "right, middle",
-                "color": [
-                  "black",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "A ski lift structure with a chair visible."
-              },
-              "ski tracks": {
-                "count": 1,
-                "location": "center, foreground",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "Visible ski tracks in the snow."
-              },
-              "ski poles": {
-                "count": 2,
-                "location": "center, foreground",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "Ski poles held by individuals."
-              }
-            },
-            "natural": {
-              "snow": {
-                "count": 1,
-                "location": "entire image",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "Covering the ground and slopes."
-              },
-              "trees": {
-                "count": 10,
-                "location": "background",
-                "color": [
-                  "green"
-                ],
-                "size": "small",
-                "description": "Sparse trees on the snowy slope."
-              },
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "blue",
-                  "white"
-                ],
-                "size": "large",
-                "description": "Blue sky with scattered clouds."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 405,
-            "total_tokens": 891
-          },
-          "performance_metrics": {
-            "total_duration_ms": 15309.377454,
-            "prompt_eval_duration_ms": 134.140583,
-            "generation_duration_ms": 15130.700561,
-            "load_duration_ms": 39.958031,
-            "tokens_per_second": 26.766771199207
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3260,
-        "total_time_ms": 62230.466176999995,
-        "average_speed": 26.821061263129405
       }
     },
     {

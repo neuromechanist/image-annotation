@@ -7,6 +7,291 @@
   "timestamp": "2025-08-30T22:09:10.669753+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a formal event, likely a wedding or a gala, set against an elegant backdrop of ornate, light-colored walls adorned with intricate decorative paneling. The setting exudes a sense of sophistication and tradition, with the walls featuring detailed carvings and a subtle, textured finish that adds depth to the scene. The lighting is soft and evenly distributed, highlighting the subjects without creating harsh shadows, suggesting an indoor venue with professional lighting. The main elements in the image are a man and a woman standing side by side, both dressed in formal attire. The woman is wearing a vibrant magenta dress with a sheer, dark overlay on the sleeves, paired with a black clutch and a bracelet, while the man is in a classic black suit with a white shirt and a light gray tie. Their expressions are warm and friendly, with smiles directed towards the camera, indicating a moment of joy and celebration. The overall composition is balanced, with the subjects centrally positioned, drawing the viewer's attention to their interaction and the elegance of their attire against the refined background.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 213,
+            "total_tokens": 510
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1654.565991,
+            "prompt_eval_duration_ms": 79.390698,
+            "generation_duration_ms": 1533.258056,
+            "load_duration_ms": 39.576453,
+            "tokens_per_second": 138.91986359796437
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, a man and a woman stand side by side, dressed formally for what appears to be a special occasion. The woman, wearing a vibrant purple dress with sheer sleeves, holds a small white card or invitation in her hand, while the man, in a classic black suit with a white shirt and a gray tie, stands confidently beside her. Their attire, along with the woman's elegant hairstyle, suggests a formal event, possibly a gala or a wedding. The background elements consist of an ornate wall with intricate paneling and decorative moldings, which adds a sense of grandeur and sophistication to the setting. The wall's detailed design contrasts with the simplicity of the subjects' attire, creating a harmonious balance between the foreground and background. The setting appears to be indoors, possibly in a ballroom or a similar venue, which complements the formal nature of the event and the subjects' attire.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 184,
+            "total_tokens": 487
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1418.644814,
+            "prompt_eval_duration_ms": 29.949922,
+            "generation_duration_ms": 1345.85876,
+            "load_duration_ms": 39.70338,
+            "tokens_per_second": 136.7156833009728
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, two individuals are standing side by side against an ornate wall, suggesting a formal or semi-formal event. The person on the left, a woman, is dressed in a vibrant purple dress with a sheer black overlay, holding a small white card or invitation in her left hand, which she appears to be presenting or showing. The man on the right, dressed in a dark suit with a light-colored tie, stands with a slight smile, looking directly at the camera. Both individuals are positioned in a way that suggests they are posing for a photograph, likely at a social gathering or formal occasion. The woman's hand gesture and the man's direct gaze imply a friendly and possibly professional interaction, as they might be attending the same event and are engaging with the photographer or an audience. There are no animals or other objects in the image, and the focus is entirely on the two people and their interaction within the formal setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 189,
+            "total_tokens": 495
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1448.717882,
+            "prompt_eval_duration_ms": 31.447632,
+            "generation_duration_ms": 1375.07953,
+            "load_duration_ms": 39.519125,
+            "tokens_per_second": 137.4465955434592
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image exudes a mood of joy and celebration, evoking feelings of happiness and pride. The positive tone is reinforced by the subjects' smiles, which are warm and genuine, suggesting a shared moment of happiness. The formal attire of the couple, with the woman in a vibrant pink dress and the man in a classic black suit, indicates a special occasion, possibly an event like a wedding, formal dinner, or an awards ceremony. The elegant, ornate background with its detailed wall paneling adds to the sophistication and formality of the setting, further enhancing the celebratory atmosphere. The woman's slight curve of her arm and the man's relaxed posture suggest a comfortable and intimate connection, which, combined with their smiles, conveys a sense of mutual affection and contentment. The overall tone is decidedly positive, with the visual elements of their attire, the setting, and their expressions working together to create an atmosphere of joy and celebration.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 189,
+            "total_tokens": 497
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1453.239643,
+            "prompt_eval_duration_ms": 30.234151,
+            "generation_duration_ms": 1380.535284,
+            "load_duration_ms": 40.137997,
+            "tokens_per_second": 136.90341868871784
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"pink\", \"black\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"man and woman dressed formally\"\n    }\n  },\n  \"man-made\": {\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\", \"gold\"],\n      \"size\": \"large\",\n      \"description\": \"ornate wall with decorative panels\"\n    },\n    \"door\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"partially visible door on the left side\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 2,
+                "location": "center",
+                "color": [
+                  "pink",
+                  "black",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "man and woman dressed formally"
+              }
+            },
+            "man-made": {
+              "wall": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "white",
+                  "gold"
+                ],
+                "size": "large",
+                "description": "ornate wall with decorative panels"
+              },
+              "door": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "partially visible door on the left side"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 173,
+            "total_tokens": 659
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1323.178438,
+            "prompt_eval_duration_ms": 44.337001,
+            "generation_duration_ms": 1237.867323,
+            "load_duration_ms": 38.47494,
+            "tokens_per_second": 139.7564963430253
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2648,
+        "total_time_ms": 7298.346767999999,
+        "average_speed": 137.9484114948279
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a formal setting, likely an indoor event or gathering, with two individuals standing side by side. The background features ornate, cream-colored walls adorned with intricate, symmetrical carvings and decorative molding, suggesting a luxurious or historic venue, such as a ballroom or a formal hall. The lighting is soft and evenly distributed, creating a warm and elegant atmosphere without harsh shadows.\n\nThe main elements in the image are the two individuals. On the left is a woman wearing a long, sleeveless, burgundy dress with a sheer black overlay on the shoulders and arms. Her hair is styled in an elegant updo, and she is holding a white folder or booklet, possibly a program or document, in her hands. On the right is a man dressed in a classic black suit with a white dress shirt and a light gray tie. He has a bald head and a warm, friendly smile. Both individuals appear to be posing for the photograph, standing close to each other, and exuding a sense of professionalism and sophistication.\n\nThe overall composition is balanced, with the two individuals centered in the frame, drawing attention to their attire and the formal nature of the event. The neutral tones of the background contrast with the vibrant burgundy of the woman's dress and the dark suit of the man, making them stand out as the focal points of the image. The lighting enhances the textures of the walls and the details of their clothing, contributing to the refined and polished aesthetic of the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 300,
+            "total_tokens": 597
+          },
+          "performance_metrics": {
+            "total_duration_ms": 14683.532681,
+            "prompt_eval_duration_ms": 3449.684614,
+            "generation_duration_ms": 11193.651756,
+            "load_duration_ms": 37.815074,
+            "tokens_per_second": 26.800905239811
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image prominently features two individuals standing close to each other. The person on the left is a woman wearing a sleeveless, knee-length, burgundy dress with a sheer black overlay on the sleeves. She has her hair styled in an updo and is holding a white folder or booklet in her hands. The person on the right is a man dressed in a formal black suit with a white shirt and a gray tie. Both individuals are smiling and appear to be posing for the photograph, suggesting a formal or celebratory event.\n\nIn the background, the setting is an elegant interior space with ornate architectural details. The walls are adorned with intricate, symmetrical carvings and moldings, featuring floral and geometric patterns. The walls are painted in a light, neutral color, which contrasts with the darker tones of the individuals' attire. The background also includes white doors with similar decorative elements, reinforcing the formal and sophisticated ambiance of the setting.\n\nThe foreground and background elements are closely related in terms of context and atmosphere. The formal attire of the individuals aligns with the sophisticated and elegant setting of the background, suggesting that the event they are attending is likely a formal gathering, such as a gala, ceremony, or professional function. The ornate details in the background enhance the overall impression of formality and importance, complementing the individuals' attire and demeanor. The lighting in the image is soft and even, further emphasizing the refined and polished nature of both the people and the setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 300,
+            "total_tokens": 603
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11267.052154,
+            "prompt_eval_duration_ms": 79.199505,
+            "generation_duration_ms": 11144.186895,
+            "load_duration_ms": 41.311789,
+            "tokens_per_second": 26.919864394467336
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image shows two individuals, a man and a woman, standing together in a formal setting, likely at an event or gathering. The woman is dressed in a elegant, sleeveless maroon dress with a sheer black overlay, holding a white folder or booklet in her hands. The man is wearing a classic black suit with a white shirt and a gray tie, exuding a professional and polished appearance. Both individuals are smiling and appear to be posing for the photograph, suggesting a positive and celebratory atmosphere.\n\nThe woman is positioned slightly to the left of the man, leaning in close, which indicates a sense of familiarity and comfort between them. They are standing in front of a backdrop of ornate, cream-colored walls with decorative molding, which adds a sense of formality and sophistication to the setting. The man's posture is upright and confident, while the woman's relaxed stance and slight lean suggest a friendly and informal interaction.\n\nTheir body language and expressions convey a sense of camaraderie and shared purpose, possibly indicating that they are colleagues, friends, or part of the same organization. The white folder the woman is holding could suggest they are attending a formal event, such as a conference, ceremony, or presentation, where documents or materials are being distributed or referenced. The overall scene portrays a moment of connection and professionalism in a formal environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 269,
+            "total_tokens": 575
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10134.61089,
+            "prompt_eval_duration_ms": 76.147978,
+            "generation_duration_ms": 10015.038307,
+            "load_duration_ms": 37.51051,
+            "tokens_per_second": 26.859607697354765
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of formality, sophistication, and subtle happiness. The individuals are dressed in elegant attire, with the woman in a flowing, dark red dress and the man in a sharp, dark suit with a tie, suggesting a formal or celebratory occasion. Their body language, with slight smiles and relaxed postures, indicates a sense of contentment and ease, hinting at a positive atmosphere. The background features ornate, cream-colored walls with intricate carvings, adding to the refined and upscale ambiance. The lighting is soft and warm, enhancing the overall sense of comfort and elegance. The woman holds a white folder or notebook, which could imply a professional or academic context, further contributing to the formal tone. The overall tone is positive, as the individuals appear composed and happy, yet the setting's formality tempers any overt exuberance. The visual elements\u2014elegant clothing, sophisticated decor, and warm lighting\u2014work together to create an atmosphere of refined happiness and professionalism.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 203,
+            "total_tokens": 511
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7719.250773,
+            "prompt_eval_duration_ms": 79.641699,
+            "generation_duration_ms": 7598.298843,
+            "load_duration_ms": 38.365781,
+            "tokens_per_second": 26.716506443677922
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": [\n      {\n        \"count\": 2,\n        \"location\": \"center, foreground\",\n        \"color\": [\"red\", \"black\", \"white\"],\n        \"size\": \"medium\",\n        \"description\": \"Two individuals standing together, one wearing a red dress and holding a white folder, the other in a black suit with a white shirt and tie.\"\n      }\n    ]\n  },\n  \"man-made\": {\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"beige\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Decorative wall with ornate patterns and molding.\"\n    },\n    \"door\": {\n      \"count\": 1,\n      \"location\": \"left, background\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"Partially visible door with a white frame.\"\n    }\n  },\n  \"natural\": {}\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": [
+                {
+                  "count": 2,
+                  "location": "center, foreground",
+                  "color": [
+                    "red",
+                    "black",
+                    "white"
+                  ],
+                  "size": "medium",
+                  "description": "Two individuals standing together, one wearing a red dress and holding a white folder, the other in a black suit with a white shirt and tie."
+                }
+              ]
+            },
+            "man-made": {
+              "wall": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "beige",
+                  "white"
+                ],
+                "size": "large",
+                "description": "Decorative wall with ornate patterns and molding."
+              },
+              "door": {
+                "count": 1,
+                "location": "left, background",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "Partially visible door with a white frame."
+              }
+            },
+            "natural": {}
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 213,
+            "total_tokens": 699
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8086.356033,
+            "prompt_eval_duration_ms": 136.164832,
+            "generation_duration_ms": 7906.023203,
+            "load_duration_ms": 41.31269,
+            "tokens_per_second": 26.94148430011887
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2985,
+        "total_time_ms": 51890.802530999994,
+        "average_speed": 26.847673615085977
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -494,291 +779,6 @@
         "total_tokens": 2926,
         "total_time_ms": 27925.357540999998,
         "average_speed": 42.40390253010719
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a formal event, likely a wedding or a gala, set against an elegant backdrop of ornate, light-colored walls adorned with intricate decorative paneling. The setting exudes a sense of sophistication and tradition, with the walls featuring detailed carvings and a subtle, textured finish that adds depth to the scene. The lighting is soft and evenly distributed, highlighting the subjects without creating harsh shadows, suggesting an indoor venue with professional lighting. The main elements in the image are a man and a woman standing side by side, both dressed in formal attire. The woman is wearing a vibrant magenta dress with a sheer, dark overlay on the sleeves, paired with a black clutch and a bracelet, while the man is in a classic black suit with a white shirt and a light gray tie. Their expressions are warm and friendly, with smiles directed towards the camera, indicating a moment of joy and celebration. The overall composition is balanced, with the subjects centrally positioned, drawing the viewer's attention to their interaction and the elegance of their attire against the refined background.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 213,
-            "total_tokens": 510
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1654.565991,
-            "prompt_eval_duration_ms": 79.390698,
-            "generation_duration_ms": 1533.258056,
-            "load_duration_ms": 39.576453,
-            "tokens_per_second": 138.91986359796437
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, a man and a woman stand side by side, dressed formally for what appears to be a special occasion. The woman, wearing a vibrant purple dress with sheer sleeves, holds a small white card or invitation in her hand, while the man, in a classic black suit with a white shirt and a gray tie, stands confidently beside her. Their attire, along with the woman's elegant hairstyle, suggests a formal event, possibly a gala or a wedding. The background elements consist of an ornate wall with intricate paneling and decorative moldings, which adds a sense of grandeur and sophistication to the setting. The wall's detailed design contrasts with the simplicity of the subjects' attire, creating a harmonious balance between the foreground and background. The setting appears to be indoors, possibly in a ballroom or a similar venue, which complements the formal nature of the event and the subjects' attire.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 184,
-            "total_tokens": 487
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1418.644814,
-            "prompt_eval_duration_ms": 29.949922,
-            "generation_duration_ms": 1345.85876,
-            "load_duration_ms": 39.70338,
-            "tokens_per_second": 136.7156833009728
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, two individuals are standing side by side against an ornate wall, suggesting a formal or semi-formal event. The person on the left, a woman, is dressed in a vibrant purple dress with a sheer black overlay, holding a small white card or invitation in her left hand, which she appears to be presenting or showing. The man on the right, dressed in a dark suit with a light-colored tie, stands with a slight smile, looking directly at the camera. Both individuals are positioned in a way that suggests they are posing for a photograph, likely at a social gathering or formal occasion. The woman's hand gesture and the man's direct gaze imply a friendly and possibly professional interaction, as they might be attending the same event and are engaging with the photographer or an audience. There are no animals or other objects in the image, and the focus is entirely on the two people and their interaction within the formal setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 189,
-            "total_tokens": 495
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1448.717882,
-            "prompt_eval_duration_ms": 31.447632,
-            "generation_duration_ms": 1375.07953,
-            "load_duration_ms": 39.519125,
-            "tokens_per_second": 137.4465955434592
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image exudes a mood of joy and celebration, evoking feelings of happiness and pride. The positive tone is reinforced by the subjects' smiles, which are warm and genuine, suggesting a shared moment of happiness. The formal attire of the couple, with the woman in a vibrant pink dress and the man in a classic black suit, indicates a special occasion, possibly an event like a wedding, formal dinner, or an awards ceremony. The elegant, ornate background with its detailed wall paneling adds to the sophistication and formality of the setting, further enhancing the celebratory atmosphere. The woman's slight curve of her arm and the man's relaxed posture suggest a comfortable and intimate connection, which, combined with their smiles, conveys a sense of mutual affection and contentment. The overall tone is decidedly positive, with the visual elements of their attire, the setting, and their expressions working together to create an atmosphere of joy and celebration.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 189,
-            "total_tokens": 497
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1453.239643,
-            "prompt_eval_duration_ms": 30.234151,
-            "generation_duration_ms": 1380.535284,
-            "load_duration_ms": 40.137997,
-            "tokens_per_second": 136.90341868871784
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"pink\", \"black\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"man and woman dressed formally\"\n    }\n  },\n  \"man-made\": {\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\", \"gold\"],\n      \"size\": \"large\",\n      \"description\": \"ornate wall with decorative panels\"\n    },\n    \"door\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"partially visible door on the left side\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 2,
-                "location": "center",
-                "color": [
-                  "pink",
-                  "black",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "man and woman dressed formally"
-              }
-            },
-            "man-made": {
-              "wall": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "white",
-                  "gold"
-                ],
-                "size": "large",
-                "description": "ornate wall with decorative panels"
-              },
-              "door": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "partially visible door on the left side"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 173,
-            "total_tokens": 659
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1323.178438,
-            "prompt_eval_duration_ms": 44.337001,
-            "generation_duration_ms": 1237.867323,
-            "load_duration_ms": 38.47494,
-            "tokens_per_second": 139.7564963430253
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2648,
-        "total_time_ms": 7298.346767999999,
-        "average_speed": 137.9484114948279
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a formal setting, likely an indoor event or gathering, with two individuals standing side by side. The background features ornate, cream-colored walls adorned with intricate, symmetrical carvings and decorative molding, suggesting a luxurious or historic venue, such as a ballroom or a formal hall. The lighting is soft and evenly distributed, creating a warm and elegant atmosphere without harsh shadows.\n\nThe main elements in the image are the two individuals. On the left is a woman wearing a long, sleeveless, burgundy dress with a sheer black overlay on the shoulders and arms. Her hair is styled in an elegant updo, and she is holding a white folder or booklet, possibly a program or document, in her hands. On the right is a man dressed in a classic black suit with a white dress shirt and a light gray tie. He has a bald head and a warm, friendly smile. Both individuals appear to be posing for the photograph, standing close to each other, and exuding a sense of professionalism and sophistication.\n\nThe overall composition is balanced, with the two individuals centered in the frame, drawing attention to their attire and the formal nature of the event. The neutral tones of the background contrast with the vibrant burgundy of the woman's dress and the dark suit of the man, making them stand out as the focal points of the image. The lighting enhances the textures of the walls and the details of their clothing, contributing to the refined and polished aesthetic of the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 300,
-            "total_tokens": 597
-          },
-          "performance_metrics": {
-            "total_duration_ms": 14683.532681,
-            "prompt_eval_duration_ms": 3449.684614,
-            "generation_duration_ms": 11193.651756,
-            "load_duration_ms": 37.815074,
-            "tokens_per_second": 26.800905239811
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image prominently features two individuals standing close to each other. The person on the left is a woman wearing a sleeveless, knee-length, burgundy dress with a sheer black overlay on the sleeves. She has her hair styled in an updo and is holding a white folder or booklet in her hands. The person on the right is a man dressed in a formal black suit with a white shirt and a gray tie. Both individuals are smiling and appear to be posing for the photograph, suggesting a formal or celebratory event.\n\nIn the background, the setting is an elegant interior space with ornate architectural details. The walls are adorned with intricate, symmetrical carvings and moldings, featuring floral and geometric patterns. The walls are painted in a light, neutral color, which contrasts with the darker tones of the individuals' attire. The background also includes white doors with similar decorative elements, reinforcing the formal and sophisticated ambiance of the setting.\n\nThe foreground and background elements are closely related in terms of context and atmosphere. The formal attire of the individuals aligns with the sophisticated and elegant setting of the background, suggesting that the event they are attending is likely a formal gathering, such as a gala, ceremony, or professional function. The ornate details in the background enhance the overall impression of formality and importance, complementing the individuals' attire and demeanor. The lighting in the image is soft and even, further emphasizing the refined and polished nature of both the people and the setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 300,
-            "total_tokens": 603
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11267.052154,
-            "prompt_eval_duration_ms": 79.199505,
-            "generation_duration_ms": 11144.186895,
-            "load_duration_ms": 41.311789,
-            "tokens_per_second": 26.919864394467336
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image shows two individuals, a man and a woman, standing together in a formal setting, likely at an event or gathering. The woman is dressed in a elegant, sleeveless maroon dress with a sheer black overlay, holding a white folder or booklet in her hands. The man is wearing a classic black suit with a white shirt and a gray tie, exuding a professional and polished appearance. Both individuals are smiling and appear to be posing for the photograph, suggesting a positive and celebratory atmosphere.\n\nThe woman is positioned slightly to the left of the man, leaning in close, which indicates a sense of familiarity and comfort between them. They are standing in front of a backdrop of ornate, cream-colored walls with decorative molding, which adds a sense of formality and sophistication to the setting. The man's posture is upright and confident, while the woman's relaxed stance and slight lean suggest a friendly and informal interaction.\n\nTheir body language and expressions convey a sense of camaraderie and shared purpose, possibly indicating that they are colleagues, friends, or part of the same organization. The white folder the woman is holding could suggest they are attending a formal event, such as a conference, ceremony, or presentation, where documents or materials are being distributed or referenced. The overall scene portrays a moment of connection and professionalism in a formal environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 269,
-            "total_tokens": 575
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10134.61089,
-            "prompt_eval_duration_ms": 76.147978,
-            "generation_duration_ms": 10015.038307,
-            "load_duration_ms": 37.51051,
-            "tokens_per_second": 26.859607697354765
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of formality, sophistication, and subtle happiness. The individuals are dressed in elegant attire, with the woman in a flowing, dark red dress and the man in a sharp, dark suit with a tie, suggesting a formal or celebratory occasion. Their body language, with slight smiles and relaxed postures, indicates a sense of contentment and ease, hinting at a positive atmosphere. The background features ornate, cream-colored walls with intricate carvings, adding to the refined and upscale ambiance. The lighting is soft and warm, enhancing the overall sense of comfort and elegance. The woman holds a white folder or notebook, which could imply a professional or academic context, further contributing to the formal tone. The overall tone is positive, as the individuals appear composed and happy, yet the setting's formality tempers any overt exuberance. The visual elements\u2014elegant clothing, sophisticated decor, and warm lighting\u2014work together to create an atmosphere of refined happiness and professionalism.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 203,
-            "total_tokens": 511
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7719.250773,
-            "prompt_eval_duration_ms": 79.641699,
-            "generation_duration_ms": 7598.298843,
-            "load_duration_ms": 38.365781,
-            "tokens_per_second": 26.716506443677922
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": [\n      {\n        \"count\": 2,\n        \"location\": \"center, foreground\",\n        \"color\": [\"red\", \"black\", \"white\"],\n        \"size\": \"medium\",\n        \"description\": \"Two individuals standing together, one wearing a red dress and holding a white folder, the other in a black suit with a white shirt and tie.\"\n      }\n    ]\n  },\n  \"man-made\": {\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"beige\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Decorative wall with ornate patterns and molding.\"\n    },\n    \"door\": {\n      \"count\": 1,\n      \"location\": \"left, background\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"Partially visible door with a white frame.\"\n    }\n  },\n  \"natural\": {}\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": [
-                {
-                  "count": 2,
-                  "location": "center, foreground",
-                  "color": [
-                    "red",
-                    "black",
-                    "white"
-                  ],
-                  "size": "medium",
-                  "description": "Two individuals standing together, one wearing a red dress and holding a white folder, the other in a black suit with a white shirt and tie."
-                }
-              ]
-            },
-            "man-made": {
-              "wall": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "beige",
-                  "white"
-                ],
-                "size": "large",
-                "description": "Decorative wall with ornate patterns and molding."
-              },
-              "door": {
-                "count": 1,
-                "location": "left, background",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "Partially visible door with a white frame."
-              }
-            },
-            "natural": {}
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 213,
-            "total_tokens": 699
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8086.356033,
-            "prompt_eval_duration_ms": 136.164832,
-            "generation_duration_ms": 7906.023203,
-            "load_duration_ms": 41.31269,
-            "tokens_per_second": 26.94148430011887
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2985,
-        "total_time_ms": 51890.802530999994,
-        "average_speed": 26.847673615085977
       }
     },
     {
