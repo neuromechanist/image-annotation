@@ -7,194 +7,192 @@ from typing import Any
 from tqdm import tqdm
 
 
-def reorder_annotations(
-    file_path: str | Path,
-    model_order: list[str],
-    in_place: bool = True,
-    output_path: str | Path | None = None,
-) -> dict[str, Any]:
-    """
-    Reorder annotations in a JSON file according to specified model order.
+def _normalize_paths(
+    paths: str | Path | list[str | Path],
+    pattern: str = "*.json",
+    exclude_pattern: str | None = None,
+) -> list[Path]:
+    """Normalize input paths to a list of file paths."""
+    if isinstance(paths, list):
+        return [Path(p) for p in paths]
 
-    Args:
-        file_path: Path to the annotation JSON file
-        model_order: List of model names in desired order
-        in_place: If True, modify the file in place. If False, return modified data
-        output_path: Optional path to save the reordered file (if not in_place)
-
-    Returns:
-        The reordered annotation data
-    """
-    file_path = Path(file_path)
-
-    with open(file_path) as f:
-        data = json.load(f)
-
-    if "annotations" not in data:
-        raise ValueError(f"No 'annotations' field found in {file_path}")
-
-    # Create a mapping of model names to annotations
-    model_map = {ann["model"]: ann for ann in data["annotations"]}
-
-    # Build reordered list
-    reordered = []
-    for model in model_order:
-        if model in model_map:
-            reordered.append(model_map[model])
-
-    # Add any remaining models not in the specified order
-    for ann in data["annotations"]:
-        if ann["model"] not in model_order:
-            reordered.append(ann)
-
-    data["annotations"] = reordered
-
-    # Save the file
-    if in_place:
-        with open(file_path, "w") as f:
-            json.dump(data, f, indent=2)
-    elif output_path:
-        output_path = Path(output_path)
-        with open(output_path, "w") as f:
-            json.dump(data, f, indent=2)
-
-    return data
+    path = Path(paths)
+    if path.is_file():
+        return [path]
+    elif path.is_dir():
+        files = list(path.glob(pattern))
+        if exclude_pattern:
+            files = [f for f in files if not f.name.startswith(exclude_pattern)]
+        return files
+    else:
+        raise ValueError(f"Path does not exist: {path}")
 
 
-def remove_model(
-    file_path: str | Path,
-    model_name: str,
-    in_place: bool = True,
-    output_path: str | Path | None = None,
-) -> dict[str, Any]:
-    """
-    Remove a specific model's annotations from a JSON file.
-
-    Args:
-        file_path: Path to the annotation JSON file
-        model_name: Name of the model to remove
-        in_place: If True, modify the file in place. If False, return modified data
-        output_path: Optional path to save the modified file (if not in_place)
-
-    Returns:
-        The modified annotation data
-    """
-    file_path = Path(file_path)
-
-    with open(file_path) as f:
-        data = json.load(f)
-
-    if "annotations" not in data:
-        raise ValueError(f"No 'annotations' field found in {file_path}")
-
-    # Filter out the specified model
-    original_count = len(data["annotations"])
-    data["annotations"] = [ann for ann in data["annotations"] if ann["model"] != model_name]
-    removed_count = original_count - len(data["annotations"])
-
-    if removed_count == 0:
-        print(f"Model '{model_name}' not found in {file_path}")
-
-    # Save the file
-    if in_place:
-        with open(file_path, "w") as f:
-            json.dump(data, f, indent=2)
-    elif output_path:
-        output_path = Path(output_path)
-        with open(output_path, "w") as f:
-            json.dump(data, f, indent=2)
-
-    return data
-
-
-def batch_reorder_annotations(
-    directory: str | Path,
+def reorder_annotations(  # noqa: C901
+    paths: str | Path | list[str | Path],
     model_order: list[str],
     pattern: str = "*.json",
     exclude_pattern: str | None = None,
-) -> int:
+    in_place: bool = True,
+    output_dir: str | Path | None = None,
+) -> dict[str, Any] | int:
     """
-    Reorder annotations in multiple JSON files.
+    Reorder annotations in JSON file(s) according to specified model order.
 
     Args:
-        directory: Directory containing annotation files
+        paths: Path to file, directory, or list of paths
         model_order: List of model names in desired order
-        pattern: Glob pattern to match files (default: "*.json")
+        pattern: Glob pattern for directory search (default: "*.json")
         exclude_pattern: Optional pattern to exclude files
+        in_place: If True, modify files in place
+        output_dir: Optional directory to save reordered files
 
     Returns:
-        Number of files processed
+        For single file: The reordered annotation data dict
+        For multiple files: Number of files processed
     """
-    directory = Path(directory)
-    files = list(directory.glob(pattern))
+    # Normalize input to list of files
+    files = _normalize_paths(paths, pattern, exclude_pattern)
 
-    if exclude_pattern:
-        files = [f for f in files if not f.name.startswith(exclude_pattern)]
-
+    # Process files
+    single_file = len(files) == 1
     processed = 0
-    for file_path in tqdm(files, desc="Reordering annotations"):
-        try:
-            reorder_annotations(file_path, model_order, in_place=True)
-            processed += 1
-        except Exception as e:
-            print(f"Error processing {file_path}: {e}")
+    last_data = None
 
-    return processed
-
-
-def batch_remove_model(
-    directory: str | Path,
-    model_name: str,
-    pattern: str = "*.json",
-    exclude_pattern: str | None = None,
-) -> int:
-    """
-    Remove a model's annotations from multiple JSON files.
-
-    Args:
-        directory: Directory containing annotation files
-        model_name: Name of the model to remove
-        pattern: Glob pattern to match files (default: "*.json")
-        exclude_pattern: Optional pattern to exclude files
-
-    Returns:
-        Number of files processed
-    """
-    directory = Path(directory)
-    files = list(directory.glob(pattern))
-
-    if exclude_pattern:
-        files = [f for f in files if not f.name.startswith(exclude_pattern)]
-
-    processed = 0
-    removed_total = 0
-    for file_path in tqdm(files, desc=f"Removing {model_name}"):
+    for file_path in tqdm(files, desc="Reordering annotations", disable=single_file):
         try:
             with open(file_path) as f:
                 data = json.load(f)
 
-            if "annotations" in data:
-                original_count = len(data["annotations"])
-                remove_model(file_path, model_name, in_place=True)
+            if "annotations" not in data:
+                if single_file:
+                    raise ValueError(f"No 'annotations' field found in {file_path}")
+                print(f"Warning: No 'annotations' field in {file_path}")
+                continue
 
-                # Check how many were removed
-                with open(file_path) as f:
-                    new_data = json.load(f)
-                removed = original_count - len(new_data["annotations"])
-                removed_total += removed
+            # Create a mapping of model names to annotations
+            model_map = {ann["model"]: ann for ann in data["annotations"]}
 
-                if removed > 0:
-                    processed += 1
+            # Build reordered list
+            reordered = []
+            for model in model_order:
+                if model in model_map:
+                    reordered.append(model_map[model])
+
+            # Add any remaining models not in the specified order
+            for ann in data["annotations"]:
+                if ann["model"] not in model_order:
+                    reordered.append(ann)
+
+            data["annotations"] = reordered
+            last_data = data
+
+            # Save the file
+            if in_place:
+                with open(file_path, "w") as f:
+                    json.dump(data, f, indent=2)
+            elif output_dir:
+                output_dir = Path(output_dir)
+                output_dir.mkdir(parents=True, exist_ok=True)
+                output_file = output_dir / file_path.name
+                with open(output_file, "w") as f:
+                    json.dump(data, f, indent=2)
+
+            processed += 1
+
         except Exception as e:
+            if single_file:
+                raise
             print(f"Error processing {file_path}: {e}")
 
-    print(f"Removed {model_name} from {processed} files (total {removed_total} annotations)")
-    return processed
+    return last_data if single_file else processed
 
 
-def get_annotation_stats(
-    directory: str | Path, pattern: str = "shared*.json"
-) -> dict[str, Any]:
+def remove_model(  # noqa: C901
+    paths: str | Path | list[str | Path],
+    model_name: str,
+    pattern: str = "*.json",
+    exclude_pattern: str | None = None,
+    in_place: bool = True,
+    output_dir: str | Path | None = None,
+) -> dict[str, Any] | int:
+    """
+    Remove a specific model's annotations from JSON file(s).
+
+    Args:
+        paths: Path to file, directory, or list of paths
+        model_name: Name of the model to remove
+        pattern: Glob pattern for directory search (default: "*.json")
+        exclude_pattern: Optional pattern to exclude files
+        in_place: If True, modify files in place
+        output_dir: Optional directory to save modified files
+
+    Returns:
+        For single file: The modified annotation data dict
+        For multiple files: Number of files where model was removed
+    """
+    # Normalize input to list of files
+    files = _normalize_paths(paths, pattern, exclude_pattern)
+
+    # Process files
+    single_file = len(files) == 1
+    files_with_removals = 0
+    total_removed = 0
+    last_data = None
+
+    for file_path in tqdm(files, desc=f"Removing {model_name}", disable=single_file):
+        try:
+            with open(file_path) as f:
+                data = json.load(f)
+
+            if "annotations" not in data:
+                if single_file:
+                    raise ValueError(f"No 'annotations' field found in {file_path}")
+                continue
+
+            # Filter out the specified model
+            original_count = len(data["annotations"])
+            data["annotations"] = [ann for ann in data["annotations"] if ann["model"] != model_name]
+            removed_count = original_count - len(data["annotations"])
+
+            if removed_count == 0 and single_file:
+                print(f"Model '{model_name}' not found in {file_path}")
+            elif removed_count == 0 and not single_file:
+                # Silent for batch operations
+                continue
+
+            if removed_count > 0:
+                files_with_removals += 1
+                total_removed += removed_count
+
+            last_data = data
+
+            # Save the file
+            if in_place:
+                with open(file_path, "w") as f:
+                    json.dump(data, f, indent=2)
+            elif output_dir:
+                output_dir = Path(output_dir)
+                output_dir.mkdir(parents=True, exist_ok=True)
+                output_file = output_dir / file_path.name
+                with open(output_file, "w") as f:
+                    json.dump(data, f, indent=2)
+
+        except Exception as e:
+            if single_file:
+                raise
+            print(f"Error processing {file_path}: {e}")
+
+    if not single_file:
+        print(
+            f"Removed {model_name} from {files_with_removals} files "
+            f"(total {total_removed} annotations)"
+        )
+
+    return last_data if single_file else files_with_removals
+
+
+def get_annotation_stats(directory: str | Path, pattern: str = "shared*.json") -> dict[str, Any]:
     """
     Get statistics about annotations in a directory.
 
@@ -234,63 +232,87 @@ def get_annotation_stats(
     }
 
 
-def filter_annotations_by_tokens(
-    file_path: str | Path,
+def filter_annotations_by_tokens(  # noqa: C901
+    paths: str | Path | list[str | Path],
     max_tokens: int | None = None,
     min_tokens: int | None = None,
+    pattern: str = "*.json",
+    exclude_pattern: str | None = None,
     in_place: bool = False,
-    output_path: str | Path | None = None,
-) -> dict[str, Any]:
+    output_dir: str | Path | None = None,
+) -> dict[str, Any] | int:
     """
-    Filter annotations based on token count criteria.
+    Filter annotations based on token count criteria in JSON file(s).
 
     Args:
-        file_path: Path to the annotation JSON file
+        paths: Path to file, directory, or list of paths
         max_tokens: Maximum total tokens allowed
         min_tokens: Minimum total tokens required
-        in_place: If True, modify the file in place
-        output_path: Optional path to save the filtered file
+        pattern: Glob pattern for directory search (default: "*.json")
+        exclude_pattern: Optional pattern to exclude files
+        in_place: If True, modify files in place
+        output_dir: Optional directory to save filtered files
 
     Returns:
-        The filtered annotation data
+        For single file: The filtered annotation data dict
+        For multiple files: Number of files processed
     """
-    file_path = Path(file_path)
+    # Normalize input to list of files
+    files = _normalize_paths(paths, pattern, exclude_pattern)
 
-    with open(file_path) as f:
-        data = json.load(f)
+    # Process files
+    single_file = len(files) == 1
+    processed = 0
+    last_data = None
 
-    if "annotations" not in data:
-        raise ValueError(f"No 'annotations' field found in {file_path}")
+    for file_path in tqdm(files, desc="Filtering annotations", disable=single_file):
+        try:
+            with open(file_path) as f:
+                data = json.load(f)
 
-    filtered_annotations = []
+            if "annotations" not in data:
+                if single_file:
+                    raise ValueError(f"No 'annotations' field found in {file_path}")
+                continue
 
-    for ann in data["annotations"]:
-        # Calculate total tokens across all prompts
-        total_tokens = 0
-        for _prompt_key, prompt_data in ann.get("prompts", {}).items():
-            if "token_metrics" in prompt_data:
-                total_tokens += prompt_data["token_metrics"].get("total_tokens", 0)
+            filtered_annotations = []
+            for ann in data["annotations"]:
+                # Calculate total tokens across all prompts
+                total_tokens = 0
+                for _prompt_key, prompt_data in ann.get("prompts", {}).items():
+                    if "token_metrics" in prompt_data:
+                        total_tokens += prompt_data["token_metrics"].get("total_tokens", 0)
 
-        # Apply filters
-        if max_tokens and total_tokens > max_tokens:
-            continue
-        if min_tokens and total_tokens < min_tokens:
-            continue
+                # Apply filters
+                if max_tokens and total_tokens > max_tokens:
+                    continue
+                if min_tokens and total_tokens < min_tokens:
+                    continue
 
-        filtered_annotations.append(ann)
+                filtered_annotations.append(ann)
 
-    data["annotations"] = filtered_annotations
+            data["annotations"] = filtered_annotations
+            last_data = data
 
-    # Save the file
-    if in_place:
-        with open(file_path, "w") as f:
-            json.dump(data, f, indent=2)
-    elif output_path:
-        output_path = Path(output_path)
-        with open(output_path, "w") as f:
-            json.dump(data, f, indent=2)
+            # Save the file
+            if in_place:
+                with open(file_path, "w") as f:
+                    json.dump(data, f, indent=2)
+            elif output_dir:
+                output_dir = Path(output_dir)
+                output_dir.mkdir(parents=True, exist_ok=True)
+                output_file = output_dir / file_path.name
+                with open(output_file, "w") as f:
+                    json.dump(data, f, indent=2)
 
-    return data
+            processed += 1
+
+        except Exception as e:
+            if single_file:
+                raise
+            print(f"Error processing {file_path}: {e}")
+
+    return last_data if single_file else processed
 
 
 def export_to_csv(
@@ -372,16 +394,18 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Usage: python annotation_tools.py <command> [args]")
         print("Commands:")
-        print("  stats <directory> - Get annotation statistics")
-        print("  reorder <directory> - Reorder annotations to standard order")
-        print("  remove <directory> <model> - Remove a model from all files")
+        print("  stats <path> - Get annotation statistics")
+        print("  reorder <path> - Reorder annotations to standard order")
+        print("  remove <path> <model> - Remove a model from file(s)")
+        print("  export <directory> <output.csv> - Export to CSV")
+        print("\nPath can be a file, directory, or multiple files")
         sys.exit(1)
 
     command = sys.argv[1]
 
     if command == "stats":
         if len(sys.argv) < 3:
-            print("Usage: python annotation_tools.py stats <directory>")
+            print("Usage: python annotation_tools.py stats <path>")
             sys.exit(1)
         stats = get_annotation_stats(sys.argv[2])
         print(f"Files processed: {stats['files_processed']}")
@@ -392,7 +416,7 @@ if __name__ == "__main__":
 
     elif command == "reorder":
         if len(sys.argv) < 3:
-            print("Usage: python annotation_tools.py reorder <directory>")
+            print("Usage: python annotation_tools.py reorder <path>")
             sys.exit(1)
         model_order = [
             "qwen2.5vl:7b",
@@ -402,12 +426,25 @@ if __name__ == "__main__":
             "gemma3:27b",
             "mistral-small3.2:24b",
         ]
-        count = batch_reorder_annotations(sys.argv[2], model_order, pattern="shared*.json")
-        print(f"Reordered {count} files")
+        result = reorder_annotations(sys.argv[2], model_order, pattern="shared*.json")
+        if isinstance(result, int):
+            print(f"Reordered {result} files")
+        else:
+            print("File reordered successfully")
 
     elif command == "remove":
         if len(sys.argv) < 4:
-            print("Usage: python annotation_tools.py remove <directory> <model>")
+            print("Usage: python annotation_tools.py remove <path> <model>")
             sys.exit(1)
-        count = batch_remove_model(sys.argv[2], sys.argv[3], pattern="shared*.json")
-        print(f"Processed {count} files")
+        result = remove_model(sys.argv[2], sys.argv[3], pattern="shared*.json")
+        if isinstance(result, int):
+            print(f"Processed {result} files")
+        else:
+            print("Model removed from file")
+
+    elif command == "export":
+        if len(sys.argv) < 4:
+            print("Usage: python annotation_tools.py export <directory> <output.csv>")
+            sys.exit(1)
+        export_to_csv(sys.argv[2], sys.argv[3], pattern="shared*.json")
+        print(f"Exported to {sys.argv[3]}")

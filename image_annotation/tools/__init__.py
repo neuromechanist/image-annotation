@@ -1,8 +1,6 @@
 """Annotation manipulation tools."""
 
 from .annotation_tools import (
-    batch_remove_model,
-    batch_reorder_annotations,
     export_to_csv,
     filter_annotations_by_tokens,
     get_annotation_stats,
@@ -13,8 +11,6 @@ from .annotation_tools import (
 __all__ = [
     "reorder_annotations",
     "remove_model",
-    "batch_reorder_annotations",
-    "batch_remove_model",
     "get_annotation_stats",
     "filter_annotations_by_tokens",
     "export_to_csv",
