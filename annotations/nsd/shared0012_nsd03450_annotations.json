@@ -4,7 +4,7 @@
     "name": "shared0012_nsd03450.png",
     "id": "shared0012_nsd03450"
   },
-  "timestamp": "2025-08-30T15:48:40.745106+00:00",
+  "timestamp": "2025-08-31T01:58:35.946608+00:00",
   "annotations": [
     {
       "model": "gemma3:4b",
@@ -904,6 +904,119 @@
         "total_tokens": 2890,
         "total_time_ms": 48285.740517,
         "average_speed": 26.89996238764171
+      }
+    },
+    {
+      "model": "llama3.2-vision:11b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a young girl surfing on a wave in the ocean. The setting is a sunny day at the beach, with the sun casting a warm, golden light on the scene. The girl, dressed in a red wetsuit, is perched on a blue surfboard, her knees and one foot on the board's surface. Her body is slightly canted, with her weight on her right foot, as she navigates the wave's flow. The wave's white, frothy, and blue-tinged water is seen in the background, with a few waves in the distance. The girl's red wetsuit is a vibrant, bright color that contrasts with the blue of the wave. The overall composition of the image is dynamic, with the girl\u2019s movement and the wave\u2019s movement creating a sense of movement and energy. The image is shot from a slightly low- and- to the right- angle, which creates a sense of depth and perspective.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 52,
+            "output_tokens": 196,
+            "total_tokens": 248
+          },
+          "performance_metrics": {
+            "total_duration_ms": 3235.958837,
+            "prompt_eval_duration_ms": 972.599488,
+            "generation_duration_ms": 2212.736873,
+            "load_duration_ms": 48.64995,
+            "tokens_per_second": 88.5780873413411
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground elements of the image are the waves and the surfer. The waves are the most prominent and dynamic element in the foreground, with the surfer riding on one of them. The surfer is the central figure in the foreground, with the waves and the surfer's movements creating a dynamic and action-packed scene.\n\nThe background elements of the image are the ocean and the distant horizon. The ocean is the setting for the surfer's actions, with the waves and the surer\u2019s movements creating a dynamic and action- packed scene. The distant horizon is the background of the image, providing a sense of context and setting for the surer\u2019s actions. The ocean and the distant horizon are both part of the setting, providing a context for the surer\u2019s actions and adding to the overall sense of action and movement.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 58,
+            "output_tokens": 167,
+            "total_tokens": 225
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1940.948364,
+            "prompt_eval_duration_ms": 41.802899,
+            "generation_duration_ms": 1851.543035,
+            "load_duration_ms": 45.764065,
+            "tokens_per_second": 90.19504102425576
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "",
+          "response_format": "text",
+          "response_data": null,
+          "error": "unsupported format string passed to NoneType.__format__",
+          "token_metrics": null,
+          "performance_metrics": null
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "",
+          "response_format": "text",
+          "response_data": null,
+          "error": "unsupported format string passed to NoneType.__format__",
+          "token_metrics": null,
+          "performance_metrics": null
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"categories\": {\n    \"human\": {\n      \"surfer\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"size\": \"medium\",\n        \"description\": \"person on a surfboard\"\n      }\n    },\n    \"man-made\": {\n      \"surfboard\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"size\": \"medium\",\n        \"description\": \"flat, rectangular, and slightly curved\"\n      }\n    },\n    \"natural\": {\n      \"wave\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"size\": \"large\",\n        \"description\": \"curvaceous, blue, and moving\"\n      }\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "categories": {
+              "human": {
+                "surfer": {
+                  "count": 1,
+                  "location": "center",
+                  "size": "medium",
+                  "description": "person on a surfboard"
+                }
+              },
+              "man-made": {
+                "surfboard": {
+                  "count": 1,
+                  "location": "center",
+                  "size": "medium",
+                  "description": "flat, rectangular, and slightly curved"
+                }
+              },
+              "natural": {
+                "wave": {
+                  "count": 1,
+                  "location": "center",
+                  "size": "large",
+                  "description": "curvaceous, blue, and moving"
+                }
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 243,
+            "output_tokens": 160,
+            "total_tokens": 403
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1906.289748,
+            "prompt_eval_duration_ms": 69.097656,
+            "generation_duration_ms": 1787.621807,
+            "load_duration_ms": 46.117136,
+            "tokens_per_second": 89.5043903433429
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 876,
+        "total_time_ms": 7083.196949,
+        "average_speed": 89.42583956964658
       }
     }
   ]

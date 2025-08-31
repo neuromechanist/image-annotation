@@ -4,7 +4,7 @@
     "name": "shared0087_nsd08110.png",
     "id": "shared0087_nsd08110"
   },
-  "timestamp": "2025-08-30T16:29:24.570811+00:00",
+  "timestamp": "2025-08-31T09:41:40.852520+00:00",
   "annotations": [
     {
       "model": "gemma3:4b",
@@ -949,6 +949,113 @@
         "total_tokens": 3017,
         "total_time_ms": 53184.81294300001,
         "average_speed": 26.808996308356893
+      }
+    },
+    {
+      "model": "llama3.2-vision:11b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a female tennis player in action, standing on a tennis court with a red clay surface. The player, dressed in a black tennis outfit, is positioned near the right side of the court, with her left foot forward and her right foot back. She is holding a tennis racket in her right hand, with her left hand holding the racket's handle. The player's head is turned to the left, as if she is looking to the left side of the court. The background of the image is the red clay surface of the tennis court, with a white line running across the top of the image, dividing the court into two sections. The lighting is bright and sunny, with a few shadows on the player's face and the tennis court. The overall composition of the image is a close-up of the player, with the background of the tennis court and the player\u2019s position in the center of the image. The colors of the image are red and white, with the red of the tennis court and the white of the player\u2019s tennis outfit.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 52,
+            "output_tokens": 212,
+            "total_tokens": 264
+          },
+          "performance_metrics": {
+            "total_duration_ms": 3349.378859,
+            "prompt_eval_duration_ms": 966.12792,
+            "generation_duration_ms": 2331.667869,
+            "load_duration_ms": 49.395054,
+            "tokens_per_second": 90.92204032082925
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "",
+          "response_format": "text",
+          "response_data": null,
+          "error": "unsupported format string passed to NoneType.__format__",
+          "token_metrics": null,
+          "performance_metrics": null
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image shows a woman playing tennis on a clay court. She is wearing a black tennis outfit, including a skirt, a long-sleeved top, and a cap, and is holding a tennis racket. She is standing on the court, looking down at the ground, and appears to be preparing to hit a shot. The woman is alone on the court, with no other players or objects in the image. The background is a clay court, with a white line running across the center of the court. The woman's shadow is visible on the court, indicating that she is standing in a position to hit a shot. The image suggests that the woman is preparing to hit a shot, and is likely to be a professional or a player in a match.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 61,
+            "output_tokens": 153,
+            "total_tokens": 214
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1785.326371,
+            "prompt_eval_duration_ms": 48.588367,
+            "generation_duration_ms": 1681.35658,
+            "load_duration_ms": 48.672226,
+            "tokens_per_second": 90.99794881107253
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a sense of determination and focus, as the tennis player is seen in a dynamic pose, ready to hit the next shot. The overall tone is positive, evoking feelings of energy and excitement. The visual elements that contribute to this emotional atmosphere are the player's strong stance, the tennis racket in hand, and the vibrant colors of the tennis court. The player's focus on the ball and the tension in her body, as she prepares to hit the next shot, creates a sense of anticipation and energy. The image also conveys a sense of movement and energy, as the player is in the midst of a fast-paced and dynamic moment, which adds to the overall sense of excitement and energy. Overall, the image is a dynamic and energetic one, which is sure to evoke a sense of excitement and energy in the viewer.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 63,
+            "output_tokens": 170,
+            "total_tokens": 233
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1960.323736,
+            "prompt_eval_duration_ms": 44.296856,
+            "generation_duration_ms": 1866.621212,
+            "load_duration_ms": 47.172798,
+            "tokens_per_second": 91.07364627976808
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"categories\": {\n    \"human\": {\n      \"person\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"size\": \"large\",\n        \"description\": \"a woman playing tennis\"\n      }\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "categories": {
+              "human": {
+                "person": {
+                  "count": 1,
+                  "location": "center",
+                  "size": "large",
+                  "description": "a woman playing tennis"
+                }
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 243,
+            "output_tokens": 59,
+            "total_tokens": 302
+          },
+          "performance_metrics": {
+            "total_duration_ms": 769.055956,
+            "prompt_eval_duration_ms": 73.219038,
+            "generation_duration_ms": 645.080156,
+            "load_duration_ms": 48.272219,
+            "tokens_per_second": 91.46150203386507
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 1013,
+        "total_time_ms": 7864.084922,
+        "average_speed": 91.11378436138374
       }
     }
   ]

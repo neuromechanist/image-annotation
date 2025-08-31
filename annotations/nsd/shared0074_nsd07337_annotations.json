@@ -4,7 +4,7 @@
     "name": "shared0074_nsd07337.png",
     "id": "shared0074_nsd07337"
   },
-  "timestamp": "2025-08-30T16:22:38.456236+00:00",
+  "timestamp": "2025-08-31T08:24:59.582174+00:00",
   "annotations": [
     {
       "model": "gemma3:4b",
@@ -853,6 +853,117 @@
         "total_tokens": 2852,
         "total_time_ms": 46900.214131,
         "average_speed": 26.889221667160673
+      }
+    },
+    {
+      "model": "llama3.2-vision:11b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "",
+          "response_format": "text",
+          "response_data": null,
+          "error": "unsupported format string passed to NoneType.__format__",
+          "token_metrics": null,
+          "performance_metrics": null
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "",
+          "response_format": "text",
+          "response_data": null,
+          "error": "unsupported format string passed to NoneType.__format__",
+          "token_metrics": null,
+          "performance_metrics": null
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image is a close-up of a plate of steamed broccoli in a savory sauce, with a few pieces of red chili pepper and a drizzle of oil. The broccoli is the main focus, with its green, floresc... (The rest of the response is cut off.)",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 61,
+            "output_tokens": 59,
+            "total_tokens": 120
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1660.368988,
+            "prompt_eval_duration_ms": 973.903556,
+            "generation_duration_ms": 637.914989,
+            "load_duration_ms": 46.552407,
+            "tokens_per_second": 92.4888128001018
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "This image of a plate of steamed broccoli with a drizzle of sauce conveys a sense of comfort and nourishment. The vibrant green color of the broccoli and the golden sauce create a warm and inviting atmosphere, evoking feelings of satisfaction and relaxation. The image's focus on a simple, yet satisfying, meal suggests a sense of contentment and appreciation for the simple things in life. The use of natural light and the soft, gentle colors of the image create a peaceful and calming atmosphere, making the viewer feel like they are enjoying a delicious and satisfying meal. The overall tone of the image is positive and uplifting, making it a great way to start or end a meal. The image's focus on a simple, yet satisfying, meal suggests a sense of contentment and appreciation for the simple things in life.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 63,
+            "output_tokens": 164,
+            "total_tokens": 227
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1895.015428,
+            "prompt_eval_duration_ms": 52.731825,
+            "generation_duration_ms": 1792.179028,
+            "load_duration_ms": 47.891431,
+            "tokens_per_second": 91.50871505455424
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"categories\": {\n    \"human\": {\n      \"person\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"green\"],\n        \"size\": \"medium\",\n        \"description\": \"A person is sitting on the table eating a meal.\"\n      }\n    },\n    \"animal\": {\n      \"broccoli\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"green\"],\n        \"size\": \"medium\",\n        \"description\": \"A plate of steamed broccoli.\"\n      }\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "categories": {
+              "human": {
+                "person": {
+                  "count": 1,
+                  "location": "center",
+                  "color": [
+                    "green"
+                  ],
+                  "size": "medium",
+                  "description": "A person is sitting on the table eating a meal."
+                }
+              },
+              "animal": {
+                "broccoli": {
+                  "count": 1,
+                  "location": "center",
+                  "color": [
+                    "green"
+                  ],
+                  "size": "medium",
+                  "description": "A plate of steamed broccoli."
+                }
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 243,
+            "output_tokens": 127,
+            "total_tokens": 370
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1531.762216,
+            "prompt_eval_duration_ms": 76.585133,
+            "generation_duration_ms": 1406.013344,
+            "load_duration_ms": 46.647941,
+            "tokens_per_second": 90.32631200973864
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 717,
+        "total_time_ms": 5087.146632,
+        "average_speed": 91.44127995479823
       }
     }
   ]

@@ -4,7 +4,7 @@
     "name": "shared0047_nsd05428.png",
     "id": "shared0047_nsd05428"
   },
-  "timestamp": "2025-08-30T16:07:47.151054+00:00",
+  "timestamp": "2025-08-31T05:12:01.755320+00:00",
   "annotations": [
     {
       "model": "gemma3:4b",
@@ -822,6 +822,102 @@
         "total_tokens": 2885,
         "total_time_ms": 48157.75061199999,
         "average_speed": 26.89027833496788
+      }
+    },
+    {
+      "model": "llama3.2-vision:11b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "",
+          "response_format": "text",
+          "response_data": null,
+          "error": "unsupported format string passed to NoneType.__format__",
+          "token_metrics": null,
+          "performance_metrics": null
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground elements of the image are the hand and the donut, with the hand holding the donut and the donut's surface being the focal point. The donut is a white, glazed, and sprinkled with orange and yellow, and has a hole in the center. The hand is holding the donut with the fingers and the thumb, with the hand's fingers and the donut\u2019s surface are in close proximity to each other. The background elements of the image are the ground and the surrounding environment, which is a grey and concrete-like surface. The background is a flat and flat-looked, with no other objects or features to be seen. The hand and the donut are in the foreground, and the background is in the background, with the two being in close proximity to each other.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 58,
+            "output_tokens": 165,
+            "total_tokens": 223
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1888.667483,
+            "prompt_eval_duration_ms": 39.08672,
+            "generation_duration_ms": 1800.852123,
+            "load_duration_ms": 46.807823,
+            "tokens_per_second": 91.62329204750588
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image shows a person holding a large, white, and sweet-looking donut in their hand. The donut is covered in a white, sweet, and possibly\u00a0chocolatey\u00a0or\u00a0frosted\u00a0coating, and it is sprinkled with\u00a0chocolate\u00a0or\u00a0frosted\u00a0pieces. The person is holding the donut in their hand, and it is not clear if they are eating it or just holding it. The background is not visible, so it is not possible to determine where the person is or what they are doing. The person is not doing anything with the donut, so it is not possible to determine what they are doing with it. The person is holding the donut in their hand, and it is not clear if they are eating it or just holding it.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 61,
+            "output_tokens": 166,
+            "total_tokens": 227
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1909.865886,
+            "prompt_eval_duration_ms": 46.48764,
+            "generation_duration_ms": 1812.082118,
+            "load_duration_ms": 49.326707,
+            "tokens_per_second": 91.60732747763917
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image of a person holding a donut evokes a sense of comfort and indulgence. The warm, golden light of the sun on the person's hand and the soft, fluffy texture of the donut's surface create a sense of relaxation and pleasure. The image's warm color palette and gentle lighting create a cozy atmosphere, making the viewer feel like they are experiencing a moment of comfort and relaxation. The image's focus on the person\u2019s hand and the donut\u2019s surface creates a sense of intimacy and connection, making the viewer feel like they are part of the moment. The overall tone of the image is positive and inviting, making the viewer feel like they are part of the moment and can experience the pleasure of the moment. The image\u2019s visual elements, such as the warm light and the soft, fluffy texture of the donut, contribute to this emotional atmosphere, making it a pleasant and enjoyable experience.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 63,
+            "output_tokens": 184,
+            "total_tokens": 247
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2106.834497,
+            "prompt_eval_duration_ms": 44.97151,
+            "generation_duration_ms": 2012.575481,
+            "load_duration_ms": 47.29755,
+            "tokens_per_second": 91.42514242922947
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"categories\": {\n    \"human\": {\n      \"person\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"white\"],\n        \"size\": \"medium\",\n        \"description\": \"A person holding a donut\"\n      }\n    },\n    \"man-made\": {\n      \"donut\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"white\", \"brown\"],\n        \"size\": \"medium\",\n        \"description\": \"A sweet, fried, and often\n          [\u2026]\n        \"\n      }\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": null,
+          "error": "JSON parsing failed: Invalid control character at: line 18 column 50 (char 419)",
+          "token_metrics": {
+            "input_tokens": 243,
+            "output_tokens": 134,
+            "total_tokens": 377
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1603.74989,
+            "prompt_eval_duration_ms": 70.163164,
+            "generation_duration_ms": 1482.978508,
+            "load_duration_ms": 48.644489,
+            "tokens_per_second": 90.35869318208623
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 1074,
+        "total_time_ms": 7509.117756,
+        "average_speed": 91.25361378411519
       }
     }
   ]

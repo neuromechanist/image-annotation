@@ -4,7 +4,7 @@
     "name": "shared0029_nsd04326.png",
     "id": "shared0029_nsd04326"
   },
-  "timestamp": "2025-08-30T15:57:58.541558+00:00",
+  "timestamp": "2025-08-31T03:42:58.389729+00:00",
   "annotations": [
     {
       "model": "gemma3:4b",
@@ -884,6 +884,119 @@
         "total_tokens": 2954,
         "total_time_ms": 50714.82406,
         "average_speed": 26.93619879238015
+      }
+    },
+    {
+      "model": "llama3.2-vision:11b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a serene scene of a pair of bee-eaters perched on a branch over a tranquil lake. The setting is a lush, green, and vibrant environment, with the lake's calm waters reflecting the surrounding trees and foliage. The two birds, one with a vibrant red throat and the other with a brown and green plumage, are perched on a branch, their eyes and beaks facing each other. The colors of the birds are a mix of greens, blues, and reds, with the red throat of the male bird being particularly vibrant. The lighting is soft and gentle, with the sun's rays creating a warm and cozy atmosphere. The composition of the image is simple and natural, with the birds' perched on a branch, the lake\u2019s calm waters, and the surrounding trees and foliage, creating a peaceful and serene atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 52,
+            "output_tokens": 174,
+            "total_tokens": 226
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2950.058315,
+            "prompt_eval_duration_ms": 979.222795,
+            "generation_duration_ms": 1920.74125,
+            "load_duration_ms": 48.272988,
+            "tokens_per_second": 90.59002611621945
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "",
+          "response_format": "text",
+          "response_data": null,
+          "error": "unsupported format string passed to NoneType.__format__",
+          "token_metrics": null,
+          "performance_metrics": null
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "",
+          "response_format": "text",
+          "response_data": null,
+          "error": "unsupported format string passed to NoneType.__format__",
+          "token_metrics": null,
+          "performance_metrics": null
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image of the bee-eater perched on a branch, with its vibrant plumage and sharp beak, conveys a sense of joy and freedom. The bird's bright colors and lively posture evoke a feeling of playfulness and energy, as if it's ready to take flight at any moment. The surrounding environment, with its lush greenery and blue sky, adds to the sense of tranquility and peace, creating a sense of calm and serenity. The overall tone is positive, with a sense of joy and freedom, as if the bird is enjoying its time in the sun. The visual elements that contribute to this emotional atmosphere include the bird's vibrant colors, the lush greenery, and the blue sky, which all contribute to a sense of joy and freedom, making the image a joyful and uplifting experience.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 63,
+            "output_tokens": 167,
+            "total_tokens": 230
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2856.216296,
+            "prompt_eval_duration_ms": 976.620525,
+            "generation_duration_ms": 1828.857547,
+            "load_duration_ms": 48.702646,
+            "tokens_per_second": 91.31383703117912
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"categories\": {\n    \"human\": {\n      \"person\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"size\": \"large\",\n        \"description\": \"person sitting on a branch, looking at the bird\"\n      }\n    },\n    \"animal\": {\n      \"bird\": {\n        \"count\": 1,\n        \"location\": \"left\",\n        \"size\": \"small\",\n        \"description\": \"a bird perched on a branch, looking at the person\"\n      }\n    },\n    \"man-made\": {\n      \"tree\": {\n        \"count\": 1,\n        \"location\": \"right\",\n        \"size\": \"large\",\n        \"description\": \"a tree in the background, with branches and leaves\"\n    }\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "categories": {
+              "human": {
+                "person": {
+                  "count": 1,
+                  "location": "center",
+                  "size": "large",
+                  "description": "person sitting on a branch, looking at the bird"
+                }
+              },
+              "animal": {
+                "bird": {
+                  "count": 1,
+                  "location": "left",
+                  "size": "small",
+                  "description": "a bird perched on a branch, looking at the person"
+                }
+              },
+              "man-made": {
+                "tree": {
+                  "count": 1,
+                  "location": "right",
+                  "size": "large",
+                  "description": "a tree in the background, with branches and leaves"
+                }
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 243,
+            "output_tokens": 170,
+            "total_tokens": 413
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1998.595469,
+            "prompt_eval_duration_ms": 64.6898,
+            "generation_duration_ms": 1884.565335,
+            "load_duration_ms": 47.528315,
+            "tokens_per_second": 90.20647724054629
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 869,
+        "total_time_ms": 7804.870080000001,
+        "average_speed": 90.70344679598162
       }
     }
   ]

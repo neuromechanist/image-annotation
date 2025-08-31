@@ -4,7 +4,7 @@
     "name": "shared0115_nsd09866.png",
     "id": "shared0115_nsd09866"
   },
-  "timestamp": "2025-08-30T16:44:51.467436+00:00",
+  "timestamp": "2025-08-31T13:38:20.003657+00:00",
   "annotations": [
     {
       "model": "gemma3:4b",
@@ -923,6 +923,140 @@
         "total_tokens": 5263,
         "total_time_ms": 32843.999905000004,
         "average_speed": 35.894703055310146
+      }
+    },
+    {
+      "model": "llama3.2-vision:11b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image appears to be a close-up shot of a savory dish, likely a Chinese or Asian-style stir-fry. The main elements are a mix of vegetables, including broccoli, mushrooms, and onions, all cooked and tossed in a sweet and spicy sauce. The colors are vibrant and bright, with a range of colors from green, yellow, and red, which are all present in the sauce. The lighting is warm and golden, with a slight depth of color and a sense of depth and texture. The composition is intimate and close-up, with the focus on the individual ingredients and the sauce, which is a key part of the dish. The overall effect is a delicious and appetizing image that makes the viewer\u2019s mouth and senses to be in the same place as the food. The image is also a great example of a food photography, which is a great way to show the food and the food\u2019s ingredients.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 52,
+            "output_tokens": 185,
+            "total_tokens": 237
+          },
+          "performance_metrics": {
+            "total_duration_ms": 3129.066072,
+            "prompt_eval_duration_ms": 994.870551,
+            "generation_duration_ms": 2081.90183,
+            "load_duration_ms": 50.103753,
+            "tokens_per_second": 88.86105835259292
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "",
+          "response_format": "text",
+          "response_data": null,
+          "error": "unsupported format string passed to NoneType.__format__",
+          "token_metrics": null,
+          "performance_metrics": null
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "",
+          "response_format": "text",
+          "response_data": null,
+          "error": "unsupported format string passed to NoneType.__format__",
+          "token_metrics": null,
+          "performance_metrics": null
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image of a plate of stir-fried vegetables and chicken, served with a side of rice, evokes a sense of comfort and satisfaction. The vibrant colors of the vegetables and the savory sauce create a warm and inviting atmosphere, making the viewer feel like they're enjoying a delicious and satisfying meal. The image's warm and golden tones, combined with the soft lighting, create a cozy and intimate atmosphere, making the viewer feel like they're enjoying a meal in a cozy and comfortable environment. The image's focus on the food and the use of natural light, creates a sense of warmth and comfort, making the viewer feel like they're enjoying a meal in a cozy and comfortable environment. The overall tone of the image is positive and inviting, making the viewer feel like they\u2019re enjoying a delicious and satisfying meal.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 63,
+            "output_tokens": 163,
+            "total_tokens": 226
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1935.300761,
+            "prompt_eval_duration_ms": 41.493388,
+            "generation_duration_ms": 1841.755096,
+            "load_duration_ms": 49.7151,
+            "tokens_per_second": 88.50253779886921
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"categories\": {\n    \"human\": {\n      \"person\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"red\", \"white\"],\n        \"size\": \"medium\",\n        \"description\": \"A person is sitting at a table eating a meal.\"\n      }\n    },\n    \"animal\": {\n      \"broccoli\": {\n        \"count\": 1,\n        \"location\": \"top\",\n        \"color\": [\"green\"],\n        \"size\": \"small\",\n        \"description\": \"A piece of broccoli is on top of the plate.\"\n      }\n    },\n    \"man-made\": {\n      \"plate\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"white\"],\n        \"size\": \"large\",\n        \"description\": \"A plate of food is in the center of the image.\"\n      }\n    },\n    \"natural\": {\n      \"mushroom\": {\n        \"count\": 1,\n        \"location\": \"top\",\n        \"color\": [\"brown\"],\n        \"size\": \"small\",\n        \"description\": \"A mushroom is on top of the plate.\"\n      }\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "categories": {
+              "human": {
+                "person": {
+                  "count": 1,
+                  "location": "center",
+                  "color": [
+                    "red",
+                    "white"
+                  ],
+                  "size": "medium",
+                  "description": "A person is sitting at a table eating a meal."
+                }
+              },
+              "animal": {
+                "broccoli": {
+                  "count": 1,
+                  "location": "top",
+                  "color": [
+                    "green"
+                  ],
+                  "size": "small",
+                  "description": "A piece of broccoli is on top of the plate."
+                }
+              },
+              "man-made": {
+                "plate": {
+                  "count": 1,
+                  "location": "center",
+                  "color": [
+                    "white"
+                  ],
+                  "size": "large",
+                  "description": "A plate of food is in the center of the image."
+                }
+              },
+              "natural": {
+                "mushroom": {
+                  "count": 1,
+                  "location": "top",
+                  "color": [
+                    "brown"
+                  ],
+                  "size": "small",
+                  "description": "A mushroom is on top of the plate."
+                }
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 243,
+            "output_tokens": 252,
+            "total_tokens": 495
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2991.448183,
+            "prompt_eval_duration_ms": 72.741556,
+            "generation_duration_ms": 2868.077503,
+            "load_duration_ms": 48.170874,
+            "tokens_per_second": 87.86373441317706
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 958,
+        "total_time_ms": 8055.8150160000005,
+        "average_speed": 88.40911018821306
       }
     }
   ]

@@ -4,7 +4,7 @@
     "name": "shared0048_nsd05460.png",
     "id": "shared0048_nsd05460"
   },
-  "timestamp": "2025-08-30T16:08:21.853332+00:00",
+  "timestamp": "2025-08-31T05:12:09.791012+00:00",
   "annotations": [
     {
       "model": "gemma3:4b",
@@ -1086,6 +1086,117 @@
         "total_tokens": 3174,
         "total_time_ms": 59036.085911999995,
         "average_speed": 26.885286147020203
+      }
+    },
+    {
+      "model": "llama3.2-vision:11b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "",
+          "response_format": "text",
+          "response_data": null,
+          "error": "unsupported format string passed to NoneType.__format__",
+          "token_metrics": null,
+          "performance_metrics": null
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground elements in this image are the grassy and wet-looked ground, the yellow and black road markings, and the three yellow traffic cones. The background elements are the airport's buildings, the airport's runway, and the distant mountains. The airport's buildings are the main structures in the background, with the airport's runway being the long, flat, and straight path that leads to the airport's buildings. The mountains are in the background, far away from the airport's buildings and the airport's runway. The airport's buildings and the airport's runway are both in the same area, with the airport's buildings being in the background and the airport's runway being in the foreground.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 58,
+            "output_tokens": 140,
+            "total_tokens": 198
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1633.669792,
+            "prompt_eval_duration_ms": 51.628556,
+            "generation_duration_ms": 1531.756029,
+            "load_duration_ms": 47.803109,
+            "tokens_per_second": 91.39836720042052
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image shows a white and green Alitalia plane on the runway, with a large building and a mountain in the background. The plane is parked on the runway, with its engines and wheels still in place. The Alitalia logo is visible on the plane's side, indicating that it is a commercial aircraft. In the background, a large building with a yellow and blue sign is visible, possibly a airport or a hotel. The mountain in the background is a large, green and brown mountain, with a few trees and a small lake in the distance. The plane is not moving, and it is not clear what it is doing. The plane is not moving, and it is not clear what it is doing. The plane is not moving, and it is not clear what it is doing. The plane is not moving, and it is not.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 61,
+            "output_tokens": 173,
+            "total_tokens": 234
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1992.222927,
+            "prompt_eval_duration_ms": 45.503323,
+            "generation_duration_ms": 1896.043508,
+            "load_duration_ms": 48.576842,
+            "tokens_per_second": 91.24263197023642
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image of an Alitalia plane on the runway evokes a sense of excitement and anticipation, as it prepares to take off. The vibrant colors of the Italian flag on the tail of the plane add a touch of national pride, while the Alitalia logo on the side of the plane adds a sense of professionalism and efficiency. The image is neutral in tone, as it simply shows a plane on the runway, without any emotional or emotional content. The visual elements that contribute to this neutral tone are the simple, clean design of the plane, the lack of any dramatic or emotional content, and the focus on the plane's functionality, which is a neutral and practical approach. Overall, the image is a simple and straightforward representation of a plane on the runway, without any emotional or emotional content.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 63,
+            "output_tokens": 161,
+            "total_tokens": 224
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1870.460904,
+            "prompt_eval_duration_ms": 45.487954,
+            "generation_duration_ms": 1770.990898,
+            "load_duration_ms": 51.85216,
+            "tokens_per_second": 90.90955813596734
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"categories\": {\n    \"man-made\": {\n      \"airplane\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"white\", \"blue\"],\n        \"size\": \"large\",\n        \"description\": \"a commercial airliner with a distinctive livery\"\n      }\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "categories": {
+              "man-made": {
+                "airplane": {
+                  "count": 1,
+                  "location": "center",
+                  "color": [
+                    "white",
+                    "blue"
+                  ],
+                  "size": "large",
+                  "description": "a commercial airliner with a distinctive livery"
+                }
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 243,
+            "output_tokens": 76,
+            "total_tokens": 319
+          },
+          "performance_metrics": {
+            "total_duration_ms": 958.667224,
+            "prompt_eval_duration_ms": 74.883423,
+            "generation_duration_ms": 833.472949,
+            "load_duration_ms": 46.576828,
+            "tokens_per_second": 91.18472302092674
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 975,
+        "total_time_ms": 6455.020847,
+        "average_speed": 91.18382008188776
       }
     }
   ]

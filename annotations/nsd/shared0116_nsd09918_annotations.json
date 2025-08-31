@@ -4,7 +4,7 @@
     "name": "shared0116_nsd09918.png",
     "id": "shared0116_nsd09918"
   },
-  "timestamp": "2025-08-30T16:45:24.465102+00:00",
+  "timestamp": "2025-08-31T13:38:31.584873+00:00",
   "annotations": [
     {
       "model": "gemma3:4b",
@@ -1029,6 +1029,107 @@
         "total_tokens": 5274,
         "total_time_ms": 32971.541223,
         "average_speed": 35.92201096453749
+      }
+    },
+    {
+      "model": "llama3.2-vision:11b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "",
+          "response_format": "text",
+          "response_data": null,
+          "error": "unsupported format string passed to NoneType.__format__",
+          "token_metrics": null,
+          "performance_metrics": null
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "",
+          "response_format": "text",
+          "response_data": null,
+          "error": "unsupported format string passed to NoneType.__format__",
+          "token_metrics": null,
+          "performance_metrics": null
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image features a large, blue-and-white Korean Air aircraft on the runway, with a few people in the background. The plane is stationary, with its engines and wheels still on the ground. A few people are visible in the distance, likely airport staff or passengers, but they are not interacting with the plane. The surrounding environment is a typical airport setting, with a few buildings and a runway in the background. The plane is not moving, and there is no apparent activity or interaction between the people and the plane. The scene is a typical airport setting, with the plane being the main focus, and the people in the background are not interacting with it.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 61,
+            "output_tokens": 133,
+            "total_tokens": 194
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1564.387162,
+            "prompt_eval_duration_ms": 46.841565,
+            "generation_duration_ms": 1466.004874,
+            "load_duration_ms": 49.551028,
+            "tokens_per_second": 90.72275430920565
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image of the Korean Air plane on the runway conveys a sense of excitement and anticipation, evoking feelings of adventure and travel. The overall tone is positive, as the plane is ready to take off, and the surrounding landscape is lush and green, suggesting a peaceful and natural environment. The visual elements that contribute to this emotional atmosphere are the vibrant colors of the plane's livery, the lush greenery of the surrounding landscape, and the sense of movement and energy of the plane's engines. The image also conveys a sense of excitement and energy, as the plane is ready to take off, and the surrounding landscape is full of life and energy. The overall tone is positive, and the image is a great way to capture the excitement and energy of a journey. The image is a great way to capture the excitement and energy of a journey, and it is a great way to capture the excitement and energy of a journey.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 63,
+            "output_tokens": 188,
+            "total_tokens": 251
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2172.307385,
+            "prompt_eval_duration_ms": 45.872636,
+            "generation_duration_ms": 2078.839178,
+            "load_duration_ms": 45.674681,
+            "tokens_per_second": 90.43508607571567
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"categories\": {\n    \"man-made\": {\n      \"airplane\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"blue\", \"white\"],\n        \"size\": \"large\",\n        \"description\": \"a commercial airliner\"\n      }\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "categories": {
+              "man-made": {
+                "airplane": {
+                  "count": 1,
+                  "location": "center",
+                  "color": [
+                    "blue",
+                    "white"
+                  ],
+                  "size": "large",
+                  "description": "a commercial airliner"
+                }
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 243,
+            "output_tokens": 71,
+            "total_tokens": 314
+          },
+          "performance_metrics": {
+            "total_duration_ms": 908.09441,
+            "prompt_eval_duration_ms": 72.422434,
+            "generation_duration_ms": 783.658579,
+            "load_duration_ms": 50.094729,
+            "tokens_per_second": 90.6006798146722
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 759,
+        "total_time_ms": 4644.788957,
+        "average_speed": 90.5861733998645
       }
     }
   ]

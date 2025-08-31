@@ -4,7 +4,7 @@
     "name": "shared0077_nsd07419.png",
     "id": "shared0077_nsd07419"
   },
-  "timestamp": "2025-08-30T16:24:18.018061+00:00",
+  "timestamp": "2025-08-31T08:31:23.362085+00:00",
   "annotations": [
     {
       "model": "gemma3:4b",
@@ -950,6 +950,121 @@
         "total_tokens": 3048,
         "total_time_ms": 54388.445523999995,
         "average_speed": 26.86959750096944
+      }
+    },
+    {
+      "model": "llama3.2-vision:11b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "",
+          "response_format": "text",
+          "response_data": null,
+          "error": "unsupported format string passed to NoneType.__format__",
+          "token_metrics": null,
+          "performance_metrics": null
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground elements in the image are the boy and the kite, both of which are central to the scene. The boy, dressed in a blue t-shirt and a hat, is holding the kite's string and looking up at the kite as it flies high in the sky. The kite, a yellow and white object with a long, thin tail, is suspended in the air, its movement and flight creating a sense of excitement and joy. The background elements, on the other hand, are the trees and the sky, which provide a natural and peaceful setting for the scene. The trees, with their green leaves and branches, are a part of the landscape, while the sky, with its blue and cloudless, is a part of the environment, providing a backdrop for the scene. The boy and the kite, both of which are in the same place, are both in the same place, and the same is true for the same.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 58,
+            "output_tokens": 189,
+            "total_tokens": 247
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2208.186106,
+            "prompt_eval_duration_ms": 45.856268,
+            "generation_duration_ms": 2111.279902,
+            "load_duration_ms": 49.298923,
+            "tokens_per_second": 89.51915841237425
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "A young boy is standing in a park, holding a kite string in his right hand and a small, yellow, and white kite in his left hand. He is wearing a blue t-shirt and a wide-brimmed hat. The boy is looking up at the kite, which is flying high in the sky. The kite is a small, lightweight, and colorful object, with a long, thin, and flexible string attached to it. The boy is holding the string, which is connected to the kite, and is using it to control the kite's flight. The boy is standing in a park, surrounded by trees and a clear blue sky, and is enjoying the sunny and warm weather. The boy is having fun, and is using the kite to fly it, and is enjoying the experience of flying a kite in a park.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 61,
+            "output_tokens": 168,
+            "total_tokens": 229
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1995.164553,
+            "prompt_eval_duration_ms": 45.66984,
+            "generation_duration_ms": 1900.842642,
+            "load_duration_ms": 47.020719,
+            "tokens_per_second": 88.38185565073198
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image of a young boy flying a kite in a serene landscape evokes a sense of joy and freedom. The boy's carefree smile and the kite's soaring flight create a sense of excitement and adventure. The warm, sunny day and the lush green trees in the background add to the feeling of tranquility and peace. The boy's joyful expression and the kite's gentle flight create a sense of happiness and freedom. The image's overall tone is positive, evoking a sense of joy and wonder. The visual elements that contribute to this emotional atmosphere include the boy's smile, the kite's flight, and the serene landscape, which all contribute to a sense of joy and freedom. The image's peaceful and serene atmosphere is also enhanced by the beautiful and natural setting, which adds to the feeling of joy and freedom.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 63,
+            "output_tokens": 165,
+            "total_tokens": 228
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1937.513945,
+            "prompt_eval_duration_ms": 45.429434,
+            "generation_duration_ms": 1844.439916,
+            "load_duration_ms": 45.886029,
+            "tokens_per_second": 89.45805096098343
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"categories\": {\n    \"human\": {\n      \"person\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"size\": \"medium\",\n        \"description\": \"A person is flying a kite in the sky.\"\n      }\n    },\n    \"man-made\": {\n      \"kite\": {\n        \"count\": 1,\n        \"location\": \"top\",\n        \"size\": \"small\",\n        \"description\": \"A colorful kite is flying high in the sky.\"\n      }\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "categories": {
+              "human": {
+                "person": {
+                  "count": 1,
+                  "location": "center",
+                  "size": "medium",
+                  "description": "A person is flying a kite in the sky."
+                }
+              },
+              "man-made": {
+                "kite": {
+                  "count": 1,
+                  "location": "top",
+                  "size": "small",
+                  "description": "A colorful kite is flying high in the sky."
+                }
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 243,
+            "output_tokens": 116,
+            "total_tokens": 359
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1433.39936,
+            "prompt_eval_duration_ms": 73.808785,
+            "generation_duration_ms": 1310.190629,
+            "load_duration_ms": 47.669201,
+            "tokens_per_second": 88.53673460367881
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 1063,
+        "total_time_ms": 7574.263964,
+        "average_speed": 88.97394990694212
       }
     }
   ]
