@@ -7,6 +7,310 @@
   "timestamp": "2025-08-31T04:48:07.535369+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a serene outdoor scene under a vast, clear blue sky dotted with a few wispy clouds. The main subject is a person, viewed from behind, dressed in a dark jacket and a light pink knit hat, their right hand raised, holding the string of a colorful kite. The kite, a vibrant mix of pink, blue, and purple, features long, flowing tails in green and pink, adding a dynamic element to the composition. The person's red-gloved hand contrasts sharply with the dark jacket, drawing the viewer's eye to the action of flying the kite. The lighting is natural and bright, suggesting a sunny day, which enhances the vivid colors of the kite and the clearness of the sky. The overall composition is simple yet engaging, focusing on the interaction between the person and the kite against the expansive backdrop of the sky, evoking a sense of freedom and joy associated with outdoor activities.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 186,
+            "total_tokens": 483
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1442.544703,
+            "prompt_eval_duration_ms": 80.876808,
+            "generation_duration_ms": 1319.967403,
+            "load_duration_ms": 39.888492,
+            "tokens_per_second": 140.91257070232362
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, a person dressed in a dark jacket and a pink beanie stands with their back to the viewer, their right hand raised, holding the string of a brightly colored kite. The kite, adorned with vibrant hues of pink, blue, and green, features long, flowing ribbons that flutter in the wind, adding a dynamic element to the scene. The individual's red-gloved hand contrasts sharply with the darker tones of their clothing, drawing attention to the act of flying the kite. The background is a serene expanse of a clear blue sky, dotted with scattered white clouds, which provides a calm and expansive backdrop to the foreground activity. The relationship between the foreground and background is one of contrast and harmony; the vivid colors and movement of the kite in the foreground are set against the tranquil, open sky, creating a balanced and visually appealing composition.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 175,
+            "total_tokens": 478
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1319.920551,
+            "prompt_eval_duration_ms": 30.711246,
+            "generation_duration_ms": 1251.229551,
+            "load_duration_ms": 36.03376,
+            "tokens_per_second": 139.86242561178128
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a person is seen flying a kite against a backdrop of a clear blue sky dotted with a few fluffy white clouds. The individual, dressed in a dark jacket and a pink beanie, is holding the kite string with one hand, which is adorned with a red glove, suggesting it might be a cold day. The kite, vibrant with hues of pink, blue, and green, is soaring high in the sky, its long tails trailing behind it. The person's posture and the direction of their gaze indicate their focus on the kite, showing a sense of engagement and enjoyment in the activity. There are no animals or other objects in the image, and the interaction is solely between the person and the kite, highlighting a simple yet joyful moment of outdoor recreation.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 156,
+            "total_tokens": 462
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1187.232665,
+            "prompt_eval_duration_ms": 32.351697,
+            "generation_duration_ms": 1115.370841,
+            "load_duration_ms": 37.641052,
+            "tokens_per_second": 139.86379620623416
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of joy and tranquility, with a distinctly positive mood. The vibrant colors of the kite\u2014blue, pink, and purple\u2014against the backdrop of a clear blue sky create a feeling of freedom and playfulness. The person's posture, with their arm raised and the kite soaring high, suggests a sense of accomplishment and delight in the simple pleasure of flying a kite. The fluffy clouds scattered across the sky add to the serene and peaceful atmosphere, enhancing the overall uplifting feeling. The red gloves and pink hat, contrasting with the dark jacket, add a touch of warmth and individuality, further contributing to the positive and lighthearted tone of the image. The absence of any other people or distractions in the frame focuses the viewer's attention on the joy of the moment, making the image feel intimate and personal.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 171,
+            "total_tokens": 479
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1299.109146,
+            "prompt_eval_duration_ms": 29.978431,
+            "generation_duration_ms": 1227.824279,
+            "load_duration_ms": 39.528573,
+            "tokens_per_second": 139.27074331782293
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"pink\"],\n      \"size\": \"medium\",\n      \"description\": \"wearing a pink hat and black jacket, flying a kite\"\n    }\n  },\n  \"man-made\": {\n    \"kite\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"blue\", \"pink\", \"green\"],\n      \"size\": \"medium\",\n      \"description\": \"a colorful kite with long tails flying in the sky\"\n    },\n    \"string\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"the string connecting the kite to the person\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"a clear blue sky with some clouds\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black",
+                  "pink"
+                ],
+                "size": "medium",
+                "description": "wearing a pink hat and black jacket, flying a kite"
+              }
+            },
+            "man-made": {
+              "kite": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "blue",
+                  "pink",
+                  "green"
+                ],
+                "size": "medium",
+                "description": "a colorful kite with long tails flying in the sky"
+              },
+              "string": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "the string connecting the kite to the person"
+              }
+            },
+            "natural": {
+              "sky": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "blue",
+                  "white"
+                ],
+                "size": "large",
+                "description": "a clear blue sky with some clouds"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 243,
+            "total_tokens": 729
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1811.316014,
+            "prompt_eval_duration_ms": 43.668425,
+            "generation_duration_ms": 1726.141646,
+            "load_duration_ms": 38.803063,
+            "tokens_per_second": 140.77639605249405
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2631,
+        "total_time_ms": 7060.123079,
+        "average_speed": 140.13718637813122
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a serene outdoor scene with a person flying a colorful kite against a backdrop of a clear blue sky with scattered white clouds. The setting appears to be an open area, possibly a park or a field, as there are no visible structures or trees in the immediate foreground. The main elements include the person, the kite, and the sky.\n\nThe person, seen from behind, is wearing a dark jacket and a light pink beanie, along with red gloves. Their posture suggests they are actively engaged in flying the kite, with one arm raised, holding the string. The kite is vibrant and eye-catching, featuring a triangular shape with a mix of bright colors, including purple, blue, and green. It has long, flowing ribbons in green and pink that trail behind it, adding a sense of movement and dynamism to the scene.\n\nThe lighting is natural and bright, indicating a sunny day. The sky is a vivid blue, with soft, fluffy clouds adding depth and texture to the background. The overall composition is balanced, with the person and the kite positioned slightly off-center, creating a sense of depth and perspective. The image conveys a sense of joy, freedom, and connection with nature, emphasizing the simple pleasure of kite flying on a clear day. The contrast between the dark clothing of the person and the bright colors of the kite and sky enhances the visual appeal of the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 282,
+            "total_tokens": 579
+          },
+          "performance_metrics": {
+            "total_duration_ms": 14091.368637,
+            "prompt_eval_duration_ms": 3585.26244,
+            "generation_duration_ms": 10466.730555,
+            "load_duration_ms": 37.442235,
+            "tokens_per_second": 26.942510702665164
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the closest elements to the viewer are a person wearing a pink beanie and dark jacket, along with red gloves. The individual is positioned with their back to the camera, raising one arm as if controlling a kite. The person's attire suggests a cold environment, and their posture indicates active engagement in flying the kite. The kite itself is a vibrant, multicolored object with long, flowing ribbons in green and pink, adding a dynamic and playful element to the scene. The kite is the focal point of the person's activity, connecting the foreground with the background.\n\nThe background consists of a vast, open sky that dominates the scene. The sky is a clear blue with scattered white clouds, providing a serene and expansive setting. The kite, with its bright colors and ribbons, stands out sharply against the sky, creating a striking contrast. The sky's openness emphasizes the freedom and joy associated with kite flying, while the clouds add texture and depth to the background.\n\nThe relationship between the foreground and background is harmonious and complementary. The person in the foreground is actively interacting with the kite, which is situated in the middle ground, bridging the gap between the individual and the sky. The kite's vibrant colors and movement draw the viewer's eye upward, leading to the expansive sky. This composition creates a sense of connection between the human activity in the foreground and the natural beauty of the sky in the background, highlighting the joy and tranquility of outdoor activities. The overall scene conveys a sense of freedom, playfulness, and the simple pleasures of enjoying nature.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 322,
+            "total_tokens": 625
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12066.678875,
+            "prompt_eval_duration_ms": 71.463281,
+            "generation_duration_ms": 11954.599687,
+            "load_duration_ms": 38.720752,
+            "tokens_per_second": 26.935239023533185
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a person flying a colorful kite against a backdrop of a clear blue sky with scattered clouds. The individual, dressed in a dark jacket and a pink beanie, is standing with their back to the camera, facing the kite. They are wearing red gloves and have one arm raised, holding the string of the kite, which suggests they are actively controlling its flight. The kite is vibrant, featuring a mix of purple, blue, and green colors, with long, flowing ribbons trailing behind it, adding a dynamic element to the scene. The person appears to be enjoying the activity, as their posture indicates engagement and focus on the kite's movement. The interaction between the person and the kite is central to the image, highlighting a playful and leisurely activity. The open sky and the person's solitary presence create a sense of freedom and tranquility, emphasizing the simple joy of flying a kite. There are no animals or other people visible in the image, making the person and the kite the primary subjects of focus. The overall scene conveys a peaceful, outdoor moment of recreation.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 219,
+            "total_tokens": 525
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8246.696051,
+            "prompt_eval_duration_ms": 73.688281,
+            "generation_duration_ms": 8132.99712,
+            "load_duration_ms": 38.106314,
+            "tokens_per_second": 26.927342622740284
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of joy, freedom, and lightheartedness, evoking feelings of nostalgia and carefree happiness. The person, dressed warmly in a pink hat and dark jacket, is flying a vibrant, colorful kite against a backdrop of a clear blue sky with scattered clouds. The bright colors of the kite\u2014pink, green, and purple\u2014contrast beautifully with the serene sky, symbolizing playfulness and creativity. The act of flying a kite itself is often associated with childhood memories and leisure, contributing to a sense of innocence and simplicity. The person's raised arm and upward gaze suggest a sense of connection with the sky and the wind, embodying a feeling of freedom and escape from daily routines. The overall tone is positive, as the image captures a moment of pure enjoyment and engagement with nature. The visual elements, such as the bright colors, the expansive sky, and the dynamic movement of the kite, all work together to create an atmosphere of optimism and contentment. The scene is devoid of any negative or tense elements, reinforcing the overall uplifting and positive emotional impact.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 222,
+            "total_tokens": 530
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8416.815907,
+            "prompt_eval_duration_ms": 80.94645,
+            "generation_duration_ms": 8292.22513,
+            "load_duration_ms": 41.367457,
+            "tokens_per_second": 26.77206618484561
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\", \"pink\"],\n      \"size\": \"medium\",\n      \"description\": \"Wearing a black jacket and a pink beanie, holding a kite string, facing away from the camera.\"\n    }\n  },\n  \"man-made\": {\n    \"kite\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"blue\", \"purple\", \"green\", \"pink\"],\n      \"size\": \"small\",\n      \"description\": \"Colorful kite with long ribbons flying in the sky.\"\n    },\n    \"clothing\": {\n      \"count\": 2,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\", \"pink\"],\n      \"size\": \"small\",\n      \"description\": \"Black jacket and pink beanie worn by the person.\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"entire image\",\n      \"size\": \"large\",\n      \"description\": \"Blue sky with scattered white clouds.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "black",
+                  "pink"
+                ],
+                "size": "medium",
+                "description": "Wearing a black jacket and a pink beanie, holding a kite string, facing away from the camera."
+              }
+            },
+            "man-made": {
+              "kite": {
+                "count": 1,
+                "location": "center, top",
+                "color": [
+                  "blue",
+                  "purple",
+                  "green",
+                  "pink"
+                ],
+                "size": "small",
+                "description": "Colorful kite with long ribbons flying in the sky."
+              },
+              "clothing": {
+                "count": 2,
+                "location": "center, middle",
+                "color": [
+                  "black",
+                  "pink"
+                ],
+                "size": "small",
+                "description": "Black jacket and pink beanie worn by the person."
+              }
+            },
+            "natural": {
+              "sky": {
+                "count": 1,
+                "location": "entire image",
+                "size": "large",
+                "description": "Blue sky with scattered white clouds."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 259,
+            "total_tokens": 745
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9807.110696,
+            "prompt_eval_duration_ms": 142.838116,
+            "generation_duration_ms": 9623.830042,
+            "load_duration_ms": 37.443768,
+            "tokens_per_second": 26.912362216464835
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3004,
+        "total_time_ms": 52628.670165999996,
+        "average_speed": 26.89790415004982
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -328,303 +632,6 @@
       }
     },
     {
-      "model": "mistral-small3.2:24b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a vibrant scene of a person flying a kite against a backdrop of a clear blue sky dotted with fluffy white clouds. The individual, dressed in a dark coat and a pink beanie, is seen from behind, their right hand gripping the kite string firmly. The kite itself is a striking feature, boasting a mix of bright colors including blue, pink, green, and purple. Its diamond shape is accentuated by long, flowing tails that dance in the wind, adding a dynamic element to the composition. The lighting is natural, with the sun casting a soft glow that illuminates the scene, enhancing the vivid colors of the kite and the sky. The overall composition is balanced, with the person and the kite positioned centrally, creating a harmonious blend of human activity and natural beauty. The image exudes a sense of joy and freedom, encapsulating a simple yet delightful moment of outdoor recreation.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 792,
-            "output_tokens": 190,
-            "total_tokens": 982
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7362.087711,
-            "prompt_eval_duration_ms": 2039.773657,
-            "generation_duration_ms": 5275.408413,
-            "load_duration_ms": 44.433538,
-            "tokens_per_second": 36.01616882055801
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, there is a person viewed from behind, who appears to be a child. The child is dressed warmly in a dark coat and a pink beanie, suggesting cool weather. They are actively engaged in flying a kite, holding the string with both hands, one of which is covered by a red glove. The child's focus and posture indicate their concentration and enjoyment of the activity.\n\nIn the background, the sky is a vibrant blue with scattered white clouds, providing a clear and expansive setting for kite flying. The colorful kite, adorned with bright hues of blue, green, pink, and yellow, soars high in the sky, contrasting beautifully against the blue backdrop. The kite's position and the string leading from it to the child's hands create a dynamic connection between the foreground and background elements. The scene captures a moment of simple joy and outdoor play, with the child and the kite as the central figures against the serene sky.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 798,
-            "output_tokens": 202,
-            "total_tokens": 1000
-          },
-          "performance_metrics": {
-            "total_duration_ms": 5745.11639,
-            "prompt_eval_duration_ms": 55.86381,
-            "generation_duration_ms": 5642.400669,
-            "load_duration_ms": 44.436219,
-            "tokens_per_second": 35.800364392732924
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, there is a person, presumably a child, who is flying a kite. The child is dressed warmly in a black coat and a pink hat, suggesting cool weather. The child's right hand is extended upwards, holding the string of the kite, which is soaring high in the sky. The kite itself is colorful, featuring a mix of blue, pink, and green hues, and appears to be in mid-flight, caught by the wind. The sky is mostly clear with a few scattered clouds, providing a perfect backdrop for kite flying. The child seems to be fully engaged in the activity, focusing on controlling the kite. There are no other people, animals, or objects in the image, making the child and the kite the central elements. The interaction between the child and the kite is one of control and enjoyment, as the child maneuvers the kite through the air.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 800,
-            "output_tokens": 189,
-            "total_tokens": 989
-          },
-          "performance_metrics": {
-            "total_duration_ms": 5351.508276,
-            "prompt_eval_duration_ms": 53.53282,
-            "generation_duration_ms": 5252.636288,
-            "load_duration_ms": 42.944545,
-            "tokens_per_second": 35.98193166958527
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of joy, freedom, and tranquility, evoking feelings of happiness and serenity. The overall tone is distinctly positive, primarily due to the vibrant, colorful kite soaring high in the clear blue sky, which symbolizes a sense of playfulness and liberation. The person, dressed warmly in a coat and hat, appears to be fully engaged in the act of flying the kite, suggesting a moment of simple, unadulterated pleasure. The expansive sky, dotted with fluffy clouds, adds to the sense of openness and peace, reinforcing the idea of a carefree, joyful experience. The bright colors of the kite contrast beautifully with the natural hues of the sky, enhancing the visual appeal and contributing to the uplifting atmosphere. This scene likely evokes feelings of nostalgia for childhood and the simple pleasures of life, making it a heartwarming and uplifting image.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 803,
-            "output_tokens": 189,
-            "total_tokens": 992
-          },
-          "performance_metrics": {
-            "total_duration_ms": 5353.27829,
-            "prompt_eval_duration_ms": 60.825685,
-            "generation_duration_ms": 5245.536205,
-            "load_duration_ms": 42.990289,
-            "tokens_per_second": 36.030634927244776
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"black\", \"pink\"],\n      \"size\": \"medium\",\n      \"description\": \"Wearing a black coat and a pink beanie, flying a kite.\"\n    }\n  },\n  \"man-made\": {\n    \"kite\": {\n      \"count\": 1,\n      \"location\": \"top center\",\n      \"color\": [\"blue\", \"green\", \"pink\"],\n      \"size\": \"medium\",\n      \"description\": \"Flying in the sky, colorful with a tail.\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"description\": \"Blue with scattered clouds.\"\n    },\n    \"clouds\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"description\": \"Scattered across the sky.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "foreground",
-                "color": [
-                  "black",
-                  "pink"
-                ],
-                "size": "medium",
-                "description": "Wearing a black coat and a pink beanie, flying a kite."
-              }
-            },
-            "man-made": {
-              "kite": {
-                "count": 1,
-                "location": "top center",
-                "color": [
-                  "blue",
-                  "green",
-                  "pink"
-                ],
-                "size": "medium",
-                "description": "Flying in the sky, colorful with a tail."
-              }
-            },
-            "natural": {
-              "sky": {
-                "count": 1,
-                "location": "background",
-                "description": "Blue with scattered clouds."
-              },
-              "clouds": {
-                "count": 1,
-                "location": "background",
-                "description": "Scattered across the sky."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 982,
-            "output_tokens": 213,
-            "total_tokens": 1195
-          },
-          "performance_metrics": {
-            "total_duration_ms": 6107.073484,
-            "prompt_eval_duration_ms": 101.439072,
-            "generation_duration_ms": 5957.376533,
-            "load_duration_ms": 44.768508,
-            "tokens_per_second": 35.753993191485925
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 5158,
-        "total_time_ms": 29919.064151,
-        "average_speed": 35.91661860032138
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a serene outdoor scene under a vast, clear blue sky dotted with a few wispy clouds. The main subject is a person, viewed from behind, dressed in a dark jacket and a light pink knit hat, their right hand raised, holding the string of a colorful kite. The kite, a vibrant mix of pink, blue, and purple, features long, flowing tails in green and pink, adding a dynamic element to the composition. The person's red-gloved hand contrasts sharply with the dark jacket, drawing the viewer's eye to the action of flying the kite. The lighting is natural and bright, suggesting a sunny day, which enhances the vivid colors of the kite and the clearness of the sky. The overall composition is simple yet engaging, focusing on the interaction between the person and the kite against the expansive backdrop of the sky, evoking a sense of freedom and joy associated with outdoor activities.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 186,
-            "total_tokens": 483
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1442.544703,
-            "prompt_eval_duration_ms": 80.876808,
-            "generation_duration_ms": 1319.967403,
-            "load_duration_ms": 39.888492,
-            "tokens_per_second": 140.91257070232362
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, a person dressed in a dark jacket and a pink beanie stands with their back to the viewer, their right hand raised, holding the string of a brightly colored kite. The kite, adorned with vibrant hues of pink, blue, and green, features long, flowing ribbons that flutter in the wind, adding a dynamic element to the scene. The individual's red-gloved hand contrasts sharply with the darker tones of their clothing, drawing attention to the act of flying the kite. The background is a serene expanse of a clear blue sky, dotted with scattered white clouds, which provides a calm and expansive backdrop to the foreground activity. The relationship between the foreground and background is one of contrast and harmony; the vivid colors and movement of the kite in the foreground are set against the tranquil, open sky, creating a balanced and visually appealing composition.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 175,
-            "total_tokens": 478
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1319.920551,
-            "prompt_eval_duration_ms": 30.711246,
-            "generation_duration_ms": 1251.229551,
-            "load_duration_ms": 36.03376,
-            "tokens_per_second": 139.86242561178128
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a person is seen flying a kite against a backdrop of a clear blue sky dotted with a few fluffy white clouds. The individual, dressed in a dark jacket and a pink beanie, is holding the kite string with one hand, which is adorned with a red glove, suggesting it might be a cold day. The kite, vibrant with hues of pink, blue, and green, is soaring high in the sky, its long tails trailing behind it. The person's posture and the direction of their gaze indicate their focus on the kite, showing a sense of engagement and enjoyment in the activity. There are no animals or other objects in the image, and the interaction is solely between the person and the kite, highlighting a simple yet joyful moment of outdoor recreation.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 156,
-            "total_tokens": 462
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1187.232665,
-            "prompt_eval_duration_ms": 32.351697,
-            "generation_duration_ms": 1115.370841,
-            "load_duration_ms": 37.641052,
-            "tokens_per_second": 139.86379620623416
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of joy and tranquility, with a distinctly positive mood. The vibrant colors of the kite\u2014blue, pink, and purple\u2014against the backdrop of a clear blue sky create a feeling of freedom and playfulness. The person's posture, with their arm raised and the kite soaring high, suggests a sense of accomplishment and delight in the simple pleasure of flying a kite. The fluffy clouds scattered across the sky add to the serene and peaceful atmosphere, enhancing the overall uplifting feeling. The red gloves and pink hat, contrasting with the dark jacket, add a touch of warmth and individuality, further contributing to the positive and lighthearted tone of the image. The absence of any other people or distractions in the frame focuses the viewer's attention on the joy of the moment, making the image feel intimate and personal.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 171,
-            "total_tokens": 479
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1299.109146,
-            "prompt_eval_duration_ms": 29.978431,
-            "generation_duration_ms": 1227.824279,
-            "load_duration_ms": 39.528573,
-            "tokens_per_second": 139.27074331782293
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"pink\"],\n      \"size\": \"medium\",\n      \"description\": \"wearing a pink hat and black jacket, flying a kite\"\n    }\n  },\n  \"man-made\": {\n    \"kite\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"blue\", \"pink\", \"green\"],\n      \"size\": \"medium\",\n      \"description\": \"a colorful kite with long tails flying in the sky\"\n    },\n    \"string\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"the string connecting the kite to the person\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"a clear blue sky with some clouds\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black",
-                  "pink"
-                ],
-                "size": "medium",
-                "description": "wearing a pink hat and black jacket, flying a kite"
-              }
-            },
-            "man-made": {
-              "kite": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "blue",
-                  "pink",
-                  "green"
-                ],
-                "size": "medium",
-                "description": "a colorful kite with long tails flying in the sky"
-              },
-              "string": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "the string connecting the kite to the person"
-              }
-            },
-            "natural": {
-              "sky": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "blue",
-                  "white"
-                ],
-                "size": "large",
-                "description": "a clear blue sky with some clouds"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 243,
-            "total_tokens": 729
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1811.316014,
-            "prompt_eval_duration_ms": 43.668425,
-            "generation_duration_ms": 1726.141646,
-            "load_duration_ms": 38.803063,
-            "tokens_per_second": 140.77639605249405
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2631,
-        "total_time_ms": 7060.123079,
-        "average_speed": 140.13718637813122
-      }
-    },
-    {
       "model": "gemma3:27b",
       "temperature": 0.3,
       "prompts": {
@@ -782,276 +789,147 @@
       }
     },
     {
-      "model": "qwen2.5vl:32b",
+      "model": "mistral-small3.2:24b",
       "temperature": 0.3,
       "prompts": {
         "general_description": {
           "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a serene outdoor scene with a person flying a colorful kite against a backdrop of a clear blue sky with scattered white clouds. The setting appears to be an open area, possibly a park or a field, as there are no visible structures or trees in the immediate foreground. The main elements include the person, the kite, and the sky.\n\nThe person, seen from behind, is wearing a dark jacket and a light pink beanie, along with red gloves. Their posture suggests they are actively engaged in flying the kite, with one arm raised, holding the string. The kite is vibrant and eye-catching, featuring a triangular shape with a mix of bright colors, including purple, blue, and green. It has long, flowing ribbons in green and pink that trail behind it, adding a sense of movement and dynamism to the scene.\n\nThe lighting is natural and bright, indicating a sunny day. The sky is a vivid blue, with soft, fluffy clouds adding depth and texture to the background. The overall composition is balanced, with the person and the kite positioned slightly off-center, creating a sense of depth and perspective. The image conveys a sense of joy, freedom, and connection with nature, emphasizing the simple pleasure of kite flying on a clear day. The contrast between the dark clothing of the person and the bright colors of the kite and sky enhances the visual appeal of the scene.",
+          "response": "The image captures a vibrant scene of a person flying a kite against a backdrop of a clear blue sky dotted with fluffy white clouds. The individual, dressed in a dark coat and a pink beanie, is seen from behind, their right hand gripping the kite string firmly. The kite itself is a striking feature, boasting a mix of bright colors including blue, pink, green, and purple. Its diamond shape is accentuated by long, flowing tails that dance in the wind, adding a dynamic element to the composition. The lighting is natural, with the sun casting a soft glow that illuminates the scene, enhancing the vivid colors of the kite and the sky. The overall composition is balanced, with the person and the kite positioned centrally, creating a harmonious blend of human activity and natural beauty. The image exudes a sense of joy and freedom, encapsulating a simple yet delightful moment of outdoor recreation.",
           "response_format": "text",
           "response_data": null,
           "error": null,
           "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 282,
-            "total_tokens": 579
+            "input_tokens": 792,
+            "output_tokens": 190,
+            "total_tokens": 982
           },
           "performance_metrics": {
-            "total_duration_ms": 14091.368637,
-            "prompt_eval_duration_ms": 3585.26244,
-            "generation_duration_ms": 10466.730555,
-            "load_duration_ms": 37.442235,
-            "tokens_per_second": 26.942510702665164
+            "total_duration_ms": 7362.087711,
+            "prompt_eval_duration_ms": 2039.773657,
+            "generation_duration_ms": 5275.408413,
+            "load_duration_ms": 44.433538,
+            "tokens_per_second": 36.01616882055801
           }
         },
         "foreground_background": {
           "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the closest elements to the viewer are a person wearing a pink beanie and dark jacket, along with red gloves. The individual is positioned with their back to the camera, raising one arm as if controlling a kite. The person's attire suggests a cold environment, and their posture indicates active engagement in flying the kite. The kite itself is a vibrant, multicolored object with long, flowing ribbons in green and pink, adding a dynamic and playful element to the scene. The kite is the focal point of the person's activity, connecting the foreground with the background.\n\nThe background consists of a vast, open sky that dominates the scene. The sky is a clear blue with scattered white clouds, providing a serene and expansive setting. The kite, with its bright colors and ribbons, stands out sharply against the sky, creating a striking contrast. The sky's openness emphasizes the freedom and joy associated with kite flying, while the clouds add texture and depth to the background.\n\nThe relationship between the foreground and background is harmonious and complementary. The person in the foreground is actively interacting with the kite, which is situated in the middle ground, bridging the gap between the individual and the sky. The kite's vibrant colors and movement draw the viewer's eye upward, leading to the expansive sky. This composition creates a sense of connection between the human activity in the foreground and the natural beauty of the sky in the background, highlighting the joy and tranquility of outdoor activities. The overall scene conveys a sense of freedom, playfulness, and the simple pleasures of enjoying nature.",
+          "response": "In the foreground of the image, there is a person viewed from behind, who appears to be a child. The child is dressed warmly in a dark coat and a pink beanie, suggesting cool weather. They are actively engaged in flying a kite, holding the string with both hands, one of which is covered by a red glove. The child's focus and posture indicate their concentration and enjoyment of the activity.\n\nIn the background, the sky is a vibrant blue with scattered white clouds, providing a clear and expansive setting for kite flying. The colorful kite, adorned with bright hues of blue, green, pink, and yellow, soars high in the sky, contrasting beautifully against the blue backdrop. The kite's position and the string leading from it to the child's hands create a dynamic connection between the foreground and background elements. The scene captures a moment of simple joy and outdoor play, with the child and the kite as the central figures against the serene sky.",
           "response_format": "text",
           "response_data": null,
           "error": null,
           "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 322,
-            "total_tokens": 625
+            "input_tokens": 798,
+            "output_tokens": 202,
+            "total_tokens": 1000
           },
           "performance_metrics": {
-            "total_duration_ms": 12066.678875,
-            "prompt_eval_duration_ms": 71.463281,
-            "generation_duration_ms": 11954.599687,
-            "load_duration_ms": 38.720752,
-            "tokens_per_second": 26.935239023533185
+            "total_duration_ms": 5745.11639,
+            "prompt_eval_duration_ms": 55.86381,
+            "generation_duration_ms": 5642.400669,
+            "load_duration_ms": 44.436219,
+            "tokens_per_second": 35.800364392732924
           }
         },
         "entities_interactions": {
           "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a person flying a colorful kite against a backdrop of a clear blue sky with scattered clouds. The individual, dressed in a dark jacket and a pink beanie, is standing with their back to the camera, facing the kite. They are wearing red gloves and have one arm raised, holding the string of the kite, which suggests they are actively controlling its flight. The kite is vibrant, featuring a mix of purple, blue, and green colors, with long, flowing ribbons trailing behind it, adding a dynamic element to the scene. The person appears to be enjoying the activity, as their posture indicates engagement and focus on the kite's movement. The interaction between the person and the kite is central to the image, highlighting a playful and leisurely activity. The open sky and the person's solitary presence create a sense of freedom and tranquility, emphasizing the simple joy of flying a kite. There are no animals or other people visible in the image, making the person and the kite the primary subjects of focus. The overall scene conveys a peaceful, outdoor moment of recreation.",
+          "response": "In the image, there is a person, presumably a child, who is flying a kite. The child is dressed warmly in a black coat and a pink hat, suggesting cool weather. The child's right hand is extended upwards, holding the string of the kite, which is soaring high in the sky. The kite itself is colorful, featuring a mix of blue, pink, and green hues, and appears to be in mid-flight, caught by the wind. The sky is mostly clear with a few scattered clouds, providing a perfect backdrop for kite flying. The child seems to be fully engaged in the activity, focusing on controlling the kite. There are no other people, animals, or objects in the image, making the child and the kite the central elements. The interaction between the child and the kite is one of control and enjoyment, as the child maneuvers the kite through the air.",
           "response_format": "text",
           "response_data": null,
           "error": null,
           "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 219,
-            "total_tokens": 525
+            "input_tokens": 800,
+            "output_tokens": 189,
+            "total_tokens": 989
           },
           "performance_metrics": {
-            "total_duration_ms": 8246.696051,
-            "prompt_eval_duration_ms": 73.688281,
-            "generation_duration_ms": 8132.99712,
-            "load_duration_ms": 38.106314,
-            "tokens_per_second": 26.927342622740284
+            "total_duration_ms": 5351.508276,
+            "prompt_eval_duration_ms": 53.53282,
+            "generation_duration_ms": 5252.636288,
+            "load_duration_ms": 42.944545,
+            "tokens_per_second": 35.98193166958527
           }
         },
         "mood_emotions": {
           "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of joy, freedom, and lightheartedness, evoking feelings of nostalgia and carefree happiness. The person, dressed warmly in a pink hat and dark jacket, is flying a vibrant, colorful kite against a backdrop of a clear blue sky with scattered clouds. The bright colors of the kite\u2014pink, green, and purple\u2014contrast beautifully with the serene sky, symbolizing playfulness and creativity. The act of flying a kite itself is often associated with childhood memories and leisure, contributing to a sense of innocence and simplicity. The person's raised arm and upward gaze suggest a sense of connection with the sky and the wind, embodying a feeling of freedom and escape from daily routines. The overall tone is positive, as the image captures a moment of pure enjoyment and engagement with nature. The visual elements, such as the bright colors, the expansive sky, and the dynamic movement of the kite, all work together to create an atmosphere of optimism and contentment. The scene is devoid of any negative or tense elements, reinforcing the overall uplifting and positive emotional impact.",
+          "response": "The image conveys a mood of joy, freedom, and tranquility, evoking feelings of happiness and serenity. The overall tone is distinctly positive, primarily due to the vibrant, colorful kite soaring high in the clear blue sky, which symbolizes a sense of playfulness and liberation. The person, dressed warmly in a coat and hat, appears to be fully engaged in the act of flying the kite, suggesting a moment of simple, unadulterated pleasure. The expansive sky, dotted with fluffy clouds, adds to the sense of openness and peace, reinforcing the idea of a carefree, joyful experience. The bright colors of the kite contrast beautifully with the natural hues of the sky, enhancing the visual appeal and contributing to the uplifting atmosphere. This scene likely evokes feelings of nostalgia for childhood and the simple pleasures of life, making it a heartwarming and uplifting image.",
           "response_format": "text",
           "response_data": null,
           "error": null,
           "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 222,
-            "total_tokens": 530
+            "input_tokens": 803,
+            "output_tokens": 189,
+            "total_tokens": 992
           },
           "performance_metrics": {
-            "total_duration_ms": 8416.815907,
-            "prompt_eval_duration_ms": 80.94645,
-            "generation_duration_ms": 8292.22513,
-            "load_duration_ms": 41.367457,
-            "tokens_per_second": 26.77206618484561
+            "total_duration_ms": 5353.27829,
+            "prompt_eval_duration_ms": 60.825685,
+            "generation_duration_ms": 5245.536205,
+            "load_duration_ms": 42.990289,
+            "tokens_per_second": 36.030634927244776
           }
         },
         "structured_inventory": {
           "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\", \"pink\"],\n      \"size\": \"medium\",\n      \"description\": \"Wearing a black jacket and a pink beanie, holding a kite string, facing away from the camera.\"\n    }\n  },\n  \"man-made\": {\n    \"kite\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"blue\", \"purple\", \"green\", \"pink\"],\n      \"size\": \"small\",\n      \"description\": \"Colorful kite with long ribbons flying in the sky.\"\n    },\n    \"clothing\": {\n      \"count\": 2,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\", \"pink\"],\n      \"size\": \"small\",\n      \"description\": \"Black jacket and pink beanie worn by the person.\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"entire image\",\n      \"size\": \"large\",\n      \"description\": \"Blue sky with scattered white clouds.\"\n    }\n  }\n}\n```",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"black\", \"pink\"],\n      \"size\": \"medium\",\n      \"description\": \"Wearing a black coat and a pink beanie, flying a kite.\"\n    }\n  },\n  \"man-made\": {\n    \"kite\": {\n      \"count\": 1,\n      \"location\": \"top center\",\n      \"color\": [\"blue\", \"green\", \"pink\"],\n      \"size\": \"medium\",\n      \"description\": \"Flying in the sky, colorful with a tail.\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"description\": \"Blue with scattered clouds.\"\n    },\n    \"clouds\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"description\": \"Scattered across the sky.\"\n    }\n  }\n}\n```",
           "response_format": "json",
           "response_data": {
             "human": {
               "person": {
                 "count": 1,
-                "location": "center, middle",
+                "location": "foreground",
                 "color": [
                   "black",
                   "pink"
                 ],
                 "size": "medium",
-                "description": "Wearing a black jacket and a pink beanie, holding a kite string, facing away from the camera."
+                "description": "Wearing a black coat and a pink beanie, flying a kite."
               }
             },
             "man-made": {
               "kite": {
                 "count": 1,
-                "location": "center, top",
+                "location": "top center",
                 "color": [
                   "blue",
-                  "purple",
                   "green",
                   "pink"
                 ],
-                "size": "small",
-                "description": "Colorful kite with long ribbons flying in the sky."
-              },
-              "clothing": {
-                "count": 2,
-                "location": "center, middle",
-                "color": [
-                  "black",
-                  "pink"
-                ],
-                "size": "small",
-                "description": "Black jacket and pink beanie worn by the person."
+                "size": "medium",
+                "description": "Flying in the sky, colorful with a tail."
               }
             },
             "natural": {
               "sky": {
                 "count": 1,
-                "location": "entire image",
-                "size": "large",
-                "description": "Blue sky with scattered white clouds."
+                "location": "background",
+                "description": "Blue with scattered clouds."
+              },
+              "clouds": {
+                "count": 1,
+                "location": "background",
+                "description": "Scattered across the sky."
               }
             }
           },
           "error": null,
           "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 259,
-            "total_tokens": 745
+            "input_tokens": 982,
+            "output_tokens": 213,
+            "total_tokens": 1195
           },
           "performance_metrics": {
-            "total_duration_ms": 9807.110696,
-            "prompt_eval_duration_ms": 142.838116,
-            "generation_duration_ms": 9623.830042,
-            "load_duration_ms": 37.443768,
-            "tokens_per_second": 26.912362216464835
+            "total_duration_ms": 6107.073484,
+            "prompt_eval_duration_ms": 101.439072,
+            "generation_duration_ms": 5957.376533,
+            "load_duration_ms": 44.768508,
+            "tokens_per_second": 35.753993191485925
           }
         }
       },
       "metrics": {
-        "total_tokens": 3004,
-        "total_time_ms": 52628.670165999996,
-        "average_speed": 26.89790415004982
-      }
-    },
-    {
-      "model": "llama3.2-vision:11b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a person flying a kite in a serene and natural setting. The scene is set in a vast, open field or a beach, with the horizon stretching out to the horizon. The sky is a brilliant blue, with a few puffy white clouds scattered across it. The person, dressed in a warm and cozy outfit, is standing with their back to the camera, facing the wind. They are holding a colorful kite, with its long, thin, and colorful tail streaming behind it. The person's hand is raised, and the kite is flying high in the air, its colorful and vibrant colors standing out against the blue sky. The overall composition of the image is peaceful and serene, with the person and the kite creating a beautiful and harmonious scene. The colors of the kite and the sky are a perfect match, creating a beautiful and vibrant scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 52,
-            "output_tokens": 175,
-            "total_tokens": 227
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2931.741337,
-            "prompt_eval_duration_ms": 958.459512,
-            "generation_duration_ms": 1927.200321,
-            "load_duration_ms": 44.570675,
-            "tokens_per_second": 90.8052982832603
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground elements of the image feature a person, dressed in a warm winter outfit, including a pink hat and a dark coat, standing with their back to the viewer. They are holding a colorful kite, with its long, thin tail and two shorter, more vibrant strings, which is being lifted by a gentle breeze. The person's right arm is raised, holding the kite's string, while their left hand is tucked into their coat's pocket. The background elements of the image feature a vast, open, and cloudy sky, with a few puffy white clouds and a few darker, more ominous clouds in the distance. The sky's colors range from a deep blue to a lighter, more pale blue, with a few clouds of white and a few clouds of a darker, more greyish-brown. The sky's colors are a mix of blue, white, and a few clouds of a darker, more greyish-brown.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 58,
-            "output_tokens": 189,
-            "total_tokens": 247
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2157.388563,
-            "prompt_eval_duration_ms": 38.676306,
-            "generation_duration_ms": 2070.31818,
-            "load_duration_ms": 46.620119,
-            "tokens_per_second": 91.29031557844891
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "A person is flying a kite in the sky. The person is wearing a dark-colored coat, a pink hat, and red gloves. They are holding a long, thin string that is attached to the kite, which is a colorful, flat, and triangular shape with a long, thin, and curved tail. The person is standing on a flat, open, and grassy area, with a few trees and a building in the background. The person is facing the kite, which is flying high in the air, with its tail and string moving in the wind. The person is holding the string, which is connected to the kite, and is moving it in a way that is keeping the kite in the air. The person is also wearing a backpack, which is a small, dark-colored, and rectangular-shaped bag that is attached to the person's body. The person is standing on a flat, open, and grassy area, with a few trees and a building in the background.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 61,
-            "output_tokens": 199,
-            "total_tokens": 260
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2279.554368,
-            "prompt_eval_duration_ms": 45.933781,
-            "generation_duration_ms": 2184.417075,
-            "load_duration_ms": 47.770833,
-            "tokens_per_second": 91.09981892995413
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image of a person flying a kite in the sky conveys a sense of carefree joy and freedom. The overall tone is positive, evoking feelings of happiness and exhilaration. The visual elements that contribute to this emotional atmosphere are the person's outstretched arms and the vibrant colors of the kite, which add to the sense of joy and playfulness. The sky itself is a bright and clear blue, adding to the sense of freedom and joy. The person's relaxed and happy expression, as well as the kite's gentle flight, also contribute to the sense of joy and freedom. The overall atmosphere is one of joy and freedom, making it a pleasant and uplifting experience. The image is also a reminder of the joy and freedom of childhood, and the joy of playing and playing with a kite.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 63,
-            "output_tokens": 163,
-            "total_tokens": 226
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1875.232939,
-            "prompt_eval_duration_ms": 45.066104,
-            "generation_duration_ms": 1783.349672,
-            "load_duration_ms": 45.220009,
-            "tokens_per_second": 91.40103175458458
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"categories\": {\n    \"man-made\": {\n      \"kite\": {\n        \"count\": 1,\n        \"location\": \"top\",\n        \"color\": [\"red\", \"blue\", \"green\"],\n        \"size\": \"large\",\n        \"description\": \"a colorful, high-flying kite\"\n      }\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "categories": {
-              "man-made": {
-                "kite": {
-                  "count": 1,
-                  "location": "top",
-                  "color": [
-                    "red",
-                    "blue",
-                    "green"
-                  ],
-                  "size": "large",
-                  "description": "a colorful, high-flying kite"
-                }
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 243,
-            "output_tokens": 77,
-            "total_tokens": 320
-          },
-          "performance_metrics": {
-            "total_duration_ms": 965.649422,
-            "prompt_eval_duration_ms": 70.612323,
-            "generation_duration_ms": 846.517439,
-            "load_duration_ms": 46.936306,
-            "tokens_per_second": 90.96091403735393
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 1280,
-        "total_time_ms": 10209.566629,
-        "average_speed": 91.11147571672038
+        "total_tokens": 5158,
+        "total_time_ms": 29919.064151,
+        "average_speed": 35.91661860032138
       }
     }
   ]

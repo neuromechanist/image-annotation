@@ -7,6 +7,276 @@
   "timestamp": "2025-08-30T18:32:12.323608+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a polar bear in a naturalistic setting, likely a zoo or wildlife sanctuary, as suggested by the artificial rock formation in the background. The bear is partially submerged in a body of water, with its head and upper shoulders visible above the surface. Its fur is predominantly white, with a slightly darker, almost dirty appearance around its eyes and nose, indicating it might be in a state of rest or possibly after a swim. The water is a murky greenish-brown, reflecting the bear's fur and the surrounding environment, and there are ripples and small splashes around its head, suggesting recent movement. The lighting is natural, likely from an overcast sky, as there are no harsh shadows and the overall tone is soft and diffused. The composition focuses on the bear, with the background elements, such as the rock formation, providing context and depth to the scene. The image conveys a sense of tranquility and the bear's adaptation to its aquatic environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 198,
+            "total_tokens": 495
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1526.048776,
+            "prompt_eval_duration_ms": 79.525863,
+            "generation_duration_ms": 1403.247276,
+            "load_duration_ms": 38.203369,
+            "tokens_per_second": 141.1012894066719
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the polar bear is the central focus, with its head and upper body partially submerged in the water. The bear's fur appears wet and slightly matted, reflecting the water's surface, and its eyes are partially closed, giving it a serene yet slightly tired expression. The water around the bear is disturbed, with ripples and small waves indicating recent movement, possibly from the bear's swimming. The bear's nose and part of its snout are visible above the water, adding to the sense of depth and immersion in the aquatic environment.\n\nThe background elements consist of the water's surface, which is dark and reflective, mirroring the bear and the surrounding environment. The water's texture is visible, with subtle ripples and reflections that suggest a calm but dynamic setting. To the right, a portion of a rocky outcrop is visible, adding a natural element to the scene and providing a contrast to the smooth, flowing water. The rock's texture is rougher and more defined compared to the water, and its color is a muted brown, which contrasts with the bear's white fur and the dark water. This layering of elements creates a sense of depth, with the bear in the middle ground, the water in the foreground, and the rock in the background, all contributing to a cohesive and naturalistic composition.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 271,
+            "total_tokens": 574
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2019.011634,
+            "prompt_eval_duration_ms": 30.016292,
+            "generation_duration_ms": 1947.458289,
+            "load_duration_ms": 38.543264,
+            "tokens_per_second": 139.15574034664215
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a polar bear is the central figure, captured mid-action as it emerges from the water, its head and shoulders visible above the surface. The bear's fur is wet and slightly matted, suggesting it has been swimming. The water around it ripples and splashes, indicating recent movement. The bear's gaze is directed towards the camera, giving the impression of a direct interaction with the viewer. The background features a rocky outcrop, which provides a naturalistic setting for the bear, enhancing the sense of its habitat. There are no other animals or people present in the image, focusing all attention on the polar bear and its interaction with the water. The bear's actions\u2014swimming and emerging from the water\u2014highlight its adaptability and strength, while the absence of other elements emphasizes the bear's solitary nature and the tranquility of its environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 175,
+            "total_tokens": 481
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1325.961506,
+            "prompt_eval_duration_ms": 31.528277,
+            "generation_duration_ms": 1250.176719,
+            "load_duration_ms": 38.575675,
+            "tokens_per_second": 139.98021026977707
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of both tranquility and a subtle undercurrent of vulnerability. The polar bear, partially submerged in the water, conveys a mood of calmness and perhaps a touch of solitude. The bear's eyes, though partially obscured by water, seem to hold a quiet intensity, suggesting a deep focus or perhaps a hint of contemplation. The gentle ripples around the bear and the calmness of the water itself contribute to the serene atmosphere. The bear's fur, slightly damp and matted, adds a naturalistic detail that enhances the realism and relatability of the scene. The overall tone is neutral, leaning slightly towards the positive due to the peaceful setting and the bear's composed demeanor. The image does not evoke strong negative emotions but rather a contemplative and serene mood, inviting the viewer to reflect on the beauty and resilience of the polar bear in its natural habitat.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 181,
+            "total_tokens": 489
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1376.205797,
+            "prompt_eval_duration_ms": 29.509704,
+            "generation_duration_ms": 1304.913419,
+            "load_duration_ms": 39.017731,
+            "tokens_per_second": 138.70652057414392
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"polar_bear\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"gray\"],\n      \"size\": \"large\",\n      \"description\": \"swimming in water\"\n    }\n  },\n  \"natural\": {\n    \"water\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"green\", \"brown\"],\n      \"size\": \"large\",\n      \"description\": \"body of water with polar bear\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "polar_bear": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "white",
+                  "gray"
+                ],
+                "size": "large",
+                "description": "swimming in water"
+              }
+            },
+            "natural": {
+              "water": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "green",
+                  "brown"
+                ],
+                "size": "large",
+                "description": "body of water with polar bear"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 122,
+            "total_tokens": 608
+          },
+          "performance_metrics": {
+            "total_duration_ms": 951.552633,
+            "prompt_eval_duration_ms": 44.443707,
+            "generation_duration_ms": 864.546103,
+            "load_duration_ms": 39.394111,
+            "tokens_per_second": 141.1145103501785
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2647,
+        "total_time_ms": 7198.7803460000005,
+        "average_speed": 140.01165418948273
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a polar bear swimming in a body of water, likely a river or a pool, with a rocky shoreline visible in the background. The setting appears to be outdoors, with natural lighting that suggests daytime. The water is dark and reflective, creating a contrast with the polar bear's white fur, which stands out prominently. The bear's head is above the water, and its face is clearly visible, showing its black nose, small eyes, and wet fur. The bear's ears are slightly perked up, and its expression appears calm and focused. The water around the bear is slightly disturbed, indicating movement as it swims. In the background, a large rock formation is visible, with a mix of earthy tones, including shades of brown and yellow, suggesting moss or lichen growth. The overall composition centers on the polar bear, drawing the viewer's attention to its presence in the water. The lighting is natural, with no harsh shadows, giving the image a serene and somewhat cool atmosphere. The scene captures a moment of the bear's natural behavior, emphasizing its adaptation to aquatic environments.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 221,
+            "total_tokens": 518
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11828.52805,
+            "prompt_eval_duration_ms": 3576.15821,
+            "generation_duration_ms": 8210.802601,
+            "load_duration_ms": 37.826199,
+            "tokens_per_second": 26.915760948032567
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the most prominent element is a polar bear swimming in water. The bear's head and upper body are visible above the water's surface, with its fur appearing wet and slightly matted. The bear's face is clearly defined, showing its black nose, eyes, and the texture of its fur. The water around the bear is rippling, indicating movement, and the bear's presence creates a dynamic focal point in the foreground.\n\nIn the background, the setting transitions to a more static and less detailed environment. The water continues to extend into the distance, with subtle variations in color and texture suggesting depth. On the right side of the image, there is a rock formation or structure with a yellowish hue, which contrasts with the darker tones of the water. This structure appears to be part of the bear's habitat, possibly a natural or artificial enclosure, and adds context to the scene by suggesting a boundary or a feature of the bear's environment.\n\nThe relationship between the foreground and background elements is one of interaction and context. The polar bear, as the main subject in the foreground, is actively engaging with its environment, which is represented by the water and the rock structure in the background. The bear's movement in the water creates a sense of life and activity, while the background provides a stable and grounding setting that frames the bear's actions. The contrast in focus and detail between the bear and the background emphasizes the bear's prominence and the natural or controlled setting in which it is situated. Together, these elements create a cohesive scene that highlights the bear's behavior and its environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 323,
+            "total_tokens": 626
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12157.017433,
+            "prompt_eval_duration_ms": 79.335426,
+            "generation_duration_ms": 12035.55657,
+            "load_duration_ms": 38.971266,
+            "tokens_per_second": 26.837146925561747
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a polar bear swimming in a body of water, likely a pond or enclosure in a zoo or wildlife park. The bear is the central focus, with its white fur contrasting sharply against the dark, rippling water. Its head is above the surface, and its eyes appear alert and focused, suggesting it is aware of its surroundings. The bear's ears are perked up, and its nose is slightly wet, indicating it is actively swimming. The water around the bear shows ripples and splashes, emphasizing the movement and effort of swimming.\n\nIn the background, there is a large rock or boulder with a yellowish hue, possibly part of the bear's habitat or enclosure. The rock appears to be stationary, serving as a naturalistic element in the environment. There are no other animals or people visible in the image, which places the entire focus on the polar bear and its interaction with the water. The bear's swimming action suggests it is either cooling off, exercising, or exploring its surroundings. The absence of other elements highlights the solitary nature of the scene, emphasizing the bear's solitary journey through the water. The overall composition conveys a sense of calm yet dynamic movement, showcasing the bear's natural swimming ability in a controlled environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 252,
+            "total_tokens": 558
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9544.145741,
+            "prompt_eval_duration_ms": 78.531626,
+            "generation_duration_ms": 9422.313726,
+            "load_duration_ms": 40.467416,
+            "tokens_per_second": 26.745023284952758
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image of the polar bear swimming in water conveys a sense of tranquility and resilience. The bear's calm demeanor, with its head above water and eyes looking directly at the camera, suggests a composed and serene mood. The water's gentle ripples and the bear's smooth movements add to the peaceful atmosphere, evoking a feeling of harmony with nature. The overall tone is neutral to slightly positive, as the bear appears unbothered and at ease in its environment.\n\nThe visual elements that contribute to this emotional atmosphere include the bear's white fur, which contrasts softly with the dark, reflective water, creating a sense of purity and simplicity. The bear's direct gaze establishes a connection with the viewer, inviting empathy and a sense of wonder. The background, with its muted colors and subtle rock formations, further enhances the calmness, as it does not distract from the central subject. The image avoids any overt signs of distress or aggression, reinforcing the mood of quiet strength and adaptability. Overall, the image evokes feelings of serenity, curiosity, and admiration for the bear's natural grace and survival instincts.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 225,
+            "total_tokens": 533
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8523.217592,
+            "prompt_eval_duration_ms": 74.087166,
+            "generation_duration_ms": 8405.890844,
+            "load_duration_ms": 38.377692,
+            "tokens_per_second": 26.766942870856056
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"polar_bear\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"Polar bear swimming in water, partially submerged, with visible head and part of body.\"\n    }\n  },\n  \"natural\": {\n    \"water\": {\n      \"count\": 1,\n      \"location\": \"foreground, background\",\n      \"color\": [\"dark blue\"],\n      \"size\": \"large\",\n      \"description\": \"Body of water with ripples and splashes around the polar bear.\"\n    },\n    \"rock\": {\n      \"count\": 1,\n      \"location\": \"top right\",\n      \"color\": [\"brown\", \"yellow\"],\n      \"size\": \"medium\",\n      \"description\": \"Rock formation partially visible in the background.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "polar_bear": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "Polar bear swimming in water, partially submerged, with visible head and part of body."
+              }
+            },
+            "natural": {
+              "water": {
+                "count": 1,
+                "location": "foreground, background",
+                "color": [
+                  "dark blue"
+                ],
+                "size": "large",
+                "description": "Body of water with ripples and splashes around the polar bear."
+              },
+              "rock": {
+                "count": 1,
+                "location": "top right",
+                "color": [
+                  "brown",
+                  "yellow"
+                ],
+                "size": "medium",
+                "description": "Rock formation partially visible in the background."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 191,
+            "total_tokens": 677
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7226.151178,
+            "prompt_eval_duration_ms": 137.585262,
+            "generation_duration_ms": 7046.232581,
+            "load_duration_ms": 39.292916,
+            "tokens_per_second": 27.10668400515575
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2912,
+        "total_time_ms": 49279.059994,
+        "average_speed": 26.87431160691178
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -452,276 +722,6 @@
         "total_tokens": 2733,
         "total_time_ms": 23740.525909,
         "average_speed": 41.77480500439916
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a polar bear in a naturalistic setting, likely a zoo or wildlife sanctuary, as suggested by the artificial rock formation in the background. The bear is partially submerged in a body of water, with its head and upper shoulders visible above the surface. Its fur is predominantly white, with a slightly darker, almost dirty appearance around its eyes and nose, indicating it might be in a state of rest or possibly after a swim. The water is a murky greenish-brown, reflecting the bear's fur and the surrounding environment, and there are ripples and small splashes around its head, suggesting recent movement. The lighting is natural, likely from an overcast sky, as there are no harsh shadows and the overall tone is soft and diffused. The composition focuses on the bear, with the background elements, such as the rock formation, providing context and depth to the scene. The image conveys a sense of tranquility and the bear's adaptation to its aquatic environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 198,
-            "total_tokens": 495
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1526.048776,
-            "prompt_eval_duration_ms": 79.525863,
-            "generation_duration_ms": 1403.247276,
-            "load_duration_ms": 38.203369,
-            "tokens_per_second": 141.1012894066719
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the polar bear is the central focus, with its head and upper body partially submerged in the water. The bear's fur appears wet and slightly matted, reflecting the water's surface, and its eyes are partially closed, giving it a serene yet slightly tired expression. The water around the bear is disturbed, with ripples and small waves indicating recent movement, possibly from the bear's swimming. The bear's nose and part of its snout are visible above the water, adding to the sense of depth and immersion in the aquatic environment.\n\nThe background elements consist of the water's surface, which is dark and reflective, mirroring the bear and the surrounding environment. The water's texture is visible, with subtle ripples and reflections that suggest a calm but dynamic setting. To the right, a portion of a rocky outcrop is visible, adding a natural element to the scene and providing a contrast to the smooth, flowing water. The rock's texture is rougher and more defined compared to the water, and its color is a muted brown, which contrasts with the bear's white fur and the dark water. This layering of elements creates a sense of depth, with the bear in the middle ground, the water in the foreground, and the rock in the background, all contributing to a cohesive and naturalistic composition.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 271,
-            "total_tokens": 574
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2019.011634,
-            "prompt_eval_duration_ms": 30.016292,
-            "generation_duration_ms": 1947.458289,
-            "load_duration_ms": 38.543264,
-            "tokens_per_second": 139.15574034664215
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a polar bear is the central figure, captured mid-action as it emerges from the water, its head and shoulders visible above the surface. The bear's fur is wet and slightly matted, suggesting it has been swimming. The water around it ripples and splashes, indicating recent movement. The bear's gaze is directed towards the camera, giving the impression of a direct interaction with the viewer. The background features a rocky outcrop, which provides a naturalistic setting for the bear, enhancing the sense of its habitat. There are no other animals or people present in the image, focusing all attention on the polar bear and its interaction with the water. The bear's actions\u2014swimming and emerging from the water\u2014highlight its adaptability and strength, while the absence of other elements emphasizes the bear's solitary nature and the tranquility of its environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 175,
-            "total_tokens": 481
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1325.961506,
-            "prompt_eval_duration_ms": 31.528277,
-            "generation_duration_ms": 1250.176719,
-            "load_duration_ms": 38.575675,
-            "tokens_per_second": 139.98021026977707
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of both tranquility and a subtle undercurrent of vulnerability. The polar bear, partially submerged in the water, conveys a mood of calmness and perhaps a touch of solitude. The bear's eyes, though partially obscured by water, seem to hold a quiet intensity, suggesting a deep focus or perhaps a hint of contemplation. The gentle ripples around the bear and the calmness of the water itself contribute to the serene atmosphere. The bear's fur, slightly damp and matted, adds a naturalistic detail that enhances the realism and relatability of the scene. The overall tone is neutral, leaning slightly towards the positive due to the peaceful setting and the bear's composed demeanor. The image does not evoke strong negative emotions but rather a contemplative and serene mood, inviting the viewer to reflect on the beauty and resilience of the polar bear in its natural habitat.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 181,
-            "total_tokens": 489
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1376.205797,
-            "prompt_eval_duration_ms": 29.509704,
-            "generation_duration_ms": 1304.913419,
-            "load_duration_ms": 39.017731,
-            "tokens_per_second": 138.70652057414392
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"polar_bear\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"gray\"],\n      \"size\": \"large\",\n      \"description\": \"swimming in water\"\n    }\n  },\n  \"natural\": {\n    \"water\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"green\", \"brown\"],\n      \"size\": \"large\",\n      \"description\": \"body of water with polar bear\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "polar_bear": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "white",
-                  "gray"
-                ],
-                "size": "large",
-                "description": "swimming in water"
-              }
-            },
-            "natural": {
-              "water": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "green",
-                  "brown"
-                ],
-                "size": "large",
-                "description": "body of water with polar bear"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 122,
-            "total_tokens": 608
-          },
-          "performance_metrics": {
-            "total_duration_ms": 951.552633,
-            "prompt_eval_duration_ms": 44.443707,
-            "generation_duration_ms": 864.546103,
-            "load_duration_ms": 39.394111,
-            "tokens_per_second": 141.1145103501785
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2647,
-        "total_time_ms": 7198.7803460000005,
-        "average_speed": 140.01165418948273
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a polar bear swimming in a body of water, likely a river or a pool, with a rocky shoreline visible in the background. The setting appears to be outdoors, with natural lighting that suggests daytime. The water is dark and reflective, creating a contrast with the polar bear's white fur, which stands out prominently. The bear's head is above the water, and its face is clearly visible, showing its black nose, small eyes, and wet fur. The bear's ears are slightly perked up, and its expression appears calm and focused. The water around the bear is slightly disturbed, indicating movement as it swims. In the background, a large rock formation is visible, with a mix of earthy tones, including shades of brown and yellow, suggesting moss or lichen growth. The overall composition centers on the polar bear, drawing the viewer's attention to its presence in the water. The lighting is natural, with no harsh shadows, giving the image a serene and somewhat cool atmosphere. The scene captures a moment of the bear's natural behavior, emphasizing its adaptation to aquatic environments.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 221,
-            "total_tokens": 518
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11828.52805,
-            "prompt_eval_duration_ms": 3576.15821,
-            "generation_duration_ms": 8210.802601,
-            "load_duration_ms": 37.826199,
-            "tokens_per_second": 26.915760948032567
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the most prominent element is a polar bear swimming in water. The bear's head and upper body are visible above the water's surface, with its fur appearing wet and slightly matted. The bear's face is clearly defined, showing its black nose, eyes, and the texture of its fur. The water around the bear is rippling, indicating movement, and the bear's presence creates a dynamic focal point in the foreground.\n\nIn the background, the setting transitions to a more static and less detailed environment. The water continues to extend into the distance, with subtle variations in color and texture suggesting depth. On the right side of the image, there is a rock formation or structure with a yellowish hue, which contrasts with the darker tones of the water. This structure appears to be part of the bear's habitat, possibly a natural or artificial enclosure, and adds context to the scene by suggesting a boundary or a feature of the bear's environment.\n\nThe relationship between the foreground and background elements is one of interaction and context. The polar bear, as the main subject in the foreground, is actively engaging with its environment, which is represented by the water and the rock structure in the background. The bear's movement in the water creates a sense of life and activity, while the background provides a stable and grounding setting that frames the bear's actions. The contrast in focus and detail between the bear and the background emphasizes the bear's prominence and the natural or controlled setting in which it is situated. Together, these elements create a cohesive scene that highlights the bear's behavior and its environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 323,
-            "total_tokens": 626
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12157.017433,
-            "prompt_eval_duration_ms": 79.335426,
-            "generation_duration_ms": 12035.55657,
-            "load_duration_ms": 38.971266,
-            "tokens_per_second": 26.837146925561747
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a polar bear swimming in a body of water, likely a pond or enclosure in a zoo or wildlife park. The bear is the central focus, with its white fur contrasting sharply against the dark, rippling water. Its head is above the surface, and its eyes appear alert and focused, suggesting it is aware of its surroundings. The bear's ears are perked up, and its nose is slightly wet, indicating it is actively swimming. The water around the bear shows ripples and splashes, emphasizing the movement and effort of swimming.\n\nIn the background, there is a large rock or boulder with a yellowish hue, possibly part of the bear's habitat or enclosure. The rock appears to be stationary, serving as a naturalistic element in the environment. There are no other animals or people visible in the image, which places the entire focus on the polar bear and its interaction with the water. The bear's swimming action suggests it is either cooling off, exercising, or exploring its surroundings. The absence of other elements highlights the solitary nature of the scene, emphasizing the bear's solitary journey through the water. The overall composition conveys a sense of calm yet dynamic movement, showcasing the bear's natural swimming ability in a controlled environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 252,
-            "total_tokens": 558
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9544.145741,
-            "prompt_eval_duration_ms": 78.531626,
-            "generation_duration_ms": 9422.313726,
-            "load_duration_ms": 40.467416,
-            "tokens_per_second": 26.745023284952758
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image of the polar bear swimming in water conveys a sense of tranquility and resilience. The bear's calm demeanor, with its head above water and eyes looking directly at the camera, suggests a composed and serene mood. The water's gentle ripples and the bear's smooth movements add to the peaceful atmosphere, evoking a feeling of harmony with nature. The overall tone is neutral to slightly positive, as the bear appears unbothered and at ease in its environment.\n\nThe visual elements that contribute to this emotional atmosphere include the bear's white fur, which contrasts softly with the dark, reflective water, creating a sense of purity and simplicity. The bear's direct gaze establishes a connection with the viewer, inviting empathy and a sense of wonder. The background, with its muted colors and subtle rock formations, further enhances the calmness, as it does not distract from the central subject. The image avoids any overt signs of distress or aggression, reinforcing the mood of quiet strength and adaptability. Overall, the image evokes feelings of serenity, curiosity, and admiration for the bear's natural grace and survival instincts.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 225,
-            "total_tokens": 533
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8523.217592,
-            "prompt_eval_duration_ms": 74.087166,
-            "generation_duration_ms": 8405.890844,
-            "load_duration_ms": 38.377692,
-            "tokens_per_second": 26.766942870856056
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"polar_bear\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"Polar bear swimming in water, partially submerged, with visible head and part of body.\"\n    }\n  },\n  \"natural\": {\n    \"water\": {\n      \"count\": 1,\n      \"location\": \"foreground, background\",\n      \"color\": [\"dark blue\"],\n      \"size\": \"large\",\n      \"description\": \"Body of water with ripples and splashes around the polar bear.\"\n    },\n    \"rock\": {\n      \"count\": 1,\n      \"location\": \"top right\",\n      \"color\": [\"brown\", \"yellow\"],\n      \"size\": \"medium\",\n      \"description\": \"Rock formation partially visible in the background.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "polar_bear": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "Polar bear swimming in water, partially submerged, with visible head and part of body."
-              }
-            },
-            "natural": {
-              "water": {
-                "count": 1,
-                "location": "foreground, background",
-                "color": [
-                  "dark blue"
-                ],
-                "size": "large",
-                "description": "Body of water with ripples and splashes around the polar bear."
-              },
-              "rock": {
-                "count": 1,
-                "location": "top right",
-                "color": [
-                  "brown",
-                  "yellow"
-                ],
-                "size": "medium",
-                "description": "Rock formation partially visible in the background."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 191,
-            "total_tokens": 677
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7226.151178,
-            "prompt_eval_duration_ms": 137.585262,
-            "generation_duration_ms": 7046.232581,
-            "load_duration_ms": 39.292916,
-            "tokens_per_second": 27.10668400515575
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2912,
-        "total_time_ms": 49279.059994,
-        "average_speed": 26.87431160691178
       }
     },
     {

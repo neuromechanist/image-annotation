@@ -7,6 +7,408 @@
   "timestamp": "2025-08-30T21:20:26.924428+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a candid urban scene, likely taken during the daytime under bright, natural sunlight. The setting appears to be a construction or renovation area, indicated by the wooden scaffolding and the partially visible construction materials in the background. The main subject is a man sitting on a wooden bench, engrossed in reading a book. He is casually dressed in a straw hat, a patterned shirt, and dark shorts, suggesting a relaxed, possibly summery atmosphere. His bicycle, with a basket holding a potted plant, leans against the scaffolding, adding a touch of personal style and perhaps hinting at a commute or leisurely ride. The colors in the image are vibrant yet natural, with the green of the plant and the blue of the bicycle contrasting against the earthy tones of the wooden structures and the muted colors of the construction site. The lighting is even and bright, casting soft shadows and highlighting the textures of the materials and the man's clothing. The overall composition is balanced, with the man and his bicycle as the focal point, framed by the scaffolding and the bustling background, creating a sense of everyday life and tranquility amidst urban activity.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 234,
+            "total_tokens": 531
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1799.810965,
+            "prompt_eval_duration_ms": 81.307817,
+            "generation_duration_ms": 1672.715046,
+            "load_duration_ms": 39.902079,
+            "tokens_per_second": 139.8923268847072
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, a man sits on a wooden bench, engrossed in reading a book. He is casually dressed in a straw hat, a patterned shirt, and dark shorts, suggesting a relaxed, possibly summery day. A bicycle, leaning against the bench, is adorned with a basket containing a vibrant plant, adding a touch of greenery and life to the scene. The bench and the bicycle are positioned in front of a temporary wooden fence, which appears to be part of a construction or renovation site, indicated by the presence of construction materials and a partially visible sign that reads \"Emco.\" The background, slightly out of focus, reveals a busy street with cars and a blurred view of a building, hinting at an urban setting. The elements in the foreground, the man and his bicycle, are in sharp contrast to the blurred background, drawing the viewer's attention to the quiet, personal moment amidst the bustling city life.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 190,
+            "total_tokens": 493
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1439.153612,
+            "prompt_eval_duration_ms": 30.387951,
+            "generation_duration_ms": 1368.329365,
+            "load_duration_ms": 37.686688,
+            "tokens_per_second": 138.8554575089456
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a man is seated on a wooden bench, engrossed in reading a book. He is wearing a straw hat, a patterned shirt, and dark shorts, suggesting a casual, relaxed day. His bicycle, leaning against the bench, is equipped with a basket holding a plant, adding a touch of greenery to the urban setting. The man's interaction with his environment is peaceful and solitary; he appears to be enjoying his solitude amidst the bustling city backdrop. The background reveals a construction site with wooden barriers and a partially visible sign, indicating ongoing urban development. The contrast between the man's calm activity and the dynamic construction scene highlights the coexistence of tranquility and progress in the city. No animals are present in the image, and the man's actions are independent of any other individuals or creatures, focusing solely on his personal engagement with the book and his surroundings.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 179,
+            "total_tokens": 485
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1365.754476,
+            "prompt_eval_duration_ms": 30.91041,
+            "generation_duration_ms": 1294.437583,
+            "load_duration_ms": 36.855201,
+            "tokens_per_second": 138.28399480270653
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of calm and introspection, leaning slightly towards a positive tone. The man, seated on a wooden bench with his bicycle beside him, appears absorbed in his book, suggesting a moment of quiet reflection or leisure. His relaxed posture and the serene setting, with the wooden fence and the soft light of what seems to be a sunny day, contribute to a peaceful atmosphere. The presence of the potted plant adds a touch of life and color, enhancing the tranquil mood. The blurred background, with its hint of urban activity, contrasts subtly with the man's focused solitude, creating a balance between the bustle of the city and the quietude of his personal space. The overall tone is neutral with a subtle positive undertone, as the scene captures a moment of personal peace amidst the urban environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 165,
+            "total_tokens": 473
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1271.678015,
+            "prompt_eval_duration_ms": 32.113168,
+            "generation_duration_ms": 1198.959833,
+            "load_duration_ms": 38.195836,
+            "tokens_per_second": 137.61928920266004
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"sitting, wearing a hat, holding a book\"\n    }\n  },\n  \"man-made\": {\n    \"bicycle\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"black\", \"green\"],\n      \"size\": \"medium\",\n      \"description\": \"with a basket containing a plant\"\n    },\n    \"plant\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"green\", \"pink\"],\n      \"size\": \"small\",\n      \"description\": \"in a basket on the bicycle\"\n    },\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"wooden with metal mesh\"\n    },\n    \"book\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"being held by the person\"\n    },\n    \"hat\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"brown\"],\n      \"size\": \"small\",\n      \"description\": \"worn by the person\"\n    },\n    \"road\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"paved\"\n    },\n    \"construction site\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"brown\", \"orange\"],\n      \"size\": \"large\",\n      \"description\": \"with wooden and metal structures\"\n    },\n    \"car\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"station wagon\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "brown",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "sitting, wearing a hat, holding a book"
+              }
+            },
+            "man-made": {
+              "bicycle": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "black",
+                  "green"
+                ],
+                "size": "medium",
+                "description": "with a basket containing a plant"
+              },
+              "plant": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "green",
+                  "pink"
+                ],
+                "size": "small",
+                "description": "in a basket on the bicycle"
+              },
+              "fence": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "wooden with metal mesh"
+              },
+              "book": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "blue",
+                  "white"
+                ],
+                "size": "small",
+                "description": "being held by the person"
+              },
+              "hat": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "white",
+                  "brown"
+                ],
+                "size": "small",
+                "description": "worn by the person"
+              },
+              "road": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "paved"
+              },
+              "construction site": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "brown",
+                  "orange"
+                ],
+                "size": "large",
+                "description": "with wooden and metal structures"
+              },
+              "car": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "station wagon"
+              }
+            },
+            "natural": {
+              "sky": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "clear"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 507,
+            "total_tokens": 993
+          },
+          "performance_metrics": {
+            "total_duration_ms": 3733.868717,
+            "prompt_eval_duration_ms": 45.064743,
+            "generation_duration_ms": 3647.289542,
+            "load_duration_ms": 36.707068,
+            "tokens_per_second": 139.00733521747915
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2975,
+        "total_time_ms": 9610.265785,
+        "average_speed": 138.7316807232997
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a relaxed, urban scene with a man sitting on a wooden bench, enjoying a moment of leisure. The setting appears to be a construction zone or a recently developed area, as indicated by the wooden fencing, orange construction barriers, and exposed dirt in the background. The man is wearing a light-colored straw hat, a patterned shirt, and dark shorts, giving off a casual, summery vibe. He is holding a small object, possibly a snack or a piece of paper, and appears to be focused on it. \n\nA green bicycle is parked next to him, leaning against the fence, adding a sense of mobility and eco-friendliness to the scene. The bicycle's presence suggests he might be a cyclist or someone who appreciates sustainable transportation. A potted plant with vibrant pink flowers and lush green leaves is placed on the bench beside him, introducing a touch of nature and color to the otherwise industrial setting. \n\nThe background features a street with parked cars, including a white van and a silver sedan, indicating an urban environment. The lighting is bright and natural, suggesting a sunny day, which enhances the vividness of the colors in the image. The overall composition balances the man, the bicycle, and the plant, creating a harmonious and tranquil atmosphere amidst the backdrop of construction and city life. The image conveys a sense of calm and individuality within a bustling urban context.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 283,
+            "total_tokens": 580
+          },
+          "performance_metrics": {
+            "total_duration_ms": 14142.104696,
+            "prompt_eval_duration_ms": 3554.491364,
+            "generation_duration_ms": 10543.876019,
+            "load_duration_ms": 41.050634,
+            "tokens_per_second": 26.840224552151003
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a man sitting on a wooden bench, which is positioned close to the viewer. He is wearing a straw hat, a patterned shirt, and dark shorts, and he appears to be engaged in reading a map or a book. Beside him, a green bicycle is parked, with a potted plant featuring pink flowers resting on its handlebars. The bench and bicycle are situated in front of a wooden fence, which serves as a boundary, and the fence is adorned with additional potted plants, adding a touch of greenery to the scene.\n\nIn the background, the setting transitions to a more urban environment. The area beyond the fence shows a construction zone with orange barriers, yellow caution signs, and visible construction materials. Several vehicles, including cars and a white van, are parked or moving along the street, indicating a typical cityscape. The background also includes a glimpse of a building or structure, suggesting an urban setting.\n\nThe relationship between the foreground and background elements is one of contrast and juxtaposition. The man, bicycle, and plants in the foreground create a sense of calm and leisure, providing a stark contrast to the busy, industrial backdrop of the construction zone and street activity. The fence acts as a visual and physical barrier, separating the tranquil, personal space of the man from the bustling, dynamic environment of the city. This arrangement highlights the coexistence of different aspects of urban life\u2014relaxation and work, nature and industry\u2014within the same setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 304,
+            "total_tokens": 607
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11449.37657,
+            "prompt_eval_duration_ms": 80.951246,
+            "generation_duration_ms": 11324.580117,
+            "load_duration_ms": 40.30852,
+            "tokens_per_second": 26.8442623796398
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a man sitting on a wooden bench in an urban setting, surrounded by construction barriers and a partially visible street in the background. He is wearing a straw hat, a patterned shirt, and dark shorts, giving off a relaxed and casual vibe. The man is engaged in reading a book, holding it with both hands, suggesting a moment of leisure amidst the bustling environment. \n\nNext to him, a green bicycle is parked, leaning against the bench. The bicycle has a basket attached to its front, which holds a potted plant with vibrant pink flowers and lush green leaves. This detail adds a touch of nature and color to the otherwise industrial scene, creating a contrast between the man-made structures and the natural elements.\n\nThe construction barriers in the background, marked with orange and white caution signs, indicate ongoing work or renovations, adding a sense of movement and change to the setting. Despite the construction, the man appears undisturbed, immersed in his book, highlighting a serene moment amidst the urban chaos.\n\nThe relationship between the elements is harmonious yet juxtaposed. The man, the bicycle, and the plant create a personal, tranquil scene, while the construction barriers and street in the background suggest the dynamic and ever-evolving nature of the city. The potted plant serves as a bridge, softening the hard lines of the construction and adding a touch of life and color to the scene. The overall composition suggests a moment of quiet reflection amidst the urban environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 296,
+            "total_tokens": 602
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11114.603317,
+            "prompt_eval_duration_ms": 75.498203,
+            "generation_duration_ms": 10996.001142,
+            "load_duration_ms": 40.168717,
+            "tokens_per_second": 26.91887679689366
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The mood conveyed by this image is one of calmness and contentment, with a slightly nostalgic and reflective undertone. The man, seated on a wooden bench, appears relaxed and absorbed in reading a newspaper, suggesting a sense of peace and quiet contemplation. The presence of a bicycle, potted plant, and casual attire indicates a laid-back, everyday lifestyle, further reinforcing the tranquil atmosphere. The bright, natural light and the soft colors of the surroundings\u2014such as the warm tones of the wooden fence and the greenery of the plant\u2014add to the overall positive and serene mood. The construction site in the background, though slightly industrial, does not disrupt the peacefulness; instead, it subtly hints at change and progress, which can evoke a sense of hope or anticipation for the future. The man's straw hat and the casual posture suggest a connection to nature and a simple, unhurried way of life. The image's overall tone is positive, with visual elements like the sunlight, greenery, and relaxed posture working together to create an atmosphere of contentment and quiet reflection.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 219,
+            "total_tokens": 527
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8270.831498,
+            "prompt_eval_duration_ms": 74.238922,
+            "generation_duration_ms": 8155.987388,
+            "load_duration_ms": 38.071628,
+            "tokens_per_second": 26.85143926561452
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"beige\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"Sitting on a bench, wearing a straw hat, holding a newspaper\"\n    }\n  },\n  \"animal\": {},\n  \"man-made\": {\n    \"bench\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"Wooden bench where the person is sitting\"\n    },\n    \"bicycle\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"green\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Parked next to the person\"\n    },\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"yellow\", \"red\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Metal and wooden fence\"\n    },\n    \"sign\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"yellow\", \"black\"],\n      \"size\": \"small\",\n      \"description\": \"Yellow sign with black text\"\n    },\n    \"car\": {\n      \"count\": 2,\n      \"location\": \"background\",\n      \"color\": [\"white\", \"gray\"],\n      \"size\": \"small\",\n      \"description\": \"Vehicles parked in the background\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Partially visible building structure\"\n    }\n  },\n  \"natural\": {\n    \"plant\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"green\", \"pink\"],\n      \"size\": \"small\",\n      \"description\": \"Potted plant with pink flowers\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "beige",
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "Sitting on a bench, wearing a straw hat, holding a newspaper"
+              }
+            },
+            "animal": {},
+            "man-made": {
+              "bench": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "Wooden bench where the person is sitting"
+              },
+              "bicycle": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "green",
+                  "black"
+                ],
+                "size": "medium",
+                "description": "Parked next to the person"
+              },
+              "fence": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "yellow",
+                  "red",
+                  "white"
+                ],
+                "size": "large",
+                "description": "Metal and wooden fence"
+              },
+              "sign": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "yellow",
+                  "black"
+                ],
+                "size": "small",
+                "description": "Yellow sign with black text"
+              },
+              "car": {
+                "count": 2,
+                "location": "background",
+                "color": [
+                  "white",
+                  "gray"
+                ],
+                "size": "small",
+                "description": "Vehicles parked in the background"
+              },
+              "building": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "Partially visible building structure"
+              }
+            },
+            "natural": {
+              "plant": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "green",
+                  "pink"
+                ],
+                "size": "small",
+                "description": "Potted plant with pink flowers"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 440,
+            "total_tokens": 926
+          },
+          "performance_metrics": {
+            "total_duration_ms": 16499.333047,
+            "prompt_eval_duration_ms": 136.89151,
+            "generation_duration_ms": 16321.445207,
+            "load_duration_ms": 38.007851,
+            "tokens_per_second": 26.95839703038621
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3242,
+        "total_time_ms": 61476.249128,
+        "average_speed": 26.882640004937038
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -578,408 +980,6 @@
         "total_tokens": 3015,
         "total_time_ms": 30385.415117999997,
         "average_speed": 41.92554933969736
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a candid urban scene, likely taken during the daytime under bright, natural sunlight. The setting appears to be a construction or renovation area, indicated by the wooden scaffolding and the partially visible construction materials in the background. The main subject is a man sitting on a wooden bench, engrossed in reading a book. He is casually dressed in a straw hat, a patterned shirt, and dark shorts, suggesting a relaxed, possibly summery atmosphere. His bicycle, with a basket holding a potted plant, leans against the scaffolding, adding a touch of personal style and perhaps hinting at a commute or leisurely ride. The colors in the image are vibrant yet natural, with the green of the plant and the blue of the bicycle contrasting against the earthy tones of the wooden structures and the muted colors of the construction site. The lighting is even and bright, casting soft shadows and highlighting the textures of the materials and the man's clothing. The overall composition is balanced, with the man and his bicycle as the focal point, framed by the scaffolding and the bustling background, creating a sense of everyday life and tranquility amidst urban activity.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 234,
-            "total_tokens": 531
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1799.810965,
-            "prompt_eval_duration_ms": 81.307817,
-            "generation_duration_ms": 1672.715046,
-            "load_duration_ms": 39.902079,
-            "tokens_per_second": 139.8923268847072
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, a man sits on a wooden bench, engrossed in reading a book. He is casually dressed in a straw hat, a patterned shirt, and dark shorts, suggesting a relaxed, possibly summery day. A bicycle, leaning against the bench, is adorned with a basket containing a vibrant plant, adding a touch of greenery and life to the scene. The bench and the bicycle are positioned in front of a temporary wooden fence, which appears to be part of a construction or renovation site, indicated by the presence of construction materials and a partially visible sign that reads \"Emco.\" The background, slightly out of focus, reveals a busy street with cars and a blurred view of a building, hinting at an urban setting. The elements in the foreground, the man and his bicycle, are in sharp contrast to the blurred background, drawing the viewer's attention to the quiet, personal moment amidst the bustling city life.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 190,
-            "total_tokens": 493
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1439.153612,
-            "prompt_eval_duration_ms": 30.387951,
-            "generation_duration_ms": 1368.329365,
-            "load_duration_ms": 37.686688,
-            "tokens_per_second": 138.8554575089456
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a man is seated on a wooden bench, engrossed in reading a book. He is wearing a straw hat, a patterned shirt, and dark shorts, suggesting a casual, relaxed day. His bicycle, leaning against the bench, is equipped with a basket holding a plant, adding a touch of greenery to the urban setting. The man's interaction with his environment is peaceful and solitary; he appears to be enjoying his solitude amidst the bustling city backdrop. The background reveals a construction site with wooden barriers and a partially visible sign, indicating ongoing urban development. The contrast between the man's calm activity and the dynamic construction scene highlights the coexistence of tranquility and progress in the city. No animals are present in the image, and the man's actions are independent of any other individuals or creatures, focusing solely on his personal engagement with the book and his surroundings.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 179,
-            "total_tokens": 485
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1365.754476,
-            "prompt_eval_duration_ms": 30.91041,
-            "generation_duration_ms": 1294.437583,
-            "load_duration_ms": 36.855201,
-            "tokens_per_second": 138.28399480270653
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of calm and introspection, leaning slightly towards a positive tone. The man, seated on a wooden bench with his bicycle beside him, appears absorbed in his book, suggesting a moment of quiet reflection or leisure. His relaxed posture and the serene setting, with the wooden fence and the soft light of what seems to be a sunny day, contribute to a peaceful atmosphere. The presence of the potted plant adds a touch of life and color, enhancing the tranquil mood. The blurred background, with its hint of urban activity, contrasts subtly with the man's focused solitude, creating a balance between the bustle of the city and the quietude of his personal space. The overall tone is neutral with a subtle positive undertone, as the scene captures a moment of personal peace amidst the urban environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 165,
-            "total_tokens": 473
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1271.678015,
-            "prompt_eval_duration_ms": 32.113168,
-            "generation_duration_ms": 1198.959833,
-            "load_duration_ms": 38.195836,
-            "tokens_per_second": 137.61928920266004
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"sitting, wearing a hat, holding a book\"\n    }\n  },\n  \"man-made\": {\n    \"bicycle\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"black\", \"green\"],\n      \"size\": \"medium\",\n      \"description\": \"with a basket containing a plant\"\n    },\n    \"plant\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"green\", \"pink\"],\n      \"size\": \"small\",\n      \"description\": \"in a basket on the bicycle\"\n    },\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"wooden with metal mesh\"\n    },\n    \"book\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"being held by the person\"\n    },\n    \"hat\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"brown\"],\n      \"size\": \"small\",\n      \"description\": \"worn by the person\"\n    },\n    \"road\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"paved\"\n    },\n    \"construction site\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"brown\", \"orange\"],\n      \"size\": \"large\",\n      \"description\": \"with wooden and metal structures\"\n    },\n    \"car\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"station wagon\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "brown",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "sitting, wearing a hat, holding a book"
-              }
-            },
-            "man-made": {
-              "bicycle": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "black",
-                  "green"
-                ],
-                "size": "medium",
-                "description": "with a basket containing a plant"
-              },
-              "plant": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "green",
-                  "pink"
-                ],
-                "size": "small",
-                "description": "in a basket on the bicycle"
-              },
-              "fence": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "wooden with metal mesh"
-              },
-              "book": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "blue",
-                  "white"
-                ],
-                "size": "small",
-                "description": "being held by the person"
-              },
-              "hat": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "white",
-                  "brown"
-                ],
-                "size": "small",
-                "description": "worn by the person"
-              },
-              "road": {
-                "count": 1,
-                "location": "right",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "paved"
-              },
-              "construction site": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "brown",
-                  "orange"
-                ],
-                "size": "large",
-                "description": "with wooden and metal structures"
-              },
-              "car": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "station wagon"
-              }
-            },
-            "natural": {
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "clear"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 507,
-            "total_tokens": 993
-          },
-          "performance_metrics": {
-            "total_duration_ms": 3733.868717,
-            "prompt_eval_duration_ms": 45.064743,
-            "generation_duration_ms": 3647.289542,
-            "load_duration_ms": 36.707068,
-            "tokens_per_second": 139.00733521747915
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2975,
-        "total_time_ms": 9610.265785,
-        "average_speed": 138.7316807232997
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a relaxed, urban scene with a man sitting on a wooden bench, enjoying a moment of leisure. The setting appears to be a construction zone or a recently developed area, as indicated by the wooden fencing, orange construction barriers, and exposed dirt in the background. The man is wearing a light-colored straw hat, a patterned shirt, and dark shorts, giving off a casual, summery vibe. He is holding a small object, possibly a snack or a piece of paper, and appears to be focused on it. \n\nA green bicycle is parked next to him, leaning against the fence, adding a sense of mobility and eco-friendliness to the scene. The bicycle's presence suggests he might be a cyclist or someone who appreciates sustainable transportation. A potted plant with vibrant pink flowers and lush green leaves is placed on the bench beside him, introducing a touch of nature and color to the otherwise industrial setting. \n\nThe background features a street with parked cars, including a white van and a silver sedan, indicating an urban environment. The lighting is bright and natural, suggesting a sunny day, which enhances the vividness of the colors in the image. The overall composition balances the man, the bicycle, and the plant, creating a harmonious and tranquil atmosphere amidst the backdrop of construction and city life. The image conveys a sense of calm and individuality within a bustling urban context.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 283,
-            "total_tokens": 580
-          },
-          "performance_metrics": {
-            "total_duration_ms": 14142.104696,
-            "prompt_eval_duration_ms": 3554.491364,
-            "generation_duration_ms": 10543.876019,
-            "load_duration_ms": 41.050634,
-            "tokens_per_second": 26.840224552151003
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a man sitting on a wooden bench, which is positioned close to the viewer. He is wearing a straw hat, a patterned shirt, and dark shorts, and he appears to be engaged in reading a map or a book. Beside him, a green bicycle is parked, with a potted plant featuring pink flowers resting on its handlebars. The bench and bicycle are situated in front of a wooden fence, which serves as a boundary, and the fence is adorned with additional potted plants, adding a touch of greenery to the scene.\n\nIn the background, the setting transitions to a more urban environment. The area beyond the fence shows a construction zone with orange barriers, yellow caution signs, and visible construction materials. Several vehicles, including cars and a white van, are parked or moving along the street, indicating a typical cityscape. The background also includes a glimpse of a building or structure, suggesting an urban setting.\n\nThe relationship between the foreground and background elements is one of contrast and juxtaposition. The man, bicycle, and plants in the foreground create a sense of calm and leisure, providing a stark contrast to the busy, industrial backdrop of the construction zone and street activity. The fence acts as a visual and physical barrier, separating the tranquil, personal space of the man from the bustling, dynamic environment of the city. This arrangement highlights the coexistence of different aspects of urban life\u2014relaxation and work, nature and industry\u2014within the same setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 304,
-            "total_tokens": 607
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11449.37657,
-            "prompt_eval_duration_ms": 80.951246,
-            "generation_duration_ms": 11324.580117,
-            "load_duration_ms": 40.30852,
-            "tokens_per_second": 26.8442623796398
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a man sitting on a wooden bench in an urban setting, surrounded by construction barriers and a partially visible street in the background. He is wearing a straw hat, a patterned shirt, and dark shorts, giving off a relaxed and casual vibe. The man is engaged in reading a book, holding it with both hands, suggesting a moment of leisure amidst the bustling environment. \n\nNext to him, a green bicycle is parked, leaning against the bench. The bicycle has a basket attached to its front, which holds a potted plant with vibrant pink flowers and lush green leaves. This detail adds a touch of nature and color to the otherwise industrial scene, creating a contrast between the man-made structures and the natural elements.\n\nThe construction barriers in the background, marked with orange and white caution signs, indicate ongoing work or renovations, adding a sense of movement and change to the setting. Despite the construction, the man appears undisturbed, immersed in his book, highlighting a serene moment amidst the urban chaos.\n\nThe relationship between the elements is harmonious yet juxtaposed. The man, the bicycle, and the plant create a personal, tranquil scene, while the construction barriers and street in the background suggest the dynamic and ever-evolving nature of the city. The potted plant serves as a bridge, softening the hard lines of the construction and adding a touch of life and color to the scene. The overall composition suggests a moment of quiet reflection amidst the urban environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 296,
-            "total_tokens": 602
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11114.603317,
-            "prompt_eval_duration_ms": 75.498203,
-            "generation_duration_ms": 10996.001142,
-            "load_duration_ms": 40.168717,
-            "tokens_per_second": 26.91887679689366
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The mood conveyed by this image is one of calmness and contentment, with a slightly nostalgic and reflective undertone. The man, seated on a wooden bench, appears relaxed and absorbed in reading a newspaper, suggesting a sense of peace and quiet contemplation. The presence of a bicycle, potted plant, and casual attire indicates a laid-back, everyday lifestyle, further reinforcing the tranquil atmosphere. The bright, natural light and the soft colors of the surroundings\u2014such as the warm tones of the wooden fence and the greenery of the plant\u2014add to the overall positive and serene mood. The construction site in the background, though slightly industrial, does not disrupt the peacefulness; instead, it subtly hints at change and progress, which can evoke a sense of hope or anticipation for the future. The man's straw hat and the casual posture suggest a connection to nature and a simple, unhurried way of life. The image's overall tone is positive, with visual elements like the sunlight, greenery, and relaxed posture working together to create an atmosphere of contentment and quiet reflection.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 219,
-            "total_tokens": 527
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8270.831498,
-            "prompt_eval_duration_ms": 74.238922,
-            "generation_duration_ms": 8155.987388,
-            "load_duration_ms": 38.071628,
-            "tokens_per_second": 26.85143926561452
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"beige\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"Sitting on a bench, wearing a straw hat, holding a newspaper\"\n    }\n  },\n  \"animal\": {},\n  \"man-made\": {\n    \"bench\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"Wooden bench where the person is sitting\"\n    },\n    \"bicycle\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"green\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Parked next to the person\"\n    },\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"yellow\", \"red\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Metal and wooden fence\"\n    },\n    \"sign\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"yellow\", \"black\"],\n      \"size\": \"small\",\n      \"description\": \"Yellow sign with black text\"\n    },\n    \"car\": {\n      \"count\": 2,\n      \"location\": \"background\",\n      \"color\": [\"white\", \"gray\"],\n      \"size\": \"small\",\n      \"description\": \"Vehicles parked in the background\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Partially visible building structure\"\n    }\n  },\n  \"natural\": {\n    \"plant\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"green\", \"pink\"],\n      \"size\": \"small\",\n      \"description\": \"Potted plant with pink flowers\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "beige",
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "Sitting on a bench, wearing a straw hat, holding a newspaper"
-              }
-            },
-            "animal": {},
-            "man-made": {
-              "bench": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "Wooden bench where the person is sitting"
-              },
-              "bicycle": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "green",
-                  "black"
-                ],
-                "size": "medium",
-                "description": "Parked next to the person"
-              },
-              "fence": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "yellow",
-                  "red",
-                  "white"
-                ],
-                "size": "large",
-                "description": "Metal and wooden fence"
-              },
-              "sign": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "yellow",
-                  "black"
-                ],
-                "size": "small",
-                "description": "Yellow sign with black text"
-              },
-              "car": {
-                "count": 2,
-                "location": "background",
-                "color": [
-                  "white",
-                  "gray"
-                ],
-                "size": "small",
-                "description": "Vehicles parked in the background"
-              },
-              "building": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "Partially visible building structure"
-              }
-            },
-            "natural": {
-              "plant": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "green",
-                  "pink"
-                ],
-                "size": "small",
-                "description": "Potted plant with pink flowers"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 440,
-            "total_tokens": 926
-          },
-          "performance_metrics": {
-            "total_duration_ms": 16499.333047,
-            "prompt_eval_duration_ms": 136.89151,
-            "generation_duration_ms": 16321.445207,
-            "load_duration_ms": 38.007851,
-            "tokens_per_second": 26.95839703038621
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3242,
-        "total_time_ms": 61476.249128,
-        "average_speed": 26.882640004937038
       }
     },
     {

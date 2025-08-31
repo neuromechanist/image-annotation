@@ -7,6 +7,390 @@
   "timestamp": "2025-08-30T17:59:52.375712+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a vibrant scene on a sunny day at a tennis court, surrounded by lush greenery and palm trees, suggesting a warm, tropical setting. The court itself is a striking shade of green, contrasting sharply with the bright blue sky dotted with fluffy white clouds. The net divides the court into two equal halves, and a player, dressed in a white tank top and black shorts, stands poised with a tennis racket in hand, ready to serve or return a shot. The player's shadow is cast on the court, elongated by the angle of the sun, adding a dynamic element to the composition. In the background, tall palm trees and a thatched-roof structure, possibly a pavilion or a snack bar, add to the tropical ambiance. The lighting is natural and bright, highlighting the vivid colors and creating a lively, inviting atmosphere. The overall composition is balanced, with the player centrally positioned, drawing the viewer's eye across the court and into the background, creating a sense of depth and space.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 205,
+            "total_tokens": 502
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1585.210345,
+            "prompt_eval_duration_ms": 79.595158,
+            "generation_duration_ms": 1465.586851,
+            "load_duration_ms": 37.691128,
+            "tokens_per_second": 139.87570907866993
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, a tennis player stands poised on a vibrant green tennis court, her stance ready for action. She is dressed in athletic attire suitable for the sport, and her racket is held in a position suggesting she is about to serve or return a shot. The court itself is marked with white lines defining the boundaries of the playing area, and the net stretches across the center, dividing the court into two halves. The player's shadow is cast on the court, indicating the direction of the sunlight, which is coming from the upper left of the frame.\n\nThe background elements consist of a lush tropical setting. Palm trees and other tropical vegetation are visible, creating a serene and inviting atmosphere. A thatched-roof structure, possibly a pavilion or a small building, is situated in the distance, adding a touch of rustic charm to the scene. The sky above is a clear blue with a few scattered clouds, suggesting a bright and pleasant day, ideal for outdoor activities like tennis. The palm trees and the thatched structure are slightly out of focus, which helps to emphasize the tennis player in the foreground, creating a depth of field effect that draws the viewer's attention to the main subject of the image. The overall composition suggests a peaceful and sunny day at a tennis court, with the player ready to engage in a game amidst a beautiful natural setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 274,
+            "total_tokens": 577
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2049.226095,
+            "prompt_eval_duration_ms": 31.197423,
+            "generation_duration_ms": 1971.142622,
+            "load_duration_ms": 44.502013,
+            "tokens_per_second": 139.00566957554227
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a person is actively engaged in a tennis match on a well-maintained green court, surrounded by tall palm trees that suggest a warm, tropical setting. The individual, dressed in athletic attire, is holding a tennis racket and appears to be preparing to serve or return a shot, indicating the dynamic nature of the game. The court is marked with white lines, and a net divides the playing area, with a chair umpire positioned near the net to oversee the match. The person's stance and focus suggest a competitive and focused interaction with the opponent, who is partially visible on the opposite side of the net, ready to respond. The environment, with its lush palm trees and clear sky, adds a serene backdrop to the active sport, highlighting the contrast between the intensity of the game and the tranquil surroundings.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 166,
+            "total_tokens": 472
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1270.478744,
+            "prompt_eval_duration_ms": 30.149054,
+            "generation_duration_ms": 1197.043072,
+            "load_duration_ms": 40.824284,
+            "tokens_per_second": 138.6750434323553
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of calm and tranquility, suggesting a positive mood. The bright blue sky dotted with fluffy white clouds and the lush green palm trees in the background contribute to a serene and inviting atmosphere. The woman on the tennis court, dressed in athletic attire and holding a tennis racket, appears poised and ready, which adds a touch of anticipation and focus to the scene. The well-maintained tennis court, with its clean lines and vibrant green surface, further enhances the feeling of order and readiness. The presence of the thatched-roof structure in the distance adds a tropical, relaxed vibe, suggesting a leisurely and enjoyable setting. Overall, the image conveys a mood of peacefulness and readiness for a pleasant activity, likely a game of tennis, which can be associated with feelings of relaxation, enjoyment, and anticipation.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 169,
+            "total_tokens": 477
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1297.372779,
+            "prompt_eval_duration_ms": 29.302996,
+            "generation_duration_ms": 1226.035384,
+            "load_duration_ms": 39.69389,
+            "tokens_per_second": 137.84267746712928
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"playing tennis, holding racket, wearing athletic attire\"\n    }\n  },\n  \"man-made\": {\n    \"tennis_racket\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"red\", \"black\"],\n      \"size\": \"small\",\n      \"description\": \"held by the person\"\n    },\n    \"tennis_ball\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"in the air, near the racket\"\n    },\n    \"tennis_court\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"standard tennis court with white lines\"\n    },\n    \"tennis_net\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"dividing the court\"\n    },\n    \"tennis_court_light\": {\n      \"count\": 3,\n      \"location\": \"top\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"light poles on the court\"\n    },\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"enclosing the court\"\n    },\n    \"thatched_roof_structure\": {\n      \"count\": 1,\n      \"location\": \"top right\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"structure with a thatched roof\"\n    }\n  },\n  \"natural\": {\n    \"palm_trees\": {\n      \"count\": 4,\n      \"location\": \"top\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"tall trees with fronds\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear with some clouds\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "white",
+                  "black"
+                ],
+                "size": "medium",
+                "description": "playing tennis, holding racket, wearing athletic attire"
+              }
+            },
+            "man-made": {
+              "tennis_racket": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "red",
+                  "black"
+                ],
+                "size": "small",
+                "description": "held by the person"
+              },
+              "tennis_ball": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "yellow"
+                ],
+                "size": "small",
+                "description": "in the air, near the racket"
+              },
+              "tennis_court": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "standard tennis court with white lines"
+              },
+              "tennis_net": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black"
+                ],
+                "size": "medium",
+                "description": "dividing the court"
+              },
+              "tennis_court_light": {
+                "count": 3,
+                "location": "top",
+                "color": [
+                  "green"
+                ],
+                "size": "small",
+                "description": "light poles on the court"
+              },
+              "fence": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "enclosing the court"
+              },
+              "thatched_roof_structure": {
+                "count": 1,
+                "location": "top right",
+                "color": [
+                  "brown"
+                ],
+                "size": "small",
+                "description": "structure with a thatched roof"
+              }
+            },
+            "natural": {
+              "palm_trees": {
+                "count": 4,
+                "location": "top",
+                "color": [
+                  "green"
+                ],
+                "size": "medium",
+                "description": "tall trees with fronds"
+              },
+              "sky": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "clear with some clouds"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 522,
+            "total_tokens": 1008
+          },
+          "performance_metrics": {
+            "total_duration_ms": 3829.678657,
+            "prompt_eval_duration_ms": 45.529787,
+            "generation_duration_ms": 3739.873167,
+            "load_duration_ms": 41.60173,
+            "tokens_per_second": 139.57692592519945
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3036,
+        "total_time_ms": 10031.96662,
+        "average_speed": 138.99520509577923
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a sunny outdoor tennis court scene, likely in a tropical or subtropical location given the presence of palm trees in the background. The setting is bright and vibrant, with clear blue skies and scattered white clouds, indicating a pleasant day. The main elements include a tennis court with a green playing surface and white boundary lines, a tennis player in the foreground, and a backdrop of lush greenery and palm trees. The tennis player, a woman, is positioned near the net, holding a tennis racket in a ready stance, wearing a white tank top, black shorts, and white tennis shoes. She appears focused and prepared for play. The court is surrounded by a chain-link fence, and beyond the fence, there are more trees and a thatched-roof structure, possibly a cabana or shelter, adding to the tropical ambiance. Tall light poles with multiple fixtures are visible, suggesting the court is equipped for evening play. The overall lighting is natural and bright, casting soft shadows on the court, enhancing the vivid colors of the green court, white lines, and the player's attire. The composition is balanced, with the player centrally positioned, drawing attention to her as the focal point, while the background elements provide depth and context. The scene conveys a sense of leisure and athleticism in a serene, outdoor environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 266,
+            "total_tokens": 563
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13375.753862,
+            "prompt_eval_duration_ms": 3468.679079,
+            "generation_duration_ms": 9863.51669,
+            "load_duration_ms": 40.079462,
+            "tokens_per_second": 26.968069133971323
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a tennis court, featuring a green surface with clearly marked white lines. A tennis player is positioned near the net, holding a racket and appearing ready to play. The player is dressed in athletic attire, including a white top and dark shorts, and is standing on the court's surface, which is the primary focus of the image. The net is visible, dividing the court into two halves, and the player is on the side closest to the viewer.\n\nIn the background, the setting transitions to a more natural and serene environment. Tall palm trees are scattered throughout, creating a lush, tropical atmosphere. Beyond the trees, a thatched-roof structure, possibly a cabana or pavilion, is visible, adding a touch of rustic charm to the scene. The sky is bright and clear, with a few scattered clouds, indicating a sunny day. The background also includes additional tennis courts and fencing, suggesting this is part of a larger recreational facility.\n\nThe foreground and background elements are interconnected through the setting of a tennis facility in a tropical location. The player in the foreground is actively engaged in the sport, while the background provides context and ambiance, showcasing the natural beauty and leisurely environment of the area. The contrast between the structured, man-made elements of the tennis court and the organic, natural elements of the palm trees and sky creates a balanced and visually appealing composition. The overall scene suggests a relaxed, outdoor recreational activity in a picturesque setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 297,
+            "total_tokens": 600
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11155.835969,
+            "prompt_eval_duration_ms": 77.488968,
+            "generation_duration_ms": 11038.553428,
+            "load_duration_ms": 37.022815,
+            "tokens_per_second": 26.90569936878146
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a tennis player standing on a green tennis court, preparing to play. The person, dressed in athletic attire including a white tank top, black shorts, and white tennis shoes, is holding a tennis racket in a ready stance, suggesting they are either waiting for a serve or preparing to return a shot. The individual appears focused and poised, indicating an active engagement in the game.\n\nIn the background, there are several elements that contribute to the setting. A tall light pole stands prominently, likely used for illuminating the court during evening play. The court is surrounded by a chain-link fence, which is typical for outdoor tennis facilities to contain the ball and ensure safety. Beyond the fence, a lush, tropical environment is visible, with palm trees and other greenery, suggesting a warm, possibly coastal or resort-like location. A thatched-roof structure, possibly a cabana or shelter, is also visible, adding to the relaxed, recreational atmosphere.\n\nThere are no other visible people or animals in the image, focusing the scene solely on the tennis player and their interaction with the court. The relationship between the player and the environment is one of engagement and preparation, as the individual is actively participating in the sport while the serene, tropical backdrop provides a pleasant setting for the activity. The court lines and net are clearly marked, emphasizing the structured nature of the game and the player's adherence to the rules and boundaries of tennis. The overall scene conveys a sense of calm concentration and enjoyment of the sport in a picturesque outdoor setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 308,
+            "total_tokens": 614
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11620.545397,
+            "prompt_eval_duration_ms": 73.044519,
+            "generation_duration_ms": 11506.901191,
+            "load_duration_ms": 37.764796,
+            "tokens_per_second": 26.766545995971434
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a positive and uplifting mood, evoking feelings of relaxation, enjoyment, and a sense of freedom. The bright, sunny day with a clear blue sky and scattered clouds creates a cheerful and vibrant atmosphere. The lush green tennis court, surrounded by palm trees and tropical foliage, adds to the serene and inviting environment, suggesting a warm, tropical location that is ideal for outdoor activities. The presence of the tennis player, who appears focused yet relaxed, holding a racket and ready to play, further emphasizes a sense of leisure and active engagement in a pleasant setting. The tall light poles and the thatched-roof structure in the background contribute to the image's tropical and recreational vibe, reinforcing the idea of a leisurely day spent enjoying a sport in a beautiful, natural setting. The overall tone is positive, as the combination of natural beauty, bright lighting, and the activity of playing tennis creates a mood of vitality, joy, and connection with nature. The image effectively captures a moment of tranquility and happiness, making the viewer feel uplifted and inspired.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 214,
+            "total_tokens": 522
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8117.690128,
+            "prompt_eval_duration_ms": 74.426229,
+            "generation_duration_ms": 7999.948797,
+            "load_duration_ms": 40.822791,
+            "tokens_per_second": 26.750171211127064
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"A tennis player holding a racket, standing on a tennis court.\"\n    }\n  },\n  \"man-made\": {\n    \"tennis_court\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\", \"gray\"],\n      \"size\": \"large\",\n      \"description\": \"A tennis court with marked lines and a net.\"\n    },\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"A chain-link fence surrounding the tennis court.\"\n    },\n    \"light_pole\": {\n      \"count\": 2,\n      \"location\": \"center, middle\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Tall light poles with multiple fixtures.\"\n    },\n    \"thatched_roof_structure\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"A small structure with a thatched roof.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 4,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Tall palm trees in the background.\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top, middle\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"A clear sky with some scattered clouds.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "white",
+                  "black"
+                ],
+                "size": "medium",
+                "description": "A tennis player holding a racket, standing on a tennis court."
+              }
+            },
+            "man-made": {
+              "tennis_court": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "green",
+                  "gray"
+                ],
+                "size": "large",
+                "description": "A tennis court with marked lines and a net."
+              },
+              "fence": {
+                "count": 1,
+                "location": "left, middle",
+                "color": [
+                  "green"
+                ],
+                "size": "medium",
+                "description": "A chain-link fence surrounding the tennis court."
+              },
+              "light_pole": {
+                "count": 2,
+                "location": "center, middle",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "Tall light poles with multiple fixtures."
+              },
+              "thatched_roof_structure": {
+                "count": 1,
+                "location": "right, middle",
+                "color": [
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "A small structure with a thatched roof."
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 4,
+                "location": "center, middle",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "Tall palm trees in the background."
+              },
+              "sky": {
+                "count": 1,
+                "location": "top, middle",
+                "color": [
+                  "blue",
+                  "white"
+                ],
+                "size": "large",
+                "description": "A clear sky with some scattered clouds."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 407,
+            "total_tokens": 893
+          },
+          "performance_metrics": {
+            "total_duration_ms": 15287.742935,
+            "prompt_eval_duration_ms": 136.698969,
+            "generation_duration_ms": 15105.220992,
+            "load_duration_ms": 42.641903,
+            "tokens_per_second": 26.944326085368406
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3192,
+        "total_time_ms": 59557.568291,
+        "average_speed": 26.866962359043935
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -558,390 +942,6 @@
         "total_tokens": 3058,
         "total_time_ms": 31395.114239999995,
         "average_speed": 41.90887917025374
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a vibrant scene on a sunny day at a tennis court, surrounded by lush greenery and palm trees, suggesting a warm, tropical setting. The court itself is a striking shade of green, contrasting sharply with the bright blue sky dotted with fluffy white clouds. The net divides the court into two equal halves, and a player, dressed in a white tank top and black shorts, stands poised with a tennis racket in hand, ready to serve or return a shot. The player's shadow is cast on the court, elongated by the angle of the sun, adding a dynamic element to the composition. In the background, tall palm trees and a thatched-roof structure, possibly a pavilion or a snack bar, add to the tropical ambiance. The lighting is natural and bright, highlighting the vivid colors and creating a lively, inviting atmosphere. The overall composition is balanced, with the player centrally positioned, drawing the viewer's eye across the court and into the background, creating a sense of depth and space.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 205,
-            "total_tokens": 502
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1585.210345,
-            "prompt_eval_duration_ms": 79.595158,
-            "generation_duration_ms": 1465.586851,
-            "load_duration_ms": 37.691128,
-            "tokens_per_second": 139.87570907866993
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, a tennis player stands poised on a vibrant green tennis court, her stance ready for action. She is dressed in athletic attire suitable for the sport, and her racket is held in a position suggesting she is about to serve or return a shot. The court itself is marked with white lines defining the boundaries of the playing area, and the net stretches across the center, dividing the court into two halves. The player's shadow is cast on the court, indicating the direction of the sunlight, which is coming from the upper left of the frame.\n\nThe background elements consist of a lush tropical setting. Palm trees and other tropical vegetation are visible, creating a serene and inviting atmosphere. A thatched-roof structure, possibly a pavilion or a small building, is situated in the distance, adding a touch of rustic charm to the scene. The sky above is a clear blue with a few scattered clouds, suggesting a bright and pleasant day, ideal for outdoor activities like tennis. The palm trees and the thatched structure are slightly out of focus, which helps to emphasize the tennis player in the foreground, creating a depth of field effect that draws the viewer's attention to the main subject of the image. The overall composition suggests a peaceful and sunny day at a tennis court, with the player ready to engage in a game amidst a beautiful natural setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 274,
-            "total_tokens": 577
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2049.226095,
-            "prompt_eval_duration_ms": 31.197423,
-            "generation_duration_ms": 1971.142622,
-            "load_duration_ms": 44.502013,
-            "tokens_per_second": 139.00566957554227
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a person is actively engaged in a tennis match on a well-maintained green court, surrounded by tall palm trees that suggest a warm, tropical setting. The individual, dressed in athletic attire, is holding a tennis racket and appears to be preparing to serve or return a shot, indicating the dynamic nature of the game. The court is marked with white lines, and a net divides the playing area, with a chair umpire positioned near the net to oversee the match. The person's stance and focus suggest a competitive and focused interaction with the opponent, who is partially visible on the opposite side of the net, ready to respond. The environment, with its lush palm trees and clear sky, adds a serene backdrop to the active sport, highlighting the contrast between the intensity of the game and the tranquil surroundings.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 166,
-            "total_tokens": 472
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1270.478744,
-            "prompt_eval_duration_ms": 30.149054,
-            "generation_duration_ms": 1197.043072,
-            "load_duration_ms": 40.824284,
-            "tokens_per_second": 138.6750434323553
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of calm and tranquility, suggesting a positive mood. The bright blue sky dotted with fluffy white clouds and the lush green palm trees in the background contribute to a serene and inviting atmosphere. The woman on the tennis court, dressed in athletic attire and holding a tennis racket, appears poised and ready, which adds a touch of anticipation and focus to the scene. The well-maintained tennis court, with its clean lines and vibrant green surface, further enhances the feeling of order and readiness. The presence of the thatched-roof structure in the distance adds a tropical, relaxed vibe, suggesting a leisurely and enjoyable setting. Overall, the image conveys a mood of peacefulness and readiness for a pleasant activity, likely a game of tennis, which can be associated with feelings of relaxation, enjoyment, and anticipation.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 169,
-            "total_tokens": 477
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1297.372779,
-            "prompt_eval_duration_ms": 29.302996,
-            "generation_duration_ms": 1226.035384,
-            "load_duration_ms": 39.69389,
-            "tokens_per_second": 137.84267746712928
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"playing tennis, holding racket, wearing athletic attire\"\n    }\n  },\n  \"man-made\": {\n    \"tennis_racket\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"red\", \"black\"],\n      \"size\": \"small\",\n      \"description\": \"held by the person\"\n    },\n    \"tennis_ball\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"in the air, near the racket\"\n    },\n    \"tennis_court\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"standard tennis court with white lines\"\n    },\n    \"tennis_net\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"dividing the court\"\n    },\n    \"tennis_court_light\": {\n      \"count\": 3,\n      \"location\": \"top\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"light poles on the court\"\n    },\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"enclosing the court\"\n    },\n    \"thatched_roof_structure\": {\n      \"count\": 1,\n      \"location\": \"top right\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"structure with a thatched roof\"\n    }\n  },\n  \"natural\": {\n    \"palm_trees\": {\n      \"count\": 4,\n      \"location\": \"top\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"tall trees with fronds\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear with some clouds\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "white",
-                  "black"
-                ],
-                "size": "medium",
-                "description": "playing tennis, holding racket, wearing athletic attire"
-              }
-            },
-            "man-made": {
-              "tennis_racket": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "red",
-                  "black"
-                ],
-                "size": "small",
-                "description": "held by the person"
-              },
-              "tennis_ball": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "yellow"
-                ],
-                "size": "small",
-                "description": "in the air, near the racket"
-              },
-              "tennis_court": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "standard tennis court with white lines"
-              },
-              "tennis_net": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black"
-                ],
-                "size": "medium",
-                "description": "dividing the court"
-              },
-              "tennis_court_light": {
-                "count": 3,
-                "location": "top",
-                "color": [
-                  "green"
-                ],
-                "size": "small",
-                "description": "light poles on the court"
-              },
-              "fence": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "enclosing the court"
-              },
-              "thatched_roof_structure": {
-                "count": 1,
-                "location": "top right",
-                "color": [
-                  "brown"
-                ],
-                "size": "small",
-                "description": "structure with a thatched roof"
-              }
-            },
-            "natural": {
-              "palm_trees": {
-                "count": 4,
-                "location": "top",
-                "color": [
-                  "green"
-                ],
-                "size": "medium",
-                "description": "tall trees with fronds"
-              },
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "clear with some clouds"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 522,
-            "total_tokens": 1008
-          },
-          "performance_metrics": {
-            "total_duration_ms": 3829.678657,
-            "prompt_eval_duration_ms": 45.529787,
-            "generation_duration_ms": 3739.873167,
-            "load_duration_ms": 41.60173,
-            "tokens_per_second": 139.57692592519945
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3036,
-        "total_time_ms": 10031.96662,
-        "average_speed": 138.99520509577923
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a sunny outdoor tennis court scene, likely in a tropical or subtropical location given the presence of palm trees in the background. The setting is bright and vibrant, with clear blue skies and scattered white clouds, indicating a pleasant day. The main elements include a tennis court with a green playing surface and white boundary lines, a tennis player in the foreground, and a backdrop of lush greenery and palm trees. The tennis player, a woman, is positioned near the net, holding a tennis racket in a ready stance, wearing a white tank top, black shorts, and white tennis shoes. She appears focused and prepared for play. The court is surrounded by a chain-link fence, and beyond the fence, there are more trees and a thatched-roof structure, possibly a cabana or shelter, adding to the tropical ambiance. Tall light poles with multiple fixtures are visible, suggesting the court is equipped for evening play. The overall lighting is natural and bright, casting soft shadows on the court, enhancing the vivid colors of the green court, white lines, and the player's attire. The composition is balanced, with the player centrally positioned, drawing attention to her as the focal point, while the background elements provide depth and context. The scene conveys a sense of leisure and athleticism in a serene, outdoor environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 266,
-            "total_tokens": 563
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13375.753862,
-            "prompt_eval_duration_ms": 3468.679079,
-            "generation_duration_ms": 9863.51669,
-            "load_duration_ms": 40.079462,
-            "tokens_per_second": 26.968069133971323
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a tennis court, featuring a green surface with clearly marked white lines. A tennis player is positioned near the net, holding a racket and appearing ready to play. The player is dressed in athletic attire, including a white top and dark shorts, and is standing on the court's surface, which is the primary focus of the image. The net is visible, dividing the court into two halves, and the player is on the side closest to the viewer.\n\nIn the background, the setting transitions to a more natural and serene environment. Tall palm trees are scattered throughout, creating a lush, tropical atmosphere. Beyond the trees, a thatched-roof structure, possibly a cabana or pavilion, is visible, adding a touch of rustic charm to the scene. The sky is bright and clear, with a few scattered clouds, indicating a sunny day. The background also includes additional tennis courts and fencing, suggesting this is part of a larger recreational facility.\n\nThe foreground and background elements are interconnected through the setting of a tennis facility in a tropical location. The player in the foreground is actively engaged in the sport, while the background provides context and ambiance, showcasing the natural beauty and leisurely environment of the area. The contrast between the structured, man-made elements of the tennis court and the organic, natural elements of the palm trees and sky creates a balanced and visually appealing composition. The overall scene suggests a relaxed, outdoor recreational activity in a picturesque setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 297,
-            "total_tokens": 600
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11155.835969,
-            "prompt_eval_duration_ms": 77.488968,
-            "generation_duration_ms": 11038.553428,
-            "load_duration_ms": 37.022815,
-            "tokens_per_second": 26.90569936878146
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a tennis player standing on a green tennis court, preparing to play. The person, dressed in athletic attire including a white tank top, black shorts, and white tennis shoes, is holding a tennis racket in a ready stance, suggesting they are either waiting for a serve or preparing to return a shot. The individual appears focused and poised, indicating an active engagement in the game.\n\nIn the background, there are several elements that contribute to the setting. A tall light pole stands prominently, likely used for illuminating the court during evening play. The court is surrounded by a chain-link fence, which is typical for outdoor tennis facilities to contain the ball and ensure safety. Beyond the fence, a lush, tropical environment is visible, with palm trees and other greenery, suggesting a warm, possibly coastal or resort-like location. A thatched-roof structure, possibly a cabana or shelter, is also visible, adding to the relaxed, recreational atmosphere.\n\nThere are no other visible people or animals in the image, focusing the scene solely on the tennis player and their interaction with the court. The relationship between the player and the environment is one of engagement and preparation, as the individual is actively participating in the sport while the serene, tropical backdrop provides a pleasant setting for the activity. The court lines and net are clearly marked, emphasizing the structured nature of the game and the player's adherence to the rules and boundaries of tennis. The overall scene conveys a sense of calm concentration and enjoyment of the sport in a picturesque outdoor setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 308,
-            "total_tokens": 614
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11620.545397,
-            "prompt_eval_duration_ms": 73.044519,
-            "generation_duration_ms": 11506.901191,
-            "load_duration_ms": 37.764796,
-            "tokens_per_second": 26.766545995971434
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a positive and uplifting mood, evoking feelings of relaxation, enjoyment, and a sense of freedom. The bright, sunny day with a clear blue sky and scattered clouds creates a cheerful and vibrant atmosphere. The lush green tennis court, surrounded by palm trees and tropical foliage, adds to the serene and inviting environment, suggesting a warm, tropical location that is ideal for outdoor activities. The presence of the tennis player, who appears focused yet relaxed, holding a racket and ready to play, further emphasizes a sense of leisure and active engagement in a pleasant setting. The tall light poles and the thatched-roof structure in the background contribute to the image's tropical and recreational vibe, reinforcing the idea of a leisurely day spent enjoying a sport in a beautiful, natural setting. The overall tone is positive, as the combination of natural beauty, bright lighting, and the activity of playing tennis creates a mood of vitality, joy, and connection with nature. The image effectively captures a moment of tranquility and happiness, making the viewer feel uplifted and inspired.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 214,
-            "total_tokens": 522
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8117.690128,
-            "prompt_eval_duration_ms": 74.426229,
-            "generation_duration_ms": 7999.948797,
-            "load_duration_ms": 40.822791,
-            "tokens_per_second": 26.750171211127064
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"A tennis player holding a racket, standing on a tennis court.\"\n    }\n  },\n  \"man-made\": {\n    \"tennis_court\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\", \"gray\"],\n      \"size\": \"large\",\n      \"description\": \"A tennis court with marked lines and a net.\"\n    },\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"A chain-link fence surrounding the tennis court.\"\n    },\n    \"light_pole\": {\n      \"count\": 2,\n      \"location\": \"center, middle\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Tall light poles with multiple fixtures.\"\n    },\n    \"thatched_roof_structure\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"A small structure with a thatched roof.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 4,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Tall palm trees in the background.\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top, middle\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"A clear sky with some scattered clouds.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "white",
-                  "black"
-                ],
-                "size": "medium",
-                "description": "A tennis player holding a racket, standing on a tennis court."
-              }
-            },
-            "man-made": {
-              "tennis_court": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "green",
-                  "gray"
-                ],
-                "size": "large",
-                "description": "A tennis court with marked lines and a net."
-              },
-              "fence": {
-                "count": 1,
-                "location": "left, middle",
-                "color": [
-                  "green"
-                ],
-                "size": "medium",
-                "description": "A chain-link fence surrounding the tennis court."
-              },
-              "light_pole": {
-                "count": 2,
-                "location": "center, middle",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "Tall light poles with multiple fixtures."
-              },
-              "thatched_roof_structure": {
-                "count": 1,
-                "location": "right, middle",
-                "color": [
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "A small structure with a thatched roof."
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 4,
-                "location": "center, middle",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "Tall palm trees in the background."
-              },
-              "sky": {
-                "count": 1,
-                "location": "top, middle",
-                "color": [
-                  "blue",
-                  "white"
-                ],
-                "size": "large",
-                "description": "A clear sky with some scattered clouds."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 407,
-            "total_tokens": 893
-          },
-          "performance_metrics": {
-            "total_duration_ms": 15287.742935,
-            "prompt_eval_duration_ms": 136.698969,
-            "generation_duration_ms": 15105.220992,
-            "load_duration_ms": 42.641903,
-            "tokens_per_second": 26.944326085368406
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3192,
-        "total_time_ms": 59557.568291,
-        "average_speed": 26.866962359043935
       }
     },
     {

@@ -7,6 +7,331 @@
   "timestamp": "2025-08-30T20:20:30.863440+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a scene of urban life, dominated by two red double-decker buses parked on a street in what appears to be a residential area. The buses, with their classic London design, stand out against the backdrop of a multi-story brick building with numerous windows, suggesting a dense urban environment. The street is marked with white and yellow lines, indicating parking and traffic regulations. Bare, leafless trees line the street, hinting at a winter or early spring setting. The sky is overcast, casting a diffused, soft light over the scene, which lacks strong shadows, indicating either a cloudy day or a time close to sunrise or sunset. The overall color palette is muted, with the red of the buses providing a stark contrast to the gray and brown tones of the buildings and the muted green of the trees. The composition is straightforward, with the buses positioned centrally, drawing the viewer's eye down the length of the street, creating a sense of depth and perspective.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 197,
+            "total_tokens": 494
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1519.096557,
+            "prompt_eval_duration_ms": 78.876902,
+            "generation_duration_ms": 1395.992483,
+            "load_duration_ms": 41.709374,
+            "tokens_per_second": 141.11823838524208
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, two red double-decker buses are prominently displayed, their vibrant color contrasting sharply with the muted tones of the surrounding environment. The buses, adorned with advertisements and the logo of \"Go Ahead,\" are parked along a street marked by double yellow lines, indicating a no-parking zone. The buses' large windows reflect the overcast sky above, suggesting a cloudy day. The tires and wheels of the buses are clearly visible, emphasizing their size and the urban setting.\n\nThe background features a multi-story residential building with a brick facade and numerous windows, some of which are covered with white blinds. Bare trees, devoid of leaves, stand in front of the building, their branches reaching out against the gray sky, hinting at the season being either late autumn or winter. The building and trees create a sense of depth, placing the buses in the immediate foreground and the residential area in the mid-ground, while the overcast sky forms the backdrop, unifying the scene with its uniform, gray hue. The relationship between the foreground and background elements is one of layered perspective, with the buses serving as a focal point that draws the viewer's eye towards the distant building and trees, creating a balanced composition that captures the essence of an urban environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 251,
+            "total_tokens": 554
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1870.747171,
+            "prompt_eval_duration_ms": 31.174445,
+            "generation_duration_ms": 1799.323462,
+            "load_duration_ms": 37.077453,
+            "tokens_per_second": 139.4968749648861
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, two red double-decker buses are parked on a street, their vibrant color contrasting with the muted tones of the surrounding environment. The buses are stationary, suggesting they are either waiting for passengers or have just completed a route. The street is marked with double yellow lines, indicating a no-parking zone, and the buses are parked neatly within this boundary. The background features a multi-story residential building with a brick facade and numerous windows, suggesting an urban setting. A leafless tree stands to the right of the buses, its branches bare against the overcast sky, hinting at a colder season. The buses are adorned with advertisements, adding a layer of urban life to the scene. There are no visible people or animals in the image, and the buses are the primary focus, interacting with the urban landscape through their presence and the implied activity of public transportation. The overall scene captures a quiet moment in a city, with the buses as the central elements in this urban tableau.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 199,
+            "total_tokens": 505
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1498.305371,
+            "prompt_eval_duration_ms": 31.110887,
+            "generation_duration_ms": 1425.373913,
+            "load_duration_ms": 39.270721,
+            "tokens_per_second": 139.61248917567357
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of everyday urban life, with a neutral to slightly positive tone. The red double-decker buses, iconic symbols of London, suggest a bustling city environment, which can be associated with the vibrancy and energy of urban life. The clear daylight and the absence of heavy traffic or crowds give a calm and orderly impression, which might make viewers feel a sense of routine and familiarity. The bare trees in the background suggest it might be late autumn or early spring, adding a touch of seasonal change that can evoke feelings of transition or anticipation. The clean lines of the road and the uniformity of the buses contribute to a feeling of order and structure, which can be comforting and reassuring. Overall, the image conveys a sense of calm and routine, with a subtle hint of the dynamic energy of city life, making it a neutral to slightly positive scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 176,
+            "total_tokens": 484
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1342.893507,
+            "prompt_eval_duration_ms": 30.722747,
+            "generation_duration_ms": 1271.559693,
+            "load_duration_ms": 36.885907,
+            "tokens_per_second": 138.4126918845327
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"bus\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"red\"],\n      \"size\": \"large\",\n      \"description\": \"double-decker red buses\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"brick building with multiple windows\"\n    },\n    \"streetlight\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"streetlight near the buses\"\n    },\n    \"road\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"asphalt road with double yellow lines\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"brown\", \"green\"],\n      \"size\": \"medium\",\n      \"description\": \"bare tree with no leaves\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "bus": {
+                "count": 2,
+                "location": "center",
+                "color": [
+                  "red"
+                ],
+                "size": "large",
+                "description": "double-decker red buses"
+              },
+              "building": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "brick building with multiple windows"
+              },
+              "streetlight": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "streetlight near the buses"
+              },
+              "road": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "asphalt road with double yellow lines"
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "brown",
+                  "green"
+                ],
+                "size": "medium",
+                "description": "bare tree with no leaves"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 258,
+            "total_tokens": 744
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1933.794983,
+            "prompt_eval_duration_ms": 45.435584,
+            "generation_duration_ms": 1846.119228,
+            "load_duration_ms": 39.473862,
+            "tokens_per_second": 139.75262057126463
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2781,
+        "total_time_ms": 8164.837589,
+        "average_speed": 139.67858299631982
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a street scene featuring two red double-decker buses, a hallmark of public transportation in cities like London. The setting appears to be an urban area, with a row of brick buildings lining the street in the background. The buildings have a traditional architectural style, with multiple windows and a somewhat aged appearance, suggesting a historic or established neighborhood. The street itself is paved with asphalt, marked by clear yellow double lines running down the center, indicating a no-parking or no-stopping zone.\n\nThe main elements of the image are the two red buses, which are prominently positioned in the foreground. The bus on the left is more visible, displaying a large advertisement on its side featuring a person in a dynamic pose, with the word \"ROOF\" prominently displayed. The bus on the right is partially obscured but still clearly identifiable as a red double-decker. Both buses have a classic design with yellow trim along the bottom and are parked or moving along the street.\n\nThe lighting in the image is soft and diffused, suggesting an overcast day with no direct sunlight. The sky is a muted gray, contributing to the subdued and somewhat somber atmosphere. The trees in the background are bare, indicating that the photo was likely taken during late autumn or winter. The overall composition is balanced, with the buses and buildings creating a sense of symmetry and order. The image captures a typical urban moment, emphasizing the iconic red buses and the architectural backdrop of the city.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 294,
+            "total_tokens": 591
+          },
+          "performance_metrics": {
+            "total_duration_ms": 14453.234049,
+            "prompt_eval_duration_ms": 3451.783791,
+            "generation_duration_ms": 10957.278508,
+            "load_duration_ms": 40.94817,
+            "tokens_per_second": 26.831480078319462
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image prominently features two red double-decker buses, which are the closest elements to the viewer. These buses are parked side by side on a paved road, with the bus on the left displaying a large advertisement on its side. The road surface is dark gray, marked with yellow double lines, indicating a no-parking or no-stopping zone. The buses are the focal point, drawing immediate attention due to their size, color, and placement.\n\nIn the background, the setting shifts to a residential area. A multi-story brick building with rows of windows and balconies lines the street, creating a sense of urban density. The building's architecture suggests a typical urban environment, possibly in a city like London, where red double-decker buses are iconic. Leafless trees are visible along the sidewalk, indicating a winter or early spring season. The sky is overcast, contributing to a muted, grayish tone that complements the urban setting.\n\nThe relationship between the foreground and background elements is one of contrast and context. The bright red buses stand out against the muted tones of the road and the gray sky, emphasizing their prominence. The background provides a sense of place, situating the buses within an urban residential area. The leafless trees and overcast sky add to the atmosphere, suggesting a typical day in a bustling city. Together, these elements create a cohesive scene that highlights the everyday urban landscape.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 285,
+            "total_tokens": 588
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10735.862857,
+            "prompt_eval_duration_ms": 75.922497,
+            "generation_duration_ms": 10617.025528,
+            "load_duration_ms": 39.778578,
+            "tokens_per_second": 26.843676625659143
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a street scene featuring two red double-decker buses, a common sight in urban areas, particularly in London. The buses are parked or moving along a road marked with yellow double lines, indicating a no-parking zone. The bus in the foreground has a large advertisement on its side, showing a person in a dynamic pose, possibly engaging in an athletic activity or a dramatic scene, suggesting a connection to sports or entertainment. The second bus is positioned slightly behind and to the right of the first, also red and double-decker, indicating they are part of the same fleet or service.\n\nIn the background, there is a row of brick buildings, likely residential or commercial, with visible windows and architectural details. The trees lining the street are bare, suggesting it is either late autumn or winter. The street itself is paved, and the overall atmosphere is urban and orderly.\n\nThere are no visible people or animals in the image, as the focus is on the buses and the surrounding environment. The buses appear to be in motion or stationary, but their interaction is limited to their positioning on the road. The advertisement on the first bus adds a dynamic element, implying movement and activity, even though the scene itself is static. The relationship between the buses and the environment is one of integration into the urban landscape, with the buses serving as a key element of public transportation infrastructure. The scene conveys a sense of routine and functionality, characteristic of a busy city street.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 294,
+            "total_tokens": 600
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11035.976171,
+            "prompt_eval_duration_ms": 73.801693,
+            "generation_duration_ms": 10919.15641,
+            "load_duration_ms": 40.138163,
+            "tokens_per_second": 26.925156940764072
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a scene with two red double-decker buses parked on a city street, set against a backdrop of a brick building and leafless trees. The mood conveyed by this image is neutral, leaning slightly toward a calm and orderly atmosphere. The red buses are iconic and visually striking, symbolizing a sense of familiarity and routine, which can evoke feelings of comfort and stability. The clear, overcast sky suggests a cool, possibly chilly day, adding a touch of quietness and introspection to the scene. The leafless trees contribute to a sense of stillness and the passage of time, hinting at the winter season, which can evoke a subdued or contemplative mood.\n\nThe overall tone is not particularly positive or negative but rather balanced and reflective. The orderly arrangement of the buses and the clean, well-maintained street suggest a sense of organization and normalcy, which can be reassuring. However, the absence of people and the bare trees might also hint at a sense of quietness or even loneliness, depending on the viewer's perspective. The image does not evoke strong emotions but rather a calm, everyday urban scene that is relatable and unassuming. The visual elements, such as the bright red buses and the stark contrast of the brick building, create a visually interesting yet emotionally neutral atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 263,
+            "total_tokens": 571
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9909.414817,
+            "prompt_eval_duration_ms": 72.145743,
+            "generation_duration_ms": 9795.853987,
+            "load_duration_ms": 38.78384,
+            "tokens_per_second": 26.848093116641515
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Silhouette visible through the bus window\"\n    }\n  },\n  \"man-made\": {\n    \"bus\": {\n      \"count\": 2,\n      \"location\": \"center, middle\",\n      \"color\": [\"red\", \"black\"],\n      \"size\": \"large\",\n      \"description\": \"Double-decker buses with advertisements\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"left, background\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Multi-story brick building\"\n    },\n    \"street\": {\n      \"count\": 1,\n      \"location\": \"center, foreground\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Paved road with yellow double lines\"\n    },\n    \"lamp post\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Street lamp\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"Leafless tree\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "black"
+                ],
+                "size": "medium",
+                "description": "Silhouette visible through the bus window"
+              }
+            },
+            "man-made": {
+              "bus": {
+                "count": 2,
+                "location": "center, middle",
+                "color": [
+                  "red",
+                  "black"
+                ],
+                "size": "large",
+                "description": "Double-decker buses with advertisements"
+              },
+              "building": {
+                "count": 1,
+                "location": "left, background",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "Multi-story brick building"
+              },
+              "street": {
+                "count": 1,
+                "location": "center, foreground",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "Paved road with yellow double lines"
+              },
+              "lamp post": {
+                "count": 1,
+                "location": "left, middle",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "Street lamp"
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "Leafless tree"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 320,
+            "total_tokens": 806
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12045.17803,
+            "prompt_eval_duration_ms": 138.495089,
+            "generation_duration_ms": 11865.426986,
+            "load_duration_ms": 38.201748,
+            "tokens_per_second": 26.969109529523678
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3156,
+        "total_time_ms": 58179.665924,
+        "average_speed": 26.883503258181577
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -519,331 +844,6 @@
         "total_tokens": 2965,
         "total_time_ms": 29175.640402,
         "average_speed": 41.90474543040873
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a scene of urban life, dominated by two red double-decker buses parked on a street in what appears to be a residential area. The buses, with their classic London design, stand out against the backdrop of a multi-story brick building with numerous windows, suggesting a dense urban environment. The street is marked with white and yellow lines, indicating parking and traffic regulations. Bare, leafless trees line the street, hinting at a winter or early spring setting. The sky is overcast, casting a diffused, soft light over the scene, which lacks strong shadows, indicating either a cloudy day or a time close to sunrise or sunset. The overall color palette is muted, with the red of the buses providing a stark contrast to the gray and brown tones of the buildings and the muted green of the trees. The composition is straightforward, with the buses positioned centrally, drawing the viewer's eye down the length of the street, creating a sense of depth and perspective.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 197,
-            "total_tokens": 494
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1519.096557,
-            "prompt_eval_duration_ms": 78.876902,
-            "generation_duration_ms": 1395.992483,
-            "load_duration_ms": 41.709374,
-            "tokens_per_second": 141.11823838524208
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, two red double-decker buses are prominently displayed, their vibrant color contrasting sharply with the muted tones of the surrounding environment. The buses, adorned with advertisements and the logo of \"Go Ahead,\" are parked along a street marked by double yellow lines, indicating a no-parking zone. The buses' large windows reflect the overcast sky above, suggesting a cloudy day. The tires and wheels of the buses are clearly visible, emphasizing their size and the urban setting.\n\nThe background features a multi-story residential building with a brick facade and numerous windows, some of which are covered with white blinds. Bare trees, devoid of leaves, stand in front of the building, their branches reaching out against the gray sky, hinting at the season being either late autumn or winter. The building and trees create a sense of depth, placing the buses in the immediate foreground and the residential area in the mid-ground, while the overcast sky forms the backdrop, unifying the scene with its uniform, gray hue. The relationship between the foreground and background elements is one of layered perspective, with the buses serving as a focal point that draws the viewer's eye towards the distant building and trees, creating a balanced composition that captures the essence of an urban environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 251,
-            "total_tokens": 554
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1870.747171,
-            "prompt_eval_duration_ms": 31.174445,
-            "generation_duration_ms": 1799.323462,
-            "load_duration_ms": 37.077453,
-            "tokens_per_second": 139.4968749648861
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, two red double-decker buses are parked on a street, their vibrant color contrasting with the muted tones of the surrounding environment. The buses are stationary, suggesting they are either waiting for passengers or have just completed a route. The street is marked with double yellow lines, indicating a no-parking zone, and the buses are parked neatly within this boundary. The background features a multi-story residential building with a brick facade and numerous windows, suggesting an urban setting. A leafless tree stands to the right of the buses, its branches bare against the overcast sky, hinting at a colder season. The buses are adorned with advertisements, adding a layer of urban life to the scene. There are no visible people or animals in the image, and the buses are the primary focus, interacting with the urban landscape through their presence and the implied activity of public transportation. The overall scene captures a quiet moment in a city, with the buses as the central elements in this urban tableau.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 199,
-            "total_tokens": 505
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1498.305371,
-            "prompt_eval_duration_ms": 31.110887,
-            "generation_duration_ms": 1425.373913,
-            "load_duration_ms": 39.270721,
-            "tokens_per_second": 139.61248917567357
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of everyday urban life, with a neutral to slightly positive tone. The red double-decker buses, iconic symbols of London, suggest a bustling city environment, which can be associated with the vibrancy and energy of urban life. The clear daylight and the absence of heavy traffic or crowds give a calm and orderly impression, which might make viewers feel a sense of routine and familiarity. The bare trees in the background suggest it might be late autumn or early spring, adding a touch of seasonal change that can evoke feelings of transition or anticipation. The clean lines of the road and the uniformity of the buses contribute to a feeling of order and structure, which can be comforting and reassuring. Overall, the image conveys a sense of calm and routine, with a subtle hint of the dynamic energy of city life, making it a neutral to slightly positive scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 176,
-            "total_tokens": 484
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1342.893507,
-            "prompt_eval_duration_ms": 30.722747,
-            "generation_duration_ms": 1271.559693,
-            "load_duration_ms": 36.885907,
-            "tokens_per_second": 138.4126918845327
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"bus\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"red\"],\n      \"size\": \"large\",\n      \"description\": \"double-decker red buses\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"brick building with multiple windows\"\n    },\n    \"streetlight\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"streetlight near the buses\"\n    },\n    \"road\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"asphalt road with double yellow lines\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"brown\", \"green\"],\n      \"size\": \"medium\",\n      \"description\": \"bare tree with no leaves\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "bus": {
-                "count": 2,
-                "location": "center",
-                "color": [
-                  "red"
-                ],
-                "size": "large",
-                "description": "double-decker red buses"
-              },
-              "building": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "brick building with multiple windows"
-              },
-              "streetlight": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "streetlight near the buses"
-              },
-              "road": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "asphalt road with double yellow lines"
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "brown",
-                  "green"
-                ],
-                "size": "medium",
-                "description": "bare tree with no leaves"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 258,
-            "total_tokens": 744
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1933.794983,
-            "prompt_eval_duration_ms": 45.435584,
-            "generation_duration_ms": 1846.119228,
-            "load_duration_ms": 39.473862,
-            "tokens_per_second": 139.75262057126463
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2781,
-        "total_time_ms": 8164.837589,
-        "average_speed": 139.67858299631982
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a street scene featuring two red double-decker buses, a hallmark of public transportation in cities like London. The setting appears to be an urban area, with a row of brick buildings lining the street in the background. The buildings have a traditional architectural style, with multiple windows and a somewhat aged appearance, suggesting a historic or established neighborhood. The street itself is paved with asphalt, marked by clear yellow double lines running down the center, indicating a no-parking or no-stopping zone.\n\nThe main elements of the image are the two red buses, which are prominently positioned in the foreground. The bus on the left is more visible, displaying a large advertisement on its side featuring a person in a dynamic pose, with the word \"ROOF\" prominently displayed. The bus on the right is partially obscured but still clearly identifiable as a red double-decker. Both buses have a classic design with yellow trim along the bottom and are parked or moving along the street.\n\nThe lighting in the image is soft and diffused, suggesting an overcast day with no direct sunlight. The sky is a muted gray, contributing to the subdued and somewhat somber atmosphere. The trees in the background are bare, indicating that the photo was likely taken during late autumn or winter. The overall composition is balanced, with the buses and buildings creating a sense of symmetry and order. The image captures a typical urban moment, emphasizing the iconic red buses and the architectural backdrop of the city.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 294,
-            "total_tokens": 591
-          },
-          "performance_metrics": {
-            "total_duration_ms": 14453.234049,
-            "prompt_eval_duration_ms": 3451.783791,
-            "generation_duration_ms": 10957.278508,
-            "load_duration_ms": 40.94817,
-            "tokens_per_second": 26.831480078319462
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image prominently features two red double-decker buses, which are the closest elements to the viewer. These buses are parked side by side on a paved road, with the bus on the left displaying a large advertisement on its side. The road surface is dark gray, marked with yellow double lines, indicating a no-parking or no-stopping zone. The buses are the focal point, drawing immediate attention due to their size, color, and placement.\n\nIn the background, the setting shifts to a residential area. A multi-story brick building with rows of windows and balconies lines the street, creating a sense of urban density. The building's architecture suggests a typical urban environment, possibly in a city like London, where red double-decker buses are iconic. Leafless trees are visible along the sidewalk, indicating a winter or early spring season. The sky is overcast, contributing to a muted, grayish tone that complements the urban setting.\n\nThe relationship between the foreground and background elements is one of contrast and context. The bright red buses stand out against the muted tones of the road and the gray sky, emphasizing their prominence. The background provides a sense of place, situating the buses within an urban residential area. The leafless trees and overcast sky add to the atmosphere, suggesting a typical day in a bustling city. Together, these elements create a cohesive scene that highlights the everyday urban landscape.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 285,
-            "total_tokens": 588
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10735.862857,
-            "prompt_eval_duration_ms": 75.922497,
-            "generation_duration_ms": 10617.025528,
-            "load_duration_ms": 39.778578,
-            "tokens_per_second": 26.843676625659143
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a street scene featuring two red double-decker buses, a common sight in urban areas, particularly in London. The buses are parked or moving along a road marked with yellow double lines, indicating a no-parking zone. The bus in the foreground has a large advertisement on its side, showing a person in a dynamic pose, possibly engaging in an athletic activity or a dramatic scene, suggesting a connection to sports or entertainment. The second bus is positioned slightly behind and to the right of the first, also red and double-decker, indicating they are part of the same fleet or service.\n\nIn the background, there is a row of brick buildings, likely residential or commercial, with visible windows and architectural details. The trees lining the street are bare, suggesting it is either late autumn or winter. The street itself is paved, and the overall atmosphere is urban and orderly.\n\nThere are no visible people or animals in the image, as the focus is on the buses and the surrounding environment. The buses appear to be in motion or stationary, but their interaction is limited to their positioning on the road. The advertisement on the first bus adds a dynamic element, implying movement and activity, even though the scene itself is static. The relationship between the buses and the environment is one of integration into the urban landscape, with the buses serving as a key element of public transportation infrastructure. The scene conveys a sense of routine and functionality, characteristic of a busy city street.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 294,
-            "total_tokens": 600
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11035.976171,
-            "prompt_eval_duration_ms": 73.801693,
-            "generation_duration_ms": 10919.15641,
-            "load_duration_ms": 40.138163,
-            "tokens_per_second": 26.925156940764072
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a scene with two red double-decker buses parked on a city street, set against a backdrop of a brick building and leafless trees. The mood conveyed by this image is neutral, leaning slightly toward a calm and orderly atmosphere. The red buses are iconic and visually striking, symbolizing a sense of familiarity and routine, which can evoke feelings of comfort and stability. The clear, overcast sky suggests a cool, possibly chilly day, adding a touch of quietness and introspection to the scene. The leafless trees contribute to a sense of stillness and the passage of time, hinting at the winter season, which can evoke a subdued or contemplative mood.\n\nThe overall tone is not particularly positive or negative but rather balanced and reflective. The orderly arrangement of the buses and the clean, well-maintained street suggest a sense of organization and normalcy, which can be reassuring. However, the absence of people and the bare trees might also hint at a sense of quietness or even loneliness, depending on the viewer's perspective. The image does not evoke strong emotions but rather a calm, everyday urban scene that is relatable and unassuming. The visual elements, such as the bright red buses and the stark contrast of the brick building, create a visually interesting yet emotionally neutral atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 263,
-            "total_tokens": 571
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9909.414817,
-            "prompt_eval_duration_ms": 72.145743,
-            "generation_duration_ms": 9795.853987,
-            "load_duration_ms": 38.78384,
-            "tokens_per_second": 26.848093116641515
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Silhouette visible through the bus window\"\n    }\n  },\n  \"man-made\": {\n    \"bus\": {\n      \"count\": 2,\n      \"location\": \"center, middle\",\n      \"color\": [\"red\", \"black\"],\n      \"size\": \"large\",\n      \"description\": \"Double-decker buses with advertisements\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"left, background\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Multi-story brick building\"\n    },\n    \"street\": {\n      \"count\": 1,\n      \"location\": \"center, foreground\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Paved road with yellow double lines\"\n    },\n    \"lamp post\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Street lamp\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"Leafless tree\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "black"
-                ],
-                "size": "medium",
-                "description": "Silhouette visible through the bus window"
-              }
-            },
-            "man-made": {
-              "bus": {
-                "count": 2,
-                "location": "center, middle",
-                "color": [
-                  "red",
-                  "black"
-                ],
-                "size": "large",
-                "description": "Double-decker buses with advertisements"
-              },
-              "building": {
-                "count": 1,
-                "location": "left, background",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "Multi-story brick building"
-              },
-              "street": {
-                "count": 1,
-                "location": "center, foreground",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "Paved road with yellow double lines"
-              },
-              "lamp post": {
-                "count": 1,
-                "location": "left, middle",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "Street lamp"
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "Leafless tree"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 320,
-            "total_tokens": 806
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12045.17803,
-            "prompt_eval_duration_ms": 138.495089,
-            "generation_duration_ms": 11865.426986,
-            "load_duration_ms": 38.201748,
-            "tokens_per_second": 26.969109529523678
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3156,
-        "total_time_ms": 58179.665924,
-        "average_speed": 26.883503258181577
       }
     },
     {

@@ -7,6 +7,325 @@
   "timestamp": "2025-08-30T17:49:45.584626+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a classic steam locomotive, painted in a striking black with bold red accents on the wheels and front bumper, set against a backdrop of a bright, partly cloudy sky. The train, likely a vintage model given its design and the steam visibly billowing from its smokestack, is positioned on a set of railway tracks that run parallel to a lush, green landscape. The tracks are bordered by gravel, adding a rustic touch to the scene. The lighting is natural, suggesting a daytime setting with soft, diffused sunlight enhancing the details of the train's intricate mechanical features. The composition is balanced, with the locomotive dominating the foreground, while the open sky and hints of greenery in the background provide a sense of depth and space. The overall impression is one of nostalgia and the timeless appeal of steam-powered transportation.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 167,
+            "total_tokens": 464
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1315.27467,
+            "prompt_eval_duration_ms": 81.851945,
+            "generation_duration_ms": 1191.088185,
+            "load_duration_ms": 39.985775,
+            "tokens_per_second": 140.2079225561288
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, the viewer is presented with a detailed view of a classic steam locomotive, its black body gleaming under the sunlight, accented by vibrant red trim and wheels. The intricate details of the engine, including the prominent smokestack and the gleaming brass fittings, suggest a well-maintained and historically significant piece of machinery. The locomotive is positioned on a set of railway tracks, which run parallel to each other, leading the eye towards the background. The gravel and the tracks themselves are a muted brown, providing a stark contrast to the locomotive's dark and bright colors. \n\nIn the background, the setting is a lush, green landscape under a bright blue sky dotted with fluffy white clouds. Trees with vibrant green foliage frame the scene, adding depth and a sense of tranquility. This natural backdrop contrasts beautifully with the industrial foreground, creating a harmonious blend of nature and technology. The background elements, including the sky and trees, appear slightly blurred, which helps to emphasize the locomotive as the focal point of the image, while still providing a sense of the environment in which the train operates. The relationship between the foreground and background is one of juxtaposition, where the mechanical and the natural coexist, each enhancing the other's presence in the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 258,
+            "total_tokens": 561
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1938.191107,
+            "prompt_eval_duration_ms": 30.900214,
+            "generation_duration_ms": 1867.170386,
+            "load_duration_ms": 37.601357,
+            "tokens_per_second": 138.1769987005353
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a vintage steam locomotive, painted in a striking black and red color scheme, is the focal point, emitting a plume of white steam from its smokestack as it moves along the tracks. The locomotive, a classic example of early 20th-century engineering, stands out against the backdrop of a partly cloudy sky and lush green trees, suggesting a serene, possibly rural setting. The train appears to be in motion, as indicated by the slight blur of its wheels and the steam rising from the engine. There are no visible people or animals in the image, and the train itself is the only object, interacting solely with the environment through its movement along the tracks and the release of steam. The absence of people and animals emphasizes the train's solitary journey, highlighting its historical and mechanical significance in the context of transportation and industrial history.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 173,
+            "total_tokens": 479
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1332.712244,
+            "prompt_eval_duration_ms": 30.231605,
+            "generation_duration_ms": 1259.966982,
+            "load_duration_ms": 39.306951,
+            "tokens_per_second": 137.30518535127774
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of nostalgia and a touch of romance, primarily due to the classic steam locomotive that dominates the scene. The black and red color scheme of the train, coupled with the intricate details of its design, suggests a bygone era of grandeur and technological marvel. The steam rising from the locomotive's smokestack adds a dynamic element, hinting at the power and energy of the past. The clear blue sky and the lush greenery in the background contribute to a serene and peaceful atmosphere, contrasting with the mechanical might of the train. This juxtaposition of nature and technology can evoke feelings of wonder and a longing for simpler times. The overall tone is positive, as the image captures a moment of beauty and historical significance, inviting viewers to reflect on the progress of human innovation while appreciating the timeless elegance of such a magnificent machine.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 173,
+            "total_tokens": 481
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1329.073288,
+            "prompt_eval_duration_ms": 30.391054,
+            "generation_duration_ms": 1258.371363,
+            "load_duration_ms": 37.826841,
+            "tokens_per_second": 137.47928877494647
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"train\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"red\"],\n      \"size\": \"large\",\n      \"description\": \"a steam locomotive with smoke coming out of the chimney\"\n    },\n    \"tracks\": {\n      \"count\": 2,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\", \"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"railroad tracks with gravel between them\"\n    },\n    \"carriages\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"black\", \"red\", \"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"a passenger carriage attached to the train\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"a partly cloudy sky\"\n    },\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"a tree with green leaves\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "train": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black",
+                  "red"
+                ],
+                "size": "large",
+                "description": "a steam locomotive with smoke coming out of the chimney"
+              },
+              "tracks": {
+                "count": 2,
+                "location": "bottom",
+                "color": [
+                  "brown",
+                  "gray"
+                ],
+                "size": "medium",
+                "description": "railroad tracks with gravel between them"
+              },
+              "carriages": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "black",
+                  "red",
+                  "yellow"
+                ],
+                "size": "small",
+                "description": "a passenger carriage attached to the train"
+              }
+            },
+            "natural": {
+              "sky": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "blue",
+                  "white"
+                ],
+                "size": "large",
+                "description": "a partly cloudy sky"
+              },
+              "trees": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "green"
+                ],
+                "size": "small",
+                "description": "a tree with green leaves"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 277,
+            "total_tokens": 763
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2080.425146,
+            "prompt_eval_duration_ms": 44.641128,
+            "generation_duration_ms": 1993.874748,
+            "load_duration_ms": 38.399976,
+            "tokens_per_second": 138.92547677724036
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2748,
+        "total_time_ms": 7995.676455000001,
+        "average_speed": 138.41897443202575
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a classic steam locomotive, likely from the early to mid-20th century, traveling along a set of railroad tracks. The setting appears to be a rural or semi-rural area, as evidenced by the presence of green trees and grass in the background, suggesting a countryside or park-like environment. The sky is bright and mostly clear, with a few scattered white clouds, indicating a sunny day with good lighting.\n\nThe main element of the image is the steam locomotive, which is painted in a striking black color with red accents on the wheels and front cowcatcher. The locomotive's design features a prominent black smokestack emitting a small plume of white steam, adding a dynamic element to the scene. The front of the train is equipped with a red cowcatcher, designed to clear obstacles from the tracks. The locomotive is pulling a series of passenger cars, which are partially visible in the background, painted in a mix of dark and light colors, including yellow and green.\n\nThe lighting is natural and bright, casting soft shadows beneath the train and highlighting the reflective surfaces of the locomotive's metal components. The overall composition is balanced, with the train positioned slightly off-center, creating a sense of movement and direction as it travels from left to right. The tracks in the foreground lead the viewer's eye toward the train, emphasizing its journey and the scenic surroundings. The combination of the vintage train, natural setting, and bright lighting creates a nostalgic and picturesque atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 301,
+            "total_tokens": 598
+          },
+          "performance_metrics": {
+            "total_duration_ms": 14740.948989,
+            "prompt_eval_duration_ms": 3516.113619,
+            "generation_duration_ms": 11179.380092,
+            "load_duration_ms": 40.81244,
+            "tokens_per_second": 26.924569835083837
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image prominently features a vintage steam locomotive, painted in a striking black with red accents on the wheels and front cowcatcher. The locomotive's intricate details, such as the smokestack, headlight, and multiple wheels, are clearly visible, emphasizing its robust and historic design. The red cowcatcher at the front stands out, contrasting sharply against the black body of the train. The train is positioned on a set of railway tracks, which are composed of wooden sleepers and metal rails, grounding the scene in a classic railway setting.\n\nIn the background, the setting transitions to a more natural and serene environment. The sky is a bright blue with scattered white clouds, suggesting a clear, sunny day. Trees with lush green foliage are visible, framing the train and adding depth to the scene. The contrast between the industrial train and the natural surroundings creates a harmonious blend of human engineering and nature. The railway tracks extend into the distance, leading the viewer's eye towards the horizon where the sky meets the trees, reinforcing the sense of depth and perspective.\n\nThe relationship between the foreground and background elements is one of juxtaposition and balance. The industrial steam locomotive, a symbol of human innovation, is set against the tranquil backdrop of nature, highlighting the coexistence of technology and the environment. The railway tracks act as a visual bridge, connecting the man-made structure of the train to the natural world, creating a cohesive and visually appealing composition. The overall scene evokes a sense of nostalgia and appreciation for both the engineering marvel of the steam engine and the beauty of the natural landscape.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 322,
+            "total_tokens": 625
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12115.742211,
+            "prompt_eval_duration_ms": 78.022862,
+            "generation_duration_ms": 11996.26216,
+            "load_duration_ms": 38.962853,
+            "tokens_per_second": 26.841694163175905
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a classic steam locomotive traveling along a set of railway tracks under a bright, partly cloudy sky. The train is the central focus, showcasing a black engine with red accents, including the wheels and front cowcatcher. The cowcatcher, a red metal plate at the front, is designed to clear obstacles from the tracks. Steam is visibly emanating from the locomotive, indicating it is in operation, suggesting the train is either moving or preparing to move. The train is pulling a series of passenger cars, which are painted in a traditional yellow and green livery, typical of vintage railway designs.\n\nIn the background, there are trees and greenery, indicating the train is traveling through a rural or semi-rural area. The sky is clear with scattered clouds, adding to the serene and nostalgic atmosphere of the scene. There are no visible people or animals in the image, focusing entirely on the train and its surroundings. The interaction between the elements is primarily mechanical and environmental: the train moves along the tracks, interacting with the landscape as it travels. The steam and the motion of the wheels suggest the train is functioning as intended, highlighting the connection between the mechanical marvel of the steam engine and the natural setting it traverses. The image evokes a sense of history and the romance of early rail travel.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 266,
+            "total_tokens": 572
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10029.905706,
+            "prompt_eval_duration_ms": 75.404118,
+            "generation_duration_ms": 9913.867931,
+            "load_duration_ms": 37.693776,
+            "tokens_per_second": 26.831101831429066
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image of the steam locomotive evokes a nostalgic and somewhat romantic mood, blending elements of history, adventure, and a sense of timeless charm. The overall tone is positive, as the bright blue sky and scattered clouds create a cheerful and open atmosphere, suggesting a day filled with possibility and exploration. The locomotive itself, with its polished black body and vibrant red accents, exudes a sense of power and elegance, symbolizing the industrial age's grandeur and the excitement of travel. The steam rising from the engine adds a dynamic, almost alive quality, hinting at movement and progress. The surrounding greenery and trees provide a natural contrast to the mechanical marvel, creating a harmonious balance between nature and technology. The red cowcatcher at the front of the train adds a touch of boldness and adventure, further enhancing the feeling of an exciting journey. The image does not convey any negative emotions; instead, it inspires a sense of wonder, curiosity, and a longing for simpler, more adventurous times. The visual elements of the train, the sky, and the natural surroundings work together to create an atmosphere of optimism and nostalgia.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 229,
+            "total_tokens": 537
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8666.504662,
+            "prompt_eval_duration_ms": 73.841922,
+            "generation_duration_ms": 8548.221767,
+            "load_duration_ms": 41.477387,
+            "tokens_per_second": 26.78919736079421
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"train\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"red\"],\n      \"size\": \"large\",\n      \"description\": \"Steam locomotive with red wheels and a red cowcatcher\"\n    },\n    \"railway tracks\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"Metal train tracks with gravel ballast\"\n    },\n    \"train cars\": {\n      \"count\": 2,\n      \"location\": \"left\",\n      \"color\": [\"yellow\", \"green\"],\n      \"size\": \"medium\",\n      \"description\": \"Passenger cars attached to the locomotive\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"Clear sky with scattered white clouds\"\n    },\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"Lush green trees in the background\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "train": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black",
+                  "red"
+                ],
+                "size": "large",
+                "description": "Steam locomotive with red wheels and a red cowcatcher"
+              },
+              "railway tracks": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "Metal train tracks with gravel ballast"
+              },
+              "train cars": {
+                "count": 2,
+                "location": "left",
+                "color": [
+                  "yellow",
+                  "green"
+                ],
+                "size": "medium",
+                "description": "Passenger cars attached to the locomotive"
+              }
+            },
+            "natural": {
+              "sky": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "Clear sky with scattered white clouds"
+              },
+              "trees": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "green"
+                ],
+                "size": "medium",
+                "description": "Lush green trees in the background"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 276,
+            "total_tokens": 762
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10397.187692,
+            "prompt_eval_duration_ms": 135.974077,
+            "generation_duration_ms": 10220.217614,
+            "load_duration_ms": 38.417115,
+            "tokens_per_second": 27.00529581893891
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3094,
+        "total_time_ms": 55950.28926,
+        "average_speed": 26.878371801884384
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -479,325 +798,6 @@
         "total_tokens": 2762,
         "total_time_ms": 24065.162908000002,
         "average_speed": 42.408196920337126
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a classic steam locomotive, painted in a striking black with bold red accents on the wheels and front bumper, set against a backdrop of a bright, partly cloudy sky. The train, likely a vintage model given its design and the steam visibly billowing from its smokestack, is positioned on a set of railway tracks that run parallel to a lush, green landscape. The tracks are bordered by gravel, adding a rustic touch to the scene. The lighting is natural, suggesting a daytime setting with soft, diffused sunlight enhancing the details of the train's intricate mechanical features. The composition is balanced, with the locomotive dominating the foreground, while the open sky and hints of greenery in the background provide a sense of depth and space. The overall impression is one of nostalgia and the timeless appeal of steam-powered transportation.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 167,
-            "total_tokens": 464
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1315.27467,
-            "prompt_eval_duration_ms": 81.851945,
-            "generation_duration_ms": 1191.088185,
-            "load_duration_ms": 39.985775,
-            "tokens_per_second": 140.2079225561288
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, the viewer is presented with a detailed view of a classic steam locomotive, its black body gleaming under the sunlight, accented by vibrant red trim and wheels. The intricate details of the engine, including the prominent smokestack and the gleaming brass fittings, suggest a well-maintained and historically significant piece of machinery. The locomotive is positioned on a set of railway tracks, which run parallel to each other, leading the eye towards the background. The gravel and the tracks themselves are a muted brown, providing a stark contrast to the locomotive's dark and bright colors. \n\nIn the background, the setting is a lush, green landscape under a bright blue sky dotted with fluffy white clouds. Trees with vibrant green foliage frame the scene, adding depth and a sense of tranquility. This natural backdrop contrasts beautifully with the industrial foreground, creating a harmonious blend of nature and technology. The background elements, including the sky and trees, appear slightly blurred, which helps to emphasize the locomotive as the focal point of the image, while still providing a sense of the environment in which the train operates. The relationship between the foreground and background is one of juxtaposition, where the mechanical and the natural coexist, each enhancing the other's presence in the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 258,
-            "total_tokens": 561
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1938.191107,
-            "prompt_eval_duration_ms": 30.900214,
-            "generation_duration_ms": 1867.170386,
-            "load_duration_ms": 37.601357,
-            "tokens_per_second": 138.1769987005353
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a vintage steam locomotive, painted in a striking black and red color scheme, is the focal point, emitting a plume of white steam from its smokestack as it moves along the tracks. The locomotive, a classic example of early 20th-century engineering, stands out against the backdrop of a partly cloudy sky and lush green trees, suggesting a serene, possibly rural setting. The train appears to be in motion, as indicated by the slight blur of its wheels and the steam rising from the engine. There are no visible people or animals in the image, and the train itself is the only object, interacting solely with the environment through its movement along the tracks and the release of steam. The absence of people and animals emphasizes the train's solitary journey, highlighting its historical and mechanical significance in the context of transportation and industrial history.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 173,
-            "total_tokens": 479
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1332.712244,
-            "prompt_eval_duration_ms": 30.231605,
-            "generation_duration_ms": 1259.966982,
-            "load_duration_ms": 39.306951,
-            "tokens_per_second": 137.30518535127774
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of nostalgia and a touch of romance, primarily due to the classic steam locomotive that dominates the scene. The black and red color scheme of the train, coupled with the intricate details of its design, suggests a bygone era of grandeur and technological marvel. The steam rising from the locomotive's smokestack adds a dynamic element, hinting at the power and energy of the past. The clear blue sky and the lush greenery in the background contribute to a serene and peaceful atmosphere, contrasting with the mechanical might of the train. This juxtaposition of nature and technology can evoke feelings of wonder and a longing for simpler times. The overall tone is positive, as the image captures a moment of beauty and historical significance, inviting viewers to reflect on the progress of human innovation while appreciating the timeless elegance of such a magnificent machine.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 173,
-            "total_tokens": 481
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1329.073288,
-            "prompt_eval_duration_ms": 30.391054,
-            "generation_duration_ms": 1258.371363,
-            "load_duration_ms": 37.826841,
-            "tokens_per_second": 137.47928877494647
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"train\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"red\"],\n      \"size\": \"large\",\n      \"description\": \"a steam locomotive with smoke coming out of the chimney\"\n    },\n    \"tracks\": {\n      \"count\": 2,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\", \"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"railroad tracks with gravel between them\"\n    },\n    \"carriages\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"black\", \"red\", \"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"a passenger carriage attached to the train\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"a partly cloudy sky\"\n    },\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"a tree with green leaves\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "train": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black",
-                  "red"
-                ],
-                "size": "large",
-                "description": "a steam locomotive with smoke coming out of the chimney"
-              },
-              "tracks": {
-                "count": 2,
-                "location": "bottom",
-                "color": [
-                  "brown",
-                  "gray"
-                ],
-                "size": "medium",
-                "description": "railroad tracks with gravel between them"
-              },
-              "carriages": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "black",
-                  "red",
-                  "yellow"
-                ],
-                "size": "small",
-                "description": "a passenger carriage attached to the train"
-              }
-            },
-            "natural": {
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "blue",
-                  "white"
-                ],
-                "size": "large",
-                "description": "a partly cloudy sky"
-              },
-              "trees": {
-                "count": 1,
-                "location": "right",
-                "color": [
-                  "green"
-                ],
-                "size": "small",
-                "description": "a tree with green leaves"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 277,
-            "total_tokens": 763
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2080.425146,
-            "prompt_eval_duration_ms": 44.641128,
-            "generation_duration_ms": 1993.874748,
-            "load_duration_ms": 38.399976,
-            "tokens_per_second": 138.92547677724036
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2748,
-        "total_time_ms": 7995.676455000001,
-        "average_speed": 138.41897443202575
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a classic steam locomotive, likely from the early to mid-20th century, traveling along a set of railroad tracks. The setting appears to be a rural or semi-rural area, as evidenced by the presence of green trees and grass in the background, suggesting a countryside or park-like environment. The sky is bright and mostly clear, with a few scattered white clouds, indicating a sunny day with good lighting.\n\nThe main element of the image is the steam locomotive, which is painted in a striking black color with red accents on the wheels and front cowcatcher. The locomotive's design features a prominent black smokestack emitting a small plume of white steam, adding a dynamic element to the scene. The front of the train is equipped with a red cowcatcher, designed to clear obstacles from the tracks. The locomotive is pulling a series of passenger cars, which are partially visible in the background, painted in a mix of dark and light colors, including yellow and green.\n\nThe lighting is natural and bright, casting soft shadows beneath the train and highlighting the reflective surfaces of the locomotive's metal components. The overall composition is balanced, with the train positioned slightly off-center, creating a sense of movement and direction as it travels from left to right. The tracks in the foreground lead the viewer's eye toward the train, emphasizing its journey and the scenic surroundings. The combination of the vintage train, natural setting, and bright lighting creates a nostalgic and picturesque atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 301,
-            "total_tokens": 598
-          },
-          "performance_metrics": {
-            "total_duration_ms": 14740.948989,
-            "prompt_eval_duration_ms": 3516.113619,
-            "generation_duration_ms": 11179.380092,
-            "load_duration_ms": 40.81244,
-            "tokens_per_second": 26.924569835083837
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image prominently features a vintage steam locomotive, painted in a striking black with red accents on the wheels and front cowcatcher. The locomotive's intricate details, such as the smokestack, headlight, and multiple wheels, are clearly visible, emphasizing its robust and historic design. The red cowcatcher at the front stands out, contrasting sharply against the black body of the train. The train is positioned on a set of railway tracks, which are composed of wooden sleepers and metal rails, grounding the scene in a classic railway setting.\n\nIn the background, the setting transitions to a more natural and serene environment. The sky is a bright blue with scattered white clouds, suggesting a clear, sunny day. Trees with lush green foliage are visible, framing the train and adding depth to the scene. The contrast between the industrial train and the natural surroundings creates a harmonious blend of human engineering and nature. The railway tracks extend into the distance, leading the viewer's eye towards the horizon where the sky meets the trees, reinforcing the sense of depth and perspective.\n\nThe relationship between the foreground and background elements is one of juxtaposition and balance. The industrial steam locomotive, a symbol of human innovation, is set against the tranquil backdrop of nature, highlighting the coexistence of technology and the environment. The railway tracks act as a visual bridge, connecting the man-made structure of the train to the natural world, creating a cohesive and visually appealing composition. The overall scene evokes a sense of nostalgia and appreciation for both the engineering marvel of the steam engine and the beauty of the natural landscape.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 322,
-            "total_tokens": 625
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12115.742211,
-            "prompt_eval_duration_ms": 78.022862,
-            "generation_duration_ms": 11996.26216,
-            "load_duration_ms": 38.962853,
-            "tokens_per_second": 26.841694163175905
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a classic steam locomotive traveling along a set of railway tracks under a bright, partly cloudy sky. The train is the central focus, showcasing a black engine with red accents, including the wheels and front cowcatcher. The cowcatcher, a red metal plate at the front, is designed to clear obstacles from the tracks. Steam is visibly emanating from the locomotive, indicating it is in operation, suggesting the train is either moving or preparing to move. The train is pulling a series of passenger cars, which are painted in a traditional yellow and green livery, typical of vintage railway designs.\n\nIn the background, there are trees and greenery, indicating the train is traveling through a rural or semi-rural area. The sky is clear with scattered clouds, adding to the serene and nostalgic atmosphere of the scene. There are no visible people or animals in the image, focusing entirely on the train and its surroundings. The interaction between the elements is primarily mechanical and environmental: the train moves along the tracks, interacting with the landscape as it travels. The steam and the motion of the wheels suggest the train is functioning as intended, highlighting the connection between the mechanical marvel of the steam engine and the natural setting it traverses. The image evokes a sense of history and the romance of early rail travel.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 266,
-            "total_tokens": 572
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10029.905706,
-            "prompt_eval_duration_ms": 75.404118,
-            "generation_duration_ms": 9913.867931,
-            "load_duration_ms": 37.693776,
-            "tokens_per_second": 26.831101831429066
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image of the steam locomotive evokes a nostalgic and somewhat romantic mood, blending elements of history, adventure, and a sense of timeless charm. The overall tone is positive, as the bright blue sky and scattered clouds create a cheerful and open atmosphere, suggesting a day filled with possibility and exploration. The locomotive itself, with its polished black body and vibrant red accents, exudes a sense of power and elegance, symbolizing the industrial age's grandeur and the excitement of travel. The steam rising from the engine adds a dynamic, almost alive quality, hinting at movement and progress. The surrounding greenery and trees provide a natural contrast to the mechanical marvel, creating a harmonious balance between nature and technology. The red cowcatcher at the front of the train adds a touch of boldness and adventure, further enhancing the feeling of an exciting journey. The image does not convey any negative emotions; instead, it inspires a sense of wonder, curiosity, and a longing for simpler, more adventurous times. The visual elements of the train, the sky, and the natural surroundings work together to create an atmosphere of optimism and nostalgia.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 229,
-            "total_tokens": 537
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8666.504662,
-            "prompt_eval_duration_ms": 73.841922,
-            "generation_duration_ms": 8548.221767,
-            "load_duration_ms": 41.477387,
-            "tokens_per_second": 26.78919736079421
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"train\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"red\"],\n      \"size\": \"large\",\n      \"description\": \"Steam locomotive with red wheels and a red cowcatcher\"\n    },\n    \"railway tracks\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"Metal train tracks with gravel ballast\"\n    },\n    \"train cars\": {\n      \"count\": 2,\n      \"location\": \"left\",\n      \"color\": [\"yellow\", \"green\"],\n      \"size\": \"medium\",\n      \"description\": \"Passenger cars attached to the locomotive\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"Clear sky with scattered white clouds\"\n    },\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"Lush green trees in the background\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "train": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black",
-                  "red"
-                ],
-                "size": "large",
-                "description": "Steam locomotive with red wheels and a red cowcatcher"
-              },
-              "railway tracks": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "Metal train tracks with gravel ballast"
-              },
-              "train cars": {
-                "count": 2,
-                "location": "left",
-                "color": [
-                  "yellow",
-                  "green"
-                ],
-                "size": "medium",
-                "description": "Passenger cars attached to the locomotive"
-              }
-            },
-            "natural": {
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "Clear sky with scattered white clouds"
-              },
-              "trees": {
-                "count": 1,
-                "location": "right",
-                "color": [
-                  "green"
-                ],
-                "size": "medium",
-                "description": "Lush green trees in the background"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 276,
-            "total_tokens": 762
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10397.187692,
-            "prompt_eval_duration_ms": 135.974077,
-            "generation_duration_ms": 10220.217614,
-            "load_duration_ms": 38.417115,
-            "tokens_per_second": 27.00529581893891
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3094,
-        "total_time_ms": 55950.28926,
-        "average_speed": 26.878371801884384
       }
     },
     {

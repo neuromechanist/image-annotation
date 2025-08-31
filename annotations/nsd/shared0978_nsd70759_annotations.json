@@ -7,6 +7,400 @@
   "timestamp": "2025-08-31T00:42:16.414988+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image presents a cozy, well-lit bedroom with a warm and inviting ambiance. The room features a large bay window with white blinds partially drawn, allowing natural light to flood in and illuminate the space. The walls are painted a soft beige, complementing the earthy tones of the furniture and bedding. A wooden chair with a cushion sits by the window, facing a small round table with a few items on it, suggesting a quiet reading nook or a spot for a cup of tea. The bed, positioned in the foreground, is neatly made with a white and brown quilted duvet, accented by a patterned pillow that adds a touch of color and texture. The room's decor includes a chandelier with dark shades hanging from the ceiling, adding a classic touch to the otherwise modern and simple setting. The overall composition is balanced and serene, with the natural light and earthy tones creating a calm and comfortable atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 188,
+            "total_tokens": 485
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1683.317694,
+            "prompt_eval_duration_ms": 288.996394,
+            "generation_duration_ms": 1347.749136,
+            "load_duration_ms": 43.968089,
+            "tokens_per_second": 139.49183492557623
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the viewer is drawn to the bed, which is neatly made with a white and brown quilted bedspread and adorned with patterned pillows. The bed is positioned against the wall, and to its right, a small wooden chair with a cushioned seat is partially visible. This chair, along with a small round table with a few items on it, suggests a cozy corner for relaxation or reading. The background, which is the distant setting, features a large bay window with horizontal blinds partially drawn, allowing natural light to filter into the room. Outside the window, a glimpse of a street scene with buildings and greenery is visible, indicating the room is located in an urban or suburban setting. The relationship between the foreground and background is one of depth and perspective, with the bed and chair in the foreground leading the eye towards the window and the street beyond, creating a sense of space and connection between the interior and exterior environments.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 193,
+            "total_tokens": 496
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1459.836538,
+            "prompt_eval_duration_ms": 30.920914,
+            "generation_duration_ms": 1383.430004,
+            "load_duration_ms": 43.027886,
+            "tokens_per_second": 139.50832311137296
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a cozy, well-lit bedroom with a large bay window that offers a view of a street scene outside. The room is furnished with a neatly made bed adorned with a brown and white quilt and patterned pillows, suggesting a comfortable and inviting space. A small wooden table with two chairs sits near the window, hinting at a quiet reading or relaxation area. The window blinds are partially open, allowing natural light to flood the room and creating a serene atmosphere. Outside the window, a street with parked cars and a few pedestrians can be seen, indicating a lively urban environment. The room itself is tidy, with minimal clutter, and the overall ambiance is one of calm and tranquility, with the outside world subtly influencing the peaceful interior. There are no visible people or animals in the image, and the objects in the room are static, contributing to the stillness of the scene. The relationship between the interior and exterior is one of quiet observation, with the room serving as a private retreat from the bustling street outside.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 207,
+            "total_tokens": 513
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1562.168544,
+            "prompt_eval_duration_ms": 29.062846,
+            "generation_duration_ms": 1493.251101,
+            "load_duration_ms": 36.885346,
+            "tokens_per_second": 138.62370492235115
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of calm and tranquility, with a slightly nostalgic undertone. The soft, neutral color palette of the walls and bedding, combined with the natural light streaming through the bay window, creates a peaceful and inviting atmosphere. The presence of the chandelier adds a touch of elegance and sophistication, hinting at a well-maintained and possibly historic setting. The open window and the view of the street outside suggest a connection to the outside world, yet the room itself feels secluded and private, fostering a sense of comfort and security. The floral pattern on the pillows introduces a subtle vibrancy, which, while not overpowering, adds a gentle warmth to the scene. The overall tone is positive, leaning towards a feeling of relaxation and contentment, as the room appears both cozy and well-kept, inviting the viewer to imagine themselves in this serene space.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 177,
+            "total_tokens": 485
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1343.004941,
+            "prompt_eval_duration_ms": 30.850411,
+            "generation_duration_ms": 1270.370102,
+            "load_duration_ms": 39.444823,
+            "tokens_per_second": 139.3294754979994
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"bed\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"with patterned pillows and brown blanket\"\n    },\n    \"chair\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"wooden with cushions\"\n    },\n    \"table\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"wooden with items on it\"\n    },\n    \"blinds\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"covering windows\"\n    },\n    \"window\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"with blinds\"\n    },\n    \"chandelier\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"hanging from ceiling\"\n    },\n    \"wardrobe\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"partially visible\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "bed": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "brown",
+                  "white"
+                ],
+                "size": "large",
+                "description": "with patterned pillows and brown blanket"
+              },
+              "chair": {
+                "count": 2,
+                "location": "center",
+                "color": [
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "wooden with cushions"
+              },
+              "table": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "brown"
+                ],
+                "size": "small",
+                "description": "wooden with items on it"
+              },
+              "blinds": {
+                "count": 2,
+                "location": "center",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "covering windows"
+              },
+              "window": {
+                "count": 2,
+                "location": "center",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "with blinds"
+              },
+              "chandelier": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "hanging from ceiling"
+              },
+              "wardrobe": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "partially visible"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 336,
+            "total_tokens": 822
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2474.612734,
+            "prompt_eval_duration_ms": 45.256859,
+            "generation_duration_ms": 2388.515836,
+            "load_duration_ms": 38.245947,
+            "tokens_per_second": 140.67313054230888
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2801,
+        "total_time_ms": 8522.940451,
+        "average_speed": 139.5252937999217
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a cozy and well-lit bedroom with a bay window as the focal point. The setting appears to be a residential space, likely a private home or a guest room. The bay window, framed by light-colored wood and covered with partially open horizontal blinds, offers a view of a green outdoor area, possibly a garden or park, with a fence and some buildings in the background. The natural light streaming through the window illuminates the room, creating a warm and inviting atmosphere.\n\nThe main elements in the room include a neatly made bed with a combination of white and brown bedding, featuring a patterned throw pillow. The bed is positioned against the wall beneath the window, maximizing the use of space and allowing for a clear view of the outdoors. The window is adorned with a decorative chandelier-style light fixture hanging from the ceiling, adding a touch of elegance to the room. Below the window, a small outdoor patio area is visible, furnished with a round table and two chairs, suggesting a space for relaxation or enjoying the view.\n\nThe color palette of the room is neutral and earthy, with beige walls, brown accents, and white bedding. The overall composition is balanced, with the bed and window forming the central focus, while the outdoor patio adds depth and context to the scene. The lighting is soft and natural, enhancing the serene and comfortable ambiance of the room. The image conveys a sense of tranquility and homeliness.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 290,
+            "total_tokens": 587
+          },
+          "performance_metrics": {
+            "total_duration_ms": 14436.127342,
+            "prompt_eval_duration_ms": 3587.980063,
+            "generation_duration_ms": 10806.866158,
+            "load_duration_ms": 38.779674,
+            "tokens_per_second": 26.83479148904992
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a neatly made bed, which occupies the lower portion of the frame. The bed features a combination of white and brown bedding, with a patterned pillow adding a touch of color and texture. The bed's proximity to the viewer creates a sense of intimacy and comfort, suggesting a cozy bedroom setting. \n\nIn the background, the scene transitions to a large bay window that serves as the focal point, offering a view of the outside world. The window is framed by dark brown blinds, partially drawn to allow natural light to filter into the room. Through the window, a balcony or patio area is visible, furnished with a small table and chairs, indicating a space for relaxation or outdoor activities. Beyond the balcony, the background extends to a residential setting, with buildings and greenery visible, providing a sense of urban or suburban life. \n\nThe relationship between the foreground and background is harmonious and layered. The bed in the foreground creates a sense of personal space and rest, while the bay window and its view of the outside world provide a connection to the environment beyond the room. The natural light streaming in through the window enhances the coziness of the bedroom, while the outdoor elements suggest a balance between indoor comfort and external engagement. This layered composition effectively combines the private, intimate space of the bedroom with the broader context of the surrounding neighborhood, creating a holistic and inviting atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 282,
+            "total_tokens": 585
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10644.59613,
+            "prompt_eval_duration_ms": 74.225677,
+            "generation_duration_ms": 10528.268598,
+            "load_duration_ms": 37.421862,
+            "tokens_per_second": 26.785030926506764
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a cozy bedroom with a large bay window that offers a view of an outdoor area. There are no people or animals visible in the scene, as the focus is on the room's interior and the view outside. The room is neatly arranged, featuring a bed with a neatly made quilt in neutral tones of white and brown, complemented by patterned pillows. The bed is positioned against the wall, facing the bay window, which is adorned with horizontal blinds that are partially open, allowing natural light to filter into the room.\n\nOutside the window, a balcony or patio area is visible, furnished with two black chairs and a small round table. The chairs are positioned facing each other, suggesting a space for relaxation or conversation. The table appears to have a few items on it, possibly books or decorative objects, adding a touch of personalization to the outdoor area. Beyond the balcony, a green lawn and a fence are visible, indicating a private garden or communal outdoor space. The view also includes parts of neighboring buildings, suggesting an urban or suburban setting.\n\nThe room's decor includes a chandelier hanging above the bed, adding a touch of elegance, and a nightstand with a lamp on the right side of the bed. The overall atmosphere is calm and inviting, with the interplay of indoor comfort and the serene outdoor view creating a harmonious balance. The elements in the room, such as the bed, window, and outdoor furniture, work together to create a functional and aesthetically pleasing living space. The connection between the indoor and outdoor areas is emphasized by the open blinds, inviting the outside world into the room.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 327,
+            "total_tokens": 633
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12299.549823,
+            "prompt_eval_duration_ms": 74.722477,
+            "generation_duration_ms": 12184.123167,
+            "load_duration_ms": 37.926499,
+            "tokens_per_second": 26.83820538564981
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of calmness and tranquility, evoking feelings of relaxation and comfort. The overall tone is neutral yet positive, as the scene is serene and inviting without being overly dramatic or intense. The soft, muted colors of the room\u2014beige walls, brown bedding, and dark wood furniture\u2014create a sense of warmth and coziness. The large bay window allows natural light to filter in, brightening the space and providing a view of the outdoors, which adds a refreshing and open feeling. The presence of the garden or courtyard visible through the window introduces a touch of nature, enhancing the peaceful atmosphere. The neatly arranged bed with patterned pillows and the simple, uncluttered furniture suggest order and care, contributing to a sense of serenity. The hanging light fixture above the bed adds a touch of elegance and intimacy, further reinforcing the cozy ambiance. The overall composition of the room, with its balance of natural light, soft textures, and minimalistic design, creates a space that feels inviting and restful, ideal for relaxation or contemplation.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 217,
+            "total_tokens": 525
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8210.199807,
+            "prompt_eval_duration_ms": 73.071186,
+            "generation_duration_ms": 8095.191421,
+            "load_duration_ms": 38.207183,
+            "tokens_per_second": 26.806036906931343
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"bed\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"white\", \"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Queen-sized bed with white sheets and brown blanket, adorned with patterned pillows.\"\n    },\n    \"chandelier\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Decorative chandelier hanging from the ceiling.\"\n    },\n    \"window\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"white\", \"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Bay window with horizontal blinds, partially open, showing an outdoor view.\"\n    },\n    \"furniture\": {\n      \"count\": 3,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Two chairs and a small table with a glass top, placed near the window.\"\n    },\n    \"blinds\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"Horizontal blinds covering the window.\"\n    },\n    \"curtains\": {\n      \"count\": 2,\n      \"location\": \"center, top\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"Brown curtains on either side of the window.\"\n    },\n    \"lamp\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Table lamp on a bedside table.\"\n    },\n    \"bedside table\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"White bedside table with a lamp.\"\n    },\n    \"door\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Black door with a glass panel, partially visible.\"\n    },\n    \"outdoor railing\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Black metal railing visible through the window.\"\n    },\n    \"outdoor furniture\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Outdoor chair visible through the window.\"\n    }\n  },\n  \"natural\": {\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Green trees visible through the window.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "bed": {
+                "count": 1,
+                "location": "center, bottom",
+                "color": [
+                  "white",
+                  "brown"
+                ],
+                "size": "large",
+                "description": "Queen-sized bed with white sheets and brown blanket, adorned with patterned pillows."
+              },
+              "chandelier": {
+                "count": 1,
+                "location": "center, top",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "Decorative chandelier hanging from the ceiling."
+              },
+              "window": {
+                "count": 1,
+                "location": "center, top",
+                "color": [
+                  "white",
+                  "brown"
+                ],
+                "size": "large",
+                "description": "Bay window with horizontal blinds, partially open, showing an outdoor view."
+              },
+              "furniture": {
+                "count": 3,
+                "location": "center, middle",
+                "color": [
+                  "black"
+                ],
+                "size": "medium",
+                "description": "Two chairs and a small table with a glass top, placed near the window."
+              },
+              "blinds": {
+                "count": 1,
+                "location": "center, top",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "Horizontal blinds covering the window."
+              },
+              "curtains": {
+                "count": 2,
+                "location": "center, top",
+                "color": [
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "Brown curtains on either side of the window."
+              },
+              "lamp": {
+                "count": 1,
+                "location": "right, middle",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "Table lamp on a bedside table."
+              },
+              "bedside table": {
+                "count": 1,
+                "location": "right, middle",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "White bedside table with a lamp."
+              },
+              "door": {
+                "count": 1,
+                "location": "left, middle",
+                "color": [
+                  "black"
+                ],
+                "size": "medium",
+                "description": "Black door with a glass panel, partially visible."
+              },
+              "outdoor railing": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "black"
+                ],
+                "size": "medium",
+                "description": "Black metal railing visible through the window."
+              },
+              "outdoor furniture": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "black"
+                ],
+                "size": "medium",
+                "description": "Outdoor chair visible through the window."
+              }
+            },
+            "natural": {
+              "trees": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "green"
+                ],
+                "size": "small",
+                "description": "Green trees visible through the window."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 659,
+            "total_tokens": 1145
+          },
+          "performance_metrics": {
+            "total_duration_ms": 24593.369983,
+            "prompt_eval_duration_ms": 133.873467,
+            "generation_duration_ms": 24416.787557,
+            "load_duration_ms": 40.000195,
+            "tokens_per_second": 26.9896274627279
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3475,
+        "total_time_ms": 70183.843085,
+        "average_speed": 26.85073843417315
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -658,400 +1052,6 @@
         "total_tokens": 3198,
         "total_time_ms": 34582.281566000005,
         "average_speed": 42.066283445362444
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image presents a cozy, well-lit bedroom with a warm and inviting ambiance. The room features a large bay window with white blinds partially drawn, allowing natural light to flood in and illuminate the space. The walls are painted a soft beige, complementing the earthy tones of the furniture and bedding. A wooden chair with a cushion sits by the window, facing a small round table with a few items on it, suggesting a quiet reading nook or a spot for a cup of tea. The bed, positioned in the foreground, is neatly made with a white and brown quilted duvet, accented by a patterned pillow that adds a touch of color and texture. The room's decor includes a chandelier with dark shades hanging from the ceiling, adding a classic touch to the otherwise modern and simple setting. The overall composition is balanced and serene, with the natural light and earthy tones creating a calm and comfortable atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 188,
-            "total_tokens": 485
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1683.317694,
-            "prompt_eval_duration_ms": 288.996394,
-            "generation_duration_ms": 1347.749136,
-            "load_duration_ms": 43.968089,
-            "tokens_per_second": 139.49183492557623
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the viewer is drawn to the bed, which is neatly made with a white and brown quilted bedspread and adorned with patterned pillows. The bed is positioned against the wall, and to its right, a small wooden chair with a cushioned seat is partially visible. This chair, along with a small round table with a few items on it, suggests a cozy corner for relaxation or reading. The background, which is the distant setting, features a large bay window with horizontal blinds partially drawn, allowing natural light to filter into the room. Outside the window, a glimpse of a street scene with buildings and greenery is visible, indicating the room is located in an urban or suburban setting. The relationship between the foreground and background is one of depth and perspective, with the bed and chair in the foreground leading the eye towards the window and the street beyond, creating a sense of space and connection between the interior and exterior environments.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 193,
-            "total_tokens": 496
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1459.836538,
-            "prompt_eval_duration_ms": 30.920914,
-            "generation_duration_ms": 1383.430004,
-            "load_duration_ms": 43.027886,
-            "tokens_per_second": 139.50832311137296
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a cozy, well-lit bedroom with a large bay window that offers a view of a street scene outside. The room is furnished with a neatly made bed adorned with a brown and white quilt and patterned pillows, suggesting a comfortable and inviting space. A small wooden table with two chairs sits near the window, hinting at a quiet reading or relaxation area. The window blinds are partially open, allowing natural light to flood the room and creating a serene atmosphere. Outside the window, a street with parked cars and a few pedestrians can be seen, indicating a lively urban environment. The room itself is tidy, with minimal clutter, and the overall ambiance is one of calm and tranquility, with the outside world subtly influencing the peaceful interior. There are no visible people or animals in the image, and the objects in the room are static, contributing to the stillness of the scene. The relationship between the interior and exterior is one of quiet observation, with the room serving as a private retreat from the bustling street outside.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 207,
-            "total_tokens": 513
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1562.168544,
-            "prompt_eval_duration_ms": 29.062846,
-            "generation_duration_ms": 1493.251101,
-            "load_duration_ms": 36.885346,
-            "tokens_per_second": 138.62370492235115
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of calm and tranquility, with a slightly nostalgic undertone. The soft, neutral color palette of the walls and bedding, combined with the natural light streaming through the bay window, creates a peaceful and inviting atmosphere. The presence of the chandelier adds a touch of elegance and sophistication, hinting at a well-maintained and possibly historic setting. The open window and the view of the street outside suggest a connection to the outside world, yet the room itself feels secluded and private, fostering a sense of comfort and security. The floral pattern on the pillows introduces a subtle vibrancy, which, while not overpowering, adds a gentle warmth to the scene. The overall tone is positive, leaning towards a feeling of relaxation and contentment, as the room appears both cozy and well-kept, inviting the viewer to imagine themselves in this serene space.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 177,
-            "total_tokens": 485
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1343.004941,
-            "prompt_eval_duration_ms": 30.850411,
-            "generation_duration_ms": 1270.370102,
-            "load_duration_ms": 39.444823,
-            "tokens_per_second": 139.3294754979994
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"bed\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"with patterned pillows and brown blanket\"\n    },\n    \"chair\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"wooden with cushions\"\n    },\n    \"table\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"wooden with items on it\"\n    },\n    \"blinds\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"covering windows\"\n    },\n    \"window\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"with blinds\"\n    },\n    \"chandelier\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"hanging from ceiling\"\n    },\n    \"wardrobe\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"partially visible\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "bed": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "brown",
-                  "white"
-                ],
-                "size": "large",
-                "description": "with patterned pillows and brown blanket"
-              },
-              "chair": {
-                "count": 2,
-                "location": "center",
-                "color": [
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "wooden with cushions"
-              },
-              "table": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "brown"
-                ],
-                "size": "small",
-                "description": "wooden with items on it"
-              },
-              "blinds": {
-                "count": 2,
-                "location": "center",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "covering windows"
-              },
-              "window": {
-                "count": 2,
-                "location": "center",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "with blinds"
-              },
-              "chandelier": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "hanging from ceiling"
-              },
-              "wardrobe": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "partially visible"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 336,
-            "total_tokens": 822
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2474.612734,
-            "prompt_eval_duration_ms": 45.256859,
-            "generation_duration_ms": 2388.515836,
-            "load_duration_ms": 38.245947,
-            "tokens_per_second": 140.67313054230888
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2801,
-        "total_time_ms": 8522.940451,
-        "average_speed": 139.5252937999217
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a cozy and well-lit bedroom with a bay window as the focal point. The setting appears to be a residential space, likely a private home or a guest room. The bay window, framed by light-colored wood and covered with partially open horizontal blinds, offers a view of a green outdoor area, possibly a garden or park, with a fence and some buildings in the background. The natural light streaming through the window illuminates the room, creating a warm and inviting atmosphere.\n\nThe main elements in the room include a neatly made bed with a combination of white and brown bedding, featuring a patterned throw pillow. The bed is positioned against the wall beneath the window, maximizing the use of space and allowing for a clear view of the outdoors. The window is adorned with a decorative chandelier-style light fixture hanging from the ceiling, adding a touch of elegance to the room. Below the window, a small outdoor patio area is visible, furnished with a round table and two chairs, suggesting a space for relaxation or enjoying the view.\n\nThe color palette of the room is neutral and earthy, with beige walls, brown accents, and white bedding. The overall composition is balanced, with the bed and window forming the central focus, while the outdoor patio adds depth and context to the scene. The lighting is soft and natural, enhancing the serene and comfortable ambiance of the room. The image conveys a sense of tranquility and homeliness.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 290,
-            "total_tokens": 587
-          },
-          "performance_metrics": {
-            "total_duration_ms": 14436.127342,
-            "prompt_eval_duration_ms": 3587.980063,
-            "generation_duration_ms": 10806.866158,
-            "load_duration_ms": 38.779674,
-            "tokens_per_second": 26.83479148904992
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a neatly made bed, which occupies the lower portion of the frame. The bed features a combination of white and brown bedding, with a patterned pillow adding a touch of color and texture. The bed's proximity to the viewer creates a sense of intimacy and comfort, suggesting a cozy bedroom setting. \n\nIn the background, the scene transitions to a large bay window that serves as the focal point, offering a view of the outside world. The window is framed by dark brown blinds, partially drawn to allow natural light to filter into the room. Through the window, a balcony or patio area is visible, furnished with a small table and chairs, indicating a space for relaxation or outdoor activities. Beyond the balcony, the background extends to a residential setting, with buildings and greenery visible, providing a sense of urban or suburban life. \n\nThe relationship between the foreground and background is harmonious and layered. The bed in the foreground creates a sense of personal space and rest, while the bay window and its view of the outside world provide a connection to the environment beyond the room. The natural light streaming in through the window enhances the coziness of the bedroom, while the outdoor elements suggest a balance between indoor comfort and external engagement. This layered composition effectively combines the private, intimate space of the bedroom with the broader context of the surrounding neighborhood, creating a holistic and inviting atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 282,
-            "total_tokens": 585
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10644.59613,
-            "prompt_eval_duration_ms": 74.225677,
-            "generation_duration_ms": 10528.268598,
-            "load_duration_ms": 37.421862,
-            "tokens_per_second": 26.785030926506764
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a cozy bedroom with a large bay window that offers a view of an outdoor area. There are no people or animals visible in the scene, as the focus is on the room's interior and the view outside. The room is neatly arranged, featuring a bed with a neatly made quilt in neutral tones of white and brown, complemented by patterned pillows. The bed is positioned against the wall, facing the bay window, which is adorned with horizontal blinds that are partially open, allowing natural light to filter into the room.\n\nOutside the window, a balcony or patio area is visible, furnished with two black chairs and a small round table. The chairs are positioned facing each other, suggesting a space for relaxation or conversation. The table appears to have a few items on it, possibly books or decorative objects, adding a touch of personalization to the outdoor area. Beyond the balcony, a green lawn and a fence are visible, indicating a private garden or communal outdoor space. The view also includes parts of neighboring buildings, suggesting an urban or suburban setting.\n\nThe room's decor includes a chandelier hanging above the bed, adding a touch of elegance, and a nightstand with a lamp on the right side of the bed. The overall atmosphere is calm and inviting, with the interplay of indoor comfort and the serene outdoor view creating a harmonious balance. The elements in the room, such as the bed, window, and outdoor furniture, work together to create a functional and aesthetically pleasing living space. The connection between the indoor and outdoor areas is emphasized by the open blinds, inviting the outside world into the room.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 327,
-            "total_tokens": 633
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12299.549823,
-            "prompt_eval_duration_ms": 74.722477,
-            "generation_duration_ms": 12184.123167,
-            "load_duration_ms": 37.926499,
-            "tokens_per_second": 26.83820538564981
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of calmness and tranquility, evoking feelings of relaxation and comfort. The overall tone is neutral yet positive, as the scene is serene and inviting without being overly dramatic or intense. The soft, muted colors of the room\u2014beige walls, brown bedding, and dark wood furniture\u2014create a sense of warmth and coziness. The large bay window allows natural light to filter in, brightening the space and providing a view of the outdoors, which adds a refreshing and open feeling. The presence of the garden or courtyard visible through the window introduces a touch of nature, enhancing the peaceful atmosphere. The neatly arranged bed with patterned pillows and the simple, uncluttered furniture suggest order and care, contributing to a sense of serenity. The hanging light fixture above the bed adds a touch of elegance and intimacy, further reinforcing the cozy ambiance. The overall composition of the room, with its balance of natural light, soft textures, and minimalistic design, creates a space that feels inviting and restful, ideal for relaxation or contemplation.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 217,
-            "total_tokens": 525
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8210.199807,
-            "prompt_eval_duration_ms": 73.071186,
-            "generation_duration_ms": 8095.191421,
-            "load_duration_ms": 38.207183,
-            "tokens_per_second": 26.806036906931343
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"bed\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"white\", \"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Queen-sized bed with white sheets and brown blanket, adorned with patterned pillows.\"\n    },\n    \"chandelier\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Decorative chandelier hanging from the ceiling.\"\n    },\n    \"window\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"white\", \"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Bay window with horizontal blinds, partially open, showing an outdoor view.\"\n    },\n    \"furniture\": {\n      \"count\": 3,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Two chairs and a small table with a glass top, placed near the window.\"\n    },\n    \"blinds\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"Horizontal blinds covering the window.\"\n    },\n    \"curtains\": {\n      \"count\": 2,\n      \"location\": \"center, top\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"Brown curtains on either side of the window.\"\n    },\n    \"lamp\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Table lamp on a bedside table.\"\n    },\n    \"bedside table\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"White bedside table with a lamp.\"\n    },\n    \"door\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Black door with a glass panel, partially visible.\"\n    },\n    \"outdoor railing\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Black metal railing visible through the window.\"\n    },\n    \"outdoor furniture\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Outdoor chair visible through the window.\"\n    }\n  },\n  \"natural\": {\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Green trees visible through the window.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "bed": {
-                "count": 1,
-                "location": "center, bottom",
-                "color": [
-                  "white",
-                  "brown"
-                ],
-                "size": "large",
-                "description": "Queen-sized bed with white sheets and brown blanket, adorned with patterned pillows."
-              },
-              "chandelier": {
-                "count": 1,
-                "location": "center, top",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "Decorative chandelier hanging from the ceiling."
-              },
-              "window": {
-                "count": 1,
-                "location": "center, top",
-                "color": [
-                  "white",
-                  "brown"
-                ],
-                "size": "large",
-                "description": "Bay window with horizontal blinds, partially open, showing an outdoor view."
-              },
-              "furniture": {
-                "count": 3,
-                "location": "center, middle",
-                "color": [
-                  "black"
-                ],
-                "size": "medium",
-                "description": "Two chairs and a small table with a glass top, placed near the window."
-              },
-              "blinds": {
-                "count": 1,
-                "location": "center, top",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "Horizontal blinds covering the window."
-              },
-              "curtains": {
-                "count": 2,
-                "location": "center, top",
-                "color": [
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "Brown curtains on either side of the window."
-              },
-              "lamp": {
-                "count": 1,
-                "location": "right, middle",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "Table lamp on a bedside table."
-              },
-              "bedside table": {
-                "count": 1,
-                "location": "right, middle",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "White bedside table with a lamp."
-              },
-              "door": {
-                "count": 1,
-                "location": "left, middle",
-                "color": [
-                  "black"
-                ],
-                "size": "medium",
-                "description": "Black door with a glass panel, partially visible."
-              },
-              "outdoor railing": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "black"
-                ],
-                "size": "medium",
-                "description": "Black metal railing visible through the window."
-              },
-              "outdoor furniture": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "black"
-                ],
-                "size": "medium",
-                "description": "Outdoor chair visible through the window."
-              }
-            },
-            "natural": {
-              "trees": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "green"
-                ],
-                "size": "small",
-                "description": "Green trees visible through the window."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 659,
-            "total_tokens": 1145
-          },
-          "performance_metrics": {
-            "total_duration_ms": 24593.369983,
-            "prompt_eval_duration_ms": 133.873467,
-            "generation_duration_ms": 24416.787557,
-            "load_duration_ms": 40.000195,
-            "tokens_per_second": 26.9896274627279
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3475,
-        "total_time_ms": 70183.843085,
-        "average_speed": 26.85073843417315
       }
     },
     {

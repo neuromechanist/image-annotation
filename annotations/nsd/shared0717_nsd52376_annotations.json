@@ -7,6 +7,321 @@
   "timestamp": "2025-08-30T22:17:46.881032+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a serene rural scene where a woman is milking a cow. The setting appears to be a farm, with the ground covered in patches of green grass and some scattered dry leaves, suggesting a late summer or early autumn season. The lighting is natural, with sunlight filtering through, casting soft shadows and highlighting the woman's face and the cow's udder. The woman, wearing a blue t-shirt and jeans, is crouched down, her body angled towards the cow, her hands gently cradling the cow's teats as she milks. The cow, a light brown and white color, stands calmly, its udder prominently displayed, and a metal bucket is positioned below to collect the milk. The overall composition is intimate and focused, emphasizing the connection between the human and the animal, with the background slightly blurred to draw attention to the main subjects. The colors are earthy and natural, with the blue of the woman's shirt contrasting softly against the green and brown tones of the environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 207,
+            "total_tokens": 504
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1605.28251,
+            "prompt_eval_duration_ms": 79.832565,
+            "generation_duration_ms": 1483.301491,
+            "load_duration_ms": 39.684377,
+            "tokens_per_second": 139.5535575579085
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, a woman is the central focus, engaged in the act of milking a cow. She is wearing a blue T-shirt and jeans, her posture bent forward as she reaches out to the cow's udder, which is a light brown color, with visible veins and a natural texture. Her hands are positioned to collect the milk, which is being directed into a metal bucket placed at her feet. The background, though slightly blurred, reveals a natural outdoor setting with patches of green grass and what appears to be a tree or shrub, suggesting a rural or farm environment. The woman's interaction with the cow and the collection of milk are the primary activities, while the background provides context to the setting, indicating that this is likely taking place on a farm or in a rural area where such activities are common. The relationship between the foreground and background is one of depth and context; the woman's actions are the main subject, while the background sets the scene and provides a sense of place.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 206,
+            "total_tokens": 509
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1556.888138,
+            "prompt_eval_duration_ms": 30.280292,
+            "generation_duration_ms": 1485.260232,
+            "load_duration_ms": 38.857445,
+            "tokens_per_second": 138.69623353653492
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a person, dressed in a blue T-shirt and jeans, is engaged in the act of milking a cow. The person is crouched close to the cow, their hands positioned to gently squeeze the udder, guiding the milk into a metal bucket placed below. The cow, a light brown and white animal, stands calmly, its udder visibly full and ready to be milked. The interaction between the person and the cow is one of mutual cooperation; the person's focused and gentle approach suggests a routine and practiced skill, while the cow's relaxed posture indicates trust and comfort in the person's presence. The scene is set outdoors, with the ground covered in grass, adding a natural and serene backdrop to this everyday agricultural activity.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 155,
+            "total_tokens": 461
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1194.45805,
+            "prompt_eval_duration_ms": 32.178771,
+            "generation_duration_ms": 1120.07905,
+            "load_duration_ms": 39.612126,
+            "tokens_per_second": 138.38309001494136
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of simplicity and tranquility, evoking feelings of contentment and a sense of connection with nature. The positive tone is underscored by the gentle interaction between the person and the cow, symbolizing a harmonious relationship. The natural setting, with its soft lighting and the earthy tones of the cow and the grass, enhances the peaceful atmosphere. The person's relaxed posture and the gentle touch on the cow's udder suggest a sense of trust and care, reinforcing the positive emotional tone. The overall scene, with its focus on a simple, everyday activity, invites the viewer to reflect on the beauty and simplicity of life, making the image a heartwarming depiction of rural life and human-animal interaction.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 150,
+            "total_tokens": 458
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1163.245396,
+            "prompt_eval_duration_ms": 30.637229,
+            "generation_duration_ms": 1091.332834,
+            "load_duration_ms": 37.007777,
+            "tokens_per_second": 137.44661145235918
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"blue\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"wearing a blue t-shirt, milking a cow\"\n    }\n  },\n  \"animal\": {\n    \"cow\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"being milked by a person\"\n    }\n  },\n  \"man-made\": {\n    \"bucket\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"holding milk\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"under the cow\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "blue",
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "wearing a blue t-shirt, milking a cow"
+              }
+            },
+            "animal": {
+              "cow": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "brown",
+                  "white"
+                ],
+                "size": "large",
+                "description": "being milked by a person"
+              }
+            },
+            "man-made": {
+              "bucket": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "silver"
+                ],
+                "size": "small",
+                "description": "holding milk"
+              }
+            },
+            "natural": {
+              "grass": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "under the cow"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 228,
+            "total_tokens": 714
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1710.901193,
+            "prompt_eval_duration_ms": 43.654968,
+            "generation_duration_ms": 1625.42929,
+            "load_duration_ms": 39.042106,
+            "tokens_per_second": 140.27063582692054
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2646,
+        "total_time_ms": 7230.775287,
+        "average_speed": 138.8700256777329
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a young woman milking a cow outdoors in a natural, rural setting. The woman, with reddish-brown hair tied back, is wearing a light blue T-shirt and is kneeling on the grass. She is focused on milking the cow, which is positioned to her right. The cow is light brown with a white underbelly and udder, and its head is slightly turned away from the camera. The woman's hands are gently placed on the cow's udder, indicating the milking process. The background consists of grass and some scattered straw, suggesting a farm or pasture environment. The lighting is natural, likely from sunlight, casting soft shadows and highlighting the textures of the grass, the cow's fur, and the woman's skin. The overall composition is intimate and grounded, emphasizing the connection between the woman and the cow. The colors are warm and earthy, with the blue of the woman's shirt providing a subtle contrast to the natural tones of the grass and the cow. The scene conveys a sense of simplicity, tradition, and rural life.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 221,
+            "total_tokens": 518
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11902.567094,
+            "prompt_eval_duration_ms": 3594.339177,
+            "generation_duration_ms": 8264.847934,
+            "load_duration_ms": 40.868537,
+            "tokens_per_second": 26.73975392709264
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the primary elements are a woman and a cow. The woman, dressed in a blue T-shirt, is positioned on the left side, leaning forward with her hands engaged in milking the cow. Her focus is directed toward the cow, and her posture suggests active involvement in the task. The cow, on the right side, is the central subject, with its udder prominently visible as the woman milks it. The cow's body occupies a significant portion of the frame, emphasizing the interaction between the human and the animal.\n\nIn the background, the setting appears to be an outdoor rural environment. The ground is covered with grass, indicating a natural, open space, likely a farm or pasture. The background is somewhat blurred, which helps to draw attention to the foreground activity. The lighting suggests it is daytime, with sunlight illuminating the scene, casting soft shadows and highlighting the textures of the grass and the cow's fur.\n\nThe relationship between the foreground and background elements is one of context and focus. The foreground activity of milking is the main subject, while the background provides a natural, pastoral setting that enhances the rural and agricultural theme. The blurred background ensures that the viewer's attention remains on the woman and the cow, emphasizing the intimate and practical nature of the interaction. The overall composition effectively conveys a sense of simplicity and connection to nature, typical of farm life.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 284,
+            "total_tokens": 587
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10670.103563,
+            "prompt_eval_duration_ms": 74.547191,
+            "generation_duration_ms": 10550.324812,
+            "load_duration_ms": 41.112522,
+            "tokens_per_second": 26.91860251325881
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a young woman milking a cow in an outdoor setting, likely a farm or rural environment. The woman, wearing a blue T-shirt, is kneeling on the grass and leaning forward, focusing intently on the task at hand. Her hands are positioned on the cow's udder, gently squeezing and releasing to extract milk. The cow, a light brown and white dairy breed, stands calmly, allowing the woman to perform the milking process. The cow's udder is prominently visible, indicating that it is full and ready for milking. The woman's posture and expression suggest a sense of familiarity and comfort with the task, implying she is experienced or at least engaged in a routine activity.\n\nThe interaction between the woman and the cow is cooperative and gentle. The cow appears calm and unbothered, indicating trust and a well-established relationship. The woman's careful handling of the udder suggests respect for the animal and an understanding of the milking process. In the foreground, a metal pail is partially visible, likely used to collect the milk. The setting, with grass and natural light, reinforces the rural, pastoral context of the scene. The image captures a moment of human-animal interaction that is both practical and harmonious, highlighting the traditional practice of milking a cow by hand.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 268,
+            "total_tokens": 574
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10042.157996,
+            "prompt_eval_duration_ms": 74.123158,
+            "generation_duration_ms": 9925.248958,
+            "load_duration_ms": 39.772936,
+            "tokens_per_second": 27.001841579397894
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of warmth, connection, and simplicity, evoking feelings of tranquility and contentment. The overall tone is positive, as the scene captures a moment of human-animal interaction in a natural, rural setting. The woman, dressed casually in a blue T-shirt, appears relaxed and engaged as she milks the cow, suggesting a sense of familiarity and comfort with the task. Her gentle posture and the calm expression on her face indicate a peaceful, unhurried moment. The cow, standing calmly and allowing the milking process, further reinforces the sense of harmony and mutual trust between the human and the animal. The outdoor setting, with grass and natural light, adds to the serene atmosphere, emphasizing a connection to nature and a slower pace of life. The simplicity of the activity and the lack of any visible stress or tension contribute to the overall positive emotional tone. The image evokes feelings of nostalgia, rural life, and the satisfaction of working directly with nature, highlighting the beauty of traditional, hands-on tasks. The visual elements of natural light, earthy tones, and the gentle interaction between the woman and the cow all work together to create a mood of warmth and contentment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 243,
+            "total_tokens": 551
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9141.796875,
+            "prompt_eval_duration_ms": 74.875529,
+            "generation_duration_ms": 9024.551681,
+            "load_duration_ms": 39.480874,
+            "tokens_per_second": 26.926545338712433
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"blue\", \"skin tone\"],\n      \"size\": \"medium\",\n      \"description\": \"A person wearing a blue shirt, kneeling and milking a cow.\"\n    }\n  },\n  \"animal\": {\n    \"cow\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"A cow being milked by a person.\"\n    }\n  },\n  \"man-made\": {\n    \"shirt\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"blue\"],\n      \"size\": \"small\",\n      \"description\": \"A blue shirt worn by the person.\"\n    },\n    \"bucket\": {\n      \"count\": 1,\n      \"location\": \"bottom, right\",\n      \"color\": [\"metallic\"],\n      \"size\": \"small\",\n      \"description\": \"A metallic bucket placed under the cow.\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"A grassy area in the background.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "left, middle",
+                "color": [
+                  "blue",
+                  "skin tone"
+                ],
+                "size": "medium",
+                "description": "A person wearing a blue shirt, kneeling and milking a cow."
+              }
+            },
+            "animal": {
+              "cow": {
+                "count": 1,
+                "location": "right, middle",
+                "color": [
+                  "brown",
+                  "white"
+                ],
+                "size": "large",
+                "description": "A cow being milked by a person."
+              }
+            },
+            "man-made": {
+              "shirt": {
+                "count": 1,
+                "location": "left, middle",
+                "color": [
+                  "blue"
+                ],
+                "size": "small",
+                "description": "A blue shirt worn by the person."
+              },
+              "bucket": {
+                "count": 1,
+                "location": "bottom, right",
+                "color": [
+                  "metallic"
+                ],
+                "size": "small",
+                "description": "A metallic bucket placed under the cow."
+              }
+            },
+            "natural": {
+              "grass": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "A grassy area in the background."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 299,
+            "total_tokens": 785
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11238.99905,
+            "prompt_eval_duration_ms": 137.321726,
+            "generation_duration_ms": 11058.433686,
+            "load_duration_ms": 39.363169,
+            "tokens_per_second": 27.03818718726275
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3015,
+        "total_time_ms": 52995.624578,
+        "average_speed": 26.924986109144907
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -481,321 +796,6 @@
         "total_tokens": 2852,
         "total_time_ms": 26542.443420999996,
         "average_speed": 41.81609756954698
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a serene rural scene where a woman is milking a cow. The setting appears to be a farm, with the ground covered in patches of green grass and some scattered dry leaves, suggesting a late summer or early autumn season. The lighting is natural, with sunlight filtering through, casting soft shadows and highlighting the woman's face and the cow's udder. The woman, wearing a blue t-shirt and jeans, is crouched down, her body angled towards the cow, her hands gently cradling the cow's teats as she milks. The cow, a light brown and white color, stands calmly, its udder prominently displayed, and a metal bucket is positioned below to collect the milk. The overall composition is intimate and focused, emphasizing the connection between the human and the animal, with the background slightly blurred to draw attention to the main subjects. The colors are earthy and natural, with the blue of the woman's shirt contrasting softly against the green and brown tones of the environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 207,
-            "total_tokens": 504
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1605.28251,
-            "prompt_eval_duration_ms": 79.832565,
-            "generation_duration_ms": 1483.301491,
-            "load_duration_ms": 39.684377,
-            "tokens_per_second": 139.5535575579085
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, a woman is the central focus, engaged in the act of milking a cow. She is wearing a blue T-shirt and jeans, her posture bent forward as she reaches out to the cow's udder, which is a light brown color, with visible veins and a natural texture. Her hands are positioned to collect the milk, which is being directed into a metal bucket placed at her feet. The background, though slightly blurred, reveals a natural outdoor setting with patches of green grass and what appears to be a tree or shrub, suggesting a rural or farm environment. The woman's interaction with the cow and the collection of milk are the primary activities, while the background provides context to the setting, indicating that this is likely taking place on a farm or in a rural area where such activities are common. The relationship between the foreground and background is one of depth and context; the woman's actions are the main subject, while the background sets the scene and provides a sense of place.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 206,
-            "total_tokens": 509
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1556.888138,
-            "prompt_eval_duration_ms": 30.280292,
-            "generation_duration_ms": 1485.260232,
-            "load_duration_ms": 38.857445,
-            "tokens_per_second": 138.69623353653492
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a person, dressed in a blue T-shirt and jeans, is engaged in the act of milking a cow. The person is crouched close to the cow, their hands positioned to gently squeeze the udder, guiding the milk into a metal bucket placed below. The cow, a light brown and white animal, stands calmly, its udder visibly full and ready to be milked. The interaction between the person and the cow is one of mutual cooperation; the person's focused and gentle approach suggests a routine and practiced skill, while the cow's relaxed posture indicates trust and comfort in the person's presence. The scene is set outdoors, with the ground covered in grass, adding a natural and serene backdrop to this everyday agricultural activity.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 155,
-            "total_tokens": 461
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1194.45805,
-            "prompt_eval_duration_ms": 32.178771,
-            "generation_duration_ms": 1120.07905,
-            "load_duration_ms": 39.612126,
-            "tokens_per_second": 138.38309001494136
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of simplicity and tranquility, evoking feelings of contentment and a sense of connection with nature. The positive tone is underscored by the gentle interaction between the person and the cow, symbolizing a harmonious relationship. The natural setting, with its soft lighting and the earthy tones of the cow and the grass, enhances the peaceful atmosphere. The person's relaxed posture and the gentle touch on the cow's udder suggest a sense of trust and care, reinforcing the positive emotional tone. The overall scene, with its focus on a simple, everyday activity, invites the viewer to reflect on the beauty and simplicity of life, making the image a heartwarming depiction of rural life and human-animal interaction.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 150,
-            "total_tokens": 458
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1163.245396,
-            "prompt_eval_duration_ms": 30.637229,
-            "generation_duration_ms": 1091.332834,
-            "load_duration_ms": 37.007777,
-            "tokens_per_second": 137.44661145235918
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"blue\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"wearing a blue t-shirt, milking a cow\"\n    }\n  },\n  \"animal\": {\n    \"cow\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"being milked by a person\"\n    }\n  },\n  \"man-made\": {\n    \"bucket\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"holding milk\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"under the cow\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "blue",
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "wearing a blue t-shirt, milking a cow"
-              }
-            },
-            "animal": {
-              "cow": {
-                "count": 1,
-                "location": "right",
-                "color": [
-                  "brown",
-                  "white"
-                ],
-                "size": "large",
-                "description": "being milked by a person"
-              }
-            },
-            "man-made": {
-              "bucket": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "silver"
-                ],
-                "size": "small",
-                "description": "holding milk"
-              }
-            },
-            "natural": {
-              "grass": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "under the cow"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 228,
-            "total_tokens": 714
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1710.901193,
-            "prompt_eval_duration_ms": 43.654968,
-            "generation_duration_ms": 1625.42929,
-            "load_duration_ms": 39.042106,
-            "tokens_per_second": 140.27063582692054
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2646,
-        "total_time_ms": 7230.775287,
-        "average_speed": 138.8700256777329
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a young woman milking a cow outdoors in a natural, rural setting. The woman, with reddish-brown hair tied back, is wearing a light blue T-shirt and is kneeling on the grass. She is focused on milking the cow, which is positioned to her right. The cow is light brown with a white underbelly and udder, and its head is slightly turned away from the camera. The woman's hands are gently placed on the cow's udder, indicating the milking process. The background consists of grass and some scattered straw, suggesting a farm or pasture environment. The lighting is natural, likely from sunlight, casting soft shadows and highlighting the textures of the grass, the cow's fur, and the woman's skin. The overall composition is intimate and grounded, emphasizing the connection between the woman and the cow. The colors are warm and earthy, with the blue of the woman's shirt providing a subtle contrast to the natural tones of the grass and the cow. The scene conveys a sense of simplicity, tradition, and rural life.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 221,
-            "total_tokens": 518
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11902.567094,
-            "prompt_eval_duration_ms": 3594.339177,
-            "generation_duration_ms": 8264.847934,
-            "load_duration_ms": 40.868537,
-            "tokens_per_second": 26.73975392709264
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the primary elements are a woman and a cow. The woman, dressed in a blue T-shirt, is positioned on the left side, leaning forward with her hands engaged in milking the cow. Her focus is directed toward the cow, and her posture suggests active involvement in the task. The cow, on the right side, is the central subject, with its udder prominently visible as the woman milks it. The cow's body occupies a significant portion of the frame, emphasizing the interaction between the human and the animal.\n\nIn the background, the setting appears to be an outdoor rural environment. The ground is covered with grass, indicating a natural, open space, likely a farm or pasture. The background is somewhat blurred, which helps to draw attention to the foreground activity. The lighting suggests it is daytime, with sunlight illuminating the scene, casting soft shadows and highlighting the textures of the grass and the cow's fur.\n\nThe relationship between the foreground and background elements is one of context and focus. The foreground activity of milking is the main subject, while the background provides a natural, pastoral setting that enhances the rural and agricultural theme. The blurred background ensures that the viewer's attention remains on the woman and the cow, emphasizing the intimate and practical nature of the interaction. The overall composition effectively conveys a sense of simplicity and connection to nature, typical of farm life.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 284,
-            "total_tokens": 587
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10670.103563,
-            "prompt_eval_duration_ms": 74.547191,
-            "generation_duration_ms": 10550.324812,
-            "load_duration_ms": 41.112522,
-            "tokens_per_second": 26.91860251325881
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a young woman milking a cow in an outdoor setting, likely a farm or rural environment. The woman, wearing a blue T-shirt, is kneeling on the grass and leaning forward, focusing intently on the task at hand. Her hands are positioned on the cow's udder, gently squeezing and releasing to extract milk. The cow, a light brown and white dairy breed, stands calmly, allowing the woman to perform the milking process. The cow's udder is prominently visible, indicating that it is full and ready for milking. The woman's posture and expression suggest a sense of familiarity and comfort with the task, implying she is experienced or at least engaged in a routine activity.\n\nThe interaction between the woman and the cow is cooperative and gentle. The cow appears calm and unbothered, indicating trust and a well-established relationship. The woman's careful handling of the udder suggests respect for the animal and an understanding of the milking process. In the foreground, a metal pail is partially visible, likely used to collect the milk. The setting, with grass and natural light, reinforces the rural, pastoral context of the scene. The image captures a moment of human-animal interaction that is both practical and harmonious, highlighting the traditional practice of milking a cow by hand.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 268,
-            "total_tokens": 574
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10042.157996,
-            "prompt_eval_duration_ms": 74.123158,
-            "generation_duration_ms": 9925.248958,
-            "load_duration_ms": 39.772936,
-            "tokens_per_second": 27.001841579397894
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of warmth, connection, and simplicity, evoking feelings of tranquility and contentment. The overall tone is positive, as the scene captures a moment of human-animal interaction in a natural, rural setting. The woman, dressed casually in a blue T-shirt, appears relaxed and engaged as she milks the cow, suggesting a sense of familiarity and comfort with the task. Her gentle posture and the calm expression on her face indicate a peaceful, unhurried moment. The cow, standing calmly and allowing the milking process, further reinforces the sense of harmony and mutual trust between the human and the animal. The outdoor setting, with grass and natural light, adds to the serene atmosphere, emphasizing a connection to nature and a slower pace of life. The simplicity of the activity and the lack of any visible stress or tension contribute to the overall positive emotional tone. The image evokes feelings of nostalgia, rural life, and the satisfaction of working directly with nature, highlighting the beauty of traditional, hands-on tasks. The visual elements of natural light, earthy tones, and the gentle interaction between the woman and the cow all work together to create a mood of warmth and contentment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 243,
-            "total_tokens": 551
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9141.796875,
-            "prompt_eval_duration_ms": 74.875529,
-            "generation_duration_ms": 9024.551681,
-            "load_duration_ms": 39.480874,
-            "tokens_per_second": 26.926545338712433
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"blue\", \"skin tone\"],\n      \"size\": \"medium\",\n      \"description\": \"A person wearing a blue shirt, kneeling and milking a cow.\"\n    }\n  },\n  \"animal\": {\n    \"cow\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"A cow being milked by a person.\"\n    }\n  },\n  \"man-made\": {\n    \"shirt\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"blue\"],\n      \"size\": \"small\",\n      \"description\": \"A blue shirt worn by the person.\"\n    },\n    \"bucket\": {\n      \"count\": 1,\n      \"location\": \"bottom, right\",\n      \"color\": [\"metallic\"],\n      \"size\": \"small\",\n      \"description\": \"A metallic bucket placed under the cow.\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"A grassy area in the background.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "left, middle",
-                "color": [
-                  "blue",
-                  "skin tone"
-                ],
-                "size": "medium",
-                "description": "A person wearing a blue shirt, kneeling and milking a cow."
-              }
-            },
-            "animal": {
-              "cow": {
-                "count": 1,
-                "location": "right, middle",
-                "color": [
-                  "brown",
-                  "white"
-                ],
-                "size": "large",
-                "description": "A cow being milked by a person."
-              }
-            },
-            "man-made": {
-              "shirt": {
-                "count": 1,
-                "location": "left, middle",
-                "color": [
-                  "blue"
-                ],
-                "size": "small",
-                "description": "A blue shirt worn by the person."
-              },
-              "bucket": {
-                "count": 1,
-                "location": "bottom, right",
-                "color": [
-                  "metallic"
-                ],
-                "size": "small",
-                "description": "A metallic bucket placed under the cow."
-              }
-            },
-            "natural": {
-              "grass": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "A grassy area in the background."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 299,
-            "total_tokens": 785
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11238.99905,
-            "prompt_eval_duration_ms": 137.321726,
-            "generation_duration_ms": 11058.433686,
-            "load_duration_ms": 39.363169,
-            "tokens_per_second": 27.03818718726275
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3015,
-        "total_time_ms": 52995.624578,
-        "average_speed": 26.924986109144907
       }
     },
     {

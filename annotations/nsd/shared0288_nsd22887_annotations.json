@@ -7,6 +7,297 @@
   "timestamp": "2025-08-30T18:20:26.200272+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a close-up of a woman engaged in a phone conversation, set against the backdrop of a blurred urban environment. The woman, with her long, light brown hair, is wearing a green and white striped top, and her sunglasses rest on her head, suggesting a sunny day. Her expression is serious, with her eyebrows slightly furrowed, indicating she is focused on the conversation. The lighting is natural, likely from the sun, casting soft shadows and highlighting the contours of her face and the texture of her hair. The background is out of focus, featuring the hood of a blue car and hints of greenery, possibly trees or bushes, which suggest a street or parking area. The overall composition is tight and centered on the woman, with the background elements providing context and depth without distracting from the main subject. The colors are vibrant, with the blue of the car contrasting against the warmer tones of her hair and clothing.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 188,
+            "total_tokens": 485
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1468.34942,
+            "prompt_eval_duration_ms": 81.47037,
+            "generation_duration_ms": 1342.73489,
+            "load_duration_ms": 41.607731,
+            "tokens_per_second": 140.0127466710871
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, a woman with long, light brown hair is the central focus. She is wearing a green and white striped top and has sunglasses perched on her head. Her expression is serious as she appears to be engaged in a phone conversation, holding the phone to her ear with her left hand. The background elements, which are slightly out of focus, reveal a street setting with a white car and a portion of a building with columns and greenery, suggesting an urban environment. The blurred background helps to emphasize the woman in the foreground, creating a sense of depth and placing her in a public space, possibly near a parking area or a city street. The interplay between the sharpness of the woman and the soft blur of the background elements highlights her as the primary subject of the photograph, while still providing context to her environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 172,
+            "total_tokens": 475
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1313.253721,
+            "prompt_eval_duration_ms": 31.909947,
+            "generation_duration_ms": 1241.471911,
+            "load_duration_ms": 37.124528,
+            "tokens_per_second": 138.54522077866005
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a woman with long, reddish-brown hair is the central figure, engaged in a phone conversation. She is holding a black mobile phone to her ear with her right hand, her expression focused and slightly concerned, suggesting she is listening intently to the caller. Her sunglasses are perched atop her head, and she wears a green and white striped sweater, indicating a casual yet put-together appearance. The background features a blurred urban setting with a white car and hints of greenery, suggesting she is outdoors, possibly in a city or town. The woman's interaction with the phone and her surroundings indicates she is likely multitasking, possibly commuting or running errands while communicating. There are no animals or other people visible in the image, and the focus remains solely on her and her immediate environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 165,
+            "total_tokens": 471
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1277.994538,
+            "prompt_eval_duration_ms": 31.59487,
+            "generation_duration_ms": 1204.847391,
+            "load_duration_ms": 39.219347,
+            "tokens_per_second": 136.94680441068408
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of contemplation and mild distress, evoking a sense of introspection and perhaps a touch of sadness. The woman's expression is serious and somewhat pensive, with her eyes slightly downcast and a furrowed brow, suggesting she might be deep in thought or dealing with a serious matter. The angle of her head and the way she holds the phone to her ear indicate she is engaged in a conversation, but the overall tone of the image is not one of joy or excitement. The background, with its blurred urban setting and the presence of a car, adds to the feeling of being in a public space, perhaps hinting at the isolation or the mundanity of daily life that can sometimes accompany such serious conversations. The lighting, which is natural and slightly harsh, further emphasizes the seriousness of the scene, as it casts subtle shadows that accentuate the woman's features and the texture of her clothing. The muted colors of her sweater and the background contribute to the subdued and reflective atmosphere, making the overall tone of the image lean towards the negative side of the spectrum.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 221,
+            "total_tokens": 529
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1657.520109,
+            "prompt_eval_duration_ms": 30.142938,
+            "generation_duration_ms": 1586.520492,
+            "load_duration_ms": 38.498676,
+            "tokens_per_second": 139.29854742777567
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\", \"green\"],\n      \"size\": \"large\",\n      \"description\": \"woman wearing sunglasses on head, talking on phone, wearing green and white striped top\"\n    }\n  },\n  \"man-made\": {\n    \"car\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"partially visible car with blue and white color scheme\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "brown",
+                  "green"
+                ],
+                "size": "large",
+                "description": "woman wearing sunglasses on head, talking on phone, wearing green and white striped top"
+              }
+            },
+            "man-made": {
+              "car": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "blue",
+                  "white"
+                ],
+                "size": "large",
+                "description": "partially visible car with blue and white color scheme"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 136,
+            "total_tokens": 622
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1063.131865,
+            "prompt_eval_duration_ms": 45.645293,
+            "generation_duration_ms": 977.093566,
+            "load_duration_ms": 38.048727,
+            "tokens_per_second": 139.1883077858687
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2582,
+        "total_time_ms": 6780.249653,
+        "average_speed": 138.7983254148151
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a woman outdoors, engaged in a phone conversation. She is positioned in the foreground, with her face and upper body clearly visible. Her long, straight, reddish-blonde hair cascades over her shoulders, and she wears black sunglasses pushed up onto her head. She is holding a mobile phone to her ear with her right hand, her expression appearing focused or concerned. She is dressed in a green sweater with a patterned design, and a strap from a bag is visible over her shoulder, suggesting she may be carrying a bag or purse.\n\nThe background is slightly blurred, indicating a shallow depth of field, which emphasizes the woman as the main subject. The setting appears to be an urban environment, with cars visible in the background. A blue vehicle is prominent on the left side, and part of a white vehicle is visible on the right. The lighting is bright and natural, suggesting the photo was taken during the daytime, likely in sunny weather. The overall composition centers on the woman, with the background elements providing context without distracting from her presence. The colors are vibrant, with the green of her sweater, the blue of the car, and the warm tones of her hair creating a balanced and visually engaging scene. The image conveys a sense of everyday life and candidness.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 261,
+            "total_tokens": 558
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13396.48885,
+            "prompt_eval_duration_ms": 3584.863243,
+            "generation_duration_ms": 9770.858337,
+            "load_duration_ms": 38.319188,
+            "tokens_per_second": 26.71208516161296
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the closest elements to the viewer are a woman with long, light brown hair and sunglasses perched on top of her head. She is wearing a green sweater and appears to be engaged in a phone conversation, holding a mobile phone to her ear with her right hand. Her expression suggests concentration or concern, and she is the primary subject of the photograph. The woman's presence dominates the foreground, drawing immediate attention due to her proximity and the directness of her gaze, which is slightly downward.\n\nIn the background, the setting appears to be an urban environment. There are cars visible, including a blue vehicle on the left and a white vehicle on the right, indicating a parking lot or street scene. The background also includes blurred elements of buildings and trees, suggesting a mix of urban architecture and greenery. The background is out of focus, creating a sense of depth and emphasizing the woman in the foreground. The blurred nature of the background elements ensures that they do not distract from the main subject but rather provide context for the setting.\n\nThe relationship between the foreground and background is one of contrast and depth. The sharp focus on the woman in the foreground contrasts with the blurred background, creating a visual hierarchy that guides the viewer's attention. The background elements, while not the primary focus, provide a realistic and relatable urban setting that complements the scene, suggesting that the woman is in a public or semi-public space. This layering of elements effectively establishes a sense of place and context, making the image both engaging and informative.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 312,
+            "total_tokens": 615
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11754.385586,
+            "prompt_eval_duration_ms": 75.217021,
+            "generation_duration_ms": 11637.323785,
+            "load_duration_ms": 38.557697,
+            "tokens_per_second": 26.81028780879624
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image shows a woman with long, light brown hair and sunglasses perched on her head. She is holding a mobile phone to her ear, appearing to be engaged in a conversation. Her expression suggests she is focused or possibly concerned, as she looks downward, not directly at the camera. The background features a blurred urban setting with cars, including a blue vehicle on the left and a white vehicle on the right, indicating she might be in a parking lot or a street. The trees in the background suggest it is a sunny day, as the lighting is bright and casts shadows.\n\nThere are no animals visible in the image. The primary interaction in the scene is between the woman and her phone, as she is actively using it for communication. The cars in the background are stationary, and there is no visible interaction between the woman and the vehicles. The overall atmosphere suggests a casual, everyday moment, with the woman possibly multitasking or managing a situation while outdoors. The image captures a solitary moment, emphasizing the woman's engagement with her phone and her surroundings.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 212,
+            "total_tokens": 518
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8038.579938,
+            "prompt_eval_duration_ms": 78.709281,
+            "generation_duration_ms": 7916.483099,
+            "load_duration_ms": 38.970679,
+            "tokens_per_second": 26.779568319520518
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood that is predominantly neutral to slightly negative, with a hint of seriousness or contemplation. The woman's expression is focused and somewhat concerned, as she appears to be engaged in a phone call. Her furrowed brow and the way she holds the phone close to her ear suggest concentration or perhaps a sense of urgency or concern about the conversation. The sunglasses perched on her head add a casual yet slightly guarded element to her demeanor, hinting that she might be trying to shield her emotions or thoughts from being fully visible.\n\nThe background, featuring blurred cars and a street setting, contributes to a sense of everyday life, but the lack of vibrant colors or cheerful elements reinforces the neutral or subdued tone. The lighting is natural, with sunlight highlighting her hair and face, which adds a touch of realism but does not necessarily evoke warmth or happiness. The overall composition, with the woman as the central focus, emphasizes her emotional state, making the mood feel introspective and somewhat solitary.\n\nThe image does not evoke strong positive emotions, as there are no clear indicators of joy or relaxation. Instead, it leaves the viewer with a sense of curiosity about the nature of the phone call and the woman's thoughts, creating a slightly tense or pensive atmosphere. The visual elements, such as her expression, the sunglasses, and the urban backdrop, all work together to convey a mood that is more serious than lighthearted.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 289,
+            "total_tokens": 597
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10862.364153,
+            "prompt_eval_duration_ms": 73.416677,
+            "generation_duration_ms": 10746.935289,
+            "load_duration_ms": 39.691543,
+            "tokens_per_second": 26.8913873796007
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, foreground\",\n      \"color\": [\"blonde\", \"green\"],\n      \"size\": \"medium\",\n      \"description\": \"A woman with long blonde hair wearing sunglasses on her head, holding a phone to her ear, and wearing a green top.\"\n    }\n  },\n  \"man-made\": {\n    \"car\": {\n      \"count\": 2,\n      \"location\": \"left, background\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Two cars, one blue and one white, parked in the background.\"\n    },\n    \"sunglasses\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Black sunglasses worn on the head.\"\n    },\n    \"phone\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"A black phone being held to the ear.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"right, background\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"A tree with green leaves in the background.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center, foreground",
+                "color": [
+                  "blonde",
+                  "green"
+                ],
+                "size": "medium",
+                "description": "A woman with long blonde hair wearing sunglasses on her head, holding a phone to her ear, and wearing a green top."
+              }
+            },
+            "man-made": {
+              "car": {
+                "count": 2,
+                "location": "left, background",
+                "color": [
+                  "blue",
+                  "white"
+                ],
+                "size": "large",
+                "description": "Two cars, one blue and one white, parked in the background."
+              },
+              "sunglasses": {
+                "count": 1,
+                "location": "center, top",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "Black sunglasses worn on the head."
+              },
+              "phone": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "A black phone being held to the ear."
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 1,
+                "location": "right, background",
+                "color": [
+                  "green"
+                ],
+                "size": "medium",
+                "description": "A tree with green leaves in the background."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 312,
+            "total_tokens": 798
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11787.546521,
+            "prompt_eval_duration_ms": 142.084749,
+            "generation_duration_ms": 11600.098841,
+            "load_duration_ms": 42.613827,
+            "tokens_per_second": 26.896322546601997
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3086,
+        "total_time_ms": 55839.36504800001,
+        "average_speed": 26.81793024322648
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -469,297 +760,6 @@
         "total_tokens": 2793,
         "total_time_ms": 25063.298437,
         "average_speed": 41.933356514694644
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a close-up of a woman engaged in a phone conversation, set against the backdrop of a blurred urban environment. The woman, with her long, light brown hair, is wearing a green and white striped top, and her sunglasses rest on her head, suggesting a sunny day. Her expression is serious, with her eyebrows slightly furrowed, indicating she is focused on the conversation. The lighting is natural, likely from the sun, casting soft shadows and highlighting the contours of her face and the texture of her hair. The background is out of focus, featuring the hood of a blue car and hints of greenery, possibly trees or bushes, which suggest a street or parking area. The overall composition is tight and centered on the woman, with the background elements providing context and depth without distracting from the main subject. The colors are vibrant, with the blue of the car contrasting against the warmer tones of her hair and clothing.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 188,
-            "total_tokens": 485
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1468.34942,
-            "prompt_eval_duration_ms": 81.47037,
-            "generation_duration_ms": 1342.73489,
-            "load_duration_ms": 41.607731,
-            "tokens_per_second": 140.0127466710871
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, a woman with long, light brown hair is the central focus. She is wearing a green and white striped top and has sunglasses perched on her head. Her expression is serious as she appears to be engaged in a phone conversation, holding the phone to her ear with her left hand. The background elements, which are slightly out of focus, reveal a street setting with a white car and a portion of a building with columns and greenery, suggesting an urban environment. The blurred background helps to emphasize the woman in the foreground, creating a sense of depth and placing her in a public space, possibly near a parking area or a city street. The interplay between the sharpness of the woman and the soft blur of the background elements highlights her as the primary subject of the photograph, while still providing context to her environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 172,
-            "total_tokens": 475
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1313.253721,
-            "prompt_eval_duration_ms": 31.909947,
-            "generation_duration_ms": 1241.471911,
-            "load_duration_ms": 37.124528,
-            "tokens_per_second": 138.54522077866005
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a woman with long, reddish-brown hair is the central figure, engaged in a phone conversation. She is holding a black mobile phone to her ear with her right hand, her expression focused and slightly concerned, suggesting she is listening intently to the caller. Her sunglasses are perched atop her head, and she wears a green and white striped sweater, indicating a casual yet put-together appearance. The background features a blurred urban setting with a white car and hints of greenery, suggesting she is outdoors, possibly in a city or town. The woman's interaction with the phone and her surroundings indicates she is likely multitasking, possibly commuting or running errands while communicating. There are no animals or other people visible in the image, and the focus remains solely on her and her immediate environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 165,
-            "total_tokens": 471
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1277.994538,
-            "prompt_eval_duration_ms": 31.59487,
-            "generation_duration_ms": 1204.847391,
-            "load_duration_ms": 39.219347,
-            "tokens_per_second": 136.94680441068408
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of contemplation and mild distress, evoking a sense of introspection and perhaps a touch of sadness. The woman's expression is serious and somewhat pensive, with her eyes slightly downcast and a furrowed brow, suggesting she might be deep in thought or dealing with a serious matter. The angle of her head and the way she holds the phone to her ear indicate she is engaged in a conversation, but the overall tone of the image is not one of joy or excitement. The background, with its blurred urban setting and the presence of a car, adds to the feeling of being in a public space, perhaps hinting at the isolation or the mundanity of daily life that can sometimes accompany such serious conversations. The lighting, which is natural and slightly harsh, further emphasizes the seriousness of the scene, as it casts subtle shadows that accentuate the woman's features and the texture of her clothing. The muted colors of her sweater and the background contribute to the subdued and reflective atmosphere, making the overall tone of the image lean towards the negative side of the spectrum.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 221,
-            "total_tokens": 529
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1657.520109,
-            "prompt_eval_duration_ms": 30.142938,
-            "generation_duration_ms": 1586.520492,
-            "load_duration_ms": 38.498676,
-            "tokens_per_second": 139.29854742777567
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\", \"green\"],\n      \"size\": \"large\",\n      \"description\": \"woman wearing sunglasses on head, talking on phone, wearing green and white striped top\"\n    }\n  },\n  \"man-made\": {\n    \"car\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"partially visible car with blue and white color scheme\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "brown",
-                  "green"
-                ],
-                "size": "large",
-                "description": "woman wearing sunglasses on head, talking on phone, wearing green and white striped top"
-              }
-            },
-            "man-made": {
-              "car": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "blue",
-                  "white"
-                ],
-                "size": "large",
-                "description": "partially visible car with blue and white color scheme"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 136,
-            "total_tokens": 622
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1063.131865,
-            "prompt_eval_duration_ms": 45.645293,
-            "generation_duration_ms": 977.093566,
-            "load_duration_ms": 38.048727,
-            "tokens_per_second": 139.1883077858687
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2582,
-        "total_time_ms": 6780.249653,
-        "average_speed": 138.7983254148151
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a woman outdoors, engaged in a phone conversation. She is positioned in the foreground, with her face and upper body clearly visible. Her long, straight, reddish-blonde hair cascades over her shoulders, and she wears black sunglasses pushed up onto her head. She is holding a mobile phone to her ear with her right hand, her expression appearing focused or concerned. She is dressed in a green sweater with a patterned design, and a strap from a bag is visible over her shoulder, suggesting she may be carrying a bag or purse.\n\nThe background is slightly blurred, indicating a shallow depth of field, which emphasizes the woman as the main subject. The setting appears to be an urban environment, with cars visible in the background. A blue vehicle is prominent on the left side, and part of a white vehicle is visible on the right. The lighting is bright and natural, suggesting the photo was taken during the daytime, likely in sunny weather. The overall composition centers on the woman, with the background elements providing context without distracting from her presence. The colors are vibrant, with the green of her sweater, the blue of the car, and the warm tones of her hair creating a balanced and visually engaging scene. The image conveys a sense of everyday life and candidness.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 261,
-            "total_tokens": 558
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13396.48885,
-            "prompt_eval_duration_ms": 3584.863243,
-            "generation_duration_ms": 9770.858337,
-            "load_duration_ms": 38.319188,
-            "tokens_per_second": 26.71208516161296
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the closest elements to the viewer are a woman with long, light brown hair and sunglasses perched on top of her head. She is wearing a green sweater and appears to be engaged in a phone conversation, holding a mobile phone to her ear with her right hand. Her expression suggests concentration or concern, and she is the primary subject of the photograph. The woman's presence dominates the foreground, drawing immediate attention due to her proximity and the directness of her gaze, which is slightly downward.\n\nIn the background, the setting appears to be an urban environment. There are cars visible, including a blue vehicle on the left and a white vehicle on the right, indicating a parking lot or street scene. The background also includes blurred elements of buildings and trees, suggesting a mix of urban architecture and greenery. The background is out of focus, creating a sense of depth and emphasizing the woman in the foreground. The blurred nature of the background elements ensures that they do not distract from the main subject but rather provide context for the setting.\n\nThe relationship between the foreground and background is one of contrast and depth. The sharp focus on the woman in the foreground contrasts with the blurred background, creating a visual hierarchy that guides the viewer's attention. The background elements, while not the primary focus, provide a realistic and relatable urban setting that complements the scene, suggesting that the woman is in a public or semi-public space. This layering of elements effectively establishes a sense of place and context, making the image both engaging and informative.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 312,
-            "total_tokens": 615
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11754.385586,
-            "prompt_eval_duration_ms": 75.217021,
-            "generation_duration_ms": 11637.323785,
-            "load_duration_ms": 38.557697,
-            "tokens_per_second": 26.81028780879624
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image shows a woman with long, light brown hair and sunglasses perched on her head. She is holding a mobile phone to her ear, appearing to be engaged in a conversation. Her expression suggests she is focused or possibly concerned, as she looks downward, not directly at the camera. The background features a blurred urban setting with cars, including a blue vehicle on the left and a white vehicle on the right, indicating she might be in a parking lot or a street. The trees in the background suggest it is a sunny day, as the lighting is bright and casts shadows.\n\nThere are no animals visible in the image. The primary interaction in the scene is between the woman and her phone, as she is actively using it for communication. The cars in the background are stationary, and there is no visible interaction between the woman and the vehicles. The overall atmosphere suggests a casual, everyday moment, with the woman possibly multitasking or managing a situation while outdoors. The image captures a solitary moment, emphasizing the woman's engagement with her phone and her surroundings.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 212,
-            "total_tokens": 518
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8038.579938,
-            "prompt_eval_duration_ms": 78.709281,
-            "generation_duration_ms": 7916.483099,
-            "load_duration_ms": 38.970679,
-            "tokens_per_second": 26.779568319520518
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood that is predominantly neutral to slightly negative, with a hint of seriousness or contemplation. The woman's expression is focused and somewhat concerned, as she appears to be engaged in a phone call. Her furrowed brow and the way she holds the phone close to her ear suggest concentration or perhaps a sense of urgency or concern about the conversation. The sunglasses perched on her head add a casual yet slightly guarded element to her demeanor, hinting that she might be trying to shield her emotions or thoughts from being fully visible.\n\nThe background, featuring blurred cars and a street setting, contributes to a sense of everyday life, but the lack of vibrant colors or cheerful elements reinforces the neutral or subdued tone. The lighting is natural, with sunlight highlighting her hair and face, which adds a touch of realism but does not necessarily evoke warmth or happiness. The overall composition, with the woman as the central focus, emphasizes her emotional state, making the mood feel introspective and somewhat solitary.\n\nThe image does not evoke strong positive emotions, as there are no clear indicators of joy or relaxation. Instead, it leaves the viewer with a sense of curiosity about the nature of the phone call and the woman's thoughts, creating a slightly tense or pensive atmosphere. The visual elements, such as her expression, the sunglasses, and the urban backdrop, all work together to convey a mood that is more serious than lighthearted.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 289,
-            "total_tokens": 597
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10862.364153,
-            "prompt_eval_duration_ms": 73.416677,
-            "generation_duration_ms": 10746.935289,
-            "load_duration_ms": 39.691543,
-            "tokens_per_second": 26.8913873796007
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, foreground\",\n      \"color\": [\"blonde\", \"green\"],\n      \"size\": \"medium\",\n      \"description\": \"A woman with long blonde hair wearing sunglasses on her head, holding a phone to her ear, and wearing a green top.\"\n    }\n  },\n  \"man-made\": {\n    \"car\": {\n      \"count\": 2,\n      \"location\": \"left, background\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Two cars, one blue and one white, parked in the background.\"\n    },\n    \"sunglasses\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Black sunglasses worn on the head.\"\n    },\n    \"phone\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"A black phone being held to the ear.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"right, background\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"A tree with green leaves in the background.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center, foreground",
-                "color": [
-                  "blonde",
-                  "green"
-                ],
-                "size": "medium",
-                "description": "A woman with long blonde hair wearing sunglasses on her head, holding a phone to her ear, and wearing a green top."
-              }
-            },
-            "man-made": {
-              "car": {
-                "count": 2,
-                "location": "left, background",
-                "color": [
-                  "blue",
-                  "white"
-                ],
-                "size": "large",
-                "description": "Two cars, one blue and one white, parked in the background."
-              },
-              "sunglasses": {
-                "count": 1,
-                "location": "center, top",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "Black sunglasses worn on the head."
-              },
-              "phone": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "A black phone being held to the ear."
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 1,
-                "location": "right, background",
-                "color": [
-                  "green"
-                ],
-                "size": "medium",
-                "description": "A tree with green leaves in the background."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 312,
-            "total_tokens": 798
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11787.546521,
-            "prompt_eval_duration_ms": 142.084749,
-            "generation_duration_ms": 11600.098841,
-            "load_duration_ms": 42.613827,
-            "tokens_per_second": 26.896322546601997
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3086,
-        "total_time_ms": 55839.36504800001,
-        "average_speed": 26.81793024322648
       }
     },
     {

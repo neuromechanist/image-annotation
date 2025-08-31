@@ -7,6 +7,464 @@
   "timestamp": "2025-08-30T23:55:52.184778+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image presents a well-organized workspace set against a backdrop of a large window that offers a view of a suburban neighborhood with houses and trees. The desk, made of a warm-toned wood, serves as the primary focus of the scene. On the desk, a sleek black monitor displays a serene desktop wallpaper of a desert landscape with a dirt road winding through it. Below the monitor, a black stand holds a compact white Apple computer, which is the centerpiece of the setup. To the left of the computer, a white keyboard and a silver Apple Magic Mouse are neatly placed, reflecting the minimalist aesthetic of the workspace. To the right of the computer, a small framed picture adds a personal touch to the otherwise functional space. The lighting in the room is natural, streaming in through the window, which enhances the earthy tones of the desk and the green hues of the outdoor view. The overall composition is clean and modern, with a balance between technology and personal elements, creating a comfortable and efficient working environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 203,
+            "total_tokens": 500
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1589.079877,
+            "prompt_eval_duration_ms": 80.44688,
+            "generation_duration_ms": 1467.414647,
+            "load_duration_ms": 38.007311,
+            "tokens_per_second": 138.33854010862956
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the viewer's attention is drawn to a neatly arranged desk setup. A sleek, silver Apple Magic Keyboard and a matching Magic Mouse rest on the desk, their minimalist design reflecting the modern aesthetic of the workspace. Adjacent to these peripherals, a compact white Apple Airport Extreme router sits, hinting at a wireless network setup. The desk itself is a light brown, smooth surface that provides a neutral backdrop for the items placed upon it. A black stand supports a monitor displaying a serene desktop background of a desert landscape, suggesting a calm and organized work environment. To the right, a small framed picture adds a personal touch, while a silver external hard drive stands upright, ready for data storage. The background reveals a large window that frames a view of a suburban neighborhood, with houses and trees visible, indicating that the workspace is located in a residential area. The window acts as a natural divider, separating the personal workspace from the external environment, and the outdoor scenery provides a contrast to the indoor, tech-focused setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 209,
+            "total_tokens": 512
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1585.94575,
+            "prompt_eval_duration_ms": 31.078096,
+            "generation_duration_ms": 1512.333721,
+            "load_duration_ms": 40.214095,
+            "tokens_per_second": 138.19701108152438
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, there are no people or animals present, only objects arranged in a workspace. The primary object is a computer monitor displaying a serene landscape, suggesting a desktop setup for work or leisure. The monitor sits atop a black stand, which holds a keyboard and a mouse, indicating a user-friendly interface for interaction. To the right of the monitor, a white Apple Airport Extreme router is placed, hinting at a wireless network setup for connectivity. Adjacent to the router, a small framed picture adds a personal touch to the workspace, possibly serving as a decorative element or a reminder. The desk itself is a simple wooden surface, providing a stable platform for the various items. In the background, a window offers a view of a residential area with houses and trees, suggesting the workspace is located in a home or office environment. The overall arrangement of objects and the view outside the window create a calm and organized atmosphere, conducive to focused work or relaxation.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 192,
+            "total_tokens": 498
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1459.327874,
+            "prompt_eval_duration_ms": 30.96553,
+            "generation_duration_ms": 1387.053388,
+            "load_duration_ms": 38.507337,
+            "tokens_per_second": 138.42293430164636
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of calm and productivity, leaning towards a positive mood. The clean and organized desk, with its neatly arranged keyboard, mouse, and monitor, suggests a well-maintained workspace, which can be associated with efficiency and focus. The presence of the monitor displaying a serene landscape adds a touch of tranquility, contrasting with the structured environment of the desk. The natural light streaming in through the window enhances the feeling of openness and positivity, while the view of the greenery outside further contributes to a peaceful atmosphere. The framed picture on the desk, though partially obscured, hints at personalization and a connection to the user's interests or memories, adding a layer of warmth and comfort to the scene. Overall, the image conveys a mood of contentment and readiness for work, with its balanced blend of technology and nature creating a harmonious and uplifting environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 177,
+            "total_tokens": 485
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1345.438473,
+            "prompt_eval_duration_ms": 29.504604,
+            "generation_duration_ms": 1273.07577,
+            "load_duration_ms": 40.627427,
+            "tokens_per_second": 139.03335855649817
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"computer_monitor\": {\n      \"count\": 1,\n      \"location\": \"top left\",\n      \"color\": [\"black\"],\n      \"size\": \"large\",\n      \"description\": \"displaying a desktop background with a landscape image\"\n    },\n    \"keyboard\": {\n      \"count\": 1,\n      \"location\": \"bottom left\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Apple Magic Keyboard\"\n    },\n    \"mouse\": {\n      \"count\": 1,\n      \"location\": \"bottom center\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Apple Magic Mouse\"\n    },\n    \"computer_case\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Apple Mac mini\"\n    },\n    \"router\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"white and gray router\"\n    },\n    \"router_antenna\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"antenna attached to the router\"\n    },\n    \"router_antenna\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"antenna attached to the router\"\n    },\n    \"desk\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"wooden desk\"\n    },\n    \"chair\": {\n      \"count\": 1,\n      \"location\": \"bottom right\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"partially visible black office chair\"\n    },\n    \"window\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"window with view of buildings and trees\"\n    },\n    \"frame\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"picture frame on the desk\"\n    }\n  },\n  \"natural\": {\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"trees visible through the window\"\n    },\n    \"buildings\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"buildings visible through the window\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "computer_monitor": {
+                "count": 1,
+                "location": "top left",
+                "color": [
+                  "black"
+                ],
+                "size": "large",
+                "description": "displaying a desktop background with a landscape image"
+              },
+              "keyboard": {
+                "count": 1,
+                "location": "bottom left",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "Apple Magic Keyboard"
+              },
+              "mouse": {
+                "count": 1,
+                "location": "bottom center",
+                "color": [
+                  "silver"
+                ],
+                "size": "small",
+                "description": "Apple Magic Mouse"
+              },
+              "computer_case": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "Apple Mac mini"
+              },
+              "router": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "gray"
+                ],
+                "size": "small",
+                "description": "white and gray router"
+              },
+              "router_antenna": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "gray"
+                ],
+                "size": "small",
+                "description": "antenna attached to the router"
+              },
+              "desk": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "wooden desk"
+              },
+              "chair": {
+                "count": 1,
+                "location": "bottom right",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "partially visible black office chair"
+              },
+              "window": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "window with view of buildings and trees"
+              },
+              "frame": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "brown"
+                ],
+                "size": "small",
+                "description": "picture frame on the desk"
+              }
+            },
+            "natural": {
+              "trees": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "green"
+                ],
+                "size": "medium",
+                "description": "trees visible through the window"
+              },
+              "buildings": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "buildings visible through the window"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 632,
+            "total_tokens": 1118
+          },
+          "performance_metrics": {
+            "total_duration_ms": 4652.877753,
+            "prompt_eval_duration_ms": 45.242602,
+            "generation_duration_ms": 4565.932901,
+            "load_duration_ms": 38.840726,
+            "tokens_per_second": 138.4164011393123
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3113,
+        "total_time_ms": 10632.669727,
+        "average_speed": 138.48164903752215
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a modern, minimalist workspace situated in a well-lit room with large windows offering a scenic view of a cityscape and lush green trees in the background. The setting appears to be an office or home office, characterized by a clean and organized desk setup. The main elements on the desk include a sleek, black computer monitor displaying a landscape wallpaper, a compact white Apple Mac Mini, a silver wireless router, a small framed picture or certificate, a black ergonomic keyboard, and a matching wireless mouse. The desk itself is a light brown wood surface, contributing to a warm and inviting tone. The lighting is natural, coming from the large windows, which allow ample sunlight to illuminate the space, creating a bright and airy atmosphere. The overall composition is balanced, with the monitor and keyboard positioned centrally, drawing the viewer's focus. The background view through the windows adds depth and context, suggesting an urban environment with a mix of residential and green spaces. The color palette is neutral, dominated by earthy tones from the desk and metallic hues from the electronic devices, complemented by the vibrant greens of the trees outside. The scene exudes a sense of productivity and tranquility.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 237,
+            "total_tokens": 534
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12328.019227,
+            "prompt_eval_duration_ms": 3429.422635,
+            "generation_duration_ms": 8858.681123,
+            "load_duration_ms": 37.583614,
+            "tokens_per_second": 26.753418111491943
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a sleek, modern desk setup. Closest to the viewer is a minimalist desk with a clean, brown surface. On the desk, there is a white Apple keyboard and a matching wireless mouse, both positioned neatly in front of a black monitor displaying a scenic landscape. To the left of the monitor, a black stand holds a second screen, likely for multitasking. A small, silver Apple Mac mini sits to the right of the monitor, accompanied by a pair of silver Apple AirPort Extreme wireless routers, suggesting a focus on connectivity and technology. A framed picture or certificate is also visible on the desk, adding a personal touch to the workspace. The desk chair, partially visible in the bottom right corner, has a black leather-like upholstery, complementing the overall modern aesthetic.\n\nIn the background, the setting transitions to a large window that offers a view of an urban landscape. Beyond the window, there are multiple buildings with red-tiled roofs, surrounded by lush green trees, indicating a mix of residential and possibly commercial structures. The sky is clear, suggesting a pleasant day. The window acts as a natural frame, contrasting the indoor workspace with the outdoor environment. The juxtaposition of the organized, high-tech workspace against the more organic, natural backdrop of the cityscape creates a balance between modernity and the external world, highlighting the user's immersion in technology while still being connected to the broader environment. The desk setup and the window view work together to create a harmonious blend of functionality and aesthetic appeal.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 310,
+            "total_tokens": 613
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11626.194158,
+            "prompt_eval_duration_ms": 72.187393,
+            "generation_duration_ms": 11513.684523,
+            "load_duration_ms": 37.878993,
+            "tokens_per_second": 26.9244827214726
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a clean, organized office workspace with no visible people or animals. The focus is on the arrangement of objects and their interactions within the setting. At the center of the desk is a computer setup featuring a large monitor displaying a scenic landscape, likely from a video game or digital artwork. Below the monitor is a sleek, modern keyboard and a wireless mouse, both positioned for ergonomic use. To the left of the monitor, there is a black stand holding what appears to be a tablet or another electronic device, suggesting a multi-device workspace. On the right side of the desk, there is a small, silver Apple Mac Mini, indicating a preference for Apple products. Adjacent to the Mac Mini are two metallic objects that resemble antennas or speakers, possibly for audio or communication purposes. A framed picture or certificate is placed on the far right, adding a personal touch to the workspace. The desk itself is a light brown wood surface, and the background features a large window offering a view of a cityscape with trees and buildings, suggesting the workspace is located in an urban area. The overall arrangement indicates a professional and tech-savvy environment, with each object placed for functionality and aesthetic balance. There is no interaction between people or animals, as they are not present in the image. The objects are arranged to facilitate a focused and efficient work environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 271,
+            "total_tokens": 577
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10209.13896,
+            "prompt_eval_duration_ms": 80.342485,
+            "generation_duration_ms": 10084.448032,
+            "load_duration_ms": 40.031133,
+            "tokens_per_second": 26.87306227768362
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of calmness, productivity, and a touch of nostalgia, with an overall neutral yet slightly positive tone. The workspace is clean, organized, and well-lit, suggesting a sense of order and focus. The large monitor displaying a serene landscape with a winding road and open sky evokes feelings of tranquility and escape, as if inviting the viewer to momentarily step away from the desk and imagine themselves in a peaceful, natural setting. The presence of a framed picture and small decorative items, such as the metallic sculptures, adds a personal touch, hinting at individuality and a sense of comfort within the workspace.\n\nThe large window in the background, showcasing a view of trees and buildings, contributes to the overall sense of openness and connection to the outside world, which can be uplifting and inspiring. The natural light streaming in enhances the positive ambiance, creating a warm and inviting atmosphere. The modern yet minimalistic design of the desk setup, including the sleek keyboard, mouse, and computer tower, reflects a contemporary and efficient work environment, which can foster feelings of motivation and concentration.\n\nOverall, the image evokes a balanced emotional atmosphere, blending productivity with relaxation, and suggesting a harmonious relationship between work and personal well-being. The visual elements work together to create a space that feels both functional and aesthetically pleasing, encouraging a positive and focused mindset.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 276,
+            "total_tokens": 584
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10403.642637,
+            "prompt_eval_duration_ms": 73.219018,
+            "generation_duration_ms": 10289.37587,
+            "load_duration_ms": 38.621229,
+            "tokens_per_second": 26.823784405107943
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"computer_monitor\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"black\"],\n      \"size\": \"large\",\n      \"description\": \"Displaying a desert landscape scene\"\n    },\n    \"keyboard\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"silver\"],\n      \"size\": \"medium\",\n      \"description\": \"Wireless keyboard\"\n    },\n    \"mouse\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Wireless mouse\"\n    },\n    \"computer\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Apple Mac mini\"\n    },\n    \"desk\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Wooden desk\"\n    },\n    \"chair\": {\n      \"count\": 1,\n      \"location\": \"right, bottom\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Partial view of a chair\"\n    },\n    \"frame\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"black\", \"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Framed picture\"\n    },\n    \"antenna\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Metallic antenna\"\n    },\n    \"speakers\": {\n      \"count\": 2,\n      \"location\": \"right, middle\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Metallic speakers\"\n    },\n    \"window\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"black\"],\n      \"size\": \"large\",\n      \"description\": \"Large window with a view\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"background, center\",\n      \"color\": [\"red\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Building visible through the window\"\n    },\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"background, center\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Metal fence visible through the window\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 10,\n      \"location\": \"background, center\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Trees visible through the window\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"background, top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"Clear sky visible through the window\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "computer_monitor": {
+                "count": 1,
+                "location": "center, top",
+                "color": [
+                  "black"
+                ],
+                "size": "large",
+                "description": "Displaying a desert landscape scene"
+              },
+              "keyboard": {
+                "count": 1,
+                "location": "center, bottom",
+                "color": [
+                  "silver"
+                ],
+                "size": "medium",
+                "description": "Wireless keyboard"
+              },
+              "mouse": {
+                "count": 1,
+                "location": "center, bottom",
+                "color": [
+                  "silver"
+                ],
+                "size": "small",
+                "description": "Wireless mouse"
+              },
+              "computer": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "silver"
+                ],
+                "size": "small",
+                "description": "Apple Mac mini"
+              },
+              "desk": {
+                "count": 1,
+                "location": "center, bottom",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "Wooden desk"
+              },
+              "chair": {
+                "count": 1,
+                "location": "right, bottom",
+                "color": [
+                  "black"
+                ],
+                "size": "medium",
+                "description": "Partial view of a chair"
+              },
+              "frame": {
+                "count": 1,
+                "location": "right, middle",
+                "color": [
+                  "black",
+                  "silver"
+                ],
+                "size": "small",
+                "description": "Framed picture"
+              },
+              "antenna": {
+                "count": 1,
+                "location": "right, middle",
+                "color": [
+                  "silver"
+                ],
+                "size": "small",
+                "description": "Metallic antenna"
+              },
+              "speakers": {
+                "count": 2,
+                "location": "right, middle",
+                "color": [
+                  "silver"
+                ],
+                "size": "small",
+                "description": "Metallic speakers"
+              },
+              "window": {
+                "count": 1,
+                "location": "center, top",
+                "color": [
+                  "black"
+                ],
+                "size": "large",
+                "description": "Large window with a view"
+              },
+              "building": {
+                "count": 1,
+                "location": "background, center",
+                "color": [
+                  "red",
+                  "white"
+                ],
+                "size": "large",
+                "description": "Building visible through the window"
+              },
+              "fence": {
+                "count": 1,
+                "location": "background, center",
+                "color": [
+                  "black"
+                ],
+                "size": "medium",
+                "description": "Metal fence visible through the window"
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 10,
+                "location": "background, center",
+                "color": [
+                  "green"
+                ],
+                "size": "small",
+                "description": "Trees visible through the window"
+              },
+              "sky": {
+                "count": 1,
+                "location": "background, top",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "Clear sky visible through the window"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 695,
+            "total_tokens": 1181
+          },
+          "performance_metrics": {
+            "total_duration_ms": 26056.358316,
+            "prompt_eval_duration_ms": 140.244092,
+            "generation_duration_ms": 25872.589677,
+            "load_duration_ms": 39.314651,
+            "tokens_per_second": 26.8624056840292
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3489,
+        "total_time_ms": 70623.353298,
+        "average_speed": 26.84743063995706
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -649,464 +1107,6 @@
         "total_tokens": 3204,
         "total_time_ms": 34944.304604,
         "average_speed": 41.849848422984024
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image presents a well-organized workspace set against a backdrop of a large window that offers a view of a suburban neighborhood with houses and trees. The desk, made of a warm-toned wood, serves as the primary focus of the scene. On the desk, a sleek black monitor displays a serene desktop wallpaper of a desert landscape with a dirt road winding through it. Below the monitor, a black stand holds a compact white Apple computer, which is the centerpiece of the setup. To the left of the computer, a white keyboard and a silver Apple Magic Mouse are neatly placed, reflecting the minimalist aesthetic of the workspace. To the right of the computer, a small framed picture adds a personal touch to the otherwise functional space. The lighting in the room is natural, streaming in through the window, which enhances the earthy tones of the desk and the green hues of the outdoor view. The overall composition is clean and modern, with a balance between technology and personal elements, creating a comfortable and efficient working environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 203,
-            "total_tokens": 500
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1589.079877,
-            "prompt_eval_duration_ms": 80.44688,
-            "generation_duration_ms": 1467.414647,
-            "load_duration_ms": 38.007311,
-            "tokens_per_second": 138.33854010862956
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the viewer's attention is drawn to a neatly arranged desk setup. A sleek, silver Apple Magic Keyboard and a matching Magic Mouse rest on the desk, their minimalist design reflecting the modern aesthetic of the workspace. Adjacent to these peripherals, a compact white Apple Airport Extreme router sits, hinting at a wireless network setup. The desk itself is a light brown, smooth surface that provides a neutral backdrop for the items placed upon it. A black stand supports a monitor displaying a serene desktop background of a desert landscape, suggesting a calm and organized work environment. To the right, a small framed picture adds a personal touch, while a silver external hard drive stands upright, ready for data storage. The background reveals a large window that frames a view of a suburban neighborhood, with houses and trees visible, indicating that the workspace is located in a residential area. The window acts as a natural divider, separating the personal workspace from the external environment, and the outdoor scenery provides a contrast to the indoor, tech-focused setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 209,
-            "total_tokens": 512
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1585.94575,
-            "prompt_eval_duration_ms": 31.078096,
-            "generation_duration_ms": 1512.333721,
-            "load_duration_ms": 40.214095,
-            "tokens_per_second": 138.19701108152438
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, there are no people or animals present, only objects arranged in a workspace. The primary object is a computer monitor displaying a serene landscape, suggesting a desktop setup for work or leisure. The monitor sits atop a black stand, which holds a keyboard and a mouse, indicating a user-friendly interface for interaction. To the right of the monitor, a white Apple Airport Extreme router is placed, hinting at a wireless network setup for connectivity. Adjacent to the router, a small framed picture adds a personal touch to the workspace, possibly serving as a decorative element or a reminder. The desk itself is a simple wooden surface, providing a stable platform for the various items. In the background, a window offers a view of a residential area with houses and trees, suggesting the workspace is located in a home or office environment. The overall arrangement of objects and the view outside the window create a calm and organized atmosphere, conducive to focused work or relaxation.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 192,
-            "total_tokens": 498
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1459.327874,
-            "prompt_eval_duration_ms": 30.96553,
-            "generation_duration_ms": 1387.053388,
-            "load_duration_ms": 38.507337,
-            "tokens_per_second": 138.42293430164636
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of calm and productivity, leaning towards a positive mood. The clean and organized desk, with its neatly arranged keyboard, mouse, and monitor, suggests a well-maintained workspace, which can be associated with efficiency and focus. The presence of the monitor displaying a serene landscape adds a touch of tranquility, contrasting with the structured environment of the desk. The natural light streaming in through the window enhances the feeling of openness and positivity, while the view of the greenery outside further contributes to a peaceful atmosphere. The framed picture on the desk, though partially obscured, hints at personalization and a connection to the user's interests or memories, adding a layer of warmth and comfort to the scene. Overall, the image conveys a mood of contentment and readiness for work, with its balanced blend of technology and nature creating a harmonious and uplifting environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 177,
-            "total_tokens": 485
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1345.438473,
-            "prompt_eval_duration_ms": 29.504604,
-            "generation_duration_ms": 1273.07577,
-            "load_duration_ms": 40.627427,
-            "tokens_per_second": 139.03335855649817
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"computer_monitor\": {\n      \"count\": 1,\n      \"location\": \"top left\",\n      \"color\": [\"black\"],\n      \"size\": \"large\",\n      \"description\": \"displaying a desktop background with a landscape image\"\n    },\n    \"keyboard\": {\n      \"count\": 1,\n      \"location\": \"bottom left\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Apple Magic Keyboard\"\n    },\n    \"mouse\": {\n      \"count\": 1,\n      \"location\": \"bottom center\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Apple Magic Mouse\"\n    },\n    \"computer_case\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Apple Mac mini\"\n    },\n    \"router\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"white and gray router\"\n    },\n    \"router_antenna\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"antenna attached to the router\"\n    },\n    \"router_antenna\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"antenna attached to the router\"\n    },\n    \"desk\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"wooden desk\"\n    },\n    \"chair\": {\n      \"count\": 1,\n      \"location\": \"bottom right\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"partially visible black office chair\"\n    },\n    \"window\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"window with view of buildings and trees\"\n    },\n    \"frame\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"picture frame on the desk\"\n    }\n  },\n  \"natural\": {\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"trees visible through the window\"\n    },\n    \"buildings\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"buildings visible through the window\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "computer_monitor": {
-                "count": 1,
-                "location": "top left",
-                "color": [
-                  "black"
-                ],
-                "size": "large",
-                "description": "displaying a desktop background with a landscape image"
-              },
-              "keyboard": {
-                "count": 1,
-                "location": "bottom left",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "Apple Magic Keyboard"
-              },
-              "mouse": {
-                "count": 1,
-                "location": "bottom center",
-                "color": [
-                  "silver"
-                ],
-                "size": "small",
-                "description": "Apple Magic Mouse"
-              },
-              "computer_case": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "Apple Mac mini"
-              },
-              "router": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "gray"
-                ],
-                "size": "small",
-                "description": "white and gray router"
-              },
-              "router_antenna": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "gray"
-                ],
-                "size": "small",
-                "description": "antenna attached to the router"
-              },
-              "desk": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "wooden desk"
-              },
-              "chair": {
-                "count": 1,
-                "location": "bottom right",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "partially visible black office chair"
-              },
-              "window": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "window with view of buildings and trees"
-              },
-              "frame": {
-                "count": 1,
-                "location": "right",
-                "color": [
-                  "brown"
-                ],
-                "size": "small",
-                "description": "picture frame on the desk"
-              }
-            },
-            "natural": {
-              "trees": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "green"
-                ],
-                "size": "medium",
-                "description": "trees visible through the window"
-              },
-              "buildings": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "buildings visible through the window"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 632,
-            "total_tokens": 1118
-          },
-          "performance_metrics": {
-            "total_duration_ms": 4652.877753,
-            "prompt_eval_duration_ms": 45.242602,
-            "generation_duration_ms": 4565.932901,
-            "load_duration_ms": 38.840726,
-            "tokens_per_second": 138.4164011393123
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3113,
-        "total_time_ms": 10632.669727,
-        "average_speed": 138.48164903752215
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a modern, minimalist workspace situated in a well-lit room with large windows offering a scenic view of a cityscape and lush green trees in the background. The setting appears to be an office or home office, characterized by a clean and organized desk setup. The main elements on the desk include a sleek, black computer monitor displaying a landscape wallpaper, a compact white Apple Mac Mini, a silver wireless router, a small framed picture or certificate, a black ergonomic keyboard, and a matching wireless mouse. The desk itself is a light brown wood surface, contributing to a warm and inviting tone. The lighting is natural, coming from the large windows, which allow ample sunlight to illuminate the space, creating a bright and airy atmosphere. The overall composition is balanced, with the monitor and keyboard positioned centrally, drawing the viewer's focus. The background view through the windows adds depth and context, suggesting an urban environment with a mix of residential and green spaces. The color palette is neutral, dominated by earthy tones from the desk and metallic hues from the electronic devices, complemented by the vibrant greens of the trees outside. The scene exudes a sense of productivity and tranquility.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 237,
-            "total_tokens": 534
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12328.019227,
-            "prompt_eval_duration_ms": 3429.422635,
-            "generation_duration_ms": 8858.681123,
-            "load_duration_ms": 37.583614,
-            "tokens_per_second": 26.753418111491943
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a sleek, modern desk setup. Closest to the viewer is a minimalist desk with a clean, brown surface. On the desk, there is a white Apple keyboard and a matching wireless mouse, both positioned neatly in front of a black monitor displaying a scenic landscape. To the left of the monitor, a black stand holds a second screen, likely for multitasking. A small, silver Apple Mac mini sits to the right of the monitor, accompanied by a pair of silver Apple AirPort Extreme wireless routers, suggesting a focus on connectivity and technology. A framed picture or certificate is also visible on the desk, adding a personal touch to the workspace. The desk chair, partially visible in the bottom right corner, has a black leather-like upholstery, complementing the overall modern aesthetic.\n\nIn the background, the setting transitions to a large window that offers a view of an urban landscape. Beyond the window, there are multiple buildings with red-tiled roofs, surrounded by lush green trees, indicating a mix of residential and possibly commercial structures. The sky is clear, suggesting a pleasant day. The window acts as a natural frame, contrasting the indoor workspace with the outdoor environment. The juxtaposition of the organized, high-tech workspace against the more organic, natural backdrop of the cityscape creates a balance between modernity and the external world, highlighting the user's immersion in technology while still being connected to the broader environment. The desk setup and the window view work together to create a harmonious blend of functionality and aesthetic appeal.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 310,
-            "total_tokens": 613
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11626.194158,
-            "prompt_eval_duration_ms": 72.187393,
-            "generation_duration_ms": 11513.684523,
-            "load_duration_ms": 37.878993,
-            "tokens_per_second": 26.9244827214726
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a clean, organized office workspace with no visible people or animals. The focus is on the arrangement of objects and their interactions within the setting. At the center of the desk is a computer setup featuring a large monitor displaying a scenic landscape, likely from a video game or digital artwork. Below the monitor is a sleek, modern keyboard and a wireless mouse, both positioned for ergonomic use. To the left of the monitor, there is a black stand holding what appears to be a tablet or another electronic device, suggesting a multi-device workspace. On the right side of the desk, there is a small, silver Apple Mac Mini, indicating a preference for Apple products. Adjacent to the Mac Mini are two metallic objects that resemble antennas or speakers, possibly for audio or communication purposes. A framed picture or certificate is placed on the far right, adding a personal touch to the workspace. The desk itself is a light brown wood surface, and the background features a large window offering a view of a cityscape with trees and buildings, suggesting the workspace is located in an urban area. The overall arrangement indicates a professional and tech-savvy environment, with each object placed for functionality and aesthetic balance. There is no interaction between people or animals, as they are not present in the image. The objects are arranged to facilitate a focused and efficient work environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 271,
-            "total_tokens": 577
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10209.13896,
-            "prompt_eval_duration_ms": 80.342485,
-            "generation_duration_ms": 10084.448032,
-            "load_duration_ms": 40.031133,
-            "tokens_per_second": 26.87306227768362
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of calmness, productivity, and a touch of nostalgia, with an overall neutral yet slightly positive tone. The workspace is clean, organized, and well-lit, suggesting a sense of order and focus. The large monitor displaying a serene landscape with a winding road and open sky evokes feelings of tranquility and escape, as if inviting the viewer to momentarily step away from the desk and imagine themselves in a peaceful, natural setting. The presence of a framed picture and small decorative items, such as the metallic sculptures, adds a personal touch, hinting at individuality and a sense of comfort within the workspace.\n\nThe large window in the background, showcasing a view of trees and buildings, contributes to the overall sense of openness and connection to the outside world, which can be uplifting and inspiring. The natural light streaming in enhances the positive ambiance, creating a warm and inviting atmosphere. The modern yet minimalistic design of the desk setup, including the sleek keyboard, mouse, and computer tower, reflects a contemporary and efficient work environment, which can foster feelings of motivation and concentration.\n\nOverall, the image evokes a balanced emotional atmosphere, blending productivity with relaxation, and suggesting a harmonious relationship between work and personal well-being. The visual elements work together to create a space that feels both functional and aesthetically pleasing, encouraging a positive and focused mindset.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 276,
-            "total_tokens": 584
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10403.642637,
-            "prompt_eval_duration_ms": 73.219018,
-            "generation_duration_ms": 10289.37587,
-            "load_duration_ms": 38.621229,
-            "tokens_per_second": 26.823784405107943
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"computer_monitor\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"black\"],\n      \"size\": \"large\",\n      \"description\": \"Displaying a desert landscape scene\"\n    },\n    \"keyboard\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"silver\"],\n      \"size\": \"medium\",\n      \"description\": \"Wireless keyboard\"\n    },\n    \"mouse\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Wireless mouse\"\n    },\n    \"computer\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Apple Mac mini\"\n    },\n    \"desk\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Wooden desk\"\n    },\n    \"chair\": {\n      \"count\": 1,\n      \"location\": \"right, bottom\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Partial view of a chair\"\n    },\n    \"frame\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"black\", \"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Framed picture\"\n    },\n    \"antenna\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Metallic antenna\"\n    },\n    \"speakers\": {\n      \"count\": 2,\n      \"location\": \"right, middle\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Metallic speakers\"\n    },\n    \"window\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"black\"],\n      \"size\": \"large\",\n      \"description\": \"Large window with a view\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"background, center\",\n      \"color\": [\"red\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Building visible through the window\"\n    },\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"background, center\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Metal fence visible through the window\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 10,\n      \"location\": \"background, center\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Trees visible through the window\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"background, top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"Clear sky visible through the window\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "computer_monitor": {
-                "count": 1,
-                "location": "center, top",
-                "color": [
-                  "black"
-                ],
-                "size": "large",
-                "description": "Displaying a desert landscape scene"
-              },
-              "keyboard": {
-                "count": 1,
-                "location": "center, bottom",
-                "color": [
-                  "silver"
-                ],
-                "size": "medium",
-                "description": "Wireless keyboard"
-              },
-              "mouse": {
-                "count": 1,
-                "location": "center, bottom",
-                "color": [
-                  "silver"
-                ],
-                "size": "small",
-                "description": "Wireless mouse"
-              },
-              "computer": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "silver"
-                ],
-                "size": "small",
-                "description": "Apple Mac mini"
-              },
-              "desk": {
-                "count": 1,
-                "location": "center, bottom",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "Wooden desk"
-              },
-              "chair": {
-                "count": 1,
-                "location": "right, bottom",
-                "color": [
-                  "black"
-                ],
-                "size": "medium",
-                "description": "Partial view of a chair"
-              },
-              "frame": {
-                "count": 1,
-                "location": "right, middle",
-                "color": [
-                  "black",
-                  "silver"
-                ],
-                "size": "small",
-                "description": "Framed picture"
-              },
-              "antenna": {
-                "count": 1,
-                "location": "right, middle",
-                "color": [
-                  "silver"
-                ],
-                "size": "small",
-                "description": "Metallic antenna"
-              },
-              "speakers": {
-                "count": 2,
-                "location": "right, middle",
-                "color": [
-                  "silver"
-                ],
-                "size": "small",
-                "description": "Metallic speakers"
-              },
-              "window": {
-                "count": 1,
-                "location": "center, top",
-                "color": [
-                  "black"
-                ],
-                "size": "large",
-                "description": "Large window with a view"
-              },
-              "building": {
-                "count": 1,
-                "location": "background, center",
-                "color": [
-                  "red",
-                  "white"
-                ],
-                "size": "large",
-                "description": "Building visible through the window"
-              },
-              "fence": {
-                "count": 1,
-                "location": "background, center",
-                "color": [
-                  "black"
-                ],
-                "size": "medium",
-                "description": "Metal fence visible through the window"
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 10,
-                "location": "background, center",
-                "color": [
-                  "green"
-                ],
-                "size": "small",
-                "description": "Trees visible through the window"
-              },
-              "sky": {
-                "count": 1,
-                "location": "background, top",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "Clear sky visible through the window"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 695,
-            "total_tokens": 1181
-          },
-          "performance_metrics": {
-            "total_duration_ms": 26056.358316,
-            "prompt_eval_duration_ms": 140.244092,
-            "generation_duration_ms": 25872.589677,
-            "load_duration_ms": 39.314651,
-            "tokens_per_second": 26.8624056840292
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3489,
-        "total_time_ms": 70623.353298,
-        "average_speed": 26.84743063995706
       }
     },
     {

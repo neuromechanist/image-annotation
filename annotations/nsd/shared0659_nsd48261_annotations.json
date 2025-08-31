@@ -7,6 +7,305 @@
   "timestamp": "2025-08-30T21:45:43.608236+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a close-up view of a historic clock tower, likely part of a church or cathedral, under a clear blue sky. The tower is constructed from dark red sandstone, showcasing intricate architectural details such as arched windows and ornate carvings. The clock face, adorned with gold accents and Roman numerals, stands out prominently against the stone backdrop. The clock's hands are a bright gold, adding a touch of elegance to the structure. At the top of the tower, a weather vane with a flag is visible, suggesting a strong connection to the local community or a specific cultural tradition. The lighting in the image is natural, with the sun casting a warm glow on the stone, highlighting the textures and the contrast between the dark stone and the bright blue sky. The composition focuses on the clock and the upper part of the tower, emphasizing the craftsmanship and historical significance of the building. The overall impression is one of grandeur and timeless beauty, evoking a sense of history and tradition.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 204,
+            "total_tokens": 501
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1575.538283,
+            "prompt_eval_duration_ms": 79.938384,
+            "generation_duration_ms": 1455.298129,
+            "load_duration_ms": 37.831478,
+            "tokens_per_second": 140.17746325296073
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, the most prominent elements are the ornate clock and the golden clock hands, which stand out against the dark stone facade of the building. The clock is intricately designed with a white face and black Roman numerals, and the golden hands add a touch of elegance and contrast. The stone structure behind the clock is richly textured, featuring detailed carvings and statues that add depth and historical significance to the scene. The background, slightly out of focus, reveals the sky, a clear blue canvas that enhances the visibility of the clock and the architectural details. The relationship between the foreground and background is one of contrast and depth, with the clock and its ornate details drawing the viewer's eye towards the more distant, serene sky, creating a layered effect that emphasizes the grandeur and historical importance of the structure.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 167,
+            "total_tokens": 470
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1261.343208,
+            "prompt_eval_duration_ms": 31.273638,
+            "generation_duration_ms": 1188.737036,
+            "load_duration_ms": 36.241649,
+            "tokens_per_second": 140.48523343896218
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a detailed view of a clock tower, likely part of a historic church or cathedral, under a clear blue sky. The clock, with its ornate gold hands and black and white face, is the focal point, mounted on a structure that extends outward from the tower. The tower itself is constructed of dark stone, featuring intricate architectural details such as arched windows and decorative carvings. Statues and sculptures adorn the top of the tower, adding to its grandeur. The flag atop the tower flutters in the wind, suggesting a sense of movement and life against the static backdrop of the stone and clock. There are no people or animals present in the image, and the objects are static, with the clock and tower standing as silent sentinels against the sky. The interaction between the elements is one of harmony and balance, with the clock serving as a symbol of time and the tower representing permanence and history.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 189,
+            "total_tokens": 495
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1431.005855,
+            "prompt_eval_duration_ms": 31.183614,
+            "generation_duration_ms": 1358.516853,
+            "load_duration_ms": 38.478027,
+            "tokens_per_second": 139.12230796595057
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of grandeur and historical significance, contributing to a positive emotional atmosphere. The towering structure of the church, with its intricate stone carvings and the prominent clock, suggests a sense of timelessness and permanence. The clear blue sky in the background adds to the uplifting mood, symbolizing openness and clarity. The golden clock face, with its bold black hands and numbers, stands out against the darker stone, drawing the viewer's attention and adding a touch of elegance and sophistication. The detailed stonework and the statue of the angel further enhance the image's majestic and serene quality, evoking feelings of reverence and awe. The overall tone is positive, as the image conveys a sense of stability, beauty, and historical richness, inviting the viewer to appreciate the craftsmanship and the architectural grandeur of the church.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 170,
+            "total_tokens": 478
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1299.713815,
+            "prompt_eval_duration_ms": 30.775183,
+            "generation_duration_ms": 1226.522712,
+            "load_duration_ms": 40.010537,
+            "tokens_per_second": 138.60322221248848
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"human\": {\n      \"count\": 0,\n      \"location\": \"center\",\n      \"color\": [],\n      \"size\": \"small\",\n      \"description\": \"statue of a person\"\n    },\n    \"animal\": {\n      \"count\": 0,\n      \"location\": \"center\",\n      \"color\": [],\n      \"size\": \"small\",\n      \"description\": \"statue of a person\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"gold\", \"black\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"ornate clock with Roman numerals\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"white\", \"blue\"],\n      \"size\": \"small\",\n      \"description\": \"flag on top of the building\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"stone building with intricate carvings\"\n    }\n  },\n  \"natural\": {\n    \"human\": {\n      \"count\": 0,\n      \"location\": \"background\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear blue sky\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "human": {
+                "count": 0,
+                "location": "center",
+                "color": [],
+                "size": "small",
+                "description": "statue of a person"
+              },
+              "animal": {
+                "count": 0,
+                "location": "center",
+                "color": [],
+                "size": "small",
+                "description": "statue of a person"
+              },
+              "man-made": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "stone building with intricate carvings"
+              }
+            },
+            "natural": {
+              "human": {
+                "count": 0,
+                "location": "background",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "clear blue sky"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 309,
+            "total_tokens": 795
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2286.676052,
+            "prompt_eval_duration_ms": 47.107829,
+            "generation_duration_ms": 2198.627207,
+            "load_duration_ms": 37.922776,
+            "tokens_per_second": 140.54224336722675
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2739,
+        "total_time_ms": 7854.277213,
+        "average_speed": 139.78609404751774
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image showcases a striking architectural scene dominated by a historic clock tower and a portion of a grand building. The setting appears to be outdoors on a clear, sunny day, as evidenced by the bright blue sky and the vivid lighting. The main elements include a large, ornate clock with a black face and white Roman numerals, mounted on a black structure with gold accents. The clock is flanked by intricate gold detailing, including a decorative figure that resembles a lion or mythical creature, adding a regal and historic touch.\n\nThe building in the background is constructed from reddish-brown brick, featuring intricate stonework and arched windows with detailed mullions. The windows are partially open, revealing wooden shutters inside. A statue or figure, possibly of a person, is visible near the top of the building, adding to the architectural grandeur. Above the building, a flagpole with a flag is visible, though the flag itself is not clearly discernible. The overall composition is balanced, with the clock on the right side and the building occupying the left, creating a sense of symmetry and harmony. The lighting is bright and natural, highlighting the textures and details of the architecture and emphasizing the contrast between the warm tones of the building and the cool blue of the sky. The image conveys a sense of historical significance and timeless elegance.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 271,
+            "total_tokens": 568
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13795.051679,
+            "prompt_eval_duration_ms": 3627.293854,
+            "generation_duration_ms": 10126.029067,
+            "load_duration_ms": 37.519585,
+            "tokens_per_second": 26.76271203715675
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image prominently features a large, ornate clock with a black face and gold accents, mounted on a dark, possibly wooden or metal, structure. The clock is adorned with intricate golden details, including a decorative figure or emblem above it, which adds a regal or historical aesthetic. This clock is the most immediate and detailed element, drawing the viewer's attention due to its size and elaborate design.\n\nIn the background, a grand, historic-style building dominates the scene. The structure is made of reddish-brown stone, showcasing intricate architectural details, including arched windows with ornate trims, decorative carvings, and statues or sculptures positioned along the facade. At the top of the building, a flagpole with a flag is visible, adding a sense of height and grandeur. The building's design suggests it could be a church, cathedral, or other significant public or religious structure, given its Gothic or Neo-Gothic architectural elements.\n\nThe clock in the foreground appears to be attached to or part of the larger building, suggesting a functional and aesthetic integration. The clock serves as a focal point, highlighting the building's historical and architectural significance. The clear blue sky in the background further emphasizes the grandeur of the structure and the clock, creating a striking contrast that enhances the overall visual impact. The relationship between the foreground and background elements underscores the building's importance and the clock's role as a prominent feature, likely symbolizing time and tradition.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 296,
+            "total_tokens": 599
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11142.962404,
+            "prompt_eval_duration_ms": 72.477086,
+            "generation_duration_ms": 11029.994778,
+            "load_duration_ms": 37.989275,
+            "tokens_per_second": 26.83591479031251
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a historic architectural structure, likely a clock tower or part of a church, with intricate detailing and a prominent clock face. The scene is set against a clear blue sky, emphasizing the grandeur and timelessness of the structure.\n\nOn the left side of the image, the building features ornate stonework, including arched windows with decorative tracery and small statues or sculptures positioned near the windows. These statues appear to be figurative, possibly representing saints or other religious or historical figures, adding to the building's historical and cultural significance. The stone facade is richly textured, showcasing the craftsmanship of its construction.\n\nOn the right side, a large clock face is mounted on a black frame, with golden accents and intricate detailing around its edges. The clock is flanked by golden figures, which appear to be lions or other heraldic symbols, suggesting a connection to tradition, authority, or regional identity. The clock itself is a focal point, indicating the passage of time and the building's role as a public landmark.\n\nThe relationship between the elements is one of harmony and balance. The clock, with its golden embellishments, contrasts with the darker tones of the stone building, drawing attention to its functional and symbolic importance. The statues and architectural details on the building complement the clock, reinforcing the idea of a historical and culturally significant structure. The clear blue sky serves as a backdrop, highlighting the building's grandeur and emphasizing its prominence in the landscape. Overall, the image conveys a sense of history, tradition, and the enduring presence of the structure in its environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 319,
+            "total_tokens": 625
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11986.000516,
+            "prompt_eval_duration_ms": 74.843551,
+            "generation_duration_ms": 11869.263631,
+            "load_duration_ms": 38.5529,
+            "tokens_per_second": 26.87614075458225
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of grandeur, historical significance, and solemnity, evoking a sense of awe and reverence. The towering stone structure, likely a church or cathedral, with its intricate architectural details and ornate carvings, suggests a deep connection to history and tradition. The clock, with its golden embellishments and classic design, adds a sense of timelessness and continuity, reinforcing the idea of enduring legacy. The clear blue sky in the background contributes to a serene and uplifting atmosphere, contrasting with the imposing nature of the building and creating a balance between the weight of history and the lightness of the present moment. The statue or figure on the clock face, adorned in golden regalia, further enhances the sense of importance and reverence, suggesting a connection to royalty, faith, or cultural heritage. The overall tone is positive yet reflective, as the image invites contemplation of the past while grounding the viewer in the present. The visual elements\u2014such as the rich textures of the stone, the symmetry of the architecture, and the bright, open sky\u2014work together to create an emotional atmosphere that is both inspiring and calming.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 229,
+            "total_tokens": 537
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8643.46752,
+            "prompt_eval_duration_ms": 76.386856,
+            "generation_duration_ms": 8526.545076,
+            "load_duration_ms": 37.694148,
+            "tokens_per_second": 26.857302454727563
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"left, top/middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Large brick building with ornate architecture, featuring arched windows and decorative stonework.\"\n    },\n    \"clock\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"black\", \"white\", \"gold\"],\n      \"size\": \"medium\",\n      \"description\": \"Large clock with black face and white hands, mounted on a structure with gold detailing.\"\n    },\n    \"flag\": {\n      \"count\": 1,\n      \"location\": \"top, center\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"small\",\n      \"description\": \"Flag with a white background and black design, mounted at the top of the building.\"\n    },\n    \"statue\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Statue of a figure, possibly a saint or historical figure, positioned on the building.\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"right, top\",\n      \"size\": \"large\",\n      \"description\": \"Clear blue sky with a few scattered clouds.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "building": {
+                "count": 1,
+                "location": "left, top/middle",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "Large brick building with ornate architecture, featuring arched windows and decorative stonework."
+              },
+              "clock": {
+                "count": 1,
+                "location": "right, middle",
+                "color": [
+                  "black",
+                  "white",
+                  "gold"
+                ],
+                "size": "medium",
+                "description": "Large clock with black face and white hands, mounted on a structure with gold detailing."
+              },
+              "flag": {
+                "count": 1,
+                "location": "top, center",
+                "color": [
+                  "white",
+                  "black"
+                ],
+                "size": "small",
+                "description": "Flag with a white background and black design, mounted at the top of the building."
+              },
+              "statue": {
+                "count": 1,
+                "location": "left, middle",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "Statue of a figure, possibly a saint or historical figure, positioned on the building."
+              }
+            },
+            "natural": {
+              "sky": {
+                "count": 1,
+                "location": "right, top",
+                "size": "large",
+                "description": "Clear blue sky with a few scattered clouds."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 316,
+            "total_tokens": 802
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11864.234201,
+            "prompt_eval_duration_ms": 139.770047,
+            "generation_duration_ms": 11683.721124,
+            "load_duration_ms": 38.03357,
+            "tokens_per_second": 27.04617789540455
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3131,
+        "total_time_ms": 57431.71632,
+        "average_speed": 26.875649586436726
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -499,305 +798,6 @@
         "total_tokens": 2952,
         "total_time_ms": 28612.101829,
         "average_speed": 42.303876128076475
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a close-up view of a historic clock tower, likely part of a church or cathedral, under a clear blue sky. The tower is constructed from dark red sandstone, showcasing intricate architectural details such as arched windows and ornate carvings. The clock face, adorned with gold accents and Roman numerals, stands out prominently against the stone backdrop. The clock's hands are a bright gold, adding a touch of elegance to the structure. At the top of the tower, a weather vane with a flag is visible, suggesting a strong connection to the local community or a specific cultural tradition. The lighting in the image is natural, with the sun casting a warm glow on the stone, highlighting the textures and the contrast between the dark stone and the bright blue sky. The composition focuses on the clock and the upper part of the tower, emphasizing the craftsmanship and historical significance of the building. The overall impression is one of grandeur and timeless beauty, evoking a sense of history and tradition.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 204,
-            "total_tokens": 501
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1575.538283,
-            "prompt_eval_duration_ms": 79.938384,
-            "generation_duration_ms": 1455.298129,
-            "load_duration_ms": 37.831478,
-            "tokens_per_second": 140.17746325296073
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, the most prominent elements are the ornate clock and the golden clock hands, which stand out against the dark stone facade of the building. The clock is intricately designed with a white face and black Roman numerals, and the golden hands add a touch of elegance and contrast. The stone structure behind the clock is richly textured, featuring detailed carvings and statues that add depth and historical significance to the scene. The background, slightly out of focus, reveals the sky, a clear blue canvas that enhances the visibility of the clock and the architectural details. The relationship between the foreground and background is one of contrast and depth, with the clock and its ornate details drawing the viewer's eye towards the more distant, serene sky, creating a layered effect that emphasizes the grandeur and historical importance of the structure.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 167,
-            "total_tokens": 470
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1261.343208,
-            "prompt_eval_duration_ms": 31.273638,
-            "generation_duration_ms": 1188.737036,
-            "load_duration_ms": 36.241649,
-            "tokens_per_second": 140.48523343896218
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a detailed view of a clock tower, likely part of a historic church or cathedral, under a clear blue sky. The clock, with its ornate gold hands and black and white face, is the focal point, mounted on a structure that extends outward from the tower. The tower itself is constructed of dark stone, featuring intricate architectural details such as arched windows and decorative carvings. Statues and sculptures adorn the top of the tower, adding to its grandeur. The flag atop the tower flutters in the wind, suggesting a sense of movement and life against the static backdrop of the stone and clock. There are no people or animals present in the image, and the objects are static, with the clock and tower standing as silent sentinels against the sky. The interaction between the elements is one of harmony and balance, with the clock serving as a symbol of time and the tower representing permanence and history.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 189,
-            "total_tokens": 495
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1431.005855,
-            "prompt_eval_duration_ms": 31.183614,
-            "generation_duration_ms": 1358.516853,
-            "load_duration_ms": 38.478027,
-            "tokens_per_second": 139.12230796595057
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of grandeur and historical significance, contributing to a positive emotional atmosphere. The towering structure of the church, with its intricate stone carvings and the prominent clock, suggests a sense of timelessness and permanence. The clear blue sky in the background adds to the uplifting mood, symbolizing openness and clarity. The golden clock face, with its bold black hands and numbers, stands out against the darker stone, drawing the viewer's attention and adding a touch of elegance and sophistication. The detailed stonework and the statue of the angel further enhance the image's majestic and serene quality, evoking feelings of reverence and awe. The overall tone is positive, as the image conveys a sense of stability, beauty, and historical richness, inviting the viewer to appreciate the craftsmanship and the architectural grandeur of the church.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 170,
-            "total_tokens": 478
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1299.713815,
-            "prompt_eval_duration_ms": 30.775183,
-            "generation_duration_ms": 1226.522712,
-            "load_duration_ms": 40.010537,
-            "tokens_per_second": 138.60322221248848
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"human\": {\n      \"count\": 0,\n      \"location\": \"center\",\n      \"color\": [],\n      \"size\": \"small\",\n      \"description\": \"statue of a person\"\n    },\n    \"animal\": {\n      \"count\": 0,\n      \"location\": \"center\",\n      \"color\": [],\n      \"size\": \"small\",\n      \"description\": \"statue of a person\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"gold\", \"black\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"ornate clock with Roman numerals\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"white\", \"blue\"],\n      \"size\": \"small\",\n      \"description\": \"flag on top of the building\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"stone building with intricate carvings\"\n    }\n  },\n  \"natural\": {\n    \"human\": {\n      \"count\": 0,\n      \"location\": \"background\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear blue sky\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "human": {
-                "count": 0,
-                "location": "center",
-                "color": [],
-                "size": "small",
-                "description": "statue of a person"
-              },
-              "animal": {
-                "count": 0,
-                "location": "center",
-                "color": [],
-                "size": "small",
-                "description": "statue of a person"
-              },
-              "man-made": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "stone building with intricate carvings"
-              }
-            },
-            "natural": {
-              "human": {
-                "count": 0,
-                "location": "background",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "clear blue sky"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 309,
-            "total_tokens": 795
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2286.676052,
-            "prompt_eval_duration_ms": 47.107829,
-            "generation_duration_ms": 2198.627207,
-            "load_duration_ms": 37.922776,
-            "tokens_per_second": 140.54224336722675
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2739,
-        "total_time_ms": 7854.277213,
-        "average_speed": 139.78609404751774
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image showcases a striking architectural scene dominated by a historic clock tower and a portion of a grand building. The setting appears to be outdoors on a clear, sunny day, as evidenced by the bright blue sky and the vivid lighting. The main elements include a large, ornate clock with a black face and white Roman numerals, mounted on a black structure with gold accents. The clock is flanked by intricate gold detailing, including a decorative figure that resembles a lion or mythical creature, adding a regal and historic touch.\n\nThe building in the background is constructed from reddish-brown brick, featuring intricate stonework and arched windows with detailed mullions. The windows are partially open, revealing wooden shutters inside. A statue or figure, possibly of a person, is visible near the top of the building, adding to the architectural grandeur. Above the building, a flagpole with a flag is visible, though the flag itself is not clearly discernible. The overall composition is balanced, with the clock on the right side and the building occupying the left, creating a sense of symmetry and harmony. The lighting is bright and natural, highlighting the textures and details of the architecture and emphasizing the contrast between the warm tones of the building and the cool blue of the sky. The image conveys a sense of historical significance and timeless elegance.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 271,
-            "total_tokens": 568
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13795.051679,
-            "prompt_eval_duration_ms": 3627.293854,
-            "generation_duration_ms": 10126.029067,
-            "load_duration_ms": 37.519585,
-            "tokens_per_second": 26.76271203715675
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image prominently features a large, ornate clock with a black face and gold accents, mounted on a dark, possibly wooden or metal, structure. The clock is adorned with intricate golden details, including a decorative figure or emblem above it, which adds a regal or historical aesthetic. This clock is the most immediate and detailed element, drawing the viewer's attention due to its size and elaborate design.\n\nIn the background, a grand, historic-style building dominates the scene. The structure is made of reddish-brown stone, showcasing intricate architectural details, including arched windows with ornate trims, decorative carvings, and statues or sculptures positioned along the facade. At the top of the building, a flagpole with a flag is visible, adding a sense of height and grandeur. The building's design suggests it could be a church, cathedral, or other significant public or religious structure, given its Gothic or Neo-Gothic architectural elements.\n\nThe clock in the foreground appears to be attached to or part of the larger building, suggesting a functional and aesthetic integration. The clock serves as a focal point, highlighting the building's historical and architectural significance. The clear blue sky in the background further emphasizes the grandeur of the structure and the clock, creating a striking contrast that enhances the overall visual impact. The relationship between the foreground and background elements underscores the building's importance and the clock's role as a prominent feature, likely symbolizing time and tradition.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 296,
-            "total_tokens": 599
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11142.962404,
-            "prompt_eval_duration_ms": 72.477086,
-            "generation_duration_ms": 11029.994778,
-            "load_duration_ms": 37.989275,
-            "tokens_per_second": 26.83591479031251
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a historic architectural structure, likely a clock tower or part of a church, with intricate detailing and a prominent clock face. The scene is set against a clear blue sky, emphasizing the grandeur and timelessness of the structure.\n\nOn the left side of the image, the building features ornate stonework, including arched windows with decorative tracery and small statues or sculptures positioned near the windows. These statues appear to be figurative, possibly representing saints or other religious or historical figures, adding to the building's historical and cultural significance. The stone facade is richly textured, showcasing the craftsmanship of its construction.\n\nOn the right side, a large clock face is mounted on a black frame, with golden accents and intricate detailing around its edges. The clock is flanked by golden figures, which appear to be lions or other heraldic symbols, suggesting a connection to tradition, authority, or regional identity. The clock itself is a focal point, indicating the passage of time and the building's role as a public landmark.\n\nThe relationship between the elements is one of harmony and balance. The clock, with its golden embellishments, contrasts with the darker tones of the stone building, drawing attention to its functional and symbolic importance. The statues and architectural details on the building complement the clock, reinforcing the idea of a historical and culturally significant structure. The clear blue sky serves as a backdrop, highlighting the building's grandeur and emphasizing its prominence in the landscape. Overall, the image conveys a sense of history, tradition, and the enduring presence of the structure in its environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 319,
-            "total_tokens": 625
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11986.000516,
-            "prompt_eval_duration_ms": 74.843551,
-            "generation_duration_ms": 11869.263631,
-            "load_duration_ms": 38.5529,
-            "tokens_per_second": 26.87614075458225
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of grandeur, historical significance, and solemnity, evoking a sense of awe and reverence. The towering stone structure, likely a church or cathedral, with its intricate architectural details and ornate carvings, suggests a deep connection to history and tradition. The clock, with its golden embellishments and classic design, adds a sense of timelessness and continuity, reinforcing the idea of enduring legacy. The clear blue sky in the background contributes to a serene and uplifting atmosphere, contrasting with the imposing nature of the building and creating a balance between the weight of history and the lightness of the present moment. The statue or figure on the clock face, adorned in golden regalia, further enhances the sense of importance and reverence, suggesting a connection to royalty, faith, or cultural heritage. The overall tone is positive yet reflective, as the image invites contemplation of the past while grounding the viewer in the present. The visual elements\u2014such as the rich textures of the stone, the symmetry of the architecture, and the bright, open sky\u2014work together to create an emotional atmosphere that is both inspiring and calming.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 229,
-            "total_tokens": 537
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8643.46752,
-            "prompt_eval_duration_ms": 76.386856,
-            "generation_duration_ms": 8526.545076,
-            "load_duration_ms": 37.694148,
-            "tokens_per_second": 26.857302454727563
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"left, top/middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Large brick building with ornate architecture, featuring arched windows and decorative stonework.\"\n    },\n    \"clock\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"black\", \"white\", \"gold\"],\n      \"size\": \"medium\",\n      \"description\": \"Large clock with black face and white hands, mounted on a structure with gold detailing.\"\n    },\n    \"flag\": {\n      \"count\": 1,\n      \"location\": \"top, center\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"small\",\n      \"description\": \"Flag with a white background and black design, mounted at the top of the building.\"\n    },\n    \"statue\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Statue of a figure, possibly a saint or historical figure, positioned on the building.\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"right, top\",\n      \"size\": \"large\",\n      \"description\": \"Clear blue sky with a few scattered clouds.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "building": {
-                "count": 1,
-                "location": "left, top/middle",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "Large brick building with ornate architecture, featuring arched windows and decorative stonework."
-              },
-              "clock": {
-                "count": 1,
-                "location": "right, middle",
-                "color": [
-                  "black",
-                  "white",
-                  "gold"
-                ],
-                "size": "medium",
-                "description": "Large clock with black face and white hands, mounted on a structure with gold detailing."
-              },
-              "flag": {
-                "count": 1,
-                "location": "top, center",
-                "color": [
-                  "white",
-                  "black"
-                ],
-                "size": "small",
-                "description": "Flag with a white background and black design, mounted at the top of the building."
-              },
-              "statue": {
-                "count": 1,
-                "location": "left, middle",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "Statue of a figure, possibly a saint or historical figure, positioned on the building."
-              }
-            },
-            "natural": {
-              "sky": {
-                "count": 1,
-                "location": "right, top",
-                "size": "large",
-                "description": "Clear blue sky with a few scattered clouds."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 316,
-            "total_tokens": 802
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11864.234201,
-            "prompt_eval_duration_ms": 139.770047,
-            "generation_duration_ms": 11683.721124,
-            "load_duration_ms": 38.03357,
-            "tokens_per_second": 27.04617789540455
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3131,
-        "total_time_ms": 57431.71632,
-        "average_speed": 26.875649586436726
       }
     },
     {

@@ -7,6 +7,378 @@
   "timestamp": "2025-08-30T22:38:29.113655+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a dynamic moment in a baseball game, set on a well-maintained baseball field with a clear, sunny sky casting sharp shadows. The main elements include a batter in a blue uniform, mid-swing, and a catcher in a red uniform crouched behind home plate, both in motion. The batter, wearing a blue helmet and gray pants, has just made contact with the ball, which is visible in mid-air, slightly blurred to indicate its speed. The catcher, in a red uniform with the number 96, is in a defensive stance, wearing a red helmet and white pants, with a glove extended towards the ball. An umpire, dressed in black, stands behind the catcher, observing the play closely. The field is a vibrant green, contrasting with the brown dirt of the infield. The composition is centered on the action at home plate, with the players' movements and the trajectory of the ball drawing the viewer's eye. The lighting is natural and bright, suggesting the game is taking place during the day under clear weather conditions.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 216,
+            "total_tokens": 513
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1656.902817,
+            "prompt_eval_duration_ms": 79.517498,
+            "generation_duration_ms": 1533.375835,
+            "load_duration_ms": 41.218426,
+            "tokens_per_second": 140.86566063563927
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, the viewer's attention is drawn to the action at home plate where a batter in a blue uniform is mid-swing, his bat extended towards the incoming white baseball. The catcher, clad in red and white gear, is crouched low, glove outstretched, ready to catch the ball. The umpire, dressed in black, stands behind the catcher, observing the play closely. The dirt of the home plate area is well-defined, contrasting with the green grass of the field. The background, slightly out of focus, reveals more of the baseball field, including the infield dirt and the outfield grass, which stretches into the distance. The distant background also includes a glimpse of the stands, though they are not the main focus. The relationship between the foreground and background is one of depth and perspective, with the foreground elements being the main action and the background providing context and setting the scene for the baseball game.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 188,
+            "total_tokens": 491
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1423.93393,
+            "prompt_eval_duration_ms": 31.433817,
+            "generation_duration_ms": 1349.818675,
+            "load_duration_ms": 39.700475,
+            "tokens_per_second": 139.2779663535178
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a baseball game is in full swing. A batter, dressed in a blue uniform, is in the midst of swinging his bat, his body language suggesting a powerful follow-through. The catcher, clad in red and white gear, is crouched low, his mitt extended in anticipation of the ball. Positioned behind the catcher is the umpire, dressed in black, intently observing the play to make the call. The interaction between these three figures is central to the scene; the batter's swing aims to connect with the ball, the catcher's readiness to catch it, and the umpire's focus to ensure the rules are followed. The ball is in mid-air, a crucial moment in the game, as the batter, catcher, and umpire all converge on this single, fleeting action. The field around them is a blur of green and brown, emphasizing the dynamic nature of the game and the players' roles within it.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 191,
+            "total_tokens": 497
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1433.19474,
+            "prompt_eval_duration_ms": 28.551088,
+            "generation_duration_ms": 1363.675821,
+            "load_duration_ms": 38.488057,
+            "tokens_per_second": 140.06261389890847
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a dynamic moment in a baseball game, evoking a sense of tension and excitement. The batter's focused stance and the catcher's readiness suggest a high-stakes situation, likely a crucial at-bat. The umpire's attentive posture adds to the atmosphere of anticipation, as he watches the ball closely, ready to make a call. The bright sunlight and the vibrant colors of the uniforms\u2014blue, red, and black\u2014contribute to a lively and energetic mood, while the dirt of the field and the grassy outfield provide a natural, grounded setting that contrasts with the intensity of the game. The overall tone is positive, as the image reflects the thrill and passion inherent in the sport of baseball, capturing a moment of suspense that is both thrilling and engaging for the viewer.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 160,
+            "total_tokens": 468
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1225.589018,
+            "prompt_eval_duration_ms": 29.23438,
+            "generation_duration_ms": 1154.782029,
+            "load_duration_ms": 38.999379,
+            "tokens_per_second": 138.55428642109567
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 3,\n      \"location\": [\"left\", \"center\", \"right\"],\n      \"color\": [\"blue\", \"red\", \"black\"],\n      \"size\": [\"large\"],\n      \"description\": [\"batter swinging bat\", \"catcher crouching\", \"umpire standing\"]\n    }\n  },\n  \"man-made\": {\n    \"baseball bat\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"being swung by the batter\"\n    },\n    \"baseball glove\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"held by the catcher\"\n    },\n    \"baseball uniform\": {\n      \"count\": 2,\n      \"location\": [\"left\", \"center\"],\n      \"color\": [\"blue\", \"red\"],\n      \"size\": \"large\",\n      \"description\": \"worn by the batter and catcher\"\n    },\n    \"baseball\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"in the air\"\n    },\n    \"baseball field\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\", \"brown\"],\n      \"size\": \"large\",\n      \"description\": \"with dirt and grass\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 3,
+                "location": [
+                  "left",
+                  "center",
+                  "right"
+                ],
+                "color": [
+                  "blue",
+                  "red",
+                  "black"
+                ],
+                "size": [
+                  "large"
+                ],
+                "description": [
+                  "batter swinging bat",
+                  "catcher crouching",
+                  "umpire standing"
+                ]
+              }
+            },
+            "man-made": {
+              "baseball bat": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "being swung by the batter"
+              },
+              "baseball glove": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "held by the catcher"
+              },
+              "baseball uniform": {
+                "count": 2,
+                "location": [
+                  "left",
+                  "center"
+                ],
+                "color": [
+                  "blue",
+                  "red"
+                ],
+                "size": "large",
+                "description": "worn by the batter and catcher"
+              },
+              "baseball": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "in the air"
+              },
+              "baseball field": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "green",
+                  "brown"
+                ],
+                "size": "large",
+                "description": "with dirt and grass"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 337,
+            "total_tokens": 823
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2490.514573,
+            "prompt_eval_duration_ms": 44.638876,
+            "generation_duration_ms": 2402.377589,
+            "load_duration_ms": 40.255868,
+            "tokens_per_second": 140.27769886925964
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2792,
+        "total_time_ms": 8230.135078,
+        "average_speed": 139.80764523568416
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a dynamic moment during a baseball game, set on a well-maintained baseball field. The scene is brightly lit, suggesting it is either a daytime game or one under strong stadium lighting. The main elements include a batter, a catcher, and an umpire, all positioned near home plate. The batter, dressed in a blue uniform with gray pants, is in mid-swing, having just made contact with the ball, which is visible in the air above the field. The catcher, wearing a red uniform with the number \"56\" visible on the back, is crouched behind home plate, ready to catch the ball. The umpire, dressed in black, stands behind the catcher, observing the play closely. The field is composed of a dirt infield and a lush green outfield, with the boundary lines clearly marked. The colors are vibrant, with the blue and red uniforms contrasting sharply against the green grass and the brown dirt. The overall composition captures the intensity and action of the game, focusing on the interaction between the batter, catcher, and umpire, while the background remains relatively simple, emphasizing the central action. The lighting highlights the players and the ball, creating a sense of motion and excitement.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 248,
+            "total_tokens": 545
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12937.566904,
+            "prompt_eval_duration_ms": 3641.403968,
+            "generation_duration_ms": 9251.323259,
+            "load_duration_ms": 41.648185,
+            "tokens_per_second": 26.80697593814347
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by the immediate action of a baseball game. Closest to the viewer, a batter in a blue uniform is captured mid-swing, having just hit the ball. The batter's dynamic posture, with one leg extended and the other bent, suggests the follow-through of the swing. Behind the batter, a catcher in a red uniform is crouched in a ready position, wearing protective gear, including a helmet and chest protector. The catcher's mitt is extended, indicating readiness to catch the ball if it comes back to the plate. To the right of the catcher, an umpire in black attire is positioned, closely observing the play to make a call. The dirt of the batter's box and the home plate are clearly visible, grounding the scene in the context of a baseball field.\n\nIn the background, the setting is a baseball field with a well-maintained grass outfield and a dirt infield. The outfield grass is a vibrant green, contrasting with the brown dirt of the infield. The field's expansive nature provides context for the game, emphasizing the open space where the ball may travel. The distant background is less detailed but suggests the continuation of the field, possibly with the outfield fence or stands faintly visible. The ball in mid-air, slightly blurred, connects the foreground action to the background, illustrating the trajectory of the ball after the batter's swing. The layers of the image\u2014the batter, catcher, umpire, and the field\u2014work together to convey the intensity and movement of a live baseball game, with the foreground action leading the viewer's eye into the broader setting of the field.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 329,
+            "total_tokens": 632
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12313.140908,
+            "prompt_eval_duration_ms": 75.760335,
+            "generation_duration_ms": 12194.736653,
+            "load_duration_ms": 39.093763,
+            "tokens_per_second": 26.97885238211056
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a baseball game in action, showcasing a batter, a catcher, and an umpire in their respective roles. The batter, wearing a blue uniform, is in the midst of swinging at a pitch. The ball is visible in the air, indicating the batter has just made contact or is about to. The batter's body is angled forward, suggesting a powerful swing, and the follow-through of the bat is captured mid-motion.\n\nThe catcher, dressed in a red uniform with protective gear, is crouched behind home plate, ready to catch the ball if the batter misses. The catcher's mitt is extended, and their posture is focused and alert, demonstrating their readiness to react to the play. The catcher's role is to receive the pitch, and their interaction with the batter is central to the game's dynamics.\n\nThe umpire, dressed in black, stands behind the catcher, observing the play closely. The umpire's role is to make calls on the pitch, such as whether it is a strike or a ball, and to ensure the game's rules are followed. The umpire's position and focus indicate their active involvement in monitoring the play.\n\nThe relationships between these individuals are integral to the game. The batter's action directly influences the catcher's response, as the catcher must react to the ball's trajectory. The umpire's role is to oversee the interaction between the batter and the catcher, ensuring fairness and adherence to the rules. The image captures a moment of intense focus and coordination, highlighting the teamwork and strategy inherent in baseball. The dirt and grass of the field provide the setting for this dynamic interaction, emphasizing the physical and mental engagement required in the sport.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 339,
+            "total_tokens": 645
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12708.393952,
+            "prompt_eval_duration_ms": 76.914019,
+            "generation_duration_ms": 12591.413896,
+            "load_duration_ms": 37.369644,
+            "tokens_per_second": 26.92310830221318
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a dynamic moment in a baseball game, evoking a sense of excitement, tension, and anticipation. The batter is in mid-swing, his body leaning forward with focus and determination, suggesting a high-stakes play. The catcher, crouched low and ready to react, adds to the intensity of the scene, while the umpire stands alert, prepared to make a crucial call. The bright sunlight and the vibrant colors of the players' uniforms\u2014blue for the batter and red for the catcher\u2014contribute to a lively and energetic atmosphere. The blurred motion of the ball in the air emphasizes the speed and precision of the game, further heightening the sense of action. The overall tone is positive and invigorating, as the image conveys the thrill and competitive spirit inherent in sports. The visual elements, such as the sharp contrast between the green field and the players' uniforms, the dynamic poses of the individuals, and the clear focus on the ball, all work together to create an emotional atmosphere that is engaging and inspiring. The image captures the essence of a moment filled with potential, where every movement and decision could change the outcome of the game.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 237,
+            "total_tokens": 545
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8961.772275,
+            "prompt_eval_duration_ms": 75.040114,
+            "generation_duration_ms": 8845.078331,
+            "load_duration_ms": 39.091658,
+            "tokens_per_second": 26.794562029978703
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 3,\n      \"location\": \"center, foreground\",\n      \"color\": [\"blue\", \"red\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Baseball players and umpire in action during a game.\"\n    }\n  },\n  \"man-made\": {\n    \"baseball_bat\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Being swung by a batter.\"\n    },\n    \"baseball\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"In mid-air, heading towards the batter.\"\n    },\n    \"baseball_uniform\": {\n      \"count\": 3,\n      \"location\": \"center, foreground\",\n      \"color\": [\"blue\", \"red\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Worn by players and umpire.\"\n    },\n    \"baseball_catcher_gear\": {\n      \"count\": 1,\n      \"location\": \"center, foreground\",\n      \"color\": [\"red\"],\n      \"size\": \"medium\",\n      \"description\": \"Worn by the catcher, including helmet and chest protector.\"\n    },\n    \"baseball_umpire_uniform\": {\n      \"count\": 1,\n      \"location\": \"right, foreground\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Worn by the umpire.\"\n    },\n    \"baseball_field\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\", \"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Dirt and grass areas of the baseball field.\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"The grassy area of the baseball field.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 3,
+                "location": "center, foreground",
+                "color": [
+                  "blue",
+                  "red",
+                  "black"
+                ],
+                "size": "medium",
+                "description": "Baseball players and umpire in action during a game."
+              }
+            },
+            "man-made": {
+              "baseball_bat": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "Being swung by a batter."
+              },
+              "baseball": {
+                "count": 1,
+                "location": "center, top",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "In mid-air, heading towards the batter."
+              },
+              "baseball_uniform": {
+                "count": 3,
+                "location": "center, foreground",
+                "color": [
+                  "blue",
+                  "red",
+                  "black"
+                ],
+                "size": "medium",
+                "description": "Worn by players and umpire."
+              },
+              "baseball_catcher_gear": {
+                "count": 1,
+                "location": "center, foreground",
+                "color": [
+                  "red"
+                ],
+                "size": "medium",
+                "description": "Worn by the catcher, including helmet and chest protector."
+              },
+              "baseball_umpire_uniform": {
+                "count": 1,
+                "location": "right, foreground",
+                "color": [
+                  "black"
+                ],
+                "size": "medium",
+                "description": "Worn by the umpire."
+              },
+              "baseball_field": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "green",
+                  "brown"
+                ],
+                "size": "large",
+                "description": "Dirt and grass areas of the baseball field."
+              }
+            },
+            "natural": {
+              "grass": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "The grassy area of the baseball field."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 467,
+            "total_tokens": 953
+          },
+          "performance_metrics": {
+            "total_duration_ms": 17526.199931,
+            "prompt_eval_duration_ms": 136.071861,
+            "generation_duration_ms": 17349.168991,
+            "load_duration_ms": 37.897295,
+            "tokens_per_second": 26.917715784673
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3320,
+        "total_time_ms": 64447.07397,
+        "average_speed": 26.884242887423785
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -593,378 +965,6 @@
         "total_tokens": 3166,
         "total_time_ms": 34084.152143,
         "average_speed": 41.79706030169142
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a dynamic moment in a baseball game, set on a well-maintained baseball field with a clear, sunny sky casting sharp shadows. The main elements include a batter in a blue uniform, mid-swing, and a catcher in a red uniform crouched behind home plate, both in motion. The batter, wearing a blue helmet and gray pants, has just made contact with the ball, which is visible in mid-air, slightly blurred to indicate its speed. The catcher, in a red uniform with the number 96, is in a defensive stance, wearing a red helmet and white pants, with a glove extended towards the ball. An umpire, dressed in black, stands behind the catcher, observing the play closely. The field is a vibrant green, contrasting with the brown dirt of the infield. The composition is centered on the action at home plate, with the players' movements and the trajectory of the ball drawing the viewer's eye. The lighting is natural and bright, suggesting the game is taking place during the day under clear weather conditions.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 216,
-            "total_tokens": 513
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1656.902817,
-            "prompt_eval_duration_ms": 79.517498,
-            "generation_duration_ms": 1533.375835,
-            "load_duration_ms": 41.218426,
-            "tokens_per_second": 140.86566063563927
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, the viewer's attention is drawn to the action at home plate where a batter in a blue uniform is mid-swing, his bat extended towards the incoming white baseball. The catcher, clad in red and white gear, is crouched low, glove outstretched, ready to catch the ball. The umpire, dressed in black, stands behind the catcher, observing the play closely. The dirt of the home plate area is well-defined, contrasting with the green grass of the field. The background, slightly out of focus, reveals more of the baseball field, including the infield dirt and the outfield grass, which stretches into the distance. The distant background also includes a glimpse of the stands, though they are not the main focus. The relationship between the foreground and background is one of depth and perspective, with the foreground elements being the main action and the background providing context and setting the scene for the baseball game.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 188,
-            "total_tokens": 491
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1423.93393,
-            "prompt_eval_duration_ms": 31.433817,
-            "generation_duration_ms": 1349.818675,
-            "load_duration_ms": 39.700475,
-            "tokens_per_second": 139.2779663535178
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a baseball game is in full swing. A batter, dressed in a blue uniform, is in the midst of swinging his bat, his body language suggesting a powerful follow-through. The catcher, clad in red and white gear, is crouched low, his mitt extended in anticipation of the ball. Positioned behind the catcher is the umpire, dressed in black, intently observing the play to make the call. The interaction between these three figures is central to the scene; the batter's swing aims to connect with the ball, the catcher's readiness to catch it, and the umpire's focus to ensure the rules are followed. The ball is in mid-air, a crucial moment in the game, as the batter, catcher, and umpire all converge on this single, fleeting action. The field around them is a blur of green and brown, emphasizing the dynamic nature of the game and the players' roles within it.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 191,
-            "total_tokens": 497
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1433.19474,
-            "prompt_eval_duration_ms": 28.551088,
-            "generation_duration_ms": 1363.675821,
-            "load_duration_ms": 38.488057,
-            "tokens_per_second": 140.06261389890847
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a dynamic moment in a baseball game, evoking a sense of tension and excitement. The batter's focused stance and the catcher's readiness suggest a high-stakes situation, likely a crucial at-bat. The umpire's attentive posture adds to the atmosphere of anticipation, as he watches the ball closely, ready to make a call. The bright sunlight and the vibrant colors of the uniforms\u2014blue, red, and black\u2014contribute to a lively and energetic mood, while the dirt of the field and the grassy outfield provide a natural, grounded setting that contrasts with the intensity of the game. The overall tone is positive, as the image reflects the thrill and passion inherent in the sport of baseball, capturing a moment of suspense that is both thrilling and engaging for the viewer.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 160,
-            "total_tokens": 468
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1225.589018,
-            "prompt_eval_duration_ms": 29.23438,
-            "generation_duration_ms": 1154.782029,
-            "load_duration_ms": 38.999379,
-            "tokens_per_second": 138.55428642109567
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 3,\n      \"location\": [\"left\", \"center\", \"right\"],\n      \"color\": [\"blue\", \"red\", \"black\"],\n      \"size\": [\"large\"],\n      \"description\": [\"batter swinging bat\", \"catcher crouching\", \"umpire standing\"]\n    }\n  },\n  \"man-made\": {\n    \"baseball bat\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"being swung by the batter\"\n    },\n    \"baseball glove\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"held by the catcher\"\n    },\n    \"baseball uniform\": {\n      \"count\": 2,\n      \"location\": [\"left\", \"center\"],\n      \"color\": [\"blue\", \"red\"],\n      \"size\": \"large\",\n      \"description\": \"worn by the batter and catcher\"\n    },\n    \"baseball\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"in the air\"\n    },\n    \"baseball field\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\", \"brown\"],\n      \"size\": \"large\",\n      \"description\": \"with dirt and grass\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 3,
-                "location": [
-                  "left",
-                  "center",
-                  "right"
-                ],
-                "color": [
-                  "blue",
-                  "red",
-                  "black"
-                ],
-                "size": [
-                  "large"
-                ],
-                "description": [
-                  "batter swinging bat",
-                  "catcher crouching",
-                  "umpire standing"
-                ]
-              }
-            },
-            "man-made": {
-              "baseball bat": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "being swung by the batter"
-              },
-              "baseball glove": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "held by the catcher"
-              },
-              "baseball uniform": {
-                "count": 2,
-                "location": [
-                  "left",
-                  "center"
-                ],
-                "color": [
-                  "blue",
-                  "red"
-                ],
-                "size": "large",
-                "description": "worn by the batter and catcher"
-              },
-              "baseball": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "in the air"
-              },
-              "baseball field": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "green",
-                  "brown"
-                ],
-                "size": "large",
-                "description": "with dirt and grass"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 337,
-            "total_tokens": 823
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2490.514573,
-            "prompt_eval_duration_ms": 44.638876,
-            "generation_duration_ms": 2402.377589,
-            "load_duration_ms": 40.255868,
-            "tokens_per_second": 140.27769886925964
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2792,
-        "total_time_ms": 8230.135078,
-        "average_speed": 139.80764523568416
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a dynamic moment during a baseball game, set on a well-maintained baseball field. The scene is brightly lit, suggesting it is either a daytime game or one under strong stadium lighting. The main elements include a batter, a catcher, and an umpire, all positioned near home plate. The batter, dressed in a blue uniform with gray pants, is in mid-swing, having just made contact with the ball, which is visible in the air above the field. The catcher, wearing a red uniform with the number \"56\" visible on the back, is crouched behind home plate, ready to catch the ball. The umpire, dressed in black, stands behind the catcher, observing the play closely. The field is composed of a dirt infield and a lush green outfield, with the boundary lines clearly marked. The colors are vibrant, with the blue and red uniforms contrasting sharply against the green grass and the brown dirt. The overall composition captures the intensity and action of the game, focusing on the interaction between the batter, catcher, and umpire, while the background remains relatively simple, emphasizing the central action. The lighting highlights the players and the ball, creating a sense of motion and excitement.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 248,
-            "total_tokens": 545
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12937.566904,
-            "prompt_eval_duration_ms": 3641.403968,
-            "generation_duration_ms": 9251.323259,
-            "load_duration_ms": 41.648185,
-            "tokens_per_second": 26.80697593814347
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by the immediate action of a baseball game. Closest to the viewer, a batter in a blue uniform is captured mid-swing, having just hit the ball. The batter's dynamic posture, with one leg extended and the other bent, suggests the follow-through of the swing. Behind the batter, a catcher in a red uniform is crouched in a ready position, wearing protective gear, including a helmet and chest protector. The catcher's mitt is extended, indicating readiness to catch the ball if it comes back to the plate. To the right of the catcher, an umpire in black attire is positioned, closely observing the play to make a call. The dirt of the batter's box and the home plate are clearly visible, grounding the scene in the context of a baseball field.\n\nIn the background, the setting is a baseball field with a well-maintained grass outfield and a dirt infield. The outfield grass is a vibrant green, contrasting with the brown dirt of the infield. The field's expansive nature provides context for the game, emphasizing the open space where the ball may travel. The distant background is less detailed but suggests the continuation of the field, possibly with the outfield fence or stands faintly visible. The ball in mid-air, slightly blurred, connects the foreground action to the background, illustrating the trajectory of the ball after the batter's swing. The layers of the image\u2014the batter, catcher, umpire, and the field\u2014work together to convey the intensity and movement of a live baseball game, with the foreground action leading the viewer's eye into the broader setting of the field.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 329,
-            "total_tokens": 632
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12313.140908,
-            "prompt_eval_duration_ms": 75.760335,
-            "generation_duration_ms": 12194.736653,
-            "load_duration_ms": 39.093763,
-            "tokens_per_second": 26.97885238211056
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a baseball game in action, showcasing a batter, a catcher, and an umpire in their respective roles. The batter, wearing a blue uniform, is in the midst of swinging at a pitch. The ball is visible in the air, indicating the batter has just made contact or is about to. The batter's body is angled forward, suggesting a powerful swing, and the follow-through of the bat is captured mid-motion.\n\nThe catcher, dressed in a red uniform with protective gear, is crouched behind home plate, ready to catch the ball if the batter misses. The catcher's mitt is extended, and their posture is focused and alert, demonstrating their readiness to react to the play. The catcher's role is to receive the pitch, and their interaction with the batter is central to the game's dynamics.\n\nThe umpire, dressed in black, stands behind the catcher, observing the play closely. The umpire's role is to make calls on the pitch, such as whether it is a strike or a ball, and to ensure the game's rules are followed. The umpire's position and focus indicate their active involvement in monitoring the play.\n\nThe relationships between these individuals are integral to the game. The batter's action directly influences the catcher's response, as the catcher must react to the ball's trajectory. The umpire's role is to oversee the interaction between the batter and the catcher, ensuring fairness and adherence to the rules. The image captures a moment of intense focus and coordination, highlighting the teamwork and strategy inherent in baseball. The dirt and grass of the field provide the setting for this dynamic interaction, emphasizing the physical and mental engagement required in the sport.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 339,
-            "total_tokens": 645
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12708.393952,
-            "prompt_eval_duration_ms": 76.914019,
-            "generation_duration_ms": 12591.413896,
-            "load_duration_ms": 37.369644,
-            "tokens_per_second": 26.92310830221318
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a dynamic moment in a baseball game, evoking a sense of excitement, tension, and anticipation. The batter is in mid-swing, his body leaning forward with focus and determination, suggesting a high-stakes play. The catcher, crouched low and ready to react, adds to the intensity of the scene, while the umpire stands alert, prepared to make a crucial call. The bright sunlight and the vibrant colors of the players' uniforms\u2014blue for the batter and red for the catcher\u2014contribute to a lively and energetic atmosphere. The blurred motion of the ball in the air emphasizes the speed and precision of the game, further heightening the sense of action. The overall tone is positive and invigorating, as the image conveys the thrill and competitive spirit inherent in sports. The visual elements, such as the sharp contrast between the green field and the players' uniforms, the dynamic poses of the individuals, and the clear focus on the ball, all work together to create an emotional atmosphere that is engaging and inspiring. The image captures the essence of a moment filled with potential, where every movement and decision could change the outcome of the game.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 237,
-            "total_tokens": 545
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8961.772275,
-            "prompt_eval_duration_ms": 75.040114,
-            "generation_duration_ms": 8845.078331,
-            "load_duration_ms": 39.091658,
-            "tokens_per_second": 26.794562029978703
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 3,\n      \"location\": \"center, foreground\",\n      \"color\": [\"blue\", \"red\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Baseball players and umpire in action during a game.\"\n    }\n  },\n  \"man-made\": {\n    \"baseball_bat\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Being swung by a batter.\"\n    },\n    \"baseball\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"In mid-air, heading towards the batter.\"\n    },\n    \"baseball_uniform\": {\n      \"count\": 3,\n      \"location\": \"center, foreground\",\n      \"color\": [\"blue\", \"red\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Worn by players and umpire.\"\n    },\n    \"baseball_catcher_gear\": {\n      \"count\": 1,\n      \"location\": \"center, foreground\",\n      \"color\": [\"red\"],\n      \"size\": \"medium\",\n      \"description\": \"Worn by the catcher, including helmet and chest protector.\"\n    },\n    \"baseball_umpire_uniform\": {\n      \"count\": 1,\n      \"location\": \"right, foreground\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Worn by the umpire.\"\n    },\n    \"baseball_field\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\", \"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Dirt and grass areas of the baseball field.\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"The grassy area of the baseball field.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 3,
-                "location": "center, foreground",
-                "color": [
-                  "blue",
-                  "red",
-                  "black"
-                ],
-                "size": "medium",
-                "description": "Baseball players and umpire in action during a game."
-              }
-            },
-            "man-made": {
-              "baseball_bat": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "Being swung by a batter."
-              },
-              "baseball": {
-                "count": 1,
-                "location": "center, top",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "In mid-air, heading towards the batter."
-              },
-              "baseball_uniform": {
-                "count": 3,
-                "location": "center, foreground",
-                "color": [
-                  "blue",
-                  "red",
-                  "black"
-                ],
-                "size": "medium",
-                "description": "Worn by players and umpire."
-              },
-              "baseball_catcher_gear": {
-                "count": 1,
-                "location": "center, foreground",
-                "color": [
-                  "red"
-                ],
-                "size": "medium",
-                "description": "Worn by the catcher, including helmet and chest protector."
-              },
-              "baseball_umpire_uniform": {
-                "count": 1,
-                "location": "right, foreground",
-                "color": [
-                  "black"
-                ],
-                "size": "medium",
-                "description": "Worn by the umpire."
-              },
-              "baseball_field": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "green",
-                  "brown"
-                ],
-                "size": "large",
-                "description": "Dirt and grass areas of the baseball field."
-              }
-            },
-            "natural": {
-              "grass": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "The grassy area of the baseball field."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 467,
-            "total_tokens": 953
-          },
-          "performance_metrics": {
-            "total_duration_ms": 17526.199931,
-            "prompt_eval_duration_ms": 136.071861,
-            "generation_duration_ms": 17349.168991,
-            "load_duration_ms": 37.897295,
-            "tokens_per_second": 26.917715784673
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3320,
-        "total_time_ms": 64447.07397,
-        "average_speed": 26.884242887423785
       }
     },
     {

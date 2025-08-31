@@ -7,6 +7,273 @@
   "timestamp": "2025-08-30T20:20:59.381793+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a serene scene of an elephant partially obscured by lush greenery, suggesting a natural habitat rich in vegetation. The elephant, a majestic creature with a grayish-brown skin tone, is the central focus of the photograph. Its large ears, a distinctive feature of elephants, are prominently visible, and its trunk is extended towards the ground, possibly foraging or interacting with the environment. The surrounding foliage is dense and vibrant, with shades of green dominating the palette, interspersed with hints of yellow and brown, indicating a mix of healthy and possibly dried leaves. The lighting in the image is soft and diffused, likely due to an overcast sky or the dense canopy above, which casts a gentle, even light across the scene. The composition is natural and unposed, with the elephant positioned slightly off-center, creating a sense of depth and inviting the viewer to explore the environment. The overall impression is one of tranquility and the harmonious coexistence of wildlife and nature.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 200,
+            "total_tokens": 497
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1548.698959,
+            "prompt_eval_duration_ms": 81.20293,
+            "generation_duration_ms": 1427.311005,
+            "load_duration_ms": 37.323122,
+            "tokens_per_second": 140.12363058883582
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the viewer is immediately drawn to the elephant, its large, gray, textured skin partially obscured by the lush greenery surrounding it. The elephant's trunk is extended, suggesting it might be foraging or interacting with the environment, while its tusks are visible, adding to its majestic presence. The elephant is nestled among tall grasses and dense foliage, which dominate the lower portion of the frame, creating a natural and immersive setting. The background, though less distinct, reveals a continuation of the dense vegetation, with hints of darker, more shadowed areas that suggest a forested or jungle-like environment. This layering of the elephant in the foreground and the dense greenery in the background creates a sense of depth and highlights the elephant's interaction with its natural habitat, emphasizing its role as a central figure within this ecosystem.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 172,
+            "total_tokens": 475
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1317.363322,
+            "prompt_eval_duration_ms": 30.571135,
+            "generation_duration_ms": 1244.654175,
+            "load_duration_ms": 39.400018,
+            "tokens_per_second": 138.19099590454513
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a single elephant, a majestic creature of gray, is the central focus, surrounded by lush greenery that envelops it almost entirely. The elephant, appearing to be in a state of rest or perhaps foraging, is partially obscured by the dense foliage, which includes tall grasses and leafy plants. The elephant's trunk, a versatile appendage, is extended towards the ground, suggesting it might be using it to reach for food or to explore its surroundings. The environment around the elephant is tranquil, with no other animals or people visible in the frame, indicating a peaceful coexistence with nature. The elephant's interaction with its environment is evident in its posture and the way it navigates through the dense vegetation, highlighting its adaptability and the harmonious relationship it has with its habitat.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 163,
+            "total_tokens": 469
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1250.440844,
+            "prompt_eval_duration_ms": 29.513465,
+            "generation_duration_ms": 1179.417687,
+            "load_duration_ms": 38.719763,
+            "tokens_per_second": 138.20379480200216
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of tranquility and serenity, with a touch of melancholy. The elephant, partially obscured by the lush greenery, exudes a calm and peaceful demeanor, suggesting a harmonious coexistence with nature. The dense foliage and the elephant's gentle posture contribute to a feeling of seclusion and privacy, as if the elephant is in its own world, undisturbed and at ease. The muted colors and soft lighting further enhance the serene mood, evoking a sense of calm and introspection. The overall tone is neutral, leaning slightly towards the positive due to the elephant's relaxed state and the natural beauty of the environment. However, there is a subtle undertone of solitude and perhaps a hint of vulnerability, as the elephant is not fully visible and is surrounded by the dense vegetation, which might evoke a slight feeling of protectiveness or concern for its well-being.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 181,
+            "total_tokens": 489
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1390.146889,
+            "prompt_eval_duration_ms": 30.083337,
+            "generation_duration_ms": 1318.414186,
+            "load_duration_ms": 38.899186,
+            "tokens_per_second": 137.28614415864607
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"elephant\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"elephant eating grass\"\n    }\n  },\n  \"natural\": {\n    \"vegetation\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"tall grass and plants surrounding elephant\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "elephant": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "elephant eating grass"
+              }
+            },
+            "natural": {
+              "vegetation": {
+                "count": 1,
+                "location": "foreground",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "tall grass and plants surrounding elephant"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 116,
+            "total_tokens": 602
+          },
+          "performance_metrics": {
+            "total_duration_ms": 915.912463,
+            "prompt_eval_duration_ms": 45.323468,
+            "generation_duration_ms": 825.63881,
+            "load_duration_ms": 40.936039,
+            "tokens_per_second": 140.49727144003805
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2532,
+        "total_time_ms": 6422.562477,
+        "average_speed": 138.86036737881346
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a serene natural setting featuring an Asian elephant partially obscured by tall, lush green grass. The elephant, with its grayish-brown skin and small, curved tusks, is the central focus of the photograph. Its large, expressive eyes and the intricate folds of its skin are visible, adding depth and detail to the composition. The elephant appears to be grazing or moving through the grass, which sways gently, suggesting a calm, natural environment.\n\nThe background is dense with green foliage, including various shades of green leaves and vines, indicating a forested or jungle-like habitat. The lighting is soft and diffused, likely from natural daylight filtering through the canopy above, creating a peaceful and slightly shadowed ambiance. The overall color palette is dominated by earthy tones\u2014greens, grays, and browns\u2014emphasizing the natural and untamed setting.\n\nThe composition is balanced, with the elephant positioned slightly off-center, allowing the surrounding grass and foliage to frame the scene effectively. The tall grass in the foreground adds a sense of depth and perspective, drawing the viewer's eye toward the elephant. The image captures a moment of quiet interaction between the majestic creature and its environment, evoking a sense of tranquility and connection with nature.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 252,
+            "total_tokens": 549
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13023.905458,
+            "prompt_eval_duration_ms": 3576.722714,
+            "generation_duration_ms": 9403.33429,
+            "load_duration_ms": 39.072022,
+            "tokens_per_second": 26.79900471771912
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by tall, slender blades of grass that are in sharp focus, creating a natural frame around the elephant. These grasses are vibrant green and appear to be swaying slightly, suggesting a gentle breeze. The grass blades are the closest elements to the viewer, providing a sense of depth and immersion into the scene.\n\nIn the background, the elephant is the central figure, partially obscured by the grass in the foreground. The elephant's large, gray body and distinctive features, such as its tusks and ears, are visible, indicating it is an adult. The elephant is surrounded by dense foliage, including various shades of green leaves and branches, which form a lush, natural setting. The background is slightly out of focus, emphasizing the elephant as the main subject while still providing context for its environment.\n\nThe relationship between the foreground and background is one of contrast and complement. The sharp, detailed grass in the foreground draws the viewer's attention and creates a sense of immediacy, while the softer, blurred background of the elephant and foliage provides depth and a sense of the elephant's natural habitat. The grass acts as a visual barrier, partially concealing the elephant and adding a layer of intrigue, as if the elephant is emerging from or blending into its surroundings. This interplay between the foreground and background effectively captures the essence of the elephant in its natural environment, highlighting both the animal and its lush, green setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 288,
+            "total_tokens": 591
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10863.24474,
+            "prompt_eval_duration_ms": 79.25425,
+            "generation_duration_ms": 10741.105033,
+            "load_duration_ms": 40.16275,
+            "tokens_per_second": 26.81288369447788
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a large elephant partially obscured by tall, lush green grass and foliage. There are no people visible in the image, only the elephant and the surrounding natural environment. The elephant appears to be an adult, as indicated by its size and the presence of small tusks. It is standing amidst dense vegetation, suggesting it is in a forested or grassland habitat. The elephant's head and part of its body are visible, with its trunk likely lowered, possibly grazing or exploring the ground. The elephant's ears are slightly spread, which could indicate attentiveness or a reaction to its surroundings. The surrounding grass and leaves frame the elephant, creating a sense of immersion in nature. The elephant interacts with its environment by navigating through the dense vegetation, likely foraging for food or simply moving through its habitat. The relationship between the elephant and its surroundings is one of coexistence, with the elephant relying on the natural elements for sustenance and shelter. The image captures a serene moment in the life of a wild elephant, highlighting its connection to its natural habitat.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 213,
+            "total_tokens": 519
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8064.855956,
+            "prompt_eval_duration_ms": 79.966588,
+            "generation_duration_ms": 7939.94386,
+            "load_duration_ms": 40.123216,
+            "tokens_per_second": 26.826386150292002
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image of the elephant partially obscured by tall grass conveys a sense of tranquility and mystery, evoking a neutral to slightly positive mood. The elephant's calm demeanor, with its slightly closed eyes and relaxed posture, suggests a peaceful and content state, which can inspire feelings of serenity and admiration for nature. The lush greenery surrounding the elephant adds to the sense of harmony and connection with the natural world, reinforcing a positive emotional atmosphere. The tall grass framing the elephant creates a sense of seclusion and intimacy, as if the viewer is witnessing a private moment in the animal's life, which can evoke curiosity and wonder. The soft lighting and the earthy tones of the elephant's skin and the surrounding foliage contribute to a warm and soothing visual experience. Overall, the image does not convey any overtly negative emotions but instead invites the viewer to appreciate the beauty and majesty of wildlife in its natural habitat, fostering a sense of calm and respect for nature.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 194,
+            "total_tokens": 502
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7349.870043,
+            "prompt_eval_duration_ms": 73.956513,
+            "generation_duration_ms": 7233.615025,
+            "load_duration_ms": 39.494525,
+            "tokens_per_second": 26.819232061634356
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"elephant\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"An elephant with visible tusks and ears, partially obscured by tall grass.\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"Tall grass in the foreground, partially obscuring the elephant.\"\n    },\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Dense foliage in the background, providing a natural setting.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "elephant": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "An elephant with visible tusks and ears, partially obscured by tall grass."
+              }
+            },
+            "natural": {
+              "grass": {
+                "count": 1,
+                "location": "foreground",
+                "color": [
+                  "green"
+                ],
+                "size": "medium",
+                "description": "Tall grass in the foreground, partially obscuring the elephant."
+              },
+              "trees": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "Dense foliage in the background, providing a natural setting."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 182,
+            "total_tokens": 668
+          },
+          "performance_metrics": {
+            "total_duration_ms": 6879.06748,
+            "prompt_eval_duration_ms": 134.946269,
+            "generation_duration_ms": 6701.977257,
+            "load_duration_ms": 38.936816,
+            "tokens_per_second": 27.156164967570852
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2829,
+        "total_time_ms": 46180.943676999996,
+        "average_speed": 26.88273431833884
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -431,273 +698,6 @@
         "total_tokens": 2709,
         "total_time_ms": 22968.010368,
         "average_speed": 42.12411985045654
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a serene scene of an elephant partially obscured by lush greenery, suggesting a natural habitat rich in vegetation. The elephant, a majestic creature with a grayish-brown skin tone, is the central focus of the photograph. Its large ears, a distinctive feature of elephants, are prominently visible, and its trunk is extended towards the ground, possibly foraging or interacting with the environment. The surrounding foliage is dense and vibrant, with shades of green dominating the palette, interspersed with hints of yellow and brown, indicating a mix of healthy and possibly dried leaves. The lighting in the image is soft and diffused, likely due to an overcast sky or the dense canopy above, which casts a gentle, even light across the scene. The composition is natural and unposed, with the elephant positioned slightly off-center, creating a sense of depth and inviting the viewer to explore the environment. The overall impression is one of tranquility and the harmonious coexistence of wildlife and nature.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 200,
-            "total_tokens": 497
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1548.698959,
-            "prompt_eval_duration_ms": 81.20293,
-            "generation_duration_ms": 1427.311005,
-            "load_duration_ms": 37.323122,
-            "tokens_per_second": 140.12363058883582
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the viewer is immediately drawn to the elephant, its large, gray, textured skin partially obscured by the lush greenery surrounding it. The elephant's trunk is extended, suggesting it might be foraging or interacting with the environment, while its tusks are visible, adding to its majestic presence. The elephant is nestled among tall grasses and dense foliage, which dominate the lower portion of the frame, creating a natural and immersive setting. The background, though less distinct, reveals a continuation of the dense vegetation, with hints of darker, more shadowed areas that suggest a forested or jungle-like environment. This layering of the elephant in the foreground and the dense greenery in the background creates a sense of depth and highlights the elephant's interaction with its natural habitat, emphasizing its role as a central figure within this ecosystem.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 172,
-            "total_tokens": 475
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1317.363322,
-            "prompt_eval_duration_ms": 30.571135,
-            "generation_duration_ms": 1244.654175,
-            "load_duration_ms": 39.400018,
-            "tokens_per_second": 138.19099590454513
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a single elephant, a majestic creature of gray, is the central focus, surrounded by lush greenery that envelops it almost entirely. The elephant, appearing to be in a state of rest or perhaps foraging, is partially obscured by the dense foliage, which includes tall grasses and leafy plants. The elephant's trunk, a versatile appendage, is extended towards the ground, suggesting it might be using it to reach for food or to explore its surroundings. The environment around the elephant is tranquil, with no other animals or people visible in the frame, indicating a peaceful coexistence with nature. The elephant's interaction with its environment is evident in its posture and the way it navigates through the dense vegetation, highlighting its adaptability and the harmonious relationship it has with its habitat.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 163,
-            "total_tokens": 469
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1250.440844,
-            "prompt_eval_duration_ms": 29.513465,
-            "generation_duration_ms": 1179.417687,
-            "load_duration_ms": 38.719763,
-            "tokens_per_second": 138.20379480200216
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of tranquility and serenity, with a touch of melancholy. The elephant, partially obscured by the lush greenery, exudes a calm and peaceful demeanor, suggesting a harmonious coexistence with nature. The dense foliage and the elephant's gentle posture contribute to a feeling of seclusion and privacy, as if the elephant is in its own world, undisturbed and at ease. The muted colors and soft lighting further enhance the serene mood, evoking a sense of calm and introspection. The overall tone is neutral, leaning slightly towards the positive due to the elephant's relaxed state and the natural beauty of the environment. However, there is a subtle undertone of solitude and perhaps a hint of vulnerability, as the elephant is not fully visible and is surrounded by the dense vegetation, which might evoke a slight feeling of protectiveness or concern for its well-being.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 181,
-            "total_tokens": 489
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1390.146889,
-            "prompt_eval_duration_ms": 30.083337,
-            "generation_duration_ms": 1318.414186,
-            "load_duration_ms": 38.899186,
-            "tokens_per_second": 137.28614415864607
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"elephant\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"elephant eating grass\"\n    }\n  },\n  \"natural\": {\n    \"vegetation\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"tall grass and plants surrounding elephant\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "elephant": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "elephant eating grass"
-              }
-            },
-            "natural": {
-              "vegetation": {
-                "count": 1,
-                "location": "foreground",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "tall grass and plants surrounding elephant"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 116,
-            "total_tokens": 602
-          },
-          "performance_metrics": {
-            "total_duration_ms": 915.912463,
-            "prompt_eval_duration_ms": 45.323468,
-            "generation_duration_ms": 825.63881,
-            "load_duration_ms": 40.936039,
-            "tokens_per_second": 140.49727144003805
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2532,
-        "total_time_ms": 6422.562477,
-        "average_speed": 138.86036737881346
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a serene natural setting featuring an Asian elephant partially obscured by tall, lush green grass. The elephant, with its grayish-brown skin and small, curved tusks, is the central focus of the photograph. Its large, expressive eyes and the intricate folds of its skin are visible, adding depth and detail to the composition. The elephant appears to be grazing or moving through the grass, which sways gently, suggesting a calm, natural environment.\n\nThe background is dense with green foliage, including various shades of green leaves and vines, indicating a forested or jungle-like habitat. The lighting is soft and diffused, likely from natural daylight filtering through the canopy above, creating a peaceful and slightly shadowed ambiance. The overall color palette is dominated by earthy tones\u2014greens, grays, and browns\u2014emphasizing the natural and untamed setting.\n\nThe composition is balanced, with the elephant positioned slightly off-center, allowing the surrounding grass and foliage to frame the scene effectively. The tall grass in the foreground adds a sense of depth and perspective, drawing the viewer's eye toward the elephant. The image captures a moment of quiet interaction between the majestic creature and its environment, evoking a sense of tranquility and connection with nature.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 252,
-            "total_tokens": 549
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13023.905458,
-            "prompt_eval_duration_ms": 3576.722714,
-            "generation_duration_ms": 9403.33429,
-            "load_duration_ms": 39.072022,
-            "tokens_per_second": 26.79900471771912
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by tall, slender blades of grass that are in sharp focus, creating a natural frame around the elephant. These grasses are vibrant green and appear to be swaying slightly, suggesting a gentle breeze. The grass blades are the closest elements to the viewer, providing a sense of depth and immersion into the scene.\n\nIn the background, the elephant is the central figure, partially obscured by the grass in the foreground. The elephant's large, gray body and distinctive features, such as its tusks and ears, are visible, indicating it is an adult. The elephant is surrounded by dense foliage, including various shades of green leaves and branches, which form a lush, natural setting. The background is slightly out of focus, emphasizing the elephant as the main subject while still providing context for its environment.\n\nThe relationship between the foreground and background is one of contrast and complement. The sharp, detailed grass in the foreground draws the viewer's attention and creates a sense of immediacy, while the softer, blurred background of the elephant and foliage provides depth and a sense of the elephant's natural habitat. The grass acts as a visual barrier, partially concealing the elephant and adding a layer of intrigue, as if the elephant is emerging from or blending into its surroundings. This interplay between the foreground and background effectively captures the essence of the elephant in its natural environment, highlighting both the animal and its lush, green setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 288,
-            "total_tokens": 591
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10863.24474,
-            "prompt_eval_duration_ms": 79.25425,
-            "generation_duration_ms": 10741.105033,
-            "load_duration_ms": 40.16275,
-            "tokens_per_second": 26.81288369447788
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a large elephant partially obscured by tall, lush green grass and foliage. There are no people visible in the image, only the elephant and the surrounding natural environment. The elephant appears to be an adult, as indicated by its size and the presence of small tusks. It is standing amidst dense vegetation, suggesting it is in a forested or grassland habitat. The elephant's head and part of its body are visible, with its trunk likely lowered, possibly grazing or exploring the ground. The elephant's ears are slightly spread, which could indicate attentiveness or a reaction to its surroundings. The surrounding grass and leaves frame the elephant, creating a sense of immersion in nature. The elephant interacts with its environment by navigating through the dense vegetation, likely foraging for food or simply moving through its habitat. The relationship between the elephant and its surroundings is one of coexistence, with the elephant relying on the natural elements for sustenance and shelter. The image captures a serene moment in the life of a wild elephant, highlighting its connection to its natural habitat.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 213,
-            "total_tokens": 519
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8064.855956,
-            "prompt_eval_duration_ms": 79.966588,
-            "generation_duration_ms": 7939.94386,
-            "load_duration_ms": 40.123216,
-            "tokens_per_second": 26.826386150292002
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image of the elephant partially obscured by tall grass conveys a sense of tranquility and mystery, evoking a neutral to slightly positive mood. The elephant's calm demeanor, with its slightly closed eyes and relaxed posture, suggests a peaceful and content state, which can inspire feelings of serenity and admiration for nature. The lush greenery surrounding the elephant adds to the sense of harmony and connection with the natural world, reinforcing a positive emotional atmosphere. The tall grass framing the elephant creates a sense of seclusion and intimacy, as if the viewer is witnessing a private moment in the animal's life, which can evoke curiosity and wonder. The soft lighting and the earthy tones of the elephant's skin and the surrounding foliage contribute to a warm and soothing visual experience. Overall, the image does not convey any overtly negative emotions but instead invites the viewer to appreciate the beauty and majesty of wildlife in its natural habitat, fostering a sense of calm and respect for nature.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 194,
-            "total_tokens": 502
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7349.870043,
-            "prompt_eval_duration_ms": 73.956513,
-            "generation_duration_ms": 7233.615025,
-            "load_duration_ms": 39.494525,
-            "tokens_per_second": 26.819232061634356
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"elephant\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"An elephant with visible tusks and ears, partially obscured by tall grass.\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"Tall grass in the foreground, partially obscuring the elephant.\"\n    },\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Dense foliage in the background, providing a natural setting.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "elephant": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "An elephant with visible tusks and ears, partially obscured by tall grass."
-              }
-            },
-            "natural": {
-              "grass": {
-                "count": 1,
-                "location": "foreground",
-                "color": [
-                  "green"
-                ],
-                "size": "medium",
-                "description": "Tall grass in the foreground, partially obscuring the elephant."
-              },
-              "trees": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "Dense foliage in the background, providing a natural setting."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 182,
-            "total_tokens": 668
-          },
-          "performance_metrics": {
-            "total_duration_ms": 6879.06748,
-            "prompt_eval_duration_ms": 134.946269,
-            "generation_duration_ms": 6701.977257,
-            "load_duration_ms": 38.936816,
-            "tokens_per_second": 27.156164967570852
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2829,
-        "total_time_ms": 46180.943676999996,
-        "average_speed": 26.88273431833884
       }
     },
     {

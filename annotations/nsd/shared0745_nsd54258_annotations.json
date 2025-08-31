@@ -7,6 +7,280 @@
   "timestamp": "2025-08-30T22:33:08.698017+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a close-up of a light brown dog with perked-up ears, gazing directly upwards, seemingly at the photographer. The dog's coat is a warm, golden hue, and it wears a green collar with a silver tag, suggesting it is a pet. The dog's expression is alert and attentive, with its mouth slightly open, revealing a hint of its tongue. The background is a textured, earthy ground, possibly dirt or dry grass, which contrasts with the dog's lighter fur, making the subject stand out prominently. The lighting is natural, likely from the sun, casting soft shadows and highlighting the dog's features with a warm, golden glow. The composition is centered on the dog, with the background slightly blurred, drawing the viewer's attention to the subject. The overall mood of the image is one of curiosity and connection, as if the dog is eagerly awaiting a command or a treat.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 185,
+            "total_tokens": 482
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1438.66719,
+            "prompt_eval_duration_ms": 82.232365,
+            "generation_duration_ms": 1310.388006,
+            "load_duration_ms": 43.15162,
+            "tokens_per_second": 141.1795583849384
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, a light brown dog with perked-up ears and a green collar is the focal point. The dog's direct gaze and slightly open mouth suggest a friendly and alert demeanor, as if it is looking up at its owner or someone off-camera. The collar, adorned with a tag, indicates that the dog is a pet, likely belonging to someone who cares for it. The dog's fur appears well-groomed, and its posture is upright, contributing to the sense of attentiveness.\n\nThe background, which is the distant setting, consists of a textured ground that appears to be dry grass or dirt, bathed in the warm, golden light of what seems to be either early morning or late afternoon sunlight. This lighting casts soft shadows and highlights the dog's features, enhancing the overall warmth of the scene. The background is out of focus, which helps to emphasize the dog in the foreground, creating a depth of field effect that draws the viewer's attention to the subject. The contrast between the detailed, close-up view of the dog and the blurred, textured background creates a layered composition that adds depth and context to the image.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 233,
+            "total_tokens": 536
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1742.850331,
+            "prompt_eval_duration_ms": 29.104454,
+            "generation_duration_ms": 1668.928258,
+            "load_duration_ms": 41.401026,
+            "tokens_per_second": 139.61055478755037
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, the central focus is a light brown dog with perked-up ears, sitting attentively on a patch of dry, sunlit grass. The dog's collar, adorned with a tag, suggests it is a pet. Its mouth is slightly open, revealing a hint of its tongue, which could indicate it is either panting or smiling. The dog's gaze is directed upwards, possibly towards its owner or a person off-camera, showing a sense of anticipation or curiosity. The dog's posture and expression suggest it is engaged and ready for interaction, creating a sense of connection between the dog and the unseen individual. The dry grass around the dog provides a natural, outdoor setting, emphasizing the dog's environment and the bond it shares with its surroundings. There are no other people or animals visible in the image, making the dog the sole subject of this scene, highlighting its solitary yet alert presence in the natural setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 186,
+            "total_tokens": 492
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1412.075862,
+            "prompt_eval_duration_ms": 29.7163,
+            "generation_duration_ms": 1339.157178,
+            "load_duration_ms": 38.767254,
+            "tokens_per_second": 138.89333011513008
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of warmth and joy, evoking feelings of happiness and contentment. The dog's wide, open mouth and bright, alert eyes suggest a sense of excitement and anticipation, as if it is eagerly waiting for something positive to happen. The sunlight casting a warm glow on its fur enhances the overall positive tone, creating a feeling of optimism and cheerfulness. The dog's direct gaze towards the camera adds a personal touch, making the viewer feel as though they are part of the dog's joyful experience. The natural setting, with its earthy tones and soft lighting, complements the dog's golden hue, further reinforcing the sense of harmony and tranquility. The green collar, with its small charm, adds a playful and personal detail that contributes to the image's overall positive and lighthearted atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 168,
+            "total_tokens": 476
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1274.689758,
+            "prompt_eval_duration_ms": 28.864033,
+            "generation_duration_ms": 1203.567745,
+            "load_duration_ms": 38.984205,
+            "tokens_per_second": 139.5849969375841
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"dog\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"tan\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"looking up with an open mouth and perked ears\"\n    }\n  },\n  \"man-made\": {\n    \"collar\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"green\", \"black\"],\n      \"size\": \"small\",\n      \"description\": \"with a tag attached\"\n    }\n  },\n  \"natural\": {\n    \"ground\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"brown\", \"gray\"],\n      \"size\": \"large\",\n      \"description\": \"dirt or grassy surface\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "dog": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "tan",
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "looking up with an open mouth and perked ears"
+              }
+            },
+            "man-made": {
+              "collar": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "green",
+                  "black"
+                ],
+                "size": "small",
+                "description": "with a tag attached"
+              }
+            },
+            "natural": {
+              "ground": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "brown",
+                  "gray"
+                ],
+                "size": "large",
+                "description": "dirt or grassy surface"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 182,
+            "total_tokens": 668
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1374.898404,
+            "prompt_eval_duration_ms": 43.664701,
+            "generation_duration_ms": 1287.433315,
+            "load_duration_ms": 40.608131,
+            "tokens_per_second": 141.36654526452114
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2654,
+        "total_time_ms": 7243.1815449999995,
+        "average_speed": 140.1269970979448
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a cheerful and lively dog outdoors, likely in a natural setting such as a park or a dirt field. The main subject is a light brown or tan dog with a slightly darker muzzle and ears, standing on all fours and looking directly at the camera with an open, joyful expression. Its mouth is slightly open, revealing its teeth in a friendly \"smile,\" and its ears are perked up, indicating alertness and excitement. The dog is wearing a green collar with a visible tag, adding a pop of color to the otherwise earthy tones of the scene.\n\nThe background is a textured, dry, brownish ground, possibly dirt or compacted soil, which suggests an outdoor, natural environment. The lighting is bright and natural, likely from sunlight, casting soft shadows and highlighting the dog's fur texture and facial features. The overall composition is centered on the dog, with its head and upper body filling most of the frame, drawing the viewer's attention to its expressive face and energetic demeanor. The image conveys a sense of warmth, happiness, and connection between the dog and the photographer, creating a heartwarming and engaging scene. The simplicity of the background ensures that the focus remains entirely on the dog, emphasizing its joyful and lively nature.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 254,
+            "total_tokens": 551
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13135.762302,
+            "prompt_eval_duration_ms": 3616.670542,
+            "generation_duration_ms": 9473.171938,
+            "load_duration_ms": 42.169516,
+            "tokens_per_second": 26.81256095237992
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a close-up of a dog, which is the primary subject. The dog is a medium-sized, light brown or tan canine with pointed ears, a black nose, and bright, alert eyes. Its mouth is open in a happy or excited expression, revealing its teeth, and it is wearing a green collar with a tag. The dog's position and direct gaze suggest it is looking up at the camera or its owner, creating a sense of engagement with the viewer. The dog's fur texture and facial features are clearly visible, emphasizing its lively and friendly demeanor.\n\nThe background consists of a textured, earthy surface that appears to be dry dirt or soil. The ground is uneven and has a rough, natural appearance, indicating an outdoor setting, possibly a park, field, or rural area. The lighting suggests it is daytime, with sunlight casting shadows and highlighting the dog's features. The background is relatively plain and lacks distinct objects or landmarks, which helps to keep the focus on the dog in the foreground.\n\nThe relationship between the foreground and background is one of contrast and emphasis. The sharp focus on the dog in the foreground draws the viewer's attention immediately to the subject, while the blurred and less detailed background provides context without distracting from the main focus. The natural setting of the background complements the dog's outdoor presence, reinforcing the idea of a playful or active moment in a natural environment. The overall composition effectively highlights the dog's joyful expression and creates a warm, engaging atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 305,
+            "total_tokens": 608
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11480.755543,
+            "prompt_eval_duration_ms": 74.462722,
+            "generation_duration_ms": 11363.4497,
+            "load_duration_ms": 39.499303,
+            "tokens_per_second": 26.840440891818265
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image shows a close-up of a happy dog outdoors, with no visible people in the scene. The dog, which appears to be a medium-sized breed with a light brown or tan coat, is the central focus. Its ears are perked up, and its mouth is open in what looks like a joyful expression, possibly panting or smiling. The dog's eyes are bright and alert, conveying a sense of excitement or eagerness. It is wearing a green collar with a tag, indicating it is a pet. The background consists of a textured, earthy surface, likely dirt or dry grass, suggesting the dog is outdoors in a natural or rural setting.\n\nThere are no other animals or people visible in the image, so the focus is entirely on the dog's interaction with its environment. The dog's posture and expression suggest it is engaged and attentive, possibly responding to a command, a treat, or the presence of its owner, even though the owner is not in the frame. The lighting is bright, indicating it is daytime, and the overall atmosphere is lively and cheerful. The dog's alertness and open mouth suggest it is actively participating in an activity or enjoying the moment, showcasing a connection with its surroundings or an unseen human companion. The image captures a moment of pure joy and engagement, emphasizing the dog's lively and friendly nature.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 271,
+            "total_tokens": 577
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10246.120614,
+            "prompt_eval_duration_ms": 75.471448,
+            "generation_duration_ms": 10128.145385,
+            "load_duration_ms": 39.442065,
+            "tokens_per_second": 26.75711985743775
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a positive and joyful mood, evoking feelings of happiness, playfulness, and affection. The dog's wide, open mouth and bright, alert eyes suggest excitement and eagerness, as if it is eagerly anticipating a treat, playtime, or interaction with its owner. The upward tilt of its head and the perked-up ears indicate attentiveness and curiosity, further emphasizing its lively and engaged state. The dog's light brown fur and the bright, natural lighting enhance the overall warmth and cheerfulness of the scene. The background, though blurred, appears to be an outdoor setting, possibly a park or a field, which adds to the sense of freedom and joy associated with outdoor activities. The green collar with a tag suggests that the dog is well-cared-for, contributing to the feeling of comfort and security. The overall tone is overwhelmingly positive, as the visual elements\u2014such as the dog's expression, body language, and the sunny, open environment\u2014work together to create an atmosphere of happiness and lightheartedness. This image is likely to evoke feelings of warmth, joy, and a desire to interact with the dog, making it a heartwarming and uplifting visual experience.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 244,
+            "total_tokens": 552
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9234.892614,
+            "prompt_eval_duration_ms": 73.220126,
+            "generation_duration_ms": 9118.214584,
+            "load_duration_ms": 40.343283,
+            "tokens_per_second": 26.75962467785678
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"dog\": {\n      \"count\": 1,\n      \"location\": \"center, foreground\",\n      \"color\": [\"brown\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"A brown dog with black markings, wearing a green collar, sitting and looking up with an open mouth.\"\n    }\n  },\n  \"natural\": {\n    \"ground\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"brown\", \"dark brown\"],\n      \"size\": \"large\",\n      \"description\": \"Dirt or soil ground with some texture visible.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "dog": {
+                "count": 1,
+                "location": "center, foreground",
+                "color": [
+                  "brown",
+                  "black"
+                ],
+                "size": "medium",
+                "description": "A brown dog with black markings, wearing a green collar, sitting and looking up with an open mouth."
+              }
+            },
+            "natural": {
+              "ground": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "brown",
+                  "dark brown"
+                ],
+                "size": "large",
+                "description": "Dirt or soil ground with some texture visible."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 141,
+            "total_tokens": 627
+          },
+          "performance_metrics": {
+            "total_duration_ms": 5373.539303,
+            "prompt_eval_duration_ms": 133.410273,
+            "generation_duration_ms": 5197.751276,
+            "load_duration_ms": 38.230507,
+            "tokens_per_second": 27.127115653080743
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2915,
+        "total_time_ms": 49471.07037599999,
+        "average_speed": 26.859372406514694
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -444,280 +718,6 @@
         "total_tokens": 2732,
         "total_time_ms": 23699.992886,
         "average_speed": 41.78723396063435
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a close-up of a light brown dog with perked-up ears, gazing directly upwards, seemingly at the photographer. The dog's coat is a warm, golden hue, and it wears a green collar with a silver tag, suggesting it is a pet. The dog's expression is alert and attentive, with its mouth slightly open, revealing a hint of its tongue. The background is a textured, earthy ground, possibly dirt or dry grass, which contrasts with the dog's lighter fur, making the subject stand out prominently. The lighting is natural, likely from the sun, casting soft shadows and highlighting the dog's features with a warm, golden glow. The composition is centered on the dog, with the background slightly blurred, drawing the viewer's attention to the subject. The overall mood of the image is one of curiosity and connection, as if the dog is eagerly awaiting a command or a treat.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 185,
-            "total_tokens": 482
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1438.66719,
-            "prompt_eval_duration_ms": 82.232365,
-            "generation_duration_ms": 1310.388006,
-            "load_duration_ms": 43.15162,
-            "tokens_per_second": 141.1795583849384
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, a light brown dog with perked-up ears and a green collar is the focal point. The dog's direct gaze and slightly open mouth suggest a friendly and alert demeanor, as if it is looking up at its owner or someone off-camera. The collar, adorned with a tag, indicates that the dog is a pet, likely belonging to someone who cares for it. The dog's fur appears well-groomed, and its posture is upright, contributing to the sense of attentiveness.\n\nThe background, which is the distant setting, consists of a textured ground that appears to be dry grass or dirt, bathed in the warm, golden light of what seems to be either early morning or late afternoon sunlight. This lighting casts soft shadows and highlights the dog's features, enhancing the overall warmth of the scene. The background is out of focus, which helps to emphasize the dog in the foreground, creating a depth of field effect that draws the viewer's attention to the subject. The contrast between the detailed, close-up view of the dog and the blurred, textured background creates a layered composition that adds depth and context to the image.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 233,
-            "total_tokens": 536
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1742.850331,
-            "prompt_eval_duration_ms": 29.104454,
-            "generation_duration_ms": 1668.928258,
-            "load_duration_ms": 41.401026,
-            "tokens_per_second": 139.61055478755037
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, the central focus is a light brown dog with perked-up ears, sitting attentively on a patch of dry, sunlit grass. The dog's collar, adorned with a tag, suggests it is a pet. Its mouth is slightly open, revealing a hint of its tongue, which could indicate it is either panting or smiling. The dog's gaze is directed upwards, possibly towards its owner or a person off-camera, showing a sense of anticipation or curiosity. The dog's posture and expression suggest it is engaged and ready for interaction, creating a sense of connection between the dog and the unseen individual. The dry grass around the dog provides a natural, outdoor setting, emphasizing the dog's environment and the bond it shares with its surroundings. There are no other people or animals visible in the image, making the dog the sole subject of this scene, highlighting its solitary yet alert presence in the natural setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 186,
-            "total_tokens": 492
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1412.075862,
-            "prompt_eval_duration_ms": 29.7163,
-            "generation_duration_ms": 1339.157178,
-            "load_duration_ms": 38.767254,
-            "tokens_per_second": 138.89333011513008
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of warmth and joy, evoking feelings of happiness and contentment. The dog's wide, open mouth and bright, alert eyes suggest a sense of excitement and anticipation, as if it is eagerly waiting for something positive to happen. The sunlight casting a warm glow on its fur enhances the overall positive tone, creating a feeling of optimism and cheerfulness. The dog's direct gaze towards the camera adds a personal touch, making the viewer feel as though they are part of the dog's joyful experience. The natural setting, with its earthy tones and soft lighting, complements the dog's golden hue, further reinforcing the sense of harmony and tranquility. The green collar, with its small charm, adds a playful and personal detail that contributes to the image's overall positive and lighthearted atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 168,
-            "total_tokens": 476
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1274.689758,
-            "prompt_eval_duration_ms": 28.864033,
-            "generation_duration_ms": 1203.567745,
-            "load_duration_ms": 38.984205,
-            "tokens_per_second": 139.5849969375841
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"dog\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"tan\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"looking up with an open mouth and perked ears\"\n    }\n  },\n  \"man-made\": {\n    \"collar\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"green\", \"black\"],\n      \"size\": \"small\",\n      \"description\": \"with a tag attached\"\n    }\n  },\n  \"natural\": {\n    \"ground\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"brown\", \"gray\"],\n      \"size\": \"large\",\n      \"description\": \"dirt or grassy surface\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "dog": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "tan",
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "looking up with an open mouth and perked ears"
-              }
-            },
-            "man-made": {
-              "collar": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "green",
-                  "black"
-                ],
-                "size": "small",
-                "description": "with a tag attached"
-              }
-            },
-            "natural": {
-              "ground": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "brown",
-                  "gray"
-                ],
-                "size": "large",
-                "description": "dirt or grassy surface"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 182,
-            "total_tokens": 668
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1374.898404,
-            "prompt_eval_duration_ms": 43.664701,
-            "generation_duration_ms": 1287.433315,
-            "load_duration_ms": 40.608131,
-            "tokens_per_second": 141.36654526452114
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2654,
-        "total_time_ms": 7243.1815449999995,
-        "average_speed": 140.1269970979448
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a cheerful and lively dog outdoors, likely in a natural setting such as a park or a dirt field. The main subject is a light brown or tan dog with a slightly darker muzzle and ears, standing on all fours and looking directly at the camera with an open, joyful expression. Its mouth is slightly open, revealing its teeth in a friendly \"smile,\" and its ears are perked up, indicating alertness and excitement. The dog is wearing a green collar with a visible tag, adding a pop of color to the otherwise earthy tones of the scene.\n\nThe background is a textured, dry, brownish ground, possibly dirt or compacted soil, which suggests an outdoor, natural environment. The lighting is bright and natural, likely from sunlight, casting soft shadows and highlighting the dog's fur texture and facial features. The overall composition is centered on the dog, with its head and upper body filling most of the frame, drawing the viewer's attention to its expressive face and energetic demeanor. The image conveys a sense of warmth, happiness, and connection between the dog and the photographer, creating a heartwarming and engaging scene. The simplicity of the background ensures that the focus remains entirely on the dog, emphasizing its joyful and lively nature.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 254,
-            "total_tokens": 551
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13135.762302,
-            "prompt_eval_duration_ms": 3616.670542,
-            "generation_duration_ms": 9473.171938,
-            "load_duration_ms": 42.169516,
-            "tokens_per_second": 26.81256095237992
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a close-up of a dog, which is the primary subject. The dog is a medium-sized, light brown or tan canine with pointed ears, a black nose, and bright, alert eyes. Its mouth is open in a happy or excited expression, revealing its teeth, and it is wearing a green collar with a tag. The dog's position and direct gaze suggest it is looking up at the camera or its owner, creating a sense of engagement with the viewer. The dog's fur texture and facial features are clearly visible, emphasizing its lively and friendly demeanor.\n\nThe background consists of a textured, earthy surface that appears to be dry dirt or soil. The ground is uneven and has a rough, natural appearance, indicating an outdoor setting, possibly a park, field, or rural area. The lighting suggests it is daytime, with sunlight casting shadows and highlighting the dog's features. The background is relatively plain and lacks distinct objects or landmarks, which helps to keep the focus on the dog in the foreground.\n\nThe relationship between the foreground and background is one of contrast and emphasis. The sharp focus on the dog in the foreground draws the viewer's attention immediately to the subject, while the blurred and less detailed background provides context without distracting from the main focus. The natural setting of the background complements the dog's outdoor presence, reinforcing the idea of a playful or active moment in a natural environment. The overall composition effectively highlights the dog's joyful expression and creates a warm, engaging atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 305,
-            "total_tokens": 608
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11480.755543,
-            "prompt_eval_duration_ms": 74.462722,
-            "generation_duration_ms": 11363.4497,
-            "load_duration_ms": 39.499303,
-            "tokens_per_second": 26.840440891818265
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image shows a close-up of a happy dog outdoors, with no visible people in the scene. The dog, which appears to be a medium-sized breed with a light brown or tan coat, is the central focus. Its ears are perked up, and its mouth is open in what looks like a joyful expression, possibly panting or smiling. The dog's eyes are bright and alert, conveying a sense of excitement or eagerness. It is wearing a green collar with a tag, indicating it is a pet. The background consists of a textured, earthy surface, likely dirt or dry grass, suggesting the dog is outdoors in a natural or rural setting.\n\nThere are no other animals or people visible in the image, so the focus is entirely on the dog's interaction with its environment. The dog's posture and expression suggest it is engaged and attentive, possibly responding to a command, a treat, or the presence of its owner, even though the owner is not in the frame. The lighting is bright, indicating it is daytime, and the overall atmosphere is lively and cheerful. The dog's alertness and open mouth suggest it is actively participating in an activity or enjoying the moment, showcasing a connection with its surroundings or an unseen human companion. The image captures a moment of pure joy and engagement, emphasizing the dog's lively and friendly nature.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 271,
-            "total_tokens": 577
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10246.120614,
-            "prompt_eval_duration_ms": 75.471448,
-            "generation_duration_ms": 10128.145385,
-            "load_duration_ms": 39.442065,
-            "tokens_per_second": 26.75711985743775
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a positive and joyful mood, evoking feelings of happiness, playfulness, and affection. The dog's wide, open mouth and bright, alert eyes suggest excitement and eagerness, as if it is eagerly anticipating a treat, playtime, or interaction with its owner. The upward tilt of its head and the perked-up ears indicate attentiveness and curiosity, further emphasizing its lively and engaged state. The dog's light brown fur and the bright, natural lighting enhance the overall warmth and cheerfulness of the scene. The background, though blurred, appears to be an outdoor setting, possibly a park or a field, which adds to the sense of freedom and joy associated with outdoor activities. The green collar with a tag suggests that the dog is well-cared-for, contributing to the feeling of comfort and security. The overall tone is overwhelmingly positive, as the visual elements\u2014such as the dog's expression, body language, and the sunny, open environment\u2014work together to create an atmosphere of happiness and lightheartedness. This image is likely to evoke feelings of warmth, joy, and a desire to interact with the dog, making it a heartwarming and uplifting visual experience.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 244,
-            "total_tokens": 552
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9234.892614,
-            "prompt_eval_duration_ms": 73.220126,
-            "generation_duration_ms": 9118.214584,
-            "load_duration_ms": 40.343283,
-            "tokens_per_second": 26.75962467785678
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"dog\": {\n      \"count\": 1,\n      \"location\": \"center, foreground\",\n      \"color\": [\"brown\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"A brown dog with black markings, wearing a green collar, sitting and looking up with an open mouth.\"\n    }\n  },\n  \"natural\": {\n    \"ground\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"brown\", \"dark brown\"],\n      \"size\": \"large\",\n      \"description\": \"Dirt or soil ground with some texture visible.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "dog": {
-                "count": 1,
-                "location": "center, foreground",
-                "color": [
-                  "brown",
-                  "black"
-                ],
-                "size": "medium",
-                "description": "A brown dog with black markings, wearing a green collar, sitting and looking up with an open mouth."
-              }
-            },
-            "natural": {
-              "ground": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "brown",
-                  "dark brown"
-                ],
-                "size": "large",
-                "description": "Dirt or soil ground with some texture visible."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 141,
-            "total_tokens": 627
-          },
-          "performance_metrics": {
-            "total_duration_ms": 5373.539303,
-            "prompt_eval_duration_ms": 133.410273,
-            "generation_duration_ms": 5197.751276,
-            "load_duration_ms": 38.230507,
-            "tokens_per_second": 27.127115653080743
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2915,
-        "total_time_ms": 49471.07037599999,
-        "average_speed": 26.859372406514694
       }
     },
     {

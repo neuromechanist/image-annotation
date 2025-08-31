@@ -7,6 +7,382 @@
   "timestamp": "2025-08-30T17:40:02.799857+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image presents a compact and somewhat dated bathroom, characterized by a warm and earthy color palette. The walls are a soft beige, complemented by a darker wood ceiling that adds a rustic touch. The lighting is soft and ambient, likely coming from a source outside the frame, casting a gentle glow over the space. The main elements include a white toilet with a simple design, a beige sink with a modern faucet, and a small television mounted on the wall above the toilet, which is an unusual and quirky feature. A white shower curtain hangs to the right, partially obscuring the view of the shower area. Above the sink, there are shelves holding various toiletries and a towel, adding to the lived-in feel of the space. The overall composition is tight and functional, with each element placed to maximize the limited space, creating a cozy yet slightly cluttered atmosphere. The presence of the television suggests a unique blend of practicality and entertainment in this small bathroom.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 195,
+            "total_tokens": 492
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1502.819952,
+            "prompt_eval_duration_ms": 80.47736,
+            "generation_duration_ms": 1377.57549,
+            "load_duration_ms": 42.66889,
+            "tokens_per_second": 141.5530411331578
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the viewer's attention is drawn to the bathroom sink, which is a beige ceramic basin with a matching faucet and a roll of toilet paper mounted on the wall below it. To the left of the sink, a towel hangs neatly on a holder, and above the sink, a mirror reflects the ceiling and part of the room, adding depth to the scene. The sink area is flanked by shelves holding various bathroom essentials, such as a soap dish and a glass container, which are positioned on the left side of the image. The background, slightly out of focus, reveals a white shower curtain hanging from a rod, partially obscuring the view of the shower area. The wall behind the sink is tiled with a beige pattern that complements the sink and toilet, creating a cohesive color scheme. The ceiling, visible in the reflection of the mirror, is dark, contrasting with the lighter tones of the walls and sink, which helps to define the space and create a sense of depth. The overall composition of the image suggests a compact and functional bathroom layout, with the foreground elements providing a clear view of the sink and its immediate surroundings, while the background elements give context to the room's design and layout.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 248,
+            "total_tokens": 551
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1850.063633,
+            "prompt_eval_duration_ms": 31.575557,
+            "generation_duration_ms": 1777.079508,
+            "load_duration_ms": 38.956859,
+            "tokens_per_second": 139.5548138862451
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a compact bathroom with a sink, toilet, and a small television mounted on the wall above the toilet. There are no people or animals present in the image. The sink is equipped with a faucet and a soap dispenser, and a brown towel hangs neatly on a ring attached to the wall. Above the sink, there are shelves holding various items, including a bowl and what appears to be a roll of paper towels. The television, which is turned off, is positioned directly above the toilet, suggesting it might be used as a mirror or for entertainment. The bathroom has a wooden ceiling and white walls, with a shower curtain partially visible on the right side. The overall arrangement of the objects indicates a functional and somewhat utilitarian space, designed for practical use rather than aesthetic appeal.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 159,
+            "total_tokens": 465
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1214.969371,
+            "prompt_eval_duration_ms": 30.015791,
+            "generation_duration_ms": 1144.210219,
+            "load_duration_ms": 38.478932,
+            "tokens_per_second": 138.96047890479466
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of nostalgia and simplicity, with a slightly melancholic undertone. The small, compact bathroom with its beige tones and simple fixtures suggests a utilitarian space, perhaps from a past era or a budget-conscious setting. The presence of the small television mounted above the toilet adds a touch of quaintness, hinting at a time when entertainment was more limited. The white shower curtain and the neatly arranged toiletries contribute to a feeling of order and cleanliness, which can be comforting. However, the overall tone is not entirely positive; the small size of the room and the somewhat dated appearance of the fixtures might evoke feelings of confinement or a lack of modern amenities. The warm lighting, however, softens the mood, creating a sense of coziness and familiarity. The image, in its simplicity and slight datedness, seems to convey a quiet, reflective mood, inviting the viewer to imagine a personal space where memories and routines are formed.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 192,
+            "total_tokens": 500
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1475.409408,
+            "prompt_eval_duration_ms": 31.452155,
+            "generation_duration_ms": 1399.890403,
+            "load_duration_ms": 42.049075,
+            "tokens_per_second": 137.15359401603098
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"human\": {\n      \"count\": 0,\n      \"location\": \"none\",\n      \"color\": [],\n      \"size\": \"none\",\n      \"description\": \"no human figures detected\"\n    },\n    \"animal\": {\n      \"count\": 0,\n      \"location\": \"none\",\n      \"color\": [],\n      \"size\": \"none\",\n      \"description\": \"no animals detected\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"beige\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"bathroom sink with faucet and soap dispenser\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"beige\"],\n      \"size\": \"medium\",\n      \"description\": \"bathroom toilet\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"bathroom shower curtain\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"beige\"],\n      \"size\": \"small\",\n      \"description\": \"bathroom shelves with various items\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"beige\"],\n      \"size\": \"small\",\n      \"description\": \"bathroom mirror\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"beige\"],\n      \"size\": \"small\",\n      \"description\": \"bathroom wall with picture frame\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"beige\"],\n      \"size\": \"small\",\n      \"description\": \"bathroom television\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"beige\"],\n      \"size\": \"small\",\n      \"description\": \"bathroom toilet paper holder\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"beige\"],\n      \"size\": \"small\",\n      \"description\": \"bathroom toilet tank\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "human": {
+                "count": 0,
+                "location": "none",
+                "color": [],
+                "size": "none",
+                "description": "no human figures detected"
+              },
+              "animal": {
+                "count": 0,
+                "location": "none",
+                "color": [],
+                "size": "none",
+                "description": "no animals detected"
+              },
+              "man-made": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "beige"
+                ],
+                "size": "small",
+                "description": "bathroom toilet tank"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 531,
+            "total_tokens": 1017
+          },
+          "performance_metrics": {
+            "total_duration_ms": 4038.139256,
+            "prompt_eval_duration_ms": 45.601881,
+            "generation_duration_ms": 3950.770944,
+            "load_duration_ms": 39.170915,
+            "tokens_per_second": 134.404147323809
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3025,
+        "total_time_ms": 10081.40162,
+        "average_speed": 138.32521505280752
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a compact, well-organized bathroom with a warm and inviting atmosphere. The setting appears to be a small, functional space, likely in a home or a similar residential environment. The main elements include a sink, a toilet, a shower area, and various storage solutions.\n\nThe walls are painted a soft, warm beige or light brown, complemented by wooden accents, such as the ceiling and shelving, which add a natural, rustic touch. The ceiling is wooden with visible beams, contributing to the cozy ambiance. The lighting is soft and warm, likely from an overhead source, casting a gentle glow throughout the space.\n\nThe sink is a beige or light brown ceramic basin mounted on a matching countertop, with a simple faucet and a small mirror above it. To the left of the sink, there is a small, built-in shelf with cubbyholes, possibly for storing toiletries. A towel hangs neatly on a rack next to the sink.\n\nA toilet is positioned beneath a small television mounted on the wall, which is a unique and practical feature for a small bathroom. The television is framed in a light-colored housing, blending seamlessly with the room's color scheme. To the right of the toilet, a white shower curtain hangs from a metal rod, separating the shower area from the rest of the space. A framed picture or artwork is mounted on the wall above the shower curtain, adding a decorative element.\n\nThe overall composition is clean and efficient, with a focus on maximizing space and functionality. The color palette is warm and cohesive, creating a welcoming and comfortable environment. The use of wood, beige tones, and soft lighting enhances the sense of warmth and simplicity.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 337,
+            "total_tokens": 634
+          },
+          "performance_metrics": {
+            "total_duration_ms": 16108.761466,
+            "prompt_eval_duration_ms": 3527.099085,
+            "generation_duration_ms": 12540.976305,
+            "load_duration_ms": 38.518153,
+            "tokens_per_second": 26.87191107008475
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the closest elements to the viewer include the beige sink with a faucet and a small mirror above it, which reflects part of the room. Below the sink, there is a toilet with a beige lid and a roll of toilet paper on a holder. The wall around these fixtures is a warm, light wood paneling, adding a cozy and natural touch to the space. A small, built-in shelf is visible beneath the sink, likely for storage. The foreground elements are functional and essential for the bathroom's primary use, focusing on cleanliness and convenience.\n\nIn the background, the setting includes a shower area with a white curtain, creating a sense of separation between the sink and toilet area and the bathing space. Above the toilet, a small television is mounted on the wall, adding a modern and somewhat unconventional touch to the bathroom. The wall above the sink features a framed picture or artwork, contributing a decorative element to the otherwise functional space. The ceiling is wooden, matching the wood paneling on the walls, which creates a cohesive and warm atmosphere. The shelves above the sink hold various items, possibly toiletries or decorative objects, adding to the room's lived-in feel.\n\nThe foreground and background elements relate to each other through their shared color palette and materials, such as the wood paneling and beige tones, which unify the space. The functional elements in the foreground, like the sink and toilet, are complemented by the decorative and modern touches in the background, such as the artwork and television, creating a balance between utility and style. The overall layout suggests a compact yet well-organized bathroom design, where each element serves a purpose while contributing to the room's aesthetic harmony.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 342,
+            "total_tokens": 645
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12835.250464,
+            "prompt_eval_duration_ms": 73.959988,
+            "generation_duration_ms": 12720.994508,
+            "load_duration_ms": 38.011937,
+            "tokens_per_second": 26.88469048429527
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a compact and well-organized bathroom with no visible people or animals. The focus is on the arrangement of objects and their functional relationships within the space. The bathroom features a sink with a faucet, a mirror above it, and a toilet positioned below the sink. A small television is mounted on the wall above the toilet, suggesting a multi-functional use of the space. A towel hangs neatly on a rack beside the sink, indicating readiness for use. Shelves above the sink hold various items, including bowls and bottles, showcasing an efficient use of vertical space. A shower curtain is drawn to the side, revealing a shower area. A framed picture hangs on the wall, adding a decorative touch to the otherwise functional space. The wooden ceiling and walls contribute to a warm, cozy atmosphere. The overall layout emphasizes practicality and organization, with each object serving a specific purpose and interacting with the others to create a cohesive and functional environment. The absence of people or animals highlights the focus on the design and utility of the space.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 207,
+            "total_tokens": 513
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7847.883211,
+            "prompt_eval_duration_ms": 76.39309,
+            "generation_duration_ms": 7728.436403,
+            "load_duration_ms": 40.638686,
+            "tokens_per_second": 26.784201771997164
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a small, functional bathroom with a clean and organized appearance, evoking a sense of simplicity and practicality. The overall mood is neutral, leaning slightly towards positive due to the orderly arrangement and warm tones. The wooden ceiling and shelving add a touch of warmth and natural texture, which can create a cozy and inviting atmosphere. The beige and cream color palette contributes to a calm and serene environment, free from any overwhelming or jarring elements. The presence of neatly arranged shelves, a clean sink, and a tidy shower area suggests a sense of order and cleanliness, which can evoke feelings of comfort and satisfaction. The framed picture on the wall adds a subtle personal touch, hinting at a lived-in and cared-for space. The compact layout, while functional, may also subtly convey a sense of limitation or practicality, which might resonate with those who appreciate efficiency over luxury. Overall, the image evokes feelings of tranquility, order, and practicality, with a slightly warm and inviting undertone.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 204,
+            "total_tokens": 512
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7759.203133,
+            "prompt_eval_duration_ms": 78.913715,
+            "generation_duration_ms": 7636.579572,
+            "load_duration_ms": 40.508161,
+            "tokens_per_second": 26.71353032815619
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"sink\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"beige\"],\n      \"size\": \"medium\",\n      \"description\": \"Beige sink with faucet and soap dispenser\"\n    },\n    \"toilet\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"beige\"],\n      \"size\": \"medium\",\n      \"description\": \"Beige toilet with closed lid\"\n    },\n    \"shower curtain\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"White shower curtain with rod\"\n    },\n    \"mirror\": {\n      \"count\": 1,\n      \"location\": \"left, top\",\n      \"color\": [\"silver\"],\n      \"size\": \"large\",\n      \"description\": \"Large mirror above sink\"\n    },\n    \"shelves\": {\n      \"count\": 2,\n      \"location\": \"left, top\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"White shelves with bowls\"\n    },\n    \"towel\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"Brown towel hanging on rack\"\n    },\n    \"toilet paper\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"White toilet paper roll\"\n    },\n    \"light fixture\": {\n      \"count\": 1,\n      \"location\": \"top, center\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Wall-mounted light fixture\"\n    },\n    \"wall-mounted shelf\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Silver wall-mounted shelf\"\n    },\n    \"picture frame\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"Yellow picture frame on wall\"\n    },\n    \"bathroom cabinet\": {\n      \"count\": 1,\n      \"location\": \"left, top\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"White bathroom cabinet with shelves\"\n    },\n    \"ceiling\": {\n      \"count\": 1,\n      \"location\": \"top, center\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Wooden ceiling\"\n    },\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"yellow\"],\n      \"size\": \"large\",\n      \"description\": \"Yellow wall\"\n    },\n    \"bathroom floor\": {\n      \"count\": 1,\n      \"location\": \"bottom, center\",\n      \"color\": [\"beige\"],\n      \"size\": \"large\",\n      \"description\": \"Beige bathroom floor\"\n    },\n    \"bathroom door\": {\n      \"count\": 1,\n      \"location\": \"right, top\",\n      \"color\": [\"beige\"],\n      \"size\": \"large\",\n      \"description\": \"Beige bathroom door\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "sink": {
+                "count": 1,
+                "location": "left, middle",
+                "color": [
+                  "beige"
+                ],
+                "size": "medium",
+                "description": "Beige sink with faucet and soap dispenser"
+              },
+              "toilet": {
+                "count": 1,
+                "location": "center, bottom",
+                "color": [
+                  "beige"
+                ],
+                "size": "medium",
+                "description": "Beige toilet with closed lid"
+              },
+              "shower curtain": {
+                "count": 1,
+                "location": "right, middle",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "White shower curtain with rod"
+              },
+              "mirror": {
+                "count": 1,
+                "location": "left, top",
+                "color": [
+                  "silver"
+                ],
+                "size": "large",
+                "description": "Large mirror above sink"
+              },
+              "shelves": {
+                "count": 2,
+                "location": "left, top",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "White shelves with bowls"
+              },
+              "towel": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "brown"
+                ],
+                "size": "small",
+                "description": "Brown towel hanging on rack"
+              },
+              "toilet paper": {
+                "count": 1,
+                "location": "center, bottom",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "White toilet paper roll"
+              },
+              "light fixture": {
+                "count": 1,
+                "location": "top, center",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "Wall-mounted light fixture"
+              },
+              "wall-mounted shelf": {
+                "count": 1,
+                "location": "center, top",
+                "color": [
+                  "silver"
+                ],
+                "size": "small",
+                "description": "Silver wall-mounted shelf"
+              },
+              "picture frame": {
+                "count": 1,
+                "location": "center, top",
+                "color": [
+                  "yellow"
+                ],
+                "size": "small",
+                "description": "Yellow picture frame on wall"
+              },
+              "bathroom cabinet": {
+                "count": 1,
+                "location": "left, top",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "White bathroom cabinet with shelves"
+              },
+              "ceiling": {
+                "count": 1,
+                "location": "top, center",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "Wooden ceiling"
+              },
+              "wall": {
+                "count": 1,
+                "location": "center, top",
+                "color": [
+                  "yellow"
+                ],
+                "size": "large",
+                "description": "Yellow wall"
+              },
+              "bathroom floor": {
+                "count": 1,
+                "location": "bottom, center",
+                "color": [
+                  "beige"
+                ],
+                "size": "large",
+                "description": "Beige bathroom floor"
+              },
+              "bathroom door": {
+                "count": 1,
+                "location": "right, top",
+                "color": [
+                  "beige"
+                ],
+                "size": "large",
+                "description": "Beige bathroom door"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 749,
+            "total_tokens": 1235
+          },
+          "performance_metrics": {
+            "total_duration_ms": 28096.485764,
+            "prompt_eval_duration_ms": 135.410402,
+            "generation_duration_ms": 27920.773777,
+            "load_duration_ms": 37.845672,
+            "tokens_per_second": 26.825904109326505
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3539,
+        "total_time_ms": 72647.584038,
+        "average_speed": 26.816047552771977
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -631,382 +1007,6 @@
         "total_tokens": 3188,
         "total_time_ms": 34334.731489,
         "average_speed": 42.06750126575196
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image presents a compact and somewhat dated bathroom, characterized by a warm and earthy color palette. The walls are a soft beige, complemented by a darker wood ceiling that adds a rustic touch. The lighting is soft and ambient, likely coming from a source outside the frame, casting a gentle glow over the space. The main elements include a white toilet with a simple design, a beige sink with a modern faucet, and a small television mounted on the wall above the toilet, which is an unusual and quirky feature. A white shower curtain hangs to the right, partially obscuring the view of the shower area. Above the sink, there are shelves holding various toiletries and a towel, adding to the lived-in feel of the space. The overall composition is tight and functional, with each element placed to maximize the limited space, creating a cozy yet slightly cluttered atmosphere. The presence of the television suggests a unique blend of practicality and entertainment in this small bathroom.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 195,
-            "total_tokens": 492
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1502.819952,
-            "prompt_eval_duration_ms": 80.47736,
-            "generation_duration_ms": 1377.57549,
-            "load_duration_ms": 42.66889,
-            "tokens_per_second": 141.5530411331578
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the viewer's attention is drawn to the bathroom sink, which is a beige ceramic basin with a matching faucet and a roll of toilet paper mounted on the wall below it. To the left of the sink, a towel hangs neatly on a holder, and above the sink, a mirror reflects the ceiling and part of the room, adding depth to the scene. The sink area is flanked by shelves holding various bathroom essentials, such as a soap dish and a glass container, which are positioned on the left side of the image. The background, slightly out of focus, reveals a white shower curtain hanging from a rod, partially obscuring the view of the shower area. The wall behind the sink is tiled with a beige pattern that complements the sink and toilet, creating a cohesive color scheme. The ceiling, visible in the reflection of the mirror, is dark, contrasting with the lighter tones of the walls and sink, which helps to define the space and create a sense of depth. The overall composition of the image suggests a compact and functional bathroom layout, with the foreground elements providing a clear view of the sink and its immediate surroundings, while the background elements give context to the room's design and layout.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 248,
-            "total_tokens": 551
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1850.063633,
-            "prompt_eval_duration_ms": 31.575557,
-            "generation_duration_ms": 1777.079508,
-            "load_duration_ms": 38.956859,
-            "tokens_per_second": 139.5548138862451
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a compact bathroom with a sink, toilet, and a small television mounted on the wall above the toilet. There are no people or animals present in the image. The sink is equipped with a faucet and a soap dispenser, and a brown towel hangs neatly on a ring attached to the wall. Above the sink, there are shelves holding various items, including a bowl and what appears to be a roll of paper towels. The television, which is turned off, is positioned directly above the toilet, suggesting it might be used as a mirror or for entertainment. The bathroom has a wooden ceiling and white walls, with a shower curtain partially visible on the right side. The overall arrangement of the objects indicates a functional and somewhat utilitarian space, designed for practical use rather than aesthetic appeal.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 159,
-            "total_tokens": 465
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1214.969371,
-            "prompt_eval_duration_ms": 30.015791,
-            "generation_duration_ms": 1144.210219,
-            "load_duration_ms": 38.478932,
-            "tokens_per_second": 138.96047890479466
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of nostalgia and simplicity, with a slightly melancholic undertone. The small, compact bathroom with its beige tones and simple fixtures suggests a utilitarian space, perhaps from a past era or a budget-conscious setting. The presence of the small television mounted above the toilet adds a touch of quaintness, hinting at a time when entertainment was more limited. The white shower curtain and the neatly arranged toiletries contribute to a feeling of order and cleanliness, which can be comforting. However, the overall tone is not entirely positive; the small size of the room and the somewhat dated appearance of the fixtures might evoke feelings of confinement or a lack of modern amenities. The warm lighting, however, softens the mood, creating a sense of coziness and familiarity. The image, in its simplicity and slight datedness, seems to convey a quiet, reflective mood, inviting the viewer to imagine a personal space where memories and routines are formed.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 192,
-            "total_tokens": 500
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1475.409408,
-            "prompt_eval_duration_ms": 31.452155,
-            "generation_duration_ms": 1399.890403,
-            "load_duration_ms": 42.049075,
-            "tokens_per_second": 137.15359401603098
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"human\": {\n      \"count\": 0,\n      \"location\": \"none\",\n      \"color\": [],\n      \"size\": \"none\",\n      \"description\": \"no human figures detected\"\n    },\n    \"animal\": {\n      \"count\": 0,\n      \"location\": \"none\",\n      \"color\": [],\n      \"size\": \"none\",\n      \"description\": \"no animals detected\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"beige\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"bathroom sink with faucet and soap dispenser\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"beige\"],\n      \"size\": \"medium\",\n      \"description\": \"bathroom toilet\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"bathroom shower curtain\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"beige\"],\n      \"size\": \"small\",\n      \"description\": \"bathroom shelves with various items\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"beige\"],\n      \"size\": \"small\",\n      \"description\": \"bathroom mirror\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"beige\"],\n      \"size\": \"small\",\n      \"description\": \"bathroom wall with picture frame\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"beige\"],\n      \"size\": \"small\",\n      \"description\": \"bathroom television\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"beige\"],\n      \"size\": \"small\",\n      \"description\": \"bathroom toilet paper holder\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"beige\"],\n      \"size\": \"small\",\n      \"description\": \"bathroom toilet tank\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "human": {
-                "count": 0,
-                "location": "none",
-                "color": [],
-                "size": "none",
-                "description": "no human figures detected"
-              },
-              "animal": {
-                "count": 0,
-                "location": "none",
-                "color": [],
-                "size": "none",
-                "description": "no animals detected"
-              },
-              "man-made": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "beige"
-                ],
-                "size": "small",
-                "description": "bathroom toilet tank"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 531,
-            "total_tokens": 1017
-          },
-          "performance_metrics": {
-            "total_duration_ms": 4038.139256,
-            "prompt_eval_duration_ms": 45.601881,
-            "generation_duration_ms": 3950.770944,
-            "load_duration_ms": 39.170915,
-            "tokens_per_second": 134.404147323809
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3025,
-        "total_time_ms": 10081.40162,
-        "average_speed": 138.32521505280752
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a compact, well-organized bathroom with a warm and inviting atmosphere. The setting appears to be a small, functional space, likely in a home or a similar residential environment. The main elements include a sink, a toilet, a shower area, and various storage solutions.\n\nThe walls are painted a soft, warm beige or light brown, complemented by wooden accents, such as the ceiling and shelving, which add a natural, rustic touch. The ceiling is wooden with visible beams, contributing to the cozy ambiance. The lighting is soft and warm, likely from an overhead source, casting a gentle glow throughout the space.\n\nThe sink is a beige or light brown ceramic basin mounted on a matching countertop, with a simple faucet and a small mirror above it. To the left of the sink, there is a small, built-in shelf with cubbyholes, possibly for storing toiletries. A towel hangs neatly on a rack next to the sink.\n\nA toilet is positioned beneath a small television mounted on the wall, which is a unique and practical feature for a small bathroom. The television is framed in a light-colored housing, blending seamlessly with the room's color scheme. To the right of the toilet, a white shower curtain hangs from a metal rod, separating the shower area from the rest of the space. A framed picture or artwork is mounted on the wall above the shower curtain, adding a decorative element.\n\nThe overall composition is clean and efficient, with a focus on maximizing space and functionality. The color palette is warm and cohesive, creating a welcoming and comfortable environment. The use of wood, beige tones, and soft lighting enhances the sense of warmth and simplicity.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 337,
-            "total_tokens": 634
-          },
-          "performance_metrics": {
-            "total_duration_ms": 16108.761466,
-            "prompt_eval_duration_ms": 3527.099085,
-            "generation_duration_ms": 12540.976305,
-            "load_duration_ms": 38.518153,
-            "tokens_per_second": 26.87191107008475
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the closest elements to the viewer include the beige sink with a faucet and a small mirror above it, which reflects part of the room. Below the sink, there is a toilet with a beige lid and a roll of toilet paper on a holder. The wall around these fixtures is a warm, light wood paneling, adding a cozy and natural touch to the space. A small, built-in shelf is visible beneath the sink, likely for storage. The foreground elements are functional and essential for the bathroom's primary use, focusing on cleanliness and convenience.\n\nIn the background, the setting includes a shower area with a white curtain, creating a sense of separation between the sink and toilet area and the bathing space. Above the toilet, a small television is mounted on the wall, adding a modern and somewhat unconventional touch to the bathroom. The wall above the sink features a framed picture or artwork, contributing a decorative element to the otherwise functional space. The ceiling is wooden, matching the wood paneling on the walls, which creates a cohesive and warm atmosphere. The shelves above the sink hold various items, possibly toiletries or decorative objects, adding to the room's lived-in feel.\n\nThe foreground and background elements relate to each other through their shared color palette and materials, such as the wood paneling and beige tones, which unify the space. The functional elements in the foreground, like the sink and toilet, are complemented by the decorative and modern touches in the background, such as the artwork and television, creating a balance between utility and style. The overall layout suggests a compact yet well-organized bathroom design, where each element serves a purpose while contributing to the room's aesthetic harmony.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 342,
-            "total_tokens": 645
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12835.250464,
-            "prompt_eval_duration_ms": 73.959988,
-            "generation_duration_ms": 12720.994508,
-            "load_duration_ms": 38.011937,
-            "tokens_per_second": 26.88469048429527
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a compact and well-organized bathroom with no visible people or animals. The focus is on the arrangement of objects and their functional relationships within the space. The bathroom features a sink with a faucet, a mirror above it, and a toilet positioned below the sink. A small television is mounted on the wall above the toilet, suggesting a multi-functional use of the space. A towel hangs neatly on a rack beside the sink, indicating readiness for use. Shelves above the sink hold various items, including bowls and bottles, showcasing an efficient use of vertical space. A shower curtain is drawn to the side, revealing a shower area. A framed picture hangs on the wall, adding a decorative touch to the otherwise functional space. The wooden ceiling and walls contribute to a warm, cozy atmosphere. The overall layout emphasizes practicality and organization, with each object serving a specific purpose and interacting with the others to create a cohesive and functional environment. The absence of people or animals highlights the focus on the design and utility of the space.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 207,
-            "total_tokens": 513
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7847.883211,
-            "prompt_eval_duration_ms": 76.39309,
-            "generation_duration_ms": 7728.436403,
-            "load_duration_ms": 40.638686,
-            "tokens_per_second": 26.784201771997164
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a small, functional bathroom with a clean and organized appearance, evoking a sense of simplicity and practicality. The overall mood is neutral, leaning slightly towards positive due to the orderly arrangement and warm tones. The wooden ceiling and shelving add a touch of warmth and natural texture, which can create a cozy and inviting atmosphere. The beige and cream color palette contributes to a calm and serene environment, free from any overwhelming or jarring elements. The presence of neatly arranged shelves, a clean sink, and a tidy shower area suggests a sense of order and cleanliness, which can evoke feelings of comfort and satisfaction. The framed picture on the wall adds a subtle personal touch, hinting at a lived-in and cared-for space. The compact layout, while functional, may also subtly convey a sense of limitation or practicality, which might resonate with those who appreciate efficiency over luxury. Overall, the image evokes feelings of tranquility, order, and practicality, with a slightly warm and inviting undertone.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 204,
-            "total_tokens": 512
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7759.203133,
-            "prompt_eval_duration_ms": 78.913715,
-            "generation_duration_ms": 7636.579572,
-            "load_duration_ms": 40.508161,
-            "tokens_per_second": 26.71353032815619
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"sink\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"beige\"],\n      \"size\": \"medium\",\n      \"description\": \"Beige sink with faucet and soap dispenser\"\n    },\n    \"toilet\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"beige\"],\n      \"size\": \"medium\",\n      \"description\": \"Beige toilet with closed lid\"\n    },\n    \"shower curtain\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"White shower curtain with rod\"\n    },\n    \"mirror\": {\n      \"count\": 1,\n      \"location\": \"left, top\",\n      \"color\": [\"silver\"],\n      \"size\": \"large\",\n      \"description\": \"Large mirror above sink\"\n    },\n    \"shelves\": {\n      \"count\": 2,\n      \"location\": \"left, top\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"White shelves with bowls\"\n    },\n    \"towel\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"Brown towel hanging on rack\"\n    },\n    \"toilet paper\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"White toilet paper roll\"\n    },\n    \"light fixture\": {\n      \"count\": 1,\n      \"location\": \"top, center\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Wall-mounted light fixture\"\n    },\n    \"wall-mounted shelf\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Silver wall-mounted shelf\"\n    },\n    \"picture frame\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"Yellow picture frame on wall\"\n    },\n    \"bathroom cabinet\": {\n      \"count\": 1,\n      \"location\": \"left, top\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"White bathroom cabinet with shelves\"\n    },\n    \"ceiling\": {\n      \"count\": 1,\n      \"location\": \"top, center\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Wooden ceiling\"\n    },\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"yellow\"],\n      \"size\": \"large\",\n      \"description\": \"Yellow wall\"\n    },\n    \"bathroom floor\": {\n      \"count\": 1,\n      \"location\": \"bottom, center\",\n      \"color\": [\"beige\"],\n      \"size\": \"large\",\n      \"description\": \"Beige bathroom floor\"\n    },\n    \"bathroom door\": {\n      \"count\": 1,\n      \"location\": \"right, top\",\n      \"color\": [\"beige\"],\n      \"size\": \"large\",\n      \"description\": \"Beige bathroom door\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "sink": {
-                "count": 1,
-                "location": "left, middle",
-                "color": [
-                  "beige"
-                ],
-                "size": "medium",
-                "description": "Beige sink with faucet and soap dispenser"
-              },
-              "toilet": {
-                "count": 1,
-                "location": "center, bottom",
-                "color": [
-                  "beige"
-                ],
-                "size": "medium",
-                "description": "Beige toilet with closed lid"
-              },
-              "shower curtain": {
-                "count": 1,
-                "location": "right, middle",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "White shower curtain with rod"
-              },
-              "mirror": {
-                "count": 1,
-                "location": "left, top",
-                "color": [
-                  "silver"
-                ],
-                "size": "large",
-                "description": "Large mirror above sink"
-              },
-              "shelves": {
-                "count": 2,
-                "location": "left, top",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "White shelves with bowls"
-              },
-              "towel": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "brown"
-                ],
-                "size": "small",
-                "description": "Brown towel hanging on rack"
-              },
-              "toilet paper": {
-                "count": 1,
-                "location": "center, bottom",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "White toilet paper roll"
-              },
-              "light fixture": {
-                "count": 1,
-                "location": "top, center",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "Wall-mounted light fixture"
-              },
-              "wall-mounted shelf": {
-                "count": 1,
-                "location": "center, top",
-                "color": [
-                  "silver"
-                ],
-                "size": "small",
-                "description": "Silver wall-mounted shelf"
-              },
-              "picture frame": {
-                "count": 1,
-                "location": "center, top",
-                "color": [
-                  "yellow"
-                ],
-                "size": "small",
-                "description": "Yellow picture frame on wall"
-              },
-              "bathroom cabinet": {
-                "count": 1,
-                "location": "left, top",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "White bathroom cabinet with shelves"
-              },
-              "ceiling": {
-                "count": 1,
-                "location": "top, center",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "Wooden ceiling"
-              },
-              "wall": {
-                "count": 1,
-                "location": "center, top",
-                "color": [
-                  "yellow"
-                ],
-                "size": "large",
-                "description": "Yellow wall"
-              },
-              "bathroom floor": {
-                "count": 1,
-                "location": "bottom, center",
-                "color": [
-                  "beige"
-                ],
-                "size": "large",
-                "description": "Beige bathroom floor"
-              },
-              "bathroom door": {
-                "count": 1,
-                "location": "right, top",
-                "color": [
-                  "beige"
-                ],
-                "size": "large",
-                "description": "Beige bathroom door"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 749,
-            "total_tokens": 1235
-          },
-          "performance_metrics": {
-            "total_duration_ms": 28096.485764,
-            "prompt_eval_duration_ms": 135.410402,
-            "generation_duration_ms": 27920.773777,
-            "load_duration_ms": 37.845672,
-            "tokens_per_second": 26.825904109326505
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3539,
-        "total_time_ms": 72647.584038,
-        "average_speed": 26.816047552771977
       }
     },
     {

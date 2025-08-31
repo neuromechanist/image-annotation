@@ -7,6 +7,322 @@
   "timestamp": "2025-08-30T19:49:58.207934+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a small, neatly arranged bathroom corner, bathed in soft, natural light that enhances the warm tones of the beige and brown tiles covering the walls. The tiles are arranged in a grid pattern, with a decorative mosaic border running horizontally just below the upper edge of the wall, adding a subtle contrast to the otherwise uniform tiling. A white, oval-shaped sink sits atop a white countertop, positioned slightly off-center to the right. The sink is equipped with a modern, chrome faucet that gleams under the light, reflecting a sense of cleanliness and modernity. A dark gray towel hangs neatly on a towel ring to the left of the sink, its muted color providing a subtle contrast to the lighter tones of the room. The lighting appears to be ambient, possibly from a window out of frame, casting gentle shadows and highlighting the textures of the tiles and the smooth surface of the sink. The overall composition is simple and functional, with a focus on the clean lines and neutral colors that create a calm and inviting atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 208,
+            "total_tokens": 505
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1594.533954,
+            "prompt_eval_duration_ms": 81.643222,
+            "generation_duration_ms": 1471.253594,
+            "load_duration_ms": 38.852152,
+            "tokens_per_second": 141.3760352724073
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the viewer's attention is drawn to a pristine white countertop that supports a modern, oval-shaped white sink with a sleek, silver faucet. The sink's smooth, curved design contrasts subtly with the straight lines of the countertop, creating a balance between form and function. To the left of the sink, a neatly folded dark gray towel hangs on a simple, dark-colored towel ring, adding a touch of texture and color to the otherwise monochromatic scene. The background, slightly out of focus, reveals a wall adorned with beige tiles that have a subtle mosaic pattern, providing a warm, earthy backdrop that complements the white elements in the foreground. Above the sink, a white-framed mirror is partially visible, reflecting the light and enhancing the sense of space. The overall composition of the image suggests a clean, modern bathroom setting, where each element, from the sink and towel to the tiles and mirror, contributes to a harmonious and inviting atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 200,
+            "total_tokens": 503
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1525.285719,
+            "prompt_eval_duration_ms": 30.977941,
+            "generation_duration_ms": 1451.553256,
+            "load_duration_ms": 40.273338,
+            "tokens_per_second": 137.7834393421663
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a neatly arranged bathroom scene with no people or animals present. The primary objects in the image are a white vessel sink with a modern chrome faucet, a white countertop, beige tiled walls with a decorative mosaic border, and a dark gray towel hanging on a towel rack to the left of the sink. The faucet is stationary, and the towel is neatly folded and hanging, suggesting a clean and organized space. The sink and countertop are static, with no visible interaction between them or with the towel. The mosaic border on the wall adds a decorative touch to the otherwise simple and functional bathroom setup. The overall scene conveys a sense of stillness and order, with no actions or interactions taking place.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 144,
+            "total_tokens": 450
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1106.84635,
+            "prompt_eval_duration_ms": 30.616332,
+            "generation_duration_ms": 1032.847061,
+            "load_duration_ms": 40.665992,
+            "tokens_per_second": 139.42044803862785
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image of the bathroom evokes a sense of calm and simplicity, contributing to a neutral to slightly positive mood. The beige tiles and the earthy tones of the wall tiles create a warm and inviting atmosphere, suggesting a space designed for relaxation and personal care. The clean, white sink and the neatly hung dark towel add to the sense of order and cleanliness, reinforcing the idea of a well-maintained and peaceful environment. The soft lighting, which is not harsh, further enhances the tranquil feeling, making the space appear welcoming and serene. There are no overtly emotional or dramatic elements in the image; instead, it conveys a quiet, almost meditative quality, which might make viewers feel at ease and comfortable. The overall tone is neither overly cheerful nor somber, but rather a balanced, understated positivity that aligns with the practical and functional nature of the space.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 177,
+            "total_tokens": 485
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1345.536874,
+            "prompt_eval_duration_ms": 30.44429,
+            "generation_duration_ms": 1272.636393,
+            "load_duration_ms": 39.99317,
+            "tokens_per_second": 139.08135974546187
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"human\": {\n      \"count\": 0,\n      \"location\": \"left\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"towel hanging on a rack\"\n    },\n    \"animal\": {\n      \"count\": 0,\n      \"location\": \"any\",\n      \"color\": [],\n      \"size\": \"any\",\n      \"description\": \"\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"oval sink with a faucet\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"beige\", \"brown\"],\n      \"size\": \"small\",\n      \"description\": \"mosaic tile border\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"mirror above the sink\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"towel rack\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "human": {
+                "count": 0,
+                "location": "left",
+                "color": [
+                  "gray"
+                ],
+                "size": "small",
+                "description": "towel hanging on a rack"
+              },
+              "animal": {
+                "count": 0,
+                "location": "any",
+                "color": [],
+                "size": "any",
+                "description": ""
+              },
+              "man-made": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "towel rack"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 288,
+            "total_tokens": 774
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2129.695931,
+            "prompt_eval_duration_ms": 43.961035,
+            "generation_duration_ms": 2040.749523,
+            "load_duration_ms": 42.307056,
+            "tokens_per_second": 141.1246195351922
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2717,
+        "total_time_ms": 7701.898827999999,
+        "average_speed": 139.7571803867711
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a clean and well-organized bathroom setting. The focal point is a white, oval-shaped sink mounted on a white countertop, which appears to be made of a smooth, solid material, likely laminate or solid surface. The sink is equipped with a modern, metallic faucet with a sleek, curved design, featuring separate handles for hot and cold water. The countertop is simple and uncluttered, enhancing the minimalist aesthetic.\n\nThe wall behind the sink is tiled with large, square beige tiles that have a subtle, textured appearance, giving the space a warm and inviting feel. A decorative mosaic tile border runs horizontally across the wall, adding a touch of visual interest with its small, multicolored tiles in shades of beige, brown, and white. Above the sink, a circular mirror is partially visible, mounted on the wall, reflecting part of the room and contributing to the sense of space.\n\nTo the left, a dark purple or maroon towel hangs neatly on a towel rack, providing a contrasting color against the neutral tones of the room. The lighting is soft and evenly distributed, likely from an overhead source, creating a bright and airy atmosphere without harsh shadows. The overall composition is balanced, with the sink and countertop centrally positioned, and the elements arranged symmetrically to create a harmonious and functional space. The bathroom appears tidy and well-maintained, exuding a sense of cleanliness and simplicity.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 287,
+            "total_tokens": 584
+          },
+          "performance_metrics": {
+            "total_duration_ms": 14318.18832,
+            "prompt_eval_duration_ms": 3638.556294,
+            "generation_duration_ms": 10637.811694,
+            "load_duration_ms": 39.086158,
+            "tokens_per_second": 26.979232971558936
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the most prominent element is a white, oval-shaped vessel sink placed on a white countertop. The sink features a modern, sleek design with a metallic faucet that has a polished, chrome-like finish. The countertop appears smooth and clean, providing a stark contrast to the warm tones of the tiles in the background. The sink and countertop are the primary focus, drawing the viewer's attention due to their central placement and clean lines.\n\nIn the background, the setting is a tiled wall with a warm, earthy tone. The tiles are arranged in a grid pattern, with a decorative mosaic tile border running horizontally near the top, adding a subtle decorative element to the otherwise simple design. The mosaic tiles feature a mix of small, square tiles in varying shades of beige and brown, creating a textured and visually interesting accent. Above the mosaic border, the wall transitions to a lighter, plain surface, which houses a circular mirror. The mirror is mounted high on the wall, reflecting part of the room and contributing to the sense of space. To the left, a dark purple towel hangs neatly on a towel bar, adding a touch of color and contrast to the otherwise neutral palette.\n\nThe foreground and background elements relate to each other through their complementary color schemes and functional design. The white sink and countertop provide a clean, modern aesthetic that contrasts with the warm, earthy tones of the tiled wall, creating visual interest and balance. The mosaic border acts as a transitional element, bridging the gap between the neutral wall and the darker towel, while the mirror enhances the overall spaciousness of the bathroom. Together, these elements create a cohesive and inviting bathroom space.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 339,
+            "total_tokens": 642
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12709.27793,
+            "prompt_eval_duration_ms": 73.036924,
+            "generation_duration_ms": 12594.17877,
+            "load_duration_ms": 39.461553,
+            "tokens_per_second": 26.91719771419443
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a clean and organized bathroom setting, but there are no people or animals present. The focus is on the objects and their arrangement within the space. The bathroom features a white countertop with a modern, oval-shaped sink placed on top. The sink has a sleek, silver faucet with a single handle, suggesting a contemporary design. The countertop is smooth and uncluttered, emphasizing a minimalist aesthetic.\n\nThe wall behind the sink is tiled with beige and brown tiles, creating a warm and earthy tone. A decorative mosaic tile border runs horizontally across the wall, adding a touch of visual interest and texture. Above the sink, a circular mirror is mounted on the wall, though its reflection is not visible in the image. To the left, a dark purple towel hangs neatly on a towel rack, contrasting with the lighter tones of the room and adding a pop of color.\n\nThe objects in the image interact harmoniously, with the neutral tones of the tiles and countertop complementing the darker accents of the towel and the metallic sheen of the faucet. The overall composition suggests a functional and aesthetically pleasing space designed for practical use and visual appeal. The absence of people or animals highlights the focus on the design and cleanliness of the bathroom.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 253,
+            "total_tokens": 559
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9558.038136,
+            "prompt_eval_duration_ms": 79.719854,
+            "generation_duration_ms": 9436.533046,
+            "load_duration_ms": 38.882837,
+            "tokens_per_second": 26.810694008775055
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image of the bathroom conveys a mood of calmness and simplicity, evoking feelings of cleanliness, order, and tranquility. The overall tone is neutral, leaning slightly toward positive due to the well-maintained and organized appearance. The beige and cream color palette of the tiles and countertop creates a warm, inviting atmosphere, while the metallic faucet and the white sink add a touch of modernity and sophistication. The neatly hung dark towel contrasts subtly with the lighter tones, contributing to a sense of balance and harmony. The small mosaic tile border adds a decorative element, breaking the monotony and introducing a slight visual interest without overwhelming the space. The clean lines and minimalist design foster a sense of serenity and functionality, making the space feel welcoming and uncluttered. The absence of any personal items or excessive decoration further emphasizes the focus on simplicity and order, which can evoke feelings of relaxation and rejuvenation, often associated with a well-maintained bathroom. Overall, the image projects a peaceful and organized environment, encouraging a sense of calm and comfort.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 214,
+            "total_tokens": 522
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8122.617783,
+            "prompt_eval_duration_ms": 75.798477,
+            "generation_duration_ms": 8002.851128,
+            "load_duration_ms": 40.722318,
+            "tokens_per_second": 26.74046993717862
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"sink\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Oval-shaped white sink with faucet\"\n    },\n    \"faucet\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Metallic faucet with handles\"\n    },\n    \"towel\": {\n      \"count\": 1,\n      \"location\": \"left, top\",\n      \"color\": [\"dark purple\"],\n      \"size\": \"large\",\n      \"description\": \"Dark purple towel hanging on a towel rack\"\n    },\n    \"towel rack\": {\n      \"count\": 1,\n      \"location\": \"left, top\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Metallic towel rack\"\n    },\n    \"mirror\": {\n      \"count\": 1,\n      \"location\": \"top, center\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Round mirror with white frame\"\n    },\n    \"cabinet\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"White cabinet supporting the sink\"\n    },\n    \"tile\": {\n      \"count\": \"multiple\",\n      \"location\": \"background\",\n      \"color\": [\"beige\", \"brown\"],\n      \"size\": \"small\",\n      \"description\": \"Beige and brown tiles on the wall\"\n    },\n    \"mosaic tile border\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"various\"],\n      \"size\": \"small\",\n      \"description\": \"Decorative mosaic tile border\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "sink": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "Oval-shaped white sink with faucet"
+              },
+              "faucet": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "silver"
+                ],
+                "size": "small",
+                "description": "Metallic faucet with handles"
+              },
+              "towel": {
+                "count": 1,
+                "location": "left, top",
+                "color": [
+                  "dark purple"
+                ],
+                "size": "large",
+                "description": "Dark purple towel hanging on a towel rack"
+              },
+              "towel rack": {
+                "count": 1,
+                "location": "left, top",
+                "color": [
+                  "silver"
+                ],
+                "size": "small",
+                "description": "Metallic towel rack"
+              },
+              "mirror": {
+                "count": 1,
+                "location": "top, center",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "Round mirror with white frame"
+              },
+              "cabinet": {
+                "count": 1,
+                "location": "center, bottom",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "White cabinet supporting the sink"
+              },
+              "tile": {
+                "count": "multiple",
+                "location": "background",
+                "color": [
+                  "beige",
+                  "brown"
+                ],
+                "size": "small",
+                "description": "Beige and brown tiles on the wall"
+              },
+              "mosaic tile border": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "various"
+                ],
+                "size": "small",
+                "description": "Decorative mosaic tile border"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 419,
+            "total_tokens": 905
+          },
+          "performance_metrics": {
+            "total_duration_ms": 15694.786807,
+            "prompt_eval_duration_ms": 134.434114,
+            "generation_duration_ms": 15517.998739,
+            "load_duration_ms": 39.45739,
+            "tokens_per_second": 27.000904372221964
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3212,
+        "total_time_ms": 60402.908976000006,
+        "average_speed": 26.889699800785802
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -493,322 +809,6 @@
         "total_tokens": 2796,
         "total_time_ms": 25252.594213000004,
         "average_speed": 41.71081454162753
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a small, neatly arranged bathroom corner, bathed in soft, natural light that enhances the warm tones of the beige and brown tiles covering the walls. The tiles are arranged in a grid pattern, with a decorative mosaic border running horizontally just below the upper edge of the wall, adding a subtle contrast to the otherwise uniform tiling. A white, oval-shaped sink sits atop a white countertop, positioned slightly off-center to the right. The sink is equipped with a modern, chrome faucet that gleams under the light, reflecting a sense of cleanliness and modernity. A dark gray towel hangs neatly on a towel ring to the left of the sink, its muted color providing a subtle contrast to the lighter tones of the room. The lighting appears to be ambient, possibly from a window out of frame, casting gentle shadows and highlighting the textures of the tiles and the smooth surface of the sink. The overall composition is simple and functional, with a focus on the clean lines and neutral colors that create a calm and inviting atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 208,
-            "total_tokens": 505
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1594.533954,
-            "prompt_eval_duration_ms": 81.643222,
-            "generation_duration_ms": 1471.253594,
-            "load_duration_ms": 38.852152,
-            "tokens_per_second": 141.3760352724073
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the viewer's attention is drawn to a pristine white countertop that supports a modern, oval-shaped white sink with a sleek, silver faucet. The sink's smooth, curved design contrasts subtly with the straight lines of the countertop, creating a balance between form and function. To the left of the sink, a neatly folded dark gray towel hangs on a simple, dark-colored towel ring, adding a touch of texture and color to the otherwise monochromatic scene. The background, slightly out of focus, reveals a wall adorned with beige tiles that have a subtle mosaic pattern, providing a warm, earthy backdrop that complements the white elements in the foreground. Above the sink, a white-framed mirror is partially visible, reflecting the light and enhancing the sense of space. The overall composition of the image suggests a clean, modern bathroom setting, where each element, from the sink and towel to the tiles and mirror, contributes to a harmonious and inviting atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 200,
-            "total_tokens": 503
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1525.285719,
-            "prompt_eval_duration_ms": 30.977941,
-            "generation_duration_ms": 1451.553256,
-            "load_duration_ms": 40.273338,
-            "tokens_per_second": 137.7834393421663
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a neatly arranged bathroom scene with no people or animals present. The primary objects in the image are a white vessel sink with a modern chrome faucet, a white countertop, beige tiled walls with a decorative mosaic border, and a dark gray towel hanging on a towel rack to the left of the sink. The faucet is stationary, and the towel is neatly folded and hanging, suggesting a clean and organized space. The sink and countertop are static, with no visible interaction between them or with the towel. The mosaic border on the wall adds a decorative touch to the otherwise simple and functional bathroom setup. The overall scene conveys a sense of stillness and order, with no actions or interactions taking place.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 144,
-            "total_tokens": 450
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1106.84635,
-            "prompt_eval_duration_ms": 30.616332,
-            "generation_duration_ms": 1032.847061,
-            "load_duration_ms": 40.665992,
-            "tokens_per_second": 139.42044803862785
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image of the bathroom evokes a sense of calm and simplicity, contributing to a neutral to slightly positive mood. The beige tiles and the earthy tones of the wall tiles create a warm and inviting atmosphere, suggesting a space designed for relaxation and personal care. The clean, white sink and the neatly hung dark towel add to the sense of order and cleanliness, reinforcing the idea of a well-maintained and peaceful environment. The soft lighting, which is not harsh, further enhances the tranquil feeling, making the space appear welcoming and serene. There are no overtly emotional or dramatic elements in the image; instead, it conveys a quiet, almost meditative quality, which might make viewers feel at ease and comfortable. The overall tone is neither overly cheerful nor somber, but rather a balanced, understated positivity that aligns with the practical and functional nature of the space.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 177,
-            "total_tokens": 485
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1345.536874,
-            "prompt_eval_duration_ms": 30.44429,
-            "generation_duration_ms": 1272.636393,
-            "load_duration_ms": 39.99317,
-            "tokens_per_second": 139.08135974546187
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"human\": {\n      \"count\": 0,\n      \"location\": \"left\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"towel hanging on a rack\"\n    },\n    \"animal\": {\n      \"count\": 0,\n      \"location\": \"any\",\n      \"color\": [],\n      \"size\": \"any\",\n      \"description\": \"\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"oval sink with a faucet\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"beige\", \"brown\"],\n      \"size\": \"small\",\n      \"description\": \"mosaic tile border\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"mirror above the sink\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"towel rack\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "human": {
-                "count": 0,
-                "location": "left",
-                "color": [
-                  "gray"
-                ],
-                "size": "small",
-                "description": "towel hanging on a rack"
-              },
-              "animal": {
-                "count": 0,
-                "location": "any",
-                "color": [],
-                "size": "any",
-                "description": ""
-              },
-              "man-made": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "towel rack"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 288,
-            "total_tokens": 774
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2129.695931,
-            "prompt_eval_duration_ms": 43.961035,
-            "generation_duration_ms": 2040.749523,
-            "load_duration_ms": 42.307056,
-            "tokens_per_second": 141.1246195351922
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2717,
-        "total_time_ms": 7701.898827999999,
-        "average_speed": 139.7571803867711
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a clean and well-organized bathroom setting. The focal point is a white, oval-shaped sink mounted on a white countertop, which appears to be made of a smooth, solid material, likely laminate or solid surface. The sink is equipped with a modern, metallic faucet with a sleek, curved design, featuring separate handles for hot and cold water. The countertop is simple and uncluttered, enhancing the minimalist aesthetic.\n\nThe wall behind the sink is tiled with large, square beige tiles that have a subtle, textured appearance, giving the space a warm and inviting feel. A decorative mosaic tile border runs horizontally across the wall, adding a touch of visual interest with its small, multicolored tiles in shades of beige, brown, and white. Above the sink, a circular mirror is partially visible, mounted on the wall, reflecting part of the room and contributing to the sense of space.\n\nTo the left, a dark purple or maroon towel hangs neatly on a towel rack, providing a contrasting color against the neutral tones of the room. The lighting is soft and evenly distributed, likely from an overhead source, creating a bright and airy atmosphere without harsh shadows. The overall composition is balanced, with the sink and countertop centrally positioned, and the elements arranged symmetrically to create a harmonious and functional space. The bathroom appears tidy and well-maintained, exuding a sense of cleanliness and simplicity.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 287,
-            "total_tokens": 584
-          },
-          "performance_metrics": {
-            "total_duration_ms": 14318.18832,
-            "prompt_eval_duration_ms": 3638.556294,
-            "generation_duration_ms": 10637.811694,
-            "load_duration_ms": 39.086158,
-            "tokens_per_second": 26.979232971558936
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the most prominent element is a white, oval-shaped vessel sink placed on a white countertop. The sink features a modern, sleek design with a metallic faucet that has a polished, chrome-like finish. The countertop appears smooth and clean, providing a stark contrast to the warm tones of the tiles in the background. The sink and countertop are the primary focus, drawing the viewer's attention due to their central placement and clean lines.\n\nIn the background, the setting is a tiled wall with a warm, earthy tone. The tiles are arranged in a grid pattern, with a decorative mosaic tile border running horizontally near the top, adding a subtle decorative element to the otherwise simple design. The mosaic tiles feature a mix of small, square tiles in varying shades of beige and brown, creating a textured and visually interesting accent. Above the mosaic border, the wall transitions to a lighter, plain surface, which houses a circular mirror. The mirror is mounted high on the wall, reflecting part of the room and contributing to the sense of space. To the left, a dark purple towel hangs neatly on a towel bar, adding a touch of color and contrast to the otherwise neutral palette.\n\nThe foreground and background elements relate to each other through their complementary color schemes and functional design. The white sink and countertop provide a clean, modern aesthetic that contrasts with the warm, earthy tones of the tiled wall, creating visual interest and balance. The mosaic border acts as a transitional element, bridging the gap between the neutral wall and the darker towel, while the mirror enhances the overall spaciousness of the bathroom. Together, these elements create a cohesive and inviting bathroom space.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 339,
-            "total_tokens": 642
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12709.27793,
-            "prompt_eval_duration_ms": 73.036924,
-            "generation_duration_ms": 12594.17877,
-            "load_duration_ms": 39.461553,
-            "tokens_per_second": 26.91719771419443
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a clean and organized bathroom setting, but there are no people or animals present. The focus is on the objects and their arrangement within the space. The bathroom features a white countertop with a modern, oval-shaped sink placed on top. The sink has a sleek, silver faucet with a single handle, suggesting a contemporary design. The countertop is smooth and uncluttered, emphasizing a minimalist aesthetic.\n\nThe wall behind the sink is tiled with beige and brown tiles, creating a warm and earthy tone. A decorative mosaic tile border runs horizontally across the wall, adding a touch of visual interest and texture. Above the sink, a circular mirror is mounted on the wall, though its reflection is not visible in the image. To the left, a dark purple towel hangs neatly on a towel rack, contrasting with the lighter tones of the room and adding a pop of color.\n\nThe objects in the image interact harmoniously, with the neutral tones of the tiles and countertop complementing the darker accents of the towel and the metallic sheen of the faucet. The overall composition suggests a functional and aesthetically pleasing space designed for practical use and visual appeal. The absence of people or animals highlights the focus on the design and cleanliness of the bathroom.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 253,
-            "total_tokens": 559
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9558.038136,
-            "prompt_eval_duration_ms": 79.719854,
-            "generation_duration_ms": 9436.533046,
-            "load_duration_ms": 38.882837,
-            "tokens_per_second": 26.810694008775055
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image of the bathroom conveys a mood of calmness and simplicity, evoking feelings of cleanliness, order, and tranquility. The overall tone is neutral, leaning slightly toward positive due to the well-maintained and organized appearance. The beige and cream color palette of the tiles and countertop creates a warm, inviting atmosphere, while the metallic faucet and the white sink add a touch of modernity and sophistication. The neatly hung dark towel contrasts subtly with the lighter tones, contributing to a sense of balance and harmony. The small mosaic tile border adds a decorative element, breaking the monotony and introducing a slight visual interest without overwhelming the space. The clean lines and minimalist design foster a sense of serenity and functionality, making the space feel welcoming and uncluttered. The absence of any personal items or excessive decoration further emphasizes the focus on simplicity and order, which can evoke feelings of relaxation and rejuvenation, often associated with a well-maintained bathroom. Overall, the image projects a peaceful and organized environment, encouraging a sense of calm and comfort.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 214,
-            "total_tokens": 522
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8122.617783,
-            "prompt_eval_duration_ms": 75.798477,
-            "generation_duration_ms": 8002.851128,
-            "load_duration_ms": 40.722318,
-            "tokens_per_second": 26.74046993717862
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"sink\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Oval-shaped white sink with faucet\"\n    },\n    \"faucet\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Metallic faucet with handles\"\n    },\n    \"towel\": {\n      \"count\": 1,\n      \"location\": \"left, top\",\n      \"color\": [\"dark purple\"],\n      \"size\": \"large\",\n      \"description\": \"Dark purple towel hanging on a towel rack\"\n    },\n    \"towel rack\": {\n      \"count\": 1,\n      \"location\": \"left, top\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Metallic towel rack\"\n    },\n    \"mirror\": {\n      \"count\": 1,\n      \"location\": \"top, center\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Round mirror with white frame\"\n    },\n    \"cabinet\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"White cabinet supporting the sink\"\n    },\n    \"tile\": {\n      \"count\": \"multiple\",\n      \"location\": \"background\",\n      \"color\": [\"beige\", \"brown\"],\n      \"size\": \"small\",\n      \"description\": \"Beige and brown tiles on the wall\"\n    },\n    \"mosaic tile border\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"various\"],\n      \"size\": \"small\",\n      \"description\": \"Decorative mosaic tile border\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "sink": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "Oval-shaped white sink with faucet"
-              },
-              "faucet": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "silver"
-                ],
-                "size": "small",
-                "description": "Metallic faucet with handles"
-              },
-              "towel": {
-                "count": 1,
-                "location": "left, top",
-                "color": [
-                  "dark purple"
-                ],
-                "size": "large",
-                "description": "Dark purple towel hanging on a towel rack"
-              },
-              "towel rack": {
-                "count": 1,
-                "location": "left, top",
-                "color": [
-                  "silver"
-                ],
-                "size": "small",
-                "description": "Metallic towel rack"
-              },
-              "mirror": {
-                "count": 1,
-                "location": "top, center",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "Round mirror with white frame"
-              },
-              "cabinet": {
-                "count": 1,
-                "location": "center, bottom",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "White cabinet supporting the sink"
-              },
-              "tile": {
-                "count": "multiple",
-                "location": "background",
-                "color": [
-                  "beige",
-                  "brown"
-                ],
-                "size": "small",
-                "description": "Beige and brown tiles on the wall"
-              },
-              "mosaic tile border": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "various"
-                ],
-                "size": "small",
-                "description": "Decorative mosaic tile border"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 419,
-            "total_tokens": 905
-          },
-          "performance_metrics": {
-            "total_duration_ms": 15694.786807,
-            "prompt_eval_duration_ms": 134.434114,
-            "generation_duration_ms": 15517.998739,
-            "load_duration_ms": 39.45739,
-            "tokens_per_second": 27.000904372221964
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3212,
-        "total_time_ms": 60402.908976000006,
-        "average_speed": 26.889699800785802
       }
     },
     {

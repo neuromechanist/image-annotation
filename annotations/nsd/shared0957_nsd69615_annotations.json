@@ -7,6 +7,345 @@
   "timestamp": "2025-08-31T00:30:27.297724+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a lively scene set in a lush, green park on a bright, sunny day. The foreground is dominated by a young man in mid-air, leaping to catch a white frisbee. He is wearing a light blue t-shirt, khaki shorts, and sandals, his body stretched out in an athletic pose as he focuses on the frisbee. The grass beneath him is a vibrant green, dotted with small white flowers, suggesting it might be spring. In the background, several other individuals are engaged in various activities. Some are gathered around a picnic blanket, possibly setting up or enjoying a meal, while others are standing or walking, contributing to the casual, relaxed atmosphere of the park. The trees in the distance provide a natural backdrop, their leaves a mix of dark and light green, indicating a healthy, thriving environment. The lighting is natural and bright, casting soft shadows and highlighting the vivid colors of the scene. The overall composition is dynamic, with the airborne man drawing the viewer's eye into the image, while the background activity provides context and depth to the setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 221,
+            "total_tokens": 518
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1719.997142,
+            "prompt_eval_duration_ms": 83.476148,
+            "generation_duration_ms": 1592.654105,
+            "load_duration_ms": 41.349014,
+            "tokens_per_second": 138.76208230411711
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, a young man is captured mid-air, leaping to catch a white frisbee. His body is stretched out, arms fully extended upwards, showcasing a dynamic and energetic pose. He is wearing a light blue t-shirt and brown shorts, with his feet slightly off the ground, indicating a powerful jump. The grass beneath him is a vibrant green, dotted with small white flowers, adding a natural and serene backdrop to the action. The background features a group of people engaged in various activities on a picnic blanket, with some standing and others sitting, suggesting a relaxed and social setting. Trees and a white tent are visible in the distance, providing a sense of depth and context to the scene. The foreground and background elements are connected by the shared outdoor setting, with the foreground's action drawing the viewer's eye towards the background's leisurely activities, creating a contrast between the dynamic movement and the calm, communal atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 191,
+            "total_tokens": 494
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1456.494675,
+            "prompt_eval_duration_ms": 30.11016,
+            "generation_duration_ms": 1383.446134,
+            "load_duration_ms": 40.064904,
+            "tokens_per_second": 138.0610312941899
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a young man is captured mid-air, leaping to catch a white frisbee in a vibrant green park. His body is stretched out, arms fully extended upwards, showcasing a dynamic and athletic moment. In the background, several other individuals are engaged in various activities. A person in a white shirt and dark pants is bending over, seemingly picking something up from the grass, while another individual in a light blue shirt and dark shorts is standing and appears to be observing the frisbee game. Further back, a group of people is gathered around a white tent, possibly setting up or preparing for an event. The scene is lively and social, with the central figure's action of catching the frisbee drawing the viewer's attention, while the background activities provide context and a sense of community. The interactions between the people suggest a casual, outdoor gathering where frisbee is a shared activity, and others are either participating or observing.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 192,
+            "total_tokens": 498
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1467.872061,
+            "prompt_eval_duration_ms": 29.682392,
+            "generation_duration_ms": 1395.31173,
+            "load_duration_ms": 39.897215,
+            "tokens_per_second": 137.60365936291527
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of vibrant energy and youthful exuberance, suggesting a positive mood. The central figure, mid-air, reaching out to catch a frisbee, embodies a spirit of adventure and spontaneity, which is further accentuated by the casual attire and relaxed posture of the individuals in the background. The lush green grass and the bright daylight contribute to a feeling of freshness and vitality, while the presence of a picnic setup and a white tent in the distance hints at a leisurely, communal gathering, adding to the overall sense of community and enjoyment. The dynamic pose of the person in the foreground, coupled with the blurred motion of the frisbee, conveys a sense of action and movement, which, combined with the serene backdrop, creates a balanced and uplifting atmosphere. The image, in its entirety, reflects a moment of joy and relaxation, making it a positive depiction of outdoor recreation and social interaction.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 188,
+            "total_tokens": 496
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1455.374817,
+            "prompt_eval_duration_ms": 30.923695,
+            "generation_duration_ms": 1381.413811,
+            "load_duration_ms": 39.590504,
+            "tokens_per_second": 136.09245723691407
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 4,\n      \"location\": [\"center\", \"background\"],\n      \"color\": [\"gray\", \"brown\", \"blue\", \"white\"],\n      \"size\": [\"medium\", \"small\"],\n      \"description\": [\"playing frisbee\", \"standing\", \"sitting\", \"standing\"]\n    }\n  },\n  \"man-made\": {\n    \"frisbee\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"being caught by person\"\n    },\n    \"tent\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"partially visible\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"field where activity is taking place\"\n    },\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"bordering the field\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 4,
+                "location": [
+                  "center",
+                  "background"
+                ],
+                "color": [
+                  "gray",
+                  "brown",
+                  "blue",
+                  "white"
+                ],
+                "size": [
+                  "medium",
+                  "small"
+                ],
+                "description": [
+                  "playing frisbee",
+                  "standing",
+                  "sitting",
+                  "standing"
+                ]
+              }
+            },
+            "man-made": {
+              "frisbee": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "being caught by person"
+              },
+              "tent": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "partially visible"
+              }
+            },
+            "natural": {
+              "grass": {
+                "count": 1,
+                "location": "foreground",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "field where activity is taking place"
+              },
+              "trees": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "bordering the field"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 282,
+            "total_tokens": 768
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2101.539924,
+            "prompt_eval_duration_ms": 43.333818,
+            "generation_duration_ms": 2016.500971,
+            "load_duration_ms": 38.900114,
+            "tokens_per_second": 139.84620094685786
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2774,
+        "total_time_ms": 8201.278619,
+        "average_speed": 138.07308622899885
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a lively outdoor scene on a grassy hillside, likely during a casual gathering or festival. The setting is bright and sunny, with ample natural light illuminating the area, suggesting it is daytime. The grass is vibrant green, indicating a well-maintained park or open space, and the background features a mix of trees and a white tent, adding depth and context to the environment.\n\nThe main focus of the image is a person in mid-air, leaping to catch a white frisbee. The individual is wearing a light gray t-shirt, brown shorts, and dark shoes, and their body is angled dynamically as they reach out with one arm extended to grab the frisbee. The frisbee is positioned slightly above and in front of the person, emphasizing the action and movement. The person's expression and body language convey concentration and effort.\n\nIn the background, several other individuals are visible, engaged in various activities. Some are standing or walking, while others are sitting or lying on the grass, enjoying the relaxed atmosphere. One person is holding a red kite, adding a splash of color to the scene. The overall composition is dynamic, with the leaping figure in the foreground creating a sense of energy and motion, while the background provides a calm, social context. The image conveys a sense of fun, community, and outdoor recreation.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 276,
+            "total_tokens": 573
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13865.266513,
+            "prompt_eval_duration_ms": 3562.008855,
+            "generation_duration_ms": 10261.617839,
+            "load_duration_ms": 38.812013,
+            "tokens_per_second": 26.896343669225587
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a person in mid-air, reaching out to catch a white frisbee. This individual is the focal point, wearing a light gray t-shirt, brown shorts, and dark shoes. The person's dynamic pose, with arms extended and legs splayed, suggests an intense moment of action, emphasizing the sporty and energetic atmosphere. The grassy field beneath them is lush and green, providing a natural, open setting that complements the activity.\n\nIn the background, the scene transitions to a more relaxed and social environment. Several other individuals are visible, some sitting on a blanket or towels spread out on the grass, while others are standing or walking. The background includes trees with dense foliage, indicating a park-like setting, and a white tent is partially visible, suggesting a gathering or event, possibly a picnic or outdoor festival. The presence of colorful objects, such as a red kite or flag, adds a playful and festive touch to the scene.\n\nThe foreground and background elements relate to each other through the shared setting of a grassy park. The active, athletic foreground contrasts with the more leisurely and social background, creating a layered narrative of both individual and communal enjoyment. The frisbee game in the foreground draws attention to the dynamic energy of the moment, while the background provides context, showing how the activity fits into a larger, relaxed outdoor gathering. Together, these layers create a cohesive image of outdoor recreation and social interaction.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 295,
+            "total_tokens": 598
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11076.631226,
+            "prompt_eval_duration_ms": 73.090725,
+            "generation_duration_ms": 10961.234011,
+            "load_duration_ms": 39.556234,
+            "tokens_per_second": 26.91302819590903
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a lively outdoor scene on a grassy field, where a group of people is engaged in recreational activities, primarily focused on playing frisbee. In the foreground, a man is leaping into the air with his arms outstretched, attempting to catch a white frisbee. His dynamic pose suggests a high level of energy and focus, as he reaches for the flying disc. This individual is the central figure in the action, showcasing the excitement and physicality of the game.\n\nIn the background, several other people are visible, contributing to the social and communal atmosphere. Some are standing, while others are seated on a blanket spread out on the grass, indicating a relaxed and casual setting. One person appears to be holding a red kite, adding a colorful element to the scene and suggesting that kite flying might also be part of the activities taking place. Another individual is seen in motion, possibly running or preparing to throw the frisbee, further emphasizing the active nature of the gathering.\n\nThe interactions between the people are characterized by shared enjoyment and engagement in outdoor activities. The man in the foreground is likely part of a game or friendly competition involving the frisbee, while the others in the background seem to be spectating, socializing, or participating in other leisurely pursuits. The overall scene conveys a sense of camaraderie, physical activity, and relaxation, with the frisbee game serving as the focal point of the group's interaction. The presence of trees and a white tent in the background suggests that this is a park or open recreational area, enhancing the outdoor, communal vibe of the gathering.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 328,
+            "total_tokens": 634
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12321.753348,
+            "prompt_eval_duration_ms": 73.273477,
+            "generation_duration_ms": 12206.251404,
+            "load_duration_ms": 39.360498,
+            "tokens_per_second": 26.871476683866604
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of excitement, energy, and camaraderie, evoking feelings of joy, playfulness, and a sense of community. The central figure, a man leaping to catch a frisbee, embodies dynamic motion and determination, suggesting a spirit of competition and fun. His outstretched arms and focused expression capture the thrill of the moment, while the blurred background of other individuals engaged in similar activities reinforces the idea of shared enjoyment and collective participation. The lush green grass and trees in the background contribute to a serene, outdoor setting, enhancing the overall positive atmosphere. The casual attire of the participants and the relaxed posture of those in the background suggest a laid-back, recreational environment, further emphasizing the light-hearted nature of the scene. The bright daylight and open space amplify the sense of freedom and vitality, creating a tone that is overwhelmingly positive and uplifting. The image effectively captures the essence of a carefree day spent outdoors with friends, evoking nostalgia for leisurely activities and the simple pleasures of life.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 207,
+            "total_tokens": 515
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7842.349604,
+            "prompt_eval_duration_ms": 71.577123,
+            "generation_duration_ms": 7727.034772,
+            "load_duration_ms": 38.632934,
+            "tokens_per_second": 26.78906024211172
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 6,\n      \"location\": \"center, middle\",\n      \"color\": [\"various\"],\n      \"size\": \"medium\",\n      \"description\": \"People playing frisbee, one jumping to catch the frisbee, others standing or sitting around.\"\n    }\n  },\n  \"man-made\": {\n    \"frisbee\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Being caught by a jumping person.\"\n    },\n    \"tent\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"White tent in the background.\"\n    },\n    \"flag\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"red\"],\n      \"size\": \"small\",\n      \"description\": \"Red flag on a pole.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"left, top\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Large tree in the background.\"\n    },\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Green grass covering the ground.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 6,
+                "location": "center, middle",
+                "color": [
+                  "various"
+                ],
+                "size": "medium",
+                "description": "People playing frisbee, one jumping to catch the frisbee, others standing or sitting around."
+              }
+            },
+            "man-made": {
+              "frisbee": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "Being caught by a jumping person."
+              },
+              "tent": {
+                "count": 1,
+                "location": "right, middle",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "White tent in the background."
+              },
+              "flag": {
+                "count": 1,
+                "location": "left, middle",
+                "color": [
+                  "red"
+                ],
+                "size": "small",
+                "description": "Red flag on a pole."
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 1,
+                "location": "left, top",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "Large tree in the background."
+              },
+              "grass": {
+                "count": 1,
+                "location": "center, bottom",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "Green grass covering the ground."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 336,
+            "total_tokens": 822
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12661.906927,
+            "prompt_eval_duration_ms": 141.408814,
+            "generation_duration_ms": 12477.916801,
+            "load_duration_ms": 39.736243,
+            "tokens_per_second": 26.92757175405052
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3142,
+        "total_time_ms": 57767.907618,
+        "average_speed": 26.879496109032694
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -524,345 +863,6 @@
         "total_tokens": 3155,
         "total_time_ms": 33735.510316,
         "average_speed": 41.84415233711188
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a lively scene set in a lush, green park on a bright, sunny day. The foreground is dominated by a young man in mid-air, leaping to catch a white frisbee. He is wearing a light blue t-shirt, khaki shorts, and sandals, his body stretched out in an athletic pose as he focuses on the frisbee. The grass beneath him is a vibrant green, dotted with small white flowers, suggesting it might be spring. In the background, several other individuals are engaged in various activities. Some are gathered around a picnic blanket, possibly setting up or enjoying a meal, while others are standing or walking, contributing to the casual, relaxed atmosphere of the park. The trees in the distance provide a natural backdrop, their leaves a mix of dark and light green, indicating a healthy, thriving environment. The lighting is natural and bright, casting soft shadows and highlighting the vivid colors of the scene. The overall composition is dynamic, with the airborne man drawing the viewer's eye into the image, while the background activity provides context and depth to the setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 221,
-            "total_tokens": 518
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1719.997142,
-            "prompt_eval_duration_ms": 83.476148,
-            "generation_duration_ms": 1592.654105,
-            "load_duration_ms": 41.349014,
-            "tokens_per_second": 138.76208230411711
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, a young man is captured mid-air, leaping to catch a white frisbee. His body is stretched out, arms fully extended upwards, showcasing a dynamic and energetic pose. He is wearing a light blue t-shirt and brown shorts, with his feet slightly off the ground, indicating a powerful jump. The grass beneath him is a vibrant green, dotted with small white flowers, adding a natural and serene backdrop to the action. The background features a group of people engaged in various activities on a picnic blanket, with some standing and others sitting, suggesting a relaxed and social setting. Trees and a white tent are visible in the distance, providing a sense of depth and context to the scene. The foreground and background elements are connected by the shared outdoor setting, with the foreground's action drawing the viewer's eye towards the background's leisurely activities, creating a contrast between the dynamic movement and the calm, communal atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 191,
-            "total_tokens": 494
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1456.494675,
-            "prompt_eval_duration_ms": 30.11016,
-            "generation_duration_ms": 1383.446134,
-            "load_duration_ms": 40.064904,
-            "tokens_per_second": 138.0610312941899
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a young man is captured mid-air, leaping to catch a white frisbee in a vibrant green park. His body is stretched out, arms fully extended upwards, showcasing a dynamic and athletic moment. In the background, several other individuals are engaged in various activities. A person in a white shirt and dark pants is bending over, seemingly picking something up from the grass, while another individual in a light blue shirt and dark shorts is standing and appears to be observing the frisbee game. Further back, a group of people is gathered around a white tent, possibly setting up or preparing for an event. The scene is lively and social, with the central figure's action of catching the frisbee drawing the viewer's attention, while the background activities provide context and a sense of community. The interactions between the people suggest a casual, outdoor gathering where frisbee is a shared activity, and others are either participating or observing.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 192,
-            "total_tokens": 498
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1467.872061,
-            "prompt_eval_duration_ms": 29.682392,
-            "generation_duration_ms": 1395.31173,
-            "load_duration_ms": 39.897215,
-            "tokens_per_second": 137.60365936291527
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of vibrant energy and youthful exuberance, suggesting a positive mood. The central figure, mid-air, reaching out to catch a frisbee, embodies a spirit of adventure and spontaneity, which is further accentuated by the casual attire and relaxed posture of the individuals in the background. The lush green grass and the bright daylight contribute to a feeling of freshness and vitality, while the presence of a picnic setup and a white tent in the distance hints at a leisurely, communal gathering, adding to the overall sense of community and enjoyment. The dynamic pose of the person in the foreground, coupled with the blurred motion of the frisbee, conveys a sense of action and movement, which, combined with the serene backdrop, creates a balanced and uplifting atmosphere. The image, in its entirety, reflects a moment of joy and relaxation, making it a positive depiction of outdoor recreation and social interaction.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 188,
-            "total_tokens": 496
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1455.374817,
-            "prompt_eval_duration_ms": 30.923695,
-            "generation_duration_ms": 1381.413811,
-            "load_duration_ms": 39.590504,
-            "tokens_per_second": 136.09245723691407
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 4,\n      \"location\": [\"center\", \"background\"],\n      \"color\": [\"gray\", \"brown\", \"blue\", \"white\"],\n      \"size\": [\"medium\", \"small\"],\n      \"description\": [\"playing frisbee\", \"standing\", \"sitting\", \"standing\"]\n    }\n  },\n  \"man-made\": {\n    \"frisbee\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"being caught by person\"\n    },\n    \"tent\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"partially visible\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"field where activity is taking place\"\n    },\n    \"trees\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"bordering the field\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 4,
-                "location": [
-                  "center",
-                  "background"
-                ],
-                "color": [
-                  "gray",
-                  "brown",
-                  "blue",
-                  "white"
-                ],
-                "size": [
-                  "medium",
-                  "small"
-                ],
-                "description": [
-                  "playing frisbee",
-                  "standing",
-                  "sitting",
-                  "standing"
-                ]
-              }
-            },
-            "man-made": {
-              "frisbee": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "being caught by person"
-              },
-              "tent": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "partially visible"
-              }
-            },
-            "natural": {
-              "grass": {
-                "count": 1,
-                "location": "foreground",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "field where activity is taking place"
-              },
-              "trees": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "bordering the field"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 282,
-            "total_tokens": 768
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2101.539924,
-            "prompt_eval_duration_ms": 43.333818,
-            "generation_duration_ms": 2016.500971,
-            "load_duration_ms": 38.900114,
-            "tokens_per_second": 139.84620094685786
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2774,
-        "total_time_ms": 8201.278619,
-        "average_speed": 138.07308622899885
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a lively outdoor scene on a grassy hillside, likely during a casual gathering or festival. The setting is bright and sunny, with ample natural light illuminating the area, suggesting it is daytime. The grass is vibrant green, indicating a well-maintained park or open space, and the background features a mix of trees and a white tent, adding depth and context to the environment.\n\nThe main focus of the image is a person in mid-air, leaping to catch a white frisbee. The individual is wearing a light gray t-shirt, brown shorts, and dark shoes, and their body is angled dynamically as they reach out with one arm extended to grab the frisbee. The frisbee is positioned slightly above and in front of the person, emphasizing the action and movement. The person's expression and body language convey concentration and effort.\n\nIn the background, several other individuals are visible, engaged in various activities. Some are standing or walking, while others are sitting or lying on the grass, enjoying the relaxed atmosphere. One person is holding a red kite, adding a splash of color to the scene. The overall composition is dynamic, with the leaping figure in the foreground creating a sense of energy and motion, while the background provides a calm, social context. The image conveys a sense of fun, community, and outdoor recreation.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 276,
-            "total_tokens": 573
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13865.266513,
-            "prompt_eval_duration_ms": 3562.008855,
-            "generation_duration_ms": 10261.617839,
-            "load_duration_ms": 38.812013,
-            "tokens_per_second": 26.896343669225587
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a person in mid-air, reaching out to catch a white frisbee. This individual is the focal point, wearing a light gray t-shirt, brown shorts, and dark shoes. The person's dynamic pose, with arms extended and legs splayed, suggests an intense moment of action, emphasizing the sporty and energetic atmosphere. The grassy field beneath them is lush and green, providing a natural, open setting that complements the activity.\n\nIn the background, the scene transitions to a more relaxed and social environment. Several other individuals are visible, some sitting on a blanket or towels spread out on the grass, while others are standing or walking. The background includes trees with dense foliage, indicating a park-like setting, and a white tent is partially visible, suggesting a gathering or event, possibly a picnic or outdoor festival. The presence of colorful objects, such as a red kite or flag, adds a playful and festive touch to the scene.\n\nThe foreground and background elements relate to each other through the shared setting of a grassy park. The active, athletic foreground contrasts with the more leisurely and social background, creating a layered narrative of both individual and communal enjoyment. The frisbee game in the foreground draws attention to the dynamic energy of the moment, while the background provides context, showing how the activity fits into a larger, relaxed outdoor gathering. Together, these layers create a cohesive image of outdoor recreation and social interaction.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 295,
-            "total_tokens": 598
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11076.631226,
-            "prompt_eval_duration_ms": 73.090725,
-            "generation_duration_ms": 10961.234011,
-            "load_duration_ms": 39.556234,
-            "tokens_per_second": 26.91302819590903
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a lively outdoor scene on a grassy field, where a group of people is engaged in recreational activities, primarily focused on playing frisbee. In the foreground, a man is leaping into the air with his arms outstretched, attempting to catch a white frisbee. His dynamic pose suggests a high level of energy and focus, as he reaches for the flying disc. This individual is the central figure in the action, showcasing the excitement and physicality of the game.\n\nIn the background, several other people are visible, contributing to the social and communal atmosphere. Some are standing, while others are seated on a blanket spread out on the grass, indicating a relaxed and casual setting. One person appears to be holding a red kite, adding a colorful element to the scene and suggesting that kite flying might also be part of the activities taking place. Another individual is seen in motion, possibly running or preparing to throw the frisbee, further emphasizing the active nature of the gathering.\n\nThe interactions between the people are characterized by shared enjoyment and engagement in outdoor activities. The man in the foreground is likely part of a game or friendly competition involving the frisbee, while the others in the background seem to be spectating, socializing, or participating in other leisurely pursuits. The overall scene conveys a sense of camaraderie, physical activity, and relaxation, with the frisbee game serving as the focal point of the group's interaction. The presence of trees and a white tent in the background suggests that this is a park or open recreational area, enhancing the outdoor, communal vibe of the gathering.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 328,
-            "total_tokens": 634
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12321.753348,
-            "prompt_eval_duration_ms": 73.273477,
-            "generation_duration_ms": 12206.251404,
-            "load_duration_ms": 39.360498,
-            "tokens_per_second": 26.871476683866604
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of excitement, energy, and camaraderie, evoking feelings of joy, playfulness, and a sense of community. The central figure, a man leaping to catch a frisbee, embodies dynamic motion and determination, suggesting a spirit of competition and fun. His outstretched arms and focused expression capture the thrill of the moment, while the blurred background of other individuals engaged in similar activities reinforces the idea of shared enjoyment and collective participation. The lush green grass and trees in the background contribute to a serene, outdoor setting, enhancing the overall positive atmosphere. The casual attire of the participants and the relaxed posture of those in the background suggest a laid-back, recreational environment, further emphasizing the light-hearted nature of the scene. The bright daylight and open space amplify the sense of freedom and vitality, creating a tone that is overwhelmingly positive and uplifting. The image effectively captures the essence of a carefree day spent outdoors with friends, evoking nostalgia for leisurely activities and the simple pleasures of life.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 207,
-            "total_tokens": 515
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7842.349604,
-            "prompt_eval_duration_ms": 71.577123,
-            "generation_duration_ms": 7727.034772,
-            "load_duration_ms": 38.632934,
-            "tokens_per_second": 26.78906024211172
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 6,\n      \"location\": \"center, middle\",\n      \"color\": [\"various\"],\n      \"size\": \"medium\",\n      \"description\": \"People playing frisbee, one jumping to catch the frisbee, others standing or sitting around.\"\n    }\n  },\n  \"man-made\": {\n    \"frisbee\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Being caught by a jumping person.\"\n    },\n    \"tent\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"White tent in the background.\"\n    },\n    \"flag\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"red\"],\n      \"size\": \"small\",\n      \"description\": \"Red flag on a pole.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"left, top\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Large tree in the background.\"\n    },\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"Green grass covering the ground.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 6,
-                "location": "center, middle",
-                "color": [
-                  "various"
-                ],
-                "size": "medium",
-                "description": "People playing frisbee, one jumping to catch the frisbee, others standing or sitting around."
-              }
-            },
-            "man-made": {
-              "frisbee": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "Being caught by a jumping person."
-              },
-              "tent": {
-                "count": 1,
-                "location": "right, middle",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "White tent in the background."
-              },
-              "flag": {
-                "count": 1,
-                "location": "left, middle",
-                "color": [
-                  "red"
-                ],
-                "size": "small",
-                "description": "Red flag on a pole."
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 1,
-                "location": "left, top",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "Large tree in the background."
-              },
-              "grass": {
-                "count": 1,
-                "location": "center, bottom",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "Green grass covering the ground."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 336,
-            "total_tokens": 822
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12661.906927,
-            "prompt_eval_duration_ms": 141.408814,
-            "generation_duration_ms": 12477.916801,
-            "load_duration_ms": 39.736243,
-            "tokens_per_second": 26.92757175405052
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3142,
-        "total_time_ms": 57767.907618,
-        "average_speed": 26.879496109032694
       }
     },
     {

@@ -7,6 +7,338 @@
   "timestamp": "2025-08-30T19:02:47.613241+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image showcases a modern bathroom with a clean and contemporary design. The setting is a compact yet well-organized space, featuring a walk-in shower with a glass door and a handheld showerhead. The shower area is lined with light beige tiles that reflect the soft, ambient lighting, creating a bright and airy atmosphere. Adjacent to the shower, a sleek, white, bowl-shaped sink with a modern faucet is mounted on a dark brown wooden shelf, which contrasts with the lighter tones of the rest of the room. The backsplash behind the sink is adorned with small, vibrant red tiles, adding a pop of color and visual interest to the space. Above the sink, a rectangular mirror with a thin frame reflects the room, enhancing the sense of space. Towels neatly folded in white are placed on the shelf beneath the sink, contributing to the organized and inviting feel of the bathroom. The overall composition is balanced and harmonious, with a mix of neutral and bold colors that create a stylish and functional environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 203,
+            "total_tokens": 500
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1578.648106,
+            "prompt_eval_duration_ms": 80.535194,
+            "generation_duration_ms": 1455.8714,
+            "load_duration_ms": 39.861836,
+            "tokens_per_second": 139.43539243919486
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the viewer's attention is drawn to the sleek, modern design of the shower enclosure, characterized by its glass doors and metallic fixtures, which reflect the ambient light, adding a sense of depth and cleanliness. Adjacent to the shower, a white, bowl-shaped sink with a minimalist design sits atop a dark wooden shelf, contrasting with the lighter tones of the surrounding tiles. The sink area is neatly organized with folded white towels, suggesting a well-maintained and functional space. In the background, the wall is adorned with small, vibrant red tiles that create a bold and eye-catching backdrop, which complements the neutral tones of the rest of the bathroom. The mirror above the sink reflects the shower area and part of the wall, subtly integrating the foreground and background elements and enhancing the perception of space. The overall composition of the image, with its foreground focus on the shower and sink, and the background dominated by the red wall and mirror, creates a balanced and visually appealing bathroom scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 204,
+            "total_tokens": 507
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1549.389838,
+            "prompt_eval_duration_ms": 31.179047,
+            "generation_duration_ms": 1476.267244,
+            "load_duration_ms": 39.241014,
+            "tokens_per_second": 138.18636214351986
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a clean and modern bathroom with no visible people or animals. The primary objects in the scene include a glass shower enclosure with a handheld showerhead, a white sink with a modern faucet, a mirror above the sink, and a stack of neatly folded white towels on a shelf. The bathroom is well-lit, with light reflecting off the shiny surfaces of the tiles and the shower enclosure. The red mosaic tiles on the wall add a pop of color to the otherwise neutral-toned space. The arrangement of the objects suggests a functional and tidy environment, with everything in its place, ready for use. The interaction between the elements is purely static, as there are no actions or movements depicted in the image. The relationship between the objects is that of a typical bathroom setup, with the shower enclosure and sink being essential for personal hygiene, and the towels providing a practical storage solution for clean linens.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 182,
+            "total_tokens": 488
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1388.838289,
+            "prompt_eval_duration_ms": 30.635009,
+            "generation_duration_ms": 1315.93374,
+            "load_duration_ms": 39.607508,
+            "tokens_per_second": 138.30483592585747
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of cleanliness, order, and tranquility, contributing to a positive emotional atmosphere. The pristine white tiles of the shower area, combined with the sleek, modern design of the fixtures, suggest a space that is both functional and aesthetically pleasing. The contrast of the white tiles against the vibrant red mosaic tiles on the wall adds a touch of warmth and vibrancy, which can be interpreted as a positive and uplifting element. The neatly folded white towels on the shelf further reinforce the sense of order and care, enhancing the overall positive mood. The lighting, which appears soft and evenly distributed, adds to the serene and inviting ambiance, making the space feel welcoming and comfortable. The absence of clutter and the strategic placement of elements contribute to a feeling of calm and relaxation, suggesting that this space is designed to be a peaceful retreat.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 171,
+            "total_tokens": 479
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1313.690506,
+            "prompt_eval_duration_ms": 30.678572,
+            "generation_duration_ms": 1242.544587,
+            "load_duration_ms": 38.135172,
+            "tokens_per_second": 137.62081601664084
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"human\": {\n      \"count\": 0,\n      \"location\": \"none\",\n      \"color\": [],\n      \"size\": \"none\",\n      \"description\": \"no humans detected\"\n    },\n    \"animal\": {\n      \"count\": 0,\n      \"location\": \"none\",\n      \"color\": [],\n      \"size\": \"none\",\n      \"description\": \"no animals detected\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"bathroom sink with faucet\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"pink\"],\n      \"size\": \"small\",\n      \"description\": \"tile backsplash\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"towels on shelf\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"shower with glass door\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"mirror above sink\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"towel rack\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"faucet on sink\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"towel dispenser\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "human": {
+                "count": 0,
+                "location": "none",
+                "color": [],
+                "size": "none",
+                "description": "no humans detected"
+              },
+              "animal": {
+                "count": 0,
+                "location": "none",
+                "color": [],
+                "size": "none",
+                "description": "no animals detected"
+              },
+              "man-made": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "silver"
+                ],
+                "size": "small",
+                "description": "towel dispenser"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 467,
+            "total_tokens": 953
+          },
+          "performance_metrics": {
+            "total_duration_ms": 3441.834615,
+            "prompt_eval_duration_ms": 43.396635,
+            "generation_duration_ms": 3353.901643,
+            "load_duration_ms": 40.090158,
+            "tokens_per_second": 139.24081553634278
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2927,
+        "total_time_ms": 9272.401354,
+        "average_speed": 138.55764441231116
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a modern, compact bathroom with a clean and minimalist design. The setting is well-lit, likely with artificial lighting, which gives the space a bright and sterile appearance. The main elements include a glass-enclosed shower area on the left, a sleek sink with a modern faucet on the right, and a small countertop beneath the sink. \n\nThe shower area features a sliding glass door with a metallic frame, and the interior is tiled with large, light-colored tiles, possibly white or beige, creating a sense of spaciousness. A handheld showerhead with a flexible hose is mounted on the wall, adding functionality. The sink is a white, bowl-shaped vessel style, placed on a dark pink or magenta countertop that contrasts sharply with the neutral tones of the rest of the room. Above the sink, there is a rectangular mirror with a simple frame, reflecting part of the bathroom and enhancing the sense of depth. \n\nThe walls are adorned with small, glossy red mosaic tiles, adding a vibrant accent to the otherwise neutral color palette. The floor is not fully visible, but appears to be tiled in a similar light color as the shower walls. Below the sink, there is a small shelf or storage unit holding neatly folded white towels, contributing to the organized and tidy appearance. The overall composition is balanced, with the contrasting colors and clean lines creating a visually appealing and functional space.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 282,
+            "total_tokens": 579
+          },
+          "performance_metrics": {
+            "total_duration_ms": 14163.977979,
+            "prompt_eval_duration_ms": 3588.009648,
+            "generation_duration_ms": 10534.315747,
+            "load_duration_ms": 39.057292,
+            "tokens_per_second": 26.769655170086292
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a modern bathroom vanity and sink area. The closest elements include a sleek, white, bowl-shaped sink set into a vibrant pink countertop. Below the countertop, neatly folded white towels are placed on a black shelf, adding a clean and organized touch. To the right of the sink, a wall-mounted soap dispenser and a small mirror are visible, reflecting the bathroom's design and contributing to the functional aesthetic. The pink tiles on the wall behind the sink create a striking contrast with the neutral tones of the rest of the room, drawing attention to this area as the focal point.\n\nIn the background, the setting transitions to a shower area. A large, glass-enclosed shower with a sliding door occupies the left side of the image. The shower features a modern design with a handheld showerhead and a sleek, chrome faucet mounted on the wall. The shower walls are covered in large, white tiles, which complement the clean and minimalist theme of the bathroom. The background also includes a portion of the wall with the same pink tiles as the vanity area, creating a cohesive color scheme. The mirror above the sink reflects part of the shower area, subtly tying the foreground and background together. The overall design is cohesive, with the foreground elements (sink and vanity) serving as the primary interaction points, while the background (shower) provides a functional and visually balanced backdrop. The use of contrasting colors and materials enhances the modern and stylish feel of the space.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 300,
+            "total_tokens": 603
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11301.994005,
+            "prompt_eval_duration_ms": 75.624269,
+            "generation_duration_ms": 11185.973012,
+            "load_duration_ms": 37.844182,
+            "tokens_per_second": 26.81930303945561
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a modern, clean, and well-organized bathroom. There are no people or animals visible in the image, so the focus is entirely on the objects and their arrangement within the space.\n\nThe bathroom features a walk-in shower with sliding glass doors, which are partially open. The shower area is tiled with large, light-colored tiles, giving it a bright and spacious appearance. A handheld showerhead with a flexible hose is mounted on the wall, indicating a functional and accessible design. The shower area is complemented by a sleek, rectangular mirror mounted on the wall above a dark pink or maroon vanity. The vanity has a smooth, flat surface and houses a modern, white, vessel-style sink with a single faucet. The sink area is well-lit, with small, integrated lights on either side, enhancing the contemporary aesthetic.\n\nBelow the sink, there is a neatly folded stack of white towels placed on a dark shelf, adding a touch of comfort and practicality. The wall behind the vanity is tiled with small, glossy red tiles, creating a vibrant contrast against the neutral tones of the shower area. The overall design emphasizes a harmonious blend of functionality and style, with a focus on clean lines, modern fixtures, and a balanced color scheme. The objects in the bathroom are arranged to maximize usability and visual appeal, reflecting a well-maintained and inviting space.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 277,
+            "total_tokens": 583
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10421.162002,
+            "prompt_eval_duration_ms": 76.126938,
+            "generation_duration_ms": 10304.500638,
+            "load_duration_ms": 38.037327,
+            "tokens_per_second": 26.881457892147107
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a modern and clean bathroom, evoking a sense of calmness, order, and sophistication. The overall mood is positive and neutral, leaning towards a serene and inviting atmosphere. The use of neutral tones, such as the white tiles in the shower area and the beige walls, contributes to a sense of purity and simplicity. The contrasting red mosaic tiles on the wall add a touch of warmth and vibrancy, which balances the otherwise cool and clinical feel of the space. The sleek, minimalist design of the sink and fixtures, along with the neatly arranged white towels, enhances the sense of tidiness and elegance. The bright lighting, reflected in the mirror and the shower area, creates a welcoming and airy ambiance, reducing any feelings of claustrophobia or discomfort. The presence of a shower with a handheld attachment and a modern faucet suggests functionality and comfort, further contributing to the positive emotional tone. Overall, the image conveys a feeling of tranquility, cleanliness, and modernity, making it an appealing and relaxing space.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 208,
+            "total_tokens": 516
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7873.927112,
+            "prompt_eval_duration_ms": 74.098262,
+            "generation_duration_ms": 7759.058035,
+            "load_duration_ms": 38.181894,
+            "tokens_per_second": 26.807377785001965
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"shower\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"white\", \"silver\"],\n      \"size\": \"large\",\n      \"description\": \"Glass-enclosed shower with a handheld showerhead and controls.\"\n    },\n    \"sink\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Modern, white, bowl-shaped sink.\"\n    },\n    \"mirror\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"silver\"],\n      \"size\": \"medium\",\n      \"description\": \"Rectangular mirror with a silver frame.\"\n    },\n    \"towel\": {\n      \"count\": 3,\n      \"location\": \"right, bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Folded white towels on a shelf.\"\n    },\n    \"toilet paper holder\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Silver toilet paper holder with a roll of toilet paper.\"\n    },\n    \"toilet paper\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"White toilet paper roll.\"\n    },\n    \"shelves\": {\n      \"count\": 2,\n      \"location\": \"right, bottom\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Black shelves holding towels.\"\n    },\n    \"wall tiles\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"red\"],\n      \"size\": \"large\",\n      \"description\": \"Red mosaic tiles on the wall.\"\n    },\n    \"bathroom counter\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"pink\"],\n      \"size\": \"medium\",\n      \"description\": \"Pink countertop with a sink.\"\n    },\n    \"door handles\": {\n      \"count\": 2,\n      \"location\": \"left, middle\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Silver handles on the shower door.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "shower": {
+                "count": 1,
+                "location": "left, middle",
+                "color": [
+                  "white",
+                  "silver"
+                ],
+                "size": "large",
+                "description": "Glass-enclosed shower with a handheld showerhead and controls."
+              },
+              "sink": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "Modern, white, bowl-shaped sink."
+              },
+              "mirror": {
+                "count": 1,
+                "location": "center, top",
+                "color": [
+                  "silver"
+                ],
+                "size": "medium",
+                "description": "Rectangular mirror with a silver frame."
+              },
+              "towel": {
+                "count": 3,
+                "location": "right, bottom",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "Folded white towels on a shelf."
+              },
+              "toilet paper holder": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "silver"
+                ],
+                "size": "small",
+                "description": "Silver toilet paper holder with a roll of toilet paper."
+              },
+              "toilet paper": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "White toilet paper roll."
+              },
+              "shelves": {
+                "count": 2,
+                "location": "right, bottom",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "Black shelves holding towels."
+              },
+              "wall tiles": {
+                "count": 1,
+                "location": "right, middle",
+                "color": [
+                  "red"
+                ],
+                "size": "large",
+                "description": "Red mosaic tiles on the wall."
+              },
+              "bathroom counter": {
+                "count": 1,
+                "location": "right, middle",
+                "color": [
+                  "pink"
+                ],
+                "size": "medium",
+                "description": "Pink countertop with a sink."
+              },
+              "door handles": {
+                "count": 2,
+                "location": "left, middle",
+                "color": [
+                  "silver"
+                ],
+                "size": "small",
+                "description": "Silver handles on the shower door."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 529,
+            "total_tokens": 1015
+          },
+          "performance_metrics": {
+            "total_duration_ms": 19803.417526,
+            "prompt_eval_duration_ms": 137.587157,
+            "generation_duration_ms": 19619.550823,
+            "load_duration_ms": 43.739907,
+            "tokens_per_second": 26.962900668442074
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3296,
+        "total_time_ms": 63564.478623999996,
+        "average_speed": 26.84813891102661
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -548,338 +880,6 @@
         "total_tokens": 2948,
         "total_time_ms": 28718.719993,
         "average_speed": 41.95547616895416
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image showcases a modern bathroom with a clean and contemporary design. The setting is a compact yet well-organized space, featuring a walk-in shower with a glass door and a handheld showerhead. The shower area is lined with light beige tiles that reflect the soft, ambient lighting, creating a bright and airy atmosphere. Adjacent to the shower, a sleek, white, bowl-shaped sink with a modern faucet is mounted on a dark brown wooden shelf, which contrasts with the lighter tones of the rest of the room. The backsplash behind the sink is adorned with small, vibrant red tiles, adding a pop of color and visual interest to the space. Above the sink, a rectangular mirror with a thin frame reflects the room, enhancing the sense of space. Towels neatly folded in white are placed on the shelf beneath the sink, contributing to the organized and inviting feel of the bathroom. The overall composition is balanced and harmonious, with a mix of neutral and bold colors that create a stylish and functional environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 203,
-            "total_tokens": 500
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1578.648106,
-            "prompt_eval_duration_ms": 80.535194,
-            "generation_duration_ms": 1455.8714,
-            "load_duration_ms": 39.861836,
-            "tokens_per_second": 139.43539243919486
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the viewer's attention is drawn to the sleek, modern design of the shower enclosure, characterized by its glass doors and metallic fixtures, which reflect the ambient light, adding a sense of depth and cleanliness. Adjacent to the shower, a white, bowl-shaped sink with a minimalist design sits atop a dark wooden shelf, contrasting with the lighter tones of the surrounding tiles. The sink area is neatly organized with folded white towels, suggesting a well-maintained and functional space. In the background, the wall is adorned with small, vibrant red tiles that create a bold and eye-catching backdrop, which complements the neutral tones of the rest of the bathroom. The mirror above the sink reflects the shower area and part of the wall, subtly integrating the foreground and background elements and enhancing the perception of space. The overall composition of the image, with its foreground focus on the shower and sink, and the background dominated by the red wall and mirror, creates a balanced and visually appealing bathroom scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 204,
-            "total_tokens": 507
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1549.389838,
-            "prompt_eval_duration_ms": 31.179047,
-            "generation_duration_ms": 1476.267244,
-            "load_duration_ms": 39.241014,
-            "tokens_per_second": 138.18636214351986
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a clean and modern bathroom with no visible people or animals. The primary objects in the scene include a glass shower enclosure with a handheld showerhead, a white sink with a modern faucet, a mirror above the sink, and a stack of neatly folded white towels on a shelf. The bathroom is well-lit, with light reflecting off the shiny surfaces of the tiles and the shower enclosure. The red mosaic tiles on the wall add a pop of color to the otherwise neutral-toned space. The arrangement of the objects suggests a functional and tidy environment, with everything in its place, ready for use. The interaction between the elements is purely static, as there are no actions or movements depicted in the image. The relationship between the objects is that of a typical bathroom setup, with the shower enclosure and sink being essential for personal hygiene, and the towels providing a practical storage solution for clean linens.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 182,
-            "total_tokens": 488
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1388.838289,
-            "prompt_eval_duration_ms": 30.635009,
-            "generation_duration_ms": 1315.93374,
-            "load_duration_ms": 39.607508,
-            "tokens_per_second": 138.30483592585747
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of cleanliness, order, and tranquility, contributing to a positive emotional atmosphere. The pristine white tiles of the shower area, combined with the sleek, modern design of the fixtures, suggest a space that is both functional and aesthetically pleasing. The contrast of the white tiles against the vibrant red mosaic tiles on the wall adds a touch of warmth and vibrancy, which can be interpreted as a positive and uplifting element. The neatly folded white towels on the shelf further reinforce the sense of order and care, enhancing the overall positive mood. The lighting, which appears soft and evenly distributed, adds to the serene and inviting ambiance, making the space feel welcoming and comfortable. The absence of clutter and the strategic placement of elements contribute to a feeling of calm and relaxation, suggesting that this space is designed to be a peaceful retreat.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 171,
-            "total_tokens": 479
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1313.690506,
-            "prompt_eval_duration_ms": 30.678572,
-            "generation_duration_ms": 1242.544587,
-            "load_duration_ms": 38.135172,
-            "tokens_per_second": 137.62081601664084
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"human\": {\n      \"count\": 0,\n      \"location\": \"none\",\n      \"color\": [],\n      \"size\": \"none\",\n      \"description\": \"no humans detected\"\n    },\n    \"animal\": {\n      \"count\": 0,\n      \"location\": \"none\",\n      \"color\": [],\n      \"size\": \"none\",\n      \"description\": \"no animals detected\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"bathroom sink with faucet\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"pink\"],\n      \"size\": \"small\",\n      \"description\": \"tile backsplash\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"towels on shelf\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"shower with glass door\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"mirror above sink\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"towel rack\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"faucet on sink\"\n    },\n    \"man-made\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"towel dispenser\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "human": {
-                "count": 0,
-                "location": "none",
-                "color": [],
-                "size": "none",
-                "description": "no humans detected"
-              },
-              "animal": {
-                "count": 0,
-                "location": "none",
-                "color": [],
-                "size": "none",
-                "description": "no animals detected"
-              },
-              "man-made": {
-                "count": 1,
-                "location": "right",
-                "color": [
-                  "silver"
-                ],
-                "size": "small",
-                "description": "towel dispenser"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 467,
-            "total_tokens": 953
-          },
-          "performance_metrics": {
-            "total_duration_ms": 3441.834615,
-            "prompt_eval_duration_ms": 43.396635,
-            "generation_duration_ms": 3353.901643,
-            "load_duration_ms": 40.090158,
-            "tokens_per_second": 139.24081553634278
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2927,
-        "total_time_ms": 9272.401354,
-        "average_speed": 138.55764441231116
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a modern, compact bathroom with a clean and minimalist design. The setting is well-lit, likely with artificial lighting, which gives the space a bright and sterile appearance. The main elements include a glass-enclosed shower area on the left, a sleek sink with a modern faucet on the right, and a small countertop beneath the sink. \n\nThe shower area features a sliding glass door with a metallic frame, and the interior is tiled with large, light-colored tiles, possibly white or beige, creating a sense of spaciousness. A handheld showerhead with a flexible hose is mounted on the wall, adding functionality. The sink is a white, bowl-shaped vessel style, placed on a dark pink or magenta countertop that contrasts sharply with the neutral tones of the rest of the room. Above the sink, there is a rectangular mirror with a simple frame, reflecting part of the bathroom and enhancing the sense of depth. \n\nThe walls are adorned with small, glossy red mosaic tiles, adding a vibrant accent to the otherwise neutral color palette. The floor is not fully visible, but appears to be tiled in a similar light color as the shower walls. Below the sink, there is a small shelf or storage unit holding neatly folded white towels, contributing to the organized and tidy appearance. The overall composition is balanced, with the contrasting colors and clean lines creating a visually appealing and functional space.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 282,
-            "total_tokens": 579
-          },
-          "performance_metrics": {
-            "total_duration_ms": 14163.977979,
-            "prompt_eval_duration_ms": 3588.009648,
-            "generation_duration_ms": 10534.315747,
-            "load_duration_ms": 39.057292,
-            "tokens_per_second": 26.769655170086292
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a modern bathroom vanity and sink area. The closest elements include a sleek, white, bowl-shaped sink set into a vibrant pink countertop. Below the countertop, neatly folded white towels are placed on a black shelf, adding a clean and organized touch. To the right of the sink, a wall-mounted soap dispenser and a small mirror are visible, reflecting the bathroom's design and contributing to the functional aesthetic. The pink tiles on the wall behind the sink create a striking contrast with the neutral tones of the rest of the room, drawing attention to this area as the focal point.\n\nIn the background, the setting transitions to a shower area. A large, glass-enclosed shower with a sliding door occupies the left side of the image. The shower features a modern design with a handheld showerhead and a sleek, chrome faucet mounted on the wall. The shower walls are covered in large, white tiles, which complement the clean and minimalist theme of the bathroom. The background also includes a portion of the wall with the same pink tiles as the vanity area, creating a cohesive color scheme. The mirror above the sink reflects part of the shower area, subtly tying the foreground and background together. The overall design is cohesive, with the foreground elements (sink and vanity) serving as the primary interaction points, while the background (shower) provides a functional and visually balanced backdrop. The use of contrasting colors and materials enhances the modern and stylish feel of the space.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 300,
-            "total_tokens": 603
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11301.994005,
-            "prompt_eval_duration_ms": 75.624269,
-            "generation_duration_ms": 11185.973012,
-            "load_duration_ms": 37.844182,
-            "tokens_per_second": 26.81930303945561
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a modern, clean, and well-organized bathroom. There are no people or animals visible in the image, so the focus is entirely on the objects and their arrangement within the space.\n\nThe bathroom features a walk-in shower with sliding glass doors, which are partially open. The shower area is tiled with large, light-colored tiles, giving it a bright and spacious appearance. A handheld showerhead with a flexible hose is mounted on the wall, indicating a functional and accessible design. The shower area is complemented by a sleek, rectangular mirror mounted on the wall above a dark pink or maroon vanity. The vanity has a smooth, flat surface and houses a modern, white, vessel-style sink with a single faucet. The sink area is well-lit, with small, integrated lights on either side, enhancing the contemporary aesthetic.\n\nBelow the sink, there is a neatly folded stack of white towels placed on a dark shelf, adding a touch of comfort and practicality. The wall behind the vanity is tiled with small, glossy red tiles, creating a vibrant contrast against the neutral tones of the shower area. The overall design emphasizes a harmonious blend of functionality and style, with a focus on clean lines, modern fixtures, and a balanced color scheme. The objects in the bathroom are arranged to maximize usability and visual appeal, reflecting a well-maintained and inviting space.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 277,
-            "total_tokens": 583
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10421.162002,
-            "prompt_eval_duration_ms": 76.126938,
-            "generation_duration_ms": 10304.500638,
-            "load_duration_ms": 38.037327,
-            "tokens_per_second": 26.881457892147107
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a modern and clean bathroom, evoking a sense of calmness, order, and sophistication. The overall mood is positive and neutral, leaning towards a serene and inviting atmosphere. The use of neutral tones, such as the white tiles in the shower area and the beige walls, contributes to a sense of purity and simplicity. The contrasting red mosaic tiles on the wall add a touch of warmth and vibrancy, which balances the otherwise cool and clinical feel of the space. The sleek, minimalist design of the sink and fixtures, along with the neatly arranged white towels, enhances the sense of tidiness and elegance. The bright lighting, reflected in the mirror and the shower area, creates a welcoming and airy ambiance, reducing any feelings of claustrophobia or discomfort. The presence of a shower with a handheld attachment and a modern faucet suggests functionality and comfort, further contributing to the positive emotional tone. Overall, the image conveys a feeling of tranquility, cleanliness, and modernity, making it an appealing and relaxing space.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 208,
-            "total_tokens": 516
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7873.927112,
-            "prompt_eval_duration_ms": 74.098262,
-            "generation_duration_ms": 7759.058035,
-            "load_duration_ms": 38.181894,
-            "tokens_per_second": 26.807377785001965
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"shower\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"white\", \"silver\"],\n      \"size\": \"large\",\n      \"description\": \"Glass-enclosed shower with a handheld showerhead and controls.\"\n    },\n    \"sink\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Modern, white, bowl-shaped sink.\"\n    },\n    \"mirror\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"silver\"],\n      \"size\": \"medium\",\n      \"description\": \"Rectangular mirror with a silver frame.\"\n    },\n    \"towel\": {\n      \"count\": 3,\n      \"location\": \"right, bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Folded white towels on a shelf.\"\n    },\n    \"toilet paper holder\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Silver toilet paper holder with a roll of toilet paper.\"\n    },\n    \"toilet paper\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"White toilet paper roll.\"\n    },\n    \"shelves\": {\n      \"count\": 2,\n      \"location\": \"right, bottom\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Black shelves holding towels.\"\n    },\n    \"wall tiles\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"red\"],\n      \"size\": \"large\",\n      \"description\": \"Red mosaic tiles on the wall.\"\n    },\n    \"bathroom counter\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"pink\"],\n      \"size\": \"medium\",\n      \"description\": \"Pink countertop with a sink.\"\n    },\n    \"door handles\": {\n      \"count\": 2,\n      \"location\": \"left, middle\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Silver handles on the shower door.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "shower": {
-                "count": 1,
-                "location": "left, middle",
-                "color": [
-                  "white",
-                  "silver"
-                ],
-                "size": "large",
-                "description": "Glass-enclosed shower with a handheld showerhead and controls."
-              },
-              "sink": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "Modern, white, bowl-shaped sink."
-              },
-              "mirror": {
-                "count": 1,
-                "location": "center, top",
-                "color": [
-                  "silver"
-                ],
-                "size": "medium",
-                "description": "Rectangular mirror with a silver frame."
-              },
-              "towel": {
-                "count": 3,
-                "location": "right, bottom",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "Folded white towels on a shelf."
-              },
-              "toilet paper holder": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "silver"
-                ],
-                "size": "small",
-                "description": "Silver toilet paper holder with a roll of toilet paper."
-              },
-              "toilet paper": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "White toilet paper roll."
-              },
-              "shelves": {
-                "count": 2,
-                "location": "right, bottom",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "Black shelves holding towels."
-              },
-              "wall tiles": {
-                "count": 1,
-                "location": "right, middle",
-                "color": [
-                  "red"
-                ],
-                "size": "large",
-                "description": "Red mosaic tiles on the wall."
-              },
-              "bathroom counter": {
-                "count": 1,
-                "location": "right, middle",
-                "color": [
-                  "pink"
-                ],
-                "size": "medium",
-                "description": "Pink countertop with a sink."
-              },
-              "door handles": {
-                "count": 2,
-                "location": "left, middle",
-                "color": [
-                  "silver"
-                ],
-                "size": "small",
-                "description": "Silver handles on the shower door."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 529,
-            "total_tokens": 1015
-          },
-          "performance_metrics": {
-            "total_duration_ms": 19803.417526,
-            "prompt_eval_duration_ms": 137.587157,
-            "generation_duration_ms": 19619.550823,
-            "load_duration_ms": 43.739907,
-            "tokens_per_second": 26.962900668442074
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3296,
-        "total_time_ms": 63564.478623999996,
-        "average_speed": 26.84813891102661
       }
     },
     {

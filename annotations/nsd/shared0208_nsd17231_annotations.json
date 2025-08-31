@@ -7,6 +7,376 @@
   "timestamp": "2025-08-30T17:36:44.181166+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a quaint, picturesque scene centered around a traditional clock tower and a surrounding gazebo-like structure. The clock tower, with its square base and a smaller, octagonal top, stands prominently against a backdrop of a clear blue sky with scattered white clouds. The tower is painted a light teal or turquoise, contrasting with the white clock face and black hands. The gazebo, with its brown tiled roof and sturdy stone columns, encircles the base of the tower, providing a sheltered space beneath. The structure is set in a lush green park, with mature trees framing the scene and adding a sense of tranquility. The lighting suggests a bright, sunny day, casting soft shadows that enhance the three-dimensional quality of the gazebo and the tower. In the background, parts of a residential area are visible, including a glimpse of a red-brick building and a white house, adding a touch of urban life to the otherwise rural setting. The overall composition is balanced, with the clock tower and gazebo as the focal points, creating a harmonious and inviting scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 217,
+            "total_tokens": 514
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1690.064031,
+            "prompt_eval_duration_ms": 80.808925,
+            "generation_duration_ms": 1564.915636,
+            "load_duration_ms": 39.606504,
+            "tokens_per_second": 138.66562197222495
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, the gaze is drawn to a charming octagonal gazebo with a red-tiled roof, supported by sturdy stone columns. The gazebo, a focal point of the scene, stands prominently in what appears to be a park or a small town square, with a backdrop of lush green trees and a clear blue sky. The gazebo's intricate details, such as the decorative cornices and the clock face on the tower, suggest a blend of functionality and aesthetic appeal, designed to offer a place for rest and contemplation. The background, slightly out of focus, reveals a mix of residential buildings with brick facades and white windows, hinting at a quaint town setting. A glimpse of a parked car and a few people walking or cycling adds a sense of everyday life and activity to the scene. The trees in the background frame the gazebo, creating a natural border that enhances the sense of depth and draws the viewer's eye from the foreground to the distant buildings, effectively linking the elements of nature and architecture in a harmonious composition.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 212,
+            "total_tokens": 515
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1611.539917,
+            "prompt_eval_duration_ms": 29.863141,
+            "generation_duration_ms": 1539.371106,
+            "load_duration_ms": 38.577042,
+            "tokens_per_second": 137.71857817370258
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a clock tower stands prominently in a park-like setting, with its clock face clearly visible against the sky. Below the clock, a gazebo with a red-tiled roof and sturdy stone columns provides a sheltered space for visitors. A few individuals can be seen near the gazebo; one appears to be a cyclist, possibly taking a break or passing through, while another person is standing closer to the gazebo, perhaps admiring the view or waiting. The gazebo and clock tower are the central elements, suggesting a public space designed for relaxation and observation. The surrounding area includes trees and buildings, indicating an urban or suburban environment. The interaction between the people and the gazebo and clock tower is minimal but significant, as they use the gazebo for rest and the clock tower as a landmark or point of interest. The overall scene conveys a sense of calm and leisure, with the clock tower serving as a focal point for the community.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 194,
+            "total_tokens": 500
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1469.633146,
+            "prompt_eval_duration_ms": 30.193011,
+            "generation_duration_ms": 1399.007036,
+            "load_duration_ms": 37.692248,
+            "tokens_per_second": 138.66978150065572
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of calm and tranquility, with a positive and serene mood. The presence of the clock tower, a traditional and timeless structure, suggests a sense of order and stability, which can be comforting. The red-tiled roof of the gazebo adds a warm, inviting tone to the scene, contrasting with the cool blue of the sky and the greenery of the trees, which enhances the peaceful atmosphere. The people walking leisurely around the gazebo contribute to the feeling of a relaxed, everyday life, suggesting a sense of community and contentment. The overall tone is positive, as the image portrays a harmonious blend of architecture, nature, and human activity, all contributing to a feeling of well-being and satisfaction. The clear sky and the lush green trees further emphasize the positive and uplifting nature of the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 169,
+            "total_tokens": 477
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1282.689354,
+            "prompt_eval_duration_ms": 31.515747,
+            "generation_duration_ms": 1211.200363,
+            "load_duration_ms": 37.329613,
+            "tokens_per_second": 139.53100177530249
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"bottom right\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"man riding a bicycle\"\n    }\n  },\n  \"man-made\": {\n    \"clock tower\": {\n      \"count\": 1,\n      \"location\": \"top center\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"tower with clock face\"\n    },\n    \"gazebo\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"wooden structure with a tiled roof\"\n    },\n    \"car\": {\n      \"count\": 1,\n      \"location\": \"bottom left\",\n      \"color\": [\"blue\"],\n      \"size\": \"small\",\n      \"description\": \"partially visible car\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"bottom right\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"building with a red roof\"\n    },\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"top left\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"large tree with dense foliage\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"clear sky with some clouds\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "bottom right",
+                "color": [
+                  "gray"
+                ],
+                "size": "small",
+                "description": "man riding a bicycle"
+              }
+            },
+            "man-made": {
+              "clock tower": {
+                "count": 1,
+                "location": "top center",
+                "color": [
+                  "brown",
+                  "white"
+                ],
+                "size": "large",
+                "description": "tower with clock face"
+              },
+              "gazebo": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "wooden structure with a tiled roof"
+              },
+              "car": {
+                "count": 1,
+                "location": "bottom left",
+                "color": [
+                  "blue"
+                ],
+                "size": "small",
+                "description": "partially visible car"
+              },
+              "building": {
+                "count": 1,
+                "location": "bottom right",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "building with a red roof"
+              },
+              "tree": {
+                "count": 1,
+                "location": "top left",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "large tree with dense foliage"
+              }
+            },
+            "natural": {
+              "sky": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "blue",
+                  "white"
+                ],
+                "size": "large",
+                "description": "clear sky with some clouds"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 364,
+            "total_tokens": 850
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2691.106637,
+            "prompt_eval_duration_ms": 43.335875,
+            "generation_duration_ms": 2605.769905,
+            "load_duration_ms": 39.272276,
+            "tokens_per_second": 139.69000075622566
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2856,
+        "total_time_ms": 8745.033085,
+        "average_speed": 138.85499683562227
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a quaint, open-air structure resembling a bandstand or gazebo, situated in what appears to be a town square or park setting. The main element is a small, octagonal structure with a red-tiled, sloped roof supported by sturdy, light-brown stone or concrete columns. At the top of the structure, there is a clock tower with a white dome and a clock face, adding a functional and decorative element. The clock tower is painted in a light teal or turquoise color, which contrasts nicely with the red roof and the neutral tones of the columns.\n\nThe setting is outdoors, with a clear blue sky and ample sunlight illuminating the scene, suggesting a bright, sunny day. The lighting is natural, casting soft shadows and highlighting the textures of the materials used in the structure. Surrounding the bandstand are trees with lush green foliage, providing a natural backdrop and a sense of tranquility. In the background, there are buildings with brick facades and white-framed windows, indicating a traditional or historic town environment.\n\nThe overall composition is balanced, with the bandstand as the central focus. The perspective draws the viewer's eye upward toward the clock tower, emphasizing its height and prominence. The presence of people in the background, along with parked cars and a truck, adds a sense of activity and life to the scene, suggesting a public space where people gather. The colors are vibrant yet harmonious, with the red roof, green trees, and teal clock tower creating a visually appealing contrast. The image conveys a peaceful, charming atmosphere typical of a small town or village square.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 324,
+            "total_tokens": 621
+          },
+          "performance_metrics": {
+            "total_duration_ms": 15705.252107,
+            "prompt_eval_duration_ms": 3571.221001,
+            "generation_duration_ms": 12091.693622,
+            "load_duration_ms": 39.726612,
+            "tokens_per_second": 26.795253843556242
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image prominently features a classic, octagonal bandstand or gazebo with a red-tiled roof and sturdy stone or concrete pillars. The structure is open on all sides, allowing for visibility and accessibility. Atop the gazebo is a small clock tower with a white dome, adding a quaint and historic charm to the scene. The clock is clearly visible, indicating the time, and the tower's design complements the overall aesthetic of the gazebo. The foreground also includes a few people near the gazebo, suggesting it is a public space, possibly a park or town square.\n\nIn the background, the setting transitions into a more urban environment. There are buildings with brick facades, indicating residential or commercial structures. A tree with lush green foliage is visible on the left side, providing a natural contrast to the built environment. A parked vehicle and a person walking in the distance further suggest the presence of a street or road, integrating the gazebo into a bustling community setting. The sky is partly cloudy, adding depth and context to the overall scene.\n\nThe relationship between the foreground and background is harmonious, with the gazebo serving as a focal point that connects the natural and built elements. The gazebo's design and placement suggest it is a central feature of the area, likely serving as a gathering spot or landmark. The background elements, including the buildings and street, provide context, indicating that the gazebo is situated within a town or city, blending historical charm with modern functionality. The tree and sky add layers of depth and visual interest, tying the scene together seamlessly.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 320,
+            "total_tokens": 623
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12004.926888,
+            "prompt_eval_duration_ms": 72.547969,
+            "generation_duration_ms": 11890.808894,
+            "load_duration_ms": 38.684051,
+            "tokens_per_second": 26.911541750659982
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a quaint, open-air structure resembling a bandstand or gazebo, situated in a public space, likely a park or town square. The structure features a red-tiled roof supported by sturdy stone or concrete pillars, creating a covered area beneath. Atop the gazebo is a clock tower, adding a functional and aesthetic element to the scene. The clock face is clearly visible, indicating the time.\n\nIn the foreground, several people are present, engaging in various activities. A man on a bicycle is seen riding past the gazebo, suggesting the area is a thoroughfare or a place where people gather. Another individual is walking near the gazebo, possibly strolling or enjoying the surroundings. A person in the background appears to be standing near a vehicle, perhaps a truck, indicating some form of activity or event taking place nearby.\n\nThe background includes trees and buildings, providing a mix of natural and urban elements. The trees offer shade and a sense of tranquility, while the buildings suggest the setting is within a town or city. The presence of vehicles and people indicates a lively, community-oriented environment.\n\nThe gazebo serves as a central point of interaction, with people moving around it, either passing by or possibly gathering for events. The clock tower adds a sense of time and order to the scene, while the natural elements like trees provide a calming contrast to the man-made structures. The overall atmosphere is one of a peaceful, communal space where people can relax, socialize, or simply pass through.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 304,
+            "total_tokens": 610
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11420.463354,
+            "prompt_eval_duration_ms": 73.957263,
+            "generation_duration_ms": 11303.534816,
+            "load_duration_ms": 40.362862,
+            "tokens_per_second": 26.89424192949732
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a serene and nostalgic mood, evoking feelings of calmness, tranquility, and a sense of timelessness. The central structure, a quaint clock tower with a traditional design, stands as a symbol of stability and continuity, contributing to a neutral yet positive emotional atmosphere. The clock itself, with its clear, simple face, adds a touch of order and predictability, reinforcing a sense of reliability and routine.\n\nThe surrounding elements further enhance this peaceful ambiance. The red-tiled roof of the structure and the lush green tree in the background create a harmonious blend of natural and man-made beauty, suggesting a connection to nature and a slower, more relaxed pace of life. The soft lighting and clear sky contribute to a bright, open feeling, free from any sense of urgency or stress.\n\nThe presence of people in the background, casually walking or standing, adds a subtle human element, suggesting a community space where people gather and interact. This human presence, combined with the timeless architecture, evokes a sense of belonging and shared history, further enhancing the image's positive and neutral tone. Overall, the visual elements work together to create a mood of quiet contentment and gentle nostalgia, inviting viewers to appreciate the simple beauty of everyday life.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 251,
+            "total_tokens": 559
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9474.856745,
+            "prompt_eval_duration_ms": 75.065974,
+            "generation_duration_ms": 9357.98897,
+            "load_duration_ms": 38.818182,
+            "tokens_per_second": 26.822002120825328
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 4,\n      \"location\": \"bottom\",\n      \"color\": [\"white\", \"blue\", \"black\"],\n      \"size\": \"small\",\n      \"description\": \"People walking or standing near the gazebo.\"\n    }\n  },\n  \"man-made\": {\n    \"gazebo\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"A wooden gazebo with a clock tower on top.\"\n    },\n    \"clock\": {\n      \"count\": 1,\n      \"location\": \"top center\",\n      \"color\": [\"black\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A clock on the tower of the gazebo.\"\n    },\n    \"tower\": {\n      \"count\": 1,\n      \"location\": \"top center\",\n      \"color\": [\"white\", \"brown\"],\n      \"size\": \"large\",\n      \"description\": \"A clock tower attached to the gazebo.\"\n    },\n    \"car\": {\n      \"count\": 2,\n      \"location\": \"bottom left\",\n      \"color\": [\"white\", \"blue\"],\n      \"size\": \"small\",\n      \"description\": \"Vehicles parked near the gazebo.\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"A brick building in the background.\"\n    },\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"A large tree with green leaves.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"A large tree with green leaves.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 4,
+                "location": "bottom",
+                "color": [
+                  "white",
+                  "blue",
+                  "black"
+                ],
+                "size": "small",
+                "description": "People walking or standing near the gazebo."
+              }
+            },
+            "man-made": {
+              "gazebo": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "brown",
+                  "white"
+                ],
+                "size": "large",
+                "description": "A wooden gazebo with a clock tower on top."
+              },
+              "clock": {
+                "count": 1,
+                "location": "top center",
+                "color": [
+                  "black",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "A clock on the tower of the gazebo."
+              },
+              "tower": {
+                "count": 1,
+                "location": "top center",
+                "color": [
+                  "white",
+                  "brown"
+                ],
+                "size": "large",
+                "description": "A clock tower attached to the gazebo."
+              },
+              "car": {
+                "count": 2,
+                "location": "bottom left",
+                "color": [
+                  "white",
+                  "blue"
+                ],
+                "size": "small",
+                "description": "Vehicles parked near the gazebo."
+              },
+              "building": {
+                "count": 1,
+                "location": "right",
+                "color": [
+                  "brown",
+                  "white"
+                ],
+                "size": "large",
+                "description": "A brick building in the background."
+              },
+              "tree": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "A large tree with green leaves."
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "A large tree with green leaves."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 443,
+            "total_tokens": 929
+          },
+          "performance_metrics": {
+            "total_duration_ms": 16633.275766,
+            "prompt_eval_duration_ms": 133.611899,
+            "generation_duration_ms": 16454.207954,
+            "load_duration_ms": 42.772432,
+            "tokens_per_second": 26.92320415777334
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3342,
+        "total_time_ms": 65238.77486,
+        "average_speed": 26.869248760462444
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -538,376 +908,6 @@
         "total_tokens": 2990,
         "total_time_ms": 29910.978682,
         "average_speed": 41.71370229724711
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a quaint, picturesque scene centered around a traditional clock tower and a surrounding gazebo-like structure. The clock tower, with its square base and a smaller, octagonal top, stands prominently against a backdrop of a clear blue sky with scattered white clouds. The tower is painted a light teal or turquoise, contrasting with the white clock face and black hands. The gazebo, with its brown tiled roof and sturdy stone columns, encircles the base of the tower, providing a sheltered space beneath. The structure is set in a lush green park, with mature trees framing the scene and adding a sense of tranquility. The lighting suggests a bright, sunny day, casting soft shadows that enhance the three-dimensional quality of the gazebo and the tower. In the background, parts of a residential area are visible, including a glimpse of a red-brick building and a white house, adding a touch of urban life to the otherwise rural setting. The overall composition is balanced, with the clock tower and gazebo as the focal points, creating a harmonious and inviting scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 217,
-            "total_tokens": 514
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1690.064031,
-            "prompt_eval_duration_ms": 80.808925,
-            "generation_duration_ms": 1564.915636,
-            "load_duration_ms": 39.606504,
-            "tokens_per_second": 138.66562197222495
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, the gaze is drawn to a charming octagonal gazebo with a red-tiled roof, supported by sturdy stone columns. The gazebo, a focal point of the scene, stands prominently in what appears to be a park or a small town square, with a backdrop of lush green trees and a clear blue sky. The gazebo's intricate details, such as the decorative cornices and the clock face on the tower, suggest a blend of functionality and aesthetic appeal, designed to offer a place for rest and contemplation. The background, slightly out of focus, reveals a mix of residential buildings with brick facades and white windows, hinting at a quaint town setting. A glimpse of a parked car and a few people walking or cycling adds a sense of everyday life and activity to the scene. The trees in the background frame the gazebo, creating a natural border that enhances the sense of depth and draws the viewer's eye from the foreground to the distant buildings, effectively linking the elements of nature and architecture in a harmonious composition.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 212,
-            "total_tokens": 515
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1611.539917,
-            "prompt_eval_duration_ms": 29.863141,
-            "generation_duration_ms": 1539.371106,
-            "load_duration_ms": 38.577042,
-            "tokens_per_second": 137.71857817370258
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a clock tower stands prominently in a park-like setting, with its clock face clearly visible against the sky. Below the clock, a gazebo with a red-tiled roof and sturdy stone columns provides a sheltered space for visitors. A few individuals can be seen near the gazebo; one appears to be a cyclist, possibly taking a break or passing through, while another person is standing closer to the gazebo, perhaps admiring the view or waiting. The gazebo and clock tower are the central elements, suggesting a public space designed for relaxation and observation. The surrounding area includes trees and buildings, indicating an urban or suburban environment. The interaction between the people and the gazebo and clock tower is minimal but significant, as they use the gazebo for rest and the clock tower as a landmark or point of interest. The overall scene conveys a sense of calm and leisure, with the clock tower serving as a focal point for the community.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 194,
-            "total_tokens": 500
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1469.633146,
-            "prompt_eval_duration_ms": 30.193011,
-            "generation_duration_ms": 1399.007036,
-            "load_duration_ms": 37.692248,
-            "tokens_per_second": 138.66978150065572
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of calm and tranquility, with a positive and serene mood. The presence of the clock tower, a traditional and timeless structure, suggests a sense of order and stability, which can be comforting. The red-tiled roof of the gazebo adds a warm, inviting tone to the scene, contrasting with the cool blue of the sky and the greenery of the trees, which enhances the peaceful atmosphere. The people walking leisurely around the gazebo contribute to the feeling of a relaxed, everyday life, suggesting a sense of community and contentment. The overall tone is positive, as the image portrays a harmonious blend of architecture, nature, and human activity, all contributing to a feeling of well-being and satisfaction. The clear sky and the lush green trees further emphasize the positive and uplifting nature of the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 169,
-            "total_tokens": 477
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1282.689354,
-            "prompt_eval_duration_ms": 31.515747,
-            "generation_duration_ms": 1211.200363,
-            "load_duration_ms": 37.329613,
-            "tokens_per_second": 139.53100177530249
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"bottom right\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"man riding a bicycle\"\n    }\n  },\n  \"man-made\": {\n    \"clock tower\": {\n      \"count\": 1,\n      \"location\": \"top center\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"tower with clock face\"\n    },\n    \"gazebo\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"wooden structure with a tiled roof\"\n    },\n    \"car\": {\n      \"count\": 1,\n      \"location\": \"bottom left\",\n      \"color\": [\"blue\"],\n      \"size\": \"small\",\n      \"description\": \"partially visible car\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"bottom right\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"building with a red roof\"\n    },\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"top left\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"large tree with dense foliage\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"clear sky with some clouds\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "bottom right",
-                "color": [
-                  "gray"
-                ],
-                "size": "small",
-                "description": "man riding a bicycle"
-              }
-            },
-            "man-made": {
-              "clock tower": {
-                "count": 1,
-                "location": "top center",
-                "color": [
-                  "brown",
-                  "white"
-                ],
-                "size": "large",
-                "description": "tower with clock face"
-              },
-              "gazebo": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "wooden structure with a tiled roof"
-              },
-              "car": {
-                "count": 1,
-                "location": "bottom left",
-                "color": [
-                  "blue"
-                ],
-                "size": "small",
-                "description": "partially visible car"
-              },
-              "building": {
-                "count": 1,
-                "location": "bottom right",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "building with a red roof"
-              },
-              "tree": {
-                "count": 1,
-                "location": "top left",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "large tree with dense foliage"
-              }
-            },
-            "natural": {
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "blue",
-                  "white"
-                ],
-                "size": "large",
-                "description": "clear sky with some clouds"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 364,
-            "total_tokens": 850
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2691.106637,
-            "prompt_eval_duration_ms": 43.335875,
-            "generation_duration_ms": 2605.769905,
-            "load_duration_ms": 39.272276,
-            "tokens_per_second": 139.69000075622566
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2856,
-        "total_time_ms": 8745.033085,
-        "average_speed": 138.85499683562227
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a quaint, open-air structure resembling a bandstand or gazebo, situated in what appears to be a town square or park setting. The main element is a small, octagonal structure with a red-tiled, sloped roof supported by sturdy, light-brown stone or concrete columns. At the top of the structure, there is a clock tower with a white dome and a clock face, adding a functional and decorative element. The clock tower is painted in a light teal or turquoise color, which contrasts nicely with the red roof and the neutral tones of the columns.\n\nThe setting is outdoors, with a clear blue sky and ample sunlight illuminating the scene, suggesting a bright, sunny day. The lighting is natural, casting soft shadows and highlighting the textures of the materials used in the structure. Surrounding the bandstand are trees with lush green foliage, providing a natural backdrop and a sense of tranquility. In the background, there are buildings with brick facades and white-framed windows, indicating a traditional or historic town environment.\n\nThe overall composition is balanced, with the bandstand as the central focus. The perspective draws the viewer's eye upward toward the clock tower, emphasizing its height and prominence. The presence of people in the background, along with parked cars and a truck, adds a sense of activity and life to the scene, suggesting a public space where people gather. The colors are vibrant yet harmonious, with the red roof, green trees, and teal clock tower creating a visually appealing contrast. The image conveys a peaceful, charming atmosphere typical of a small town or village square.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 324,
-            "total_tokens": 621
-          },
-          "performance_metrics": {
-            "total_duration_ms": 15705.252107,
-            "prompt_eval_duration_ms": 3571.221001,
-            "generation_duration_ms": 12091.693622,
-            "load_duration_ms": 39.726612,
-            "tokens_per_second": 26.795253843556242
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image prominently features a classic, octagonal bandstand or gazebo with a red-tiled roof and sturdy stone or concrete pillars. The structure is open on all sides, allowing for visibility and accessibility. Atop the gazebo is a small clock tower with a white dome, adding a quaint and historic charm to the scene. The clock is clearly visible, indicating the time, and the tower's design complements the overall aesthetic of the gazebo. The foreground also includes a few people near the gazebo, suggesting it is a public space, possibly a park or town square.\n\nIn the background, the setting transitions into a more urban environment. There are buildings with brick facades, indicating residential or commercial structures. A tree with lush green foliage is visible on the left side, providing a natural contrast to the built environment. A parked vehicle and a person walking in the distance further suggest the presence of a street or road, integrating the gazebo into a bustling community setting. The sky is partly cloudy, adding depth and context to the overall scene.\n\nThe relationship between the foreground and background is harmonious, with the gazebo serving as a focal point that connects the natural and built elements. The gazebo's design and placement suggest it is a central feature of the area, likely serving as a gathering spot or landmark. The background elements, including the buildings and street, provide context, indicating that the gazebo is situated within a town or city, blending historical charm with modern functionality. The tree and sky add layers of depth and visual interest, tying the scene together seamlessly.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 320,
-            "total_tokens": 623
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12004.926888,
-            "prompt_eval_duration_ms": 72.547969,
-            "generation_duration_ms": 11890.808894,
-            "load_duration_ms": 38.684051,
-            "tokens_per_second": 26.911541750659982
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a quaint, open-air structure resembling a bandstand or gazebo, situated in a public space, likely a park or town square. The structure features a red-tiled roof supported by sturdy stone or concrete pillars, creating a covered area beneath. Atop the gazebo is a clock tower, adding a functional and aesthetic element to the scene. The clock face is clearly visible, indicating the time.\n\nIn the foreground, several people are present, engaging in various activities. A man on a bicycle is seen riding past the gazebo, suggesting the area is a thoroughfare or a place where people gather. Another individual is walking near the gazebo, possibly strolling or enjoying the surroundings. A person in the background appears to be standing near a vehicle, perhaps a truck, indicating some form of activity or event taking place nearby.\n\nThe background includes trees and buildings, providing a mix of natural and urban elements. The trees offer shade and a sense of tranquility, while the buildings suggest the setting is within a town or city. The presence of vehicles and people indicates a lively, community-oriented environment.\n\nThe gazebo serves as a central point of interaction, with people moving around it, either passing by or possibly gathering for events. The clock tower adds a sense of time and order to the scene, while the natural elements like trees provide a calming contrast to the man-made structures. The overall atmosphere is one of a peaceful, communal space where people can relax, socialize, or simply pass through.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 304,
-            "total_tokens": 610
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11420.463354,
-            "prompt_eval_duration_ms": 73.957263,
-            "generation_duration_ms": 11303.534816,
-            "load_duration_ms": 40.362862,
-            "tokens_per_second": 26.89424192949732
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a serene and nostalgic mood, evoking feelings of calmness, tranquility, and a sense of timelessness. The central structure, a quaint clock tower with a traditional design, stands as a symbol of stability and continuity, contributing to a neutral yet positive emotional atmosphere. The clock itself, with its clear, simple face, adds a touch of order and predictability, reinforcing a sense of reliability and routine.\n\nThe surrounding elements further enhance this peaceful ambiance. The red-tiled roof of the structure and the lush green tree in the background create a harmonious blend of natural and man-made beauty, suggesting a connection to nature and a slower, more relaxed pace of life. The soft lighting and clear sky contribute to a bright, open feeling, free from any sense of urgency or stress.\n\nThe presence of people in the background, casually walking or standing, adds a subtle human element, suggesting a community space where people gather and interact. This human presence, combined with the timeless architecture, evokes a sense of belonging and shared history, further enhancing the image's positive and neutral tone. Overall, the visual elements work together to create a mood of quiet contentment and gentle nostalgia, inviting viewers to appreciate the simple beauty of everyday life.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 251,
-            "total_tokens": 559
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9474.856745,
-            "prompt_eval_duration_ms": 75.065974,
-            "generation_duration_ms": 9357.98897,
-            "load_duration_ms": 38.818182,
-            "tokens_per_second": 26.822002120825328
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 4,\n      \"location\": \"bottom\",\n      \"color\": [\"white\", \"blue\", \"black\"],\n      \"size\": \"small\",\n      \"description\": \"People walking or standing near the gazebo.\"\n    }\n  },\n  \"man-made\": {\n    \"gazebo\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"A wooden gazebo with a clock tower on top.\"\n    },\n    \"clock\": {\n      \"count\": 1,\n      \"location\": \"top center\",\n      \"color\": [\"black\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A clock on the tower of the gazebo.\"\n    },\n    \"tower\": {\n      \"count\": 1,\n      \"location\": \"top center\",\n      \"color\": [\"white\", \"brown\"],\n      \"size\": \"large\",\n      \"description\": \"A clock tower attached to the gazebo.\"\n    },\n    \"car\": {\n      \"count\": 2,\n      \"location\": \"bottom left\",\n      \"color\": [\"white\", \"blue\"],\n      \"size\": \"small\",\n      \"description\": \"Vehicles parked near the gazebo.\"\n    },\n    \"building\": {\n      \"count\": 1,\n      \"location\": \"right\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"A brick building in the background.\"\n    },\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"A large tree with green leaves.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"A large tree with green leaves.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 4,
-                "location": "bottom",
-                "color": [
-                  "white",
-                  "blue",
-                  "black"
-                ],
-                "size": "small",
-                "description": "People walking or standing near the gazebo."
-              }
-            },
-            "man-made": {
-              "gazebo": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "brown",
-                  "white"
-                ],
-                "size": "large",
-                "description": "A wooden gazebo with a clock tower on top."
-              },
-              "clock": {
-                "count": 1,
-                "location": "top center",
-                "color": [
-                  "black",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "A clock on the tower of the gazebo."
-              },
-              "tower": {
-                "count": 1,
-                "location": "top center",
-                "color": [
-                  "white",
-                  "brown"
-                ],
-                "size": "large",
-                "description": "A clock tower attached to the gazebo."
-              },
-              "car": {
-                "count": 2,
-                "location": "bottom left",
-                "color": [
-                  "white",
-                  "blue"
-                ],
-                "size": "small",
-                "description": "Vehicles parked near the gazebo."
-              },
-              "building": {
-                "count": 1,
-                "location": "right",
-                "color": [
-                  "brown",
-                  "white"
-                ],
-                "size": "large",
-                "description": "A brick building in the background."
-              },
-              "tree": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "A large tree with green leaves."
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "A large tree with green leaves."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 443,
-            "total_tokens": 929
-          },
-          "performance_metrics": {
-            "total_duration_ms": 16633.275766,
-            "prompt_eval_duration_ms": 133.611899,
-            "generation_duration_ms": 16454.207954,
-            "load_duration_ms": 42.772432,
-            "tokens_per_second": 26.92320415777334
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3342,
-        "total_time_ms": 65238.77486,
-        "average_speed": 26.869248760462444
       }
     },
     {

@@ -7,6 +7,297 @@
   "timestamp": "2025-08-30T23:56:50.551197+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image presents a vibrant and lively arrangement of yellow flowers, likely daisies, nestled within a clear glass vase. The vase, speckled with small black dots, sits atop a dark, polished marble surface, which reflects the light and adds a touch of elegance to the setting. The flowers are complemented by lush green foliage, creating a striking contrast against the pale, neutral background. The lighting is soft and natural, suggesting the photo was taken indoors with ample ambient light, possibly from a nearby window. The composition is simple yet captivating, with the flowers and leaves filling the frame, creating a sense of abundance and freshness. The overall impression is one of warmth and natural beauty, with the colors and textures working harmoniously to draw the viewer's eye into the center of the image.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 160,
+            "total_tokens": 457
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1267.675634,
+            "prompt_eval_duration_ms": 79.756195,
+            "generation_duration_ms": 1142.256241,
+            "load_duration_ms": 41.474067,
+            "tokens_per_second": 140.0736492014492
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, the viewer's attention is drawn to a clear glass vase filled with water, containing a vibrant bouquet of yellow flowers and lush green leaves. The stems of the flowers are dark, contrasting with the bright yellow petals and the fresh green foliage. The vase is placed on a dark, textured surface, possibly a table or a countertop, which adds a grounding element to the composition. The background, though less distinct, features a plain, light-colored wall that serves as a neutral backdrop, allowing the vivid colors of the flowers to stand out prominently. The simplicity of the background ensures that the focus remains on the bouquet, enhancing its visual impact and creating a harmonious balance between the foreground and the background elements.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 145,
+            "total_tokens": 448
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1115.259795,
+            "prompt_eval_duration_ms": 30.207126,
+            "generation_duration_ms": 1044.306447,
+            "load_duration_ms": 38.042455,
+            "tokens_per_second": 138.8481325731009
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, there are no people or animals present. The focus is entirely on a bouquet of yellow flowers, likely sunflowers, arranged in a clear glass vase. The flowers are surrounded by lush green leaves, creating a vibrant and natural display. The vase is placed on a dark, textured surface that appears to be a table or countertop. The background is a plain, light-colored wall, which provides a neutral backdrop that accentuates the bright yellow of the flowers. The arrangement of the flowers and leaves suggests a deliberate effort to create a visually appealing and fresh display, possibly for decorative or celebratory purposes. The interaction between the elements is purely aesthetic, with the flowers and leaves complementing each other in color and form, and the vase serving as a simple yet elegant container that holds the arrangement in place.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 164,
+            "total_tokens": 470
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1257.823326,
+            "prompt_eval_duration_ms": 32.320768,
+            "generation_duration_ms": 1183.47125,
+            "load_duration_ms": 39.454604,
+            "tokens_per_second": 138.57539843067588
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of warmth and tranquility, primarily due to the vibrant yellow flowers that stand out against the muted background. The sunflowers, with their bright petals and dark centers, symbolize positivity, joy, and vitality, which contribute to a predominantly positive mood. The green leaves add a touch of freshness and life, enhancing the overall feeling of growth and renewal. The simplicity of the setting, with the flowers in a clear glass vase on a marble surface, suggests a calm and serene environment, further reinforcing the peaceful and uplifting atmosphere. The soft lighting and the natural arrangement of the flowers give the image a gentle, almost contemplative quality, making it feel like a moment of quiet reflection or a gentle reminder of nature's beauty. The absence of any other objects or distractions in the frame allows the viewer to focus entirely on the flowers, amplifying the sense of simplicity and contentment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 181,
+            "total_tokens": 489
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1380.993852,
+            "prompt_eval_duration_ms": 29.383392,
+            "generation_duration_ms": 1310.745054,
+            "load_duration_ms": 38.254451,
+            "tokens_per_second": 138.08940148020577
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"human\": [],\n    \"animal\": [],\n    \"man-made\": {\n      \"vase\": {\n        \"count\": 1,\n        \"location\": \"bottom center\",\n        \"color\": [\"clear\"],\n        \"size\": \"small\",\n        \"description\": \"transparent glass vase with speckled pattern\"\n      }\n    },\n    \"natural\": {\n      \"flower\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"yellow\", \"green\"],\n        \"size\": \"medium\",\n        \"description\": \"bouquet of yellow flowers with green leaves\"\n      }\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "human": [],
+              "animal": [],
+              "man-made": {
+                "vase": {
+                  "count": 1,
+                  "location": "bottom center",
+                  "color": [
+                    "clear"
+                  ],
+                  "size": "small",
+                  "description": "transparent glass vase with speckled pattern"
+                }
+              },
+              "natural": {
+                "flower": {
+                  "count": 1,
+                  "location": "center",
+                  "color": [
+                    "yellow",
+                    "green"
+                  ],
+                  "size": "medium",
+                  "description": "bouquet of yellow flowers with green leaves"
+                }
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 144,
+            "total_tokens": 630
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1109.472798,
+            "prompt_eval_duration_ms": 44.12461,
+            "generation_duration_ms": 1022.572172,
+            "load_duration_ms": 39.932416,
+            "tokens_per_second": 140.821356128201
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2494,
+        "total_time_ms": 6131.225405,
+        "average_speed": 139.28158756272654
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a vibrant floral arrangement placed on a stone or marble surface, likely a table or countertop. The centerpiece is a clear glass vase filled with water, which holds a bouquet of bright yellow sunflowers and lush green leaves. The sunflowers are the focal point, their cheerful yellow petals and dark brown centers creating a striking contrast against the verdant foliage. The leaves are large, glossy, and appear to be from a plant like a philodendron or a similar variety, adding depth and texture to the arrangement. The vase is simple and unadorned, allowing the flowers to take center stage. The background is a plain, light-colored wall, which helps to emphasize the vivid colors of the bouquet. The lighting is soft and natural, suggesting the photo was taken indoors during the daytime, possibly near a window. The overall composition is balanced, with the flowers and leaves filling the frame in a way that feels both organized and organic. The scene evokes a sense of warmth, freshness, and natural beauty.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 207,
+            "total_tokens": 504
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11376.704914,
+            "prompt_eval_duration_ms": 3634.435371,
+            "generation_duration_ms": 7701.233049,
+            "load_duration_ms": 38.220389,
+            "tokens_per_second": 26.878812611297203
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a vibrant bouquet of yellow flowers, likely sunflowers, arranged in a clear glass vase. The flowers are bright and eye-catching, with their large, cheerful petals and dark centers, surrounded by lush green leaves that add a fresh, natural contrast. The vase itself is simple and transparent, allowing the water inside to be visible, which enhances the overall freshness of the arrangement. The vase is placed on a textured, stone-like surface, possibly a table or countertop, which provides a neutral and earthy backdrop that complements the organic elements of the bouquet.\n\nIn the background, the setting is minimalistic and uncluttered, featuring a plain, light-colored wall that serves as a neutral canvas. This simplicity ensures that the focus remains on the bouquet in the foreground. The wall's soft, neutral tone helps to highlight the vivid colors of the flowers without distraction. Additionally, there is a glimpse of a brown, possibly wooden, structure or furniture piece in the upper left corner, adding a subtle touch of warmth and texture to the scene.\n\nThe relationship between the foreground and background is harmonious. The vibrant, detailed bouquet in the foreground stands out sharply against the plain, unadorned background, creating a strong visual contrast. The simplicity of the background ensures that the bouquet remains the focal point, while the subtle textures and colors in the background add depth and context, making the overall composition balanced and visually appealing. The arrangement and setting work together to evoke a sense of freshness, warmth, and natural beauty.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 311,
+            "total_tokens": 614
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11682.078285,
+            "prompt_eval_duration_ms": 71.207065,
+            "generation_duration_ms": 11568.530901,
+            "load_duration_ms": 39.856349,
+            "tokens_per_second": 26.883275211126133
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a vibrant floral arrangement placed in a clear glass vase, which is set on a stone or marble surface, possibly a table or countertop. The bouquet consists of bright yellow flowers, likely sunflowers or daisies, with dark brown centers, surrounded by lush green leaves. The flowers are arranged in a way that creates a full, rounded shape, emphasizing their cheerful and lively appearance. The vase is transparent, allowing the stems and water inside to be visible, adding a natural and refreshing touch to the composition.\n\nThere are no people or animals present in the image. The focus is entirely on the floral arrangement and its interaction with the surrounding environment. The green leaves provide a striking contrast to the yellow flowers, enhancing the visual appeal and creating a sense of balance. The clear vase allows the flowers to appear as though they are floating, which adds a delicate and elegant touch to the overall presentation. The stone or marble surface beneath the vase provides a neutral and sophisticated backdrop, further highlighting the vibrancy of the flowers.\n\nThe image conveys a sense of tranquility and natural beauty, with the flowers and leaves working harmoniously to create a visually pleasing and inviting scene. The arrangement suggests a connection to nature, evoking feelings of warmth and positivity. The absence of people or animals allows the viewer to fully appreciate the intricate details and natural elegance of the floral display.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 275,
+            "total_tokens": 581
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10362.336964,
+            "prompt_eval_duration_ms": 75.303936,
+            "generation_duration_ms": 10240.89378,
+            "load_duration_ms": 42.714508,
+            "tokens_per_second": 26.85312492324278
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of warmth, cheerfulness, and tranquility, evoking positive emotions such as happiness, comfort, and renewal. The vibrant yellow sunflowers are the focal point, symbolizing joy, optimism, and vitality. Their bright color contrasts beautifully with the lush green leaves, creating a harmonious and lively composition. The clear glass vase adds a sense of simplicity and elegance, allowing the natural beauty of the flowers to stand out. The soft, neutral background ensures that the viewer's attention remains on the bouquet, enhancing its visual impact. The arrangement is carefully balanced, with the flowers and leaves distributed in a way that feels natural and inviting, suggesting care and thoughtfulness. The setting, which appears to be indoors on a stone or marble surface, adds a touch of sophistication and calm, further reinforcing the serene atmosphere. Overall, the image's tone is overwhelmingly positive, as the combination of bright colors, natural elements, and careful composition creates a uplifting and refreshing visual experience.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 199,
+            "total_tokens": 507
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7549.582631,
+            "prompt_eval_duration_ms": 76.09351,
+            "generation_duration_ms": 7431.830977,
+            "load_duration_ms": 39.028218,
+            "tokens_per_second": 26.77671230896725
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"natural\": {\n    \"flowers\": {\n      \"count\": 10,\n      \"location\": \"center, middle\",\n      \"color\": [\"yellow\"],\n      \"size\": \"medium\",\n      \"description\": \"Bright yellow sunflowers with dark centers\"\n    },\n    \"leaves\": {\n      \"count\": 20,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Large, glossy green leaves\"\n    },\n    \"stem\": {\n      \"count\": 10,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\", \"brown\"],\n      \"size\": \"small\",\n      \"description\": \"Supporting stems for flowers and leaves\"\n    }\n  },\n  \"man-made\": {\n    \"vase\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"clear\"],\n      \"size\": \"medium\",\n      \"description\": \"Transparent glass vase holding the floral arrangement\"\n    },\n    \"table\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Stone or marble surface supporting the vase\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "natural": {
+              "flowers": {
+                "count": 10,
+                "location": "center, middle",
+                "color": [
+                  "yellow"
+                ],
+                "size": "medium",
+                "description": "Bright yellow sunflowers with dark centers"
+              },
+              "leaves": {
+                "count": 20,
+                "location": "center, middle",
+                "color": [
+                  "green"
+                ],
+                "size": "small",
+                "description": "Large, glossy green leaves"
+              },
+              "stem": {
+                "count": 10,
+                "location": "center, middle",
+                "color": [
+                  "green",
+                  "brown"
+                ],
+                "size": "small",
+                "description": "Supporting stems for flowers and leaves"
+              }
+            },
+            "man-made": {
+              "vase": {
+                "count": 1,
+                "location": "center, bottom",
+                "color": [
+                  "clear"
+                ],
+                "size": "medium",
+                "description": "Transparent glass vase holding the floral arrangement"
+              },
+              "table": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "Stone or marble surface supporting the vase"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 276,
+            "total_tokens": 762
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10404.238635,
+            "prompt_eval_duration_ms": 136.138271,
+            "generation_duration_ms": 10226.607831,
+            "load_duration_ms": 38.621596,
+            "tokens_per_second": 26.988421240067396
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2968,
+        "total_time_ms": 51374.941429,
+        "average_speed": 26.876069258940152
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -465,297 +756,6 @@
         "total_tokens": 2785,
         "total_time_ms": 24828.458414,
         "average_speed": 42.01390183596517
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image presents a vibrant and lively arrangement of yellow flowers, likely daisies, nestled within a clear glass vase. The vase, speckled with small black dots, sits atop a dark, polished marble surface, which reflects the light and adds a touch of elegance to the setting. The flowers are complemented by lush green foliage, creating a striking contrast against the pale, neutral background. The lighting is soft and natural, suggesting the photo was taken indoors with ample ambient light, possibly from a nearby window. The composition is simple yet captivating, with the flowers and leaves filling the frame, creating a sense of abundance and freshness. The overall impression is one of warmth and natural beauty, with the colors and textures working harmoniously to draw the viewer's eye into the center of the image.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 160,
-            "total_tokens": 457
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1267.675634,
-            "prompt_eval_duration_ms": 79.756195,
-            "generation_duration_ms": 1142.256241,
-            "load_duration_ms": 41.474067,
-            "tokens_per_second": 140.0736492014492
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, the viewer's attention is drawn to a clear glass vase filled with water, containing a vibrant bouquet of yellow flowers and lush green leaves. The stems of the flowers are dark, contrasting with the bright yellow petals and the fresh green foliage. The vase is placed on a dark, textured surface, possibly a table or a countertop, which adds a grounding element to the composition. The background, though less distinct, features a plain, light-colored wall that serves as a neutral backdrop, allowing the vivid colors of the flowers to stand out prominently. The simplicity of the background ensures that the focus remains on the bouquet, enhancing its visual impact and creating a harmonious balance between the foreground and the background elements.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 145,
-            "total_tokens": 448
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1115.259795,
-            "prompt_eval_duration_ms": 30.207126,
-            "generation_duration_ms": 1044.306447,
-            "load_duration_ms": 38.042455,
-            "tokens_per_second": 138.8481325731009
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, there are no people or animals present. The focus is entirely on a bouquet of yellow flowers, likely sunflowers, arranged in a clear glass vase. The flowers are surrounded by lush green leaves, creating a vibrant and natural display. The vase is placed on a dark, textured surface that appears to be a table or countertop. The background is a plain, light-colored wall, which provides a neutral backdrop that accentuates the bright yellow of the flowers. The arrangement of the flowers and leaves suggests a deliberate effort to create a visually appealing and fresh display, possibly for decorative or celebratory purposes. The interaction between the elements is purely aesthetic, with the flowers and leaves complementing each other in color and form, and the vase serving as a simple yet elegant container that holds the arrangement in place.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 164,
-            "total_tokens": 470
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1257.823326,
-            "prompt_eval_duration_ms": 32.320768,
-            "generation_duration_ms": 1183.47125,
-            "load_duration_ms": 39.454604,
-            "tokens_per_second": 138.57539843067588
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of warmth and tranquility, primarily due to the vibrant yellow flowers that stand out against the muted background. The sunflowers, with their bright petals and dark centers, symbolize positivity, joy, and vitality, which contribute to a predominantly positive mood. The green leaves add a touch of freshness and life, enhancing the overall feeling of growth and renewal. The simplicity of the setting, with the flowers in a clear glass vase on a marble surface, suggests a calm and serene environment, further reinforcing the peaceful and uplifting atmosphere. The soft lighting and the natural arrangement of the flowers give the image a gentle, almost contemplative quality, making it feel like a moment of quiet reflection or a gentle reminder of nature's beauty. The absence of any other objects or distractions in the frame allows the viewer to focus entirely on the flowers, amplifying the sense of simplicity and contentment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 181,
-            "total_tokens": 489
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1380.993852,
-            "prompt_eval_duration_ms": 29.383392,
-            "generation_duration_ms": 1310.745054,
-            "load_duration_ms": 38.254451,
-            "tokens_per_second": 138.08940148020577
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"human\": [],\n    \"animal\": [],\n    \"man-made\": {\n      \"vase\": {\n        \"count\": 1,\n        \"location\": \"bottom center\",\n        \"color\": [\"clear\"],\n        \"size\": \"small\",\n        \"description\": \"transparent glass vase with speckled pattern\"\n      }\n    },\n    \"natural\": {\n      \"flower\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"yellow\", \"green\"],\n        \"size\": \"medium\",\n        \"description\": \"bouquet of yellow flowers with green leaves\"\n      }\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "human": [],
-              "animal": [],
-              "man-made": {
-                "vase": {
-                  "count": 1,
-                  "location": "bottom center",
-                  "color": [
-                    "clear"
-                  ],
-                  "size": "small",
-                  "description": "transparent glass vase with speckled pattern"
-                }
-              },
-              "natural": {
-                "flower": {
-                  "count": 1,
-                  "location": "center",
-                  "color": [
-                    "yellow",
-                    "green"
-                  ],
-                  "size": "medium",
-                  "description": "bouquet of yellow flowers with green leaves"
-                }
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 144,
-            "total_tokens": 630
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1109.472798,
-            "prompt_eval_duration_ms": 44.12461,
-            "generation_duration_ms": 1022.572172,
-            "load_duration_ms": 39.932416,
-            "tokens_per_second": 140.821356128201
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2494,
-        "total_time_ms": 6131.225405,
-        "average_speed": 139.28158756272654
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a vibrant floral arrangement placed on a stone or marble surface, likely a table or countertop. The centerpiece is a clear glass vase filled with water, which holds a bouquet of bright yellow sunflowers and lush green leaves. The sunflowers are the focal point, their cheerful yellow petals and dark brown centers creating a striking contrast against the verdant foliage. The leaves are large, glossy, and appear to be from a plant like a philodendron or a similar variety, adding depth and texture to the arrangement. The vase is simple and unadorned, allowing the flowers to take center stage. The background is a plain, light-colored wall, which helps to emphasize the vivid colors of the bouquet. The lighting is soft and natural, suggesting the photo was taken indoors during the daytime, possibly near a window. The overall composition is balanced, with the flowers and leaves filling the frame in a way that feels both organized and organic. The scene evokes a sense of warmth, freshness, and natural beauty.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 207,
-            "total_tokens": 504
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11376.704914,
-            "prompt_eval_duration_ms": 3634.435371,
-            "generation_duration_ms": 7701.233049,
-            "load_duration_ms": 38.220389,
-            "tokens_per_second": 26.878812611297203
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a vibrant bouquet of yellow flowers, likely sunflowers, arranged in a clear glass vase. The flowers are bright and eye-catching, with their large, cheerful petals and dark centers, surrounded by lush green leaves that add a fresh, natural contrast. The vase itself is simple and transparent, allowing the water inside to be visible, which enhances the overall freshness of the arrangement. The vase is placed on a textured, stone-like surface, possibly a table or countertop, which provides a neutral and earthy backdrop that complements the organic elements of the bouquet.\n\nIn the background, the setting is minimalistic and uncluttered, featuring a plain, light-colored wall that serves as a neutral canvas. This simplicity ensures that the focus remains on the bouquet in the foreground. The wall's soft, neutral tone helps to highlight the vivid colors of the flowers without distraction. Additionally, there is a glimpse of a brown, possibly wooden, structure or furniture piece in the upper left corner, adding a subtle touch of warmth and texture to the scene.\n\nThe relationship between the foreground and background is harmonious. The vibrant, detailed bouquet in the foreground stands out sharply against the plain, unadorned background, creating a strong visual contrast. The simplicity of the background ensures that the bouquet remains the focal point, while the subtle textures and colors in the background add depth and context, making the overall composition balanced and visually appealing. The arrangement and setting work together to evoke a sense of freshness, warmth, and natural beauty.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 311,
-            "total_tokens": 614
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11682.078285,
-            "prompt_eval_duration_ms": 71.207065,
-            "generation_duration_ms": 11568.530901,
-            "load_duration_ms": 39.856349,
-            "tokens_per_second": 26.883275211126133
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a vibrant floral arrangement placed in a clear glass vase, which is set on a stone or marble surface, possibly a table or countertop. The bouquet consists of bright yellow flowers, likely sunflowers or daisies, with dark brown centers, surrounded by lush green leaves. The flowers are arranged in a way that creates a full, rounded shape, emphasizing their cheerful and lively appearance. The vase is transparent, allowing the stems and water inside to be visible, adding a natural and refreshing touch to the composition.\n\nThere are no people or animals present in the image. The focus is entirely on the floral arrangement and its interaction with the surrounding environment. The green leaves provide a striking contrast to the yellow flowers, enhancing the visual appeal and creating a sense of balance. The clear vase allows the flowers to appear as though they are floating, which adds a delicate and elegant touch to the overall presentation. The stone or marble surface beneath the vase provides a neutral and sophisticated backdrop, further highlighting the vibrancy of the flowers.\n\nThe image conveys a sense of tranquility and natural beauty, with the flowers and leaves working harmoniously to create a visually pleasing and inviting scene. The arrangement suggests a connection to nature, evoking feelings of warmth and positivity. The absence of people or animals allows the viewer to fully appreciate the intricate details and natural elegance of the floral display.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 275,
-            "total_tokens": 581
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10362.336964,
-            "prompt_eval_duration_ms": 75.303936,
-            "generation_duration_ms": 10240.89378,
-            "load_duration_ms": 42.714508,
-            "tokens_per_second": 26.85312492324278
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of warmth, cheerfulness, and tranquility, evoking positive emotions such as happiness, comfort, and renewal. The vibrant yellow sunflowers are the focal point, symbolizing joy, optimism, and vitality. Their bright color contrasts beautifully with the lush green leaves, creating a harmonious and lively composition. The clear glass vase adds a sense of simplicity and elegance, allowing the natural beauty of the flowers to stand out. The soft, neutral background ensures that the viewer's attention remains on the bouquet, enhancing its visual impact. The arrangement is carefully balanced, with the flowers and leaves distributed in a way that feels natural and inviting, suggesting care and thoughtfulness. The setting, which appears to be indoors on a stone or marble surface, adds a touch of sophistication and calm, further reinforcing the serene atmosphere. Overall, the image's tone is overwhelmingly positive, as the combination of bright colors, natural elements, and careful composition creates a uplifting and refreshing visual experience.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 199,
-            "total_tokens": 507
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7549.582631,
-            "prompt_eval_duration_ms": 76.09351,
-            "generation_duration_ms": 7431.830977,
-            "load_duration_ms": 39.028218,
-            "tokens_per_second": 26.77671230896725
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"natural\": {\n    \"flowers\": {\n      \"count\": 10,\n      \"location\": \"center, middle\",\n      \"color\": [\"yellow\"],\n      \"size\": \"medium\",\n      \"description\": \"Bright yellow sunflowers with dark centers\"\n    },\n    \"leaves\": {\n      \"count\": 20,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Large, glossy green leaves\"\n    },\n    \"stem\": {\n      \"count\": 10,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\", \"brown\"],\n      \"size\": \"small\",\n      \"description\": \"Supporting stems for flowers and leaves\"\n    }\n  },\n  \"man-made\": {\n    \"vase\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"clear\"],\n      \"size\": \"medium\",\n      \"description\": \"Transparent glass vase holding the floral arrangement\"\n    },\n    \"table\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Stone or marble surface supporting the vase\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "natural": {
-              "flowers": {
-                "count": 10,
-                "location": "center, middle",
-                "color": [
-                  "yellow"
-                ],
-                "size": "medium",
-                "description": "Bright yellow sunflowers with dark centers"
-              },
-              "leaves": {
-                "count": 20,
-                "location": "center, middle",
-                "color": [
-                  "green"
-                ],
-                "size": "small",
-                "description": "Large, glossy green leaves"
-              },
-              "stem": {
-                "count": 10,
-                "location": "center, middle",
-                "color": [
-                  "green",
-                  "brown"
-                ],
-                "size": "small",
-                "description": "Supporting stems for flowers and leaves"
-              }
-            },
-            "man-made": {
-              "vase": {
-                "count": 1,
-                "location": "center, bottom",
-                "color": [
-                  "clear"
-                ],
-                "size": "medium",
-                "description": "Transparent glass vase holding the floral arrangement"
-              },
-              "table": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "Stone or marble surface supporting the vase"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 276,
-            "total_tokens": 762
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10404.238635,
-            "prompt_eval_duration_ms": 136.138271,
-            "generation_duration_ms": 10226.607831,
-            "load_duration_ms": 38.621596,
-            "tokens_per_second": 26.988421240067396
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2968,
-        "total_time_ms": 51374.941429,
-        "average_speed": 26.876069258940152
       }
     },
     {

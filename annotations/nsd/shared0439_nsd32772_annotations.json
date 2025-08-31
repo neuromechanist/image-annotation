@@ -7,6 +7,275 @@
   "timestamp": "2025-08-30T19:45:09.500001+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a close-up of a zebra, its distinctive black and white stripes sharply defined against the soft, natural backdrop. The zebra's head is slightly tilted downward, suggesting it might be grazing or sniffing the ground. The stripes on its face and body are a striking contrast, with the white stripes bordered by black, creating a visually captivating pattern. The zebra's ears are perked up, indicating attentiveness or curiosity. The background is a blurred mix of green foliage and what appears to be a wooden fence, suggesting the setting is a zoo or a wildlife sanctuary. The lighting is natural, possibly from sunlight filtering through the trees, casting gentle shadows and highlighting the zebra's features. The composition is tight, focusing on the zebra's head and upper body, with some green leaves in the foreground adding depth and a sense of being in a natural environment. The overall impression is one of tranquility and the beauty of wildlife in a controlled yet naturalistic setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 199,
+            "total_tokens": 496
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1543.084782,
+            "prompt_eval_duration_ms": 80.816974,
+            "generation_duration_ms": 1421.343902,
+            "load_duration_ms": 38.47094,
+            "tokens_per_second": 140.0083397972745
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, lush green foliage dominates, with leaves in various shades of green creating a textured and vibrant carpet that partially obscures the zebra's body. The leaves are in sharp focus, suggesting they are closer to the viewer, and their intricate details are clearly visible, adding depth and a sense of immediacy to the scene. The zebra, positioned slightly behind the foliage, is the central figure, with its distinctive black and white stripes standing out sharply against the greenery. Its head is lowered, and its ears are perked up, giving it an alert and curious appearance. The background, though less detailed, provides a sense of enclosure with its darker, more muted tones, possibly indicating a fence or a wall, which contrasts with the bright and detailed foreground. The blurred background helps to emphasize the zebra and the foliage in the foreground, creating a layered effect that draws the viewer's eye towards the main subject while still providing context for the setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 194,
+            "total_tokens": 497
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1490.752871,
+            "prompt_eval_duration_ms": 31.564137,
+            "generation_duration_ms": 1413.622025,
+            "load_duration_ms": 42.654739,
+            "tokens_per_second": 137.2361186859691
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a zebra is the central focus, its distinctive black and white stripes standing out against the blurred greenery in the foreground. The zebra is grazing, its head lowered towards the ground, with its ears perked up, suggesting attentiveness to its surroundings. The foliage in the foreground partially obscures the zebra, creating a natural frame that draws the viewer's eye towards the animal. The background is a soft blur, indicating a depth of field that isolates the zebra, emphasizing its presence and actions. There are no other people or animals visible in the image, and the zebra's interaction with the environment is solely with the plants it is grazing on. The scene captures a serene moment in nature, highlighting the zebra's role as a herbivore and its peaceful coexistence with its habitat.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 168,
+            "total_tokens": 474
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1286.374748,
+            "prompt_eval_duration_ms": 30.393869,
+            "generation_duration_ms": 1215.193583,
+            "load_duration_ms": 37.772415,
+            "tokens_per_second": 138.24957796868156
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of calm and tranquility, with a slightly melancholic undertone. The zebra, with its distinctive black and white stripes, stands as a symbol of grace and serenity amidst the lush greenery. The soft focus on the zebra's face, coupled with the blurred background, creates a dreamy, almost ethereal quality that draws the viewer into a peaceful, contemplative state. The natural setting, with the zebra's head partially obscured by the foliage, adds an element of mystery and invites the viewer to imagine the story behind the scene. The overall tone is positive, as the image captures a moment of stillness and beauty in nature, yet there is a subtle hint of sadness or solitude, perhaps reflecting the zebra's solitary nature or the fleeting nature of such peaceful moments. The visual elements, such as the contrast between the zebra's bold stripes and the soft, natural tones of the environment, contribute to this emotional atmosphere, making the image both visually striking and emotionally resonant.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 208,
+            "total_tokens": 516
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1585.15651,
+            "prompt_eval_duration_ms": 30.451146,
+            "generation_duration_ms": 1512.729343,
+            "load_duration_ms": 39.297546,
+            "tokens_per_second": 137.4998118219222
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"zebra\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"zebra grazing with head lowered\"\n    }\n  },\n  \"natural\": {\n    \"plant\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"green plant partially obscuring zebra\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "zebra": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black",
+                  "white"
+                ],
+                "size": "large",
+                "description": "zebra grazing with head lowered"
+              }
+            },
+            "natural": {
+              "plant": {
+                "count": 1,
+                "location": "foreground",
+                "color": [
+                  "green"
+                ],
+                "size": "small",
+                "description": "green plant partially obscuring zebra"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 120,
+            "total_tokens": 606
+          },
+          "performance_metrics": {
+            "total_duration_ms": 941.869687,
+            "prompt_eval_duration_ms": 45.154651,
+            "generation_duration_ms": 853.34059,
+            "load_duration_ms": 40.654305,
+            "tokens_per_second": 140.623804148353
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2589,
+        "total_time_ms": 6847.238598,
+        "average_speed": 138.72353048444006
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a zebra in a naturalistic setting, likely a zoo or wildlife reserve, as suggested by the presence of green foliage and a wooden structure in the background. The zebra is the central focus, with its distinctive black-and-white striped pattern prominently displayed. The stripes are sharp and well-defined, contrasting starkly against the greenery and the darker background. The zebra's head is turned slightly to the side, revealing its mane, which is also striped, and its pointed ears, one of which is slightly raised. The zebra's nose and mouth are visible, and it appears to be grazing or sniffing the ground, adding a sense of movement and curiosity to the scene.\n\nThe lighting is natural, with sunlight filtering through the foliage, creating a dappled effect on the zebra's body and the surrounding environment. The greenery in the foreground is lush and vibrant, with various shades of green, adding depth and a sense of life to the composition. The background is slightly blurred, drawing attention to the zebra while still providing context with the wooden structure, which could be part of an enclosure or a naturalistic habitat feature. The overall composition is balanced, with the zebra positioned slightly off-center, creating a dynamic and engaging visual. The image captures the zebra in a serene and natural moment, emphasizing its unique beauty and the harmony of its surroundings.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 279,
+            "total_tokens": 576
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13925.336408,
+            "prompt_eval_duration_ms": 3490.965937,
+            "generation_duration_ms": 10394.050071,
+            "load_duration_ms": 37.399685,
+            "tokens_per_second": 26.84227977489026
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the closest elements to the viewer are vibrant green leaves from a bush or plant. These leaves are sharply in focus, creating a lush, textured barrier that frames the zebra partially visible behind them. The leaves appear fresh and healthy, suggesting a natural, possibly savanna-like environment. The zebra's head and part of its neck are prominently visible through the gaps in the foliage, with its distinctive black-and-white striped pattern standing out against the green backdrop. The zebra's ears are perked up, and its eye is partially visible, giving a sense of alertness and engagement with its surroundings.\n\nIn the background, the setting becomes more blurred, indicating a greater distance from the viewer. The background consists of a mix of darker, indistinct shapes that could be trees, bushes, or other vegetation, contributing to a sense of depth and natural habitat. The zebra's body extends into this background, with its stripes continuing to be a focal point, even as the details become less sharp. The contrast between the sharp foreground foliage and the softer, more subdued background emphasizes the zebra as the central subject of the image.\n\nThe relationship between the foreground and background is one of depth and framing. The green foliage in the foreground acts as a natural border, drawing the viewer's attention inward toward the zebra, which serves as the main subject. The background provides context, suggesting a wild, natural environment where the zebra resides. The interplay between the sharpness of the foreground and the softness of the background creates a layered composition that enhances the visual impact of the zebra and its surroundings.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 329,
+            "total_tokens": 632
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12375.528717,
+            "prompt_eval_duration_ms": 77.030066,
+            "generation_duration_ms": 12256.978979,
+            "load_duration_ms": 38.985867,
+            "tokens_per_second": 26.841850717348777
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a zebra in a naturalistic setting, surrounded by green foliage. There are no people visible in the image. The zebra is the primary subject, standing and facing slightly to the left, with its head lowered as if grazing or inspecting the ground. Its distinctive black-and-white striped pattern is clearly visible, showcasing the unique markings that are characteristic of zebras. The zebra's ears are perked up, suggesting attentiveness to its surroundings. The background consists of dense greenery, including bushes and trees, which provide a natural habitat-like environment. The zebra appears to be alone in the scene, with no other animals visible. The interaction between the zebra and its environment is minimal but evident; the zebra is calmly engaging with its surroundings, possibly foraging or simply observing. The overall atmosphere of the image is serene, emphasizing the zebra's connection to its natural habitat. The greenery frames the zebra, highlighting its presence and creating a harmonious relationship between the animal and its environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 208,
+            "total_tokens": 514
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7867.333055,
+            "prompt_eval_duration_ms": 72.617157,
+            "generation_duration_ms": 7753.364176,
+            "load_duration_ms": 38.7628,
+            "tokens_per_second": 26.827064391461136
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image of the zebra evokes a sense of calmness and tranquility, with a predominantly neutral yet slightly positive tone. The zebra, with its striking black-and-white stripes, stands amidst lush green foliage, creating a harmonious blend of natural elements. The zebra's posture, with its head slightly lowered and ears perked up, suggests attentiveness and curiosity, rather than aggression or distress. This posture contributes to a feeling of peacefulness, as the animal appears to be in a state of gentle observation or grazing. The soft lighting and the blurred background of greenery further enhance the serene atmosphere, drawing attention to the zebra as the focal point. The overall composition, with the zebra partially obscured by the foliage, adds a touch of mystery and invites the viewer to focus on the intricate details of the animal's stripes and features. The image does not convey any overtly negative emotions, as the zebra's expression is neutral, and the surrounding environment is lush and vibrant. The mood is one of quiet contemplation and connection with nature, evoking feelings of serenity and appreciation for the beauty of wildlife.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 228,
+            "total_tokens": 536
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8603.560305,
+            "prompt_eval_duration_ms": 75.556895,
+            "generation_duration_ms": 8484.848815,
+            "load_duration_ms": 40.389916,
+            "tokens_per_second": 26.871427525842133
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"zebra\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"A zebra with distinct black and white stripes, partially obscured by foliage in the foreground.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"A tree providing a backdrop for the zebra, with visible branches and leaves.\"\n    },\n    \"foliage\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Green leaves in the foreground, partially obscuring the zebra.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "zebra": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black",
+                  "white"
+                ],
+                "size": "large",
+                "description": "A zebra with distinct black and white stripes, partially obscured by foliage in the foreground."
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "A tree providing a backdrop for the zebra, with visible branches and leaves."
+              },
+              "foliage": {
+                "count": 1,
+                "location": "foreground",
+                "color": [
+                  "green"
+                ],
+                "size": "small",
+                "description": "Green leaves in the foreground, partially obscuring the zebra."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 193,
+            "total_tokens": 679
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7321.597866,
+            "prompt_eval_duration_ms": 139.639562,
+            "generation_duration_ms": 7137.659719,
+            "load_duration_ms": 40.05107,
+            "tokens_per_second": 27.0396751313664
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2937,
+        "total_time_ms": 50093.356350999995,
+        "average_speed": 26.88445950818174
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -430,275 +699,6 @@
         "total_tokens": 2719,
         "total_time_ms": 23331.816912000002,
         "average_speed": 41.91170214256491
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a close-up of a zebra, its distinctive black and white stripes sharply defined against the soft, natural backdrop. The zebra's head is slightly tilted downward, suggesting it might be grazing or sniffing the ground. The stripes on its face and body are a striking contrast, with the white stripes bordered by black, creating a visually captivating pattern. The zebra's ears are perked up, indicating attentiveness or curiosity. The background is a blurred mix of green foliage and what appears to be a wooden fence, suggesting the setting is a zoo or a wildlife sanctuary. The lighting is natural, possibly from sunlight filtering through the trees, casting gentle shadows and highlighting the zebra's features. The composition is tight, focusing on the zebra's head and upper body, with some green leaves in the foreground adding depth and a sense of being in a natural environment. The overall impression is one of tranquility and the beauty of wildlife in a controlled yet naturalistic setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 199,
-            "total_tokens": 496
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1543.084782,
-            "prompt_eval_duration_ms": 80.816974,
-            "generation_duration_ms": 1421.343902,
-            "load_duration_ms": 38.47094,
-            "tokens_per_second": 140.0083397972745
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, lush green foliage dominates, with leaves in various shades of green creating a textured and vibrant carpet that partially obscures the zebra's body. The leaves are in sharp focus, suggesting they are closer to the viewer, and their intricate details are clearly visible, adding depth and a sense of immediacy to the scene. The zebra, positioned slightly behind the foliage, is the central figure, with its distinctive black and white stripes standing out sharply against the greenery. Its head is lowered, and its ears are perked up, giving it an alert and curious appearance. The background, though less detailed, provides a sense of enclosure with its darker, more muted tones, possibly indicating a fence or a wall, which contrasts with the bright and detailed foreground. The blurred background helps to emphasize the zebra and the foliage in the foreground, creating a layered effect that draws the viewer's eye towards the main subject while still providing context for the setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 194,
-            "total_tokens": 497
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1490.752871,
-            "prompt_eval_duration_ms": 31.564137,
-            "generation_duration_ms": 1413.622025,
-            "load_duration_ms": 42.654739,
-            "tokens_per_second": 137.2361186859691
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a zebra is the central focus, its distinctive black and white stripes standing out against the blurred greenery in the foreground. The zebra is grazing, its head lowered towards the ground, with its ears perked up, suggesting attentiveness to its surroundings. The foliage in the foreground partially obscures the zebra, creating a natural frame that draws the viewer's eye towards the animal. The background is a soft blur, indicating a depth of field that isolates the zebra, emphasizing its presence and actions. There are no other people or animals visible in the image, and the zebra's interaction with the environment is solely with the plants it is grazing on. The scene captures a serene moment in nature, highlighting the zebra's role as a herbivore and its peaceful coexistence with its habitat.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 168,
-            "total_tokens": 474
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1286.374748,
-            "prompt_eval_duration_ms": 30.393869,
-            "generation_duration_ms": 1215.193583,
-            "load_duration_ms": 37.772415,
-            "tokens_per_second": 138.24957796868156
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of calm and tranquility, with a slightly melancholic undertone. The zebra, with its distinctive black and white stripes, stands as a symbol of grace and serenity amidst the lush greenery. The soft focus on the zebra's face, coupled with the blurred background, creates a dreamy, almost ethereal quality that draws the viewer into a peaceful, contemplative state. The natural setting, with the zebra's head partially obscured by the foliage, adds an element of mystery and invites the viewer to imagine the story behind the scene. The overall tone is positive, as the image captures a moment of stillness and beauty in nature, yet there is a subtle hint of sadness or solitude, perhaps reflecting the zebra's solitary nature or the fleeting nature of such peaceful moments. The visual elements, such as the contrast between the zebra's bold stripes and the soft, natural tones of the environment, contribute to this emotional atmosphere, making the image both visually striking and emotionally resonant.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 208,
-            "total_tokens": 516
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1585.15651,
-            "prompt_eval_duration_ms": 30.451146,
-            "generation_duration_ms": 1512.729343,
-            "load_duration_ms": 39.297546,
-            "tokens_per_second": 137.4998118219222
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"zebra\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"zebra grazing with head lowered\"\n    }\n  },\n  \"natural\": {\n    \"plant\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"green plant partially obscuring zebra\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "zebra": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black",
-                  "white"
-                ],
-                "size": "large",
-                "description": "zebra grazing with head lowered"
-              }
-            },
-            "natural": {
-              "plant": {
-                "count": 1,
-                "location": "foreground",
-                "color": [
-                  "green"
-                ],
-                "size": "small",
-                "description": "green plant partially obscuring zebra"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 120,
-            "total_tokens": 606
-          },
-          "performance_metrics": {
-            "total_duration_ms": 941.869687,
-            "prompt_eval_duration_ms": 45.154651,
-            "generation_duration_ms": 853.34059,
-            "load_duration_ms": 40.654305,
-            "tokens_per_second": 140.623804148353
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2589,
-        "total_time_ms": 6847.238598,
-        "average_speed": 138.72353048444006
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a zebra in a naturalistic setting, likely a zoo or wildlife reserve, as suggested by the presence of green foliage and a wooden structure in the background. The zebra is the central focus, with its distinctive black-and-white striped pattern prominently displayed. The stripes are sharp and well-defined, contrasting starkly against the greenery and the darker background. The zebra's head is turned slightly to the side, revealing its mane, which is also striped, and its pointed ears, one of which is slightly raised. The zebra's nose and mouth are visible, and it appears to be grazing or sniffing the ground, adding a sense of movement and curiosity to the scene.\n\nThe lighting is natural, with sunlight filtering through the foliage, creating a dappled effect on the zebra's body and the surrounding environment. The greenery in the foreground is lush and vibrant, with various shades of green, adding depth and a sense of life to the composition. The background is slightly blurred, drawing attention to the zebra while still providing context with the wooden structure, which could be part of an enclosure or a naturalistic habitat feature. The overall composition is balanced, with the zebra positioned slightly off-center, creating a dynamic and engaging visual. The image captures the zebra in a serene and natural moment, emphasizing its unique beauty and the harmony of its surroundings.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 279,
-            "total_tokens": 576
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13925.336408,
-            "prompt_eval_duration_ms": 3490.965937,
-            "generation_duration_ms": 10394.050071,
-            "load_duration_ms": 37.399685,
-            "tokens_per_second": 26.84227977489026
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the closest elements to the viewer are vibrant green leaves from a bush or plant. These leaves are sharply in focus, creating a lush, textured barrier that frames the zebra partially visible behind them. The leaves appear fresh and healthy, suggesting a natural, possibly savanna-like environment. The zebra's head and part of its neck are prominently visible through the gaps in the foliage, with its distinctive black-and-white striped pattern standing out against the green backdrop. The zebra's ears are perked up, and its eye is partially visible, giving a sense of alertness and engagement with its surroundings.\n\nIn the background, the setting becomes more blurred, indicating a greater distance from the viewer. The background consists of a mix of darker, indistinct shapes that could be trees, bushes, or other vegetation, contributing to a sense of depth and natural habitat. The zebra's body extends into this background, with its stripes continuing to be a focal point, even as the details become less sharp. The contrast between the sharp foreground foliage and the softer, more subdued background emphasizes the zebra as the central subject of the image.\n\nThe relationship between the foreground and background is one of depth and framing. The green foliage in the foreground acts as a natural border, drawing the viewer's attention inward toward the zebra, which serves as the main subject. The background provides context, suggesting a wild, natural environment where the zebra resides. The interplay between the sharpness of the foreground and the softness of the background creates a layered composition that enhances the visual impact of the zebra and its surroundings.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 329,
-            "total_tokens": 632
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12375.528717,
-            "prompt_eval_duration_ms": 77.030066,
-            "generation_duration_ms": 12256.978979,
-            "load_duration_ms": 38.985867,
-            "tokens_per_second": 26.841850717348777
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a zebra in a naturalistic setting, surrounded by green foliage. There are no people visible in the image. The zebra is the primary subject, standing and facing slightly to the left, with its head lowered as if grazing or inspecting the ground. Its distinctive black-and-white striped pattern is clearly visible, showcasing the unique markings that are characteristic of zebras. The zebra's ears are perked up, suggesting attentiveness to its surroundings. The background consists of dense greenery, including bushes and trees, which provide a natural habitat-like environment. The zebra appears to be alone in the scene, with no other animals visible. The interaction between the zebra and its environment is minimal but evident; the zebra is calmly engaging with its surroundings, possibly foraging or simply observing. The overall atmosphere of the image is serene, emphasizing the zebra's connection to its natural habitat. The greenery frames the zebra, highlighting its presence and creating a harmonious relationship between the animal and its environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 208,
-            "total_tokens": 514
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7867.333055,
-            "prompt_eval_duration_ms": 72.617157,
-            "generation_duration_ms": 7753.364176,
-            "load_duration_ms": 38.7628,
-            "tokens_per_second": 26.827064391461136
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image of the zebra evokes a sense of calmness and tranquility, with a predominantly neutral yet slightly positive tone. The zebra, with its striking black-and-white stripes, stands amidst lush green foliage, creating a harmonious blend of natural elements. The zebra's posture, with its head slightly lowered and ears perked up, suggests attentiveness and curiosity, rather than aggression or distress. This posture contributes to a feeling of peacefulness, as the animal appears to be in a state of gentle observation or grazing. The soft lighting and the blurred background of greenery further enhance the serene atmosphere, drawing attention to the zebra as the focal point. The overall composition, with the zebra partially obscured by the foliage, adds a touch of mystery and invites the viewer to focus on the intricate details of the animal's stripes and features. The image does not convey any overtly negative emotions, as the zebra's expression is neutral, and the surrounding environment is lush and vibrant. The mood is one of quiet contemplation and connection with nature, evoking feelings of serenity and appreciation for the beauty of wildlife.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 228,
-            "total_tokens": 536
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8603.560305,
-            "prompt_eval_duration_ms": 75.556895,
-            "generation_duration_ms": 8484.848815,
-            "load_duration_ms": 40.389916,
-            "tokens_per_second": 26.871427525842133
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"zebra\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"A zebra with distinct black and white stripes, partially obscured by foliage in the foreground.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"A tree providing a backdrop for the zebra, with visible branches and leaves.\"\n    },\n    \"foliage\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Green leaves in the foreground, partially obscuring the zebra.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "zebra": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black",
-                  "white"
-                ],
-                "size": "large",
-                "description": "A zebra with distinct black and white stripes, partially obscured by foliage in the foreground."
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "A tree providing a backdrop for the zebra, with visible branches and leaves."
-              },
-              "foliage": {
-                "count": 1,
-                "location": "foreground",
-                "color": [
-                  "green"
-                ],
-                "size": "small",
-                "description": "Green leaves in the foreground, partially obscuring the zebra."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 193,
-            "total_tokens": 679
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7321.597866,
-            "prompt_eval_duration_ms": 139.639562,
-            "generation_duration_ms": 7137.659719,
-            "load_duration_ms": 40.05107,
-            "tokens_per_second": 27.0396751313664
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2937,
-        "total_time_ms": 50093.356350999995,
-        "average_speed": 26.88445950818174
       }
     },
     {

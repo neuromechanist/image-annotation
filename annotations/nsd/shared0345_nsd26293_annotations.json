@@ -7,6 +7,408 @@
   "timestamp": "2025-08-30T18:52:30.737215+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a modestly furnished bedroom with a simple and somewhat cluttered appearance. The room is characterized by a single bed with rumpled bedding in shades of beige, red, and gray, suggesting a lack of recent tidying. A small wooden bedside table sits next to the bed, holding a stack of books, a lamp with a pale yellow shade, and a few other small items, adding to the room's lived-in feel. The walls are painted a neutral beige, and the room is lit by natural light streaming in through a large window with partially open metal security bars, allowing a view of a neighboring building and greenery outside. The lighting is soft and diffused, creating a calm and somewhat somber atmosphere. The overall composition is straightforward, with the bed and window dominating the frame, and the simplicity of the room's decor and color palette gives it a quiet, unassuming character.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 182,
+            "total_tokens": 479
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1447.26635,
+            "prompt_eval_duration_ms": 79.487687,
+            "generation_duration_ms": 1325.519465,
+            "load_duration_ms": 39.393998,
+            "tokens_per_second": 137.30466040345925
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the viewer's attention is drawn to the bed, which is covered with a beige bedsheet and a red and blue patterned blanket that appears slightly disheveled, suggesting recent use or a casual arrangement. A small wooden bedside table sits beside the bed, holding a stack of books and a lamp with a yellow shade, which casts a soft light into the room. The table also has a small trash bin next to it, indicating a lived-in space. The background elements include the window, which is partially open, allowing natural light to enter and offering a view of a building across the street, suggesting an urban setting. The window frame is metallic, and the blinds are partially drawn, allowing for a mix of light and privacy. The overall scene is simple and domestic, with the foreground elements creating a sense of intimacy and the background elements providing context and a hint of the outside world.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 185,
+            "total_tokens": 488
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1428.650671,
+            "prompt_eval_duration_ms": 30.415583,
+            "generation_duration_ms": 1353.336657,
+            "load_duration_ms": 39.768307,
+            "tokens_per_second": 136.69917166811805
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a simple, unoccupied bedroom with no people or animals present. The room features a bed with rumpled bedding in shades of red and beige, positioned against a plain wall. A small wooden bedside table sits next to the bed, holding a yellow lamp and a few books, suggesting a quiet, personal space. A trash bin is placed near the foot of the bed, and a window with metal bars is partially open, allowing a view of greenery outside, indicating a connection to nature. The overall scene is still and quiet, with no interaction between elements, reflecting a moment of solitude and rest.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 124,
+            "total_tokens": 430
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1004.093637,
+            "prompt_eval_duration_ms": 30.184065,
+            "generation_duration_ms": 933.83,
+            "load_duration_ms": 37.657608,
+            "tokens_per_second": 132.7864814794984
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of quiet solitude and perhaps a touch of melancholy, leaning towards a neutral tone with subtle hints of introspection. The room's simplicity, with its plain walls and minimalistic decor, contributes to a feeling of calmness and perhaps a slight sense of isolation. The slightly rumpled bed and the scattered clothing suggest a lived-in space, hinting at a personal and private atmosphere. The natural light streaming in through the window with its partially open blinds adds a soft, diffused brightness that softens the overall mood, making it less stark and more inviting. The presence of the lamp on the bedside table, along with the neatly arranged books, gives a sense of order and comfort, suggesting a space where one might relax or reflect. The muted colors and the absence of vibrant or overly decorative elements further enhance the subdued, contemplative mood, making the room appear both peaceful and slightly somber.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 185,
+            "total_tokens": 493
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1444.573366,
+            "prompt_eval_duration_ms": 30.214576,
+            "generation_duration_ms": 1375.03806,
+            "load_duration_ms": 36.480215,
+            "tokens_per_second": 134.54173043035624
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"bed\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"beige\", \"red\", \"blue\"],\n      \"size\": \"large\",\n      \"description\": \"unmade bed with rumpled sheets\"\n    },\n    \"nightstand\": {\n      \"count\": 1,\n      \"location\": \"bottom center\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"wooden nightstand with items on top\"\n    },\n    \"lamp\": {\n      \"count\": 1,\n      \"location\": \"center right\",\n      \"color\": [\"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"lamp on nightstand\"\n    },\n    \"books\": {\n      \"count\": 1,\n      \"location\": \"center right\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"stack of books on nightstand\"\n    },\n    \"trash_can\": {\n      \"count\": 1,\n      \"location\": \"bottom left\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"trash can near bed\"\n    },\n    \"window\": {\n      \"count\": 1,\n      \"location\": \"top right\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"window with open shutters\"\n    },\n    \"shutters\": {\n      \"count\": 1,\n      \"location\": \"top right\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"open shutters on window\"\n    },\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"beige\"],\n      \"size\": \"large\",\n      \"description\": \"beige wall\"\n    },\n    \"floor\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"white floor\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "bed": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "beige",
+                  "red",
+                  "blue"
+                ],
+                "size": "large",
+                "description": "unmade bed with rumpled sheets"
+              },
+              "nightstand": {
+                "count": 1,
+                "location": "bottom center",
+                "color": [
+                  "brown"
+                ],
+                "size": "small",
+                "description": "wooden nightstand with items on top"
+              },
+              "lamp": {
+                "count": 1,
+                "location": "center right",
+                "color": [
+                  "yellow"
+                ],
+                "size": "small",
+                "description": "lamp on nightstand"
+              },
+              "books": {
+                "count": 1,
+                "location": "center right",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "stack of books on nightstand"
+              },
+              "trash_can": {
+                "count": 1,
+                "location": "bottom left",
+                "color": [
+                  "gray"
+                ],
+                "size": "small",
+                "description": "trash can near bed"
+              },
+              "window": {
+                "count": 1,
+                "location": "top right",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "window with open shutters"
+              },
+              "shutters": {
+                "count": 1,
+                "location": "top right",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "open shutters on window"
+              },
+              "wall": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "beige"
+                ],
+                "size": "large",
+                "description": "beige wall"
+              },
+              "floor": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "white floor"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 445,
+            "total_tokens": 931
+          },
+          "performance_metrics": {
+            "total_duration_ms": 3317.27866,
+            "prompt_eval_duration_ms": 45.78437,
+            "generation_duration_ms": 3229.656758,
+            "load_duration_ms": 39.205382,
+            "tokens_per_second": 137.78553987129303
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2821,
+        "total_time_ms": 8641.862684,
+        "average_speed": 135.82351677054498
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a modest, cozy bedroom with a simple and functional design. The setting appears to be a small, private space, likely in an apartment or a compact home. The room is illuminated by natural light streaming in through a large window with two panes, which is partially open, revealing a view of a neighboring building with multiple balconies and greenery. The window is framed in white, contrasting with the light beige or cream-colored walls, which give the room a clean and minimalistic feel.\n\nThe main elements in the room include a single bed positioned against the wall, covered with a yellowish-beige bedspread. The bed is unmade, with crumpled red and blue blankets or sheets piled on top, adding a touch of lived-in warmth to the otherwise orderly space. A small wooden bedside table stands next to the bed, holding a yellow lamp with a classic design, a stack of books or magazines, and a few other small items. The lamp is turned on, casting a soft, warm glow that complements the natural light from the window. The overall lighting in the room is balanced, with the interplay of natural and artificial light creating a comfortable ambiance.\n\nThe composition is straightforward, with the bed as the central focus, flanked by the window on one side and the bedside table on the other. The room's simplicity and the unmade bed suggest a lived-in, casual atmosphere, while the clean lines and neutral colors contribute to a sense of calm and order. The view outside the window adds depth and context, hinting at an urban or suburban environment. The overall impression is one of a functional, personal space that balances practicality with a touch of warmth and character.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 343,
+            "total_tokens": 640
+          },
+          "performance_metrics": {
+            "total_duration_ms": 16433.79715,
+            "prompt_eval_duration_ms": 3680.143044,
+            "generation_duration_ms": 12710.787423,
+            "load_duration_ms": 37.776777,
+            "tokens_per_second": 26.984952905383825
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the most prominent elements are the bed and the bedside table. The bed, positioned closest to the viewer, is covered with a yellowish bedspread and features a crumpled arrangement of red and blue blankets or sheets, suggesting a casual or lived-in atmosphere. The bedside table, situated to the left of the bed, holds a yellow lamp with a simple design, a stack of books or papers, and a small container, possibly for storage. A trash bin is also visible near the bed, indicating practicality and everyday use.\n\nIn the background, the setting is defined by the window, which offers a view of the outside world. The window is divided into two sections, with the left side featuring a grid-like pattern of buildings or structures, likely part of an urban environment. The right side of the window shows a metal railing, possibly part of a balcony or terrace, adding depth and context to the scene. The lighting coming through the window suggests daytime, casting a soft glow on the room's interior.\n\nThe relationship between the foreground and background elements is one of contrast and connection. The foreground, with its personal and intimate details, represents the immediate, lived space of the room. The background, through the window, introduces the broader context of the urban setting outside, creating a sense of separation yet also a subtle connection between the private interior and the external world. The light from the window bridges these layers, illuminating the room and tying the elements together, while the view outside provides a sense of location and environment. This interplay between the personal and the external creates a layered, relatable scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 329,
+            "total_tokens": 632
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12318.622106,
+            "prompt_eval_duration_ms": 74.271721,
+            "generation_duration_ms": 12200.992179,
+            "load_duration_ms": 40.894967,
+            "tokens_per_second": 26.965020153546646
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a modestly furnished bedroom with no visible people or animals. The room features a single bed with rumpled bedding, including a yellow bedspread and a red blanket that is carelessly draped over the bed, suggesting recent use or a lack of tidying. A small wooden nightstand sits beside the bed, holding a lamp with a yellow shade, a stack of books or papers, and a few other small items. The lamp is turned on, casting a warm glow in the otherwise neutral-toned room. The walls are plain and light-colored, and a large window with a grid pattern allows natural light to filter into the room, revealing a view of a building and some greenery outside. The window is partially open, as indicated by the visible gap between the window frame and the sash. A trash bin is placed near the bed, and the overall atmosphere of the room suggests a lived-in, casual space, possibly belonging to a student or someone leading a simple lifestyle. The objects in the room, such as the books, lamp, and bedding, interact to create a functional and personal living space, emphasizing utility and comfort over elaborate decoration. The open window connects the indoor environment to the outside world, hinting at a desire for fresh air and natural light. The disarray of the bed and the casual placement of items suggest a relaxed and informal setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 276,
+            "total_tokens": 582
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10422.925315,
+            "prompt_eval_duration_ms": 75.51372,
+            "generation_duration_ms": 10301.993339,
+            "load_duration_ms": 40.7536,
+            "tokens_per_second": 26.790931707862175
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood that is somewhat neutral yet tinged with a sense of quiet contemplation and slight melancholy. The overall tone is not overtly positive or negative but leans slightly toward a subdued, reflective atmosphere. The bed, with its rumpled sheets and blankets, suggests a sense of recent activity or restlessness, hinting at a life in progress or a moment of transition. The red blanket, in particular, adds a touch of vibrancy and warmth, but its crumpled state and the scattered appearance of the bed contribute to a feeling of disarray or unfinished business.\n\nThe window, which is the focal point of the image, offers a view of a balcony or outdoor space, framed by a grid-like structure. This element introduces a sense of confinement or separation, as if the room's occupant is looking outward but unable to fully connect with the outside world. The natural light streaming in from the window softens the mood, creating a gentle contrast with the otherwise stark and somewhat sterile room. The lamp on the small wooden nightstand adds a touch of coziness and personalization, but its placement and the simplicity of the room suggest a minimalist or perhaps even spartan lifestyle.\n\nThe overall composition, with its muted colors and orderly yet slightly disheveled elements, evokes a sense of solitude and introspection. The image does not elicit strong emotions but rather invites the viewer to reflect on the quiet moments of everyday life, where routine and simplicity coexist with a subtle undercurrent of emotional complexity. The mood is calm but not entirely peaceful, leaving room for interpretation and personal connection.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 325,
+            "total_tokens": 633
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12218.060027,
+            "prompt_eval_duration_ms": 74.993676,
+            "generation_duration_ms": 12101.962792,
+            "load_duration_ms": 38.652395,
+            "tokens_per_second": 26.855147845508267
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"bed\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"yellow\"],\n      \"size\": \"large\",\n      \"description\": \"A bed with crumpled bedding, including red and blue fabrics.\"\n    },\n    \"lamp\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"A bedside lamp with a yellow shade.\"\n    },\n    \"nightstand\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"A wooden nightstand with books and a lamp on top.\"\n    },\n    \"books\": {\n      \"count\": 2,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Stack of books on the nightstand.\"\n    },\n    \"window\": {\n      \"count\": 1,\n      \"location\": \"right, top\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A window with a view of a building and a fence.\"\n    },\n    \"curtains\": {\n      \"count\": 1,\n      \"location\": \"right, top\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"White blinds covering the window.\"\n    },\n    \"trash can\": {\n      \"count\": 1,\n      \"location\": \"left, bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"A small white trash can next to the bed.\"\n    },\n    \"pillows\": {\n      \"count\": 2,\n      \"location\": \"right, bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Two white pillows on the bed.\"\n    },\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"left, top\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"A plain white wall.\"\n    },\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"right, top\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"A metal fence visible through the window.\"\n    }\n  },\n  \"natural\": {\n    \"plants\": {\n      \"count\": 1,\n      \"location\": \"right, top\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Green plants visible through the window.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "bed": {
+                "count": 1,
+                "location": "center, bottom",
+                "color": [
+                  "yellow"
+                ],
+                "size": "large",
+                "description": "A bed with crumpled bedding, including red and blue fabrics."
+              },
+              "lamp": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "yellow"
+                ],
+                "size": "small",
+                "description": "A bedside lamp with a yellow shade."
+              },
+              "nightstand": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "brown"
+                ],
+                "size": "small",
+                "description": "A wooden nightstand with books and a lamp on top."
+              },
+              "books": {
+                "count": 2,
+                "location": "center, middle",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "Stack of books on the nightstand."
+              },
+              "window": {
+                "count": 1,
+                "location": "right, top",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "A window with a view of a building and a fence."
+              },
+              "curtains": {
+                "count": 1,
+                "location": "right, top",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "White blinds covering the window."
+              },
+              "trash can": {
+                "count": 1,
+                "location": "left, bottom",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "A small white trash can next to the bed."
+              },
+              "pillows": {
+                "count": 2,
+                "location": "right, bottom",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "Two white pillows on the bed."
+              },
+              "wall": {
+                "count": 1,
+                "location": "left, top",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "A plain white wall."
+              },
+              "fence": {
+                "count": 1,
+                "location": "right, top",
+                "color": [
+                  "gray"
+                ],
+                "size": "medium",
+                "description": "A metal fence visible through the window."
+              }
+            },
+            "natural": {
+              "plants": {
+                "count": 1,
+                "location": "right, top",
+                "color": [
+                  "green"
+                ],
+                "size": "small",
+                "description": "Green plants visible through the window."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 587,
+            "total_tokens": 1073
+          },
+          "performance_metrics": {
+            "total_duration_ms": 21962.914081,
+            "prompt_eval_duration_ms": 142.29007,
+            "generation_duration_ms": 21779.9717,
+            "load_duration_ms": 37.624393,
+            "tokens_per_second": 26.9513665162384
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3560,
+        "total_time_ms": 73356.318679,
+        "average_speed": 26.90948382570786
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -592,408 +994,6 @@
         "total_tokens": 3045,
         "total_time_ms": 30774.490526,
         "average_speed": 42.33221950488188
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a modestly furnished bedroom with a simple and somewhat cluttered appearance. The room is characterized by a single bed with rumpled bedding in shades of beige, red, and gray, suggesting a lack of recent tidying. A small wooden bedside table sits next to the bed, holding a stack of books, a lamp with a pale yellow shade, and a few other small items, adding to the room's lived-in feel. The walls are painted a neutral beige, and the room is lit by natural light streaming in through a large window with partially open metal security bars, allowing a view of a neighboring building and greenery outside. The lighting is soft and diffused, creating a calm and somewhat somber atmosphere. The overall composition is straightforward, with the bed and window dominating the frame, and the simplicity of the room's decor and color palette gives it a quiet, unassuming character.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 182,
-            "total_tokens": 479
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1447.26635,
-            "prompt_eval_duration_ms": 79.487687,
-            "generation_duration_ms": 1325.519465,
-            "load_duration_ms": 39.393998,
-            "tokens_per_second": 137.30466040345925
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the viewer's attention is drawn to the bed, which is covered with a beige bedsheet and a red and blue patterned blanket that appears slightly disheveled, suggesting recent use or a casual arrangement. A small wooden bedside table sits beside the bed, holding a stack of books and a lamp with a yellow shade, which casts a soft light into the room. The table also has a small trash bin next to it, indicating a lived-in space. The background elements include the window, which is partially open, allowing natural light to enter and offering a view of a building across the street, suggesting an urban setting. The window frame is metallic, and the blinds are partially drawn, allowing for a mix of light and privacy. The overall scene is simple and domestic, with the foreground elements creating a sense of intimacy and the background elements providing context and a hint of the outside world.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 185,
-            "total_tokens": 488
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1428.650671,
-            "prompt_eval_duration_ms": 30.415583,
-            "generation_duration_ms": 1353.336657,
-            "load_duration_ms": 39.768307,
-            "tokens_per_second": 136.69917166811805
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a simple, unoccupied bedroom with no people or animals present. The room features a bed with rumpled bedding in shades of red and beige, positioned against a plain wall. A small wooden bedside table sits next to the bed, holding a yellow lamp and a few books, suggesting a quiet, personal space. A trash bin is placed near the foot of the bed, and a window with metal bars is partially open, allowing a view of greenery outside, indicating a connection to nature. The overall scene is still and quiet, with no interaction between elements, reflecting a moment of solitude and rest.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 124,
-            "total_tokens": 430
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1004.093637,
-            "prompt_eval_duration_ms": 30.184065,
-            "generation_duration_ms": 933.83,
-            "load_duration_ms": 37.657608,
-            "tokens_per_second": 132.7864814794984
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of quiet solitude and perhaps a touch of melancholy, leaning towards a neutral tone with subtle hints of introspection. The room's simplicity, with its plain walls and minimalistic decor, contributes to a feeling of calmness and perhaps a slight sense of isolation. The slightly rumpled bed and the scattered clothing suggest a lived-in space, hinting at a personal and private atmosphere. The natural light streaming in through the window with its partially open blinds adds a soft, diffused brightness that softens the overall mood, making it less stark and more inviting. The presence of the lamp on the bedside table, along with the neatly arranged books, gives a sense of order and comfort, suggesting a space where one might relax or reflect. The muted colors and the absence of vibrant or overly decorative elements further enhance the subdued, contemplative mood, making the room appear both peaceful and slightly somber.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 185,
-            "total_tokens": 493
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1444.573366,
-            "prompt_eval_duration_ms": 30.214576,
-            "generation_duration_ms": 1375.03806,
-            "load_duration_ms": 36.480215,
-            "tokens_per_second": 134.54173043035624
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"bed\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"beige\", \"red\", \"blue\"],\n      \"size\": \"large\",\n      \"description\": \"unmade bed with rumpled sheets\"\n    },\n    \"nightstand\": {\n      \"count\": 1,\n      \"location\": \"bottom center\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"wooden nightstand with items on top\"\n    },\n    \"lamp\": {\n      \"count\": 1,\n      \"location\": \"center right\",\n      \"color\": [\"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"lamp on nightstand\"\n    },\n    \"books\": {\n      \"count\": 1,\n      \"location\": \"center right\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"stack of books on nightstand\"\n    },\n    \"trash_can\": {\n      \"count\": 1,\n      \"location\": \"bottom left\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"trash can near bed\"\n    },\n    \"window\": {\n      \"count\": 1,\n      \"location\": \"top right\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"window with open shutters\"\n    },\n    \"shutters\": {\n      \"count\": 1,\n      \"location\": \"top right\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"open shutters on window\"\n    },\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"beige\"],\n      \"size\": \"large\",\n      \"description\": \"beige wall\"\n    },\n    \"floor\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"white floor\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "bed": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "beige",
-                  "red",
-                  "blue"
-                ],
-                "size": "large",
-                "description": "unmade bed with rumpled sheets"
-              },
-              "nightstand": {
-                "count": 1,
-                "location": "bottom center",
-                "color": [
-                  "brown"
-                ],
-                "size": "small",
-                "description": "wooden nightstand with items on top"
-              },
-              "lamp": {
-                "count": 1,
-                "location": "center right",
-                "color": [
-                  "yellow"
-                ],
-                "size": "small",
-                "description": "lamp on nightstand"
-              },
-              "books": {
-                "count": 1,
-                "location": "center right",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "stack of books on nightstand"
-              },
-              "trash_can": {
-                "count": 1,
-                "location": "bottom left",
-                "color": [
-                  "gray"
-                ],
-                "size": "small",
-                "description": "trash can near bed"
-              },
-              "window": {
-                "count": 1,
-                "location": "top right",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "window with open shutters"
-              },
-              "shutters": {
-                "count": 1,
-                "location": "top right",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "open shutters on window"
-              },
-              "wall": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "beige"
-                ],
-                "size": "large",
-                "description": "beige wall"
-              },
-              "floor": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "white floor"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 445,
-            "total_tokens": 931
-          },
-          "performance_metrics": {
-            "total_duration_ms": 3317.27866,
-            "prompt_eval_duration_ms": 45.78437,
-            "generation_duration_ms": 3229.656758,
-            "load_duration_ms": 39.205382,
-            "tokens_per_second": 137.78553987129303
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2821,
-        "total_time_ms": 8641.862684,
-        "average_speed": 135.82351677054498
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a modest, cozy bedroom with a simple and functional design. The setting appears to be a small, private space, likely in an apartment or a compact home. The room is illuminated by natural light streaming in through a large window with two panes, which is partially open, revealing a view of a neighboring building with multiple balconies and greenery. The window is framed in white, contrasting with the light beige or cream-colored walls, which give the room a clean and minimalistic feel.\n\nThe main elements in the room include a single bed positioned against the wall, covered with a yellowish-beige bedspread. The bed is unmade, with crumpled red and blue blankets or sheets piled on top, adding a touch of lived-in warmth to the otherwise orderly space. A small wooden bedside table stands next to the bed, holding a yellow lamp with a classic design, a stack of books or magazines, and a few other small items. The lamp is turned on, casting a soft, warm glow that complements the natural light from the window. The overall lighting in the room is balanced, with the interplay of natural and artificial light creating a comfortable ambiance.\n\nThe composition is straightforward, with the bed as the central focus, flanked by the window on one side and the bedside table on the other. The room's simplicity and the unmade bed suggest a lived-in, casual atmosphere, while the clean lines and neutral colors contribute to a sense of calm and order. The view outside the window adds depth and context, hinting at an urban or suburban environment. The overall impression is one of a functional, personal space that balances practicality with a touch of warmth and character.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 343,
-            "total_tokens": 640
-          },
-          "performance_metrics": {
-            "total_duration_ms": 16433.79715,
-            "prompt_eval_duration_ms": 3680.143044,
-            "generation_duration_ms": 12710.787423,
-            "load_duration_ms": 37.776777,
-            "tokens_per_second": 26.984952905383825
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the most prominent elements are the bed and the bedside table. The bed, positioned closest to the viewer, is covered with a yellowish bedspread and features a crumpled arrangement of red and blue blankets or sheets, suggesting a casual or lived-in atmosphere. The bedside table, situated to the left of the bed, holds a yellow lamp with a simple design, a stack of books or papers, and a small container, possibly for storage. A trash bin is also visible near the bed, indicating practicality and everyday use.\n\nIn the background, the setting is defined by the window, which offers a view of the outside world. The window is divided into two sections, with the left side featuring a grid-like pattern of buildings or structures, likely part of an urban environment. The right side of the window shows a metal railing, possibly part of a balcony or terrace, adding depth and context to the scene. The lighting coming through the window suggests daytime, casting a soft glow on the room's interior.\n\nThe relationship between the foreground and background elements is one of contrast and connection. The foreground, with its personal and intimate details, represents the immediate, lived space of the room. The background, through the window, introduces the broader context of the urban setting outside, creating a sense of separation yet also a subtle connection between the private interior and the external world. The light from the window bridges these layers, illuminating the room and tying the elements together, while the view outside provides a sense of location and environment. This interplay between the personal and the external creates a layered, relatable scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 329,
-            "total_tokens": 632
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12318.622106,
-            "prompt_eval_duration_ms": 74.271721,
-            "generation_duration_ms": 12200.992179,
-            "load_duration_ms": 40.894967,
-            "tokens_per_second": 26.965020153546646
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a modestly furnished bedroom with no visible people or animals. The room features a single bed with rumpled bedding, including a yellow bedspread and a red blanket that is carelessly draped over the bed, suggesting recent use or a lack of tidying. A small wooden nightstand sits beside the bed, holding a lamp with a yellow shade, a stack of books or papers, and a few other small items. The lamp is turned on, casting a warm glow in the otherwise neutral-toned room. The walls are plain and light-colored, and a large window with a grid pattern allows natural light to filter into the room, revealing a view of a building and some greenery outside. The window is partially open, as indicated by the visible gap between the window frame and the sash. A trash bin is placed near the bed, and the overall atmosphere of the room suggests a lived-in, casual space, possibly belonging to a student or someone leading a simple lifestyle. The objects in the room, such as the books, lamp, and bedding, interact to create a functional and personal living space, emphasizing utility and comfort over elaborate decoration. The open window connects the indoor environment to the outside world, hinting at a desire for fresh air and natural light. The disarray of the bed and the casual placement of items suggest a relaxed and informal setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 276,
-            "total_tokens": 582
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10422.925315,
-            "prompt_eval_duration_ms": 75.51372,
-            "generation_duration_ms": 10301.993339,
-            "load_duration_ms": 40.7536,
-            "tokens_per_second": 26.790931707862175
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood that is somewhat neutral yet tinged with a sense of quiet contemplation and slight melancholy. The overall tone is not overtly positive or negative but leans slightly toward a subdued, reflective atmosphere. The bed, with its rumpled sheets and blankets, suggests a sense of recent activity or restlessness, hinting at a life in progress or a moment of transition. The red blanket, in particular, adds a touch of vibrancy and warmth, but its crumpled state and the scattered appearance of the bed contribute to a feeling of disarray or unfinished business.\n\nThe window, which is the focal point of the image, offers a view of a balcony or outdoor space, framed by a grid-like structure. This element introduces a sense of confinement or separation, as if the room's occupant is looking outward but unable to fully connect with the outside world. The natural light streaming in from the window softens the mood, creating a gentle contrast with the otherwise stark and somewhat sterile room. The lamp on the small wooden nightstand adds a touch of coziness and personalization, but its placement and the simplicity of the room suggest a minimalist or perhaps even spartan lifestyle.\n\nThe overall composition, with its muted colors and orderly yet slightly disheveled elements, evokes a sense of solitude and introspection. The image does not elicit strong emotions but rather invites the viewer to reflect on the quiet moments of everyday life, where routine and simplicity coexist with a subtle undercurrent of emotional complexity. The mood is calm but not entirely peaceful, leaving room for interpretation and personal connection.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 325,
-            "total_tokens": 633
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12218.060027,
-            "prompt_eval_duration_ms": 74.993676,
-            "generation_duration_ms": 12101.962792,
-            "load_duration_ms": 38.652395,
-            "tokens_per_second": 26.855147845508267
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"bed\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"yellow\"],\n      \"size\": \"large\",\n      \"description\": \"A bed with crumpled bedding, including red and blue fabrics.\"\n    },\n    \"lamp\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"A bedside lamp with a yellow shade.\"\n    },\n    \"nightstand\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"A wooden nightstand with books and a lamp on top.\"\n    },\n    \"books\": {\n      \"count\": 2,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Stack of books on the nightstand.\"\n    },\n    \"window\": {\n      \"count\": 1,\n      \"location\": \"right, top\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A window with a view of a building and a fence.\"\n    },\n    \"curtains\": {\n      \"count\": 1,\n      \"location\": \"right, top\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"White blinds covering the window.\"\n    },\n    \"trash can\": {\n      \"count\": 1,\n      \"location\": \"left, bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"A small white trash can next to the bed.\"\n    },\n    \"pillows\": {\n      \"count\": 2,\n      \"location\": \"right, bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"Two white pillows on the bed.\"\n    },\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"left, top\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"A plain white wall.\"\n    },\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"right, top\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"A metal fence visible through the window.\"\n    }\n  },\n  \"natural\": {\n    \"plants\": {\n      \"count\": 1,\n      \"location\": \"right, top\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Green plants visible through the window.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "bed": {
-                "count": 1,
-                "location": "center, bottom",
-                "color": [
-                  "yellow"
-                ],
-                "size": "large",
-                "description": "A bed with crumpled bedding, including red and blue fabrics."
-              },
-              "lamp": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "yellow"
-                ],
-                "size": "small",
-                "description": "A bedside lamp with a yellow shade."
-              },
-              "nightstand": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "brown"
-                ],
-                "size": "small",
-                "description": "A wooden nightstand with books and a lamp on top."
-              },
-              "books": {
-                "count": 2,
-                "location": "center, middle",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "Stack of books on the nightstand."
-              },
-              "window": {
-                "count": 1,
-                "location": "right, top",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "A window with a view of a building and a fence."
-              },
-              "curtains": {
-                "count": 1,
-                "location": "right, top",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "White blinds covering the window."
-              },
-              "trash can": {
-                "count": 1,
-                "location": "left, bottom",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "A small white trash can next to the bed."
-              },
-              "pillows": {
-                "count": 2,
-                "location": "right, bottom",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "Two white pillows on the bed."
-              },
-              "wall": {
-                "count": 1,
-                "location": "left, top",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "A plain white wall."
-              },
-              "fence": {
-                "count": 1,
-                "location": "right, top",
-                "color": [
-                  "gray"
-                ],
-                "size": "medium",
-                "description": "A metal fence visible through the window."
-              }
-            },
-            "natural": {
-              "plants": {
-                "count": 1,
-                "location": "right, top",
-                "color": [
-                  "green"
-                ],
-                "size": "small",
-                "description": "Green plants visible through the window."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 587,
-            "total_tokens": 1073
-          },
-          "performance_metrics": {
-            "total_duration_ms": 21962.914081,
-            "prompt_eval_duration_ms": 142.29007,
-            "generation_duration_ms": 21779.9717,
-            "load_duration_ms": 37.624393,
-            "tokens_per_second": 26.9513665162384
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3560,
-        "total_time_ms": 73356.318679,
-        "average_speed": 26.90948382570786
       }
     },
     {

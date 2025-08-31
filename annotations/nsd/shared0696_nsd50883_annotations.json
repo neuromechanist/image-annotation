@@ -7,6 +7,294 @@
   "timestamp": "2025-08-30T22:06:23.148712+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a serene moment in a natural setting, likely a savanna or a similar grassland environment, characterized by sparse vegetation and a clear sky. The main elements are two elephants, one adult and one juvenile, interacting in a gentle manner. The adult elephant, with its large ears and wrinkled skin, stands on the left side of the frame, while the juvenile, smaller in size and with smoother skin, is on the right. The juvenile's trunk is extended towards the adult, possibly in a gesture of affection or communication, suggesting a familial bond. The elephants' grayish-brown skin contrasts subtly with the green and brown hues of the surrounding vegetation. The lighting is natural and bright, indicating a daytime scene, with shadows cast by the elephants adding depth to the image. The composition is balanced, with the elephants positioned centrally, drawing the viewer's attention to their interaction. The background is softly focused, emphasizing the elephants and creating a sense of depth. The overall mood of the image is peaceful and natural, capturing a quiet moment in the life of these majestic creatures.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 218,
+            "total_tokens": 515
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1706.815881,
+            "prompt_eval_duration_ms": 78.706292,
+            "generation_duration_ms": 1586.09552,
+            "load_duration_ms": 39.357858,
+            "tokens_per_second": 137.44443335922165
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, two elephants dominate the scene, their large, textured skin and prominent tusks clearly visible. The elephant on the left, slightly larger and closer to the viewer, extends its trunk towards the smaller elephant on the right, suggesting a gentle interaction or perhaps a playful tussle. The smaller elephant, positioned slightly behind and to the right of the larger one, reciprocates the gesture, creating a dynamic and engaging focal point. The lush greenery surrounding them, including bushes and small shrubs, adds depth and context to the setting, indicating a natural habitat. The background, though less distinct, reveals a clear blue sky, which contrasts with the earthy tones of the elephants and vegetation, further emphasizing the foreground elements and providing a sense of openness and space. The relationship between the foreground and background is one of layered depth, with the elephants and their interaction in the foreground drawing the viewer's attention, while the background offers a serene and expansive setting that frames the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 199,
+            "total_tokens": 502
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1528.72555,
+            "prompt_eval_duration_ms": 29.601456,
+            "generation_duration_ms": 1457.4344,
+            "load_duration_ms": 39.14383,
+            "tokens_per_second": 136.54130848016214
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, two elephants are captured in a natural setting, likely a savanna or a similar habitat, as indicated by the sparse vegetation in the background. The larger elephant, presumably an adult, stands on the left, its trunk extended towards the smaller elephant, which appears to be a calf. The interaction between the two elephants suggests a nurturing or playful behavior, as the adult elephant's trunk is gently touching or possibly feeding the calf. The calf, in turn, seems to be responding to the adult's gesture, possibly by reaching out with its trunk or seeking comfort. The scene is devoid of any human presence, focusing entirely on the interaction between the two elephants. The adult elephant's protective stance and the calf's receptive posture highlight a bond of care and connection, typical of the close relationship between an elephant mother and her offspring. The overall atmosphere is peaceful, with the elephants' actions suggesting a moment of bonding and mutual care within their natural environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 192,
+            "total_tokens": 498
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1507.731116,
+            "prompt_eval_duration_ms": 29.810818,
+            "generation_duration_ms": 1432.913626,
+            "load_duration_ms": 42.004354,
+            "tokens_per_second": 133.9927239968894
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of tranquility and connection, with a subtle hint of familial affection. The gentle interaction between the two elephants, with the younger one playfully using its trunk to touch the older one's face, conveys a mood of warmth and tenderness. The soft lighting and the natural, earthy tones of the elephants' skin against the backdrop of green foliage and a clear sky contribute to a peaceful and serene atmosphere. The absence of any signs of distress or aggression further enhances the positive emotional tone, suggesting a harmonious relationship between the animals. The overall tone is decidedly positive, as the image captures a moment of natural beauty and the simple joys of life in the wild, free from the complexities of human emotions.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 148,
+            "total_tokens": 456
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1168.94443,
+            "prompt_eval_duration_ms": 29.758276,
+            "generation_duration_ms": 1098.920773,
+            "load_duration_ms": 37.179276,
+            "tokens_per_second": 134.6775888092162
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"elephant\": {\n      \"count\": 2,\n      \"location\": [\"left\", \"right\"],\n      \"color\": [\"gray\"],\n      \"size\": [\"large\"],\n      \"description\": \"adult and baby elephants interacting\"\n    }\n  },\n  \"natural\": {\n    \"vegetation\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"sparse bushes and shrubs\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear sky\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "elephant": {
+                "count": 2,
+                "location": [
+                  "left",
+                  "right"
+                ],
+                "color": [
+                  "gray"
+                ],
+                "size": [
+                  "large"
+                ],
+                "description": "adult and baby elephants interacting"
+              }
+            },
+            "natural": {
+              "vegetation": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "green"
+                ],
+                "size": "small",
+                "description": "sparse bushes and shrubs"
+              },
+              "sky": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "clear sky"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 161,
+            "total_tokens": 647
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1255.703709,
+            "prompt_eval_duration_ms": 44.629443,
+            "generation_duration_ms": 1168.722518,
+            "load_duration_ms": 39.430115,
+            "tokens_per_second": 137.75724992063513
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2618,
+        "total_time_ms": 7167.9206859999995,
+        "average_speed": 136.08266091322488
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a serene and natural scene featuring an adult elephant and a younger elephant, likely its calf, in a lush, green savanna setting. The adult elephant, positioned on the left side of the frame, is significantly larger, with a robust, textured gray hide and prominent tusks. Its trunk is extended outward, seemingly interacting with the smaller elephant, which is on the right side of the image. The calf, also gray but with smoother skin and smaller tusks, appears to be playfully engaging with the adult, possibly nuzzling or touching its trunk. The background is filled with dense, vibrant green foliage, suggesting a thriving, natural habitat, likely in Africa. The lighting is soft and natural, indicating either early morning or late afternoon sunlight, casting gentle shadows and highlighting the elephants' features without harsh contrasts. The overall composition is balanced, with the elephants positioned centrally, drawing the viewer's attention to their interaction. The image conveys a sense of tenderness and familial bonding, set against the backdrop of a lush, wild environment. The colors are primarily earthy tones of gray and green, contributing to the image's natural and peaceful atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 234,
+            "total_tokens": 531
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12231.106131,
+            "prompt_eval_duration_ms": 3472.540088,
+            "generation_duration_ms": 8716.402121,
+            "load_duration_ms": 39.461273,
+            "tokens_per_second": 26.84593904132019
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the closest elements to the viewer are two elephants\u2014an adult and a juvenile\u2014engaging in a tender interaction. The adult elephant, positioned slightly to the left, is significantly larger, with visible tusks and a wrinkled, textured hide. The juvenile elephant, on the right, is smaller and appears to be playfully interacting with the adult, possibly nuzzling or touching its trunk to the adult's face. This close-up view emphasizes the bond and social behavior between the two elephants, highlighting their familial or protective relationship.\n\nIn the background, the setting is a natural savanna or woodland environment. The background is filled with dense, green foliage, likely shrubs and trees, which provide a lush, natural habitat for the elephants. The vegetation appears to be a mix of bushes and taller trees, creating a layered effect that adds depth to the image. The sky above is a clear, light blue, suggesting a bright, sunny day, which enhances the overall vibrancy of the scene.\n\nThe foreground and background elements are interconnected through the natural setting. The elephants are the focal point, but their presence is contextualized by the surrounding environment, which provides a sense of their habitat and lifestyle. The dense greenery in the background contrasts with the earthy tones of the elephants, drawing attention to their interaction while also grounding them within their ecosystem. This composition effectively highlights the elephants' social dynamics while situating them within their natural world.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 294,
+            "total_tokens": 597
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11060.290589,
+            "prompt_eval_duration_ms": 80.141758,
+            "generation_duration_ms": 10936.279497,
+            "load_duration_ms": 40.705721,
+            "tokens_per_second": 26.882999842921812
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a serene and tender moment between two elephants in a natural, bushy environment. The larger elephant, likely an adult, stands protectively close to a smaller elephant, presumably its calf. The adult elephant's trunk is extended, gently touching or interacting with the calf's trunk, suggesting a nurturing or playful gesture. This interaction highlights the strong social bonds and communication between elephants, as trunks are often used for tactile communication, reassurance, or play.\n\nThe adult elephant appears to be guiding or comforting the calf, as the calf's trunk is reaching out toward the adult, indicating a mutual connection and trust. The surrounding environment is lush with greenery, providing a natural habitat that emphasizes the elephants' connection to their ecosystem. There are no people visible in the image, allowing the focus to remain entirely on the elephants and their interaction.\n\nThe scene conveys a sense of familial care and the intricate social dynamics within elephant herds. The adult's protective stance and the calf's receptive posture illustrate a nurturing relationship, showcasing the deep emotional connections and cooperative behaviors that are characteristic of these intelligent and social animals. The overall atmosphere is peaceful, highlighting the beauty and complexity of wildlife in their natural setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 241,
+            "total_tokens": 547
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9084.953164,
+            "prompt_eval_duration_ms": 73.743794,
+            "generation_duration_ms": 8968.729259,
+            "load_duration_ms": 39.769112,
+            "tokens_per_second": 26.871142281183225
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a tender moment between an adult elephant and a young elephant, evoking a sense of warmth, affection, and familial bonding. The adult elephant, with its large, gentle features, appears to be guiding or comforting the younger one, as the baby elephant playfully reaches out with its trunk, seemingly interacting with the adult's tusk. The overall mood is positive and heartwarming, as the scene suggests a nurturing relationship and the innocence of the young elephant's curiosity. The lush greenery in the background adds to the serene and natural atmosphere, reinforcing the sense of harmony and tranquility. The soft lighting and the gentle expressions on the elephants' faces contribute to the emotional warmth, making the image feel uplifting and peaceful. The visual elements, such as the close proximity of the elephants, their relaxed postures, and the natural setting, all work together to create a tone that is overwhelmingly positive and evocative of love and connection in the animal kingdom.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 195,
+            "total_tokens": 503
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7396.230436,
+            "prompt_eval_duration_ms": 73.697531,
+            "generation_duration_ms": 7279.883945,
+            "load_duration_ms": 40.083466,
+            "tokens_per_second": 26.786141300223708
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"elephant\": {\n      \"count\": 2,\n      \"location\": \"left and right, middle\",\n      \"color\": [\"gray\"],\n      \"size\": [\"large\", \"small\"],\n      \"description\": \"Two elephants interacting, one larger adult and one smaller juvenile. The adult elephant has tusks and is using its trunk to touch the juvenile elephant.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": [\"large\"],\n      \"description\": \"Dense green foliage in the background, indicating a natural habitat.\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": [\"large\"],\n      \"description\": \"Clear blue sky above the scene.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "elephant": {
+                "count": 2,
+                "location": "left and right, middle",
+                "color": [
+                  "gray"
+                ],
+                "size": [
+                  "large",
+                  "small"
+                ],
+                "description": "Two elephants interacting, one larger adult and one smaller juvenile. The adult elephant has tusks and is using its trunk to touch the juvenile elephant."
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "green"
+                ],
+                "size": [
+                  "large"
+                ],
+                "description": "Dense green foliage in the background, indicating a natural habitat."
+              },
+              "sky": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "blue"
+                ],
+                "size": [
+                  "large"
+                ],
+                "description": "Clear blue sky above the scene."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 198,
+            "total_tokens": 684
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7494.512729,
+            "prompt_eval_duration_ms": 134.707245,
+            "generation_duration_ms": 7318.618345,
+            "load_duration_ms": 38.36469,
+            "tokens_per_second": 27.05428684299017
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2862,
+        "total_time_ms": 47267.093049,
+        "average_speed": 26.88810186172782
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -474,294 +762,6 @@
         "total_tokens": 2830,
         "total_time_ms": 25825.941046999997,
         "average_speed": 42.1539142419421
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a serene moment in a natural setting, likely a savanna or a similar grassland environment, characterized by sparse vegetation and a clear sky. The main elements are two elephants, one adult and one juvenile, interacting in a gentle manner. The adult elephant, with its large ears and wrinkled skin, stands on the left side of the frame, while the juvenile, smaller in size and with smoother skin, is on the right. The juvenile's trunk is extended towards the adult, possibly in a gesture of affection or communication, suggesting a familial bond. The elephants' grayish-brown skin contrasts subtly with the green and brown hues of the surrounding vegetation. The lighting is natural and bright, indicating a daytime scene, with shadows cast by the elephants adding depth to the image. The composition is balanced, with the elephants positioned centrally, drawing the viewer's attention to their interaction. The background is softly focused, emphasizing the elephants and creating a sense of depth. The overall mood of the image is peaceful and natural, capturing a quiet moment in the life of these majestic creatures.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 218,
-            "total_tokens": 515
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1706.815881,
-            "prompt_eval_duration_ms": 78.706292,
-            "generation_duration_ms": 1586.09552,
-            "load_duration_ms": 39.357858,
-            "tokens_per_second": 137.44443335922165
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, two elephants dominate the scene, their large, textured skin and prominent tusks clearly visible. The elephant on the left, slightly larger and closer to the viewer, extends its trunk towards the smaller elephant on the right, suggesting a gentle interaction or perhaps a playful tussle. The smaller elephant, positioned slightly behind and to the right of the larger one, reciprocates the gesture, creating a dynamic and engaging focal point. The lush greenery surrounding them, including bushes and small shrubs, adds depth and context to the setting, indicating a natural habitat. The background, though less distinct, reveals a clear blue sky, which contrasts with the earthy tones of the elephants and vegetation, further emphasizing the foreground elements and providing a sense of openness and space. The relationship between the foreground and background is one of layered depth, with the elephants and their interaction in the foreground drawing the viewer's attention, while the background offers a serene and expansive setting that frames the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 199,
-            "total_tokens": 502
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1528.72555,
-            "prompt_eval_duration_ms": 29.601456,
-            "generation_duration_ms": 1457.4344,
-            "load_duration_ms": 39.14383,
-            "tokens_per_second": 136.54130848016214
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, two elephants are captured in a natural setting, likely a savanna or a similar habitat, as indicated by the sparse vegetation in the background. The larger elephant, presumably an adult, stands on the left, its trunk extended towards the smaller elephant, which appears to be a calf. The interaction between the two elephants suggests a nurturing or playful behavior, as the adult elephant's trunk is gently touching or possibly feeding the calf. The calf, in turn, seems to be responding to the adult's gesture, possibly by reaching out with its trunk or seeking comfort. The scene is devoid of any human presence, focusing entirely on the interaction between the two elephants. The adult elephant's protective stance and the calf's receptive posture highlight a bond of care and connection, typical of the close relationship between an elephant mother and her offspring. The overall atmosphere is peaceful, with the elephants' actions suggesting a moment of bonding and mutual care within their natural environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 192,
-            "total_tokens": 498
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1507.731116,
-            "prompt_eval_duration_ms": 29.810818,
-            "generation_duration_ms": 1432.913626,
-            "load_duration_ms": 42.004354,
-            "tokens_per_second": 133.9927239968894
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of tranquility and connection, with a subtle hint of familial affection. The gentle interaction between the two elephants, with the younger one playfully using its trunk to touch the older one's face, conveys a mood of warmth and tenderness. The soft lighting and the natural, earthy tones of the elephants' skin against the backdrop of green foliage and a clear sky contribute to a peaceful and serene atmosphere. The absence of any signs of distress or aggression further enhances the positive emotional tone, suggesting a harmonious relationship between the animals. The overall tone is decidedly positive, as the image captures a moment of natural beauty and the simple joys of life in the wild, free from the complexities of human emotions.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 148,
-            "total_tokens": 456
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1168.94443,
-            "prompt_eval_duration_ms": 29.758276,
-            "generation_duration_ms": 1098.920773,
-            "load_duration_ms": 37.179276,
-            "tokens_per_second": 134.6775888092162
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"elephant\": {\n      \"count\": 2,\n      \"location\": [\"left\", \"right\"],\n      \"color\": [\"gray\"],\n      \"size\": [\"large\"],\n      \"description\": \"adult and baby elephants interacting\"\n    }\n  },\n  \"natural\": {\n    \"vegetation\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"sparse bushes and shrubs\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear sky\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "elephant": {
-                "count": 2,
-                "location": [
-                  "left",
-                  "right"
-                ],
-                "color": [
-                  "gray"
-                ],
-                "size": [
-                  "large"
-                ],
-                "description": "adult and baby elephants interacting"
-              }
-            },
-            "natural": {
-              "vegetation": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "green"
-                ],
-                "size": "small",
-                "description": "sparse bushes and shrubs"
-              },
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "clear sky"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 161,
-            "total_tokens": 647
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1255.703709,
-            "prompt_eval_duration_ms": 44.629443,
-            "generation_duration_ms": 1168.722518,
-            "load_duration_ms": 39.430115,
-            "tokens_per_second": 137.75724992063513
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2618,
-        "total_time_ms": 7167.9206859999995,
-        "average_speed": 136.08266091322488
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a serene and natural scene featuring an adult elephant and a younger elephant, likely its calf, in a lush, green savanna setting. The adult elephant, positioned on the left side of the frame, is significantly larger, with a robust, textured gray hide and prominent tusks. Its trunk is extended outward, seemingly interacting with the smaller elephant, which is on the right side of the image. The calf, also gray but with smoother skin and smaller tusks, appears to be playfully engaging with the adult, possibly nuzzling or touching its trunk. The background is filled with dense, vibrant green foliage, suggesting a thriving, natural habitat, likely in Africa. The lighting is soft and natural, indicating either early morning or late afternoon sunlight, casting gentle shadows and highlighting the elephants' features without harsh contrasts. The overall composition is balanced, with the elephants positioned centrally, drawing the viewer's attention to their interaction. The image conveys a sense of tenderness and familial bonding, set against the backdrop of a lush, wild environment. The colors are primarily earthy tones of gray and green, contributing to the image's natural and peaceful atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 234,
-            "total_tokens": 531
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12231.106131,
-            "prompt_eval_duration_ms": 3472.540088,
-            "generation_duration_ms": 8716.402121,
-            "load_duration_ms": 39.461273,
-            "tokens_per_second": 26.84593904132019
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the closest elements to the viewer are two elephants\u2014an adult and a juvenile\u2014engaging in a tender interaction. The adult elephant, positioned slightly to the left, is significantly larger, with visible tusks and a wrinkled, textured hide. The juvenile elephant, on the right, is smaller and appears to be playfully interacting with the adult, possibly nuzzling or touching its trunk to the adult's face. This close-up view emphasizes the bond and social behavior between the two elephants, highlighting their familial or protective relationship.\n\nIn the background, the setting is a natural savanna or woodland environment. The background is filled with dense, green foliage, likely shrubs and trees, which provide a lush, natural habitat for the elephants. The vegetation appears to be a mix of bushes and taller trees, creating a layered effect that adds depth to the image. The sky above is a clear, light blue, suggesting a bright, sunny day, which enhances the overall vibrancy of the scene.\n\nThe foreground and background elements are interconnected through the natural setting. The elephants are the focal point, but their presence is contextualized by the surrounding environment, which provides a sense of their habitat and lifestyle. The dense greenery in the background contrasts with the earthy tones of the elephants, drawing attention to their interaction while also grounding them within their ecosystem. This composition effectively highlights the elephants' social dynamics while situating them within their natural world.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 294,
-            "total_tokens": 597
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11060.290589,
-            "prompt_eval_duration_ms": 80.141758,
-            "generation_duration_ms": 10936.279497,
-            "load_duration_ms": 40.705721,
-            "tokens_per_second": 26.882999842921812
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a serene and tender moment between two elephants in a natural, bushy environment. The larger elephant, likely an adult, stands protectively close to a smaller elephant, presumably its calf. The adult elephant's trunk is extended, gently touching or interacting with the calf's trunk, suggesting a nurturing or playful gesture. This interaction highlights the strong social bonds and communication between elephants, as trunks are often used for tactile communication, reassurance, or play.\n\nThe adult elephant appears to be guiding or comforting the calf, as the calf's trunk is reaching out toward the adult, indicating a mutual connection and trust. The surrounding environment is lush with greenery, providing a natural habitat that emphasizes the elephants' connection to their ecosystem. There are no people visible in the image, allowing the focus to remain entirely on the elephants and their interaction.\n\nThe scene conveys a sense of familial care and the intricate social dynamics within elephant herds. The adult's protective stance and the calf's receptive posture illustrate a nurturing relationship, showcasing the deep emotional connections and cooperative behaviors that are characteristic of these intelligent and social animals. The overall atmosphere is peaceful, highlighting the beauty and complexity of wildlife in their natural setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 241,
-            "total_tokens": 547
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9084.953164,
-            "prompt_eval_duration_ms": 73.743794,
-            "generation_duration_ms": 8968.729259,
-            "load_duration_ms": 39.769112,
-            "tokens_per_second": 26.871142281183225
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a tender moment between an adult elephant and a young elephant, evoking a sense of warmth, affection, and familial bonding. The adult elephant, with its large, gentle features, appears to be guiding or comforting the younger one, as the baby elephant playfully reaches out with its trunk, seemingly interacting with the adult's tusk. The overall mood is positive and heartwarming, as the scene suggests a nurturing relationship and the innocence of the young elephant's curiosity. The lush greenery in the background adds to the serene and natural atmosphere, reinforcing the sense of harmony and tranquility. The soft lighting and the gentle expressions on the elephants' faces contribute to the emotional warmth, making the image feel uplifting and peaceful. The visual elements, such as the close proximity of the elephants, their relaxed postures, and the natural setting, all work together to create a tone that is overwhelmingly positive and evocative of love and connection in the animal kingdom.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 195,
-            "total_tokens": 503
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7396.230436,
-            "prompt_eval_duration_ms": 73.697531,
-            "generation_duration_ms": 7279.883945,
-            "load_duration_ms": 40.083466,
-            "tokens_per_second": 26.786141300223708
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"elephant\": {\n      \"count\": 2,\n      \"location\": \"left and right, middle\",\n      \"color\": [\"gray\"],\n      \"size\": [\"large\", \"small\"],\n      \"description\": \"Two elephants interacting, one larger adult and one smaller juvenile. The adult elephant has tusks and is using its trunk to touch the juvenile elephant.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"green\"],\n      \"size\": [\"large\"],\n      \"description\": \"Dense green foliage in the background, indicating a natural habitat.\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": [\"large\"],\n      \"description\": \"Clear blue sky above the scene.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "elephant": {
-                "count": 2,
-                "location": "left and right, middle",
-                "color": [
-                  "gray"
-                ],
-                "size": [
-                  "large",
-                  "small"
-                ],
-                "description": "Two elephants interacting, one larger adult and one smaller juvenile. The adult elephant has tusks and is using its trunk to touch the juvenile elephant."
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "green"
-                ],
-                "size": [
-                  "large"
-                ],
-                "description": "Dense green foliage in the background, indicating a natural habitat."
-              },
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "blue"
-                ],
-                "size": [
-                  "large"
-                ],
-                "description": "Clear blue sky above the scene."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 198,
-            "total_tokens": 684
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7494.512729,
-            "prompt_eval_duration_ms": 134.707245,
-            "generation_duration_ms": 7318.618345,
-            "load_duration_ms": 38.36469,
-            "tokens_per_second": 27.05428684299017
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2862,
-        "total_time_ms": 47267.093049,
-        "average_speed": 26.88810186172782
       }
     },
     {

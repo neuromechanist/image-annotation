@@ -7,6 +7,351 @@
   "timestamp": "2025-08-31T00:18:40.293180+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a dynamic scene of a snowboarder in action against a backdrop of a snowy, forested landscape. The snowboarder, dressed in a green plaid jacket, white snow pants, and a blue helmet with a mounted camera, is mid-turn, kicking up a spray of fresh, powdery snow. The vibrant green of the jacket contrasts sharply with the white snow and the deep blue of the helmet, creating a visually striking image. The lighting is bright and natural, suggesting a sunny day, which enhances the crispness of the snow and the vividness of the colors. The trees in the background are heavily laden with snow, their branches bending under the weight, adding depth and texture to the scene. The composition is dynamic, with the snowboarder positioned slightly off-center, drawing the viewer's eye into the action and the surrounding environment. The overall impression is one of exhilaration and the beauty of winter sports in a pristine, natural setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 196,
+            "total_tokens": 493
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1532.65295,
+            "prompt_eval_duration_ms": 81.344508,
+            "generation_duration_ms": 1409.153985,
+            "load_duration_ms": 39.604908,
+            "tokens_per_second": 139.09054800707247
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, the snowboarder is the central figure, captured mid-action as they carve through the pristine snow. Clad in a green jacket, white snow pants, and a blue helmet with goggles, the snowboarder's dynamic posture and the spray of snow trailing behind them suggest a swift descent down the slope. The snowboarder's equipment, including the snowboard and the ski poles, is partially visible, adding to the sense of motion and engagement with the environment. The snow-covered trees in the background, heavily laden with snow, create a serene and picturesque backdrop, contrasting with the energetic foreground activity. The background elements, while less detailed, provide context and depth to the scene, framing the snowboarder and emphasizing the vastness of the snowy landscape. The relationship between the foreground and background is one of contrast and interplay: the lively, action-packed foreground contrasts with the tranquil, static background, while both elements together create a cohesive and immersive winter sports scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 198,
+            "total_tokens": 501
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1500.597763,
+            "prompt_eval_duration_ms": 29.059687,
+            "generation_duration_ms": 1428.097049,
+            "load_duration_ms": 41.003652,
+            "tokens_per_second": 138.64603959419009
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a person is snowboarding down a snowy slope, their body leaning slightly to the side as they carve through the fresh powder, creating a trail of snow behind them. They are dressed in a green jacket, white snow pants, a blue helmet, and orange goggles, which protect their eyes from the bright sunlight reflecting off the snow. The person is holding a snowboard in their right hand, which is equipped with a small yellow tag, possibly for identification or safety purposes. The background is filled with snow-covered trees, their branches heavy with snow, suggesting a recent snowfall. The person appears to be enjoying the activity, as indicated by their posture and the dynamic motion captured in the image. There are no animals present in the image, and the person's interaction with the environment is solely with the snow and the trees, which serve as a picturesque backdrop to their snowboarding adventure.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 181,
+            "total_tokens": 487
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1374.459619,
+            "prompt_eval_duration_ms": 29.409852,
+            "generation_duration_ms": 1302.381054,
+            "load_duration_ms": 39.732744,
+            "tokens_per_second": 138.97622315995392
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of exhilaration and freedom, capturing the essence of winter sports. The snowboarder, dressed in a vibrant green jacket and white snow pants, is mid-turn, kicking up a spray of fresh powder, which adds a dynamic and energetic feel to the scene. The bright blue helmet and goggles contrast sharply with the pristine white snow, drawing attention to the individual and emphasizing their active engagement in the sport. The backdrop of snow-covered trees, heavy with fresh snow, adds a serene and picturesque quality, suggesting a peaceful yet invigorating environment. The overall tone is decidedly positive, as the snowboarder appears to be enjoying the thrill of the descent, with the bright sunlight enhancing the clarity and vibrancy of the scene. The image successfully conveys a mood of adventure, joy, and the pure pleasure of being immersed in nature's beauty.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 175,
+            "total_tokens": 483
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1334.301823,
+            "prompt_eval_duration_ms": 32.059384,
+            "generation_duration_ms": 1259.916027,
+            "load_duration_ms": 39.517964,
+            "tokens_per_second": 138.89814578888598
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"green\", \"white\", \"blue\", \"black\", \"red\"],\n      \"size\": \"medium\",\n      \"description\": \"wearing snow gear, skiing, smiling\"\n    }\n  },\n  \"man-made\": {\n    \"snowboard\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"attached to person's feet\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 4,\n      \"location\": \"top\",\n      \"color\": [\"white\", \"green\"],\n      \"size\": \"large\",\n      \"description\": \"covered in snow\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "green",
+                  "white",
+                  "blue",
+                  "black",
+                  "red"
+                ],
+                "size": "medium",
+                "description": "wearing snow gear, skiing, smiling"
+              }
+            },
+            "man-made": {
+              "snowboard": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black",
+                  "yellow"
+                ],
+                "size": "small",
+                "description": "attached to person's feet"
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 4,
+                "location": "top",
+                "color": [
+                  "white",
+                  "green"
+                ],
+                "size": "large",
+                "description": "covered in snow"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 187,
+            "total_tokens": 673
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1410.767225,
+            "prompt_eval_duration_ms": 44.286722,
+            "generation_duration_ms": 1325.451134,
+            "load_duration_ms": 38.50577,
+            "tokens_per_second": 141.08403939092335
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2637,
+        "total_time_ms": 7152.77938,
+        "average_speed": 139.33899918820515
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a person snowboarding in a snowy, forested setting on a bright, sunny day. The main subject is a snowboarder dressed in winter gear, including a green plaid jacket, white snow pants, black gloves, a blue beanie, and orange-tinted goggles. The snowboarder is captured mid-action, leaning slightly to one side, with snow spraying up from the board, indicating movement and speed. The background features a dense cluster of snow-covered evergreen trees, their branches heavily laden with snow, creating a picturesque winter landscape. The lighting is bright and natural, with the sun casting sharp shadows and highlighting the pristine white snow, which contrasts beautifully with the darker tones of the trees and the snowboarder's attire. The overall composition is dynamic, with the snowboarder positioned slightly off-center, adding a sense of motion and energy. The scene conveys a sense of adventure and enjoyment in a serene, wintry environment. The vivid colors\u2014green, white, blue, and orange\u2014stand out against the predominantly white snow, drawing attention to the snowboarder as the focal point of the image.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 231,
+            "total_tokens": 528
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12329.559842,
+            "prompt_eval_duration_ms": 3650.880872,
+            "generation_duration_ms": 8637.420183,
+            "load_duration_ms": 38.511711,
+            "tokens_per_second": 26.744096629066355
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image prominently features a person snowboarding. They are dressed in winter gear, including a green plaid jacket, white snow pants, black gloves, a blue beanie, and orange ski goggles. The snowboarder is actively carving through the snow, kicking up a spray of powder, which adds a dynamic element to the scene. The snowboarder's posture and the movement of the snow suggest they are in motion, enjoying a descent down a snowy slope.\n\nIn the background, the setting is a serene, snow-covered forest. Tall evergreen trees are heavily laden with snow, creating a picturesque winter landscape. The trees are spaced out, allowing glimpses of the bright, clear blue sky above. The contrast between the dark green of the trees and the white snow enhances the visual appeal of the scene.\n\nThe foreground and background elements relate to each other in several ways. The snowboarder in the foreground is the focal point, drawing the viewer's attention to the action and movement. The background provides context and a sense of location, situating the snowboarder in a natural, wintry environment. The snow-covered trees and the clear sky create a tranquil backdrop that contrasts with the dynamic action in the foreground, emphasizing the exhilaration of snowboarding against the calm beauty of nature. Together, these elements create a cohesive and engaging image that captures the essence of winter sports in a stunning outdoor setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 285,
+            "total_tokens": 588
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10759.412209,
+            "prompt_eval_duration_ms": 72.172109,
+            "generation_duration_ms": 10645.660672,
+            "load_duration_ms": 38.923033,
+            "tokens_per_second": 26.771471379845988
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a person engaged in snowboarding on a snowy slope, surrounded by a serene winter landscape. The individual is dressed in appropriate winter gear, including a green plaid jacket, white snow pants, a blue beanie, orange goggles, and black gloves, indicating preparedness for cold weather and visibility challenges. The snowboarder is actively carving through the snow, as evidenced by the spray of snow behind them, suggesting they are in motion and skillfully maneuvering down the slope. The person's posture, with one arm extended and the other holding a ski pole, indicates balance and control while navigating the terrain.\n\nIn the background, snow-covered evergreen trees stand tall, creating a picturesque winter scene. The trees are heavily laden with snow, emphasizing the depth of the winter conditions. There are no other people or animals visible in the image, focusing the scene solely on the snowboarder and their interaction with the natural environment.\n\nThe relationship between the snowboarder and the environment is one of harmony and engagement. The snowboarder is actively participating in the sport, using the natural snow and slope to their advantage. The snow-covered trees and the bright sunlight suggest a clear day, providing ideal conditions for snowboarding. The overall scene conveys a sense of adventure, enjoyment, and connection with nature, as the individual embraces the winter landscape through the activity of snowboarding.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 277,
+            "total_tokens": 583
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10421.535123,
+            "prompt_eval_duration_ms": 71.524336,
+            "generation_duration_ms": 10309.131624,
+            "load_duration_ms": 38.363219,
+            "tokens_per_second": 26.869382417732915
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of exhilaration, freedom, and adventure, evoking feelings of excitement and joy. The skier, captured mid-action, is surrounded by a pristine, snow-covered landscape, which contributes to a sense of serenity and natural beauty. The bright sunlight reflecting off the snow enhances the overall vibrancy and positivity of the scene. The skier's posture, leaning forward with one arm extended, suggests a sense of control and confidence, further emphasizing the thrill of the activity. The use of warm, earthy tones in the skier's clothing contrasts with the cool white snow, creating a visually appealing balance that adds to the image's energy. The backdrop of snow-laden trees adds depth and a touch of wilderness, reinforcing the idea of being immersed in nature. The dynamic spray of snow kicked up by the skier's movement adds a sense of motion and vitality, enhancing the overall feeling of excitement. The overall tone is decidedly positive, as the image captures the joy and freedom of outdoor winter sports, inviting viewers to share in the skier's sense of adventure and accomplishment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 222,
+            "total_tokens": 530
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8412.146481,
+            "prompt_eval_duration_ms": 73.170449,
+            "generation_duration_ms": 8297.749898,
+            "load_duration_ms": 38.689857,
+            "tokens_per_second": 26.754240936269785
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\", \"white\", \"blue\", \"black\", \"orange\"],\n      \"size\": \"medium\",\n      \"description\": \"A person snowboarding, wearing a green plaid jacket, white pants, a blue hat, black gloves, and orange goggles.\"\n    }\n  },\n  \"man-made\": {\n    \"snowboard\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"A snowboard partially buried in the snow, being used by the person.\"\n    },\n    \"goggles\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"orange\"],\n      \"size\": \"small\",\n      \"description\": \"Orange ski goggles worn by the person.\"\n    },\n    \"hat\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"blue\"],\n      \"size\": \"small\",\n      \"description\": \"A blue hat worn by the person.\"\n    },\n    \"gloves\": {\n      \"count\": 2,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Black gloves worn by the person.\"\n    },\n    \"jacket\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"A green plaid jacket worn by the person.\"\n    },\n    \"pants\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"White snow pants worn by the person.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 10,\n      \"location\": \"background\",\n      \"color\": [\"white\", \"green\"],\n      \"size\": \"large\",\n      \"description\": \"Snow-covered trees in the background.\"\n    },\n    \"snow\": {\n      \"count\": 1,\n      \"location\": \"entire image\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"A snowy landscape covering the ground and trees.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "green",
+                  "white",
+                  "blue",
+                  "black",
+                  "orange"
+                ],
+                "size": "medium",
+                "description": "A person snowboarding, wearing a green plaid jacket, white pants, a blue hat, black gloves, and orange goggles."
+              }
+            },
+            "man-made": {
+              "snowboard": {
+                "count": 1,
+                "location": "center, bottom",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "A snowboard partially buried in the snow, being used by the person."
+              },
+              "goggles": {
+                "count": 1,
+                "location": "center, top",
+                "color": [
+                  "orange"
+                ],
+                "size": "small",
+                "description": "Orange ski goggles worn by the person."
+              },
+              "hat": {
+                "count": 1,
+                "location": "center, top",
+                "color": [
+                  "blue"
+                ],
+                "size": "small",
+                "description": "A blue hat worn by the person."
+              },
+              "gloves": {
+                "count": 2,
+                "location": "center, middle",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "Black gloves worn by the person."
+              },
+              "jacket": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "green"
+                ],
+                "size": "medium",
+                "description": "A green plaid jacket worn by the person."
+              },
+              "pants": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "White snow pants worn by the person."
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 10,
+                "location": "background",
+                "color": [
+                  "white",
+                  "green"
+                ],
+                "size": "large",
+                "description": "Snow-covered trees in the background."
+              },
+              "snow": {
+                "count": 1,
+                "location": "entire image",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "A snowy landscape covering the ground and trees."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 524,
+            "total_tokens": 1010
+          },
+          "performance_metrics": {
+            "total_duration_ms": 19631.593504,
+            "prompt_eval_duration_ms": 135.91647,
+            "generation_duration_ms": 19453.78402,
+            "load_duration_ms": 39.130677,
+            "tokens_per_second": 26.935633677298323
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3239,
+        "total_time_ms": 61554.247159000006,
+        "average_speed": 26.814965008042673
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -549,351 +894,6 @@
         "total_tokens": 3073,
         "total_time_ms": 31560.799832999997,
         "average_speed": 42.163739590130795
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a dynamic scene of a snowboarder in action against a backdrop of a snowy, forested landscape. The snowboarder, dressed in a green plaid jacket, white snow pants, and a blue helmet with a mounted camera, is mid-turn, kicking up a spray of fresh, powdery snow. The vibrant green of the jacket contrasts sharply with the white snow and the deep blue of the helmet, creating a visually striking image. The lighting is bright and natural, suggesting a sunny day, which enhances the crispness of the snow and the vividness of the colors. The trees in the background are heavily laden with snow, their branches bending under the weight, adding depth and texture to the scene. The composition is dynamic, with the snowboarder positioned slightly off-center, drawing the viewer's eye into the action and the surrounding environment. The overall impression is one of exhilaration and the beauty of winter sports in a pristine, natural setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 196,
-            "total_tokens": 493
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1532.65295,
-            "prompt_eval_duration_ms": 81.344508,
-            "generation_duration_ms": 1409.153985,
-            "load_duration_ms": 39.604908,
-            "tokens_per_second": 139.09054800707247
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, the snowboarder is the central figure, captured mid-action as they carve through the pristine snow. Clad in a green jacket, white snow pants, and a blue helmet with goggles, the snowboarder's dynamic posture and the spray of snow trailing behind them suggest a swift descent down the slope. The snowboarder's equipment, including the snowboard and the ski poles, is partially visible, adding to the sense of motion and engagement with the environment. The snow-covered trees in the background, heavily laden with snow, create a serene and picturesque backdrop, contrasting with the energetic foreground activity. The background elements, while less detailed, provide context and depth to the scene, framing the snowboarder and emphasizing the vastness of the snowy landscape. The relationship between the foreground and background is one of contrast and interplay: the lively, action-packed foreground contrasts with the tranquil, static background, while both elements together create a cohesive and immersive winter sports scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 198,
-            "total_tokens": 501
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1500.597763,
-            "prompt_eval_duration_ms": 29.059687,
-            "generation_duration_ms": 1428.097049,
-            "load_duration_ms": 41.003652,
-            "tokens_per_second": 138.64603959419009
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a person is snowboarding down a snowy slope, their body leaning slightly to the side as they carve through the fresh powder, creating a trail of snow behind them. They are dressed in a green jacket, white snow pants, a blue helmet, and orange goggles, which protect their eyes from the bright sunlight reflecting off the snow. The person is holding a snowboard in their right hand, which is equipped with a small yellow tag, possibly for identification or safety purposes. The background is filled with snow-covered trees, their branches heavy with snow, suggesting a recent snowfall. The person appears to be enjoying the activity, as indicated by their posture and the dynamic motion captured in the image. There are no animals present in the image, and the person's interaction with the environment is solely with the snow and the trees, which serve as a picturesque backdrop to their snowboarding adventure.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 181,
-            "total_tokens": 487
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1374.459619,
-            "prompt_eval_duration_ms": 29.409852,
-            "generation_duration_ms": 1302.381054,
-            "load_duration_ms": 39.732744,
-            "tokens_per_second": 138.97622315995392
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of exhilaration and freedom, capturing the essence of winter sports. The snowboarder, dressed in a vibrant green jacket and white snow pants, is mid-turn, kicking up a spray of fresh powder, which adds a dynamic and energetic feel to the scene. The bright blue helmet and goggles contrast sharply with the pristine white snow, drawing attention to the individual and emphasizing their active engagement in the sport. The backdrop of snow-covered trees, heavy with fresh snow, adds a serene and picturesque quality, suggesting a peaceful yet invigorating environment. The overall tone is decidedly positive, as the snowboarder appears to be enjoying the thrill of the descent, with the bright sunlight enhancing the clarity and vibrancy of the scene. The image successfully conveys a mood of adventure, joy, and the pure pleasure of being immersed in nature's beauty.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 175,
-            "total_tokens": 483
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1334.301823,
-            "prompt_eval_duration_ms": 32.059384,
-            "generation_duration_ms": 1259.916027,
-            "load_duration_ms": 39.517964,
-            "tokens_per_second": 138.89814578888598
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"green\", \"white\", \"blue\", \"black\", \"red\"],\n      \"size\": \"medium\",\n      \"description\": \"wearing snow gear, skiing, smiling\"\n    }\n  },\n  \"man-made\": {\n    \"snowboard\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"attached to person's feet\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 4,\n      \"location\": \"top\",\n      \"color\": [\"white\", \"green\"],\n      \"size\": \"large\",\n      \"description\": \"covered in snow\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "green",
-                  "white",
-                  "blue",
-                  "black",
-                  "red"
-                ],
-                "size": "medium",
-                "description": "wearing snow gear, skiing, smiling"
-              }
-            },
-            "man-made": {
-              "snowboard": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black",
-                  "yellow"
-                ],
-                "size": "small",
-                "description": "attached to person's feet"
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 4,
-                "location": "top",
-                "color": [
-                  "white",
-                  "green"
-                ],
-                "size": "large",
-                "description": "covered in snow"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 187,
-            "total_tokens": 673
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1410.767225,
-            "prompt_eval_duration_ms": 44.286722,
-            "generation_duration_ms": 1325.451134,
-            "load_duration_ms": 38.50577,
-            "tokens_per_second": 141.08403939092335
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2637,
-        "total_time_ms": 7152.77938,
-        "average_speed": 139.33899918820515
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a person snowboarding in a snowy, forested setting on a bright, sunny day. The main subject is a snowboarder dressed in winter gear, including a green plaid jacket, white snow pants, black gloves, a blue beanie, and orange-tinted goggles. The snowboarder is captured mid-action, leaning slightly to one side, with snow spraying up from the board, indicating movement and speed. The background features a dense cluster of snow-covered evergreen trees, their branches heavily laden with snow, creating a picturesque winter landscape. The lighting is bright and natural, with the sun casting sharp shadows and highlighting the pristine white snow, which contrasts beautifully with the darker tones of the trees and the snowboarder's attire. The overall composition is dynamic, with the snowboarder positioned slightly off-center, adding a sense of motion and energy. The scene conveys a sense of adventure and enjoyment in a serene, wintry environment. The vivid colors\u2014green, white, blue, and orange\u2014stand out against the predominantly white snow, drawing attention to the snowboarder as the focal point of the image.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 231,
-            "total_tokens": 528
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12329.559842,
-            "prompt_eval_duration_ms": 3650.880872,
-            "generation_duration_ms": 8637.420183,
-            "load_duration_ms": 38.511711,
-            "tokens_per_second": 26.744096629066355
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image prominently features a person snowboarding. They are dressed in winter gear, including a green plaid jacket, white snow pants, black gloves, a blue beanie, and orange ski goggles. The snowboarder is actively carving through the snow, kicking up a spray of powder, which adds a dynamic element to the scene. The snowboarder's posture and the movement of the snow suggest they are in motion, enjoying a descent down a snowy slope.\n\nIn the background, the setting is a serene, snow-covered forest. Tall evergreen trees are heavily laden with snow, creating a picturesque winter landscape. The trees are spaced out, allowing glimpses of the bright, clear blue sky above. The contrast between the dark green of the trees and the white snow enhances the visual appeal of the scene.\n\nThe foreground and background elements relate to each other in several ways. The snowboarder in the foreground is the focal point, drawing the viewer's attention to the action and movement. The background provides context and a sense of location, situating the snowboarder in a natural, wintry environment. The snow-covered trees and the clear sky create a tranquil backdrop that contrasts with the dynamic action in the foreground, emphasizing the exhilaration of snowboarding against the calm beauty of nature. Together, these elements create a cohesive and engaging image that captures the essence of winter sports in a stunning outdoor setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 285,
-            "total_tokens": 588
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10759.412209,
-            "prompt_eval_duration_ms": 72.172109,
-            "generation_duration_ms": 10645.660672,
-            "load_duration_ms": 38.923033,
-            "tokens_per_second": 26.771471379845988
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a person engaged in snowboarding on a snowy slope, surrounded by a serene winter landscape. The individual is dressed in appropriate winter gear, including a green plaid jacket, white snow pants, a blue beanie, orange goggles, and black gloves, indicating preparedness for cold weather and visibility challenges. The snowboarder is actively carving through the snow, as evidenced by the spray of snow behind them, suggesting they are in motion and skillfully maneuvering down the slope. The person's posture, with one arm extended and the other holding a ski pole, indicates balance and control while navigating the terrain.\n\nIn the background, snow-covered evergreen trees stand tall, creating a picturesque winter scene. The trees are heavily laden with snow, emphasizing the depth of the winter conditions. There are no other people or animals visible in the image, focusing the scene solely on the snowboarder and their interaction with the natural environment.\n\nThe relationship between the snowboarder and the environment is one of harmony and engagement. The snowboarder is actively participating in the sport, using the natural snow and slope to their advantage. The snow-covered trees and the bright sunlight suggest a clear day, providing ideal conditions for snowboarding. The overall scene conveys a sense of adventure, enjoyment, and connection with nature, as the individual embraces the winter landscape through the activity of snowboarding.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 277,
-            "total_tokens": 583
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10421.535123,
-            "prompt_eval_duration_ms": 71.524336,
-            "generation_duration_ms": 10309.131624,
-            "load_duration_ms": 38.363219,
-            "tokens_per_second": 26.869382417732915
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of exhilaration, freedom, and adventure, evoking feelings of excitement and joy. The skier, captured mid-action, is surrounded by a pristine, snow-covered landscape, which contributes to a sense of serenity and natural beauty. The bright sunlight reflecting off the snow enhances the overall vibrancy and positivity of the scene. The skier's posture, leaning forward with one arm extended, suggests a sense of control and confidence, further emphasizing the thrill of the activity. The use of warm, earthy tones in the skier's clothing contrasts with the cool white snow, creating a visually appealing balance that adds to the image's energy. The backdrop of snow-laden trees adds depth and a touch of wilderness, reinforcing the idea of being immersed in nature. The dynamic spray of snow kicked up by the skier's movement adds a sense of motion and vitality, enhancing the overall feeling of excitement. The overall tone is decidedly positive, as the image captures the joy and freedom of outdoor winter sports, inviting viewers to share in the skier's sense of adventure and accomplishment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 222,
-            "total_tokens": 530
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8412.146481,
-            "prompt_eval_duration_ms": 73.170449,
-            "generation_duration_ms": 8297.749898,
-            "load_duration_ms": 38.689857,
-            "tokens_per_second": 26.754240936269785
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\", \"white\", \"blue\", \"black\", \"orange\"],\n      \"size\": \"medium\",\n      \"description\": \"A person snowboarding, wearing a green plaid jacket, white pants, a blue hat, black gloves, and orange goggles.\"\n    }\n  },\n  \"man-made\": {\n    \"snowboard\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"A snowboard partially buried in the snow, being used by the person.\"\n    },\n    \"goggles\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"orange\"],\n      \"size\": \"small\",\n      \"description\": \"Orange ski goggles worn by the person.\"\n    },\n    \"hat\": {\n      \"count\": 1,\n      \"location\": \"center, top\",\n      \"color\": [\"blue\"],\n      \"size\": \"small\",\n      \"description\": \"A blue hat worn by the person.\"\n    },\n    \"gloves\": {\n      \"count\": 2,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Black gloves worn by the person.\"\n    },\n    \"jacket\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"A green plaid jacket worn by the person.\"\n    },\n    \"pants\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"White snow pants worn by the person.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 10,\n      \"location\": \"background\",\n      \"color\": [\"white\", \"green\"],\n      \"size\": \"large\",\n      \"description\": \"Snow-covered trees in the background.\"\n    },\n    \"snow\": {\n      \"count\": 1,\n      \"location\": \"entire image\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"A snowy landscape covering the ground and trees.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "green",
-                  "white",
-                  "blue",
-                  "black",
-                  "orange"
-                ],
-                "size": "medium",
-                "description": "A person snowboarding, wearing a green plaid jacket, white pants, a blue hat, black gloves, and orange goggles."
-              }
-            },
-            "man-made": {
-              "snowboard": {
-                "count": 1,
-                "location": "center, bottom",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "A snowboard partially buried in the snow, being used by the person."
-              },
-              "goggles": {
-                "count": 1,
-                "location": "center, top",
-                "color": [
-                  "orange"
-                ],
-                "size": "small",
-                "description": "Orange ski goggles worn by the person."
-              },
-              "hat": {
-                "count": 1,
-                "location": "center, top",
-                "color": [
-                  "blue"
-                ],
-                "size": "small",
-                "description": "A blue hat worn by the person."
-              },
-              "gloves": {
-                "count": 2,
-                "location": "center, middle",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "Black gloves worn by the person."
-              },
-              "jacket": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "green"
-                ],
-                "size": "medium",
-                "description": "A green plaid jacket worn by the person."
-              },
-              "pants": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "White snow pants worn by the person."
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 10,
-                "location": "background",
-                "color": [
-                  "white",
-                  "green"
-                ],
-                "size": "large",
-                "description": "Snow-covered trees in the background."
-              },
-              "snow": {
-                "count": 1,
-                "location": "entire image",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "A snowy landscape covering the ground and trees."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 524,
-            "total_tokens": 1010
-          },
-          "performance_metrics": {
-            "total_duration_ms": 19631.593504,
-            "prompt_eval_duration_ms": 135.91647,
-            "generation_duration_ms": 19453.78402,
-            "load_duration_ms": 39.130677,
-            "tokens_per_second": 26.935633677298323
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3239,
-        "total_time_ms": 61554.247159000006,
-        "average_speed": 26.814965008042673
       }
     },
     {

@@ -7,6 +7,362 @@
   "timestamp": "2025-08-30T20:12:07.949386+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image showcases a three-tiered wedding cake, elegantly presented on a glass cake stand adorned with autumn leaves in shades of orange, yellow, and brown, which rest on a white tablecloth. The cake itself is a pristine white, with each tier separated by a navy blue ribbon that adds a touch of sophistication and contrast. The topmost tier is crowned with a delicate arrangement of white flowers, possibly baby's breath, and green foliage, enhancing the natural and fresh aesthetic. The setting appears to be indoors, possibly in a church or a similar venue, suggested by the wooden pews and the soft, diffused lighting that casts gentle shadows, giving the scene a warm and inviting ambiance. The overall composition is balanced and harmonious, with the cake as the focal point, surrounded by the natural elements of the leaves and the subtle elegance of the white and navy color scheme.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 177,
+            "total_tokens": 474
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1386.003841,
+            "prompt_eval_duration_ms": 79.720047,
+            "generation_duration_ms": 1266.562663,
+            "load_duration_ms": 37.599387,
+            "tokens_per_second": 139.7483165821066
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, the most prominent element is a three-tiered wedding cake, elegantly decorated with white icing and adorned with a navy blue ribbon around the middle tier and small sprigs of white flowers on top. The cake rests on a glass cake stand, which is decorated with scattered autumn leaves in shades of orange, yellow, and brown, adding a seasonal touch to the setting. A silver cake server lies to the right of the stand, ready for serving. The background, slightly out of focus, reveals a wooden table and a white wall, suggesting the cake is set up in a formal indoor venue, possibly a church or a banquet hall, which complements the wedding theme. The overall composition creates a harmonious blend of the festive cake in the foreground and the understated elegance of the background, emphasizing the celebratory atmosphere of the event.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 171,
+            "total_tokens": 474
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1315.721907,
+            "prompt_eval_duration_ms": 34.398294,
+            "generation_duration_ms": 1241.621776,
+            "load_duration_ms": 37.138203,
+            "tokens_per_second": 137.72309998532114
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a beautifully arranged three-tiered wedding cake, the centerpiece of a celebration. The cake, adorned with white frosting and accented by navy blue ribbons and delicate white flowers, sits atop a glass cake stand. The stand is decorated with autumn leaves, adding a seasonal touch to the setting. The cake is placed on a table covered with a white tablecloth, which is further embellished with more autumn leaves, creating a cohesive and festive atmosphere. The background features a wooden panel and a white structure, possibly part of the venue's decor, which complements the overall elegant and seasonal theme of the event. There are no people or animals present in the image, and the focus is entirely on the cake and its surroundings, suggesting a moment of stillness and anticipation before the cake is served. The interaction between the elements is one of harmony and celebration, with each component contributing to the festive and elegant ambiance of the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 188,
+            "total_tokens": 494
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1433.581765,
+            "prompt_eval_duration_ms": 29.05392,
+            "generation_duration_ms": 1364.96382,
+            "load_duration_ms": 37.367282,
+            "tokens_per_second": 137.73258839930276
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a mood of elegance and celebration, primarily positive with a subtle touch of autumnal warmth. The three-tiered wedding cake, adorned with delicate white flowers and a navy blue ribbon, suggests a formal and joyous occasion, likely a wedding. The pristine white icing and the carefully arranged flowers convey a sense of purity and celebration, while the navy blue ribbon adds a touch of sophistication and formality, hinting at a traditional or classic theme. The glass cake stand, decorated with autumn leaves, introduces a seasonal element that softens the formality, evoking feelings of warmth and nostalgia. The overall tone is positive, as the image radiates happiness and anticipation, with the visual elements of the cake, flowers, ribbon, and autumn leaves working together to create a harmonious and inviting atmosphere. The setting, with its clean lines and soft lighting, further enhances the sense of celebration and tranquility, making the image feel like a snapshot of a special, joyous moment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 199,
+            "total_tokens": 507
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1523.02922,
+            "prompt_eval_duration_ms": 32.576099,
+            "generation_duration_ms": 1450.376285,
+            "load_duration_ms": 37.885917,
+            "tokens_per_second": 137.20577346588374
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"human\": [],\n    \"animal\": [],\n    \"man-made\": {\n      \"wedding cake\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"white\", \"blue\"],\n        \"size\": \"large\",\n        \"description\": \"three-tiered cake with white frosting, blue ribbon, and floral decorations\"\n      },\n      \"glass cake stand\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"clear\"],\n        \"size\": \"medium\",\n        \"description\": \"glass stand holding the wedding cake\"\n      },\n      \"knife\": {\n        \"count\": 1,\n        \"location\": \"right\",\n        \"color\": [\"silver\"],\n        \"size\": \"small\",\n        \"description\": \"knife placed on the cake stand\"\n      },\n      \"tablecloth\": {\n        \"count\": 1,\n        \"location\": \"bottom\",\n        \"color\": [\"white\"],\n        \"size\": \"large\",\n        \"description\": \"tablecloth covering the table\"\n      },\n      \"leaves\": {\n        \"count\": 1,\n        \"location\": \"bottom\",\n        \"color\": [\"brown\", \"orange\", \"yellow\"],\n        \"size\": \"small\",\n        \"description\": \"fallen leaves on the tablecloth\"\n      }\n    }\n  },\n  \"natural\": {\n    \"human\": [],\n    \"animal\": [],\n    \"man-made\": [],\n    \"natural\": {\n      \"flowers\": {\n        \"count\": 1,\n        \"location\": \"top\",\n        \"color\": [\"white\"],\n        \"size\": \"small\",\n        \"description\": \"bouquet of white flowers on top of the wedding cake\"\n      }\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "human": [],
+              "animal": [],
+              "man-made": {
+                "wedding cake": {
+                  "count": 1,
+                  "location": "center",
+                  "color": [
+                    "white",
+                    "blue"
+                  ],
+                  "size": "large",
+                  "description": "three-tiered cake with white frosting, blue ribbon, and floral decorations"
+                },
+                "glass cake stand": {
+                  "count": 1,
+                  "location": "center",
+                  "color": [
+                    "clear"
+                  ],
+                  "size": "medium",
+                  "description": "glass stand holding the wedding cake"
+                },
+                "knife": {
+                  "count": 1,
+                  "location": "right",
+                  "color": [
+                    "silver"
+                  ],
+                  "size": "small",
+                  "description": "knife placed on the cake stand"
+                },
+                "tablecloth": {
+                  "count": 1,
+                  "location": "bottom",
+                  "color": [
+                    "white"
+                  ],
+                  "size": "large",
+                  "description": "tablecloth covering the table"
+                },
+                "leaves": {
+                  "count": 1,
+                  "location": "bottom",
+                  "color": [
+                    "brown",
+                    "orange",
+                    "yellow"
+                  ],
+                  "size": "small",
+                  "description": "fallen leaves on the tablecloth"
+                }
+              }
+            },
+            "natural": {
+              "human": [],
+              "animal": [],
+              "man-made": [],
+              "natural": {
+                "flowers": {
+                  "count": 1,
+                  "location": "top",
+                  "color": [
+                    "white"
+                  ],
+                  "size": "small",
+                  "description": "bouquet of white flowers on top of the wedding cake"
+                }
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 374,
+            "total_tokens": 860
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2788.617906,
+            "prompt_eval_duration_ms": 44.29816,
+            "generation_duration_ms": 2703.295377,
+            "load_duration_ms": 38.768072,
+            "tokens_per_second": 138.34966137331577
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2809,
+        "total_time_ms": 8446.954639,
+        "average_speed": 138.151887961186
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image showcases a beautifully decorated three-tiered wedding cake, elegantly presented in a formal setting. The cake is predominantly white, with each tier adorned with a navy blue ribbon that wraps around its circumference, creating a striking contrast. At the top of the cake, a delicate floral arrangement of white flowers and green foliage adds a touch of natural elegance. The cake is placed on a clear glass stand, which sits atop a white tablecloth. The tablecloth is adorned with scattered autumn leaves in warm hues of orange, red, and yellow, adding a seasonal and festive touch to the composition. A silver cake knife with a wooden handle rests on the tablecloth, ready for the cake-cutting ceremony. The background features a wooden panel and a white structure, possibly a church pew or altar, suggesting the setting is likely a church or a formal venue. The lighting is soft and warm, enhancing the overall serene and celebratory atmosphere. The composition is balanced, with the cake as the focal point, surrounded by complementary elements that contribute to the theme of a classic and sophisticated wedding celebration.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 217,
+            "total_tokens": 514
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11645.325533,
+            "prompt_eval_duration_ms": 3510.644848,
+            "generation_duration_ms": 8095.783273,
+            "load_duration_ms": 36.675721,
+            "tokens_per_second": 26.80407721927415
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a beautifully decorated three-tiered wedding cake, which is the central focus. The cake is white with navy blue ribbons around each tier, accented by a floral arrangement of white flowers and green leaves on top. The cake sits on a clear glass stand, which is placed on a white tablecloth adorned with scattered autumn leaves in shades of orange, red, and brown. A silver cake knife with a decorative handle rests on the tablecloth near the stand, adding a practical and elegant touch. The autumn leaves create a warm, seasonal contrast to the pristine white cake, tying the foreground elements together with a cohesive theme.\n\nIn the background, the setting appears to be a church or a similar formal venue, indicated by the wooden pews and the white altar-like structure visible in the distance. The background elements are less detailed and slightly out of focus, which helps to emphasize the cake in the foreground. The neutral tones of the background\u2014wooden pews and white altar\u2014complement the cake's design without distracting from it. The overall composition suggests a wedding ceremony, with the cake as the centerpiece and the background providing a serene, traditional setting. The relationship between the foreground and background is harmonious, with the background elements subtly supporting the prominence of the cake while maintaining the formal and celebratory atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 270,
+            "total_tokens": 573
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10173.18747,
+            "prompt_eval_duration_ms": 73.499763,
+            "generation_duration_ms": 10059.083331,
+            "load_duration_ms": 38.442871,
+            "tokens_per_second": 26.84141199704711
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a beautifully decorated three-tiered wedding cake placed on a glass stand, which is set atop a white tablecloth adorned with autumnal maple leaves in shades of orange, red, and yellow. The cake itself is white and features navy blue ribbons wrapped around each tier, adding a touch of elegance and contrast. At the top of the cake, there is a floral arrangement consisting of white flowers and green leaves, serving as a centerpiece that enhances the overall aesthetic. The cake is positioned in front of a wooden panel, likely part of a church or formal setting, suggesting a wedding or special event.\n\nThere are no people or animals visible in the image. The focus is entirely on the cake and its surroundings. The maple leaves on the tablecloth create a seasonal theme, possibly indicating a fall wedding. The cake knife, placed on the tablecloth near the cake, is ready for the ceremonial first cut, symbolizing the couple's unity and the start of their celebration. The interaction between the elements is harmonious, with the cake as the central focal point, complemented by the decorative leaves and the formal setting, all working together to create a cohesive and celebratory atmosphere. The image captures a moment of anticipation and festivity, emphasizing the beauty and significance of the occasion.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 258,
+            "total_tokens": 564
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9738.194686,
+            "prompt_eval_duration_ms": 73.857444,
+            "generation_duration_ms": 9624.553091,
+            "load_duration_ms": 37.600465,
+            "tokens_per_second": 26.80643948457804
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of elegance, celebration, and warmth, evoking feelings of joy, romance, and festivity. The three-tiered white wedding cake, adorned with navy blue ribbons and a delicate floral topper, exudes a sense of sophistication and timeless beauty. The use of white and navy blue creates a classic color palette that feels both formal and intimate, suggesting a special occasion filled with love and happiness. The scattered autumn leaves on the tablecloth add a touch of natural beauty and seasonal charm, enhancing the warmth and organic feel of the scene. The knife placed beside the cake hints at the imminent celebration and the sharing of a sweet moment, further amplifying the positive tone. The wooden backdrop and the soft lighting contribute to a cozy, inviting atmosphere, making the scene feel both grand and personal. Overall, the image's visual elements work harmoniously to create a positive and uplifting emotional atmosphere, ideal for a wedding or a similar joyous event.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 195,
+            "total_tokens": 503
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7406.740491,
+            "prompt_eval_duration_ms": 74.622013,
+            "generation_duration_ms": 7291.152042,
+            "load_duration_ms": 38.699959,
+            "tokens_per_second": 26.74474470930255
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"wedding_cake\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\", \"blue\"],\n      \"size\": \"large\",\n      \"description\": \"Three-tiered white cake with blue ribbons and white floral decoration on top.\"\n    },\n    \"knife\": {\n      \"count\": 1,\n      \"location\": \"right, bottom\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Knife with a silver blade and handle, placed on a table.\"\n    },\n    \"table\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"Table covered with a white tablecloth and decorated with autumn leaves.\"\n    },\n    \"tablecloth\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"White tablecloth covering the table.\"\n    },\n    \"cake_stand\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"clear\"],\n      \"size\": \"medium\",\n      \"description\": \"Clear glass cake stand supporting the wedding cake.\"\n    },\n    \"pew\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Wooden pew with a white cushion in the background.\"\n    }\n  },\n  \"natural\": {\n    \"autumn_leaves\": {\n      \"count\": \"multiple\",\n      \"location\": \"center, bottom\",\n      \"color\": [\"red\", \"orange\", \"yellow\", \"brown\"],\n      \"size\": \"small\",\n      \"description\": \"Scattered autumn leaves on the tablecloth.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "wedding_cake": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "white",
+                  "blue"
+                ],
+                "size": "large",
+                "description": "Three-tiered white cake with blue ribbons and white floral decoration on top."
+              },
+              "knife": {
+                "count": 1,
+                "location": "right, bottom",
+                "color": [
+                  "silver"
+                ],
+                "size": "small",
+                "description": "Knife with a silver blade and handle, placed on a table."
+              },
+              "table": {
+                "count": 1,
+                "location": "center, bottom",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "Table covered with a white tablecloth and decorated with autumn leaves."
+              },
+              "tablecloth": {
+                "count": 1,
+                "location": "center, bottom",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "White tablecloth covering the table."
+              },
+              "cake_stand": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "clear"
+                ],
+                "size": "medium",
+                "description": "Clear glass cake stand supporting the wedding cake."
+              },
+              "pew": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "brown",
+                  "white"
+                ],
+                "size": "large",
+                "description": "Wooden pew with a white cushion in the background."
+              }
+            },
+            "natural": {
+              "autumn_leaves": {
+                "count": "multiple",
+                "location": "center, bottom",
+                "color": [
+                  "red",
+                  "orange",
+                  "yellow",
+                  "brown"
+                ],
+                "size": "small",
+                "description": "Scattered autumn leaves on the tablecloth."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 416,
+            "total_tokens": 902
+          },
+          "performance_metrics": {
+            "total_duration_ms": 15624.511569,
+            "prompt_eval_duration_ms": 139.671303,
+            "generation_duration_ms": 15441.936077,
+            "load_duration_ms": 40.050094,
+            "tokens_per_second": 26.939627124840353
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3056,
+        "total_time_ms": 54587.959749,
+        "average_speed": 26.827260107008442
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -530,362 +886,6 @@
         "total_tokens": 2886,
         "total_time_ms": 27186.477146999998,
         "average_speed": 42.05632440070995
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image showcases a three-tiered wedding cake, elegantly presented on a glass cake stand adorned with autumn leaves in shades of orange, yellow, and brown, which rest on a white tablecloth. The cake itself is a pristine white, with each tier separated by a navy blue ribbon that adds a touch of sophistication and contrast. The topmost tier is crowned with a delicate arrangement of white flowers, possibly baby's breath, and green foliage, enhancing the natural and fresh aesthetic. The setting appears to be indoors, possibly in a church or a similar venue, suggested by the wooden pews and the soft, diffused lighting that casts gentle shadows, giving the scene a warm and inviting ambiance. The overall composition is balanced and harmonious, with the cake as the focal point, surrounded by the natural elements of the leaves and the subtle elegance of the white and navy color scheme.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 177,
-            "total_tokens": 474
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1386.003841,
-            "prompt_eval_duration_ms": 79.720047,
-            "generation_duration_ms": 1266.562663,
-            "load_duration_ms": 37.599387,
-            "tokens_per_second": 139.7483165821066
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, the most prominent element is a three-tiered wedding cake, elegantly decorated with white icing and adorned with a navy blue ribbon around the middle tier and small sprigs of white flowers on top. The cake rests on a glass cake stand, which is decorated with scattered autumn leaves in shades of orange, yellow, and brown, adding a seasonal touch to the setting. A silver cake server lies to the right of the stand, ready for serving. The background, slightly out of focus, reveals a wooden table and a white wall, suggesting the cake is set up in a formal indoor venue, possibly a church or a banquet hall, which complements the wedding theme. The overall composition creates a harmonious blend of the festive cake in the foreground and the understated elegance of the background, emphasizing the celebratory atmosphere of the event.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 171,
-            "total_tokens": 474
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1315.721907,
-            "prompt_eval_duration_ms": 34.398294,
-            "generation_duration_ms": 1241.621776,
-            "load_duration_ms": 37.138203,
-            "tokens_per_second": 137.72309998532114
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a beautifully arranged three-tiered wedding cake, the centerpiece of a celebration. The cake, adorned with white frosting and accented by navy blue ribbons and delicate white flowers, sits atop a glass cake stand. The stand is decorated with autumn leaves, adding a seasonal touch to the setting. The cake is placed on a table covered with a white tablecloth, which is further embellished with more autumn leaves, creating a cohesive and festive atmosphere. The background features a wooden panel and a white structure, possibly part of the venue's decor, which complements the overall elegant and seasonal theme of the event. There are no people or animals present in the image, and the focus is entirely on the cake and its surroundings, suggesting a moment of stillness and anticipation before the cake is served. The interaction between the elements is one of harmony and celebration, with each component contributing to the festive and elegant ambiance of the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 188,
-            "total_tokens": 494
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1433.581765,
-            "prompt_eval_duration_ms": 29.05392,
-            "generation_duration_ms": 1364.96382,
-            "load_duration_ms": 37.367282,
-            "tokens_per_second": 137.73258839930276
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a mood of elegance and celebration, primarily positive with a subtle touch of autumnal warmth. The three-tiered wedding cake, adorned with delicate white flowers and a navy blue ribbon, suggests a formal and joyous occasion, likely a wedding. The pristine white icing and the carefully arranged flowers convey a sense of purity and celebration, while the navy blue ribbon adds a touch of sophistication and formality, hinting at a traditional or classic theme. The glass cake stand, decorated with autumn leaves, introduces a seasonal element that softens the formality, evoking feelings of warmth and nostalgia. The overall tone is positive, as the image radiates happiness and anticipation, with the visual elements of the cake, flowers, ribbon, and autumn leaves working together to create a harmonious and inviting atmosphere. The setting, with its clean lines and soft lighting, further enhances the sense of celebration and tranquility, making the image feel like a snapshot of a special, joyous moment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 199,
-            "total_tokens": 507
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1523.02922,
-            "prompt_eval_duration_ms": 32.576099,
-            "generation_duration_ms": 1450.376285,
-            "load_duration_ms": 37.885917,
-            "tokens_per_second": 137.20577346588374
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"human\": [],\n    \"animal\": [],\n    \"man-made\": {\n      \"wedding cake\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"white\", \"blue\"],\n        \"size\": \"large\",\n        \"description\": \"three-tiered cake with white frosting, blue ribbon, and floral decorations\"\n      },\n      \"glass cake stand\": {\n        \"count\": 1,\n        \"location\": \"center\",\n        \"color\": [\"clear\"],\n        \"size\": \"medium\",\n        \"description\": \"glass stand holding the wedding cake\"\n      },\n      \"knife\": {\n        \"count\": 1,\n        \"location\": \"right\",\n        \"color\": [\"silver\"],\n        \"size\": \"small\",\n        \"description\": \"knife placed on the cake stand\"\n      },\n      \"tablecloth\": {\n        \"count\": 1,\n        \"location\": \"bottom\",\n        \"color\": [\"white\"],\n        \"size\": \"large\",\n        \"description\": \"tablecloth covering the table\"\n      },\n      \"leaves\": {\n        \"count\": 1,\n        \"location\": \"bottom\",\n        \"color\": [\"brown\", \"orange\", \"yellow\"],\n        \"size\": \"small\",\n        \"description\": \"fallen leaves on the tablecloth\"\n      }\n    }\n  },\n  \"natural\": {\n    \"human\": [],\n    \"animal\": [],\n    \"man-made\": [],\n    \"natural\": {\n      \"flowers\": {\n        \"count\": 1,\n        \"location\": \"top\",\n        \"color\": [\"white\"],\n        \"size\": \"small\",\n        \"description\": \"bouquet of white flowers on top of the wedding cake\"\n      }\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "human": [],
-              "animal": [],
-              "man-made": {
-                "wedding cake": {
-                  "count": 1,
-                  "location": "center",
-                  "color": [
-                    "white",
-                    "blue"
-                  ],
-                  "size": "large",
-                  "description": "three-tiered cake with white frosting, blue ribbon, and floral decorations"
-                },
-                "glass cake stand": {
-                  "count": 1,
-                  "location": "center",
-                  "color": [
-                    "clear"
-                  ],
-                  "size": "medium",
-                  "description": "glass stand holding the wedding cake"
-                },
-                "knife": {
-                  "count": 1,
-                  "location": "right",
-                  "color": [
-                    "silver"
-                  ],
-                  "size": "small",
-                  "description": "knife placed on the cake stand"
-                },
-                "tablecloth": {
-                  "count": 1,
-                  "location": "bottom",
-                  "color": [
-                    "white"
-                  ],
-                  "size": "large",
-                  "description": "tablecloth covering the table"
-                },
-                "leaves": {
-                  "count": 1,
-                  "location": "bottom",
-                  "color": [
-                    "brown",
-                    "orange",
-                    "yellow"
-                  ],
-                  "size": "small",
-                  "description": "fallen leaves on the tablecloth"
-                }
-              }
-            },
-            "natural": {
-              "human": [],
-              "animal": [],
-              "man-made": [],
-              "natural": {
-                "flowers": {
-                  "count": 1,
-                  "location": "top",
-                  "color": [
-                    "white"
-                  ],
-                  "size": "small",
-                  "description": "bouquet of white flowers on top of the wedding cake"
-                }
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 374,
-            "total_tokens": 860
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2788.617906,
-            "prompt_eval_duration_ms": 44.29816,
-            "generation_duration_ms": 2703.295377,
-            "load_duration_ms": 38.768072,
-            "tokens_per_second": 138.34966137331577
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2809,
-        "total_time_ms": 8446.954639,
-        "average_speed": 138.151887961186
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image showcases a beautifully decorated three-tiered wedding cake, elegantly presented in a formal setting. The cake is predominantly white, with each tier adorned with a navy blue ribbon that wraps around its circumference, creating a striking contrast. At the top of the cake, a delicate floral arrangement of white flowers and green foliage adds a touch of natural elegance. The cake is placed on a clear glass stand, which sits atop a white tablecloth. The tablecloth is adorned with scattered autumn leaves in warm hues of orange, red, and yellow, adding a seasonal and festive touch to the composition. A silver cake knife with a wooden handle rests on the tablecloth, ready for the cake-cutting ceremony. The background features a wooden panel and a white structure, possibly a church pew or altar, suggesting the setting is likely a church or a formal venue. The lighting is soft and warm, enhancing the overall serene and celebratory atmosphere. The composition is balanced, with the cake as the focal point, surrounded by complementary elements that contribute to the theme of a classic and sophisticated wedding celebration.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 217,
-            "total_tokens": 514
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11645.325533,
-            "prompt_eval_duration_ms": 3510.644848,
-            "generation_duration_ms": 8095.783273,
-            "load_duration_ms": 36.675721,
-            "tokens_per_second": 26.80407721927415
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a beautifully decorated three-tiered wedding cake, which is the central focus. The cake is white with navy blue ribbons around each tier, accented by a floral arrangement of white flowers and green leaves on top. The cake sits on a clear glass stand, which is placed on a white tablecloth adorned with scattered autumn leaves in shades of orange, red, and brown. A silver cake knife with a decorative handle rests on the tablecloth near the stand, adding a practical and elegant touch. The autumn leaves create a warm, seasonal contrast to the pristine white cake, tying the foreground elements together with a cohesive theme.\n\nIn the background, the setting appears to be a church or a similar formal venue, indicated by the wooden pews and the white altar-like structure visible in the distance. The background elements are less detailed and slightly out of focus, which helps to emphasize the cake in the foreground. The neutral tones of the background\u2014wooden pews and white altar\u2014complement the cake's design without distracting from it. The overall composition suggests a wedding ceremony, with the cake as the centerpiece and the background providing a serene, traditional setting. The relationship between the foreground and background is harmonious, with the background elements subtly supporting the prominence of the cake while maintaining the formal and celebratory atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 270,
-            "total_tokens": 573
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10173.18747,
-            "prompt_eval_duration_ms": 73.499763,
-            "generation_duration_ms": 10059.083331,
-            "load_duration_ms": 38.442871,
-            "tokens_per_second": 26.84141199704711
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a beautifully decorated three-tiered wedding cake placed on a glass stand, which is set atop a white tablecloth adorned with autumnal maple leaves in shades of orange, red, and yellow. The cake itself is white and features navy blue ribbons wrapped around each tier, adding a touch of elegance and contrast. At the top of the cake, there is a floral arrangement consisting of white flowers and green leaves, serving as a centerpiece that enhances the overall aesthetic. The cake is positioned in front of a wooden panel, likely part of a church or formal setting, suggesting a wedding or special event.\n\nThere are no people or animals visible in the image. The focus is entirely on the cake and its surroundings. The maple leaves on the tablecloth create a seasonal theme, possibly indicating a fall wedding. The cake knife, placed on the tablecloth near the cake, is ready for the ceremonial first cut, symbolizing the couple's unity and the start of their celebration. The interaction between the elements is harmonious, with the cake as the central focal point, complemented by the decorative leaves and the formal setting, all working together to create a cohesive and celebratory atmosphere. The image captures a moment of anticipation and festivity, emphasizing the beauty and significance of the occasion.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 258,
-            "total_tokens": 564
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9738.194686,
-            "prompt_eval_duration_ms": 73.857444,
-            "generation_duration_ms": 9624.553091,
-            "load_duration_ms": 37.600465,
-            "tokens_per_second": 26.80643948457804
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of elegance, celebration, and warmth, evoking feelings of joy, romance, and festivity. The three-tiered white wedding cake, adorned with navy blue ribbons and a delicate floral topper, exudes a sense of sophistication and timeless beauty. The use of white and navy blue creates a classic color palette that feels both formal and intimate, suggesting a special occasion filled with love and happiness. The scattered autumn leaves on the tablecloth add a touch of natural beauty and seasonal charm, enhancing the warmth and organic feel of the scene. The knife placed beside the cake hints at the imminent celebration and the sharing of a sweet moment, further amplifying the positive tone. The wooden backdrop and the soft lighting contribute to a cozy, inviting atmosphere, making the scene feel both grand and personal. Overall, the image's visual elements work harmoniously to create a positive and uplifting emotional atmosphere, ideal for a wedding or a similar joyous event.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 195,
-            "total_tokens": 503
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7406.740491,
-            "prompt_eval_duration_ms": 74.622013,
-            "generation_duration_ms": 7291.152042,
-            "load_duration_ms": 38.699959,
-            "tokens_per_second": 26.74474470930255
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"wedding_cake\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\", \"blue\"],\n      \"size\": \"large\",\n      \"description\": \"Three-tiered white cake with blue ribbons and white floral decoration on top.\"\n    },\n    \"knife\": {\n      \"count\": 1,\n      \"location\": \"right, bottom\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"Knife with a silver blade and handle, placed on a table.\"\n    },\n    \"table\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"Table covered with a white tablecloth and decorated with autumn leaves.\"\n    },\n    \"tablecloth\": {\n      \"count\": 1,\n      \"location\": \"center, bottom\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"White tablecloth covering the table.\"\n    },\n    \"cake_stand\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"clear\"],\n      \"size\": \"medium\",\n      \"description\": \"Clear glass cake stand supporting the wedding cake.\"\n    },\n    \"pew\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Wooden pew with a white cushion in the background.\"\n    }\n  },\n  \"natural\": {\n    \"autumn_leaves\": {\n      \"count\": \"multiple\",\n      \"location\": \"center, bottom\",\n      \"color\": [\"red\", \"orange\", \"yellow\", \"brown\"],\n      \"size\": \"small\",\n      \"description\": \"Scattered autumn leaves on the tablecloth.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "wedding_cake": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "white",
-                  "blue"
-                ],
-                "size": "large",
-                "description": "Three-tiered white cake with blue ribbons and white floral decoration on top."
-              },
-              "knife": {
-                "count": 1,
-                "location": "right, bottom",
-                "color": [
-                  "silver"
-                ],
-                "size": "small",
-                "description": "Knife with a silver blade and handle, placed on a table."
-              },
-              "table": {
-                "count": 1,
-                "location": "center, bottom",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "Table covered with a white tablecloth and decorated with autumn leaves."
-              },
-              "tablecloth": {
-                "count": 1,
-                "location": "center, bottom",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "White tablecloth covering the table."
-              },
-              "cake_stand": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "clear"
-                ],
-                "size": "medium",
-                "description": "Clear glass cake stand supporting the wedding cake."
-              },
-              "pew": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "brown",
-                  "white"
-                ],
-                "size": "large",
-                "description": "Wooden pew with a white cushion in the background."
-              }
-            },
-            "natural": {
-              "autumn_leaves": {
-                "count": "multiple",
-                "location": "center, bottom",
-                "color": [
-                  "red",
-                  "orange",
-                  "yellow",
-                  "brown"
-                ],
-                "size": "small",
-                "description": "Scattered autumn leaves on the tablecloth."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 416,
-            "total_tokens": 902
-          },
-          "performance_metrics": {
-            "total_duration_ms": 15624.511569,
-            "prompt_eval_duration_ms": 139.671303,
-            "generation_duration_ms": 15441.936077,
-            "load_duration_ms": 40.050094,
-            "tokens_per_second": 26.939627124840353
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3056,
-        "total_time_ms": 54587.959749,
-        "average_speed": 26.827260107008442
       }
     },
     {

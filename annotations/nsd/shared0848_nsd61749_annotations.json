@@ -7,6 +7,300 @@
   "timestamp": "2025-08-30T23:28:55.621222+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a man standing against a plain white door with vertical paneling, suggesting a simple, possibly residential or office setting. The man is dressed in a formal manner, wearing a dark, possibly navy blue, blazer over a light gray dress shirt paired with a striped tie in shades of blue and white. His attire is completed with dark gray trousers and a brown belt, adding a touch of contrast to the otherwise monochromatic outfit. He wears round-framed glasses, which give him a scholarly or intellectual appearance. The lighting in the image is even and soft, likely from an overhead source, casting minimal shadows and highlighting the subject's features and attire without creating harsh contrasts. The overall composition is straightforward, with the subject centered in the frame, creating a balanced and focused image. The simplicity of the background and the subject's attire suggests a formal or professional context, possibly a portrait or a casual office photograph.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 185,
+            "total_tokens": 482
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1439.731816,
+            "prompt_eval_duration_ms": 78.711267,
+            "generation_duration_ms": 1323.507522,
+            "load_duration_ms": 35.885099,
+            "tokens_per_second": 139.78008959136085
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, a person stands centered, dressed in a formal outfit consisting of a dark blazer, a light-colored shirt, a striped tie, and dark trousers, complemented by a brown belt. The individual's attire suggests a professional or semi-formal setting, and their posture, with hands slightly away from the body and head turned to the side, conveys a sense of contemplation or casual engagement. The background, which is the wall behind the person, is plain and white, providing a stark contrast to the darker tones of the clothing. This simplicity ensures that the focus remains on the individual, while the white wall serves as a neutral backdrop that enhances the visibility of the subject and their attire. The relationship between the foreground and background is one of contrast and emphasis, where the detailed and colorful elements of the person's outfit stand out against the plain and unobtrusive wall.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 180,
+            "total_tokens": 483
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1365.481331,
+            "prompt_eval_duration_ms": 29.180097,
+            "generation_duration_ms": 1296.808259,
+            "load_duration_ms": 37.626728,
+            "tokens_per_second": 138.80232389852478
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a single individual standing against a plain, light-colored wall. The person is dressed in a formal outfit consisting of a dark blazer, a light blue shirt, a striped tie, and dark trousers, suggesting a professional or semi-formal setting. They are wearing glasses and have a neutral expression, looking slightly to the side. The individual is not interacting with any other people or animals in the image. The setting appears to be indoors, possibly in a hallway or a room with a door visible on the right side of the frame. The person's posture is upright and relaxed, and there are no other objects or elements in the image that suggest any interaction or activity beyond the individual's presence. The overall scene is static, with no indication of movement or interaction between the person and their environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 162,
+            "total_tokens": 468
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1266.350544,
+            "prompt_eval_duration_ms": 29.093577,
+            "generation_duration_ms": 1198.694884,
+            "load_duration_ms": 36.859101,
+            "tokens_per_second": 135.1469854108429
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a sense of quiet contemplation and perhaps a touch of melancholy. The subject's posture, with hands casually tucked into pockets and a slightly tilted head, suggests a reflective or introspective mood. The choice of attire\u2014a dark blazer, a neatly tucked-in shirt, and a striped tie\u2014implies a formal or professional setting, yet the relaxed stance and the slightly distant gaze give the impression of someone who is not fully engaged or perhaps even slightly detached from the environment. The neutral background, with its plain white walls and simple door, further emphasizes the subject's isolation and the subdued atmosphere. The lighting is soft and even, avoiding any dramatic shadows or highlights that might intensify the mood. Overall, the tone is neutral with a subtle undercurrent of introspection and perhaps a hint of solitude. The visual elements\u2014the subject's attire, posture, and the minimalist background\u2014work together to create a calm, almost melancholic atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 192,
+            "total_tokens": 500
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1454.690237,
+            "prompt_eval_duration_ms": 31.242497,
+            "generation_duration_ms": 1384.209923,
+            "load_duration_ms": 37.534229,
+            "tokens_per_second": 138.70728479093557
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"wearing glasses, a suit, and a striped tie\"\n    }\n  },\n  \"man-made\": {\n    \"door\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\", \"gray\"],\n      \"size\": \"large\",\n      \"description\": \"closed door with visible hinge\"\n    },\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"plain wall behind the person\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black",
+                  "gray"
+                ],
+                "size": "medium",
+                "description": "wearing glasses, a suit, and a striped tie"
+              }
+            },
+            "man-made": {
+              "door": {
+                "count": 1,
+                "location": "left",
+                "color": [
+                  "white",
+                  "gray"
+                ],
+                "size": "large",
+                "description": "closed door with visible hinge"
+              },
+              "wall": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "plain wall behind the person"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 172,
+            "total_tokens": 658
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1326.851542,
+            "prompt_eval_duration_ms": 44.085462,
+            "generation_duration_ms": 1242.283522,
+            "load_duration_ms": 38.655926,
+            "tokens_per_second": 138.45470615523467
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2591,
+        "total_time_ms": 6853.10547,
+        "average_speed": 138.17827796937974
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a man standing indoors, likely in a hallway or a room with a minimalist, clean background. The setting is simple, featuring white walls and a closed white door with a visible handle, suggesting a modern or office-like environment. The lighting is soft and even, likely from an overhead source, casting gentle shadows and giving the scene a calm, neutral tone.\n\nThe man is dressed in formal attire, consisting of a dark navy blazer, a light blue dress shirt, and a striped tie with alternating navy and white stripes. He is also wearing dark gray trousers and a brown belt, which adds a subtle contrast to the overall dark and light color scheme. His glasses have a classic, rectangular frame, and his hair is neatly styled, contributing to his polished appearance. His posture is upright and composed, with his hands resting slightly apart at his sides, exuding confidence and professionalism.\n\nThe overall composition is straightforward and centered, with the man positioned in the middle of the frame, drawing the viewer's attention directly to him. The background is uncluttered, ensuring that the focus remains on the subject. The colors are muted, dominated by the dark tones of the blazer and tie, contrasted by the lighter shirt and background, creating a balanced and sophisticated visual. The image conveys a sense of formality, professionalism, and simplicity.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 272,
+            "total_tokens": 569
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13761.390506,
+            "prompt_eval_duration_ms": 3580.377006,
+            "generation_duration_ms": 10141.43662,
+            "load_duration_ms": 37.621939,
+            "tokens_per_second": 26.820657683112355
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image prominently features a person standing in a formal pose. This individual is dressed in a black blazer, a light blue dress shirt, and a striped tie with navy and white colors. The person is also wearing glasses and has neatly styled dark hair. The attire suggests a professional or semi-formal setting, and the individual's posture is upright, indicating a sense of confidence or readiness. The person's hands are positioned at their sides, further emphasizing a composed demeanor.\n\nIn the background, the setting appears to be an indoor environment, likely an office or a similar professional space. The background consists of a plain white wall with a visible door frame on the right side, suggesting a corridor or hallway. The simplicity of the background, with its neutral colors and minimalistic design, contrasts with the more detailed and structured appearance of the person in the foreground. The lighting in the image is even and soft, highlighting the person without creating harsh shadows, which helps to maintain focus on the individual.\n\nThe relationship between the foreground and background is one of contrast and emphasis. The person in the foreground is the central subject, drawing the viewer's attention due to their detailed attire and composed stance. The background, being simple and uncluttered, serves to enhance the prominence of the individual by providing a neutral backdrop that does not distract from the subject. This arrangement effectively creates a clear visual hierarchy, where the person is the focal point, and the background supports the overall professional and formal tone of the image.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 302,
+            "total_tokens": 605
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11342.881304,
+            "prompt_eval_duration_ms": 72.957893,
+            "generation_duration_ms": 11230.302932,
+            "load_duration_ms": 37.704994,
+            "tokens_per_second": 26.891527488494642
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a single person standing in a neutral, indoor setting, likely a hallway or room with white walls and doors. The individual is dressed formally, wearing a dark blazer, a light blue dress shirt, a striped tie, and gray trousers. The tie features a pattern of alternating dark and light stripes, adding a touch of visual interest to the outfit. The person is also wearing glasses, which contribute to a professional or intellectual appearance. The posture is upright and composed, with hands resting at the sides, suggesting a calm and confident demeanor. There are no animals or other people visible in the image, and the individual appears to be posing for the photograph, as indicated by the direct stance and neutral expression. The background is minimalistic, with no significant distractions, which emphasizes the subject's attire and posture. The overall composition suggests a focus on professionalism, style, or a formal presentation. There are no interactions with other elements since the person is the sole subject in the frame. The lighting is even, highlighting the details of the clothing and the person's features without casting harsh shadows.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 219,
+            "total_tokens": 525
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8302.666154,
+            "prompt_eval_duration_ms": 77.246754,
+            "generation_duration_ms": 8182.313362,
+            "load_duration_ms": 41.118744,
+            "tokens_per_second": 26.765046791909946
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood that is primarily neutral, with subtle undertones of seriousness and introspection. The individual is dressed formally in a dark suit, white shirt, and striped tie, which suggests a professional or formal setting. The neutral background, consisting of plain walls and doors, further emphasizes a sense of simplicity and focus on the subject. The person's posture is upright and composed, with hands resting at their sides, which adds to the overall impression of formality and seriousness. The lighting is even and soft, avoiding harsh shadows, which contributes to a calm and controlled atmosphere.\n\nThe emotions evoked are largely subdued and contemplative. The individual's direct gaze and neutral facial expression suggest a sense of confidence or perhaps a degree of seriousness, without overtly displaying joy or distress. There is no visible smile or frown, which reinforces the neutral tone. The choice of dark clothing and the formal attire may evoke feelings of professionalism or formality, but it also carries a sense of restraint and perhaps even a touch of solemnity.\n\nOverall, the image's tone is neutral, leaning slightly toward the serious or contemplative. The visual elements that contribute to this atmosphere include the formal attire, the neutral background, the even lighting, and the subject's composed posture and expression. These elements work together to create a mood that is thoughtful and unemotional, rather than overtly positive or negative.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 280,
+            "total_tokens": 588
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10573.926547,
+            "prompt_eval_duration_ms": 72.353833,
+            "generation_duration_ms": 10462.052901,
+            "load_duration_ms": 37.513283,
+            "tokens_per_second": 26.763389809779742
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\", \"gray\", \"blue\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"A person wearing a black blazer, blue shirt, striped tie, glasses, and a brown belt. The person is standing with hands at their sides.\"\n    }\n  },\n  \"man-made\": {\n    \"clothing\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\", \"gray\", \"blue\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"Includes a black blazer, blue shirt, striped tie, glasses, and a brown belt.\"\n    },\n    \"door\": {\n      \"count\": 1,\n      \"location\": \"background, center\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"A closed door with a white frame and panel.\"\n    },\n    \"door handle\": {\n      \"count\": 1,\n      \"location\": \"background, right\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"A metallic door handle on the right side of the door.\"\n    }\n  },\n  \"natural\": {}\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "black",
+                  "gray",
+                  "blue",
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "A person wearing a black blazer, blue shirt, striped tie, glasses, and a brown belt. The person is standing with hands at their sides."
+              }
+            },
+            "man-made": {
+              "clothing": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "black",
+                  "gray",
+                  "blue",
+                  "brown"
+                ],
+                "size": "medium",
+                "description": "Includes a black blazer, blue shirt, striped tie, glasses, and a brown belt."
+              },
+              "door": {
+                "count": 1,
+                "location": "background, center",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "A closed door with a white frame and panel."
+              },
+              "door handle": {
+                "count": 1,
+                "location": "background, right",
+                "color": [
+                  "silver"
+                ],
+                "size": "small",
+                "description": "A metallic door handle on the right side of the door."
+              }
+            },
+            "natural": {}
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 287,
+            "total_tokens": 773
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10832.172878,
+            "prompt_eval_duration_ms": 136.604998,
+            "generation_duration_ms": 10656.452435,
+            "load_duration_ms": 37.170322,
+            "tokens_per_second": 26.932039696191822
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3060,
+        "total_time_ms": 54813.03738899999,
+        "average_speed": 26.834532293897702
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -563,300 +857,6 @@
         "total_tokens": 3105,
         "total_time_ms": 32405.643044,
         "average_speed": 42.029246919646425
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a man standing against a plain white door with vertical paneling, suggesting a simple, possibly residential or office setting. The man is dressed in a formal manner, wearing a dark, possibly navy blue, blazer over a light gray dress shirt paired with a striped tie in shades of blue and white. His attire is completed with dark gray trousers and a brown belt, adding a touch of contrast to the otherwise monochromatic outfit. He wears round-framed glasses, which give him a scholarly or intellectual appearance. The lighting in the image is even and soft, likely from an overhead source, casting minimal shadows and highlighting the subject's features and attire without creating harsh contrasts. The overall composition is straightforward, with the subject centered in the frame, creating a balanced and focused image. The simplicity of the background and the subject's attire suggests a formal or professional context, possibly a portrait or a casual office photograph.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 185,
-            "total_tokens": 482
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1439.731816,
-            "prompt_eval_duration_ms": 78.711267,
-            "generation_duration_ms": 1323.507522,
-            "load_duration_ms": 35.885099,
-            "tokens_per_second": 139.78008959136085
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, a person stands centered, dressed in a formal outfit consisting of a dark blazer, a light-colored shirt, a striped tie, and dark trousers, complemented by a brown belt. The individual's attire suggests a professional or semi-formal setting, and their posture, with hands slightly away from the body and head turned to the side, conveys a sense of contemplation or casual engagement. The background, which is the wall behind the person, is plain and white, providing a stark contrast to the darker tones of the clothing. This simplicity ensures that the focus remains on the individual, while the white wall serves as a neutral backdrop that enhances the visibility of the subject and their attire. The relationship between the foreground and background is one of contrast and emphasis, where the detailed and colorful elements of the person's outfit stand out against the plain and unobtrusive wall.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 180,
-            "total_tokens": 483
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1365.481331,
-            "prompt_eval_duration_ms": 29.180097,
-            "generation_duration_ms": 1296.808259,
-            "load_duration_ms": 37.626728,
-            "tokens_per_second": 138.80232389852478
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a single individual standing against a plain, light-colored wall. The person is dressed in a formal outfit consisting of a dark blazer, a light blue shirt, a striped tie, and dark trousers, suggesting a professional or semi-formal setting. They are wearing glasses and have a neutral expression, looking slightly to the side. The individual is not interacting with any other people or animals in the image. The setting appears to be indoors, possibly in a hallway or a room with a door visible on the right side of the frame. The person's posture is upright and relaxed, and there are no other objects or elements in the image that suggest any interaction or activity beyond the individual's presence. The overall scene is static, with no indication of movement or interaction between the person and their environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 162,
-            "total_tokens": 468
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1266.350544,
-            "prompt_eval_duration_ms": 29.093577,
-            "generation_duration_ms": 1198.694884,
-            "load_duration_ms": 36.859101,
-            "tokens_per_second": 135.1469854108429
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a sense of quiet contemplation and perhaps a touch of melancholy. The subject's posture, with hands casually tucked into pockets and a slightly tilted head, suggests a reflective or introspective mood. The choice of attire\u2014a dark blazer, a neatly tucked-in shirt, and a striped tie\u2014implies a formal or professional setting, yet the relaxed stance and the slightly distant gaze give the impression of someone who is not fully engaged or perhaps even slightly detached from the environment. The neutral background, with its plain white walls and simple door, further emphasizes the subject's isolation and the subdued atmosphere. The lighting is soft and even, avoiding any dramatic shadows or highlights that might intensify the mood. Overall, the tone is neutral with a subtle undercurrent of introspection and perhaps a hint of solitude. The visual elements\u2014the subject's attire, posture, and the minimalist background\u2014work together to create a calm, almost melancholic atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 192,
-            "total_tokens": 500
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1454.690237,
-            "prompt_eval_duration_ms": 31.242497,
-            "generation_duration_ms": 1384.209923,
-            "load_duration_ms": 37.534229,
-            "tokens_per_second": 138.70728479093557
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"wearing glasses, a suit, and a striped tie\"\n    }\n  },\n  \"man-made\": {\n    \"door\": {\n      \"count\": 1,\n      \"location\": \"left\",\n      \"color\": [\"white\", \"gray\"],\n      \"size\": \"large\",\n      \"description\": \"closed door with visible hinge\"\n    },\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"plain wall behind the person\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black",
-                  "gray"
-                ],
-                "size": "medium",
-                "description": "wearing glasses, a suit, and a striped tie"
-              }
-            },
-            "man-made": {
-              "door": {
-                "count": 1,
-                "location": "left",
-                "color": [
-                  "white",
-                  "gray"
-                ],
-                "size": "large",
-                "description": "closed door with visible hinge"
-              },
-              "wall": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "plain wall behind the person"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 172,
-            "total_tokens": 658
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1326.851542,
-            "prompt_eval_duration_ms": 44.085462,
-            "generation_duration_ms": 1242.283522,
-            "load_duration_ms": 38.655926,
-            "tokens_per_second": 138.45470615523467
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2591,
-        "total_time_ms": 6853.10547,
-        "average_speed": 138.17827796937974
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a man standing indoors, likely in a hallway or a room with a minimalist, clean background. The setting is simple, featuring white walls and a closed white door with a visible handle, suggesting a modern or office-like environment. The lighting is soft and even, likely from an overhead source, casting gentle shadows and giving the scene a calm, neutral tone.\n\nThe man is dressed in formal attire, consisting of a dark navy blazer, a light blue dress shirt, and a striped tie with alternating navy and white stripes. He is also wearing dark gray trousers and a brown belt, which adds a subtle contrast to the overall dark and light color scheme. His glasses have a classic, rectangular frame, and his hair is neatly styled, contributing to his polished appearance. His posture is upright and composed, with his hands resting slightly apart at his sides, exuding confidence and professionalism.\n\nThe overall composition is straightforward and centered, with the man positioned in the middle of the frame, drawing the viewer's attention directly to him. The background is uncluttered, ensuring that the focus remains on the subject. The colors are muted, dominated by the dark tones of the blazer and tie, contrasted by the lighter shirt and background, creating a balanced and sophisticated visual. The image conveys a sense of formality, professionalism, and simplicity.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 272,
-            "total_tokens": 569
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13761.390506,
-            "prompt_eval_duration_ms": 3580.377006,
-            "generation_duration_ms": 10141.43662,
-            "load_duration_ms": 37.621939,
-            "tokens_per_second": 26.820657683112355
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image prominently features a person standing in a formal pose. This individual is dressed in a black blazer, a light blue dress shirt, and a striped tie with navy and white colors. The person is also wearing glasses and has neatly styled dark hair. The attire suggests a professional or semi-formal setting, and the individual's posture is upright, indicating a sense of confidence or readiness. The person's hands are positioned at their sides, further emphasizing a composed demeanor.\n\nIn the background, the setting appears to be an indoor environment, likely an office or a similar professional space. The background consists of a plain white wall with a visible door frame on the right side, suggesting a corridor or hallway. The simplicity of the background, with its neutral colors and minimalistic design, contrasts with the more detailed and structured appearance of the person in the foreground. The lighting in the image is even and soft, highlighting the person without creating harsh shadows, which helps to maintain focus on the individual.\n\nThe relationship between the foreground and background is one of contrast and emphasis. The person in the foreground is the central subject, drawing the viewer's attention due to their detailed attire and composed stance. The background, being simple and uncluttered, serves to enhance the prominence of the individual by providing a neutral backdrop that does not distract from the subject. This arrangement effectively creates a clear visual hierarchy, where the person is the focal point, and the background supports the overall professional and formal tone of the image.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 302,
-            "total_tokens": 605
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11342.881304,
-            "prompt_eval_duration_ms": 72.957893,
-            "generation_duration_ms": 11230.302932,
-            "load_duration_ms": 37.704994,
-            "tokens_per_second": 26.891527488494642
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a single person standing in a neutral, indoor setting, likely a hallway or room with white walls and doors. The individual is dressed formally, wearing a dark blazer, a light blue dress shirt, a striped tie, and gray trousers. The tie features a pattern of alternating dark and light stripes, adding a touch of visual interest to the outfit. The person is also wearing glasses, which contribute to a professional or intellectual appearance. The posture is upright and composed, with hands resting at the sides, suggesting a calm and confident demeanor. There are no animals or other people visible in the image, and the individual appears to be posing for the photograph, as indicated by the direct stance and neutral expression. The background is minimalistic, with no significant distractions, which emphasizes the subject's attire and posture. The overall composition suggests a focus on professionalism, style, or a formal presentation. There are no interactions with other elements since the person is the sole subject in the frame. The lighting is even, highlighting the details of the clothing and the person's features without casting harsh shadows.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 219,
-            "total_tokens": 525
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8302.666154,
-            "prompt_eval_duration_ms": 77.246754,
-            "generation_duration_ms": 8182.313362,
-            "load_duration_ms": 41.118744,
-            "tokens_per_second": 26.765046791909946
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood that is primarily neutral, with subtle undertones of seriousness and introspection. The individual is dressed formally in a dark suit, white shirt, and striped tie, which suggests a professional or formal setting. The neutral background, consisting of plain walls and doors, further emphasizes a sense of simplicity and focus on the subject. The person's posture is upright and composed, with hands resting at their sides, which adds to the overall impression of formality and seriousness. The lighting is even and soft, avoiding harsh shadows, which contributes to a calm and controlled atmosphere.\n\nThe emotions evoked are largely subdued and contemplative. The individual's direct gaze and neutral facial expression suggest a sense of confidence or perhaps a degree of seriousness, without overtly displaying joy or distress. There is no visible smile or frown, which reinforces the neutral tone. The choice of dark clothing and the formal attire may evoke feelings of professionalism or formality, but it also carries a sense of restraint and perhaps even a touch of solemnity.\n\nOverall, the image's tone is neutral, leaning slightly toward the serious or contemplative. The visual elements that contribute to this atmosphere include the formal attire, the neutral background, the even lighting, and the subject's composed posture and expression. These elements work together to create a mood that is thoughtful and unemotional, rather than overtly positive or negative.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 280,
-            "total_tokens": 588
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10573.926547,
-            "prompt_eval_duration_ms": 72.353833,
-            "generation_duration_ms": 10462.052901,
-            "load_duration_ms": 37.513283,
-            "tokens_per_second": 26.763389809779742
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\", \"gray\", \"blue\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"A person wearing a black blazer, blue shirt, striped tie, glasses, and a brown belt. The person is standing with hands at their sides.\"\n    }\n  },\n  \"man-made\": {\n    \"clothing\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\", \"gray\", \"blue\", \"brown\"],\n      \"size\": \"medium\",\n      \"description\": \"Includes a black blazer, blue shirt, striped tie, glasses, and a brown belt.\"\n    },\n    \"door\": {\n      \"count\": 1,\n      \"location\": \"background, center\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"A closed door with a white frame and panel.\"\n    },\n    \"door handle\": {\n      \"count\": 1,\n      \"location\": \"background, right\",\n      \"color\": [\"silver\"],\n      \"size\": \"small\",\n      \"description\": \"A metallic door handle on the right side of the door.\"\n    }\n  },\n  \"natural\": {}\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "black",
-                  "gray",
-                  "blue",
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "A person wearing a black blazer, blue shirt, striped tie, glasses, and a brown belt. The person is standing with hands at their sides."
-              }
-            },
-            "man-made": {
-              "clothing": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "black",
-                  "gray",
-                  "blue",
-                  "brown"
-                ],
-                "size": "medium",
-                "description": "Includes a black blazer, blue shirt, striped tie, glasses, and a brown belt."
-              },
-              "door": {
-                "count": 1,
-                "location": "background, center",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "A closed door with a white frame and panel."
-              },
-              "door handle": {
-                "count": 1,
-                "location": "background, right",
-                "color": [
-                  "silver"
-                ],
-                "size": "small",
-                "description": "A metallic door handle on the right side of the door."
-              }
-            },
-            "natural": {}
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 287,
-            "total_tokens": 773
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10832.172878,
-            "prompt_eval_duration_ms": 136.604998,
-            "generation_duration_ms": 10656.452435,
-            "load_duration_ms": 37.170322,
-            "tokens_per_second": 26.932039696191822
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3060,
-        "total_time_ms": 54813.03738899999,
-        "average_speed": 26.834532293897702
       }
     },
     {

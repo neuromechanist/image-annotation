@@ -7,6 +7,334 @@
   "timestamp": "2025-08-30T17:59:15.157495+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a dynamic moment on a tennis court, set against a backdrop of a weathered concrete wall that shows signs of age and wear, with a faint red stain running vertically down the middle. The court itself is a vibrant green, contrasting sharply with the orange shirt of the player, who is mid-action, swinging his racket to hit a bright yellow tennis ball. The player's dark hair and dark shorts provide a subtle contrast to the bright colors of his attire. The lighting is bright and natural, suggesting the photo was taken on a sunny day, casting sharp shadows and highlighting the textures of the wall and the court. The overall composition is balanced, with the player positioned slightly off-center, drawing the viewer's eye towards the ball and the action. The simplicity of the background emphasizes the player and the sport, creating a focused and energetic scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 171,
+            "total_tokens": 468
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1349.096503,
+            "prompt_eval_duration_ms": 80.351829,
+            "generation_duration_ms": 1229.82706,
+            "load_duration_ms": 36.627189,
+            "tokens_per_second": 139.0439400479609
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, a young tennis player, dressed in a vibrant orange t-shirt and dark shorts, is captured mid-action, poised to strike a bright yellow tennis ball with his racket. His focused expression and the dynamic pose suggest a moment of intense concentration and athleticism. The tennis court beneath him is a vivid green, marked with white lines that define the boundaries of the playing area. The background, slightly out of focus, reveals a large, textured concrete wall that serves as the backdrop to the scene. The wall's rough surface and the subtle variations in its color, from a lighter shade at the top to a deeper green at the bottom, add depth and contrast to the image. The wall's presence anchors the scene, providing a sense of scale and location, while the tennis player and the court in the foreground create a sense of action and immediacy, drawing the viewer into the moment of the game.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 182,
+            "total_tokens": 485
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1386.832019,
+            "prompt_eval_duration_ms": 29.720373,
+            "generation_duration_ms": 1317.340366,
+            "load_duration_ms": 37.671329,
+            "tokens_per_second": 138.15715717618875
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a young man is captured mid-action on a tennis court, actively engaged in a game of tennis. He is dressed in a bright orange t-shirt and dark shorts, holding a tennis racket in his right hand, poised to strike the incoming yellow tennis ball. His body is slightly bent forward, indicating his readiness and focus on the ball. The court beneath him is a vibrant green, contrasting with the red clay surface of the playing area. The background features a large concrete wall, which is a common feature in tennis courts, providing a backdrop that emphasizes the player and the game. The tennis ball is in motion, suggesting the dynamic nature of the game. The player's interaction with the ball and racket highlights the sport's physical and strategic elements, while the court and wall provide the setting for this athletic activity.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 166,
+            "total_tokens": 472
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1264.6309,
+            "prompt_eval_duration_ms": 29.970694,
+            "generation_duration_ms": 1194.637497,
+            "load_duration_ms": 37.821035,
+            "tokens_per_second": 138.95428564469378
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of dynamic energy and youthful determination, contributing to an overall positive mood. The vibrant orange shirt of the tennis player stands out against the muted tones of the court and wall, drawing the viewer's eye and symbolizing enthusiasm and passion. The player's focused posture and the trajectory of the ball suggest a moment of intense concentration and skill, hinting at a competitive yet enjoyable game. The bright yellow tennis ball contrasts sharply with the green and red of the court, emphasizing the action and movement. The simplicity of the background, with its plain wall and clear sky, further focuses attention on the player and the game, creating a sense of clarity and simplicity that can be uplifting. The image does not convey any negative emotions; instead, it conveys a feeling of active participation and enjoyment, making the overall tone decidedly positive.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 169,
+            "total_tokens": 477
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1286.278691,
+            "prompt_eval_duration_ms": 30.530265,
+            "generation_duration_ms": 1216.589771,
+            "load_duration_ms": 37.033838,
+            "tokens_per_second": 138.91288915004367
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"orange\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"wearing an orange shirt and black shorts, holding a tennis racket, and appears to be playing tennis\"\n    }\n  },\n  \"man-made\": {\n    \"tennis_racket\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"being held by the person\"\n    },\n    \"tennis_ball\": {\n      \"count\": 1,\n      \"location\": \"bottom right\",\n      \"color\": [\"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"on the ground\"\n    },\n    \"tennis_court\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"green\", \"red\"],\n      \"size\": \"large\",\n      \"description\": \"where the person is playing tennis\"\n    },\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"gray\", \"green\"],\n      \"size\": \"large\",\n      \"description\": \"behind the tennis court\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "orange",
+                  "black"
+                ],
+                "size": "medium",
+                "description": "wearing an orange shirt and black shorts, holding a tennis racket, and appears to be playing tennis"
+              }
+            },
+            "man-made": {
+              "tennis_racket": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black",
+                  "white"
+                ],
+                "size": "small",
+                "description": "being held by the person"
+              },
+              "tennis_ball": {
+                "count": 1,
+                "location": "bottom right",
+                "color": [
+                  "yellow"
+                ],
+                "size": "small",
+                "description": "on the ground"
+              },
+              "tennis_court": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "green",
+                  "red"
+                ],
+                "size": "large",
+                "description": "where the person is playing tennis"
+              },
+              "wall": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "gray",
+                  "green"
+                ],
+                "size": "large",
+                "description": "behind the tennis court"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 287,
+            "total_tokens": 773
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2127.477105,
+            "prompt_eval_duration_ms": 43.76865,
+            "generation_duration_ms": 2042.845449,
+            "load_duration_ms": 38.478115,
+            "tokens_per_second": 140.49031469340488
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2675,
+        "total_time_ms": 7414.315218,
+        "average_speed": 139.1117173424584
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a tennis player in action on a clay court. The setting appears to be an outdoor tennis facility, as indicated by the bright, natural lighting and the visible green wall in the background. The wall is divided into two sections: the upper portion is a light gray or beige concrete surface, while the lower section is painted a vibrant green, serving as a backdrop for the court. The court itself is a classic reddish-brown clay surface, characteristic of tennis courts used in professional tournaments.\n\nThe main subject is a male tennis player, captured mid-swing as he prepares to hit a tennis ball. He is wearing a bright orange T-shirt and dark blue shorts, which stand out vividly against the muted tones of the court and wall. His hair is dark and tied back, and he is holding a tennis racket with both hands, positioned to strike the ball. The ball is visible in the air, slightly blurred, suggesting motion and the dynamic nature of the shot.\n\nThe lighting is bright and even, likely from sunlight, casting soft shadows on the court and highlighting the player's form. The composition is dynamic, with the player positioned slightly off-center, creating a sense of movement and action. The green wall provides a contrasting backdrop that emphasizes the player and the court, while the clay surface adds texture and color depth to the scene. Overall, the image conveys the intensity and focus of a tennis match.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 285,
+            "total_tokens": 582
+          },
+          "performance_metrics": {
+            "total_duration_ms": 14103.206148,
+            "prompt_eval_duration_ms": 3472.269272,
+            "generation_duration_ms": 10590.755484,
+            "load_duration_ms": 37.693674,
+            "tokens_per_second": 26.91026154182902
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the closest elements to the viewer are a tennis player and the tennis court. The player, wearing an orange shirt and dark shorts, is in motion, holding a tennis racket and preparing to hit a tennis ball. The player's stance and the position of the racket suggest they are actively engaged in a game or practice session. The tennis court surface is a combination of green and red, indicating a standard hard court design, with visible white lines marking the boundaries of the playing area. The player's dynamic posture and the presence of the ball create a sense of action and movement.\n\nIn the background, the setting is defined by a large, plain wall that serves as the backdrop for the court. The wall is divided into two distinct sections: the upper portion is a light gray or beige, while the lower portion is a solid green. The green section of the wall matches the color of the court's surface, creating a visual connection between the foreground and background. The wall appears to be part of an indoor or covered tennis facility, as suggested by its solid, unbroken surface and the absence of any natural elements like trees or sky. The wall's simplicity contrasts with the vibrant activity in the foreground, emphasizing the focus on the player and the game.\n\nThe relationship between the foreground and background is one of contrast and complement. The vibrant, active foreground of the player and the court is set against the static, neutral backdrop of the wall. The green sections of the wall visually tie into the green of the court, creating a cohesive color scheme that draws the viewer's eye from the background to the foreground. The wall's plainness serves to highlight the dynamic action of the player, making the scene feel focused and contained within the space of the court. Together, these elements create a clear and engaging visual narrative centered on the tennis player and their movement.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 375,
+            "total_tokens": 678
+          },
+          "performance_metrics": {
+            "total_duration_ms": 14065.170881,
+            "prompt_eval_duration_ms": 71.161454,
+            "generation_duration_ms": 13953.81577,
+            "load_duration_ms": 37.954748,
+            "tokens_per_second": 26.874369432784906
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a tennis player in action on a tennis court. The individual is wearing an orange shirt and dark shorts, suggesting they are actively engaged in a match or practice session. The player is positioned on a green and red tennis court, with a solid green wall serving as the backdrop. The person is holding a tennis racket in their right hand, which is extended outward as they prepare to hit a tennis ball that is visible in the air near them. The player's stance and focus indicate they are concentrating on the ball, demonstrating the dynamic nature of the sport.\n\nThe tennis racket is clearly visible, with its strings and handle showing the player's grip. The tennis ball is captured mid-air, emphasizing the motion and timing involved in the game. The player's body language, with one arm extended and the other slightly outstretched for balance, suggests they are in the process of executing a forehand shot. The green wall behind the player provides a stark contrast to the vibrant orange of their shirt, drawing attention to their movement and the action taking place.\n\nThere are no other people or animals visible in the image, focusing solely on the individual's interaction with the tennis ball and racket. The relationship between the player and the ball is central, as the player's skill and timing are crucial for making contact and directing the ball effectively. The scene captures the essence of tennis, highlighting the physical effort, precision, and focus required in the sport. The image emphasizes the solitary yet intense nature of the player's engagement with the game.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 306,
+            "total_tokens": 612
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11501.261206,
+            "prompt_eval_duration_ms": 73.9008,
+            "generation_duration_ms": 11386.729005,
+            "load_duration_ms": 38.386831,
+            "tokens_per_second": 26.873389176613678
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of focused determination and active engagement, evoking feelings of energy, concentration, and a sense of purpose. The individual in the foreground, dressed in bright orange, is captured mid-action, swinging a tennis racket with a tennis ball in motion, suggesting a dynamic and competitive atmosphere. The vibrant orange shirt stands out against the neutral tones of the court and the green wall in the background, drawing attention to the player and emphasizing their intensity and effort. The bright, sunny lighting enhances the overall positive tone, contributing to a sense of optimism and vitality. The clean lines of the court and the structured environment of the tennis setting further reinforce a sense of order and discipline, aligning with the player's focused demeanor. The absence of any visible distractions or negative elements in the background adds to the clarity and positivity of the scene. Overall, the image's tone is decidedly positive, with visual elements like the bright colors, clear lighting, and the player's active stance working together to create an atmosphere of enthusiasm and dedication.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 207,
+            "total_tokens": 515
+          },
+          "performance_metrics": {
+            "total_duration_ms": 7868.050109,
+            "prompt_eval_duration_ms": 76.294834,
+            "generation_duration_ms": 7749.153772,
+            "load_duration_ms": 39.380366,
+            "tokens_per_second": 26.712594186471385
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"orange\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Playing tennis, holding a racket, wearing an orange shirt and black shorts.\"\n    }\n  },\n  \"man-made\": {\n    \"tennis_racket\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"Being held by the person, used for playing tennis.\"\n    },\n    \"tennis_court\": {\n      \"count\": 1,\n      \"location\": \"bottom, foreground\",\n      \"color\": [\"green\", \"red\"],\n      \"size\": \"large\",\n      \"description\": \"Outdoor tennis court with green and red surfaces.\"\n    },\n    \"tennis_ball\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"In motion, part of the tennis game.\"\n    },\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"top, background\",\n      \"color\": [\"gray\", \"green\"],\n      \"size\": \"large\",\n      \"description\": \"Concrete wall with a green lower section, serving as a backdrop.\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top, background\",\n      \"size\": \"large\",\n      \"description\": \"Not visible in the image.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "orange",
+                  "black"
+                ],
+                "size": "medium",
+                "description": "Playing tennis, holding a racket, wearing an orange shirt and black shorts."
+              }
+            },
+            "man-made": {
+              "tennis_racket": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "black",
+                  "white"
+                ],
+                "size": "small",
+                "description": "Being held by the person, used for playing tennis."
+              },
+              "tennis_court": {
+                "count": 1,
+                "location": "bottom, foreground",
+                "color": [
+                  "green",
+                  "red"
+                ],
+                "size": "large",
+                "description": "Outdoor tennis court with green and red surfaces."
+              },
+              "tennis_ball": {
+                "count": 1,
+                "location": "right, middle",
+                "color": [
+                  "yellow"
+                ],
+                "size": "small",
+                "description": "In motion, part of the tennis game."
+              },
+              "wall": {
+                "count": 1,
+                "location": "top, background",
+                "color": [
+                  "gray",
+                  "green"
+                ],
+                "size": "large",
+                "description": "Concrete wall with a green lower section, serving as a backdrop."
+              }
+            },
+            "natural": {
+              "sky": {
+                "count": 1,
+                "location": "top, background",
+                "size": "large",
+                "description": "Not visible in the image."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 357,
+            "total_tokens": 843
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13413.253112,
+            "prompt_eval_duration_ms": 135.666123,
+            "generation_duration_ms": 13236.729737,
+            "load_duration_ms": 38.46052,
+            "tokens_per_second": 26.97040787968156
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3230,
+        "total_time_ms": 60950.94145599999,
+        "average_speed": 26.86820444347611
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -492,334 +820,6 @@
         "total_tokens": 2892,
         "total_time_ms": 27333.43303,
         "average_speed": 42.079954252781036
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a dynamic moment on a tennis court, set against a backdrop of a weathered concrete wall that shows signs of age and wear, with a faint red stain running vertically down the middle. The court itself is a vibrant green, contrasting sharply with the orange shirt of the player, who is mid-action, swinging his racket to hit a bright yellow tennis ball. The player's dark hair and dark shorts provide a subtle contrast to the bright colors of his attire. The lighting is bright and natural, suggesting the photo was taken on a sunny day, casting sharp shadows and highlighting the textures of the wall and the court. The overall composition is balanced, with the player positioned slightly off-center, drawing the viewer's eye towards the ball and the action. The simplicity of the background emphasizes the player and the sport, creating a focused and energetic scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 171,
-            "total_tokens": 468
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1349.096503,
-            "prompt_eval_duration_ms": 80.351829,
-            "generation_duration_ms": 1229.82706,
-            "load_duration_ms": 36.627189,
-            "tokens_per_second": 139.0439400479609
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, a young tennis player, dressed in a vibrant orange t-shirt and dark shorts, is captured mid-action, poised to strike a bright yellow tennis ball with his racket. His focused expression and the dynamic pose suggest a moment of intense concentration and athleticism. The tennis court beneath him is a vivid green, marked with white lines that define the boundaries of the playing area. The background, slightly out of focus, reveals a large, textured concrete wall that serves as the backdrop to the scene. The wall's rough surface and the subtle variations in its color, from a lighter shade at the top to a deeper green at the bottom, add depth and contrast to the image. The wall's presence anchors the scene, providing a sense of scale and location, while the tennis player and the court in the foreground create a sense of action and immediacy, drawing the viewer into the moment of the game.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 182,
-            "total_tokens": 485
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1386.832019,
-            "prompt_eval_duration_ms": 29.720373,
-            "generation_duration_ms": 1317.340366,
-            "load_duration_ms": 37.671329,
-            "tokens_per_second": 138.15715717618875
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a young man is captured mid-action on a tennis court, actively engaged in a game of tennis. He is dressed in a bright orange t-shirt and dark shorts, holding a tennis racket in his right hand, poised to strike the incoming yellow tennis ball. His body is slightly bent forward, indicating his readiness and focus on the ball. The court beneath him is a vibrant green, contrasting with the red clay surface of the playing area. The background features a large concrete wall, which is a common feature in tennis courts, providing a backdrop that emphasizes the player and the game. The tennis ball is in motion, suggesting the dynamic nature of the game. The player's interaction with the ball and racket highlights the sport's physical and strategic elements, while the court and wall provide the setting for this athletic activity.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 166,
-            "total_tokens": 472
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1264.6309,
-            "prompt_eval_duration_ms": 29.970694,
-            "generation_duration_ms": 1194.637497,
-            "load_duration_ms": 37.821035,
-            "tokens_per_second": 138.95428564469378
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of dynamic energy and youthful determination, contributing to an overall positive mood. The vibrant orange shirt of the tennis player stands out against the muted tones of the court and wall, drawing the viewer's eye and symbolizing enthusiasm and passion. The player's focused posture and the trajectory of the ball suggest a moment of intense concentration and skill, hinting at a competitive yet enjoyable game. The bright yellow tennis ball contrasts sharply with the green and red of the court, emphasizing the action and movement. The simplicity of the background, with its plain wall and clear sky, further focuses attention on the player and the game, creating a sense of clarity and simplicity that can be uplifting. The image does not convey any negative emotions; instead, it conveys a feeling of active participation and enjoyment, making the overall tone decidedly positive.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 169,
-            "total_tokens": 477
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1286.278691,
-            "prompt_eval_duration_ms": 30.530265,
-            "generation_duration_ms": 1216.589771,
-            "load_duration_ms": 37.033838,
-            "tokens_per_second": 138.91288915004367
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"orange\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"wearing an orange shirt and black shorts, holding a tennis racket, and appears to be playing tennis\"\n    }\n  },\n  \"man-made\": {\n    \"tennis_racket\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"being held by the person\"\n    },\n    \"tennis_ball\": {\n      \"count\": 1,\n      \"location\": \"bottom right\",\n      \"color\": [\"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"on the ground\"\n    },\n    \"tennis_court\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"green\", \"red\"],\n      \"size\": \"large\",\n      \"description\": \"where the person is playing tennis\"\n    },\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"gray\", \"green\"],\n      \"size\": \"large\",\n      \"description\": \"behind the tennis court\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "orange",
-                  "black"
-                ],
-                "size": "medium",
-                "description": "wearing an orange shirt and black shorts, holding a tennis racket, and appears to be playing tennis"
-              }
-            },
-            "man-made": {
-              "tennis_racket": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black",
-                  "white"
-                ],
-                "size": "small",
-                "description": "being held by the person"
-              },
-              "tennis_ball": {
-                "count": 1,
-                "location": "bottom right",
-                "color": [
-                  "yellow"
-                ],
-                "size": "small",
-                "description": "on the ground"
-              },
-              "tennis_court": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "green",
-                  "red"
-                ],
-                "size": "large",
-                "description": "where the person is playing tennis"
-              },
-              "wall": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "gray",
-                  "green"
-                ],
-                "size": "large",
-                "description": "behind the tennis court"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 287,
-            "total_tokens": 773
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2127.477105,
-            "prompt_eval_duration_ms": 43.76865,
-            "generation_duration_ms": 2042.845449,
-            "load_duration_ms": 38.478115,
-            "tokens_per_second": 140.49031469340488
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2675,
-        "total_time_ms": 7414.315218,
-        "average_speed": 139.1117173424584
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a tennis player in action on a clay court. The setting appears to be an outdoor tennis facility, as indicated by the bright, natural lighting and the visible green wall in the background. The wall is divided into two sections: the upper portion is a light gray or beige concrete surface, while the lower section is painted a vibrant green, serving as a backdrop for the court. The court itself is a classic reddish-brown clay surface, characteristic of tennis courts used in professional tournaments.\n\nThe main subject is a male tennis player, captured mid-swing as he prepares to hit a tennis ball. He is wearing a bright orange T-shirt and dark blue shorts, which stand out vividly against the muted tones of the court and wall. His hair is dark and tied back, and he is holding a tennis racket with both hands, positioned to strike the ball. The ball is visible in the air, slightly blurred, suggesting motion and the dynamic nature of the shot.\n\nThe lighting is bright and even, likely from sunlight, casting soft shadows on the court and highlighting the player's form. The composition is dynamic, with the player positioned slightly off-center, creating a sense of movement and action. The green wall provides a contrasting backdrop that emphasizes the player and the court, while the clay surface adds texture and color depth to the scene. Overall, the image conveys the intensity and focus of a tennis match.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 285,
-            "total_tokens": 582
-          },
-          "performance_metrics": {
-            "total_duration_ms": 14103.206148,
-            "prompt_eval_duration_ms": 3472.269272,
-            "generation_duration_ms": 10590.755484,
-            "load_duration_ms": 37.693674,
-            "tokens_per_second": 26.91026154182902
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the closest elements to the viewer are a tennis player and the tennis court. The player, wearing an orange shirt and dark shorts, is in motion, holding a tennis racket and preparing to hit a tennis ball. The player's stance and the position of the racket suggest they are actively engaged in a game or practice session. The tennis court surface is a combination of green and red, indicating a standard hard court design, with visible white lines marking the boundaries of the playing area. The player's dynamic posture and the presence of the ball create a sense of action and movement.\n\nIn the background, the setting is defined by a large, plain wall that serves as the backdrop for the court. The wall is divided into two distinct sections: the upper portion is a light gray or beige, while the lower portion is a solid green. The green section of the wall matches the color of the court's surface, creating a visual connection between the foreground and background. The wall appears to be part of an indoor or covered tennis facility, as suggested by its solid, unbroken surface and the absence of any natural elements like trees or sky. The wall's simplicity contrasts with the vibrant activity in the foreground, emphasizing the focus on the player and the game.\n\nThe relationship between the foreground and background is one of contrast and complement. The vibrant, active foreground of the player and the court is set against the static, neutral backdrop of the wall. The green sections of the wall visually tie into the green of the court, creating a cohesive color scheme that draws the viewer's eye from the background to the foreground. The wall's plainness serves to highlight the dynamic action of the player, making the scene feel focused and contained within the space of the court. Together, these elements create a clear and engaging visual narrative centered on the tennis player and their movement.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 375,
-            "total_tokens": 678
-          },
-          "performance_metrics": {
-            "total_duration_ms": 14065.170881,
-            "prompt_eval_duration_ms": 71.161454,
-            "generation_duration_ms": 13953.81577,
-            "load_duration_ms": 37.954748,
-            "tokens_per_second": 26.874369432784906
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a tennis player in action on a tennis court. The individual is wearing an orange shirt and dark shorts, suggesting they are actively engaged in a match or practice session. The player is positioned on a green and red tennis court, with a solid green wall serving as the backdrop. The person is holding a tennis racket in their right hand, which is extended outward as they prepare to hit a tennis ball that is visible in the air near them. The player's stance and focus indicate they are concentrating on the ball, demonstrating the dynamic nature of the sport.\n\nThe tennis racket is clearly visible, with its strings and handle showing the player's grip. The tennis ball is captured mid-air, emphasizing the motion and timing involved in the game. The player's body language, with one arm extended and the other slightly outstretched for balance, suggests they are in the process of executing a forehand shot. The green wall behind the player provides a stark contrast to the vibrant orange of their shirt, drawing attention to their movement and the action taking place.\n\nThere are no other people or animals visible in the image, focusing solely on the individual's interaction with the tennis ball and racket. The relationship between the player and the ball is central, as the player's skill and timing are crucial for making contact and directing the ball effectively. The scene captures the essence of tennis, highlighting the physical effort, precision, and focus required in the sport. The image emphasizes the solitary yet intense nature of the player's engagement with the game.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 306,
-            "total_tokens": 612
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11501.261206,
-            "prompt_eval_duration_ms": 73.9008,
-            "generation_duration_ms": 11386.729005,
-            "load_duration_ms": 38.386831,
-            "tokens_per_second": 26.873389176613678
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of focused determination and active engagement, evoking feelings of energy, concentration, and a sense of purpose. The individual in the foreground, dressed in bright orange, is captured mid-action, swinging a tennis racket with a tennis ball in motion, suggesting a dynamic and competitive atmosphere. The vibrant orange shirt stands out against the neutral tones of the court and the green wall in the background, drawing attention to the player and emphasizing their intensity and effort. The bright, sunny lighting enhances the overall positive tone, contributing to a sense of optimism and vitality. The clean lines of the court and the structured environment of the tennis setting further reinforce a sense of order and discipline, aligning with the player's focused demeanor. The absence of any visible distractions or negative elements in the background adds to the clarity and positivity of the scene. Overall, the image's tone is decidedly positive, with visual elements like the bright colors, clear lighting, and the player's active stance working together to create an atmosphere of enthusiasm and dedication.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 207,
-            "total_tokens": 515
-          },
-          "performance_metrics": {
-            "total_duration_ms": 7868.050109,
-            "prompt_eval_duration_ms": 76.294834,
-            "generation_duration_ms": 7749.153772,
-            "load_duration_ms": 39.380366,
-            "tokens_per_second": 26.712594186471385
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"orange\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"Playing tennis, holding a racket, wearing an orange shirt and black shorts.\"\n    }\n  },\n  \"man-made\": {\n    \"tennis_racket\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"Being held by the person, used for playing tennis.\"\n    },\n    \"tennis_court\": {\n      \"count\": 1,\n      \"location\": \"bottom, foreground\",\n      \"color\": [\"green\", \"red\"],\n      \"size\": \"large\",\n      \"description\": \"Outdoor tennis court with green and red surfaces.\"\n    },\n    \"tennis_ball\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"In motion, part of the tennis game.\"\n    },\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"top, background\",\n      \"color\": [\"gray\", \"green\"],\n      \"size\": \"large\",\n      \"description\": \"Concrete wall with a green lower section, serving as a backdrop.\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top, background\",\n      \"size\": \"large\",\n      \"description\": \"Not visible in the image.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "orange",
-                  "black"
-                ],
-                "size": "medium",
-                "description": "Playing tennis, holding a racket, wearing an orange shirt and black shorts."
-              }
-            },
-            "man-made": {
-              "tennis_racket": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "black",
-                  "white"
-                ],
-                "size": "small",
-                "description": "Being held by the person, used for playing tennis."
-              },
-              "tennis_court": {
-                "count": 1,
-                "location": "bottom, foreground",
-                "color": [
-                  "green",
-                  "red"
-                ],
-                "size": "large",
-                "description": "Outdoor tennis court with green and red surfaces."
-              },
-              "tennis_ball": {
-                "count": 1,
-                "location": "right, middle",
-                "color": [
-                  "yellow"
-                ],
-                "size": "small",
-                "description": "In motion, part of the tennis game."
-              },
-              "wall": {
-                "count": 1,
-                "location": "top, background",
-                "color": [
-                  "gray",
-                  "green"
-                ],
-                "size": "large",
-                "description": "Concrete wall with a green lower section, serving as a backdrop."
-              }
-            },
-            "natural": {
-              "sky": {
-                "count": 1,
-                "location": "top, background",
-                "size": "large",
-                "description": "Not visible in the image."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 357,
-            "total_tokens": 843
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13413.253112,
-            "prompt_eval_duration_ms": 135.666123,
-            "generation_duration_ms": 13236.729737,
-            "load_duration_ms": 38.46052,
-            "tokens_per_second": 26.97040787968156
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3230,
-        "total_time_ms": 60950.94145599999,
-        "average_speed": 26.86820444347611
       }
     },
     {

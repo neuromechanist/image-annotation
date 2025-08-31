@@ -7,6 +7,325 @@
   "timestamp": "2025-08-30T18:01:17.342423+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a serene winter scene, likely in a forested area, where a person is cross-country skiing. The skier, dressed in dark clothing and a gray beanie, stands on a groomed trail, their skis leaving distinct parallel tracks in the pristine white snow. The trail is bordered by a dense line of bare trees, their branches reaching upwards, creating a natural frame around the skier. The lighting suggests it is either early morning or late afternoon, as the sun casts long shadows and a soft, golden hue over the scene, enhancing the tranquil and slightly melancholic atmosphere. The overall composition is balanced, with the skier positioned centrally, drawing the viewer's eye down the path of the trail, while the bare trees provide a textured backdrop. The muted colors of the skier's clothing contrast subtly with the stark white of the snow and the dark tones of the trees, creating a harmonious and peaceful winter landscape.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 190,
+            "total_tokens": 487
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1469.209644,
+            "prompt_eval_duration_ms": 78.952358,
+            "generation_duration_ms": 1346.939177,
+            "load_duration_ms": 40.225445,
+            "tokens_per_second": 141.06056401387156
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, a skier dressed in dark winter attire stands poised on a groomed cross-country ski trail, their body angled slightly forward as if ready to glide into motion. The skier's presence is central to the image, drawing the viewer's eye immediately. The skis and poles are clearly defined against the pristine white snow, which is marked by parallel lines indicating the ski path. The snow appears undisturbed except for the tracks left by the skis, suggesting a quiet and serene environment.\n\nThe background consists of a dense forest of bare trees, their branches reaching upwards towards the pale sky. The trees are uniformly dark, creating a stark contrast with the bright snow and the skier's dark clothing. The sky is a soft, light blue, hinting at a clear, cold day. The trees and sky together form a backdrop that frames the skier, emphasizing the solitude and tranquility of the winter landscape. The skier, the trail, and the forest all contribute to a narrative of outdoor recreation in a peaceful, natural setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 213,
+            "total_tokens": 516
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1606.621892,
+            "prompt_eval_duration_ms": 29.611798,
+            "generation_duration_ms": 1532.798041,
+            "load_duration_ms": 40.90662,
+            "tokens_per_second": 138.96155547082932
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a person is cross-country skiing on a groomed trail in a snowy forest. The individual, dressed in dark winter clothing and a gray beanie, is holding ski poles and appears to be gliding along the snow-covered path, which is marked by parallel lines indicating a well-maintained trail. The skier is the central figure, and their interaction with the environment is evident as they navigate the terrain. The surrounding trees, mostly bare with some sparse foliage, frame the scene and create a serene winter landscape. The skier's movement contrasts with the stillness of the trees and the snow, highlighting the dynamic nature of the activity against the tranquil backdrop of the forest. There are no animals visible in the image, and the focus remains on the skier and their interaction with the snowy trail and the natural environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 169,
+            "total_tokens": 475
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1284.095888,
+            "prompt_eval_duration_ms": 29.650261,
+            "generation_duration_ms": 1210.979034,
+            "load_duration_ms": 40.130041,
+            "tokens_per_second": 139.5565036677588
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of peaceful solitude and tranquility, with a subtle undercurrent of determination and resilience. The person skiing, dressed in dark clothing and a beanie, stands out against the stark white snow and bare trees, suggesting a quiet, introspective moment in nature. The long shadows cast by the trees and the skier add to the serene atmosphere, hinting at the late afternoon or early evening light, which often evokes feelings of calm and reflection. The well-defined ski tracks in the snow indicate a sense of purpose and progress, while the skier's posture and the way they hold their poles suggest a balance between effort and ease. The overall tone is positive, as the image conveys a sense of accomplishment and harmony with the natural environment. The absence of other people or distractions in the scene further enhances the feeling of solitude and personal connection with the landscape. The visual elements of the bare trees, the long shadows, and the well-defined ski tracks all contribute to a mood of quiet strength and peacefulness, making the viewer feel a sense of calm and appreciation for the beauty of the winter landscape.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 226,
+            "total_tokens": 534
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1697.414758,
+            "prompt_eval_duration_ms": 29.793083,
+            "generation_duration_ms": 1624.475705,
+            "load_duration_ms": 38.475074,
+            "tokens_per_second": 139.12180976569297
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"wearing ski gear, standing on skis\"\n    }\n  },\n  \"man-made\": {\n    \"ski_poles\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"held by the person\"\n    },\n    \"skis\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"on the person's feet\"\n    }\n  },\n  \"natural\": {\n    \"trees\": {\n      \"count\": 10,\n      \"location\": \"background\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"bare, leafless\"\n    },\n    \"snow\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"covering the ground\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear, visible through the trees\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "black",
+                  "gray"
+                ],
+                "size": "medium",
+                "description": "wearing ski gear, standing on skis"
+              }
+            },
+            "man-made": {
+              "ski_poles": {
+                "count": 2,
+                "location": "center",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "held by the person"
+              },
+              "skis": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "on the person's feet"
+              }
+            },
+            "natural": {
+              "trees": {
+                "count": 10,
+                "location": "background",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "bare, leafless"
+              },
+              "snow": {
+                "count": 1,
+                "location": "foreground",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "covering the ground"
+              },
+              "sky": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "clear, visible through the trees"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 313,
+            "total_tokens": 799
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2306.191384,
+            "prompt_eval_duration_ms": 43.716934,
+            "generation_duration_ms": 2220.538948,
+            "load_duration_ms": 39.065817,
+            "tokens_per_second": 140.95677100458585
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2811,
+        "total_time_ms": 8363.533566,
+        "average_speed": 139.9314407845477
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a serene winter scene featuring a person cross-country skiing on a groomed snow trail. The setting is a snowy, wooded area with tall, bare trees lining the trail, their silhouettes standing stark against a soft, muted sky. The lighting suggests it is either early morning or late afternoon, with a warm, golden hue illuminating the scene, casting long shadows and creating a tranquil atmosphere. The skier, dressed in dark clothing, including a beanie and gloves, stands prominently in the foreground, holding ski poles and appearing to pause or glide along the trail. The snow is pristine and well-groomed, with distinct parallel tracks marking the path, indicating it is a designated ski trail. The overall color palette is dominated by whites and grays from the snow and trees, contrasted by the dark tones of the skier's attire and the subtle warmth of the sunlight. The composition is balanced, with the skier positioned slightly off-center, drawing the viewer's eye along the trail into the background. The scene conveys a sense of calm and solitude, emphasizing the beauty of nature and the peacefulness of winter sports.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 231,
+            "total_tokens": 528
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12114.800982,
+            "prompt_eval_duration_ms": 3445.929016,
+            "generation_duration_ms": 8622.023433,
+            "load_duration_ms": 39.370792,
+            "tokens_per_second": 26.7918548116987
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image prominently features a groomed cross-country ski trail, marked by two parallel tracks in the snow. The tracks are clearly defined, indicating recent maintenance or use, and they lead the viewer's eye toward the skier in the mid-ground. The skier, dressed in dark winter clothing and a hat, is actively engaged in cross-country skiing, holding ski poles and positioned on the trail. The snow appears smooth and undisturbed except for the ski tracks, emphasizing the pristine winter conditions.\n\nIn the background, the setting transitions into a dense forest of bare trees, suggesting a late autumn or winter season. The trees are tall and thin, with their branches reaching upward, creating a striking silhouette against the pale sky. The forest stretches across the entire background, providing a natural and serene backdrop that contrasts with the groomed trail in the foreground. The lighting indicates a low sun, possibly during sunrise or sunset, casting a soft, golden hue over the scene and enhancing the tranquil atmosphere.\n\nThe relationship between the foreground and background is harmonious, with the groomed trail serving as a clear path through the natural landscape. The skier acts as a focal point, bridging the human element with the natural environment. The contrast between the smooth, man-made trail and the wild, untamed forest highlights the coexistence of human activity and nature in this winter setting. The overall composition creates a sense of calm and adventure, inviting the viewer to appreciate the beauty of both the trail and the surrounding forest.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 303,
+            "total_tokens": 606
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11393.411994,
+            "prompt_eval_duration_ms": 72.488932,
+            "generation_duration_ms": 11279.605891,
+            "load_duration_ms": 38.228492,
+            "tokens_per_second": 26.8626406745083
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a person engaged in cross-country skiing on a snowy trail surrounded by a serene, wintry landscape. The individual is dressed in dark winter clothing, including a beanie, gloves, and a jacket, indicating cold weather conditions. They are equipped with ski poles, which they are using to propel themselves forward along the groomed trail. The skier appears to be moving at a steady pace, suggesting a focus on either exercise or leisurely enjoyment of the outdoor activity.\n\nThe trail is marked by two parallel grooves in the snow, typical of cross-country skiing paths, and it cuts through a forest of bare trees, likely deciduous, as their branches are devoid of leaves, reinforcing the winter setting. The trees create a natural border on either side of the trail, adding depth and a sense of seclusion to the scene. The lighting suggests it is either early morning or late afternoon, as the sun casts long shadows and a soft, golden hue over the landscape.\n\nThere are no animals visible in the image, and the skier is the sole human figure, emphasizing a solitary experience in nature. The interaction between the skier and the environment is one of harmony and movement; the skier's actions are in sync with the natural setting, as they navigate the trail with the aid of their poles and skis. The overall atmosphere is peaceful and contemplative, highlighting the connection between the individual and the tranquil winter landscape.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 288,
+            "total_tokens": 594
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10849.537281,
+            "prompt_eval_duration_ms": 73.780343,
+            "generation_duration_ms": 10731.763871,
+            "load_duration_ms": 40.553371,
+            "tokens_per_second": 26.8362222149008
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a serene and contemplative mood, evoking feelings of calmness, solitude, and a sense of peacefulness. The overall tone is positive yet reflective, as the scene captures a moment of quiet enjoyment in nature. The skier, dressed warmly in black, stands still on a groomed cross-country ski trail, surrounded by a forest of bare trees under a soft, diffused light, likely from a low-hanging sun. The stark contrast between the dark silhouette of the skier and the bright, snow-covered landscape creates a sense of tranquility and isolation, emphasizing the vastness of the natural environment. The absence of other people or distractions adds to the feeling of solitude, inviting the viewer to imagine the peacefulness of the moment. The gentle slope of the trail and the smooth, untouched snow further enhance the sense of calm, suggesting a quiet winter day where the skier is immersed in the beauty of the surroundings. The muted colors and the stillness of the scene contribute to a serene atmosphere, evoking a sense of peace and introspection. Overall, the image captures a moment of quiet connection with nature, fostering feelings of relaxation and contentment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 237,
+            "total_tokens": 545
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8977.420938,
+            "prompt_eval_duration_ms": 76.580445,
+            "generation_duration_ms": 8858.43307,
+            "load_duration_ms": 39.16406,
+            "tokens_per_second": 26.754167258160475
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"A person wearing black clothing and a blue beanie, skiing on a snowy trail with ski poles.\"\n    }\n  },\n  \"man-made\": {\n    \"ski trail\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"description\": \"A groomed ski trail with two parallel tracks in the snow.\"\n    },\n    \"ski poles\": {\n      \"count\": 2,\n      \"location\": \"center, middle\",\n      \"description\": \"Two ski poles being used by the person skiing.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": \"many\",\n      \"location\": \"left, top, background\",\n      \"color\": [\"brown\", \"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Bare trees lining the ski trail, indicating a winter setting.\"\n    },\n    \"snow\": {\n      \"count\": 1,\n      \"location\": \"entire image\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"Snow covering the ground and surrounding the ski trail.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "black"
+                ],
+                "size": "medium",
+                "description": "A person wearing black clothing and a blue beanie, skiing on a snowy trail with ski poles."
+              }
+            },
+            "man-made": {
+              "ski trail": {
+                "count": 1,
+                "location": "center, middle",
+                "description": "A groomed ski trail with two parallel tracks in the snow."
+              },
+              "ski poles": {
+                "count": 2,
+                "location": "center, middle",
+                "description": "Two ski poles being used by the person skiing."
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": "many",
+                "location": "left, top, background",
+                "color": [
+                  "brown",
+                  "gray"
+                ],
+                "size": "large",
+                "description": "Bare trees lining the ski trail, indicating a winter setting."
+              },
+              "snow": {
+                "count": 1,
+                "location": "entire image",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "Snow covering the ground and surrounding the ski trail."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 284,
+            "total_tokens": 770
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10721.364218,
+            "prompt_eval_duration_ms": 132.591541,
+            "generation_duration_ms": 10541.882256,
+            "load_duration_ms": 41.593124,
+            "tokens_per_second": 26.940160504862313
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3043,
+        "total_time_ms": 54056.535413000005,
+        "average_speed": 26.837009092826115
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -527,325 +846,6 @@
         "total_tokens": 3033,
         "total_time_ms": 30600.402622,
         "average_speed": 42.20894954574739
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a serene winter scene, likely in a forested area, where a person is cross-country skiing. The skier, dressed in dark clothing and a gray beanie, stands on a groomed trail, their skis leaving distinct parallel tracks in the pristine white snow. The trail is bordered by a dense line of bare trees, their branches reaching upwards, creating a natural frame around the skier. The lighting suggests it is either early morning or late afternoon, as the sun casts long shadows and a soft, golden hue over the scene, enhancing the tranquil and slightly melancholic atmosphere. The overall composition is balanced, with the skier positioned centrally, drawing the viewer's eye down the path of the trail, while the bare trees provide a textured backdrop. The muted colors of the skier's clothing contrast subtly with the stark white of the snow and the dark tones of the trees, creating a harmonious and peaceful winter landscape.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 190,
-            "total_tokens": 487
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1469.209644,
-            "prompt_eval_duration_ms": 78.952358,
-            "generation_duration_ms": 1346.939177,
-            "load_duration_ms": 40.225445,
-            "tokens_per_second": 141.06056401387156
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, a skier dressed in dark winter attire stands poised on a groomed cross-country ski trail, their body angled slightly forward as if ready to glide into motion. The skier's presence is central to the image, drawing the viewer's eye immediately. The skis and poles are clearly defined against the pristine white snow, which is marked by parallel lines indicating the ski path. The snow appears undisturbed except for the tracks left by the skis, suggesting a quiet and serene environment.\n\nThe background consists of a dense forest of bare trees, their branches reaching upwards towards the pale sky. The trees are uniformly dark, creating a stark contrast with the bright snow and the skier's dark clothing. The sky is a soft, light blue, hinting at a clear, cold day. The trees and sky together form a backdrop that frames the skier, emphasizing the solitude and tranquility of the winter landscape. The skier, the trail, and the forest all contribute to a narrative of outdoor recreation in a peaceful, natural setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 213,
-            "total_tokens": 516
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1606.621892,
-            "prompt_eval_duration_ms": 29.611798,
-            "generation_duration_ms": 1532.798041,
-            "load_duration_ms": 40.90662,
-            "tokens_per_second": 138.96155547082932
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a person is cross-country skiing on a groomed trail in a snowy forest. The individual, dressed in dark winter clothing and a gray beanie, is holding ski poles and appears to be gliding along the snow-covered path, which is marked by parallel lines indicating a well-maintained trail. The skier is the central figure, and their interaction with the environment is evident as they navigate the terrain. The surrounding trees, mostly bare with some sparse foliage, frame the scene and create a serene winter landscape. The skier's movement contrasts with the stillness of the trees and the snow, highlighting the dynamic nature of the activity against the tranquil backdrop of the forest. There are no animals visible in the image, and the focus remains on the skier and their interaction with the snowy trail and the natural environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 169,
-            "total_tokens": 475
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1284.095888,
-            "prompt_eval_duration_ms": 29.650261,
-            "generation_duration_ms": 1210.979034,
-            "load_duration_ms": 40.130041,
-            "tokens_per_second": 139.5565036677588
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of peaceful solitude and tranquility, with a subtle undercurrent of determination and resilience. The person skiing, dressed in dark clothing and a beanie, stands out against the stark white snow and bare trees, suggesting a quiet, introspective moment in nature. The long shadows cast by the trees and the skier add to the serene atmosphere, hinting at the late afternoon or early evening light, which often evokes feelings of calm and reflection. The well-defined ski tracks in the snow indicate a sense of purpose and progress, while the skier's posture and the way they hold their poles suggest a balance between effort and ease. The overall tone is positive, as the image conveys a sense of accomplishment and harmony with the natural environment. The absence of other people or distractions in the scene further enhances the feeling of solitude and personal connection with the landscape. The visual elements of the bare trees, the long shadows, and the well-defined ski tracks all contribute to a mood of quiet strength and peacefulness, making the viewer feel a sense of calm and appreciation for the beauty of the winter landscape.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 226,
-            "total_tokens": 534
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1697.414758,
-            "prompt_eval_duration_ms": 29.793083,
-            "generation_duration_ms": 1624.475705,
-            "load_duration_ms": 38.475074,
-            "tokens_per_second": 139.12180976569297
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"wearing ski gear, standing on skis\"\n    }\n  },\n  \"man-made\": {\n    \"ski_poles\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"held by the person\"\n    },\n    \"skis\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"on the person's feet\"\n    }\n  },\n  \"natural\": {\n    \"trees\": {\n      \"count\": 10,\n      \"location\": \"background\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"bare, leafless\"\n    },\n    \"snow\": {\n      \"count\": 1,\n      \"location\": \"foreground\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"covering the ground\"\n    },\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear, visible through the trees\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "black",
-                  "gray"
-                ],
-                "size": "medium",
-                "description": "wearing ski gear, standing on skis"
-              }
-            },
-            "man-made": {
-              "ski_poles": {
-                "count": 2,
-                "location": "center",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "held by the person"
-              },
-              "skis": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "on the person's feet"
-              }
-            },
-            "natural": {
-              "trees": {
-                "count": 10,
-                "location": "background",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "bare, leafless"
-              },
-              "snow": {
-                "count": 1,
-                "location": "foreground",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "covering the ground"
-              },
-              "sky": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "clear, visible through the trees"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 313,
-            "total_tokens": 799
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2306.191384,
-            "prompt_eval_duration_ms": 43.716934,
-            "generation_duration_ms": 2220.538948,
-            "load_duration_ms": 39.065817,
-            "tokens_per_second": 140.95677100458585
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2811,
-        "total_time_ms": 8363.533566,
-        "average_speed": 139.9314407845477
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a serene winter scene featuring a person cross-country skiing on a groomed snow trail. The setting is a snowy, wooded area with tall, bare trees lining the trail, their silhouettes standing stark against a soft, muted sky. The lighting suggests it is either early morning or late afternoon, with a warm, golden hue illuminating the scene, casting long shadows and creating a tranquil atmosphere. The skier, dressed in dark clothing, including a beanie and gloves, stands prominently in the foreground, holding ski poles and appearing to pause or glide along the trail. The snow is pristine and well-groomed, with distinct parallel tracks marking the path, indicating it is a designated ski trail. The overall color palette is dominated by whites and grays from the snow and trees, contrasted by the dark tones of the skier's attire and the subtle warmth of the sunlight. The composition is balanced, with the skier positioned slightly off-center, drawing the viewer's eye along the trail into the background. The scene conveys a sense of calm and solitude, emphasizing the beauty of nature and the peacefulness of winter sports.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 231,
-            "total_tokens": 528
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12114.800982,
-            "prompt_eval_duration_ms": 3445.929016,
-            "generation_duration_ms": 8622.023433,
-            "load_duration_ms": 39.370792,
-            "tokens_per_second": 26.7918548116987
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image prominently features a groomed cross-country ski trail, marked by two parallel tracks in the snow. The tracks are clearly defined, indicating recent maintenance or use, and they lead the viewer's eye toward the skier in the mid-ground. The skier, dressed in dark winter clothing and a hat, is actively engaged in cross-country skiing, holding ski poles and positioned on the trail. The snow appears smooth and undisturbed except for the ski tracks, emphasizing the pristine winter conditions.\n\nIn the background, the setting transitions into a dense forest of bare trees, suggesting a late autumn or winter season. The trees are tall and thin, with their branches reaching upward, creating a striking silhouette against the pale sky. The forest stretches across the entire background, providing a natural and serene backdrop that contrasts with the groomed trail in the foreground. The lighting indicates a low sun, possibly during sunrise or sunset, casting a soft, golden hue over the scene and enhancing the tranquil atmosphere.\n\nThe relationship between the foreground and background is harmonious, with the groomed trail serving as a clear path through the natural landscape. The skier acts as a focal point, bridging the human element with the natural environment. The contrast between the smooth, man-made trail and the wild, untamed forest highlights the coexistence of human activity and nature in this winter setting. The overall composition creates a sense of calm and adventure, inviting the viewer to appreciate the beauty of both the trail and the surrounding forest.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 303,
-            "total_tokens": 606
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11393.411994,
-            "prompt_eval_duration_ms": 72.488932,
-            "generation_duration_ms": 11279.605891,
-            "load_duration_ms": 38.228492,
-            "tokens_per_second": 26.8626406745083
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a person engaged in cross-country skiing on a snowy trail surrounded by a serene, wintry landscape. The individual is dressed in dark winter clothing, including a beanie, gloves, and a jacket, indicating cold weather conditions. They are equipped with ski poles, which they are using to propel themselves forward along the groomed trail. The skier appears to be moving at a steady pace, suggesting a focus on either exercise or leisurely enjoyment of the outdoor activity.\n\nThe trail is marked by two parallel grooves in the snow, typical of cross-country skiing paths, and it cuts through a forest of bare trees, likely deciduous, as their branches are devoid of leaves, reinforcing the winter setting. The trees create a natural border on either side of the trail, adding depth and a sense of seclusion to the scene. The lighting suggests it is either early morning or late afternoon, as the sun casts long shadows and a soft, golden hue over the landscape.\n\nThere are no animals visible in the image, and the skier is the sole human figure, emphasizing a solitary experience in nature. The interaction between the skier and the environment is one of harmony and movement; the skier's actions are in sync with the natural setting, as they navigate the trail with the aid of their poles and skis. The overall atmosphere is peaceful and contemplative, highlighting the connection between the individual and the tranquil winter landscape.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 288,
-            "total_tokens": 594
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10849.537281,
-            "prompt_eval_duration_ms": 73.780343,
-            "generation_duration_ms": 10731.763871,
-            "load_duration_ms": 40.553371,
-            "tokens_per_second": 26.8362222149008
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a serene and contemplative mood, evoking feelings of calmness, solitude, and a sense of peacefulness. The overall tone is positive yet reflective, as the scene captures a moment of quiet enjoyment in nature. The skier, dressed warmly in black, stands still on a groomed cross-country ski trail, surrounded by a forest of bare trees under a soft, diffused light, likely from a low-hanging sun. The stark contrast between the dark silhouette of the skier and the bright, snow-covered landscape creates a sense of tranquility and isolation, emphasizing the vastness of the natural environment. The absence of other people or distractions adds to the feeling of solitude, inviting the viewer to imagine the peacefulness of the moment. The gentle slope of the trail and the smooth, untouched snow further enhance the sense of calm, suggesting a quiet winter day where the skier is immersed in the beauty of the surroundings. The muted colors and the stillness of the scene contribute to a serene atmosphere, evoking a sense of peace and introspection. Overall, the image captures a moment of quiet connection with nature, fostering feelings of relaxation and contentment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 237,
-            "total_tokens": 545
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8977.420938,
-            "prompt_eval_duration_ms": 76.580445,
-            "generation_duration_ms": 8858.43307,
-            "load_duration_ms": 39.16406,
-            "tokens_per_second": 26.754167258160475
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"medium\",\n      \"description\": \"A person wearing black clothing and a blue beanie, skiing on a snowy trail with ski poles.\"\n    }\n  },\n  \"man-made\": {\n    \"ski trail\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"description\": \"A groomed ski trail with two parallel tracks in the snow.\"\n    },\n    \"ski poles\": {\n      \"count\": 2,\n      \"location\": \"center, middle\",\n      \"description\": \"Two ski poles being used by the person skiing.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": \"many\",\n      \"location\": \"left, top, background\",\n      \"color\": [\"brown\", \"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Bare trees lining the ski trail, indicating a winter setting.\"\n    },\n    \"snow\": {\n      \"count\": 1,\n      \"location\": \"entire image\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"Snow covering the ground and surrounding the ski trail.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "black"
-                ],
-                "size": "medium",
-                "description": "A person wearing black clothing and a blue beanie, skiing on a snowy trail with ski poles."
-              }
-            },
-            "man-made": {
-              "ski trail": {
-                "count": 1,
-                "location": "center, middle",
-                "description": "A groomed ski trail with two parallel tracks in the snow."
-              },
-              "ski poles": {
-                "count": 2,
-                "location": "center, middle",
-                "description": "Two ski poles being used by the person skiing."
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": "many",
-                "location": "left, top, background",
-                "color": [
-                  "brown",
-                  "gray"
-                ],
-                "size": "large",
-                "description": "Bare trees lining the ski trail, indicating a winter setting."
-              },
-              "snow": {
-                "count": 1,
-                "location": "entire image",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "Snow covering the ground and surrounding the ski trail."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 284,
-            "total_tokens": 770
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10721.364218,
-            "prompt_eval_duration_ms": 132.591541,
-            "generation_duration_ms": 10541.882256,
-            "load_duration_ms": 41.593124,
-            "tokens_per_second": 26.940160504862313
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3043,
-        "total_time_ms": 54056.535413000005,
-        "average_speed": 26.837009092826115
       }
     },
     {

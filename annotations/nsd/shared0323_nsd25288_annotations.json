@@ -7,6 +7,335 @@
   "timestamp": "2025-08-30T18:39:38.929728+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image presents a simple, domestic setting, likely a kitchen or a small dining area, featuring a white microwave oven placed on a wooden countertop. The microwave, with its door ajar, reveals a faint reflection of the room's interior on its glass door, suggesting a well-lit environment. The microwave's control panel, located on the front, is slightly angled, adding a dynamic element to the otherwise static scene. The countertop, made of a dark brown wood, contrasts subtly with the white microwave, enhancing the visual appeal. Above the microwave, a wooden shelf holds various items, including a green box, a white box, and a yellow container, hinting at a lived-in space. The wall behind is plain and white, providing a neutral backdrop that emphasizes the objects in the foreground. The lighting is soft and even, likely from an overhead source, casting minimal shadows and giving the scene a calm, everyday atmosphere. The overall composition is simple and functional, focusing on the everyday object of the microwave and its immediate surroundings.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 209,
+            "total_tokens": 506
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1605.528811,
+            "prompt_eval_duration_ms": 78.811482,
+            "generation_duration_ms": 1487.151802,
+            "load_duration_ms": 37.486485,
+            "tokens_per_second": 140.53709898271703
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, a white microwave oven stands prominently on a wooden countertop, its door slightly ajar, revealing a glimpse of its interior. The microwave, with its simple design and control knob, is the central focus, suggesting a domestic kitchen setting. The countertop, made of polished wood, provides a natural contrast to the smooth, white surface of the microwave. \n\nThe background, slightly out of focus, features a simple white wall and a wooden shelf mounted on it. The shelf holds a variety of items, including a green box, a white box, and a yellow container, which appear to be food or kitchen supplies. The arrangement of these items on the shelf adds depth to the image and suggests a lived-in, functional kitchen environment. The white wall and the wooden shelf create a clean, minimalist backdrop that allows the microwave and its immediate surroundings to stand out. The overall composition of the image, with its foreground microwave and background shelf, creates a sense of depth and context, indicating a typical kitchen scene where the microwave is likely used for cooking or reheating food.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 220,
+            "total_tokens": 523
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1665.054516,
+            "prompt_eval_duration_ms": 33.210211,
+            "generation_duration_ms": 1591.674489,
+            "load_duration_ms": 38.075244,
+            "tokens_per_second": 138.21921600202262
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, there are no people or animals present. The focus is on a white microwave oven placed on a wooden countertop. The microwave door is open, revealing the interior, and a small white label is visible on the inside of the door. Above the microwave, a wooden shelf holds several items, including a green box, a white box, and a yellow container, which appear to be food or kitchen supplies. The microwave and the items on the shelf are stationary, with no interaction between them. The microwave is positioned against a plain white wall, and the countertop is clean and uncluttered, suggesting a tidy kitchen environment. The objects are arranged in a way that indicates a typical kitchen setup where the microwave is easily accessible for use.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 153,
+            "total_tokens": 459
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1175.326378,
+            "prompt_eval_duration_ms": 31.664351,
+            "generation_duration_ms": 1099.44609,
+            "load_duration_ms": 39.916606,
+            "tokens_per_second": 139.1609842370716
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of simplicity and functionality, leaning towards a neutral tone. The white microwave, placed on a wooden countertop, stands out against the plain white wall, creating a clean and uncluttered appearance. The open door and the visible interior suggest readiness for use, which can imply a sense of anticipation or utility. The presence of a handwritten note on the microwave door adds a personal touch, hinting at a lived-in space where practicality meets a touch of informality. The neatly arranged items on the shelf above the microwave contribute to a feeling of order and organization, reinforcing the overall neutral and slightly positive mood. The absence of any vibrant colors or emotional symbols keeps the atmosphere grounded and subdued, evoking a calm and practical feeling rather than strong positive or negative emotions.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 160,
+            "total_tokens": 468
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1232.129182,
+            "prompt_eval_duration_ms": 34.281708,
+            "generation_duration_ms": 1153.913053,
+            "load_duration_ms": 41.816182,
+            "tokens_per_second": 138.65862734113642
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"microwave\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"white microwave with door open, control knob visible\"\n    },\n    \"shelf\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"wooden shelf holding various items\"\n    },\n    \"cereal\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"green\", \"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"box of cereal on the shelf\"\n    },\n    \"spices\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"container of spices on the shelf\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "microwave": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "white microwave with door open, control knob visible"
+              },
+              "shelf": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "brown"
+                ],
+                "size": "small",
+                "description": "wooden shelf holding various items"
+              },
+              "cereal": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "green",
+                  "yellow"
+                ],
+                "size": "small",
+                "description": "box of cereal on the shelf"
+              },
+              "spices": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "yellow"
+                ],
+                "size": "small",
+                "description": "container of spices on the shelf"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 212,
+            "total_tokens": 698
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1588.050147,
+            "prompt_eval_duration_ms": 45.106577,
+            "generation_duration_ms": 1502.022805,
+            "load_duration_ms": 36.462839,
+            "tokens_per_second": 141.14299682686908
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2654,
+        "total_time_ms": 7266.089034,
+        "average_speed": 139.54378467796334
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a simple, functional kitchen setting featuring a white microwave oven as the central element. The microwave is placed on a wooden countertop with a light gray metal edge, which contrasts subtly with the warm tones of the wood. The microwave door is open, revealing a clean, empty interior with a turntable at the base. The control panel on the front of the microwave includes a dial and a few buttons, all in a matching white color, giving it a minimalist and modern appearance.\n\nAbove the microwave, a wooden shelf is mounted on the wall, holding various items, including a green box, a yellow box, and a few other containers, suggesting a typical kitchen storage setup. The wall behind the microwave is painted a plain white, contributing to the clean and uncluttered look of the space. The lighting in the image is bright and even, likely from an overhead source, which highlights the microwave and the surrounding area without casting harsh shadows. The overall composition is straightforward and utilitarian, emphasizing functionality and simplicity. The colors are primarily neutral, with white dominating the scene, complemented by the warm brown of the wood and the muted tones of the items on the shelf. The image conveys a sense of order and practicality, typical of a compact kitchen or utility area.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 259,
+            "total_tokens": 556
+          },
+          "performance_metrics": {
+            "total_duration_ms": 13242.218292,
+            "prompt_eval_duration_ms": 3520.174847,
+            "generation_duration_ms": 9678.824916,
+            "load_duration_ms": 41.159442,
+            "tokens_per_second": 26.759446755964028
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the most prominent element is a white microwave oven placed on a wooden countertop. The microwave is open, revealing its interior, which includes a rotating glass plate and a control panel with a dial and buttons. The countertop appears to be made of a polished wood surface, adding a warm, natural texture to the scene. The microwave is positioned centrally, drawing immediate attention due to its size and the open door, which invites curiosity about its contents or usage.\n\nIn the background, the setting is a simple kitchen or utility area. A wooden shelf is mounted on the wall above the microwave, holding various items such as boxes and containers, suggesting a functional space for storage or food preparation. The wall itself is plain and light-colored, providing a neutral backdrop that keeps the focus on the microwave and countertop. The overall lighting is bright, likely from an overhead source, which illuminates the scene evenly and enhances the visibility of both the foreground and background elements.\n\nThe relationship between the foreground and background is one of context and functionality. The microwave, as the primary object in the foreground, is situated within a practical kitchen environment, as indicated by the shelf and stored items in the background. This arrangement suggests a typical household setting where the microwave is used for heating or cooking, and the background elements provide a sense of the space's purpose and organization. The clean and organized appearance of both layers reinforces the idea of a well-maintained and functional kitchen area.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 297,
+            "total_tokens": 600
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11190.20171,
+            "prompt_eval_duration_ms": 74.974626,
+            "generation_duration_ms": 11072.608598,
+            "load_duration_ms": 40.085437,
+            "tokens_per_second": 26.822947580179605
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image shows a compact kitchen setting with a microwave oven as the central object. The microwave is white, with a simple design featuring a control panel on the right side, including a dial and a few buttons. The door of the microwave is open, revealing its interior, which appears clean and empty. The microwave is placed on a wooden countertop, which is part of a kitchen unit with a light gray edge. Above the microwave, there is a wooden shelf holding various items, including green and yellow boxes, which are likely food or cleaning supplies. The background wall is plain white, giving the scene a clean and minimalistic appearance.\n\nThere are no people or animals present in the image. The focus is entirely on the microwave and its surroundings. The microwave interacts with the countertop and shelf as part of the kitchen setup, suggesting a functional and organized space. The items on the shelf are positioned neatly, indicating an orderly environment. The open door of the microwave suggests it might be in use or recently used, although no food or other objects are visible inside. The overall composition highlights a typical kitchen appliance in a domestic setting, emphasizing practicality and simplicity.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 232,
+            "total_tokens": 538
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8758.74261,
+            "prompt_eval_duration_ms": 76.218168,
+            "generation_duration_ms": 8640.752255,
+            "load_duration_ms": 39.508905,
+            "tokens_per_second": 26.849514157260142
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a simple, functional microwave oven placed on a wooden countertop in a clean and minimalistic kitchen setting. The overall mood and emotions conveyed by this image are neutral, leaning slightly toward calmness and practicality. The clean lines of the microwave, the orderly arrangement of items on the shelf above, and the bright, uncluttered space create a sense of order and simplicity. The white color of the microwave and the neutral tones of the countertop and wall contribute to a serene and unassuming atmosphere, free from any strong emotional overtones.\n\nThe emotions evoked are primarily those of practicality and routine. The microwave, a common household appliance, symbolizes everyday functionality and the mundane aspects of daily life. There is no sense of urgency or excitement, but rather a quiet, unassuming presence that suggests efficiency and reliability. The image lacks any dramatic elements, such as vibrant colors or dynamic compositions, which reinforces its neutral tone. The overall visual elements\u2014clean surfaces, simple design, and organized space\u2014work together to create a calm and unemotional atmosphere, reflecting a sense of order and normalcy in a domestic setting. This image is likely to evoke feelings of familiarity and comfort for many viewers, as it represents a common and unremarkable aspect of daily life.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 259,
+            "total_tokens": 567
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9736.809986,
+            "prompt_eval_duration_ms": 73.991414,
+            "generation_duration_ms": 9619.851677,
+            "load_duration_ms": 40.879588,
+            "tokens_per_second": 26.923492034626722
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"microwave\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"White microwave oven with open door, showing interior.\"\n    },\n    \"shelf\": {\n      \"count\": 1,\n      \"location\": \"top, middle\",\n      \"color\": [\"wooden\"],\n      \"size\": \"medium\",\n      \"description\": \"Wooden shelf holding various items.\"\n    },\n    \"cereal box\": {\n      \"count\": 1,\n      \"location\": \"top, right\",\n      \"color\": [\"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"Yellow cereal box on the shelf.\"\n    },\n    \"green box\": {\n      \"count\": 1,\n      \"location\": \"top, left\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Green box on the shelf.\"\n    },\n    \"blue box\": {\n      \"count\": 1,\n      \"location\": \"top, center\",\n      \"color\": [\"blue\"],\n      \"size\": \"small\",\n      \"description\": \"Blue box on the shelf.\"\n    },\n    \"red object\": {\n      \"count\": 1,\n      \"location\": \"top, right\",\n      \"color\": [\"red\"],\n      \"size\": \"small\",\n      \"description\": \"Red object on the shelf.\"\n    },\n    \"cabinet\": {\n      \"count\": 1,\n      \"location\": \"bottom, left\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Gray cabinet under the microwave.\"\n    }\n  },\n  \"natural\": {\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"White wall in the background.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "microwave": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "White microwave oven with open door, showing interior."
+              },
+              "shelf": {
+                "count": 1,
+                "location": "top, middle",
+                "color": [
+                  "wooden"
+                ],
+                "size": "medium",
+                "description": "Wooden shelf holding various items."
+              },
+              "cereal box": {
+                "count": 1,
+                "location": "top, right",
+                "color": [
+                  "yellow"
+                ],
+                "size": "small",
+                "description": "Yellow cereal box on the shelf."
+              },
+              "green box": {
+                "count": 1,
+                "location": "top, left",
+                "color": [
+                  "green"
+                ],
+                "size": "small",
+                "description": "Green box on the shelf."
+              },
+              "blue box": {
+                "count": 1,
+                "location": "top, center",
+                "color": [
+                  "blue"
+                ],
+                "size": "small",
+                "description": "Blue box on the shelf."
+              },
+              "red object": {
+                "count": 1,
+                "location": "top, right",
+                "color": [
+                  "red"
+                ],
+                "size": "small",
+                "description": "Red object on the shelf."
+              },
+              "cabinet": {
+                "count": 1,
+                "location": "bottom, left",
+                "color": [
+                  "gray"
+                ],
+                "size": "large",
+                "description": "Gray cabinet under the microwave."
+              }
+            },
+            "natural": {
+              "wall": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "white"
+                ],
+                "size": "large",
+                "description": "White wall in the background."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 418,
+            "total_tokens": 904
+          },
+          "performance_metrics": {
+            "total_duration_ms": 15672.296743,
+            "prompt_eval_duration_ms": 140.20755,
+            "generation_duration_ms": 15489.443336,
+            "load_duration_ms": 40.047117,
+            "tokens_per_second": 26.9861215108034
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3165,
+        "total_time_ms": 58600.269341,
+        "average_speed": 26.86830440776678
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -461,335 +790,6 @@
         "total_tokens": 2739,
         "total_time_ms": 23792.493425,
         "average_speed": 41.86587806888434
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image presents a simple, domestic setting, likely a kitchen or a small dining area, featuring a white microwave oven placed on a wooden countertop. The microwave, with its door ajar, reveals a faint reflection of the room's interior on its glass door, suggesting a well-lit environment. The microwave's control panel, located on the front, is slightly angled, adding a dynamic element to the otherwise static scene. The countertop, made of a dark brown wood, contrasts subtly with the white microwave, enhancing the visual appeal. Above the microwave, a wooden shelf holds various items, including a green box, a white box, and a yellow container, hinting at a lived-in space. The wall behind is plain and white, providing a neutral backdrop that emphasizes the objects in the foreground. The lighting is soft and even, likely from an overhead source, casting minimal shadows and giving the scene a calm, everyday atmosphere. The overall composition is simple and functional, focusing on the everyday object of the microwave and its immediate surroundings.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 209,
-            "total_tokens": 506
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1605.528811,
-            "prompt_eval_duration_ms": 78.811482,
-            "generation_duration_ms": 1487.151802,
-            "load_duration_ms": 37.486485,
-            "tokens_per_second": 140.53709898271703
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, a white microwave oven stands prominently on a wooden countertop, its door slightly ajar, revealing a glimpse of its interior. The microwave, with its simple design and control knob, is the central focus, suggesting a domestic kitchen setting. The countertop, made of polished wood, provides a natural contrast to the smooth, white surface of the microwave. \n\nThe background, slightly out of focus, features a simple white wall and a wooden shelf mounted on it. The shelf holds a variety of items, including a green box, a white box, and a yellow container, which appear to be food or kitchen supplies. The arrangement of these items on the shelf adds depth to the image and suggests a lived-in, functional kitchen environment. The white wall and the wooden shelf create a clean, minimalist backdrop that allows the microwave and its immediate surroundings to stand out. The overall composition of the image, with its foreground microwave and background shelf, creates a sense of depth and context, indicating a typical kitchen scene where the microwave is likely used for cooking or reheating food.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 220,
-            "total_tokens": 523
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1665.054516,
-            "prompt_eval_duration_ms": 33.210211,
-            "generation_duration_ms": 1591.674489,
-            "load_duration_ms": 38.075244,
-            "tokens_per_second": 138.21921600202262
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, there are no people or animals present. The focus is on a white microwave oven placed on a wooden countertop. The microwave door is open, revealing the interior, and a small white label is visible on the inside of the door. Above the microwave, a wooden shelf holds several items, including a green box, a white box, and a yellow container, which appear to be food or kitchen supplies. The microwave and the items on the shelf are stationary, with no interaction between them. The microwave is positioned against a plain white wall, and the countertop is clean and uncluttered, suggesting a tidy kitchen environment. The objects are arranged in a way that indicates a typical kitchen setup where the microwave is easily accessible for use.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 153,
-            "total_tokens": 459
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1175.326378,
-            "prompt_eval_duration_ms": 31.664351,
-            "generation_duration_ms": 1099.44609,
-            "load_duration_ms": 39.916606,
-            "tokens_per_second": 139.1609842370716
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of simplicity and functionality, leaning towards a neutral tone. The white microwave, placed on a wooden countertop, stands out against the plain white wall, creating a clean and uncluttered appearance. The open door and the visible interior suggest readiness for use, which can imply a sense of anticipation or utility. The presence of a handwritten note on the microwave door adds a personal touch, hinting at a lived-in space where practicality meets a touch of informality. The neatly arranged items on the shelf above the microwave contribute to a feeling of order and organization, reinforcing the overall neutral and slightly positive mood. The absence of any vibrant colors or emotional symbols keeps the atmosphere grounded and subdued, evoking a calm and practical feeling rather than strong positive or negative emotions.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 160,
-            "total_tokens": 468
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1232.129182,
-            "prompt_eval_duration_ms": 34.281708,
-            "generation_duration_ms": 1153.913053,
-            "load_duration_ms": 41.816182,
-            "tokens_per_second": 138.65862734113642
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"microwave\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"white microwave with door open, control knob visible\"\n    },\n    \"shelf\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"wooden shelf holding various items\"\n    },\n    \"cereal\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"green\", \"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"box of cereal on the shelf\"\n    },\n    \"spices\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"container of spices on the shelf\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "microwave": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "white microwave with door open, control knob visible"
-              },
-              "shelf": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "brown"
-                ],
-                "size": "small",
-                "description": "wooden shelf holding various items"
-              },
-              "cereal": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "green",
-                  "yellow"
-                ],
-                "size": "small",
-                "description": "box of cereal on the shelf"
-              },
-              "spices": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "yellow"
-                ],
-                "size": "small",
-                "description": "container of spices on the shelf"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 212,
-            "total_tokens": 698
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1588.050147,
-            "prompt_eval_duration_ms": 45.106577,
-            "generation_duration_ms": 1502.022805,
-            "load_duration_ms": 36.462839,
-            "tokens_per_second": 141.14299682686908
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2654,
-        "total_time_ms": 7266.089034,
-        "average_speed": 139.54378467796334
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a simple, functional kitchen setting featuring a white microwave oven as the central element. The microwave is placed on a wooden countertop with a light gray metal edge, which contrasts subtly with the warm tones of the wood. The microwave door is open, revealing a clean, empty interior with a turntable at the base. The control panel on the front of the microwave includes a dial and a few buttons, all in a matching white color, giving it a minimalist and modern appearance.\n\nAbove the microwave, a wooden shelf is mounted on the wall, holding various items, including a green box, a yellow box, and a few other containers, suggesting a typical kitchen storage setup. The wall behind the microwave is painted a plain white, contributing to the clean and uncluttered look of the space. The lighting in the image is bright and even, likely from an overhead source, which highlights the microwave and the surrounding area without casting harsh shadows. The overall composition is straightforward and utilitarian, emphasizing functionality and simplicity. The colors are primarily neutral, with white dominating the scene, complemented by the warm brown of the wood and the muted tones of the items on the shelf. The image conveys a sense of order and practicality, typical of a compact kitchen or utility area.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 259,
-            "total_tokens": 556
-          },
-          "performance_metrics": {
-            "total_duration_ms": 13242.218292,
-            "prompt_eval_duration_ms": 3520.174847,
-            "generation_duration_ms": 9678.824916,
-            "load_duration_ms": 41.159442,
-            "tokens_per_second": 26.759446755964028
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the most prominent element is a white microwave oven placed on a wooden countertop. The microwave is open, revealing its interior, which includes a rotating glass plate and a control panel with a dial and buttons. The countertop appears to be made of a polished wood surface, adding a warm, natural texture to the scene. The microwave is positioned centrally, drawing immediate attention due to its size and the open door, which invites curiosity about its contents or usage.\n\nIn the background, the setting is a simple kitchen or utility area. A wooden shelf is mounted on the wall above the microwave, holding various items such as boxes and containers, suggesting a functional space for storage or food preparation. The wall itself is plain and light-colored, providing a neutral backdrop that keeps the focus on the microwave and countertop. The overall lighting is bright, likely from an overhead source, which illuminates the scene evenly and enhances the visibility of both the foreground and background elements.\n\nThe relationship between the foreground and background is one of context and functionality. The microwave, as the primary object in the foreground, is situated within a practical kitchen environment, as indicated by the shelf and stored items in the background. This arrangement suggests a typical household setting where the microwave is used for heating or cooking, and the background elements provide a sense of the space's purpose and organization. The clean and organized appearance of both layers reinforces the idea of a well-maintained and functional kitchen area.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 297,
-            "total_tokens": 600
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11190.20171,
-            "prompt_eval_duration_ms": 74.974626,
-            "generation_duration_ms": 11072.608598,
-            "load_duration_ms": 40.085437,
-            "tokens_per_second": 26.822947580179605
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image shows a compact kitchen setting with a microwave oven as the central object. The microwave is white, with a simple design featuring a control panel on the right side, including a dial and a few buttons. The door of the microwave is open, revealing its interior, which appears clean and empty. The microwave is placed on a wooden countertop, which is part of a kitchen unit with a light gray edge. Above the microwave, there is a wooden shelf holding various items, including green and yellow boxes, which are likely food or cleaning supplies. The background wall is plain white, giving the scene a clean and minimalistic appearance.\n\nThere are no people or animals present in the image. The focus is entirely on the microwave and its surroundings. The microwave interacts with the countertop and shelf as part of the kitchen setup, suggesting a functional and organized space. The items on the shelf are positioned neatly, indicating an orderly environment. The open door of the microwave suggests it might be in use or recently used, although no food or other objects are visible inside. The overall composition highlights a typical kitchen appliance in a domestic setting, emphasizing practicality and simplicity.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 232,
-            "total_tokens": 538
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8758.74261,
-            "prompt_eval_duration_ms": 76.218168,
-            "generation_duration_ms": 8640.752255,
-            "load_duration_ms": 39.508905,
-            "tokens_per_second": 26.849514157260142
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a simple, functional microwave oven placed on a wooden countertop in a clean and minimalistic kitchen setting. The overall mood and emotions conveyed by this image are neutral, leaning slightly toward calmness and practicality. The clean lines of the microwave, the orderly arrangement of items on the shelf above, and the bright, uncluttered space create a sense of order and simplicity. The white color of the microwave and the neutral tones of the countertop and wall contribute to a serene and unassuming atmosphere, free from any strong emotional overtones.\n\nThe emotions evoked are primarily those of practicality and routine. The microwave, a common household appliance, symbolizes everyday functionality and the mundane aspects of daily life. There is no sense of urgency or excitement, but rather a quiet, unassuming presence that suggests efficiency and reliability. The image lacks any dramatic elements, such as vibrant colors or dynamic compositions, which reinforces its neutral tone. The overall visual elements\u2014clean surfaces, simple design, and organized space\u2014work together to create a calm and unemotional atmosphere, reflecting a sense of order and normalcy in a domestic setting. This image is likely to evoke feelings of familiarity and comfort for many viewers, as it represents a common and unremarkable aspect of daily life.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 259,
-            "total_tokens": 567
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9736.809986,
-            "prompt_eval_duration_ms": 73.991414,
-            "generation_duration_ms": 9619.851677,
-            "load_duration_ms": 40.879588,
-            "tokens_per_second": 26.923492034626722
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"microwave\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"White microwave oven with open door, showing interior.\"\n    },\n    \"shelf\": {\n      \"count\": 1,\n      \"location\": \"top, middle\",\n      \"color\": [\"wooden\"],\n      \"size\": \"medium\",\n      \"description\": \"Wooden shelf holding various items.\"\n    },\n    \"cereal box\": {\n      \"count\": 1,\n      \"location\": \"top, right\",\n      \"color\": [\"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"Yellow cereal box on the shelf.\"\n    },\n    \"green box\": {\n      \"count\": 1,\n      \"location\": \"top, left\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Green box on the shelf.\"\n    },\n    \"blue box\": {\n      \"count\": 1,\n      \"location\": \"top, center\",\n      \"color\": [\"blue\"],\n      \"size\": \"small\",\n      \"description\": \"Blue box on the shelf.\"\n    },\n    \"red object\": {\n      \"count\": 1,\n      \"location\": \"top, right\",\n      \"color\": [\"red\"],\n      \"size\": \"small\",\n      \"description\": \"Red object on the shelf.\"\n    },\n    \"cabinet\": {\n      \"count\": 1,\n      \"location\": \"bottom, left\",\n      \"color\": [\"gray\"],\n      \"size\": \"large\",\n      \"description\": \"Gray cabinet under the microwave.\"\n    }\n  },\n  \"natural\": {\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"white\"],\n      \"size\": \"large\",\n      \"description\": \"White wall in the background.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "microwave": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "White microwave oven with open door, showing interior."
-              },
-              "shelf": {
-                "count": 1,
-                "location": "top, middle",
-                "color": [
-                  "wooden"
-                ],
-                "size": "medium",
-                "description": "Wooden shelf holding various items."
-              },
-              "cereal box": {
-                "count": 1,
-                "location": "top, right",
-                "color": [
-                  "yellow"
-                ],
-                "size": "small",
-                "description": "Yellow cereal box on the shelf."
-              },
-              "green box": {
-                "count": 1,
-                "location": "top, left",
-                "color": [
-                  "green"
-                ],
-                "size": "small",
-                "description": "Green box on the shelf."
-              },
-              "blue box": {
-                "count": 1,
-                "location": "top, center",
-                "color": [
-                  "blue"
-                ],
-                "size": "small",
-                "description": "Blue box on the shelf."
-              },
-              "red object": {
-                "count": 1,
-                "location": "top, right",
-                "color": [
-                  "red"
-                ],
-                "size": "small",
-                "description": "Red object on the shelf."
-              },
-              "cabinet": {
-                "count": 1,
-                "location": "bottom, left",
-                "color": [
-                  "gray"
-                ],
-                "size": "large",
-                "description": "Gray cabinet under the microwave."
-              }
-            },
-            "natural": {
-              "wall": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "white"
-                ],
-                "size": "large",
-                "description": "White wall in the background."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 418,
-            "total_tokens": 904
-          },
-          "performance_metrics": {
-            "total_duration_ms": 15672.296743,
-            "prompt_eval_duration_ms": 140.20755,
-            "generation_duration_ms": 15489.443336,
-            "load_duration_ms": 40.047117,
-            "tokens_per_second": 26.9861215108034
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3165,
-        "total_time_ms": 58600.269341,
-        "average_speed": 26.86830440776678
       }
     },
     {

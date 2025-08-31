@@ -7,6 +7,265 @@
   "timestamp": "2025-08-30T19:14:41.660090+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a dynamic aerial display featuring four identical yellow and black aerobatic planes flying in a tight formation against a clear blue sky. The planes, appearing as small silhouettes due to the distance, are arranged in a diamond pattern, with the lead plane slightly ahead and to the left of the others. Each plane leaves a distinct white smoke trail behind it, which curves elegantly in the air, creating a visually striking contrast against the vibrant blue backdrop. The smoke trails are thick and dense, forming a series of overlapping, flowing lines that add a sense of motion and energy to the scene. The lighting is natural and bright, suggesting the photo was taken during the day under clear weather conditions, enhancing the vividness of the colors and the clarity of the smoke trails. The overall composition is balanced and dynamic, with the planes' positions and the smoke trails creating a harmonious yet energetic visual narrative.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 183,
+            "total_tokens": 480
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1410.159179,
+            "prompt_eval_duration_ms": 78.228023,
+            "generation_duration_ms": 1292.054589,
+            "load_duration_ms": 36.671414,
+            "tokens_per_second": 141.63488258002698
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, four yellow airplanes are prominently displayed, each leaving a distinct white contrail behind as they fly in a tight formation. The planes are angled slightly upwards, suggesting they are ascending or performing a coordinated aerial maneuver. The planes are identical in appearance, with a sleek, aerodynamic design, and their bright yellow color contrasts sharply against the clear blue sky. The white contrails, varying in thickness and length, trail behind each plane, creating a dynamic visual effect that emphasizes their movement and the precision of their formation. In the background, the sky is a uniform, vibrant blue, devoid of any clouds or other elements, which serves to highlight the planes and their trails even more. The relationship between the foreground and background is one of contrast and depth, with the planes and their trails in the foreground drawing the viewer's eye and the expansive blue sky in the background providing a sense of space and context.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 186,
+            "total_tokens": 489
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1398.664888,
+            "prompt_eval_duration_ms": 28.515843,
+            "generation_duration_ms": 1331.041084,
+            "load_duration_ms": 37.244161,
+            "tokens_per_second": 139.74023960330288
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, four identical yellow airplanes are captured mid-flight, leaving behind a trail of white contrails that stretch across the clear blue sky. The planes are arranged in a tight formation, suggesting a coordinated aerial display or a practice run for an airshow. Each plane is identical in design, with a sleek, modern appearance, indicating they are likely part of a team performing synchronized maneuvers. The contrails, created by the exhaust of the aircraft engines, form a visually striking pattern that enhances the dynamic nature of the scene. There are no visible people or animals in the image, as the focus is entirely on the aircraft and their interaction with the environment. The planes' actions are focused on flying in unison, demonstrating precision and teamwork, which is a hallmark of airshows where pilots perform intricate and visually impressive aerial stunts. The image captures a moment of harmony between the machines and the sky, highlighting the skill and coordination required to achieve such a display.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 193,
+            "total_tokens": 499
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1455.00432,
+            "prompt_eval_duration_ms": 29.551693,
+            "generation_duration_ms": 1383.315391,
+            "load_duration_ms": 38.549003,
+            "tokens_per_second": 139.5198819124539
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of awe and excitement, primarily due to the dynamic formation of the four airplanes flying in a tight, synchronized pattern. The clear blue sky serves as a backdrop, enhancing the vibrancy and energy of the scene. The white contrails left by the planes add a dramatic and almost ethereal quality, suggesting movement and the passage of time. The uniformity of the planes' formation and their identical appearance contribute to a feeling of unity and precision, which can inspire admiration for the skill and coordination required to achieve such a feat. The bright yellow color of the planes contrasts sharply with the blue sky, drawing the viewer's eye and creating a visually striking image. Overall, the tone is decidedly positive, as the image conveys a sense of accomplishment, teamwork, and the thrill of aviation. The visual elements of the formation, the color contrast, and the dynamic lines of the contrails all work together to create a mood of excitement and inspiration.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 194,
+            "total_tokens": 502
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1465.601612,
+            "prompt_eval_duration_ms": 30.431377,
+            "generation_duration_ms": 1396.074146,
+            "load_duration_ms": 37.158546,
+            "tokens_per_second": 138.96110070933153
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"airplane\": {\n      \"count\": 4,\n      \"location\": \"center\",\n      \"color\": [\"yellow\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"forming a diamond formation with smoke trails\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear blue sky\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "airplane": {
+                "count": 4,
+                "location": "center",
+                "color": [
+                  "yellow",
+                  "black"
+                ],
+                "size": "medium",
+                "description": "forming a diamond formation with smoke trails"
+              }
+            },
+            "natural": {
+              "sky": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "clear blue sky"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 118,
+            "total_tokens": 604
+          },
+          "performance_metrics": {
+            "total_duration_ms": 909.510206,
+            "prompt_eval_duration_ms": 42.513631,
+            "generation_duration_ms": 827.933366,
+            "load_duration_ms": 36.516684,
+            "tokens_per_second": 142.52354699762154
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2574,
+        "total_time_ms": 6638.940205,
+        "average_speed": 140.47593036054735
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a vibrant aerial display featuring four yellow airplanes flying in a tight, coordinated formation against a clear blue sky. The planes are positioned diagonally, with one at the top and three below, creating a dynamic, cascading effect. Each aircraft leaves a distinct white contrail, which trails behind it, forming intricate, swirling patterns that add depth and movement to the scene. The contrails vary in length and curvature, suggesting the planes are performing aerobatic maneuvers. The bright yellow color of the aircraft contrasts sharply with the vivid blue of the sky, making the planes stand out prominently. The lighting is natural and bright, indicative of a sunny day, which enhances the clarity and vibrancy of the colors. The overall composition is balanced and visually striking, with the planes and their contrails creating a sense of harmony and precision. The image captures the excitement and skill involved in aerial performances, emphasizing the beauty and complexity of coordinated flight.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 189,
+            "total_tokens": 486
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10643.6671,
+            "prompt_eval_duration_ms": 3564.694266,
+            "generation_duration_ms": 7040.430162,
+            "load_duration_ms": 36.450705,
+            "tokens_per_second": 26.844950613970738
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image prominently features four yellow stunt planes flying in close formation, leaving distinct white contrails behind them. These planes are the most immediate and striking elements, drawing the viewer's attention due to their bright color and dynamic arrangement. The planes appear to be performing an aerial maneuver, creating a sense of motion and precision. The contrails they leave behind add depth and a sense of movement, emphasizing their flight paths and the coordination of their formation.\n\nIn the background, the sky serves as the setting, providing a vast, open canvas that contrasts with the sharp, structured lines of the planes and their contrails. The sky is a clear, vibrant blue, which enhances the visibility of the planes and their trails. The background is relatively uncluttered, allowing the planes to stand out as the focal point. The contrails, which originate from the planes, extend into the background, creating a visual connection between the foreground and the sky. This interplay between the planes and their contrails against the expansive sky creates a harmonious composition, where the man-made elements (planes and trails) are set against the natural backdrop of the sky. The relationship between the planes and the sky highlights the beauty of human engineering and the grace of flight, while the contrails add a layer of visual storytelling, illustrating the paths the planes have taken.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 270,
+            "total_tokens": 573
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10165.210921,
+            "prompt_eval_duration_ms": 73.130375,
+            "generation_duration_ms": 10052.594403,
+            "load_duration_ms": 37.287162,
+            "tokens_per_second": 26.858738070584423
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a formation of four yellow airplanes flying in a clear blue sky, leaving distinct white contrails in their wake. The planes are arranged in a staggered, diagonal pattern, suggesting a coordinated aerial display, possibly part of an airshow or a precision flying demonstration. Each plane is identical in design, indicating they are part of the same unit or team. The pilots inside the planes are not visible, but their skillful maneuvering is evident from the precise formation and the symmetrical contrails they create.\n\nThe planes are likely performing a synchronized routine, showcasing their teamwork and expertise in maintaining a tight formation. The contrails, which are the result of the planes' engines, create a visually striking pattern against the backdrop of the sky, enhancing the aesthetic appeal of the display. The interaction between the planes is one of harmony and precision, as they maintain a consistent distance and alignment with each other. The clear sky provides an unobstructed view, emphasizing the planes' movements and the beauty of their coordinated flight.\n\nOverall, the image captures a moment of aerial artistry, where the planes, their pilots, and the contrails work together to create a visually captivating scene. The formation and the contrails suggest a display of skill, discipline, and the thrill of aviation.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 258,
+            "total_tokens": 564
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9723.642571,
+            "prompt_eval_duration_ms": 74.314591,
+            "generation_duration_ms": 9609.274,
+            "load_duration_ms": 38.040683,
+            "tokens_per_second": 26.84906268673367
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image of the four yellow airplanes flying in formation against a clear blue sky evokes a sense of awe, excitement, and unity. The bright yellow color of the planes stands out vividly against the serene blue sky, creating a visually striking contrast that draws the viewer's attention. The formation itself, with the planes flying in a tight, synchronized pattern, conveys a sense of precision, discipline, and teamwork, which can inspire feelings of admiration and respect. The white contrails trailing behind the planes add a dynamic element, suggesting movement and energy, while also enhancing the sense of depth and dimension in the image.\n\nThe overall tone of the image is positive and uplifting. The clear sky and the bright colors contribute to a feeling of openness, freedom, and optimism. The image might remind viewers of airshows or military displays, which are often associated with celebration, patriotism, and the thrill of flight. The symmetry and harmony of the formation can evoke a sense of order and balance, further enhancing the positive emotional atmosphere. Overall, the image is likely to inspire feelings of joy, wonder, and a sense of shared purpose, making it a visually engaging and emotionally uplifting scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 235,
+            "total_tokens": 543
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8877.368279,
+            "prompt_eval_duration_ms": 75.176565,
+            "generation_duration_ms": 8761.756141,
+            "load_duration_ms": 38.33869,
+            "tokens_per_second": 26.821107118050755
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"airplane\": {\n      \"count\": 4,\n      \"location\": \"center\",\n      \"color\": [\"yellow\"],\n      \"size\": \"medium\",\n      \"description\": \"Four yellow airplanes flying in formation, leaving white contrails in the sky.\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"Clear blue sky with white contrails from the airplanes.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "airplane": {
+                "count": 4,
+                "location": "center",
+                "color": [
+                  "yellow"
+                ],
+                "size": "medium",
+                "description": "Four yellow airplanes flying in formation, leaving white contrails in the sky."
+              }
+            },
+            "natural": {
+              "sky": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "Clear blue sky with white contrails from the airplanes."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 129,
+            "total_tokens": 615
+          },
+          "performance_metrics": {
+            "total_duration_ms": 4956.748167,
+            "prompt_eval_duration_ms": 134.412214,
+            "generation_duration_ms": 4780.173567,
+            "load_duration_ms": 39.879429,
+            "tokens_per_second": 26.986467790741624
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2781,
+        "total_time_ms": 44366.637038,
+        "average_speed": 26.872065256016242
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -430,265 +689,6 @@
         "total_tokens": 2673,
         "total_time_ms": 22187.287447999995,
         "average_speed": 41.94989265159749
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a dynamic aerial display featuring four identical yellow and black aerobatic planes flying in a tight formation against a clear blue sky. The planes, appearing as small silhouettes due to the distance, are arranged in a diamond pattern, with the lead plane slightly ahead and to the left of the others. Each plane leaves a distinct white smoke trail behind it, which curves elegantly in the air, creating a visually striking contrast against the vibrant blue backdrop. The smoke trails are thick and dense, forming a series of overlapping, flowing lines that add a sense of motion and energy to the scene. The lighting is natural and bright, suggesting the photo was taken during the day under clear weather conditions, enhancing the vividness of the colors and the clarity of the smoke trails. The overall composition is balanced and dynamic, with the planes' positions and the smoke trails creating a harmonious yet energetic visual narrative.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 183,
-            "total_tokens": 480
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1410.159179,
-            "prompt_eval_duration_ms": 78.228023,
-            "generation_duration_ms": 1292.054589,
-            "load_duration_ms": 36.671414,
-            "tokens_per_second": 141.63488258002698
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, four yellow airplanes are prominently displayed, each leaving a distinct white contrail behind as they fly in a tight formation. The planes are angled slightly upwards, suggesting they are ascending or performing a coordinated aerial maneuver. The planes are identical in appearance, with a sleek, aerodynamic design, and their bright yellow color contrasts sharply against the clear blue sky. The white contrails, varying in thickness and length, trail behind each plane, creating a dynamic visual effect that emphasizes their movement and the precision of their formation. In the background, the sky is a uniform, vibrant blue, devoid of any clouds or other elements, which serves to highlight the planes and their trails even more. The relationship between the foreground and background is one of contrast and depth, with the planes and their trails in the foreground drawing the viewer's eye and the expansive blue sky in the background providing a sense of space and context.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 186,
-            "total_tokens": 489
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1398.664888,
-            "prompt_eval_duration_ms": 28.515843,
-            "generation_duration_ms": 1331.041084,
-            "load_duration_ms": 37.244161,
-            "tokens_per_second": 139.74023960330288
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, four identical yellow airplanes are captured mid-flight, leaving behind a trail of white contrails that stretch across the clear blue sky. The planes are arranged in a tight formation, suggesting a coordinated aerial display or a practice run for an airshow. Each plane is identical in design, with a sleek, modern appearance, indicating they are likely part of a team performing synchronized maneuvers. The contrails, created by the exhaust of the aircraft engines, form a visually striking pattern that enhances the dynamic nature of the scene. There are no visible people or animals in the image, as the focus is entirely on the aircraft and their interaction with the environment. The planes' actions are focused on flying in unison, demonstrating precision and teamwork, which is a hallmark of airshows where pilots perform intricate and visually impressive aerial stunts. The image captures a moment of harmony between the machines and the sky, highlighting the skill and coordination required to achieve such a display.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 193,
-            "total_tokens": 499
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1455.00432,
-            "prompt_eval_duration_ms": 29.551693,
-            "generation_duration_ms": 1383.315391,
-            "load_duration_ms": 38.549003,
-            "tokens_per_second": 139.5198819124539
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of awe and excitement, primarily due to the dynamic formation of the four airplanes flying in a tight, synchronized pattern. The clear blue sky serves as a backdrop, enhancing the vibrancy and energy of the scene. The white contrails left by the planes add a dramatic and almost ethereal quality, suggesting movement and the passage of time. The uniformity of the planes' formation and their identical appearance contribute to a feeling of unity and precision, which can inspire admiration for the skill and coordination required to achieve such a feat. The bright yellow color of the planes contrasts sharply with the blue sky, drawing the viewer's eye and creating a visually striking image. Overall, the tone is decidedly positive, as the image conveys a sense of accomplishment, teamwork, and the thrill of aviation. The visual elements of the formation, the color contrast, and the dynamic lines of the contrails all work together to create a mood of excitement and inspiration.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 194,
-            "total_tokens": 502
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1465.601612,
-            "prompt_eval_duration_ms": 30.431377,
-            "generation_duration_ms": 1396.074146,
-            "load_duration_ms": 37.158546,
-            "tokens_per_second": 138.96110070933153
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"airplane\": {\n      \"count\": 4,\n      \"location\": \"center\",\n      \"color\": [\"yellow\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"forming a diamond formation with smoke trails\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"clear blue sky\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "airplane": {
-                "count": 4,
-                "location": "center",
-                "color": [
-                  "yellow",
-                  "black"
-                ],
-                "size": "medium",
-                "description": "forming a diamond formation with smoke trails"
-              }
-            },
-            "natural": {
-              "sky": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "clear blue sky"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 118,
-            "total_tokens": 604
-          },
-          "performance_metrics": {
-            "total_duration_ms": 909.510206,
-            "prompt_eval_duration_ms": 42.513631,
-            "generation_duration_ms": 827.933366,
-            "load_duration_ms": 36.516684,
-            "tokens_per_second": 142.52354699762154
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2574,
-        "total_time_ms": 6638.940205,
-        "average_speed": 140.47593036054735
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a vibrant aerial display featuring four yellow airplanes flying in a tight, coordinated formation against a clear blue sky. The planes are positioned diagonally, with one at the top and three below, creating a dynamic, cascading effect. Each aircraft leaves a distinct white contrail, which trails behind it, forming intricate, swirling patterns that add depth and movement to the scene. The contrails vary in length and curvature, suggesting the planes are performing aerobatic maneuvers. The bright yellow color of the aircraft contrasts sharply with the vivid blue of the sky, making the planes stand out prominently. The lighting is natural and bright, indicative of a sunny day, which enhances the clarity and vibrancy of the colors. The overall composition is balanced and visually striking, with the planes and their contrails creating a sense of harmony and precision. The image captures the excitement and skill involved in aerial performances, emphasizing the beauty and complexity of coordinated flight.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 189,
-            "total_tokens": 486
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10643.6671,
-            "prompt_eval_duration_ms": 3564.694266,
-            "generation_duration_ms": 7040.430162,
-            "load_duration_ms": 36.450705,
-            "tokens_per_second": 26.844950613970738
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image prominently features four yellow stunt planes flying in close formation, leaving distinct white contrails behind them. These planes are the most immediate and striking elements, drawing the viewer's attention due to their bright color and dynamic arrangement. The planes appear to be performing an aerial maneuver, creating a sense of motion and precision. The contrails they leave behind add depth and a sense of movement, emphasizing their flight paths and the coordination of their formation.\n\nIn the background, the sky serves as the setting, providing a vast, open canvas that contrasts with the sharp, structured lines of the planes and their contrails. The sky is a clear, vibrant blue, which enhances the visibility of the planes and their trails. The background is relatively uncluttered, allowing the planes to stand out as the focal point. The contrails, which originate from the planes, extend into the background, creating a visual connection between the foreground and the sky. This interplay between the planes and their contrails against the expansive sky creates a harmonious composition, where the man-made elements (planes and trails) are set against the natural backdrop of the sky. The relationship between the planes and the sky highlights the beauty of human engineering and the grace of flight, while the contrails add a layer of visual storytelling, illustrating the paths the planes have taken.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 270,
-            "total_tokens": 573
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10165.210921,
-            "prompt_eval_duration_ms": 73.130375,
-            "generation_duration_ms": 10052.594403,
-            "load_duration_ms": 37.287162,
-            "tokens_per_second": 26.858738070584423
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a formation of four yellow airplanes flying in a clear blue sky, leaving distinct white contrails in their wake. The planes are arranged in a staggered, diagonal pattern, suggesting a coordinated aerial display, possibly part of an airshow or a precision flying demonstration. Each plane is identical in design, indicating they are part of the same unit or team. The pilots inside the planes are not visible, but their skillful maneuvering is evident from the precise formation and the symmetrical contrails they create.\n\nThe planes are likely performing a synchronized routine, showcasing their teamwork and expertise in maintaining a tight formation. The contrails, which are the result of the planes' engines, create a visually striking pattern against the backdrop of the sky, enhancing the aesthetic appeal of the display. The interaction between the planes is one of harmony and precision, as they maintain a consistent distance and alignment with each other. The clear sky provides an unobstructed view, emphasizing the planes' movements and the beauty of their coordinated flight.\n\nOverall, the image captures a moment of aerial artistry, where the planes, their pilots, and the contrails work together to create a visually captivating scene. The formation and the contrails suggest a display of skill, discipline, and the thrill of aviation.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 258,
-            "total_tokens": 564
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9723.642571,
-            "prompt_eval_duration_ms": 74.314591,
-            "generation_duration_ms": 9609.274,
-            "load_duration_ms": 38.040683,
-            "tokens_per_second": 26.84906268673367
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image of the four yellow airplanes flying in formation against a clear blue sky evokes a sense of awe, excitement, and unity. The bright yellow color of the planes stands out vividly against the serene blue sky, creating a visually striking contrast that draws the viewer's attention. The formation itself, with the planes flying in a tight, synchronized pattern, conveys a sense of precision, discipline, and teamwork, which can inspire feelings of admiration and respect. The white contrails trailing behind the planes add a dynamic element, suggesting movement and energy, while also enhancing the sense of depth and dimension in the image.\n\nThe overall tone of the image is positive and uplifting. The clear sky and the bright colors contribute to a feeling of openness, freedom, and optimism. The image might remind viewers of airshows or military displays, which are often associated with celebration, patriotism, and the thrill of flight. The symmetry and harmony of the formation can evoke a sense of order and balance, further enhancing the positive emotional atmosphere. Overall, the image is likely to inspire feelings of joy, wonder, and a sense of shared purpose, making it a visually engaging and emotionally uplifting scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 235,
-            "total_tokens": 543
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8877.368279,
-            "prompt_eval_duration_ms": 75.176565,
-            "generation_duration_ms": 8761.756141,
-            "load_duration_ms": 38.33869,
-            "tokens_per_second": 26.821107118050755
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"airplane\": {\n      \"count\": 4,\n      \"location\": \"center\",\n      \"color\": [\"yellow\"],\n      \"size\": \"medium\",\n      \"description\": \"Four yellow airplanes flying in formation, leaving white contrails in the sky.\"\n    }\n  },\n  \"natural\": {\n    \"sky\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"Clear blue sky with white contrails from the airplanes.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "airplane": {
-                "count": 4,
-                "location": "center",
-                "color": [
-                  "yellow"
-                ],
-                "size": "medium",
-                "description": "Four yellow airplanes flying in formation, leaving white contrails in the sky."
-              }
-            },
-            "natural": {
-              "sky": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "Clear blue sky with white contrails from the airplanes."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 129,
-            "total_tokens": 615
-          },
-          "performance_metrics": {
-            "total_duration_ms": 4956.748167,
-            "prompt_eval_duration_ms": 134.412214,
-            "generation_duration_ms": 4780.173567,
-            "load_duration_ms": 39.879429,
-            "tokens_per_second": 26.986467790741624
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2781,
-        "total_time_ms": 44366.637038,
-        "average_speed": 26.872065256016242
       }
     },
     {

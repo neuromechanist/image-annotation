@@ -7,6 +7,307 @@
   "timestamp": "2025-08-30T16:56:32.635724+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a serene scene of two zebras grazing in what appears to be a zoo enclosure. The setting is naturalistic, with a backdrop of dense green foliage and a black metal fence that subtly frames the background, suggesting a controlled environment. The zebras, with their iconic black and white stripes, are the focal point of the image. The zebra on the left is slightly closer to the viewer, its head lowered as it grazes on the ground, while the second zebra stands a bit further back, also engaged in feeding. The ground is a mix of dry dirt and patches of sparse green grass, with a few scattered leaves and small rocks adding texture to the foreground. The lighting is soft and natural, indicating a daytime scene with diffused sunlight, which enhances the contrast between the zebras' stripes and the earthy tones of the environment. The overall composition is balanced, with the zebras positioned centrally, drawing the viewer's eye through the image, and the lush greenery in the background providing a sense of depth and tranquility.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 213,
+            "total_tokens": 510
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1650.666366,
+            "prompt_eval_duration_ms": 79.519953,
+            "generation_duration_ms": 1528.678112,
+            "load_duration_ms": 37.268966,
+            "tokens_per_second": 139.33606972453336
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the sandy ground is dotted with sparse patches of green grass and a few scattered leaves, creating a natural, earthy texture that contrasts with the zebras' black and white stripes. The zebras, positioned slightly off-center, are the primary subjects of the image, with one grazing and the other standing in a relaxed posture, both facing away from the viewer. Their stripes, a distinctive feature of zebras, stand out sharply against the muted tones of the ground and the background. The background is composed of a dense, dark green foliage that forms a natural backdrop, with a section of a black metal fence partially visible, suggesting the enclosure of a zoo or wildlife park. This fence, along with the lush greenery, frames the zebras and adds depth to the image, creating a sense of space and environment. The relationship between the foreground and background is one of depth and perspective, with the zebras in the middle ground and the dense foliage in the background providing a layered effect that draws the viewer's eye into the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 214,
+            "total_tokens": 517
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1631.57567,
+            "prompt_eval_duration_ms": 31.01991,
+            "generation_duration_ms": 1558.56928,
+            "load_duration_ms": 38.944708,
+            "tokens_per_second": 137.3054138472433
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, two zebras are the focal point, engaged in a peaceful coexistence within their enclosure. The zebra on the left is grazing on the sparse grass, its head lowered to the ground, while the zebra on the right stands slightly further back, its body angled towards the left, appearing to be in a relaxed stance. The zebras are separated by a small, rocky barrier, which might serve as a boundary or a point of interest. The background is lush with green foliage, suggesting a naturalistic environment designed to mimic their habitat. The trees and bushes provide a sense of seclusion and privacy for the zebras, allowing them to graze undisturbed. The enclosure is bordered by a black metal fence, ensuring the safety and containment of the animals. The overall scene depicts a tranquil moment in the lives of these zebras, highlighting their natural behavior and the harmony they maintain within their environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 186,
+            "total_tokens": 492
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1435.549224,
+            "prompt_eval_duration_ms": 31.072703,
+            "generation_duration_ms": 1361.963259,
+            "load_duration_ms": 38.801683,
+            "tokens_per_second": 136.56756066721474
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of tranquility and natural harmony, contributing to a positive emotional atmosphere. The two zebras, with their distinctive black and white stripes, are captured in a moment of peaceful grazing, which conveys a sense of calm and contentment. The lush greenery in the background, with its dense foliage and vibrant leaves, adds to the serene environment, suggesting a thriving ecosystem. The soft, natural light filtering through the leaves enhances the peaceful mood, creating a feeling of serenity and connection to nature. The absence of any human presence or signs of disturbance further emphasizes the quiet and undisturbed nature of the scene. Overall, the image's tone is decidedly positive, as it invites viewers to appreciate the beauty and tranquility of wildlife in its natural habitat.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 157,
+            "total_tokens": 465
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1206.905828,
+            "prompt_eval_duration_ms": 29.849088,
+            "generation_duration_ms": 1136.501633,
+            "load_duration_ms": 37.481759,
+            "tokens_per_second": 138.14322429574548
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"zebra\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"grazing on the ground\"\n    }\n  },\n  \"man-made\": {\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"black\"],\n      \"size\": \"large\",\n      \"description\": \"metallic structure enclosing the area\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"top left\",\n      \"color\": [\"green\", \"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"branch with leaves\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "zebra": {
+                "count": 2,
+                "location": "center",
+                "color": [
+                  "black",
+                  "white"
+                ],
+                "size": "large",
+                "description": "grazing on the ground"
+              }
+            },
+            "man-made": {
+              "fence": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "black"
+                ],
+                "size": "large",
+                "description": "metallic structure enclosing the area"
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 1,
+                "location": "top left",
+                "color": [
+                  "green",
+                  "yellow"
+                ],
+                "size": "small",
+                "description": "branch with leaves"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 175,
+            "total_tokens": 661
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1345.335486,
+            "prompt_eval_duration_ms": 43.629777,
+            "generation_duration_ms": 1259.156932,
+            "load_duration_ms": 39.337088,
+            "tokens_per_second": 138.9818818866654
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2645,
+        "total_time_ms": 7270.032574,
+        "average_speed": 138.06683008428044
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts two zebras grazing in an enclosed outdoor setting, likely a zoo or wildlife park. The main elements are the zebras, which are the focal point of the composition, standing on a dry, sandy ground scattered with sparse patches of grass and small rocks. The zebras' distinctive black-and-white striped patterns are prominent, contrasting sharply with the muted earth tones of the ground and the greenery in the background. The background features a dense cluster of trees and bushes, providing a naturalistic backdrop that suggests a controlled environment. A black metal fence is visible, running horizontally across the middle of the image, indicating the enclosure's boundary. The lighting is soft and diffused, suggesting an overcast day or a shaded area, which casts gentle shadows and avoids harsh contrasts. The overall composition is balanced, with the zebras positioned slightly off-center, creating a sense of depth and perspective. The scene conveys a calm and serene atmosphere, emphasizing the natural behavior of the animals within a managed habitat. The colors are primarily earthy tones\u2014browns, greens, and grays\u2014accentuated by the bold stripes of the zebras.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 231,
+            "total_tokens": 528
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12149.155415,
+            "prompt_eval_duration_ms": 3484.775011,
+            "generation_duration_ms": 8619.009828,
+            "load_duration_ms": 40.411572,
+            "tokens_per_second": 26.801222484926956
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by two zebras grazing on the ground. The zebra on the left is closer to the viewer, while the one on the right is slightly further back. Both zebras are standing on a dry, sandy surface with sparse patches of grass and a few scattered rocks, indicating a semi-arid environment. The zebras' black-and-white stripes are prominently visible, creating a striking contrast against the muted tones of the ground.\n\nIn the background, the setting transitions to a more enclosed area, likely part of a zoo or wildlife reserve. A black metal fence is visible, separating the zebras from the surrounding environment. Beyond the fence, there is a dense cluster of green foliage, including trees and bushes, providing a naturalistic backdrop. The trees have a mix of green and yellow leaves, suggesting a seasonal change, possibly autumn. The background also includes a concrete wall or barrier, which further emphasizes the controlled environment of the setting.\n\nThe foreground and background elements are interconnected through the zebras' presence. The zebras are the focal point in the foreground, drawing the viewer's attention, while the background provides context, indicating that the zebras are in a managed habitat. The fence and foliage create a sense of enclosure and natural mimicry, blending the controlled environment with elements of the wild. The overall composition suggests a balance between the animals' natural behavior (grazing) and their placement in a human-managed setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 292,
+            "total_tokens": 595
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11005.126668,
+            "prompt_eval_duration_ms": 77.027775,
+            "generation_duration_ms": 10883.131487,
+            "load_duration_ms": 41.922495,
+            "tokens_per_second": 26.830512922571657
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a serene outdoor scene featuring two zebras grazing in a naturalistic enclosure. There are no people visible in the image. The zebras, with their distinctive black-and-white striped patterns, are the primary focus. One zebra is positioned closer to the foreground, bent down and actively grazing on the ground, while the other is slightly further back, also engaged in feeding. The zebras appear calm and undisturbed, suggesting a peaceful environment.\n\nThe enclosure is surrounded by a black fence, indicating that this setting is likely a zoo or wildlife park. The background includes lush green foliage, with trees and bushes providing a naturalistic backdrop. The ground is a mix of dirt and sparse grass, typical of a controlled habitat designed to mimic the zebras' natural environment. The zebras' proximity to each other suggests a social bond, as zebras are known to be social animals that often graze in groups for safety and companionship. There are no visible interactions between the zebras beyond their shared activity of grazing, but their close presence implies a sense of mutual comfort and familiarity. The overall atmosphere is tranquil, with the zebras appearing content in their environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 236,
+            "total_tokens": 542
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8928.167788,
+            "prompt_eval_duration_ms": 73.183194,
+            "generation_duration_ms": 8809.582869,
+            "load_duration_ms": 42.33961,
+            "tokens_per_second": 26.78900959436562
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts two zebras grazing peacefully in what appears to be a zoo or wildlife enclosure. The mood conveyed is one of tranquility and serenity, with a predominantly neutral yet slightly positive tone. The zebras are engaged in a natural behavior\u2014grazing\u2014which suggests a sense of calm and routine. The lush greenery in the background, with leaves and trees, adds a touch of vibrancy and life, contributing to a feeling of harmony with nature. The soft lighting and the gentle posture of the zebras enhance the peaceful atmosphere, evoking a sense of contentment and relaxation.\n\nThe enclosure itself, though visible, does not dominate the scene, allowing the focus to remain on the animals and their natural behavior. This subtle presence of the fence does not detract from the overall mood but rather underscores the idea of a controlled yet safe environment for the animals. The earthy tones of the ground and the muted colors of the zebras' stripes blend seamlessly with the surroundings, creating a cohesive and balanced visual composition. Overall, the image evokes feelings of calmness, curiosity about wildlife, and a gentle appreciation for nature, making it a soothing and uplifting visual experience.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 236,
+            "total_tokens": 544
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8931.623711,
+            "prompt_eval_duration_ms": 73.966426,
+            "generation_duration_ms": 8816.654267,
+            "load_duration_ms": 37.645057,
+            "tokens_per_second": 26.767523467867882
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"animal\": {\n    \"zebra\": {\n      \"count\": 2,\n      \"location\": \"middle\",\n      \"color\": [\"black\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Two zebras grazing on the ground, one on the left and one on the right.\"\n    }\n  },\n  \"man-made\": {\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"black\"],\n      \"size\": \"large\",\n      \"description\": \"Metal fence enclosing the area where the zebras are grazing.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"top left\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Partially visible tree with green leaves in the background.\"\n    },\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Patch of grass in the foreground.\"\n    },\n    \"ground\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Dirt ground where the zebras are grazing.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "animal": {
+              "zebra": {
+                "count": 2,
+                "location": "middle",
+                "color": [
+                  "black",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "Two zebras grazing on the ground, one on the left and one on the right."
+              }
+            },
+            "man-made": {
+              "fence": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "black"
+                ],
+                "size": "large",
+                "description": "Metal fence enclosing the area where the zebras are grazing."
+              }
+            },
+            "natural": {
+              "tree": {
+                "count": 1,
+                "location": "top left",
+                "color": [
+                  "green"
+                ],
+                "size": "small",
+                "description": "Partially visible tree with green leaves in the background."
+              },
+              "grass": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "green"
+                ],
+                "size": "small",
+                "description": "Patch of grass in the foreground."
+              },
+              "ground": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "brown"
+                ],
+                "size": "large",
+                "description": "Dirt ground where the zebras are grazing."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 293,
+            "total_tokens": 779
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11039.354769,
+            "prompt_eval_duration_ms": 134.203104,
+            "generation_duration_ms": 10862.340102,
+            "load_duration_ms": 38.777352,
+            "tokens_per_second": 26.97392985753154
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2988,
+        "total_time_ms": 52053.428350999995,
+        "average_speed": 26.832439665452732
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -462,307 +763,6 @@
         "total_tokens": 2777,
         "total_time_ms": 24716.902912999998,
         "average_speed": 41.915029862102536
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a serene scene of two zebras grazing in what appears to be a zoo enclosure. The setting is naturalistic, with a backdrop of dense green foliage and a black metal fence that subtly frames the background, suggesting a controlled environment. The zebras, with their iconic black and white stripes, are the focal point of the image. The zebra on the left is slightly closer to the viewer, its head lowered as it grazes on the ground, while the second zebra stands a bit further back, also engaged in feeding. The ground is a mix of dry dirt and patches of sparse green grass, with a few scattered leaves and small rocks adding texture to the foreground. The lighting is soft and natural, indicating a daytime scene with diffused sunlight, which enhances the contrast between the zebras' stripes and the earthy tones of the environment. The overall composition is balanced, with the zebras positioned centrally, drawing the viewer's eye through the image, and the lush greenery in the background providing a sense of depth and tranquility.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 213,
-            "total_tokens": 510
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1650.666366,
-            "prompt_eval_duration_ms": 79.519953,
-            "generation_duration_ms": 1528.678112,
-            "load_duration_ms": 37.268966,
-            "tokens_per_second": 139.33606972453336
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the sandy ground is dotted with sparse patches of green grass and a few scattered leaves, creating a natural, earthy texture that contrasts with the zebras' black and white stripes. The zebras, positioned slightly off-center, are the primary subjects of the image, with one grazing and the other standing in a relaxed posture, both facing away from the viewer. Their stripes, a distinctive feature of zebras, stand out sharply against the muted tones of the ground and the background. The background is composed of a dense, dark green foliage that forms a natural backdrop, with a section of a black metal fence partially visible, suggesting the enclosure of a zoo or wildlife park. This fence, along with the lush greenery, frames the zebras and adds depth to the image, creating a sense of space and environment. The relationship between the foreground and background is one of depth and perspective, with the zebras in the middle ground and the dense foliage in the background providing a layered effect that draws the viewer's eye into the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 214,
-            "total_tokens": 517
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1631.57567,
-            "prompt_eval_duration_ms": 31.01991,
-            "generation_duration_ms": 1558.56928,
-            "load_duration_ms": 38.944708,
-            "tokens_per_second": 137.3054138472433
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, two zebras are the focal point, engaged in a peaceful coexistence within their enclosure. The zebra on the left is grazing on the sparse grass, its head lowered to the ground, while the zebra on the right stands slightly further back, its body angled towards the left, appearing to be in a relaxed stance. The zebras are separated by a small, rocky barrier, which might serve as a boundary or a point of interest. The background is lush with green foliage, suggesting a naturalistic environment designed to mimic their habitat. The trees and bushes provide a sense of seclusion and privacy for the zebras, allowing them to graze undisturbed. The enclosure is bordered by a black metal fence, ensuring the safety and containment of the animals. The overall scene depicts a tranquil moment in the lives of these zebras, highlighting their natural behavior and the harmony they maintain within their environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 186,
-            "total_tokens": 492
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1435.549224,
-            "prompt_eval_duration_ms": 31.072703,
-            "generation_duration_ms": 1361.963259,
-            "load_duration_ms": 38.801683,
-            "tokens_per_second": 136.56756066721474
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of tranquility and natural harmony, contributing to a positive emotional atmosphere. The two zebras, with their distinctive black and white stripes, are captured in a moment of peaceful grazing, which conveys a sense of calm and contentment. The lush greenery in the background, with its dense foliage and vibrant leaves, adds to the serene environment, suggesting a thriving ecosystem. The soft, natural light filtering through the leaves enhances the peaceful mood, creating a feeling of serenity and connection to nature. The absence of any human presence or signs of disturbance further emphasizes the quiet and undisturbed nature of the scene. Overall, the image's tone is decidedly positive, as it invites viewers to appreciate the beauty and tranquility of wildlife in its natural habitat.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 157,
-            "total_tokens": 465
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1206.905828,
-            "prompt_eval_duration_ms": 29.849088,
-            "generation_duration_ms": 1136.501633,
-            "load_duration_ms": 37.481759,
-            "tokens_per_second": 138.14322429574548
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"zebra\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"grazing on the ground\"\n    }\n  },\n  \"man-made\": {\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"black\"],\n      \"size\": \"large\",\n      \"description\": \"metallic structure enclosing the area\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"top left\",\n      \"color\": [\"green\", \"yellow\"],\n      \"size\": \"small\",\n      \"description\": \"branch with leaves\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "zebra": {
-                "count": 2,
-                "location": "center",
-                "color": [
-                  "black",
-                  "white"
-                ],
-                "size": "large",
-                "description": "grazing on the ground"
-              }
-            },
-            "man-made": {
-              "fence": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "black"
-                ],
-                "size": "large",
-                "description": "metallic structure enclosing the area"
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 1,
-                "location": "top left",
-                "color": [
-                  "green",
-                  "yellow"
-                ],
-                "size": "small",
-                "description": "branch with leaves"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 175,
-            "total_tokens": 661
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1345.335486,
-            "prompt_eval_duration_ms": 43.629777,
-            "generation_duration_ms": 1259.156932,
-            "load_duration_ms": 39.337088,
-            "tokens_per_second": 138.9818818866654
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2645,
-        "total_time_ms": 7270.032574,
-        "average_speed": 138.06683008428044
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts two zebras grazing in an enclosed outdoor setting, likely a zoo or wildlife park. The main elements are the zebras, which are the focal point of the composition, standing on a dry, sandy ground scattered with sparse patches of grass and small rocks. The zebras' distinctive black-and-white striped patterns are prominent, contrasting sharply with the muted earth tones of the ground and the greenery in the background. The background features a dense cluster of trees and bushes, providing a naturalistic backdrop that suggests a controlled environment. A black metal fence is visible, running horizontally across the middle of the image, indicating the enclosure's boundary. The lighting is soft and diffused, suggesting an overcast day or a shaded area, which casts gentle shadows and avoids harsh contrasts. The overall composition is balanced, with the zebras positioned slightly off-center, creating a sense of depth and perspective. The scene conveys a calm and serene atmosphere, emphasizing the natural behavior of the animals within a managed habitat. The colors are primarily earthy tones\u2014browns, greens, and grays\u2014accentuated by the bold stripes of the zebras.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 231,
-            "total_tokens": 528
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12149.155415,
-            "prompt_eval_duration_ms": 3484.775011,
-            "generation_duration_ms": 8619.009828,
-            "load_duration_ms": 40.411572,
-            "tokens_per_second": 26.801222484926956
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by two zebras grazing on the ground. The zebra on the left is closer to the viewer, while the one on the right is slightly further back. Both zebras are standing on a dry, sandy surface with sparse patches of grass and a few scattered rocks, indicating a semi-arid environment. The zebras' black-and-white stripes are prominently visible, creating a striking contrast against the muted tones of the ground.\n\nIn the background, the setting transitions to a more enclosed area, likely part of a zoo or wildlife reserve. A black metal fence is visible, separating the zebras from the surrounding environment. Beyond the fence, there is a dense cluster of green foliage, including trees and bushes, providing a naturalistic backdrop. The trees have a mix of green and yellow leaves, suggesting a seasonal change, possibly autumn. The background also includes a concrete wall or barrier, which further emphasizes the controlled environment of the setting.\n\nThe foreground and background elements are interconnected through the zebras' presence. The zebras are the focal point in the foreground, drawing the viewer's attention, while the background provides context, indicating that the zebras are in a managed habitat. The fence and foliage create a sense of enclosure and natural mimicry, blending the controlled environment with elements of the wild. The overall composition suggests a balance between the animals' natural behavior (grazing) and their placement in a human-managed setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 292,
-            "total_tokens": 595
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11005.126668,
-            "prompt_eval_duration_ms": 77.027775,
-            "generation_duration_ms": 10883.131487,
-            "load_duration_ms": 41.922495,
-            "tokens_per_second": 26.830512922571657
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a serene outdoor scene featuring two zebras grazing in a naturalistic enclosure. There are no people visible in the image. The zebras, with their distinctive black-and-white striped patterns, are the primary focus. One zebra is positioned closer to the foreground, bent down and actively grazing on the ground, while the other is slightly further back, also engaged in feeding. The zebras appear calm and undisturbed, suggesting a peaceful environment.\n\nThe enclosure is surrounded by a black fence, indicating that this setting is likely a zoo or wildlife park. The background includes lush green foliage, with trees and bushes providing a naturalistic backdrop. The ground is a mix of dirt and sparse grass, typical of a controlled habitat designed to mimic the zebras' natural environment. The zebras' proximity to each other suggests a social bond, as zebras are known to be social animals that often graze in groups for safety and companionship. There are no visible interactions between the zebras beyond their shared activity of grazing, but their close presence implies a sense of mutual comfort and familiarity. The overall atmosphere is tranquil, with the zebras appearing content in their environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 236,
-            "total_tokens": 542
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8928.167788,
-            "prompt_eval_duration_ms": 73.183194,
-            "generation_duration_ms": 8809.582869,
-            "load_duration_ms": 42.33961,
-            "tokens_per_second": 26.78900959436562
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts two zebras grazing peacefully in what appears to be a zoo or wildlife enclosure. The mood conveyed is one of tranquility and serenity, with a predominantly neutral yet slightly positive tone. The zebras are engaged in a natural behavior\u2014grazing\u2014which suggests a sense of calm and routine. The lush greenery in the background, with leaves and trees, adds a touch of vibrancy and life, contributing to a feeling of harmony with nature. The soft lighting and the gentle posture of the zebras enhance the peaceful atmosphere, evoking a sense of contentment and relaxation.\n\nThe enclosure itself, though visible, does not dominate the scene, allowing the focus to remain on the animals and their natural behavior. This subtle presence of the fence does not detract from the overall mood but rather underscores the idea of a controlled yet safe environment for the animals. The earthy tones of the ground and the muted colors of the zebras' stripes blend seamlessly with the surroundings, creating a cohesive and balanced visual composition. Overall, the image evokes feelings of calmness, curiosity about wildlife, and a gentle appreciation for nature, making it a soothing and uplifting visual experience.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 236,
-            "total_tokens": 544
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8931.623711,
-            "prompt_eval_duration_ms": 73.966426,
-            "generation_duration_ms": 8816.654267,
-            "load_duration_ms": 37.645057,
-            "tokens_per_second": 26.767523467867882
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"animal\": {\n    \"zebra\": {\n      \"count\": 2,\n      \"location\": \"middle\",\n      \"color\": [\"black\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Two zebras grazing on the ground, one on the left and one on the right.\"\n    }\n  },\n  \"man-made\": {\n    \"fence\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"black\"],\n      \"size\": \"large\",\n      \"description\": \"Metal fence enclosing the area where the zebras are grazing.\"\n    }\n  },\n  \"natural\": {\n    \"tree\": {\n      \"count\": 1,\n      \"location\": \"top left\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Partially visible tree with green leaves in the background.\"\n    },\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Patch of grass in the foreground.\"\n    },\n    \"ground\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"brown\"],\n      \"size\": \"large\",\n      \"description\": \"Dirt ground where the zebras are grazing.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "animal": {
-              "zebra": {
-                "count": 2,
-                "location": "middle",
-                "color": [
-                  "black",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "Two zebras grazing on the ground, one on the left and one on the right."
-              }
-            },
-            "man-made": {
-              "fence": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "black"
-                ],
-                "size": "large",
-                "description": "Metal fence enclosing the area where the zebras are grazing."
-              }
-            },
-            "natural": {
-              "tree": {
-                "count": 1,
-                "location": "top left",
-                "color": [
-                  "green"
-                ],
-                "size": "small",
-                "description": "Partially visible tree with green leaves in the background."
-              },
-              "grass": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "green"
-                ],
-                "size": "small",
-                "description": "Patch of grass in the foreground."
-              },
-              "ground": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "brown"
-                ],
-                "size": "large",
-                "description": "Dirt ground where the zebras are grazing."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 293,
-            "total_tokens": 779
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11039.354769,
-            "prompt_eval_duration_ms": 134.203104,
-            "generation_duration_ms": 10862.340102,
-            "load_duration_ms": 38.777352,
-            "tokens_per_second": 26.97392985753154
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2988,
-        "total_time_ms": 52053.428350999995,
-        "average_speed": 26.832439665452732
       }
     },
     {

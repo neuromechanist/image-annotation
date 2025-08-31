@@ -7,6 +7,426 @@
   "timestamp": "2025-08-30T17:43:00.203957+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a lively scene inside a diner, characterized by a vibrant yellow wall adorned with posters and menus, creating a warm and inviting atmosphere. The setting is casual and bustling, with a group of four individuals seated at a red Formica table, enjoying hot dogs. The table is cluttered with red and white disposable dishes, condiment cups, and a basket of fries, adding to the authentic diner vibe. The individuals are engaged in the act of eating, their expressions ranging from playful to content, suggesting a relaxed and friendly gathering. The lighting is bright and even, highlighting the details of the food and the expressions on the faces of the diners. The composition is dynamic, with the group slightly off-center, drawing the viewer's eye across the table and into the background, where more diner details and signage are visible. The overall color palette is dominated by the reds of the table and the yellow of the wall, creating a visually striking and cohesive image that evokes the essence of a classic American diner experience.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 206,
+            "total_tokens": 503
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1587.770621,
+            "prompt_eval_duration_ms": 82.3991,
+            "generation_duration_ms": 1464.651064,
+            "load_duration_ms": 37.982331,
+            "tokens_per_second": 140.64783419295014
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, a group of four individuals is seated at a vibrant red table, each holding a large hot dog, suggesting a casual dining experience, possibly at a diner or a fast-food establishment. The table is adorned with red and white paper trays, disposable cups, and small condiment containers, emphasizing the informal and quick-service nature of the setting. The individuals are engaged in conversation and laughter, creating a lively and friendly atmosphere. The background features a yellow wall with a chain-link pattern, which adds a retro diner aesthetic. Prominently displayed are posters and signs advertising the establishment, including a \"Jumbo Blue\" sign and a \"Kennel Club\" poster, which might indicate a theme or a special promotion. The overall setting suggests a relaxed and communal dining experience, with the foreground capturing the immediate interaction and the background providing context to the location and its ambiance.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 176,
+            "total_tokens": 479
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1340.246428,
+            "prompt_eval_duration_ms": 31.872381,
+            "generation_duration_ms": 1265.513409,
+            "load_duration_ms": 37.943261,
+            "tokens_per_second": 139.0739906415326
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a group of four people is gathered around a red table in a diner, enjoying hot dogs. The person on the far left, a man with short brown hair, is in the process of taking a bite of his hot dog, his mouth open in anticipation. Next to him, another man with short brown hair and glasses is holding a partially eaten hot dog, his gaze directed towards the man on the left. To the right, a woman with red hair and glasses is holding a hot dog in her right hand, smiling warmly at the group. Beside her, a man with curly brown hair and glasses is also holding a hot dog, his expression relaxed and content. The table is adorned with red and white paper trays, a basket of fries, and two cups of soda, one of which is a Pepsi. The background features a yellow wall with a sign advertising a \"Jumbo 100% All Beef\" hot dog, emphasizing the quality of the food. The group appears to be enjoying a casual and friendly meal together, with their actions and expressions suggesting camaraderie and shared enjoyment of the food.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 229,
+            "total_tokens": 535
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1713.184903,
+            "prompt_eval_duration_ms": 30.331227,
+            "generation_duration_ms": 1642.029795,
+            "load_duration_ms": 38.324812,
+            "tokens_per_second": 139.46153760261092
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image exudes a lively and cheerful mood, evoking feelings of camaraderie and enjoyment. The group of friends, seated around a vibrant red table, are engaged in the simple pleasure of sharing hot dogs, which suggests a relaxed and informal atmosphere. The bright yellow walls adorned with posters and advertisements add to the energetic and nostalgic ambiance, reminiscent of a classic diner setting. The smiles and laughter on their faces, along with the casual attire and the presence of soft drinks, contribute to the overall positive tone. The visual elements, such as the colorful surroundings and the relaxed body language, collectively create an atmosphere of shared happiness and lightheartedness, making the scene feel warm and inviting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 141,
+            "total_tokens": 449
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1075.834419,
+            "prompt_eval_duration_ms": 30.499605,
+            "generation_duration_ms": 1003.992068,
+            "load_duration_ms": 38.332988,
+            "tokens_per_second": 140.43935653882076
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 4,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"gray\", \"brown\", \"red\"],\n      \"size\": \"large\",\n      \"description\": \"people eating hot dogs\"\n    }\n  },\n  \"man-made\": {\n    \"table\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"red\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"table with food and drinks\"\n    },\n    \"food\": {\n      \"count\": 4,\n      \"location\": \"center\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"hot dogs with buns\"\n    },\n    \"drinks\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"red\"],\n      \"size\": \"small\",\n      \"description\": \"plastic cups with straws\"\n    },\n    \"signs\": {\n      \"count\": 3,\n      \"location\": \"top\",\n      \"color\": [\"red\", \"yellow\", \"blue\"],\n      \"size\": \"large\",\n      \"description\": \"restaurant signs with text and images\"\n    },\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"yellow\"],\n      \"size\": \"large\",\n      \"description\": \"restaurant interior wall\"\n    },\n    \"bun\": {\n      \"count\": 4,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"buns for hot dogs\"\n    },\n    \"napkin\": {\n      \"count\": 4,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"napkins on the table\"\n    },\n    \"straw\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"straws in the cups\"\n    },\n    \"pepsi\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"red\"],\n      \"size\": \"small\",\n      \"description\": \"Pepsi cup with straw\"\n    },\n    \"sauce\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"red\"],\n      \"size\": \"small\",\n      \"description\": \"small container of sauce\"\n    },\n    \"fries\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"basket of fries\"\n    },\n    \"chair\": {\n      \"count\": 2,\n      \"location\": \"bottom\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"metal chairs\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 4,
+                "location": "center",
+                "color": [
+                  "black",
+                  "gray",
+                  "brown",
+                  "red"
+                ],
+                "size": "large",
+                "description": "people eating hot dogs"
+              }
+            },
+            "man-made": {
+              "table": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "red",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "table with food and drinks"
+              },
+              "food": {
+                "count": 4,
+                "location": "center",
+                "color": [
+                  "brown",
+                  "white"
+                ],
+                "size": "small",
+                "description": "hot dogs with buns"
+              },
+              "drinks": {
+                "count": 2,
+                "location": "center",
+                "color": [
+                  "white",
+                  "red"
+                ],
+                "size": "small",
+                "description": "plastic cups with straws"
+              },
+              "signs": {
+                "count": 3,
+                "location": "top",
+                "color": [
+                  "red",
+                  "yellow",
+                  "blue"
+                ],
+                "size": "large",
+                "description": "restaurant signs with text and images"
+              },
+              "wall": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "yellow"
+                ],
+                "size": "large",
+                "description": "restaurant interior wall"
+              },
+              "bun": {
+                "count": 4,
+                "location": "center",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "buns for hot dogs"
+              },
+              "napkin": {
+                "count": 4,
+                "location": "center",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "napkins on the table"
+              },
+              "straw": {
+                "count": 2,
+                "location": "center",
+                "color": [
+                  "white"
+                ],
+                "size": "small",
+                "description": "straws in the cups"
+              },
+              "pepsi": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "white",
+                  "red"
+                ],
+                "size": "small",
+                "description": "Pepsi cup with straw"
+              },
+              "sauce": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "red"
+                ],
+                "size": "small",
+                "description": "small container of sauce"
+              },
+              "fries": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "brown"
+                ],
+                "size": "small",
+                "description": "basket of fries"
+              },
+              "chair": {
+                "count": 2,
+                "location": "bottom",
+                "color": [
+                  "gray"
+                ],
+                "size": "small",
+                "description": "metal chairs"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 649,
+            "total_tokens": 1135
+          },
+          "performance_metrics": {
+            "total_duration_ms": 4726.245151,
+            "prompt_eval_duration_ms": 45.145118,
+            "generation_duration_ms": 4635.542033,
+            "load_duration_ms": 40.345336,
+            "tokens_per_second": 140.0052022783589
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3101,
+        "total_time_ms": 10443.281522000001,
+        "average_speed": 139.92558425085468
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a lively scene inside a casual diner or fast-food restaurant, characterized by its vibrant and nostalgic aesthetic. The setting is a small, rectangular table with a bright red surface, surrounded by metal chairs with a retro design. Four individuals are seated around the table, engaged in a jovial moment, with one person playfully making a surprised or exaggerated expression, while the others are smiling and enjoying their food. The main elements on the table include hot dogs, buns, condiments (such as ketchup), and a few drink cups, suggesting a casual meal. The background features yellow walls adorned with framed posters, including one that reads \"Kennel Club\" and another promoting \"Jumbo 100% All Beef Hot Dogs\" with details about their ingredients and preparation. The lighting is bright and even, typical of a diner, enhancing the warm and inviting atmosphere. The overall composition is dynamic and energetic, with the group's expressions and the colorful surroundings contributing to a sense of fun and camaraderie. The use of bold colors, such as the red table, yellow walls, and the blue and white \"Jumbo\" sign, adds to the lively and nostalgic feel of the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 243,
+            "total_tokens": 540
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12621.68266,
+            "prompt_eval_duration_ms": 3540.460509,
+            "generation_duration_ms": 9039.185309,
+            "load_duration_ms": 39.075475,
+            "tokens_per_second": 26.88295368367472
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the primary elements are four individuals seated at a red diner-style table, actively engaged in eating sandwiches. The table is cluttered with food items, including sandwiches, small containers of condiments like ketchup, and drinks in clear plastic cups. The individuals are dressed casually, with one person wearing a black long-sleeve shirt, another in a gray shirt, and the others in similarly informal attire. Their expressions and body language suggest a lively and enjoyable meal, with one person playfully exaggerating their eating action.\n\nIn the background, the setting is a diner or casual eatery, characterized by a bright yellow wall and metallic silver paneling along the lower portion of the wall. Prominently displayed on the wall are posters and signs, including one for a \"Kennel Club\" featuring images of dogs and another advertising a \"Jumbo 100% All Beef\" sandwich with details about its ingredients and health benefits. The overall ambiance is vibrant and casual, typical of a fast-food or diner environment.\n\nThe foreground and background elements relate to each other by creating a cohesive narrative of a dining experience. The individuals in the foreground are the main subjects, actively participating in the scene, while the background provides context and setting. The posters and signs in the background suggest the type of food being consumed and the environment in which the meal is taking place, reinforcing the casual and social nature of the scene. The bright colors and diner-style decor in the background enhance the lively and informal atmosphere, making the foreground activity feel authentic and relatable.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 316,
+            "total_tokens": 619
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11849.383824,
+            "prompt_eval_duration_ms": 76.791287,
+            "generation_duration_ms": 11726.983667,
+            "load_duration_ms": 42.088581,
+            "tokens_per_second": 26.946400623822065
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a lively scene inside a diner where four people are seated at a red table, enjoying a meal together. The individuals appear to be friends or acquaintances, engaged in a casual and jovial atmosphere. They are all holding hot dogs, which are prominently displayed, suggesting they are partaking in a shared dining experience. The person on the left is making a playful, exaggerated expression, possibly mimicking surprise or excitement, while the others are smiling and looking at the camera, contributing to the overall cheerful mood. The person second from the left is actively eating their hot dog, while the person on the right is holding a hot dog with a relaxed demeanor. The woman in the middle is smiling warmly, adding to the conviviality of the group.\n\nThe table is cluttered with various items, including hot dog buns, condiments like ketchup and mustard, and drink cups, indicating a casual and informal meal. The background features diner-style decor, including a yellow wall with posters and signs advertising the diner's offerings, such as \"Jumbo 100% All Beef Hot Dogs\" and \"Freshly Baked Buns.\" The setting and the actions of the individuals suggest a moment of shared enjoyment and camaraderie, with the group interacting through their expressions, gestures, and the act of eating together. The overall scene conveys a sense of friendship and lightheartedness, typical of a fun outing at a diner.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 294,
+            "total_tokens": 600
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11043.839707,
+            "prompt_eval_duration_ms": 79.332356,
+            "generation_duration_ms": 10920.728544,
+            "load_duration_ms": 40.775716,
+            "tokens_per_second": 26.921280829888197
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The mood and emotions conveyed by this image are overwhelmingly positive and lighthearted. The group of four individuals appears to be enjoying a casual and fun meal together, exuding a sense of camaraderie and shared enjoyment. The exaggerated expressions, particularly the wide-eyed and open-mouthed reactions of the individuals, suggest excitement, amusement, and perhaps a playful competition, possibly related to eating the large sandwiches quickly. The bright yellow walls and the vibrant red table contribute to a cheerful and energetic atmosphere, while the casual diner setting, complete with classic elements like metal paneling and a red-and-white checkered tablecloth, adds a nostalgic and relaxed vibe. The presence of food items like hot dogs, sodas, and condiments further emphasizes the casual and indulgent nature of the gathering. The overall tone is positive, as the image captures a moment of shared joy, friendship, and the simple pleasure of enjoying good food in good company. The visual elements, such as the bright colors, the lively expressions, and the familiar diner setting, all work together to create a warm, inviting, and celebratory emotional atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 225,
+            "total_tokens": 533
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8504.095851,
+            "prompt_eval_duration_ms": 75.986358,
+            "generation_duration_ms": 8386.204653,
+            "load_duration_ms": 39.176562,
+            "tokens_per_second": 26.829776914579668
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 4,\n      \"location\": \"center, foreground\",\n      \"color\": [\"brown\", \"black\", \"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"Group of people sitting at a table, eating sandwiches.\"\n    }\n  },\n  \"man-made\": {\n    \"table\": {\n      \"count\": 1,\n      \"location\": \"center, foreground\",\n      \"color\": [\"red\"],\n      \"size\": \"medium\",\n      \"description\": \"Red table with food and drinks on it.\"\n    },\n    \"food\": {\n      \"count\": 6,\n      \"location\": \"center, foreground\",\n      \"color\": [\"brown\", \"yellow\", \"red\"],\n      \"size\": \"small\",\n      \"description\": \"Sandwiches and hot dogs being eaten by the people.\"\n    },\n    \"drink\": {\n      \"count\": 3,\n      \"location\": \"center, foreground\",\n      \"color\": [\"yellow\", \"clear\"],\n      \"size\": \"small\",\n      \"description\": \"Cups of soda and water on the table.\"\n    },\n    \"sign\": {\n      \"count\": 4,\n      \"location\": \"top, background\",\n      \"color\": [\"yellow\", \"red\", \"blue\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Posters and signs on the wall advertising food and challenges.\"\n    },\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"top, background\",\n      \"color\": [\"yellow\"],\n      \"size\": \"large\",\n      \"description\": \"Yellow wall with posters and signs.\"\n    },\n    \"seating\": {\n      \"count\": 1,\n      \"location\": \"center, background\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"Metallic booth seating.\"\n    }\n  },\n  \"natural\": {}\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 4,
+                "location": "center, foreground",
+                "color": [
+                  "brown",
+                  "black",
+                  "gray"
+                ],
+                "size": "medium",
+                "description": "Group of people sitting at a table, eating sandwiches."
+              }
+            },
+            "man-made": {
+              "table": {
+                "count": 1,
+                "location": "center, foreground",
+                "color": [
+                  "red"
+                ],
+                "size": "medium",
+                "description": "Red table with food and drinks on it."
+              },
+              "food": {
+                "count": 6,
+                "location": "center, foreground",
+                "color": [
+                  "brown",
+                  "yellow",
+                  "red"
+                ],
+                "size": "small",
+                "description": "Sandwiches and hot dogs being eaten by the people."
+              },
+              "drink": {
+                "count": 3,
+                "location": "center, foreground",
+                "color": [
+                  "yellow",
+                  "clear"
+                ],
+                "size": "small",
+                "description": "Cups of soda and water on the table."
+              },
+              "sign": {
+                "count": 4,
+                "location": "top, background",
+                "color": [
+                  "yellow",
+                  "red",
+                  "blue",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "Posters and signs on the wall advertising food and challenges."
+              },
+              "wall": {
+                "count": 1,
+                "location": "top, background",
+                "color": [
+                  "yellow"
+                ],
+                "size": "large",
+                "description": "Yellow wall with posters and signs."
+              },
+              "seating": {
+                "count": 1,
+                "location": "center, background",
+                "color": [
+                  "gray"
+                ],
+                "size": "medium",
+                "description": "Metallic booth seating."
+              }
+            },
+            "natural": {}
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 412,
+            "total_tokens": 898
+          },
+          "performance_metrics": {
+            "total_duration_ms": 15501.344843,
+            "prompt_eval_duration_ms": 134.216511,
+            "generation_duration_ms": 15325.967241,
+            "load_duration_ms": 38.417313,
+            "tokens_per_second": 26.88247948865624
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3190,
+        "total_time_ms": 59520.346885,
+        "average_speed": 26.89257830812418
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -635,426 +1055,6 @@
         "total_tokens": 3249,
         "total_time_ms": 35881.715878,
         "average_speed": 42.23557069665993
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a lively scene inside a diner, characterized by a vibrant yellow wall adorned with posters and menus, creating a warm and inviting atmosphere. The setting is casual and bustling, with a group of four individuals seated at a red Formica table, enjoying hot dogs. The table is cluttered with red and white disposable dishes, condiment cups, and a basket of fries, adding to the authentic diner vibe. The individuals are engaged in the act of eating, their expressions ranging from playful to content, suggesting a relaxed and friendly gathering. The lighting is bright and even, highlighting the details of the food and the expressions on the faces of the diners. The composition is dynamic, with the group slightly off-center, drawing the viewer's eye across the table and into the background, where more diner details and signage are visible. The overall color palette is dominated by the reds of the table and the yellow of the wall, creating a visually striking and cohesive image that evokes the essence of a classic American diner experience.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 206,
-            "total_tokens": 503
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1587.770621,
-            "prompt_eval_duration_ms": 82.3991,
-            "generation_duration_ms": 1464.651064,
-            "load_duration_ms": 37.982331,
-            "tokens_per_second": 140.64783419295014
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, a group of four individuals is seated at a vibrant red table, each holding a large hot dog, suggesting a casual dining experience, possibly at a diner or a fast-food establishment. The table is adorned with red and white paper trays, disposable cups, and small condiment containers, emphasizing the informal and quick-service nature of the setting. The individuals are engaged in conversation and laughter, creating a lively and friendly atmosphere. The background features a yellow wall with a chain-link pattern, which adds a retro diner aesthetic. Prominently displayed are posters and signs advertising the establishment, including a \"Jumbo Blue\" sign and a \"Kennel Club\" poster, which might indicate a theme or a special promotion. The overall setting suggests a relaxed and communal dining experience, with the foreground capturing the immediate interaction and the background providing context to the location and its ambiance.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 176,
-            "total_tokens": 479
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1340.246428,
-            "prompt_eval_duration_ms": 31.872381,
-            "generation_duration_ms": 1265.513409,
-            "load_duration_ms": 37.943261,
-            "tokens_per_second": 139.0739906415326
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a group of four people is gathered around a red table in a diner, enjoying hot dogs. The person on the far left, a man with short brown hair, is in the process of taking a bite of his hot dog, his mouth open in anticipation. Next to him, another man with short brown hair and glasses is holding a partially eaten hot dog, his gaze directed towards the man on the left. To the right, a woman with red hair and glasses is holding a hot dog in her right hand, smiling warmly at the group. Beside her, a man with curly brown hair and glasses is also holding a hot dog, his expression relaxed and content. The table is adorned with red and white paper trays, a basket of fries, and two cups of soda, one of which is a Pepsi. The background features a yellow wall with a sign advertising a \"Jumbo 100% All Beef\" hot dog, emphasizing the quality of the food. The group appears to be enjoying a casual and friendly meal together, with their actions and expressions suggesting camaraderie and shared enjoyment of the food.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 229,
-            "total_tokens": 535
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1713.184903,
-            "prompt_eval_duration_ms": 30.331227,
-            "generation_duration_ms": 1642.029795,
-            "load_duration_ms": 38.324812,
-            "tokens_per_second": 139.46153760261092
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image exudes a lively and cheerful mood, evoking feelings of camaraderie and enjoyment. The group of friends, seated around a vibrant red table, are engaged in the simple pleasure of sharing hot dogs, which suggests a relaxed and informal atmosphere. The bright yellow walls adorned with posters and advertisements add to the energetic and nostalgic ambiance, reminiscent of a classic diner setting. The smiles and laughter on their faces, along with the casual attire and the presence of soft drinks, contribute to the overall positive tone. The visual elements, such as the colorful surroundings and the relaxed body language, collectively create an atmosphere of shared happiness and lightheartedness, making the scene feel warm and inviting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 141,
-            "total_tokens": 449
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1075.834419,
-            "prompt_eval_duration_ms": 30.499605,
-            "generation_duration_ms": 1003.992068,
-            "load_duration_ms": 38.332988,
-            "tokens_per_second": 140.43935653882076
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 4,\n      \"location\": \"center\",\n      \"color\": [\"black\", \"gray\", \"brown\", \"red\"],\n      \"size\": \"large\",\n      \"description\": \"people eating hot dogs\"\n    }\n  },\n  \"man-made\": {\n    \"table\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"red\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"table with food and drinks\"\n    },\n    \"food\": {\n      \"count\": 4,\n      \"location\": \"center\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"hot dogs with buns\"\n    },\n    \"drinks\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"red\"],\n      \"size\": \"small\",\n      \"description\": \"plastic cups with straws\"\n    },\n    \"signs\": {\n      \"count\": 3,\n      \"location\": \"top\",\n      \"color\": [\"red\", \"yellow\", \"blue\"],\n      \"size\": \"large\",\n      \"description\": \"restaurant signs with text and images\"\n    },\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"yellow\"],\n      \"size\": \"large\",\n      \"description\": \"restaurant interior wall\"\n    },\n    \"bun\": {\n      \"count\": 4,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"buns for hot dogs\"\n    },\n    \"napkin\": {\n      \"count\": 4,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"napkins on the table\"\n    },\n    \"straw\": {\n      \"count\": 2,\n      \"location\": \"center\",\n      \"color\": [\"white\"],\n      \"size\": \"small\",\n      \"description\": \"straws in the cups\"\n    },\n    \"pepsi\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"red\"],\n      \"size\": \"small\",\n      \"description\": \"Pepsi cup with straw\"\n    },\n    \"sauce\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"red\"],\n      \"size\": \"small\",\n      \"description\": \"small container of sauce\"\n    },\n    \"fries\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\"],\n      \"size\": \"small\",\n      \"description\": \"basket of fries\"\n    },\n    \"chair\": {\n      \"count\": 2,\n      \"location\": \"bottom\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"metal chairs\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 4,
-                "location": "center",
-                "color": [
-                  "black",
-                  "gray",
-                  "brown",
-                  "red"
-                ],
-                "size": "large",
-                "description": "people eating hot dogs"
-              }
-            },
-            "man-made": {
-              "table": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "red",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "table with food and drinks"
-              },
-              "food": {
-                "count": 4,
-                "location": "center",
-                "color": [
-                  "brown",
-                  "white"
-                ],
-                "size": "small",
-                "description": "hot dogs with buns"
-              },
-              "drinks": {
-                "count": 2,
-                "location": "center",
-                "color": [
-                  "white",
-                  "red"
-                ],
-                "size": "small",
-                "description": "plastic cups with straws"
-              },
-              "signs": {
-                "count": 3,
-                "location": "top",
-                "color": [
-                  "red",
-                  "yellow",
-                  "blue"
-                ],
-                "size": "large",
-                "description": "restaurant signs with text and images"
-              },
-              "wall": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "yellow"
-                ],
-                "size": "large",
-                "description": "restaurant interior wall"
-              },
-              "bun": {
-                "count": 4,
-                "location": "center",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "buns for hot dogs"
-              },
-              "napkin": {
-                "count": 4,
-                "location": "center",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "napkins on the table"
-              },
-              "straw": {
-                "count": 2,
-                "location": "center",
-                "color": [
-                  "white"
-                ],
-                "size": "small",
-                "description": "straws in the cups"
-              },
-              "pepsi": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "white",
-                  "red"
-                ],
-                "size": "small",
-                "description": "Pepsi cup with straw"
-              },
-              "sauce": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "red"
-                ],
-                "size": "small",
-                "description": "small container of sauce"
-              },
-              "fries": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "brown"
-                ],
-                "size": "small",
-                "description": "basket of fries"
-              },
-              "chair": {
-                "count": 2,
-                "location": "bottom",
-                "color": [
-                  "gray"
-                ],
-                "size": "small",
-                "description": "metal chairs"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 649,
-            "total_tokens": 1135
-          },
-          "performance_metrics": {
-            "total_duration_ms": 4726.245151,
-            "prompt_eval_duration_ms": 45.145118,
-            "generation_duration_ms": 4635.542033,
-            "load_duration_ms": 40.345336,
-            "tokens_per_second": 140.0052022783589
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3101,
-        "total_time_ms": 10443.281522000001,
-        "average_speed": 139.92558425085468
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a lively scene inside a casual diner or fast-food restaurant, characterized by its vibrant and nostalgic aesthetic. The setting is a small, rectangular table with a bright red surface, surrounded by metal chairs with a retro design. Four individuals are seated around the table, engaged in a jovial moment, with one person playfully making a surprised or exaggerated expression, while the others are smiling and enjoying their food. The main elements on the table include hot dogs, buns, condiments (such as ketchup), and a few drink cups, suggesting a casual meal. The background features yellow walls adorned with framed posters, including one that reads \"Kennel Club\" and another promoting \"Jumbo 100% All Beef Hot Dogs\" with details about their ingredients and preparation. The lighting is bright and even, typical of a diner, enhancing the warm and inviting atmosphere. The overall composition is dynamic and energetic, with the group's expressions and the colorful surroundings contributing to a sense of fun and camaraderie. The use of bold colors, such as the red table, yellow walls, and the blue and white \"Jumbo\" sign, adds to the lively and nostalgic feel of the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 243,
-            "total_tokens": 540
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12621.68266,
-            "prompt_eval_duration_ms": 3540.460509,
-            "generation_duration_ms": 9039.185309,
-            "load_duration_ms": 39.075475,
-            "tokens_per_second": 26.88295368367472
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the primary elements are four individuals seated at a red diner-style table, actively engaged in eating sandwiches. The table is cluttered with food items, including sandwiches, small containers of condiments like ketchup, and drinks in clear plastic cups. The individuals are dressed casually, with one person wearing a black long-sleeve shirt, another in a gray shirt, and the others in similarly informal attire. Their expressions and body language suggest a lively and enjoyable meal, with one person playfully exaggerating their eating action.\n\nIn the background, the setting is a diner or casual eatery, characterized by a bright yellow wall and metallic silver paneling along the lower portion of the wall. Prominently displayed on the wall are posters and signs, including one for a \"Kennel Club\" featuring images of dogs and another advertising a \"Jumbo 100% All Beef\" sandwich with details about its ingredients and health benefits. The overall ambiance is vibrant and casual, typical of a fast-food or diner environment.\n\nThe foreground and background elements relate to each other by creating a cohesive narrative of a dining experience. The individuals in the foreground are the main subjects, actively participating in the scene, while the background provides context and setting. The posters and signs in the background suggest the type of food being consumed and the environment in which the meal is taking place, reinforcing the casual and social nature of the scene. The bright colors and diner-style decor in the background enhance the lively and informal atmosphere, making the foreground activity feel authentic and relatable.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 316,
-            "total_tokens": 619
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11849.383824,
-            "prompt_eval_duration_ms": 76.791287,
-            "generation_duration_ms": 11726.983667,
-            "load_duration_ms": 42.088581,
-            "tokens_per_second": 26.946400623822065
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a lively scene inside a diner where four people are seated at a red table, enjoying a meal together. The individuals appear to be friends or acquaintances, engaged in a casual and jovial atmosphere. They are all holding hot dogs, which are prominently displayed, suggesting they are partaking in a shared dining experience. The person on the left is making a playful, exaggerated expression, possibly mimicking surprise or excitement, while the others are smiling and looking at the camera, contributing to the overall cheerful mood. The person second from the left is actively eating their hot dog, while the person on the right is holding a hot dog with a relaxed demeanor. The woman in the middle is smiling warmly, adding to the conviviality of the group.\n\nThe table is cluttered with various items, including hot dog buns, condiments like ketchup and mustard, and drink cups, indicating a casual and informal meal. The background features diner-style decor, including a yellow wall with posters and signs advertising the diner's offerings, such as \"Jumbo 100% All Beef Hot Dogs\" and \"Freshly Baked Buns.\" The setting and the actions of the individuals suggest a moment of shared enjoyment and camaraderie, with the group interacting through their expressions, gestures, and the act of eating together. The overall scene conveys a sense of friendship and lightheartedness, typical of a fun outing at a diner.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 294,
-            "total_tokens": 600
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11043.839707,
-            "prompt_eval_duration_ms": 79.332356,
-            "generation_duration_ms": 10920.728544,
-            "load_duration_ms": 40.775716,
-            "tokens_per_second": 26.921280829888197
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The mood and emotions conveyed by this image are overwhelmingly positive and lighthearted. The group of four individuals appears to be enjoying a casual and fun meal together, exuding a sense of camaraderie and shared enjoyment. The exaggerated expressions, particularly the wide-eyed and open-mouthed reactions of the individuals, suggest excitement, amusement, and perhaps a playful competition, possibly related to eating the large sandwiches quickly. The bright yellow walls and the vibrant red table contribute to a cheerful and energetic atmosphere, while the casual diner setting, complete with classic elements like metal paneling and a red-and-white checkered tablecloth, adds a nostalgic and relaxed vibe. The presence of food items like hot dogs, sodas, and condiments further emphasizes the casual and indulgent nature of the gathering. The overall tone is positive, as the image captures a moment of shared joy, friendship, and the simple pleasure of enjoying good food in good company. The visual elements, such as the bright colors, the lively expressions, and the familiar diner setting, all work together to create a warm, inviting, and celebratory emotional atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 225,
-            "total_tokens": 533
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8504.095851,
-            "prompt_eval_duration_ms": 75.986358,
-            "generation_duration_ms": 8386.204653,
-            "load_duration_ms": 39.176562,
-            "tokens_per_second": 26.829776914579668
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 4,\n      \"location\": \"center, foreground\",\n      \"color\": [\"brown\", \"black\", \"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"Group of people sitting at a table, eating sandwiches.\"\n    }\n  },\n  \"man-made\": {\n    \"table\": {\n      \"count\": 1,\n      \"location\": \"center, foreground\",\n      \"color\": [\"red\"],\n      \"size\": \"medium\",\n      \"description\": \"Red table with food and drinks on it.\"\n    },\n    \"food\": {\n      \"count\": 6,\n      \"location\": \"center, foreground\",\n      \"color\": [\"brown\", \"yellow\", \"red\"],\n      \"size\": \"small\",\n      \"description\": \"Sandwiches and hot dogs being eaten by the people.\"\n    },\n    \"drink\": {\n      \"count\": 3,\n      \"location\": \"center, foreground\",\n      \"color\": [\"yellow\", \"clear\"],\n      \"size\": \"small\",\n      \"description\": \"Cups of soda and water on the table.\"\n    },\n    \"sign\": {\n      \"count\": 4,\n      \"location\": \"top, background\",\n      \"color\": [\"yellow\", \"red\", \"blue\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"Posters and signs on the wall advertising food and challenges.\"\n    },\n    \"wall\": {\n      \"count\": 1,\n      \"location\": \"top, background\",\n      \"color\": [\"yellow\"],\n      \"size\": \"large\",\n      \"description\": \"Yellow wall with posters and signs.\"\n    },\n    \"seating\": {\n      \"count\": 1,\n      \"location\": \"center, background\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"Metallic booth seating.\"\n    }\n  },\n  \"natural\": {}\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 4,
-                "location": "center, foreground",
-                "color": [
-                  "brown",
-                  "black",
-                  "gray"
-                ],
-                "size": "medium",
-                "description": "Group of people sitting at a table, eating sandwiches."
-              }
-            },
-            "man-made": {
-              "table": {
-                "count": 1,
-                "location": "center, foreground",
-                "color": [
-                  "red"
-                ],
-                "size": "medium",
-                "description": "Red table with food and drinks on it."
-              },
-              "food": {
-                "count": 6,
-                "location": "center, foreground",
-                "color": [
-                  "brown",
-                  "yellow",
-                  "red"
-                ],
-                "size": "small",
-                "description": "Sandwiches and hot dogs being eaten by the people."
-              },
-              "drink": {
-                "count": 3,
-                "location": "center, foreground",
-                "color": [
-                  "yellow",
-                  "clear"
-                ],
-                "size": "small",
-                "description": "Cups of soda and water on the table."
-              },
-              "sign": {
-                "count": 4,
-                "location": "top, background",
-                "color": [
-                  "yellow",
-                  "red",
-                  "blue",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "Posters and signs on the wall advertising food and challenges."
-              },
-              "wall": {
-                "count": 1,
-                "location": "top, background",
-                "color": [
-                  "yellow"
-                ],
-                "size": "large",
-                "description": "Yellow wall with posters and signs."
-              },
-              "seating": {
-                "count": 1,
-                "location": "center, background",
-                "color": [
-                  "gray"
-                ],
-                "size": "medium",
-                "description": "Metallic booth seating."
-              }
-            },
-            "natural": {}
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 412,
-            "total_tokens": 898
-          },
-          "performance_metrics": {
-            "total_duration_ms": 15501.344843,
-            "prompt_eval_duration_ms": 134.216511,
-            "generation_duration_ms": 15325.967241,
-            "load_duration_ms": 38.417313,
-            "tokens_per_second": 26.88247948865624
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3190,
-        "total_time_ms": 59520.346885,
-        "average_speed": 26.89257830812418
       }
     },
     {

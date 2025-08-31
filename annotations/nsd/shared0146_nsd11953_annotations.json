@@ -7,6 +7,379 @@
   "timestamp": "2025-08-30T17:02:38.420441+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a quaint suburban scene, likely taken during the day given the natural light that softly illuminates the setting. The main elements include a vibrant pink door, a weathered yellow fire hydrant, a small child's bicycle with a purple seat and pink wheels, and a section of a black wooden house with a window and a small section of a stone pathway leading up to the door. The grass is a lush green, contrasting with the muted tones of the house and the worn yellow of the hydrant. The composition is balanced, with the fire hydrant and bicycle in the foreground, drawing the viewer's eye towards the pink door in the background. The overall color palette is subdued, with the bright pink and purple of the bicycle adding a pop of color against the more subdued background. The lighting suggests a calm, overcast day, with no harsh shadows, contributing to the serene and slightly nostalgic atmosphere of the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 187,
+            "total_tokens": 484
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1460.470069,
+            "prompt_eval_duration_ms": 81.165175,
+            "generation_duration_ms": 1338.132236,
+            "load_duration_ms": 38.774322,
+            "tokens_per_second": 139.74702571921298
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, a vibrant pink and purple child's bicycle with white wheels and decorative streamers rests on a patch of green grass, its bright colors contrasting sharply with the muted tones of the surrounding environment. Adjacent to the bicycle, a weathered yellow fire hydrant stands, its surface showing signs of rust and wear, adding a touch of urban grit to the scene. The grassy area transitions into a paved stone pathway leading up to a black house with dark windows, creating a stark contrast between the natural and man-made elements. The background elements, including the house and its windows, provide a sense of depth and context, suggesting a suburban setting. The relationship between the foreground and background is one of juxtaposition, where the playful and colorful bicycle and fire hydrant in the foreground create a focal point, while the more subdued and static elements of the house and pathway in the background anchor the scene and provide a sense of place.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 188,
+            "total_tokens": 491
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1422.829448,
+            "prompt_eval_duration_ms": 29.765177,
+            "generation_duration_ms": 1352.449186,
+            "load_duration_ms": 38.211985,
+            "tokens_per_second": 139.0070709835896
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a quiet suburban scene featuring a vibrant pink bicycle with a purple seat and handlebars, adorned with decorative ribbons, parked on a patch of green grass in front of a house with dark gray siding and a bright pink door. The bicycle, seemingly abandoned, leans slightly to the left, suggesting it might have been left there temporarily or perhaps forgotten. A yellow fire hydrant stands nearby, its top showing signs of rust, indicating it has been there for some time. The scene is devoid of people and animals, focusing solely on the objects and their static relationship with each other. The bicycle and the fire hydrant are positioned in the foreground, while the house forms the backdrop, creating a contrast between the playful, colorful bicycle and the utilitarian, weathered fire hydrant. The overall composition evokes a sense of stillness and quiet, with no immediate action or interaction between the elements.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 182,
+            "total_tokens": 488
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1379.603596,
+            "prompt_eval_duration_ms": 29.969648,
+            "generation_duration_ms": 1305.532591,
+            "load_duration_ms": 41.752629,
+            "tokens_per_second": 139.40670746533667
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of nostalgia and childhood innocence, with a subtle undertone of melancholy. The vibrant pink bicycle, adorned with streamers and a basket, suggests a playful and carefree spirit, often associated with the joy of childhood. The contrast between the bright pink of the bike and the muted tones of the house and hydrant creates a visually striking scene, drawing the viewer's eye to the subject. The slightly worn appearance of the hydrant and the grassy lawn add a touch of realism, hinting at the passage of time and the everyday nature of the scene. The pink door, a bold and cheerful element, introduces a sense of warmth and perhaps a hint of whimsy, suggesting a home that is welcoming and full of life. The overall tone is positive, leaning towards a bittersweet sentiment, as the image captures a moment of simple, joyful memories, possibly tinged with a hint of nostalgia for a time that has passed. The visual elements, such as the colors, the objects, and the setting, work together to create an atmosphere that is both uplifting and reflective, inviting the viewer to pause and appreciate the beauty in everyday scenes.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 236,
+            "total_tokens": 544
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1765.162456,
+            "prompt_eval_duration_ms": 31.592617,
+            "generation_duration_ms": 1693.752629,
+            "load_duration_ms": 37.126172,
+            "tokens_per_second": 139.33557708443857
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"man-made\": {\n    \"bicycle\": {\n      \"count\": 1,\n      \"location\": \"bottom left\",\n      \"color\": [\"pink\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"children's bicycle with streamers\"\n    },\n    \"fire_hydrant\": {\n      \"count\": 1,\n      \"location\": \"bottom right\",\n      \"color\": [\"yellow\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"rusty fire hydrant\"\n    },\n    \"door\": {\n      \"count\": 1,\n      \"location\": \"top right\",\n      \"color\": [\"pink\"],\n      \"size\": \"small\",\n      \"description\": \"pink door with white frame\"\n    },\n    \"window\": {\n      \"count\": 1,\n      \"location\": \"top left\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"black-framed window\"\n    },\n    \"house\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"black\"],\n      \"size\": \"large\",\n      \"description\": \"black-sided house with pink door\"\n    },\n    \"sidewalk\": {\n      \"count\": 1,\n      \"location\": \"middle\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"stone-paved sidewalk\"\n    },\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"short green grass\"\n    }\n  },\n  \"natural\": {\n    \"plants\": {\n      \"count\": 1,\n      \"location\": \"bottom left\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"small green shrubs\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "man-made": {
+              "bicycle": {
+                "count": 1,
+                "location": "bottom left",
+                "color": [
+                  "pink",
+                  "white"
+                ],
+                "size": "small",
+                "description": "children's bicycle with streamers"
+              },
+              "fire_hydrant": {
+                "count": 1,
+                "location": "bottom right",
+                "color": [
+                  "yellow",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "rusty fire hydrant"
+              },
+              "door": {
+                "count": 1,
+                "location": "top right",
+                "color": [
+                  "pink"
+                ],
+                "size": "small",
+                "description": "pink door with white frame"
+              },
+              "window": {
+                "count": 1,
+                "location": "top left",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "black-framed window"
+              },
+              "house": {
+                "count": 1,
+                "location": "top",
+                "color": [
+                  "black"
+                ],
+                "size": "large",
+                "description": "black-sided house with pink door"
+              },
+              "sidewalk": {
+                "count": 1,
+                "location": "middle",
+                "color": [
+                  "gray"
+                ],
+                "size": "small",
+                "description": "stone-paved sidewalk"
+              },
+              "grass": {
+                "count": 1,
+                "location": "bottom",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "short green grass"
+              }
+            },
+            "natural": {
+              "plants": {
+                "count": 1,
+                "location": "bottom left",
+                "color": [
+                  "green"
+                ],
+                "size": "small",
+                "description": "small green shrubs"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 405,
+            "total_tokens": 891
+          },
+          "performance_metrics": {
+            "total_duration_ms": 2986.594488,
+            "prompt_eval_duration_ms": 42.968981,
+            "generation_duration_ms": 2902.176967,
+            "load_duration_ms": 39.029275,
+            "tokens_per_second": 139.55041494890344
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2898,
+        "total_time_ms": 9014.660057000001,
+        "average_speed": 139.40935924029625
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a charming and slightly whimsical outdoor scene set in a residential area. The main elements include a small, child-sized bicycle, a fire hydrant, and a house with a distinctive pink door. The bicycle, painted in vibrant shades of pink and purple, is positioned on a grassy lawn, leaning slightly to the left. It features decorative elements, such as a small, colorful figure or doll attached to the handlebars, adding a playful touch. The fire hydrant, painted yellow with white accents, stands prominently in the foreground, partially obscuring the view of the bicycle. \n\nThe house in the background has dark, black siding, creating a stark contrast with the bright pink door, which is the focal point of the composition. The door's bold color draws the eye and adds a pop of vibrancy to the otherwise muted tones of the house. The house's windows are dark and rectangular, contributing to the overall contrast. The sidewalk in front of the house is made of large, rectangular stone tiles in varying shades of gray and blue, adding texture and visual interest to the scene.\n\nThe lighting appears to be natural, suggesting the photo was taken during the day under overcast or diffused sunlight, as there are no harsh shadows. The overall composition is balanced, with the fire hydrant and bicycle creating a sense of depth and leading the viewer's eye toward the pink door. The scene exudes a sense of calm and nostalgia, enhanced by the playful elements of the bicycle and the quirky pink door. The combination of colors, textures, and elements creates a visually appealing and slightly surreal atmosphere.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 324,
+            "total_tokens": 621
+          },
+          "performance_metrics": {
+            "total_duration_ms": 15610.865673,
+            "prompt_eval_duration_ms": 3525.315455,
+            "generation_duration_ms": 12042.486917,
+            "load_duration_ms": 39.970662,
+            "tokens_per_second": 26.904741706019163
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The foreground of the image is dominated by a yellow fire hydrant with a white top, positioned prominently in the lower right corner. Adjacent to the hydrant is a child's bicycle, painted in vibrant pink and purple hues, with decorative elements like tassels and a small flag. The bicycle is leaning slightly, suggesting it might have been recently used or is in the process of being ridden. The grassy lawn provides a soft, green backdrop for these elements, grounding them in a residential setting.\n\nIn the background, the setting transitions to a house with a dark, black shingled exterior. A striking pink door stands out against the dark facade, adding a pop of color that echoes the bicycle's vibrant tones. The house's windows are dark, contributing to the overall contrast with the bright elements in the foreground. A paved walkway, made of interlocking stone tiles in varying shades of gray and blue, leads up to the house, creating a visual path that connects the foreground to the background.\n\nThe relationship between the foreground and background elements is harmonious and visually engaging. The bright colors of the bicycle and the pink door draw the viewer's attention, while the dark house and the neutral tones of the walkway provide balance and context. The fire hydrant, as a common urban feature, grounds the scene in a familiar, everyday environment, while the playful bicycle and the whimsical pink door add a touch of charm and personality, suggesting a family-friendly, suburban neighborhood. The overall composition creates a sense of depth and storytelling, inviting the viewer to imagine the activities and life that might unfold in this setting.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 325,
+            "total_tokens": 628
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12185.209144,
+            "prompt_eval_duration_ms": 71.952481,
+            "generation_duration_ms": 12072.524119,
+            "load_duration_ms": 38.154248,
+            "tokens_per_second": 26.920633729652934
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a playful and whimsical scene featuring a child's tricycle, a fire hydrant, and a house exterior. The tricycle, painted in vibrant pink and adorned with decorative elements like tassels and a small figure resembling a doll or toy, is positioned on a grassy area near a sidewalk. The tricycle appears to be stationary, suggesting it has been left there, possibly by a child who has moved out of the frame. The fire hydrant, painted yellow and white, stands prominently in the foreground, adding a touch of urban charm to the scene. The house in the background is characterized by dark siding and a striking pink door, which creates a bold contrast with the surrounding greenery and the neutral tones of the sidewalk.\n\nThe tricycle and the fire hydrant do not interact directly, but their placement suggests a playful, child-friendly environment. The tricycle, with its bright colors and decorative details, indicates a sense of fun and imagination, while the fire hydrant, a common urban fixture, adds a touch of realism. The sidewalk and the house's exterior further enhance the suburban setting, creating a harmonious blend of nature and urban elements. The scene evokes a sense of childhood innocence and the simple joys of outdoor play, with the tricycle and fire hydrant serving as focal points that capture the viewer's attention. The absence of people in the frame leaves room for imagination, inviting the viewer to ponder the story behind the scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 296,
+            "total_tokens": 602
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11118.44622,
+            "prompt_eval_duration_ms": 73.431193,
+            "generation_duration_ms": 11003.427716,
+            "load_duration_ms": 39.038863,
+            "tokens_per_second": 26.900708364684277
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of whimsy, nostalgia, and playfulness, with an overall positive and lighthearted tone. The bright pink bicycle, adorned with decorative elements like tassels and a small figure, suggests a child's sense of imagination and creativity. The contrast between the dark, sleek exterior of the house and the vibrant pink door adds a touch of unexpected cheerfulness, breaking the monotony and creating a visually engaging focal point. The fire hydrant, painted in a classic yellow and white, adds a touch of charm and familiarity, often associated with childhood memories and safety. The well-maintained grass and neatly arranged stone pathway contribute to a sense of order and care, enhancing the overall pleasant atmosphere. The scene feels playful and inviting, as if it captures a moment of carefree childhood joy. The use of bright colors, especially the pink door and bicycle, evokes warmth and happiness, while the overall composition suggests a peaceful, suburban environment where imagination and creativity thrive. The image does not convey any negative emotions but instead radiates a sense of innocence and joy, making it a heartwarming and uplifting scene.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 231,
+            "total_tokens": 539
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8724.398577,
+            "prompt_eval_duration_ms": 73.763377,
+            "generation_duration_ms": 8607.300501,
+            "load_duration_ms": 40.269401,
+            "tokens_per_second": 26.837682729116096
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"purple\", \"pink\"],\n      \"size\": \"small\",\n      \"description\": \"A person sitting on a child's bicycle, wearing a purple outfit and a pink hat.\"\n    }\n  },\n  \"man-made\": {\n    \"bicycle\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"pink\"],\n      \"size\": \"small\",\n      \"description\": \"A child's bicycle with training wheels, decorated with colorful streamers.\"\n    },\n    \"fire_hydrant\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"yellow\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"A yellow fire hydrant with white caps.\"\n    },\n    \"house\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"black\", \"pink\"],\n      \"size\": \"large\",\n      \"description\": \"A house with black siding and a pink door.\"\n    },\n    \"door\": {\n      \"count\": 1,\n      \"location\": \"right, top\",\n      \"color\": [\"pink\"],\n      \"size\": \"medium\",\n      \"description\": \"A pink door on the house.\"\n    },\n    \"pathway\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"A paved pathway made of rectangular stones.\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"foreground, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"A grassy area in the foreground.\"\n    },\n    \"plants\": {\n      \"count\": 1,\n      \"location\": \"left, top\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Green plants or shrubs near the house.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "left, middle",
+                "color": [
+                  "purple",
+                  "pink"
+                ],
+                "size": "small",
+                "description": "A person sitting on a child's bicycle, wearing a purple outfit and a pink hat."
+              }
+            },
+            "man-made": {
+              "bicycle": {
+                "count": 1,
+                "location": "left, middle",
+                "color": [
+                  "pink"
+                ],
+                "size": "small",
+                "description": "A child's bicycle with training wheels, decorated with colorful streamers."
+              },
+              "fire_hydrant": {
+                "count": 1,
+                "location": "right, middle",
+                "color": [
+                  "yellow",
+                  "white"
+                ],
+                "size": "small",
+                "description": "A yellow fire hydrant with white caps."
+              },
+              "house": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "black",
+                  "pink"
+                ],
+                "size": "large",
+                "description": "A house with black siding and a pink door."
+              },
+              "door": {
+                "count": 1,
+                "location": "right, top",
+                "color": [
+                  "pink"
+                ],
+                "size": "medium",
+                "description": "A pink door on the house."
+              },
+              "pathway": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "gray"
+                ],
+                "size": "medium",
+                "description": "A paved pathway made of rectangular stones."
+              }
+            },
+            "natural": {
+              "grass": {
+                "count": 1,
+                "location": "foreground, middle",
+                "color": [
+                  "green"
+                ],
+                "size": "large",
+                "description": "A grassy area in the foreground."
+              },
+              "plants": {
+                "count": 1,
+                "location": "left, top",
+                "color": [
+                  "green"
+                ],
+                "size": "small",
+                "description": "Green plants or shrubs near the house."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 461,
+            "total_tokens": 947
+          },
+          "performance_metrics": {
+            "total_duration_ms": 17304.924218,
+            "prompt_eval_duration_ms": 135.515602,
+            "generation_duration_ms": 17125.814044,
+            "load_duration_ms": 40.672696,
+            "tokens_per_second": 26.91842845050105
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3337,
+        "total_time_ms": 64943.843832,
+        "average_speed": 26.896438995994703
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -532,379 +905,6 @@
         "total_tokens": 2902,
         "total_time_ms": 27712.818629,
         "average_speed": 41.83578384574308
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a quaint suburban scene, likely taken during the day given the natural light that softly illuminates the setting. The main elements include a vibrant pink door, a weathered yellow fire hydrant, a small child's bicycle with a purple seat and pink wheels, and a section of a black wooden house with a window and a small section of a stone pathway leading up to the door. The grass is a lush green, contrasting with the muted tones of the house and the worn yellow of the hydrant. The composition is balanced, with the fire hydrant and bicycle in the foreground, drawing the viewer's eye towards the pink door in the background. The overall color palette is subdued, with the bright pink and purple of the bicycle adding a pop of color against the more subdued background. The lighting suggests a calm, overcast day, with no harsh shadows, contributing to the serene and slightly nostalgic atmosphere of the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 187,
-            "total_tokens": 484
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1460.470069,
-            "prompt_eval_duration_ms": 81.165175,
-            "generation_duration_ms": 1338.132236,
-            "load_duration_ms": 38.774322,
-            "tokens_per_second": 139.74702571921298
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, a vibrant pink and purple child's bicycle with white wheels and decorative streamers rests on a patch of green grass, its bright colors contrasting sharply with the muted tones of the surrounding environment. Adjacent to the bicycle, a weathered yellow fire hydrant stands, its surface showing signs of rust and wear, adding a touch of urban grit to the scene. The grassy area transitions into a paved stone pathway leading up to a black house with dark windows, creating a stark contrast between the natural and man-made elements. The background elements, including the house and its windows, provide a sense of depth and context, suggesting a suburban setting. The relationship between the foreground and background is one of juxtaposition, where the playful and colorful bicycle and fire hydrant in the foreground create a focal point, while the more subdued and static elements of the house and pathway in the background anchor the scene and provide a sense of place.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 188,
-            "total_tokens": 491
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1422.829448,
-            "prompt_eval_duration_ms": 29.765177,
-            "generation_duration_ms": 1352.449186,
-            "load_duration_ms": 38.211985,
-            "tokens_per_second": 139.0070709835896
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a quiet suburban scene featuring a vibrant pink bicycle with a purple seat and handlebars, adorned with decorative ribbons, parked on a patch of green grass in front of a house with dark gray siding and a bright pink door. The bicycle, seemingly abandoned, leans slightly to the left, suggesting it might have been left there temporarily or perhaps forgotten. A yellow fire hydrant stands nearby, its top showing signs of rust, indicating it has been there for some time. The scene is devoid of people and animals, focusing solely on the objects and their static relationship with each other. The bicycle and the fire hydrant are positioned in the foreground, while the house forms the backdrop, creating a contrast between the playful, colorful bicycle and the utilitarian, weathered fire hydrant. The overall composition evokes a sense of stillness and quiet, with no immediate action or interaction between the elements.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 182,
-            "total_tokens": 488
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1379.603596,
-            "prompt_eval_duration_ms": 29.969648,
-            "generation_duration_ms": 1305.532591,
-            "load_duration_ms": 41.752629,
-            "tokens_per_second": 139.40670746533667
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of nostalgia and childhood innocence, with a subtle undertone of melancholy. The vibrant pink bicycle, adorned with streamers and a basket, suggests a playful and carefree spirit, often associated with the joy of childhood. The contrast between the bright pink of the bike and the muted tones of the house and hydrant creates a visually striking scene, drawing the viewer's eye to the subject. The slightly worn appearance of the hydrant and the grassy lawn add a touch of realism, hinting at the passage of time and the everyday nature of the scene. The pink door, a bold and cheerful element, introduces a sense of warmth and perhaps a hint of whimsy, suggesting a home that is welcoming and full of life. The overall tone is positive, leaning towards a bittersweet sentiment, as the image captures a moment of simple, joyful memories, possibly tinged with a hint of nostalgia for a time that has passed. The visual elements, such as the colors, the objects, and the setting, work together to create an atmosphere that is both uplifting and reflective, inviting the viewer to pause and appreciate the beauty in everyday scenes.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 236,
-            "total_tokens": 544
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1765.162456,
-            "prompt_eval_duration_ms": 31.592617,
-            "generation_duration_ms": 1693.752629,
-            "load_duration_ms": 37.126172,
-            "tokens_per_second": 139.33557708443857
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"man-made\": {\n    \"bicycle\": {\n      \"count\": 1,\n      \"location\": \"bottom left\",\n      \"color\": [\"pink\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"children's bicycle with streamers\"\n    },\n    \"fire_hydrant\": {\n      \"count\": 1,\n      \"location\": \"bottom right\",\n      \"color\": [\"yellow\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"rusty fire hydrant\"\n    },\n    \"door\": {\n      \"count\": 1,\n      \"location\": \"top right\",\n      \"color\": [\"pink\"],\n      \"size\": \"small\",\n      \"description\": \"pink door with white frame\"\n    },\n    \"window\": {\n      \"count\": 1,\n      \"location\": \"top left\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"black-framed window\"\n    },\n    \"house\": {\n      \"count\": 1,\n      \"location\": \"top\",\n      \"color\": [\"black\"],\n      \"size\": \"large\",\n      \"description\": \"black-sided house with pink door\"\n    },\n    \"sidewalk\": {\n      \"count\": 1,\n      \"location\": \"middle\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"stone-paved sidewalk\"\n    },\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"bottom\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"short green grass\"\n    }\n  },\n  \"natural\": {\n    \"plants\": {\n      \"count\": 1,\n      \"location\": \"bottom left\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"small green shrubs\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "man-made": {
-              "bicycle": {
-                "count": 1,
-                "location": "bottom left",
-                "color": [
-                  "pink",
-                  "white"
-                ],
-                "size": "small",
-                "description": "children's bicycle with streamers"
-              },
-              "fire_hydrant": {
-                "count": 1,
-                "location": "bottom right",
-                "color": [
-                  "yellow",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "rusty fire hydrant"
-              },
-              "door": {
-                "count": 1,
-                "location": "top right",
-                "color": [
-                  "pink"
-                ],
-                "size": "small",
-                "description": "pink door with white frame"
-              },
-              "window": {
-                "count": 1,
-                "location": "top left",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "black-framed window"
-              },
-              "house": {
-                "count": 1,
-                "location": "top",
-                "color": [
-                  "black"
-                ],
-                "size": "large",
-                "description": "black-sided house with pink door"
-              },
-              "sidewalk": {
-                "count": 1,
-                "location": "middle",
-                "color": [
-                  "gray"
-                ],
-                "size": "small",
-                "description": "stone-paved sidewalk"
-              },
-              "grass": {
-                "count": 1,
-                "location": "bottom",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "short green grass"
-              }
-            },
-            "natural": {
-              "plants": {
-                "count": 1,
-                "location": "bottom left",
-                "color": [
-                  "green"
-                ],
-                "size": "small",
-                "description": "small green shrubs"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 405,
-            "total_tokens": 891
-          },
-          "performance_metrics": {
-            "total_duration_ms": 2986.594488,
-            "prompt_eval_duration_ms": 42.968981,
-            "generation_duration_ms": 2902.176967,
-            "load_duration_ms": 39.029275,
-            "tokens_per_second": 139.55041494890344
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2898,
-        "total_time_ms": 9014.660057000001,
-        "average_speed": 139.40935924029625
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a charming and slightly whimsical outdoor scene set in a residential area. The main elements include a small, child-sized bicycle, a fire hydrant, and a house with a distinctive pink door. The bicycle, painted in vibrant shades of pink and purple, is positioned on a grassy lawn, leaning slightly to the left. It features decorative elements, such as a small, colorful figure or doll attached to the handlebars, adding a playful touch. The fire hydrant, painted yellow with white accents, stands prominently in the foreground, partially obscuring the view of the bicycle. \n\nThe house in the background has dark, black siding, creating a stark contrast with the bright pink door, which is the focal point of the composition. The door's bold color draws the eye and adds a pop of vibrancy to the otherwise muted tones of the house. The house's windows are dark and rectangular, contributing to the overall contrast. The sidewalk in front of the house is made of large, rectangular stone tiles in varying shades of gray and blue, adding texture and visual interest to the scene.\n\nThe lighting appears to be natural, suggesting the photo was taken during the day under overcast or diffused sunlight, as there are no harsh shadows. The overall composition is balanced, with the fire hydrant and bicycle creating a sense of depth and leading the viewer's eye toward the pink door. The scene exudes a sense of calm and nostalgia, enhanced by the playful elements of the bicycle and the quirky pink door. The combination of colors, textures, and elements creates a visually appealing and slightly surreal atmosphere.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 324,
-            "total_tokens": 621
-          },
-          "performance_metrics": {
-            "total_duration_ms": 15610.865673,
-            "prompt_eval_duration_ms": 3525.315455,
-            "generation_duration_ms": 12042.486917,
-            "load_duration_ms": 39.970662,
-            "tokens_per_second": 26.904741706019163
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The foreground of the image is dominated by a yellow fire hydrant with a white top, positioned prominently in the lower right corner. Adjacent to the hydrant is a child's bicycle, painted in vibrant pink and purple hues, with decorative elements like tassels and a small flag. The bicycle is leaning slightly, suggesting it might have been recently used or is in the process of being ridden. The grassy lawn provides a soft, green backdrop for these elements, grounding them in a residential setting.\n\nIn the background, the setting transitions to a house with a dark, black shingled exterior. A striking pink door stands out against the dark facade, adding a pop of color that echoes the bicycle's vibrant tones. The house's windows are dark, contributing to the overall contrast with the bright elements in the foreground. A paved walkway, made of interlocking stone tiles in varying shades of gray and blue, leads up to the house, creating a visual path that connects the foreground to the background.\n\nThe relationship between the foreground and background elements is harmonious and visually engaging. The bright colors of the bicycle and the pink door draw the viewer's attention, while the dark house and the neutral tones of the walkway provide balance and context. The fire hydrant, as a common urban feature, grounds the scene in a familiar, everyday environment, while the playful bicycle and the whimsical pink door add a touch of charm and personality, suggesting a family-friendly, suburban neighborhood. The overall composition creates a sense of depth and storytelling, inviting the viewer to imagine the activities and life that might unfold in this setting.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 325,
-            "total_tokens": 628
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12185.209144,
-            "prompt_eval_duration_ms": 71.952481,
-            "generation_duration_ms": 12072.524119,
-            "load_duration_ms": 38.154248,
-            "tokens_per_second": 26.920633729652934
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a playful and whimsical scene featuring a child's tricycle, a fire hydrant, and a house exterior. The tricycle, painted in vibrant pink and adorned with decorative elements like tassels and a small figure resembling a doll or toy, is positioned on a grassy area near a sidewalk. The tricycle appears to be stationary, suggesting it has been left there, possibly by a child who has moved out of the frame. The fire hydrant, painted yellow and white, stands prominently in the foreground, adding a touch of urban charm to the scene. The house in the background is characterized by dark siding and a striking pink door, which creates a bold contrast with the surrounding greenery and the neutral tones of the sidewalk.\n\nThe tricycle and the fire hydrant do not interact directly, but their placement suggests a playful, child-friendly environment. The tricycle, with its bright colors and decorative details, indicates a sense of fun and imagination, while the fire hydrant, a common urban fixture, adds a touch of realism. The sidewalk and the house's exterior further enhance the suburban setting, creating a harmonious blend of nature and urban elements. The scene evokes a sense of childhood innocence and the simple joys of outdoor play, with the tricycle and fire hydrant serving as focal points that capture the viewer's attention. The absence of people in the frame leaves room for imagination, inviting the viewer to ponder the story behind the scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 296,
-            "total_tokens": 602
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11118.44622,
-            "prompt_eval_duration_ms": 73.431193,
-            "generation_duration_ms": 11003.427716,
-            "load_duration_ms": 39.038863,
-            "tokens_per_second": 26.900708364684277
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of whimsy, nostalgia, and playfulness, with an overall positive and lighthearted tone. The bright pink bicycle, adorned with decorative elements like tassels and a small figure, suggests a child's sense of imagination and creativity. The contrast between the dark, sleek exterior of the house and the vibrant pink door adds a touch of unexpected cheerfulness, breaking the monotony and creating a visually engaging focal point. The fire hydrant, painted in a classic yellow and white, adds a touch of charm and familiarity, often associated with childhood memories and safety. The well-maintained grass and neatly arranged stone pathway contribute to a sense of order and care, enhancing the overall pleasant atmosphere. The scene feels playful and inviting, as if it captures a moment of carefree childhood joy. The use of bright colors, especially the pink door and bicycle, evokes warmth and happiness, while the overall composition suggests a peaceful, suburban environment where imagination and creativity thrive. The image does not convey any negative emotions but instead radiates a sense of innocence and joy, making it a heartwarming and uplifting scene.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 231,
-            "total_tokens": 539
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8724.398577,
-            "prompt_eval_duration_ms": 73.763377,
-            "generation_duration_ms": 8607.300501,
-            "load_duration_ms": 40.269401,
-            "tokens_per_second": 26.837682729116096
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"purple\", \"pink\"],\n      \"size\": \"small\",\n      \"description\": \"A person sitting on a child's bicycle, wearing a purple outfit and a pink hat.\"\n    }\n  },\n  \"man-made\": {\n    \"bicycle\": {\n      \"count\": 1,\n      \"location\": \"left, middle\",\n      \"color\": [\"pink\"],\n      \"size\": \"small\",\n      \"description\": \"A child's bicycle with training wheels, decorated with colorful streamers.\"\n    },\n    \"fire_hydrant\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"yellow\", \"white\"],\n      \"size\": \"small\",\n      \"description\": \"A yellow fire hydrant with white caps.\"\n    },\n    \"house\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"black\", \"pink\"],\n      \"size\": \"large\",\n      \"description\": \"A house with black siding and a pink door.\"\n    },\n    \"door\": {\n      \"count\": 1,\n      \"location\": \"right, top\",\n      \"color\": [\"pink\"],\n      \"size\": \"medium\",\n      \"description\": \"A pink door on the house.\"\n    },\n    \"pathway\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"gray\"],\n      \"size\": \"medium\",\n      \"description\": \"A paved pathway made of rectangular stones.\"\n    }\n  },\n  \"natural\": {\n    \"grass\": {\n      \"count\": 1,\n      \"location\": \"foreground, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"large\",\n      \"description\": \"A grassy area in the foreground.\"\n    },\n    \"plants\": {\n      \"count\": 1,\n      \"location\": \"left, top\",\n      \"color\": [\"green\"],\n      \"size\": \"small\",\n      \"description\": \"Green plants or shrubs near the house.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "left, middle",
-                "color": [
-                  "purple",
-                  "pink"
-                ],
-                "size": "small",
-                "description": "A person sitting on a child's bicycle, wearing a purple outfit and a pink hat."
-              }
-            },
-            "man-made": {
-              "bicycle": {
-                "count": 1,
-                "location": "left, middle",
-                "color": [
-                  "pink"
-                ],
-                "size": "small",
-                "description": "A child's bicycle with training wheels, decorated with colorful streamers."
-              },
-              "fire_hydrant": {
-                "count": 1,
-                "location": "right, middle",
-                "color": [
-                  "yellow",
-                  "white"
-                ],
-                "size": "small",
-                "description": "A yellow fire hydrant with white caps."
-              },
-              "house": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "black",
-                  "pink"
-                ],
-                "size": "large",
-                "description": "A house with black siding and a pink door."
-              },
-              "door": {
-                "count": 1,
-                "location": "right, top",
-                "color": [
-                  "pink"
-                ],
-                "size": "medium",
-                "description": "A pink door on the house."
-              },
-              "pathway": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "gray"
-                ],
-                "size": "medium",
-                "description": "A paved pathway made of rectangular stones."
-              }
-            },
-            "natural": {
-              "grass": {
-                "count": 1,
-                "location": "foreground, middle",
-                "color": [
-                  "green"
-                ],
-                "size": "large",
-                "description": "A grassy area in the foreground."
-              },
-              "plants": {
-                "count": 1,
-                "location": "left, top",
-                "color": [
-                  "green"
-                ],
-                "size": "small",
-                "description": "Green plants or shrubs near the house."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 461,
-            "total_tokens": 947
-          },
-          "performance_metrics": {
-            "total_duration_ms": 17304.924218,
-            "prompt_eval_duration_ms": 135.515602,
-            "generation_duration_ms": 17125.814044,
-            "load_duration_ms": 40.672696,
-            "tokens_per_second": 26.91842845050105
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3337,
-        "total_time_ms": 64943.843832,
-        "average_speed": 26.896438995994703
       }
     },
     {

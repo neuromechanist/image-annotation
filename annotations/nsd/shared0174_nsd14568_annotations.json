@@ -7,6 +7,311 @@
   "timestamp": "2025-08-30T17:17:50.744374+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a dynamic scene of a surfer riding a wave in the ocean. The setting is a vibrant blue sea under what appears to be the warm, golden light of either early morning or late afternoon, casting a golden hue over the entire scene. The surfer, wearing light-colored board shorts and a wristwatch, is positioned on a white surfboard with a black logo, skillfully balancing as he navigates the curling wave. The wave itself is a rich turquoise, with white foam cresting at the top, indicating the power and movement of the ocean. The background is a blurred expanse of deep blue, emphasizing the vastness of the sea and the isolation of the surfer in this natural setting. The composition is balanced, with the surfer slightly off-center, creating a sense of motion and direction towards the right side of the frame. The overall atmosphere is one of adventure and tranquility, capturing a moment of harmony between human and nature.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 195,
+            "total_tokens": 492
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1561.114614,
+            "prompt_eval_duration_ms": 80.250559,
+            "generation_duration_ms": 1440.319863,
+            "load_duration_ms": 38.070072,
+            "tokens_per_second": 135.38659363749954
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground, the viewer is drawn to the dynamic action of a surfer riding a wave. The surfer, wearing a pair of swim trunks and a watch, is captured mid-turn, his body angled towards the wave as he maneuvers his white surfboard with a black logo. The water around him is a vibrant turquoise, with white foam trailing behind the board, indicating the power and speed of the wave. The surfer's focused expression and the fluid motion of his body suggest a moment of intense concentration and skill.\n\nThe background, in contrast, is a serene expanse of the ocean, its surface a deep blue, hinting at the vastness and tranquility of the setting. The horizon is barely visible, blending seamlessly with the sky, which is not directly visible in the image but can be inferred from the lighting and the direction of the wave. The ocean's calmness in the background contrasts with the surfer's active engagement with the wave, creating a layered effect where the foreground's energy is balanced by the background's peacefulness. This juxtaposition highlights the surfer's solitary figure against the vastness of the sea, emphasizing the scale and the beauty of the natural environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 242,
+            "total_tokens": 545
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1871.898837,
+            "prompt_eval_duration_ms": 30.652151,
+            "generation_duration_ms": 1801.028004,
+            "load_duration_ms": 37.128855,
+            "tokens_per_second": 134.3677052564031
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a person is surfing on a wave, skillfully balancing on a white surfboard. The individual, wearing dark swim trunks and a wristwatch, is crouched low on the board, arms extended for balance as they ride the crest of a small wave. The ocean around them is a vibrant blue, with the wave's white foam trailing behind as it breaks. The surfer's posture and the position of the board suggest they are in the midst of a maneuver, possibly preparing to pop up or adjust their stance. The scene captures a moment of dynamic interaction between the surfer and the ocean, highlighting the thrill and challenge of surfing. There are no animals or other objects in the image, focusing solely on the surfer and their interaction with the natural environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 159,
+            "total_tokens": 465
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1251.734771,
+            "prompt_eval_duration_ms": 29.667742,
+            "generation_duration_ms": 1179.328448,
+            "load_duration_ms": 39.480578,
+            "tokens_per_second": 134.82249179153186
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a sense of exhilaration and freedom, capturing the essence of adventure and the joy of nature. The surfer, mid-action, riding a wave, conveys a mood of intense focus and exhilaration, as he balances on the surfboard, his body leaning into the curve of the wave. The vibrant blue of the ocean and the white foam of the breaking wave add to the dynamic and energetic atmosphere, suggesting a perfect moment of harmony with the natural world. The sunlight reflecting off the water enhances the feeling of warmth and positivity, while the surfer's relaxed posture and the way he appears to be enjoying the ride further contribute to the overall positive tone. The image is a celebration of the thrill of surfing and the beauty of the ocean, evoking feelings of excitement, freedom, and a deep connection to the environment.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 169,
+            "total_tokens": 477
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1329.335531,
+            "prompt_eval_duration_ms": 29.985877,
+            "generation_duration_ms": 1259.497199,
+            "load_duration_ms": 37.279925,
+            "tokens_per_second": 134.18052865395853
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"man surfing on a wave, wearing swim trunks and sunglasses\"\n    }\n  },\n  \"man-made\": {\n    \"surfboard\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"surfboard with a logo, partially submerged in water\"\n    }\n  },\n  \"natural\": {\n    \"ocean\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"body of water with waves\"\n    },\n    \"wave\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"surfing wave with white foam\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "brown",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "man surfing on a wave, wearing swim trunks and sunglasses"
+              }
+            },
+            "man-made": {
+              "surfboard": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "white",
+                  "black"
+                ],
+                "size": "medium",
+                "description": "surfboard with a logo, partially submerged in water"
+              }
+            },
+            "natural": {
+              "ocean": {
+                "count": 1,
+                "location": "background",
+                "color": [
+                  "blue"
+                ],
+                "size": "large",
+                "description": "body of water with waves"
+              },
+              "wave": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "blue",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "surfing wave with white foam"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 237,
+            "total_tokens": 723
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1841.247879,
+            "prompt_eval_duration_ms": 42.733366,
+            "generation_duration_ms": 1756.692796,
+            "load_duration_ms": 39.085395,
+            "tokens_per_second": 134.91260426390454
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2702,
+        "total_time_ms": 7855.331631999999,
+        "average_speed": 134.73398472065952
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image captures a dynamic scene of a surfer riding a wave in a vibrant ocean setting. The main subject is a shirtless man balancing on a white surfboard with a black logo near the nose. He is positioned slightly off-center, leaning forward with one arm extended, pointing toward the horizon, which adds a sense of motion and focus to the composition. The surfer's body is angled toward the wave, showcasing his engagement with the water. The ocean dominates the background, with varying shades of blue ranging from deep, dark tones in the distance to lighter, turquoise hues near the breaking wave. The wave itself is white and foamy, indicating its energy and movement, and it curls slightly, creating a dramatic contrast against the darker water. The lighting is bright and natural, suggesting a sunny day, with sunlight reflecting off the water's surface, enhancing the vividness of the blues and whites. The overall composition is balanced, with the surfer and the wave as the focal points, creating a sense of harmony between the human element and the natural environment. The image exudes a sense of adventure, freedom, and connection with nature.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 229,
+            "total_tokens": 526
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12097.663011,
+            "prompt_eval_duration_ms": 3522.156987,
+            "generation_duration_ms": 8532.410024,
+            "load_duration_ms": 40.543635,
+            "tokens_per_second": 26.8388414710343
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the closest elements to the viewer are a surfer riding a wave and his surfboard. The surfer is positioned slightly off-center, wearing minimal clothing, which suggests a warm, sunny environment. His posture, with one arm extended and the other holding onto the surfboard, indicates active engagement with the wave. The surfboard is white with a visible black logo near the nose, and it is partially submerged in the frothy, white water of the wave. The wave itself is dynamic, with visible texture and movement, emphasizing the action and energy of the scene.\n\nIn the background, the setting is the open ocean, characterized by calm, deep blue water that stretches to the horizon. The water appears relatively still compared to the wave in the foreground, creating a contrast between the active, turbulent wave and the serene, expansive sea. The horizon line is visible, separating the water from the sky, which is not directly visible but implied by the lighting and color of the scene. The overall atmosphere is bright and sunny, suggesting a clear day.\n\nThe relationship between the foreground and background elements is one of contrast and interaction. The surfer and the wave in the foreground are the focal points, drawing the viewer's attention with their movement and energy. The calm ocean in the background provides a sense of scale and context, highlighting the surfer's interaction with the natural environment. The contrast between the dynamic wave and the still ocean emphasizes the thrill and challenge of surfing, while the expansive background underscores the vastness and beauty of the ocean. Together, these elements create a cohesive scene that captures the essence of surfing and the natural setting in which it occurs.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 336,
+            "total_tokens": 639
+          },
+          "performance_metrics": {
+            "total_duration_ms": 12613.675121,
+            "prompt_eval_duration_ms": 75.027873,
+            "generation_duration_ms": 12497.501259,
+            "load_duration_ms": 37.675209,
+            "tokens_per_second": 26.88537436697849
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a surfer riding a wave in the ocean. The surfer, a man with short hair, is shirtless and wearing board shorts, showcasing a relaxed and athletic demeanor. He is positioned on a white surfboard with a black logo, skillfully balancing as he glides along the crest of the wave. His right arm is extended outward, pointing towards the horizon, while his left arm is bent at the elbow, with his hand resting on the edge of the surfboard for stability. His posture suggests confidence and control as he navigates the dynamic movement of the water.\n\nIn the background, the ocean stretches out with varying shades of blue, indicating depth and movement. A small, dark shape is visible in the water near the surfer, which could be a shark or another marine creature, adding an element of intrigue and potential danger to the scene. The wave itself is breaking to the surfer's right, creating a frothy white spray that contrasts with the deep blue of the water. The interaction between the surfer and the wave is central to the image, highlighting the harmony and tension between human skill and the raw power of nature. The surfer's focus and the wave's energy create a dynamic and engaging visual narrative. The potential presence of a marine creature in the background adds a layer of suspense, emphasizing the unpredictable and thrilling nature of surfing.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 276,
+            "total_tokens": 582
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10415.893426,
+            "prompt_eval_duration_ms": 73.268634,
+            "generation_duration_ms": 10301.430354,
+            "load_duration_ms": 38.524648,
+            "tokens_per_second": 26.79239586304929
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image conveys a mood of freedom, adventure, and exhilaration, evoking feelings of joy, excitement, and a deep connection with nature. The surfer, riding a wave with a relaxed yet focused posture, suggests a sense of mastery and harmony with the ocean. The bright, clear blue water and the dynamic movement of the wave create a vibrant and lively atmosphere, emphasizing the thrill and energy of the moment. The surfer's casual attire and confident stance further enhance the feeling of carefree enjoyment and adventure. The contrast between the calm, open expanse of the ocean and the dynamic motion of the wave adds a layer of excitement and unpredictability, highlighting the thrill of surfing. The overall tone is overwhelmingly positive, as the image captures a moment of triumph and connection with the natural world. The visual elements, such as the bright sunlight reflecting off the water, the smooth curve of the wave, and the surfer's poised position, all contribute to an atmosphere of joy and adventure, inviting the viewer to share in the exhilaration of the experience.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 213,
+            "total_tokens": 521
+          },
+          "performance_metrics": {
+            "total_duration_ms": 8053.820964,
+            "prompt_eval_duration_ms": 81.080445,
+            "generation_duration_ms": 7931.835521,
+            "load_duration_ms": 38.476198,
+            "tokens_per_second": 26.853809491645407
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A man surfing, wearing a white swimsuit, pointing with his left hand.\"\n    }\n  },\n  \"animal\": {\n    \"shark\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"A shark fin visible in the water.\"\n    }\n  },\n  \"man-made\": {\n    \"surfboard\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A white surfboard with a black logo.\"\n    }\n  },\n  \"natural\": {\n    \"water\": {\n      \"count\": 1,\n      \"location\": \"entire image\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Ocean water with waves.\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "brown",
+                  "white"
+                ],
+                "size": "medium",
+                "description": "A man surfing, wearing a white swimsuit, pointing with his left hand."
+              }
+            },
+            "animal": {
+              "shark": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "gray"
+                ],
+                "size": "small",
+                "description": "A shark fin visible in the water."
+              }
+            },
+            "man-made": {
+              "surfboard": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "white"
+                ],
+                "size": "medium",
+                "description": "A white surfboard with a black logo."
+              }
+            },
+            "natural": {
+              "water": {
+                "count": 1,
+                "location": "entire image",
+                "color": [
+                  "blue",
+                  "white"
+                ],
+                "size": "large",
+                "description": "Ocean water with waves."
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 250,
+            "total_tokens": 736
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9456.898982,
+            "prompt_eval_duration_ms": 138.444797,
+            "generation_duration_ms": 9277.719559,
+            "load_duration_ms": 37.653039,
+            "tokens_per_second": 26.946276874416142
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 3004,
+        "total_time_ms": 52637.951504,
+        "average_speed": 26.863339613424728
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -479,311 +784,6 @@
         "total_tokens": 2853,
         "total_time_ms": 26473.221122,
         "average_speed": 41.93574588633459
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a dynamic scene of a surfer riding a wave in the ocean. The setting is a vibrant blue sea under what appears to be the warm, golden light of either early morning or late afternoon, casting a golden hue over the entire scene. The surfer, wearing light-colored board shorts and a wristwatch, is positioned on a white surfboard with a black logo, skillfully balancing as he navigates the curling wave. The wave itself is a rich turquoise, with white foam cresting at the top, indicating the power and movement of the ocean. The background is a blurred expanse of deep blue, emphasizing the vastness of the sea and the isolation of the surfer in this natural setting. The composition is balanced, with the surfer slightly off-center, creating a sense of motion and direction towards the right side of the frame. The overall atmosphere is one of adventure and tranquility, capturing a moment of harmony between human and nature.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 195,
-            "total_tokens": 492
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1561.114614,
-            "prompt_eval_duration_ms": 80.250559,
-            "generation_duration_ms": 1440.319863,
-            "load_duration_ms": 38.070072,
-            "tokens_per_second": 135.38659363749954
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground, the viewer is drawn to the dynamic action of a surfer riding a wave. The surfer, wearing a pair of swim trunks and a watch, is captured mid-turn, his body angled towards the wave as he maneuvers his white surfboard with a black logo. The water around him is a vibrant turquoise, with white foam trailing behind the board, indicating the power and speed of the wave. The surfer's focused expression and the fluid motion of his body suggest a moment of intense concentration and skill.\n\nThe background, in contrast, is a serene expanse of the ocean, its surface a deep blue, hinting at the vastness and tranquility of the setting. The horizon is barely visible, blending seamlessly with the sky, which is not directly visible in the image but can be inferred from the lighting and the direction of the wave. The ocean's calmness in the background contrasts with the surfer's active engagement with the wave, creating a layered effect where the foreground's energy is balanced by the background's peacefulness. This juxtaposition highlights the surfer's solitary figure against the vastness of the sea, emphasizing the scale and the beauty of the natural environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 242,
-            "total_tokens": 545
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1871.898837,
-            "prompt_eval_duration_ms": 30.652151,
-            "generation_duration_ms": 1801.028004,
-            "load_duration_ms": 37.128855,
-            "tokens_per_second": 134.3677052564031
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a person is surfing on a wave, skillfully balancing on a white surfboard. The individual, wearing dark swim trunks and a wristwatch, is crouched low on the board, arms extended for balance as they ride the crest of a small wave. The ocean around them is a vibrant blue, with the wave's white foam trailing behind as it breaks. The surfer's posture and the position of the board suggest they are in the midst of a maneuver, possibly preparing to pop up or adjust their stance. The scene captures a moment of dynamic interaction between the surfer and the ocean, highlighting the thrill and challenge of surfing. There are no animals or other objects in the image, focusing solely on the surfer and their interaction with the natural environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 159,
-            "total_tokens": 465
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1251.734771,
-            "prompt_eval_duration_ms": 29.667742,
-            "generation_duration_ms": 1179.328448,
-            "load_duration_ms": 39.480578,
-            "tokens_per_second": 134.82249179153186
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a sense of exhilaration and freedom, capturing the essence of adventure and the joy of nature. The surfer, mid-action, riding a wave, conveys a mood of intense focus and exhilaration, as he balances on the surfboard, his body leaning into the curve of the wave. The vibrant blue of the ocean and the white foam of the breaking wave add to the dynamic and energetic atmosphere, suggesting a perfect moment of harmony with the natural world. The sunlight reflecting off the water enhances the feeling of warmth and positivity, while the surfer's relaxed posture and the way he appears to be enjoying the ride further contribute to the overall positive tone. The image is a celebration of the thrill of surfing and the beauty of the ocean, evoking feelings of excitement, freedom, and a deep connection to the environment.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 169,
-            "total_tokens": 477
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1329.335531,
-            "prompt_eval_duration_ms": 29.985877,
-            "generation_duration_ms": 1259.497199,
-            "load_duration_ms": 37.279925,
-            "tokens_per_second": 134.18052865395853
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"man surfing on a wave, wearing swim trunks and sunglasses\"\n    }\n  },\n  \"man-made\": {\n    \"surfboard\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"white\", \"black\"],\n      \"size\": \"medium\",\n      \"description\": \"surfboard with a logo, partially submerged in water\"\n    }\n  },\n  \"natural\": {\n    \"ocean\": {\n      \"count\": 1,\n      \"location\": \"background\",\n      \"color\": [\"blue\"],\n      \"size\": \"large\",\n      \"description\": \"body of water with waves\"\n    },\n    \"wave\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"surfing wave with white foam\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "brown",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "man surfing on a wave, wearing swim trunks and sunglasses"
-              }
-            },
-            "man-made": {
-              "surfboard": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "white",
-                  "black"
-                ],
-                "size": "medium",
-                "description": "surfboard with a logo, partially submerged in water"
-              }
-            },
-            "natural": {
-              "ocean": {
-                "count": 1,
-                "location": "background",
-                "color": [
-                  "blue"
-                ],
-                "size": "large",
-                "description": "body of water with waves"
-              },
-              "wave": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "blue",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "surfing wave with white foam"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 237,
-            "total_tokens": 723
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1841.247879,
-            "prompt_eval_duration_ms": 42.733366,
-            "generation_duration_ms": 1756.692796,
-            "load_duration_ms": 39.085395,
-            "tokens_per_second": 134.91260426390454
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2702,
-        "total_time_ms": 7855.331631999999,
-        "average_speed": 134.73398472065952
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image captures a dynamic scene of a surfer riding a wave in a vibrant ocean setting. The main subject is a shirtless man balancing on a white surfboard with a black logo near the nose. He is positioned slightly off-center, leaning forward with one arm extended, pointing toward the horizon, which adds a sense of motion and focus to the composition. The surfer's body is angled toward the wave, showcasing his engagement with the water. The ocean dominates the background, with varying shades of blue ranging from deep, dark tones in the distance to lighter, turquoise hues near the breaking wave. The wave itself is white and foamy, indicating its energy and movement, and it curls slightly, creating a dramatic contrast against the darker water. The lighting is bright and natural, suggesting a sunny day, with sunlight reflecting off the water's surface, enhancing the vividness of the blues and whites. The overall composition is balanced, with the surfer and the wave as the focal points, creating a sense of harmony between the human element and the natural environment. The image exudes a sense of adventure, freedom, and connection with nature.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 229,
-            "total_tokens": 526
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12097.663011,
-            "prompt_eval_duration_ms": 3522.156987,
-            "generation_duration_ms": 8532.410024,
-            "load_duration_ms": 40.543635,
-            "tokens_per_second": 26.8388414710343
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the closest elements to the viewer are a surfer riding a wave and his surfboard. The surfer is positioned slightly off-center, wearing minimal clothing, which suggests a warm, sunny environment. His posture, with one arm extended and the other holding onto the surfboard, indicates active engagement with the wave. The surfboard is white with a visible black logo near the nose, and it is partially submerged in the frothy, white water of the wave. The wave itself is dynamic, with visible texture and movement, emphasizing the action and energy of the scene.\n\nIn the background, the setting is the open ocean, characterized by calm, deep blue water that stretches to the horizon. The water appears relatively still compared to the wave in the foreground, creating a contrast between the active, turbulent wave and the serene, expansive sea. The horizon line is visible, separating the water from the sky, which is not directly visible but implied by the lighting and color of the scene. The overall atmosphere is bright and sunny, suggesting a clear day.\n\nThe relationship between the foreground and background elements is one of contrast and interaction. The surfer and the wave in the foreground are the focal points, drawing the viewer's attention with their movement and energy. The calm ocean in the background provides a sense of scale and context, highlighting the surfer's interaction with the natural environment. The contrast between the dynamic wave and the still ocean emphasizes the thrill and challenge of surfing, while the expansive background underscores the vastness and beauty of the ocean. Together, these elements create a cohesive scene that captures the essence of surfing and the natural setting in which it occurs.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 336,
-            "total_tokens": 639
-          },
-          "performance_metrics": {
-            "total_duration_ms": 12613.675121,
-            "prompt_eval_duration_ms": 75.027873,
-            "generation_duration_ms": 12497.501259,
-            "load_duration_ms": 37.675209,
-            "tokens_per_second": 26.88537436697849
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a surfer riding a wave in the ocean. The surfer, a man with short hair, is shirtless and wearing board shorts, showcasing a relaxed and athletic demeanor. He is positioned on a white surfboard with a black logo, skillfully balancing as he glides along the crest of the wave. His right arm is extended outward, pointing towards the horizon, while his left arm is bent at the elbow, with his hand resting on the edge of the surfboard for stability. His posture suggests confidence and control as he navigates the dynamic movement of the water.\n\nIn the background, the ocean stretches out with varying shades of blue, indicating depth and movement. A small, dark shape is visible in the water near the surfer, which could be a shark or another marine creature, adding an element of intrigue and potential danger to the scene. The wave itself is breaking to the surfer's right, creating a frothy white spray that contrasts with the deep blue of the water. The interaction between the surfer and the wave is central to the image, highlighting the harmony and tension between human skill and the raw power of nature. The surfer's focus and the wave's energy create a dynamic and engaging visual narrative. The potential presence of a marine creature in the background adds a layer of suspense, emphasizing the unpredictable and thrilling nature of surfing.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 276,
-            "total_tokens": 582
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10415.893426,
-            "prompt_eval_duration_ms": 73.268634,
-            "generation_duration_ms": 10301.430354,
-            "load_duration_ms": 38.524648,
-            "tokens_per_second": 26.79239586304929
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image conveys a mood of freedom, adventure, and exhilaration, evoking feelings of joy, excitement, and a deep connection with nature. The surfer, riding a wave with a relaxed yet focused posture, suggests a sense of mastery and harmony with the ocean. The bright, clear blue water and the dynamic movement of the wave create a vibrant and lively atmosphere, emphasizing the thrill and energy of the moment. The surfer's casual attire and confident stance further enhance the feeling of carefree enjoyment and adventure. The contrast between the calm, open expanse of the ocean and the dynamic motion of the wave adds a layer of excitement and unpredictability, highlighting the thrill of surfing. The overall tone is overwhelmingly positive, as the image captures a moment of triumph and connection with the natural world. The visual elements, such as the bright sunlight reflecting off the water, the smooth curve of the wave, and the surfer's poised position, all contribute to an atmosphere of joy and adventure, inviting the viewer to share in the exhilaration of the experience.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 213,
-            "total_tokens": 521
-          },
-          "performance_metrics": {
-            "total_duration_ms": 8053.820964,
-            "prompt_eval_duration_ms": 81.080445,
-            "generation_duration_ms": 7931.835521,
-            "load_duration_ms": 38.476198,
-            "tokens_per_second": 26.853809491645407
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"brown\", \"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A man surfing, wearing a white swimsuit, pointing with his left hand.\"\n    }\n  },\n  \"animal\": {\n    \"shark\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"gray\"],\n      \"size\": \"small\",\n      \"description\": \"A shark fin visible in the water.\"\n    }\n  },\n  \"man-made\": {\n    \"surfboard\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"white\"],\n      \"size\": \"medium\",\n      \"description\": \"A white surfboard with a black logo.\"\n    }\n  },\n  \"natural\": {\n    \"water\": {\n      \"count\": 1,\n      \"location\": \"entire image\",\n      \"color\": [\"blue\", \"white\"],\n      \"size\": \"large\",\n      \"description\": \"Ocean water with waves.\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "brown",
-                  "white"
-                ],
-                "size": "medium",
-                "description": "A man surfing, wearing a white swimsuit, pointing with his left hand."
-              }
-            },
-            "animal": {
-              "shark": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "gray"
-                ],
-                "size": "small",
-                "description": "A shark fin visible in the water."
-              }
-            },
-            "man-made": {
-              "surfboard": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "white"
-                ],
-                "size": "medium",
-                "description": "A white surfboard with a black logo."
-              }
-            },
-            "natural": {
-              "water": {
-                "count": 1,
-                "location": "entire image",
-                "color": [
-                  "blue",
-                  "white"
-                ],
-                "size": "large",
-                "description": "Ocean water with waves."
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 250,
-            "total_tokens": 736
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9456.898982,
-            "prompt_eval_duration_ms": 138.444797,
-            "generation_duration_ms": 9277.719559,
-            "load_duration_ms": 37.653039,
-            "tokens_per_second": 26.946276874416142
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 3004,
-        "total_time_ms": 52637.951504,
-        "average_speed": 26.863339613424728
       }
     },
     {

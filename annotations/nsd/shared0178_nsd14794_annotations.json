@@ -7,6 +7,293 @@
   "timestamp": "2025-08-30T17:19:52.213153+00:00",
   "annotations": [
     {
+      "model": "qwen2.5vl:7b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image presents a close-up portrait of a person seated, likely indoors, with a soft, diffused light illuminating their face and upper body. The individual is wearing a short-sleeved, collared, olive-green shirt, which contrasts subtly with the warm, orange hue of the background, possibly a sofa or cushion. The person's hand is raised to their mouth, holding what appears to be a small object, possibly a pen or a small tool, in a contemplative or thoughtful pose. The lighting is warm and slightly dim, creating a moody atmosphere, with shadows cast softly on the person's face and shirt. The background is a plain, light-colored wall, which serves to highlight the subject and the vibrant green of their shirt. The overall composition is intimate and focused, with the subject positioned slightly off-center, adding a dynamic element to the frame. The image has a vintage or retro feel, possibly due to the editing style, which includes a border that gives it a Polaroid-like appearance.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 205,
+            "total_tokens": 502
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1620.279227,
+            "prompt_eval_duration_ms": 79.234062,
+            "generation_duration_ms": 1499.848506,
+            "load_duration_ms": 38.816298,
+            "tokens_per_second": 136.68047084750037
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, a person is seated, wearing a green shirt with short sleeves and a collar, and holding a pair of glasses in their hand, which they are either adjusting or about to put on. The individual's posture suggests a moment of contemplation or pause, as they are looking slightly downward. The background is a simple, uncluttered space with a plain, light-colored wall, which provides a neutral backdrop that contrasts with the green shirt, making the subject stand out. The orange cushion or fabric in the bottom right corner adds a pop of color and suggests the person is seated on a couch or similar piece of furniture. The overall composition is simple, with the subject in the foreground and the plain wall and orange fabric in the background, creating a sense of depth and focusing the viewer's attention on the individual.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 170,
+            "total_tokens": 473
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1345.858949,
+            "prompt_eval_duration_ms": 32.633602,
+            "generation_duration_ms": 1269.853278,
+            "load_duration_ms": 40.566422,
+            "tokens_per_second": 133.87373403307464
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the image, a person is seated, wearing a green military-style shirt, and appears to be in a contemplative or thoughtful pose, holding a pair of glasses in their hand near their mouth. The individual's gaze is directed slightly downward, suggesting a moment of introspection or deep thought. The background is a plain, light-colored wall, which puts the focus entirely on the person. The person's interaction with the glasses indicates a possible pause in activity, perhaps after a period of reading or studying. There are no animals or other objects in the image, and the person is the sole subject, emphasizing a solitary and introspective moment. The simplicity of the setting and the individual's posture create a sense of quiet reflection.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 146,
+            "total_tokens": 452
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1159.293803,
+            "prompt_eval_duration_ms": 31.728902,
+            "generation_duration_ms": 1086.312708,
+            "load_duration_ms": 39.007072,
+            "tokens_per_second": 134.39960604787476
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image evokes a mood of contemplation and introspection, leaning towards a slightly melancholic or reflective tone. The subject's posture, with hands clasped near the face, suggests a moment of deep thought or perhaps a sense of weariness. The lighting, which casts a warm, slightly dim glow, adds to the subdued atmosphere, enhancing the feeling of solitude or introspection. The green shirt, a color often associated with calmness and stability, contrasts with the muted background, drawing attention to the subject's expression and posture. The overall tone is neutral but leans slightly negative, as the subject's expression and body language suggest a moment of quiet reflection or perhaps a subdued mood. The simplicity of the background and the focus on the subject further emphasize the personal and introspective nature of the image, evoking feelings of quiet contemplation and a sense of solitude.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 174,
+            "total_tokens": 482
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1363.763183,
+            "prompt_eval_duration_ms": 30.178118,
+            "generation_duration_ms": 1291.760929,
+            "load_duration_ms": 39.566436,
+            "tokens_per_second": 134.69984738948548
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"wearing a green shirt, holding a glass, and looking to the left\"\n    }\n  },\n  \"man-made\": {\n    \"glass\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"clear\"],\n      \"size\": \"small\",\n      \"description\": \"being held by the person\"\n    },\n    \"shirt\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"worn by the person\"\n    }\n  }\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "green"
+                ],
+                "size": "medium",
+                "description": "wearing a green shirt, holding a glass, and looking to the left"
+              }
+            },
+            "man-made": {
+              "glass": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "clear"
+                ],
+                "size": "small",
+                "description": "being held by the person"
+              },
+              "shirt": {
+                "count": 1,
+                "location": "center",
+                "color": [
+                  "green"
+                ],
+                "size": "medium",
+                "description": "worn by the person"
+              }
+            }
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 170,
+            "total_tokens": 656
+          },
+          "performance_metrics": {
+            "total_duration_ms": 1332.889807,
+            "prompt_eval_duration_ms": 44.027898,
+            "generation_duration_ms": 1248.860725,
+            "load_duration_ms": 37.665871,
+            "tokens_per_second": 136.12406619641274
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2565,
+        "total_time_ms": 6822.084969,
+        "average_speed": 135.1555449028696
+      }
+    },
+    {
+      "model": "qwen2.5vl:32b",
+      "temperature": 0.3,
+      "prompts": {
+        "general_description": {
+          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a person sitting indoors, likely in a casual or relaxed setting. The individual is wearing a light green, short-sleeved, button-up shirt with a slightly military or utilitarian style, featuring visible pockets on the chest. The person has short, dark hair and is holding a pair of glasses in their right hand, which is raised near their face, suggesting a thoughtful or contemplative pose. The background is simple and uncluttered, featuring a plain, light-colored wall that appears to be a soft pink or lavender shade. To the right, a bright orange cushion or piece of furniture is partially visible, adding a pop of color to the otherwise muted palette. The lighting is soft and diffused, creating a calm and subdued atmosphere. The overall composition is framed with a white border, giving the image a slightly vintage or Polaroid-like aesthetic. The colors are primarily muted, with the green shirt, orange cushion, and light wall creating a balanced yet understated color scheme. The focus is on the person, with the background elements serving to enhance the mood rather than distract from the subject.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 297,
+            "output_tokens": 224,
+            "total_tokens": 521
+          },
+          "performance_metrics": {
+            "total_duration_ms": 11913.948454,
+            "prompt_eval_duration_ms": 3494.697255,
+            "generation_duration_ms": 8379.344464,
+            "load_duration_ms": 37.632939,
+            "tokens_per_second": 26.73240143812758
+          }
+        },
+        "foreground_background": {
+          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "In the foreground of the image, the closest elements to the viewer are a person and a pair of glasses. The individual is seated, wearing a green, short-sleeved shirt with a collar, and is holding a pair of glasses in their hand, bringing them up to their face as if examining or adjusting them. The person's expression appears contemplative or focused, adding a sense of intimacy and immediacy to the scene. The lighting is warm, casting a soft glow on the subject, which emphasizes the details of their attire and the texture of their skin.\n\nThe background elements are more distant and less detailed, creating a sense of depth. The background consists of a plain, light-colored wall, which serves as a neutral backdrop that contrasts with the warm tones of the foreground. To the right, there is a hint of an orange surface, possibly a piece of furniture like a chair or a cushion, which adds a pop of color and helps to ground the subject within a domestic or casual setting. The simplicity of the background ensures that the focus remains on the person in the foreground, while the orange element provides a subtle visual anchor, tying the foreground and background together. The overall composition creates a layered effect, with the foreground elements sharply defined and the background softly blurred, emphasizing the subject's presence and actions within the space.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 303,
+            "output_tokens": 266,
+            "total_tokens": 569
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10037.492918,
+            "prompt_eval_duration_ms": 72.537235,
+            "generation_duration_ms": 9924.662381,
+            "load_duration_ms": 38.065044,
+            "tokens_per_second": 26.80191927830578
+          }
+        },
+        "entities_interactions": {
+          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The image depicts a single person sitting in what appears to be a casual indoor setting, possibly a living room or a similar space. The individual is wearing a light green, short-sleeved shirt with a collar and a pocket on the chest, suggesting a relaxed or informal outfit. The person is holding a pair of glasses or sunglasses in their hand, bringing them up to their face as if they are about to put them on or adjust them. Their expression is neutral, and their gaze is directed slightly downward, indicating a moment of contemplation or pause.\n\nIn the background, there is a plain, light-colored wall, which provides a simple and unobtrusive backdrop. To the right, a portion of an orange cushion or piece of furniture is visible, adding a pop of color to the otherwise muted tones of the scene. The lighting is soft and even, creating a calm and subdued atmosphere.\n\nThere are no animals or other people visible in the image, and the focus is entirely on the individual and their interaction with the glasses. The person's posture and the way they handle the glasses suggest a moment of quiet introspection or preparation, perhaps before engaging in an activity or simply taking a break. The overall composition conveys a sense of solitude and simplicity, with the individual's actions being the central point of interest. The orange cushion in the background subtly contrasts with the green shirt, adding a touch of visual interest without distracting from the main subject.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 306,
+            "output_tokens": 291,
+            "total_tokens": 597
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10924.707791,
+            "prompt_eval_duration_ms": 79.487544,
+            "generation_duration_ms": 10804.71138,
+            "load_duration_ms": 38.179867,
+            "tokens_per_second": 26.932695355347843
+          }
+        },
+        "mood_emotions": {
+          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
+          "response": "The mood of the image is contemplative and somewhat introspective, with a slightly melancholic or pensive tone. The individual in the photograph is holding a pair of glasses to their face, a gesture that suggests deep thought or concentration. Their gaze is directed downward, which adds to the sense of introspection and seriousness. The muted color palette, with soft, pastel tones in the background and a subdued green shirt, contributes to a calm yet somber atmosphere. The lighting is soft and diffused, avoiding harsh shadows and further emphasizing the serene yet reflective mood.\n\nThe overall tone leans toward the negative or neutral side, as there is no overt display of joy or positivity. The individual's posture and facial expression suggest a moment of quiet reflection, possibly tinged with a hint of sadness or concern. The orange couch in the background provides a subtle contrast to the otherwise muted tones, but it does not significantly alter the overall mood. Instead, it adds a touch of warmth that contrasts with the cool, contemplative atmosphere. The framing of the image, with its slightly grainy, vintage aesthetic, enhances the nostalgic and introspective feel, evoking a sense of quiet solitude and thoughtful contemplation. The image does not elicit strong emotions but rather invites the viewer to ponder and reflect, creating a mood that is both subdued and emotionally resonant.",
+          "response_format": "text",
+          "response_data": null,
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 308,
+            "output_tokens": 270,
+            "total_tokens": 578
+          },
+          "performance_metrics": {
+            "total_duration_ms": 10136.78197,
+            "prompt_eval_duration_ms": 75.477851,
+            "generation_duration_ms": 10017.937038,
+            "load_duration_ms": 39.833734,
+            "tokens_per_second": 26.95165671094129
+          }
+        },
+        "structured_inventory": {
+          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
+          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\", \"skin tone\"],\n      \"size\": \"medium\",\n      \"description\": \"Sitting, holding an object near their face, wearing a green shirt\"\n    }\n  },\n  \"man-made\": {\n    \"shirt\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"Short-sleeved, button-up shirt\"\n    },\n    \"object\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Held by the person, possibly a phone or similar device\"\n    },\n    \"chair\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"orange\"],\n      \"size\": \"medium\",\n      \"description\": \"Visible edge of an orange chair\"\n    }\n  },\n  \"natural\": {}\n}\n```",
+          "response_format": "json",
+          "response_data": {
+            "human": {
+              "person": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "green",
+                  "skin tone"
+                ],
+                "size": "medium",
+                "description": "Sitting, holding an object near their face, wearing a green shirt"
+              }
+            },
+            "man-made": {
+              "shirt": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "green"
+                ],
+                "size": "medium",
+                "description": "Short-sleeved, button-up shirt"
+              },
+              "object": {
+                "count": 1,
+                "location": "center, middle",
+                "color": [
+                  "black"
+                ],
+                "size": "small",
+                "description": "Held by the person, possibly a phone or similar device"
+              },
+              "chair": {
+                "count": 1,
+                "location": "right, middle",
+                "color": [
+                  "orange"
+                ],
+                "size": "medium",
+                "description": "Visible edge of an orange chair"
+              }
+            },
+            "natural": {}
+          },
+          "error": null,
+          "token_metrics": {
+            "input_tokens": 486,
+            "output_tokens": 243,
+            "total_tokens": 729
+          },
+          "performance_metrics": {
+            "total_duration_ms": 9167.771984,
+            "prompt_eval_duration_ms": 136.933121,
+            "generation_duration_ms": 8987.514871,
+            "load_duration_ms": 40.727634,
+            "tokens_per_second": 27.037507418662273
+          }
+        }
+      },
+      "metrics": {
+        "total_tokens": 2994,
+        "total_time_ms": 52180.703117000005,
+        "average_speed": 26.891236040276954
+      }
+    },
+    {
       "model": "gemma3:4b",
       "temperature": 0.3,
       "prompts": {
@@ -469,293 +756,6 @@
         "total_tokens": 2940,
         "total_time_ms": 28331.546854,
         "average_speed": 42.281143824529394
-      }
-    },
-    {
-      "model": "qwen2.5vl:7b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image presents a close-up portrait of a person seated, likely indoors, with a soft, diffused light illuminating their face and upper body. The individual is wearing a short-sleeved, collared, olive-green shirt, which contrasts subtly with the warm, orange hue of the background, possibly a sofa or cushion. The person's hand is raised to their mouth, holding what appears to be a small object, possibly a pen or a small tool, in a contemplative or thoughtful pose. The lighting is warm and slightly dim, creating a moody atmosphere, with shadows cast softly on the person's face and shirt. The background is a plain, light-colored wall, which serves to highlight the subject and the vibrant green of their shirt. The overall composition is intimate and focused, with the subject positioned slightly off-center, adding a dynamic element to the frame. The image has a vintage or retro feel, possibly due to the editing style, which includes a border that gives it a Polaroid-like appearance.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 205,
-            "total_tokens": 502
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1620.279227,
-            "prompt_eval_duration_ms": 79.234062,
-            "generation_duration_ms": 1499.848506,
-            "load_duration_ms": 38.816298,
-            "tokens_per_second": 136.68047084750037
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, a person is seated, wearing a green shirt with short sleeves and a collar, and holding a pair of glasses in their hand, which they are either adjusting or about to put on. The individual's posture suggests a moment of contemplation or pause, as they are looking slightly downward. The background is a simple, uncluttered space with a plain, light-colored wall, which provides a neutral backdrop that contrasts with the green shirt, making the subject stand out. The orange cushion or fabric in the bottom right corner adds a pop of color and suggests the person is seated on a couch or similar piece of furniture. The overall composition is simple, with the subject in the foreground and the plain wall and orange fabric in the background, creating a sense of depth and focusing the viewer's attention on the individual.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 170,
-            "total_tokens": 473
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1345.858949,
-            "prompt_eval_duration_ms": 32.633602,
-            "generation_duration_ms": 1269.853278,
-            "load_duration_ms": 40.566422,
-            "tokens_per_second": 133.87373403307464
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the image, a person is seated, wearing a green military-style shirt, and appears to be in a contemplative or thoughtful pose, holding a pair of glasses in their hand near their mouth. The individual's gaze is directed slightly downward, suggesting a moment of introspection or deep thought. The background is a plain, light-colored wall, which puts the focus entirely on the person. The person's interaction with the glasses indicates a possible pause in activity, perhaps after a period of reading or studying. There are no animals or other objects in the image, and the person is the sole subject, emphasizing a solitary and introspective moment. The simplicity of the setting and the individual's posture create a sense of quiet reflection.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 146,
-            "total_tokens": 452
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1159.293803,
-            "prompt_eval_duration_ms": 31.728902,
-            "generation_duration_ms": 1086.312708,
-            "load_duration_ms": 39.007072,
-            "tokens_per_second": 134.39960604787476
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image evokes a mood of contemplation and introspection, leaning towards a slightly melancholic or reflective tone. The subject's posture, with hands clasped near the face, suggests a moment of deep thought or perhaps a sense of weariness. The lighting, which casts a warm, slightly dim glow, adds to the subdued atmosphere, enhancing the feeling of solitude or introspection. The green shirt, a color often associated with calmness and stability, contrasts with the muted background, drawing attention to the subject's expression and posture. The overall tone is neutral but leans slightly negative, as the subject's expression and body language suggest a moment of quiet reflection or perhaps a subdued mood. The simplicity of the background and the focus on the subject further emphasize the personal and introspective nature of the image, evoking feelings of quiet contemplation and a sense of solitude.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 174,
-            "total_tokens": 482
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1363.763183,
-            "prompt_eval_duration_ms": 30.178118,
-            "generation_duration_ms": 1291.760929,
-            "load_duration_ms": 39.566436,
-            "tokens_per_second": 134.69984738948548
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"wearing a green shirt, holding a glass, and looking to the left\"\n    }\n  },\n  \"man-made\": {\n    \"glass\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"clear\"],\n      \"size\": \"small\",\n      \"description\": \"being held by the person\"\n    },\n    \"shirt\": {\n      \"count\": 1,\n      \"location\": \"center\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"worn by the person\"\n    }\n  }\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "green"
-                ],
-                "size": "medium",
-                "description": "wearing a green shirt, holding a glass, and looking to the left"
-              }
-            },
-            "man-made": {
-              "glass": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "clear"
-                ],
-                "size": "small",
-                "description": "being held by the person"
-              },
-              "shirt": {
-                "count": 1,
-                "location": "center",
-                "color": [
-                  "green"
-                ],
-                "size": "medium",
-                "description": "worn by the person"
-              }
-            }
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 170,
-            "total_tokens": 656
-          },
-          "performance_metrics": {
-            "total_duration_ms": 1332.889807,
-            "prompt_eval_duration_ms": 44.027898,
-            "generation_duration_ms": 1248.860725,
-            "load_duration_ms": 37.665871,
-            "tokens_per_second": 136.12406619641274
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2565,
-        "total_time_ms": 6822.084969,
-        "average_speed": 135.1555449028696
-      }
-    },
-    {
-      "model": "qwen2.5vl:32b",
-      "temperature": 0.3,
-      "prompts": {
-        "general_description": {
-          "prompt_text": "Describe what you see in this image. Include the setting, main elements, colors, lighting, and overall composition. Be specific and detailed. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a person sitting indoors, likely in a casual or relaxed setting. The individual is wearing a light green, short-sleeved, button-up shirt with a slightly military or utilitarian style, featuring visible pockets on the chest. The person has short, dark hair and is holding a pair of glasses in their right hand, which is raised near their face, suggesting a thoughtful or contemplative pose. The background is simple and uncluttered, featuring a plain, light-colored wall that appears to be a soft pink or lavender shade. To the right, a bright orange cushion or piece of furniture is partially visible, adding a pop of color to the otherwise muted palette. The lighting is soft and diffused, creating a calm and subdued atmosphere. The overall composition is framed with a white border, giving the image a slightly vintage or Polaroid-like aesthetic. The colors are primarily muted, with the green shirt, orange cushion, and light wall creating a balanced yet understated color scheme. The focus is on the person, with the background elements serving to enhance the mood rather than distract from the subject.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 297,
-            "output_tokens": 224,
-            "total_tokens": 521
-          },
-          "performance_metrics": {
-            "total_duration_ms": 11913.948454,
-            "prompt_eval_duration_ms": 3494.697255,
-            "generation_duration_ms": 8379.344464,
-            "load_duration_ms": 37.632939,
-            "tokens_per_second": 26.73240143812758
-          }
-        },
-        "foreground_background": {
-          "prompt_text": "Describe the foreground elements (closest to viewer) and background elements (distant/setting) separately. Explain what appears in each layer and how they relate to each other. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "In the foreground of the image, the closest elements to the viewer are a person and a pair of glasses. The individual is seated, wearing a green, short-sleeved shirt with a collar, and is holding a pair of glasses in their hand, bringing them up to their face as if examining or adjusting them. The person's expression appears contemplative or focused, adding a sense of intimacy and immediacy to the scene. The lighting is warm, casting a soft glow on the subject, which emphasizes the details of their attire and the texture of their skin.\n\nThe background elements are more distant and less detailed, creating a sense of depth. The background consists of a plain, light-colored wall, which serves as a neutral backdrop that contrasts with the warm tones of the foreground. To the right, there is a hint of an orange surface, possibly a piece of furniture like a chair or a cushion, which adds a pop of color and helps to ground the subject within a domestic or casual setting. The simplicity of the background ensures that the focus remains on the person in the foreground, while the orange element provides a subtle visual anchor, tying the foreground and background together. The overall composition creates a layered effect, with the foreground elements sharply defined and the background softly blurred, emphasizing the subject's presence and actions within the space.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 303,
-            "output_tokens": 266,
-            "total_tokens": 569
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10037.492918,
-            "prompt_eval_duration_ms": 72.537235,
-            "generation_duration_ms": 9924.662381,
-            "load_duration_ms": 38.065044,
-            "tokens_per_second": 26.80191927830578
-          }
-        },
-        "entities_interactions": {
-          "prompt_text": "Identify all people, animals, and objects in the image. Describe what they are doing and how they interact with each other. Focus on actions, relationships, and connections between elements. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The image depicts a single person sitting in what appears to be a casual indoor setting, possibly a living room or a similar space. The individual is wearing a light green, short-sleeved shirt with a collar and a pocket on the chest, suggesting a relaxed or informal outfit. The person is holding a pair of glasses or sunglasses in their hand, bringing them up to their face as if they are about to put them on or adjust them. Their expression is neutral, and their gaze is directed slightly downward, indicating a moment of contemplation or pause.\n\nIn the background, there is a plain, light-colored wall, which provides a simple and unobtrusive backdrop. To the right, a portion of an orange cushion or piece of furniture is visible, adding a pop of color to the otherwise muted tones of the scene. The lighting is soft and even, creating a calm and subdued atmosphere.\n\nThere are no animals or other people visible in the image, and the focus is entirely on the individual and their interaction with the glasses. The person's posture and the way they handle the glasses suggest a moment of quiet introspection or preparation, perhaps before engaging in an activity or simply taking a break. The overall composition conveys a sense of solitude and simplicity, with the individual's actions being the central point of interest. The orange cushion in the background subtly contrasts with the green shirt, adding a touch of visual interest without distracting from the main subject.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 306,
-            "output_tokens": 291,
-            "total_tokens": 597
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10924.707791,
-            "prompt_eval_duration_ms": 79.487544,
-            "generation_duration_ms": 10804.71138,
-            "load_duration_ms": 38.179867,
-            "tokens_per_second": 26.932695355347843
-          }
-        },
-        "mood_emotions": {
-          "prompt_text": "Describe the mood and emotions conveyed by this image. What feelings does it evoke? Consider whether the overall tone is positive, negative, or neutral. Explain what visual elements contribute to this emotional atmosphere. Form the response as a continuous paragraph. Maximum 200 words.",
-          "response": "The mood of the image is contemplative and somewhat introspective, with a slightly melancholic or pensive tone. The individual in the photograph is holding a pair of glasses to their face, a gesture that suggests deep thought or concentration. Their gaze is directed downward, which adds to the sense of introspection and seriousness. The muted color palette, with soft, pastel tones in the background and a subdued green shirt, contributes to a calm yet somber atmosphere. The lighting is soft and diffused, avoiding harsh shadows and further emphasizing the serene yet reflective mood.\n\nThe overall tone leans toward the negative or neutral side, as there is no overt display of joy or positivity. The individual's posture and facial expression suggest a moment of quiet reflection, possibly tinged with a hint of sadness or concern. The orange couch in the background provides a subtle contrast to the otherwise muted tones, but it does not significantly alter the overall mood. Instead, it adds a touch of warmth that contrasts with the cool, contemplative atmosphere. The framing of the image, with its slightly grainy, vintage aesthetic, enhances the nostalgic and introspective feel, evoking a sense of quiet solitude and thoughtful contemplation. The image does not elicit strong emotions but rather invites the viewer to ponder and reflect, creating a mood that is both subdued and emotionally resonant.",
-          "response_format": "text",
-          "response_data": null,
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 308,
-            "output_tokens": 270,
-            "total_tokens": 578
-          },
-          "performance_metrics": {
-            "total_duration_ms": 10136.78197,
-            "prompt_eval_duration_ms": 75.477851,
-            "generation_duration_ms": 10017.937038,
-            "load_duration_ms": 39.833734,
-            "tokens_per_second": 26.95165671094129
-          }
-        },
-        "structured_inventory": {
-          "prompt_text": "Analyze this image and create a JSON object documenting all visible items. Structure the output with these exact three levels:\nLevel 1 (Categories): Use only these four keys: 'human', 'animal', 'man-made', 'natural'\nLevel 2 (Item names): Specific names of detected items (e.g., 'person', 'dog', 'car', 'tree')\nLevel 3 (Attributes): Use ONLY these keys for each item:\n  \u2022 count: number of instances (integer)\n  \u2022 location: position in image (use terms like: left/center/right, top/middle/bottom, foreground/background)\n  \u2022 color: main color(s) if applicable (array of strings)\n  \u2022 size: relative size (small/medium/large)\n  \u2022 description: any other relevant details that don't fit above categories (string)\nOutput valid JSON only. Include only categories that contain detected items. If an attribute doesn't apply to an item (e.g., color for sky), omit that key rather than using null. The 'description' field should capture important characteristics like actions, states, or specific features not covered by other keys.",
-          "response": "```json\n{\n  \"human\": {\n    \"person\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\", \"skin tone\"],\n      \"size\": \"medium\",\n      \"description\": \"Sitting, holding an object near their face, wearing a green shirt\"\n    }\n  },\n  \"man-made\": {\n    \"shirt\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"green\"],\n      \"size\": \"medium\",\n      \"description\": \"Short-sleeved, button-up shirt\"\n    },\n    \"object\": {\n      \"count\": 1,\n      \"location\": \"center, middle\",\n      \"color\": [\"black\"],\n      \"size\": \"small\",\n      \"description\": \"Held by the person, possibly a phone or similar device\"\n    },\n    \"chair\": {\n      \"count\": 1,\n      \"location\": \"right, middle\",\n      \"color\": [\"orange\"],\n      \"size\": \"medium\",\n      \"description\": \"Visible edge of an orange chair\"\n    }\n  },\n  \"natural\": {}\n}\n```",
-          "response_format": "json",
-          "response_data": {
-            "human": {
-              "person": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "green",
-                  "skin tone"
-                ],
-                "size": "medium",
-                "description": "Sitting, holding an object near their face, wearing a green shirt"
-              }
-            },
-            "man-made": {
-              "shirt": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "green"
-                ],
-                "size": "medium",
-                "description": "Short-sleeved, button-up shirt"
-              },
-              "object": {
-                "count": 1,
-                "location": "center, middle",
-                "color": [
-                  "black"
-                ],
-                "size": "small",
-                "description": "Held by the person, possibly a phone or similar device"
-              },
-              "chair": {
-                "count": 1,
-                "location": "right, middle",
-                "color": [
-                  "orange"
-                ],
-                "size": "medium",
-                "description": "Visible edge of an orange chair"
-              }
-            },
-            "natural": {}
-          },
-          "error": null,
-          "token_metrics": {
-            "input_tokens": 486,
-            "output_tokens": 243,
-            "total_tokens": 729
-          },
-          "performance_metrics": {
-            "total_duration_ms": 9167.771984,
-            "prompt_eval_duration_ms": 136.933121,
-            "generation_duration_ms": 8987.514871,
-            "load_duration_ms": 40.727634,
-            "tokens_per_second": 27.037507418662273
-          }
-        }
-      },
-      "metrics": {
-        "total_tokens": 2994,
-        "total_time_ms": 52180.703117000005,
-        "average_speed": 26.891236040276954
       }
     },
     {
