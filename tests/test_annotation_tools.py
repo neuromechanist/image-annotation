@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 
-from image_annotation.tools import (
+from image_annotation.utils import (
     export_to_csv,
     filter_annotations_by_tokens,
     get_annotation_stats,

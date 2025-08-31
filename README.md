@@ -66,7 +66,7 @@ cp config/config.example.json config/config.json
 Powerful CLI tools for post-processing annotations:
 
 ```python
-from image_annotation.tools import reorder_annotations, remove_model, export_to_csv
+from image_annotation.utils import reorder_annotations, remove_model, export_to_csv
 
 # Reorder model annotations
 reorder_annotations("annotations/", ["best_model", "second_best"])
